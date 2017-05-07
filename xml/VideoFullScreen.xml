@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<onload condition="!String.IsEmpty(Window(home).Property(OSDinfodialogButtonActive))">ClearProperty(OSDinfodialogButtonActive,home)</onload>
+	<defaultcontrol></defaultcontrol>
+	<controls>
+		<include>global_Clock</include>
+	</controls>
+</window>

@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">8998</defaultcontrol>
+	<onunload condition="!Window.IsVisible(skinsettings) + String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
+	<onunload condition="!Window.IsVisible(skinsettings) + String.IsEqual(Skin.String(homemenu.type),vertical2)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
+	<onunload condition="!Window.IsVisible(skinsettings) + String.IsEqual(Skin.String(homemenu.type),stream)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
+	<onunload>SetProperty(SelectDialog,regular,home)</onunload>
+	<onload>SetProperty(SelectDialog,regular,home)</onload>
+	<onload>Skin.SetString(HomeSettings,Menu)</onload>
+
+	<controls>
+
+		<include>global_Background</include>
+
+		<!-- Chrome -->		
+		<control type="group">
+			<include>transition_Chrome</include>
+			<include>global_Includes</include>
+			<include content="global_WindowTitle">
+			</include>
+		</control>
+
+		<!-- Content-->
+		<control type="group">
+			<top>198</top>
+			<left>128</left>
+			<include>transition_Content</include>
+
+			<control type="grouplist">
+				<orientation>vertical</orientation>
+				<include content="dialog_List">
+					<param name="ID">211</param>
+					<param name="Left">0</param>
+					<param name="TextWidth">572</param>
+					<param name="Width">640</param>
+					<param name="Height">810</param>
+					<param name="ItemHeight">90</param>
+					<param name="OnUp">211</param>
+					<param name="OnDown">211</param>
+					<param name="OnLeft">8999</param>
+					<param name="OnRight">8998</param>
+					<param name="Label">$INFO[ListItem.Label]</param>
+					<param name="Label2">$INFO[ListItem.Label2]</param>
+					<param name="Symbol">$VAR[shortcut:Symbol]</param>
+					<!--<param name="Visible">String.IsEqual(Window.Property(groupname),mainmenu)</param>-->
+				</include>
+			</control>
+
+			<!--context controls-->
+			<control type="grouplist" id="8998">
+				<left>640</left>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<height>108</height>
+				<width>216</width>
+				<onleft>211</onleft>
+				<onright>9000</onright>
+				<animation effect="slide" end="0,90" time="0" condition="Container(211).Row(1)">Conditional</animation>
+				<animation effect="slide" end="0,180" time="0" condition="Container(211).Row(2)">Conditional</animation>
+				<animation effect="slide" end="0,270" time="0" condition="Container(211).Row(3)">Conditional</animation>
+				<animation effect="slide" end="0,360" time="0" condition="Container(211).Row(4)">Conditional</animation>
+				<animation effect="slide" end="0,450" time="0" condition="Container(211).Row(5)">Conditional</animation>
+				<animation effect="slide" end="0,540" time="0" condition="Container(211).Row(6)">Conditional</animation>
+				<animation effect="slide" end="0,630" time="0" condition="Container(211).Row(7)">Conditional</animation>
+				<animation effect="slide" end="0,720" time="0" condition="Container(211).Row(8)">Conditional</animation>
+				<control type="button" id="401">
+					<label>&#57502;</label>
+					<include content="button_Dialog">
+						<param name="Font">Symbols-24</param>
+					</include>
+					<onup>Action(left)</onup>
+					<ondown>Action(left)</ondown>
+				</control>
+				<control type="button" id="606">
+					<label>&#58882;</label>
+					<include content="button_Dialog">
+						<param name="Font">Symbols-24</param>
+					</include>
+					<onfocus>SetProperty(SelectDialog,icon,home)</onfocus>
+					<onunfocus>SetProperty(SelectDialog,regular,home)</onunfocus>
+					<onclick>Action(contextmenu)</onclick>
+					<onup>Action(left)</onup>
+					<ondown>Action(left)</ondown>
+					<onback>Action(right)</onback>
+				</control>
+			</control>
+
+			<!-- Right grouplist -->
+			<control type="grouplist" id="9000">
+				<left>920</left>
+				<width>744</width>
+				<height>720</height>
+				<itemgap>0</itemgap>
+				<onleft>8998</onleft>
+				<onright>noop</onright>
+				<onup>noop</onup>
+				<ondown>9001</ondown>
+				<orientation>vertical</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<scrolltime tween="sine" easing="out">240</scrolltime>
+
+				<!-- Add new -->
+				<control type="group" id="201">
+					<height>90</height>				
+					<control type="button" id="301">
+						<width>100%</width>
+						<label>$LOCALIZE[31021]</label>
+						<textoffsetx>114</textoffsetx>
+						<onclick>SetFocus(401)</onclick>
+						<onleft>8998</onleft>
+						<onup>504</onup>
+						<ondown>611</ondown>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>&#58906;</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(301)</visible>
+					</control>
+					<control type="label">
+						<label>&#58906;</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(301)</visible>
+					</control>
+				</control>
+
+				<!-- Customize submenu -->
+				<control type="group" id="611">
+					<height>90</height>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>	
+					<control type="button" id="405">
+						<width>100%</width>
+						<label>$ADDON[script.skinshortcuts 32072]</label>
+						<textoffsetx>114</textoffsetx>
+						<onleft>8998</onleft>
+						<onup>201</onup>
+						<ondown>612</ondown>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>&#57447;</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(405)</visible>
+					</control>
+					<control type="label">
+						<label>&#57447;</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(405)</visible>
+					</control>
+				</control>
+
+				<!-- Reset -->
+				<control type="group" id="612">
+					<height>90</height>
+					<control type="button" id="308">
+						<width>100%</width>
+						<label>$ADDON[script.skinshortcuts 32028]</label>
+						<textoffsetx>114</textoffsetx>
+						<onleft>8998</onleft>
+						<onup>611</onup>
+						<ondown>613</ondown>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>&#57497;</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(308)</visible>
+					</control>
+					<control type="label">
+						<label>&#57497;</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(308)</visible>
+					</control>
+				</control>
+
+				<!-- Header -->
+				<control type="label" id="300">
+					<width>100%</width>
+					<height>90</height>
+					<label>$LOCALIZE[31040]</label>
+					<include>global_Header</include>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+				</control>
+
+				<!-- Select widget -->
+				<control type="group" id="613">
+					<height>90</height>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<control type="button" id="312">
+						<width>100%</width>
+						<label>$VAR[widget:Name]</label>
+						<textoffsetx>114</textoffsetx>
+						<onleft>8998</onleft>
+						<onup>611</onup>
+						<ondown>501</ondown>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:Symbol]</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(312)</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:Symbol]</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(312)</visible>
+					</control>
+				</control>
+
+				<!-- Widget layout -->
+				<control type="group" id="501">
+					<height>90</height>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<control type="button" id="601">
+						<width>100%</width>
+						<label>$VAR[widget:Layout]</label>
+						<textoffsetx>114</textoffsetx>
+						<onleft>8998</onleft>
+						<onup>613</onup>
+						<ondown>503</ondown>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:Layout.Symbol]</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(601)</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:Layout.Symbol]</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(601)</visible>
+					</control>
+				</control>
+
+				<!-- Widget sort method -->
+				<control type="group" id="503">
+					<height>90</height>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>	
+					<control type="button" id="603">
+						<width>100%</width>
+						<label>$VAR[widget:SortMethod]</label>
+						<textoffsetx>114</textoffsetx>
+						<onleft>8998</onleft>
+						<onup>501</onup>
+						<ondown>604</ondown>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:SortMethod.Symbol]</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(603)</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:SortMethod.Symbol]</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(603)</visible>
+					</control>
+				</control>
+
+				<!-- Widget sort direction -->
+				<control type="group" id="504">
+					<height>90</height>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<control type="button" id="604">
+						<width>100%</width>
+						<label>$VAR[widget:SortDirection]</label>
+						<textoffsetx>114</textoffsetx>
+						<onleft>8998</onleft>
+						<onup>503</onup>
+						<ondown>201</ondown>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:SortDirection.Symbol]</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(604)</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:SortDirection.Symbol]</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(604)</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

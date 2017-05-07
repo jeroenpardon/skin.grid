@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">20</defaultcontrol>
+
+	<controls>
+
+	<!--background-->
+		<include>global_Background</include>
+
+	<!--chrome-->
+		<control type="group">
+			<include>transition_Chrome</include>
+			<include>global_Includes</include>
+			<include content="global_WindowTitle">
+				<param name="Label" value="$VAR[window:Title.System]"/>
+			</include>
+			<include content="global_Itemcount">
+				<param name="Label" value="$INFO[Container(20).NumItems]"/>
+				<param name="Visible" value="Control.HasFocus(20)"/>
+			</include>
+			<include content="global_Itemcount">
+				<param name="Label" value="$INFO[Container(21).NumItems]"/>
+				<param name="Visible" value="Control.HasFocus(21)"/>
+			</include>
+		</control>
+
+	<!--content-->
+		<control type="group">
+			<left>128</left>
+			<top>108</top>
+			<include>transition_Content</include>
+			<!--left pane-->
+			<control type="group">
+				<control type="label" id="101">
+					<width>595</width>
+					<include>global_Header</include>
+				</control>
+				<include content="dialog_List">
+					<param name="ID">20</param>
+					<param name="Top">90</param>
+					<param name="Width">836</param>
+					<param name="Height">810</param>
+					<param name="ItemHeight">90</param>
+					<param name="OnRight">21</param>
+				</include>
+			</control>
+			<!--right pane-->
+			<control type="group">
+				<left>836</left>
+				<control type="label" id="102">
+					<width>595</width>
+					<include>global_Header</include>
+				</control>
+				<include content="dialog_List">
+					<param name="ID">21</param>
+					<param name="Top">90</param>
+					<param name="Width">836</param>
+					<param name="Height">810</param>
+					<param name="ItemHeight">90</param>
+					<param name="OnLeft">20</param>
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>

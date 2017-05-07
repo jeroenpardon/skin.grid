@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol></defaultcontrol>
+	<visible>VideoPlayer.IsFullscreen</visible>
+	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(fullscreeninfo)</visible>
+	<visible>!Window.IsActive(videoosd) + !Window.IsActive(playerprocessinfo) + !Window.IsActive(subtitlesearch)</visible>
+	<controls>
+		<control type="group">
+			<include>fadeinout</include>
+			<include>global_Includes</include>
+			<control type="progress" id="12">
+				<left>128</left>
+				<width>1664</width>
+				<height>108</height>
+				<info>Player.Progress</info>
+				<texturebg colordiffuse="$VAR[color:Accent]">colorize/0.png</texturebg>
+				<lefttexture></lefttexture>
+				<midtexture colordiffuse="$VAR[color:Accent]">colorize/50.png</midtexture>
+				<righttexture></righttexture>
+				<visible>!Window.IsActive(volumebar)</visible>
+			</control>
+			<include>global_WindowTitle</include>
+			<control type="group">
+				<visible>Player.ShowInfo</visible>
+				<include condition="!VideoPlayer.Content(livetv)">player_Info</include>
+				<include condition="VideoPlayer.Content(livetv)" content="player_Info">
+					<param name="InfoWidth">1490</param>
+					<param name="TextWidth">1464</param>
+					<param name="ArtWidth">112</param>
+					<param name="ArtHeight">112</param>
+				</include>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addon id="skin.grid" version="0.9.0.0" name="Grid" provider-name="Jeroen">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0"/>
+		<import addon="script.grab.fanart" version="0.14.1"/>
+		<!--<import addon="resource.uisounds.grid" version="0.0.1"/>-->
+		<import addon="script.skin.helper.service" version="1.0.11"/>
+		<import addon="script.skinshortcuts" version="1.0.11"/>
+		<import addon="script.watchlist" version="0.0.1"/>
+		<import addon="script.skin.helper.widgets" version="1.0.0"/>
+		<import addon="script.skin.helper.backgrounds" version="1.0.21"/>
+	</requires>
+	<extension point="xbmc.gui.skin" effectslowdown="1.00" debugging="false">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="xml"/>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshots/01.jpg</screenshot>
+			<screenshot>resources/screenshots/02.jpg</screenshot>
+			<screenshot>resources/screenshots/03.jpg</screenshot>
+			<screenshot>resources/screenshots/04.jpg</screenshot>
+			<screenshot>resources/screenshots/05.jpg</screenshot>
+		</assets>
+		<summary lang="de">Grid von Jeroen</summary>
+		<summary lang="en">Grid by Jeroen</summary>
+		<summary lang="es">Grid por Jeroen</summary>
+		<summary lang="gl">Grid por Jeroen</summary>
+		<summary lang="ko">Grid by Jeroen</summary>
+		<summary lang="lt">Grid, sukurta Jeroen</summary>
+		<summary lang="nl">Grid door Jeroen</summary>
+		<summary lang="no">Grid av Jeroen</summary>
+		<summary lang="pl">Grid autorstwa Jeroena</summary>
+		<summary lang="ro">Grid de Jeroen</summary>
+		<summary lang="sv">Grid av Jeroen</summary>
+		<description lang="en">This would be a nice place for a description</description>
+		<disclaimer lang="de">Die Nutzung von Maus und Touchscreen wird nicht unterstützt.</disclaimer>
+		<disclaimer lang="en">Mouse and touchscreen use not supported</disclaimer>
+		<disclaimer lang="es">Uso de ratón y pantalla táctil no compatible</disclaimer>
+		<disclaimer lang="gl">Rato e pantalla táctil non soportados</disclaimer>
+		<disclaimer lang="ko">마우스와 터치 스크린을 지원하지 않습니다 </disclaimer>
+		<disclaimer lang="lt">Pelė ir liečiamasis ekranas nepalaikomi</disclaimer>
+		<disclaimer lang="nl">Muis of touchscreen gebruik niet ondersteund</disclaimer>
+		<disclaimer lang="no">Bruk av mus og touch-skjerm er ikke støttet</disclaimer>
+		<disclaimer lang="pl">Myszka i ekran dotykowy nie są wspierane</disclaimer>
+		<disclaimer lang="ro">Nu există suport pentru touchscreen şi mouse</disclaimer>
+		<disclaimer lang="sv">Mus och pekskärm stöds inte</disclaimer>
+		<platform>all</platform>
+		<license>Attribution-NonCommercial-ShareAlike 3.0 Unported</license>
+		<forum></forum>
+		<source>https://github.com/jeroenpardon/skin.grid/</source>
+		<website>http://jeroenpardon.github.io/</website>
+	</extension>
+</addon>

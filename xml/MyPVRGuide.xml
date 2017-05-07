@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>10</defaultcontrol>
+	<menucontrol>7000</menucontrol>
+	<views>10</views>
+	<controls>
+
+	<!--menu trigger-->
+		<control type="button" id="5500">
+			<onfocus>Control.SetFocus(10)</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+
+	<!--background-->
+		<include content="global_Background">
+			<param name="GridTexture">overlays/90.png</param>
+		</include>
+
+
+		<control type="group">
+			<include>toggle_Menu</include>
+
+		<!--chrome-->
+			<control type="group">
+				<include>transition_Chrome</include>
+				<include>global_Includes</include>
+				<include content="global_WindowTitle">
+					<param name="Label">$LOCALIZE[19069]</param>
+				</include>
+			</control>
+
+		<!--views-->
+			
+		<include>transition_Content</include>
+		<include>view_GuideTimeline</include>
+
+		</control>
+
+		<!--menu-->
+		<include>menu_Options</include>
+
+	</controls>
+</window>

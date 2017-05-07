@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">5000</defaultcontrol>
+	<controls>
+
+	<!-- Background -->
+		<include>global_Background</include>
+
+	<!-- Chrome -->
+		<control type="group">
+			<include>transition_Chrome</include>
+			<include>global_Includes</include>
+			<include content="global_WindowTitle">
+				<param name="Label">$VAR[window:Title.Info]</param>
+			</include>
+		</control>
+
+		<control type="group">
+			<top>108</top>
+			<include>transition_Content</include>
+
+			<!--info-->
+			<control type="grouplist">
+				<left>712</left>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<visible>!Control.IsVisible(50)</visible>
+
+				<!--tagline-->
+				<control type="label">
+					<width>1208</width>
+					<height>90</height>
+					<label>$VAR[information:Heading]</label>
+					<aligny>center</aligny>
+					<font>Slab-24</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+
+				<!--info columns-->
+				<control type="group">
+					<width>1208</width>
+					<height>384</height>
+					
+					<!--left info column-->
+					<control type="grouplist">
+						<width>500</width>
+						<height>360</height>
+						<orientation>vertical</orientation>
+						<itemgap>0</itemgap>
+						<!--L1-->
+						<include content="information_Block">
+							<param name="Label">$VAR[information:L1.Label]</param>
+							<param name="InfoLabel">$VAR[information:L1]</param>
+						</include>
+						<!--L2-->
+						<include content="information_Block">
+							<param name="Label">$VAR[information:L2.Label]</param>
+							<param name="InfoLabel">$VAR[information:L2]</param>
+						</include>
+						<!--L3-->
+						<include content="information_Block">
+							<param name="Label">$VAR[information:L3.Label]</param>
+							<param name="InfoLabel">$VAR[information:L3]</param>
+						</include>
+						<!--L4-->
+						<include content="information_Block">
+							<param name="Label">$VAR[information:L4.Label]</param>
+							<param name="InfoLabel">$VAR[information:L4]</param>
+						</include>
+					</control>
+					
+					<!--right info column-->
+					<control type="grouplist">
+						<left>550</left>
+						<width>500</width>
+						<height>360</height>
+						<orientation>vertical</orientation>
+						<itemgap>0</itemgap>
+						<!--R1-->
+						<include content="information_Block">
+							<param name="Label">$VAR[information:R1.Label]</param>
+							<param name="InfoLabel">$VAR[information:R1]</param>
+						</include>
+						<!--R2-->
+						<include content="information_Block">
+							<param name="Label">$VAR[information:R2.Label]</param>
+							<param name="InfoLabel">$VAR[information:R2]</param>
+						</include>
+						<!--R3-->
+						<include content="information_Block">
+							<param name="Label">$VAR[information:R3.Label]</param>
+							<param name="InfoLabel">$VAR[information:R3]</param>
+						</include>
+						<!--R4-->
+						<include content="information_Block">
+							<param name="Label">$VAR[information:R4.Label]</param>
+							<param name="InfoLabel">$VAR[information:R4]</param>
+						</include>
+					</control>
+				</control>
+				<control type="textbox" id="401">
+					<width>1102</width>
+					<height>295</height>
+					<label>$INFO[ListItem.Plot][CR]$VAR[info:Extended]</label>
+					<font>Slab-24</font>
+					<textcolor>$VAR[color:Text.3]</textcolor>
+				</control>
+			</control>
+
+			<!--path-->
+			<control type="label">
+				<left>712</left>
+				<bottom>0</bottom>
+				<height>72</height>
+				<width>1102</width>
+				<label>$INFO[ListItem.FileNameAndPath]</label>
+				<font>Regular-18</font>
+				<align>left</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[color:Text.3]</textcolor>
+			</control>
+
+			<!--functions-->	
+			<control type="group">
+				<left>0</left>
+				<bottom>72</bottom>
+				<height>90</height>
+				<width>1920</width>
+				<control type="image">
+					<width>1920</width>
+					<height>90</height>
+					<texture colordiffuse="ff000000">colorize/25.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="grouplist" id="5000">
+					<left>712</left>
+					<width>100%</width>
+					<height>90</height>
+					<itemgap>0</itemgap>
+					<onup>50</onup>
+					<orientation>horizontal</orientation>
+					<align>left</align>
+					<!--play / browse-->
+					<control type="togglebutton" id="8">
+						<width min="220.4">auto</width>
+						<font>Black-20</font>
+						<align>center</align>
+						<label>$LOCALIZE[208]</label>
+						<altlabel>$LOCALIZE[1024]</altlabel>
+						<onclick>Dialog.Close(MovieInformation)</onclick>
+						<usealttexture>String.IsEqual(ListItem.DBTYPE,tvshow)</usealttexture>
+						<texturenofocus></texturenofocus>
+						<alttexturenofocus></alttexturenofocus>
+					</control>
+					<!--cast / plot-->
+					<control type="button" id="5">
+						<width min="220.4">auto</width>
+						<font>Black-20</font>
+						<align>center</align>
+						<label>$LOCALIZE[206]</label>
+						<onclick>SetFocus(50)</onclick>
+						<texturenofocus></texturenofocus>
+					</control>
+					<!--gallery-->
+					<control type="button" id="55">
+						<width min="220.4">auto</width>
+						<font>Black-20</font>
+						<align>center</align>
+						<label>$LOCALIZE[31121]</label>
+						<onclick condition="!Integer.IsGreater(Container(9999).NumItems,0)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[416],message=$LOCALIZE[31117],yesaction=SetFocus(90),noaction=Close)</onclick>
+						<onclick>SetFocus(9999)</onclick>
+						<texturenofocus></texturenofocus>
+						<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)</visible>
+					</control>
+					<!--more-->
+					<control type="button" id="33">
+						<width min="220.4">auto</width>
+						<font>Black-20</font>
+						<align>center</align>
+						<label>$LOCALIZE[22082]</label>
+						<onclick>SetProperty(infoDirector,$INFO[ListItem.Director],movieinformation)</onclick>
+						<onclick>SetProperty(infoDbid,$INFO[ListItem.DBID],movieinformation)</onclick>
+						<onclick>SetProperty(InfoDbtype,$INFO[ListItem.DBTYPE],movieinformation)</onclick>		
+						<onclick>ActivateWindow(1102)</onclick>
+						<texturenofocus></texturenofocus>
+					</control>
+					<!--manage-->
+					<control type="button" id="5005">
+						<width min="220.4">auto</width>
+						<font>Black-20</font>
+						<align>center</align>
+						<label>$LOCALIZE[16106]</label>
+						<onclick>ActivateWindow(1101)</onclick>
+						<texturenofocus></texturenofocus>
+						<visible>!SubString(ListItem.FolderPath,plugin://)</visible>
+					</control>
+				</control>				
+			</control>
+
+			<!--artwork-->
+			<control type="group">
+				<visible>!Control.IsVisible(50)</visible>
+				<control type="image">
+					<width>648</width>
+					<height>900</height>
+					<texture background="true">$VAR[art:Portrait]</texture>
+					<aspectratio align="left">scale</aspectratio>
+				</control>
+				<control type="image">
+					<top>900</top>
+					<width>648</width>
+					<height>900</height>
+					<texture flipy="true" diffuse="views/diffuse/portrait.png" background="true">$VAR[art:Portrait]</texture>
+					<aspectratio align="left">scale</aspectratio>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(50)</visible>
+				<control type="image">
+					<width>648</width>
+					<height>900</height>
+					<fadetime>fadetime_Thumb</fadetime>
+					<texture background="true" fallback="views/fallback/person.png">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
+					<aspectratio align="left">scale</aspectratio>
+				</control>
+				<control type="image">
+					<top>900</top>
+					<width>648</width>
+					<height>900</height>
+					<fadetime>fadetime_Thumb</fadetime>
+					<texture flipy="true" fallback="views/fallback/person.png" diffuse="views/diffuse/portrait.png" background="true">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
+					<aspectratio align="left">scale</aspectratio>
+				</control>
+			</control>
+
+			<!--actor list-->
+			<include content="dialog_List">
+				<param name="ID">50</param>
+				<param name="Left">648</param>
+				<param name="Width">1144</param>
+				<param name="Height">810</param>
+				<param name="ItemHeight">90</param>
+				<param name="TextLeft">132</param>
+				<param name="OnLeft">5000</param>
+				<param name="OnRight">70</param>
+				<param name="OnUp">50</param>
+				<param name="OnDown">50</param>
+			</include>
+		</control>
+
+		<control type="button" id="90">
+			<onfocus condition="String.IsEqual(ListItem.DBTYPE,movie)">RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], extrafanart)</onfocus>
+			<onfocus condition="String.IsEqual(ListItem.DBTYPE,tvshow)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], extrafanart)</onfocus>
+			<onfocus condition="String.IsEqual(ListItem.DBTYPE,episode)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], extrafanart)</onfocus>
+			<onfocus>ReloadSkin()</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+
+		<!--gallery-->
+		<control type="group" id="9998">
+			<control type="list" id="9999">
+				<width>screen_Width</width>
+				<height>screen_Height</height>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<include>fadeinout</include>
+				<include>global_Scrolltime</include>
+				<visible allowhiddenfocus="true">Control.HasFocus(9999)</visible>
+				<itemlayout width="screen_Width" height="screen_Height">
+					<control type="image">
+						<width>screen_Width</width>
+						<height>screen_Height</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+				</itemlayout>
+				<focusedlayout width="screen_Width" height="screen_Height">
+					<control type="image">
+						<width>screen_Width</width>
+						<height>screen_Height</height>
+						<texture>$INFO[ListItem.Thumb]</texture>
+						<aspectratio align="center" aligny="center">scale</aspectratio>
+					</control>
+				</focusedlayout>
+				<content>$VAR[art:ExtraFanart]</content>
+			</control>
+			<control type="group">
+				<include>fadeinout</include>
+				<visible>Control.HasFocus(9999)</visible>
+				<control type="image">
+					<left>5%</left>
+					<bottom>10%</bottom>
+					<width>25%</width>
+					<height>25%</height>
+					<texture>$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
+					<aspectratio align="left" aligny="bottom">keep</aspectratio>
+				</control>
+			</control>
+			<control type="label">
+				<bottom>40</bottom>
+				<right>40</right>
+				<width max="100">auto</width>
+				<height>25</height>
+				<align>right</align>
+				<font>Black-22</font>
+				<label>$INFO[Container(9999).CurrentItem]$INFO[Container(9999).NumItems, / ]</label>
+				<textcolor>$VAR[color:Accent]</textcolor>
+				<visible>Control.HasFocus(9999)</visible>
+				<include>fadeinout</include>
+			</control>
+		</control>
+	</controls>
+</window>

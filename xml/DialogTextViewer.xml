@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">500</defaultcontrol>
+	<controls>
+
+		<!--global includes-->
+		<include>global_Background</include>
+
+		<!--window chrome-->		
+		<control type="group">
+			<include>transition_Chrome</include>
+			<include>global_Includes</include>
+			<include content="global_WindowTitle">
+				<param name="ID">1</param>
+			</include>
+		</control>
+
+		<control type="textbox" id="5">
+			<left>176</left>
+			<top>222</top>
+			<width>1664</width>
+			<height>810</height>
+			<align>left</align>
+			<textcolor>$VAR[color:Accent]</textcolor>
+			<font>Slab-24</font>
+			<pagecontrol>6500</pagecontrol>
+			<include>transition_Content</include>
+		</control>
+		
+		<!--scrollbars-->
+		<include>global_Scrollbar</include>
+
+	</controls>
+</window>

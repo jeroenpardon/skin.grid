@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol></defaultcontrol>
+	<onload condition="String.IsEqual(Skin.String(background.type),fanart)">RunScript(script.grab.fanart,mode=random,refresh=20)</onload>
+	<onload condition="String.IsEmpty(Skin.String(SkinHelper.RandomFanartDelay))">Skin.SetString(SkinHelper.RandomFanartDelay,30)</onload>
+	<onload condition="!String.IsEqual(Skin.String(background.type),fanart)">Skin.SetString(HomeLoaded,True)</onload>
+	<onload condition="Skin.HasSetting(startup.playlist)">PlayMedia($INFO[Skin.String(startup.playlist.path)])</onload>
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<onload condition="System.HasAddon(script.artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
+	<onload condition="String.IsEmpty(Skin.String(autoscroll.speed))">Skin.SetString(autoscroll.speed,none)</onload>
+	<onload condition="String.IsEmpty(Skin.String(background.type))">Skin.SetString(background.type,multi)</onload>
+	<onload condition="String.IsEmpty(Skin.String(epg.scrollspeed))">Skin.SetString(epg.scrollspeed,normal)</onload>
+	<onload condition="String.IsEmpty(Skin.String(global.scrolltype))">Skin.SetString(global.scrolltype,active)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu.type))">Skin.SetString(homemenu.type,vertical)</onload>
+	<onload condition="String.IsEmpty(Skin.String(home.status))">Skin.SetString(home.status,none)</onload>
+	<onload condition="String.IsEmpty(Skin.String(menu.controls))">Skin.SetString(menu.controls,player)</onload>
+	<onload condition="String.IsEmpty(Skin.String(video.ratings))">Skin.SetString(video.ratings,disabled)</onload>
+	<onload condition="String.IsEmpty(Skin.String(view.list.art))">Skin.SetString(view.list.art,fanart)</onload>
+	<onload condition="String.IsEmpty(Skin.String(views.landscape.art))">Skin.SetString(views.landscape.art,fanart)</onload>
+</window>

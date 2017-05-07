@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<zorder>20</zorder>
+	<controls>
+		<control type="group">
+			<right>128</right>
+			<width>756</width>
+			<height>108</height>
+			<include>fadeinout</include>
+			<include>toggle_Menu</include>
+			<visible>!Window.IsActive(startup)</visible>
+			<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + [String.IsEqual(Skin.String(homemenu.type),stream)]">Conditional</animation>
+			<animation effect="slide" time="100" end="128,0" condition="Window.IsActive(Home) + [String.IsEqual(Skin.String(homemenu.type),vertical)] + !Skin.HasSetting(home.clock)">Conditional</animation>
+			<control type="image">
+				<width>756</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Accent]">colorize/50.png</texture>
+				<visible>!Window.IsActive(home)</visible>
+			</control>
+			<control type="image">
+				<width>756</width>
+				<height>98</height>
+				<texture colordiffuse="$VAR[color:Accent]">colorize/50.png</texture>
+				<visible>Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),vertical)</visible>
+			</control>
+			<control type="group">
+				<animation effect="slide" time="0" end="0,-7" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical)">Conditional</animation>
+				<control type="label">
+					<width>108</width>
+					<height>108</height>
+					<font>Symbols-38</font>
+					<label>&#57483;</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Main]</textcolor>
+				</control>
+				<control type="group">
+					<left>108</left>
+					<control type="label" id="401">
+						<top>16</top>
+						<width>624</width>
+						<height>54</height>
+						<font>Black-22</font>
+						<textcolor>$VAR[color:Main]</textcolor>
+					</control>
+					<control type="label" id="402">
+						<top>54</top>
+						<width>624</width>
+						<height>54</height>
+						<aligny>top</aligny>
+						<font>Regular-20</font>
+						<textcolor>$VAR[color:Main]</textcolor>
+					</control>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

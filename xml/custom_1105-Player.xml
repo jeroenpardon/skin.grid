@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1105">
+	<visible>Player.HasMedia + !Window.IsVisible(startup) + !Window.IsVisible(home) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + !Window.IsVisible(DialogVolumeBar.xml)</visible>
+	<zorder>20</zorder>
+	<controls>
+		<control type="group">
+			<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),stream)">Conditional</animation>
+			<include content="global_Playing" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
+				<param name="Left" value="1036"/>
+				<param name="Width" value="756"/>
+				<param name="TextWidth" value="624"/>
+			</include>
+			<include content="global_Playing" condition="String.IsEqual(Skin.String(view.list.art.Label),posters)">
+				<param name="Left" value="1124"/>
+				<param name="Width" value="668"/>
+				<param name="TextWidth" value="508"/>
+			</include>
+		</control>
+	</controls>
+</window>

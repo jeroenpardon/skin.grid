@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="view_Slide">
+		<param name="ID" default="52"/>
+		<param name="Top" default="108"/>
+		<param name="InfoTop" default="776"/>
+		<param name="Left" default="0"/>
+		<param name="Width" default="2920"/>
+		<param name="Height" default="648"/>
+		<param name="ArtWidth" default="466"/>
+		<param name="ArtHeight" default="648"/>
+		<param name="ItemWidth" default="466"/>
+		<param name="ItemHeight" default="648"/>
+		<param name="PageControl" default="6500"/>
+		<param name="Symbol" default="Symbols-32"/>
+		<param name="Icon" default="$VAR[symbol:Global]"/>
+		<param name="Art" default="$VAR[art:Portrait]"/>
+		<param name="ArtFallback" default="views/fallback/portrait.png"/>
+		<param name="Visible" default="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(actors) | Container.Content(albums)"/>
+		<definition>
+			<control type="fixedlist" id="$PARAM[ID]">
+				<viewtype label="31122">wrap</viewtype>
+				<left>$PARAM[Left]</left>
+				<top>$PARAM[Top]</top>
+				<width>$PARAM[Width]</width>
+				<height>$PARAM[Height]</height>
+				<onup>7000</onup>
+				<onup>SetProperty(MenuOpen,true,Home)</onup>
+				<ondown condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</ondown>
+				<onleft>$PARAM[ID]</onleft>
+				<onright>$PARAM[ID]</onright>
+				<focusposition>0</focusposition>
+				<orientation>horizontal</orientation>
+				<preloaditems>4</preloaditems>
+				<include>global_Scrolltime</include>
+				<pagecontrol>$PARAM[PageControl]</pagecontrol>
+				<visible>$PARAM[Visible]</visible>
+				<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
+					<control type="image">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture colordiffuse="$VAR[color:Text.2]">$PARAM[ArtFallback]</texture>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366]) | String.IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+					<control type="image">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">$PARAM[Art]</texture>
+					</control>
+					<control type="label">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<label>$VAR[symbol:Global]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Symbols-64</font>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
+					<control type="image">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture colordiffuse="$VAR[color:Text.2]">$PARAM[ArtFallback]</texture>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366]) | String.IsEmpty(ListItem.Art(thumb))</visible>
+					</control>
+					<control type="label">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<label>$VAR[symbol:Global]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Symbols-64</font>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+					</control>
+					<control type="image">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">$PARAM[Art]</texture>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<left>128</left>
+				<top>$PARAM[Top]</top>
+				<width>$PARAM[ItemWidth]</width>
+				<height>$PARAM[ItemHeight]</height>
+				<texture colordiffuse="$VAR[color:Accent]" border="5">views/frame/p_fo.png</texture>
+				<visible>Control.HasFocus(52)</visible>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="grouplist">
+				<left>164</left>
+				<top>$PARAM[InfoTop]</top>
+				<width>1664</width>
+				<height>220</height>
+				<orientation>vertical</orientation>
+				<control type="label">
+					<left>$PARAM[TextLeft]</left>
+					<width>1664</width>
+					<label>$VAR[media:Title]</label>
+					<height>45</height>
+					<font>Black-28</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label">
+					<height>55</height>
+					<width>1664</width>
+					<label>$VAR[media:Info]</label>
+					<font>Regular-22</font>
+					<textcolor>$VAR[color:Text.2]</textcolor>
+					<aligny>top</aligny>
+				</control>
+				<control type="textbox">
+					<height>300</height>
+					<width>1664</width>
+					<label>$VAR[media:Description]</label>
+					<font>Slab-24</font>
+					<textcolor>$VAR[color:Text.3]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="view_SlideThumb">
+		<param name="ID" default="521"/>
+		<param name="Top" default="216"/>
+		<param name="InfoTop" default="668"/>
+		<param name="Left" default="0"/>
+		<param name="Width" default="2920"/>
+		<param name="Height" default="648"/>
+		<param name="ArtWidth" default="747"/>
+		<param name="ArtHeight" default="432"/>
+		<param name="ItemWidth" default="747"/>
+		<param name="ItemHeight" default="432"/>
+		<param name="PageControl" default="6500"/>
+		<param name="Symbol" default="Symbols-32"/>
+		<param name="Icon" default="$VAR[symbol:Global]"/>
+		<param name="Logo" default="$VAR[art:Logo]"/>
+		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
+		<param name="Art" default="$VAR[art:Portrait]"/>
+		<param name="Fallback" default="views/fallback/portrait.png"/>
+		<param name="Visible" default="Container.Content(episodes)"/>
+		<definition>
+			<control type="fixedlist" id="$PARAM[ID]">
+				<viewtype label="31122">bigwrap</viewtype>
+				<left>$PARAM[Left]</left>
+				<top>$PARAM[Top]</top>
+				<width>$PARAM[Width]</width>
+				<height>$PARAM[Height]</height>
+				<onup>7000</onup>
+				<onup>SetProperty(MenuOpen,true,Home)</onup>
+				<ondown condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</ondown>
+				<onleft>$PARAM[ID]</onleft>
+				<onright>$PARAM[ID]</onright>
+				<focusposition>0</focusposition>
+				<orientation>horizontal</orientation>
+				<preloaditems>4</preloaditems>
+				<include>global_Scrolltime</include>
+				<pagecontrol>$PARAM[PageControl]</pagecontrol>
+				<visible>$PARAM[Visible]</visible>
+				<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
+					<control type="image">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture colordiffuse="$VAR[color:Text.2]">views/fallback/portrait.png</texture>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+					</control>
+					<control type="image">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">$PARAM[Art]</texture>
+					</control>
+					<control type="label">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<label>$VAR[symbol:Global]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Symbols-64</font>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+					</control>
+					<!--clearlogo-->
+					<control type="image">
+						<left>128</left>
+						<bottom>24</bottom>
+						<width>$PARAM[ArtWidth]</width>
+						<height>40%</height>
+						<texture>$PARAM[Logo]</texture>
+						<fadetime>fadetime_Thumb</fadetime>
+						<aspectratio align="center" aligny="bottom">keep</aspectratio>
+						<visible>$PARAM[ShowLogo]</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
+					<control type="image">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture colordiffuse="$VAR[color:Text.2]">views/fallback/portrait.png</texture>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+					</control>
+					<control type="label">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<label>$VAR[symbol:Global]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Symbols-64</font>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+					</control>
+					<control type="image">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<aspectratio align="center">scale</aspectratio>
+						<texture background="true">$PARAM[Art]</texture>
+					</control>
+					<!--clearlogo-->
+					<control type="image">
+						<left>128</left>
+						<bottom>24</bottom>
+						<width>$PARAM[ArtWidth]</width>
+						<height>40%</height>
+						<texture>$PARAM[Logo]</texture>
+						<fadetime>fadetime_Thumb</fadetime>
+						<aspectratio align="center" aligny="bottom">keep</aspectratio>
+						<visible>$PARAM[ShowLogo]</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<left>128</left>
+				<top>$PARAM[Top]</top>
+				<width>$PARAM[ItemWidth]</width>
+				<height>$PARAM[ItemHeight]</height>
+				<texture colordiffuse="$VAR[color:Accent]" border="5">views/frame/landscape.png</texture>
+				<visible>Control.HasFocus(521)</visible>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="grouplist">
+				<left>164</left>
+				<top>$PARAM[InfoTop]</top>
+				<width>1664</width>
+				<height>440</height>
+				<orientation>vertical</orientation>
+				<control type="label">
+					<left>$PARAM[TextLeft]</left>
+					<width>1664</width>
+					<label>$VAR[media:Title]</label>
+					<height>45</height>
+					<font>Black-28</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label">
+					<height>55</height>
+					<width>1664</width>
+					<label>$VAR[media:Info]</label>
+					<font>Regular-22</font>
+					<textcolor>$VAR[color:Text.2]</textcolor>
+					<aligny>top</aligny>
+				</control>
+				<control type="textbox">
+					<height>200</height>
+					<width>1664</width>
+					<label>$VAR[media:Description]</label>
+					<font>Slab-24</font>
+					<textcolor>$VAR[color:Text.3]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+</includes>

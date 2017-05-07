@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>50</defaultcontrol>
+	<menucontrol>7000</menucontrol>
+	<views>50,55,56</views>
+	<controls>
+
+	<!--menu trigger-->
+		<control type="button" id="5500">
+			<onfocus>Control.SetFocus(50)</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+
+	<!--background-->
+		<include content="global_Background">
+			<param name="GridTexture">$VAR[window:Grid]</param>
+		</include>
+
+		<control type="group">
+			<include>toggle_Menu</include>
+
+		<!--chrome-->
+			<control type="group">
+				<include>transition_Chrome</include>
+				<include>global_Includes</include>
+				<include>global_WindowTitle</include>
+			</control>
+
+		<!--views-->
+			<control type="group">
+				<include>transition_Content</include>
+				
+				<include content="view_List">
+					<param name="Symbol">$VAR[symbol:AddonBrowser]</param>
+				</include>
+
+				<control type="group">
+					<visible>Control.IsVisible(50) + Container.Content(addons)</visible>
+					<include content="info_List">
+						<param name="Art" value="$VAR[art:Landscape]"/>
+						<param name="Visible" value="true"/>
+					</include>
+				</control>
+
+				<!-- Thumbnails -->
+				<control type="group">
+					<visible>Control.IsVisible(56)</visible>
+					<include>transition_ViewChange</include>
+					<include content="view_Thumbnails">
+						<param name="ID">56</param>
+						<param name="ViewTypeLabel">$LOCALIZE[536]</param>
+						<param name="Label2">$VAR[media:Info]</param>
+						<param name="Width">1080</param>
+						<param name="Art">$VAR[art:Square]</param>
+						<param name="ArtWidth">270</param>
+						<param name="ArtHeight">270</param>
+						<param name="ItemWidth">270</param>
+						<param name="ItemHeight">270</param>
+						<param name="Height">972</param>
+						<param name="ShowInfo">false</param>
+					</include>
+					<include content="info_Thumbnails">
+						<param name="Art" value="$VAR[art:Landscape]"/>
+						<param name="Visible" value="true"/>
+					</include>
+				</control>
+
+				<!--scrollbars-->
+				<include>global_Scrollbar</include>
+
+			</control>
+		</control>
+
+		<!--menu-->
+		<include>menu_Options</include>
+		
+	</controls>
+</window>

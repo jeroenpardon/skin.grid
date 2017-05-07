@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<overrides>
+	
+	<widgetPlaylists>True</widgetPlaylists>
+
+	<!-- Save any shortcut with a widgetPath property -->
+	<saveWithProperty>widgetPath</saveWithProperty>
+
+	<!-- Settings removal warning-->
+	<warn heading="::LOCAL::19098" message="::LOCAL::31018">ActivateWindow(Settings)</warn>
+
+	<!-- Check for settings window shortcut -->
+	<checkforshortcut property="HasSettingsLink">ActivateWindow(Settings)</checkforshortcut>
+
+	<!-- Management dialog context menu -->
+	<contextmenu>
+		<enableon>211</enableon>
+		<enableon>606</enableon>
+		<item control="303">$ADDON[script.skinshortcuts 32002]</item><!--move up-->
+		<item control="304">$ADDON[script.skinshortcuts 32003]</item><!--move down-->
+		<item control="307">$ADDON[script.skinshortcuts 32027]</item><!--change action-->
+		<item control="305">$ADDON[script.skinshortcuts 32025]</item><!--set label-->
+		<item control="501" condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31223]</item><!--select icon-->
+		<!--<item control="405" condition="String.IsEqual(Window.Property(groupname),mainmenu)">$ADDON[script.skinshortcuts 32072]</item>-->
+		<item control="313">$ADDON[script.skinshortcuts 32117]</item><!--disable-->
+		<item control="302">$ADDON[script.skinshortcuts 32001]</item><!--delete-->
+	</contextmenu>
+
+	<!-- Widget defaults-->
+	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
+	<widgetdefaultnode defaultID="movies" group="mainmenu" label="20386" type="movies" path="videodb://recentlyaddedmovies/" target="video">RecentlyAddedMovies</widgetdefaultnode>
+	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
+-->
+
+	<!-- Widget layouts -->
+	<propertySettings property="widgetLayout" buttonID="601" title="$LOCALIZE[31223]" showNone="False"/>
+	<propertyfallback property="widgetLayout" label="$LOCALIZE[31072]">Fullscreen</propertyfallback>
+	<property property="widgetLayout" label="$LOCALIZE[31072]">Fullscreen</property>
+	<property property="widgetLayout" label="$LOCALIZE[31044]">Spotlight</property>
+	<property property="widgetLayout" label="$LOCALIZE[31102]">Landscape</property>
+	<property property="widgetLayout" label="$LOCALIZE[31101]">Portrait</property>
+	<property property="widgetLayout" label="$LOCALIZE[31125]">Square</property>
+	<property property="widgetLayout" label="$LOCALIZE[21371]">Thumbnail</property>
+	<property property="widgetLayout" label="$LOCALIZE[20020]">Banner</property>
+
+	<!-- Widget sorting method -->
+	<propertySettings property="widgetSortMethod" buttonID="603" title="$LOCALIZE[581]" showNone="True" />
+	<property property="widgetSortMethod" label="$LOCALIZE[551]">sorttitle</property>
+	<property property="widgetSortMethod" label="$LOCALIZE[563]">rating</property>
+	<property property="widgetSortMethod" label="$LOCALIZE[562]">year</property>
+
+	<!-- Widget sorting direction -->
+	<propertySettings property="widgetSortDirection" buttonID="604" title="$LOCALIZE[580]" showNone="True" />
+	<property property="widgetSortDirection" label="$LOCALIZE[584]">ascending</property>
+	<property property="widgetSortDirection" label="$LOCALIZE[585]">descending</property>
+
+
+	<propertydefault labelID="widget" property="widgetFallbackArt">Art(thumb)</propertydefault>
+
+	<!-- Shortcut grouping -->
+
+	<groupings>
+		<node label="Grid">
+			<!-- Movies -->
+			<node label="20342">
+				<shortcut label="$LOCALIZE[31532]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=movies,return)</shortcut>
+				<shortcut label="$LOCALIZE[31516]" type="31066">ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</shortcut>
+				<shortcut label="$LOCALIZE[16101]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/movies/unwatched.xsp,return)</shortcut>
+			</node>
+			<!-- TV Shows -->
+			<node label="20343">
+				<shortcut label="$LOCALIZE[31532]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=episodes,return)</shortcut>
+				<shortcut label="$LOCALIZE[31516]" type="31066">ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</shortcut>
+				<shortcut label="$LOCALIZE[16101]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/episodes/unwatched.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[575]" type="31066">ActivateWindow(Videos,videodb://inprogresstvshows/,return)</shortcut>			
+			</node>
+			<!-- Music -->
+			<node label="2">		
+				<shortcut label="$LOCALIZE[31516]" type="31066">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
+				<shortcut label="$LOCALIZE[31534]" type="31066">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
+				<shortcut label="$LOCALIZE[31535]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/albums/recommended.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31513]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/albums/random.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31514]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/songs/random.xsp,return)</shortcut>
+			</node>
+			<!-- TMDb -->
+			<node label="themoviedb">
+				<shortcut label="$LOCALIZE[1024]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/tmdb,return)</shortcut>
+				<shortcut label="$ADDON[script.extendedinfo 32042]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=incinemamovies,return)</shortcut>
+				<shortcut label="$ADDON[script.extendedinfo 32043]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=upcomingmovies,return)</shortcut>
+				<shortcut label="$ADDON[script.extendedinfo 32044]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=popularmovies,return)</shortcut>
+				<shortcut label="$ADDON[script.extendedinfo 32046]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=topratedmovies,return)</shortcut>
+				<shortcut label="$ADDON[script.extendedinfo 32041]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=populartvshows,return)</shortcut>
+				<shortcut label="$ADDON[script.extendedinfo 32040]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=topratedtvshows,return)</shortcut>
+				<shortcut label="$ADDON[script.extendedinfo 32039]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=onairtvshows,return)</shortcut>
+				<shortcut label="$ADDON[script.extendedinfo 32038]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=airingtodaytvshows,return)</shortcut>
+			</node>
+			<!-- Other -->
+			<node label="31062">
+				<shortcut label="$LOCALIZE[31539]" type="31066">ActivateWindow(Videos,plugin://service.library.data.provider?type=randommovies,return)</shortcut>
+				
+				<shortcut label="$LOCALIZE[3]" type="31066">ActivateWindow(Videos,files)</shortcut>
+				<shortcut label="$LOCALIZE[24001]" type="10040">ActivateWindow(1110)</shortcut>
+				<shortcut label="$LOCALIZE[13000]" type="5">ActivateWindow(Settings)</shortcut>
+				<shortcut label="$LOCALIZE[13012]" type="31202">ActivateWindow(shutdownmenu)</shortcut>
+				<shortcut label="$LOCALIZE[31211]" type="20077">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</shortcut>
+				<shortcut label="$LOCALIZE[31210]" type="20077">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=optionsmenu)</shortcut>
+			</node>
+		</node>
+
+		<!-- Common shortcuts -->
+		<node label="32029">
+			<content>common</content>
+			<shortcut label="$LOCALIZE[24001]" type="10040">ActivateWindow(addonbrowser)</shortcut>
+		</node>
+
+		<!-- Video shortcuts -->
+		<node label="32030">
+			<node label="$LOCALIZE[32040]">
+				<content>playlist-video</content>
+			</node>
+			<node label="$LOCALIZE[32010]">
+				<shortcut label="$LOCALIZE[1037]" type="32014">ActivateWindow(Videos,Addons,return)</shortcut>
+				<content>addon-video</content>
+			</node>
+			<node label="$LOCALIZE[32075]">
+				<content>videosources</content>
+				<content>upnp-video</content>
+			</node>
+			<content>video</content>
+		</node>
+		
+		<!-- Music shortcuts -->
+		<node label="$LOCALIZE[32031]">
+			<content>music</content>
+			<node label="$LOCALIZE[32040]">
+				<content>playlist-audio</content>
+			</node>
+			<node label="$LOCALIZE[32011]">
+				<shortcut label="$LOCALIZE[1038]" type="32019">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+				<content>addon-audio</content>
+			</node>
+			<node label="$LOCALIZE[32075]">
+				<content>musicsources</content>
+				<content>upnp-music</content>
+			</node>
+		</node>
+
+		<!-- PVR shortcuts -->
+		<node label="$LOCALIZE[32017]">
+			<content>pvr</content>
+			<node label="$LOCALIZE[19023]">
+				<content>pvr-tv</content>
+			</node>
+		</node>
+		<node label="$LOCALIZE[32087]">
+			<content>radio</content>
+			<node label="$LOCALIZE[19024]">
+				<content>pvr-radio</content>
+			</node>
+		</node>
+
+		<!--pictures-->
+		<node label="$LOCALIZE[32020]">
+			<content>picturesources</content>
+		</node>
+
+		<!--add-ons-->
+		<node label="$LOCALIZE[32007]">
+			<node label="$LOCALIZE[32009]">
+				<shortcut label="$LOCALIZE[10001]" type="32021">ActivateWindow(Programs,Addons,return)</shortcut>
+				<content>addon-program</content>
+			</node>
+			<node label="$LOCALIZE[32010]">
+				<shortcut label="$LOCALIZE[1037]" type="32014">ActivateWindow(Videos,Addons,return)</shortcut>
+				<content>addon-video</content>
+			</node>
+			<node label="$LOCALIZE[32011]">
+				<shortcut label="$LOCALIZE[1038]" type="32019">ActivateWindow(MusicLibrary,Addons,return)</shortcut>
+				<content>addon-audio</content>
+			</node>
+			<node label="$LOCALIZE[32012]">
+				<shortcut label="$LOCALIZE[1039]" type="32020">ActivateWindow(Pictures,Addons,return)</shortcut>
+				<content>addon-image</content>
+			</node>
+		</node>
+
+		<!--favourites-->
+		<node label="$LOCALIZE[32006]">
+			<content>favourite</content>
+		</node>
+
+		<!--settings-->
+		<node label="$LOCALIZE[5]">
+			<content>settings</content>
+		</node>
+
+		<!--commands-->
+		<node label="$LOCALIZE[32054]">
+			<content>commands</content>
+		</node>
+	</groupings>
+
+
+	<!-- Widgets -->
+	<widget label="31536" name="31536" type="movies" condition="Library.HasContent(movies)" path="plugin://script.watchlist/?type=movies" target="video">MoviesWatchlist</widget>
+	<widget label="31540" name="31540" type="movies" condition="Library.HasContent(movies)" path="special://skin/extras/playlists/movies/unwatched.xsp" target="video">UnwatchedMovies</widget>
+	<widget label="20386" name="20386" type="movies" condition="Library.HasContent(movies)" path="videodb://recentlyaddedmovies/" target="video">RecentlyAddedMovies</widget>
+
+	<widget label="31537" name="31537" type="episodes" condition="Library.HasContent(tvshows)" path="plugin://script.watchlist/?type=episodes" target="video">EpisodesWatchlist</widget>
+	<widget label="31529" name="31529" type="episodes" condition="Library.HasContent(tvshows)" path="special://skin/extras/playlists/episodes/unwatched.xsp" target="video">UnwatchedEpisodes</widget>
+	<widget label="20387" name="20387" type="episodes" condition="Library.HasContent(tvshows)" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widget>
+	
+	<widget label="626" name="626" type="tvshows" condition="Library.HasContent(tvshows)" path="videodb://inprogresstvshows/" target="video">InProgressShows</widget>
+	
+	<widget label="20390" name="20390" type="musicvideos" condition="Library.HasContent(musicvideos)" path="videodb://recentlyaddedmusicvideos/" target="video">RecentlyAddedMusicVideos</widget>
+	
+	<widget label="1037" name="1037" type="addons" path="addons://sources/video/" target="video">VideoAddons</widget>
+	<widget label="1038" name="1038" type="addons" path="addons://sources/audio/" target="video">MusicAddons</widget>
+	<widget label="1039" name="1039" type="addons" path="addons://sources/image/" target="video">PictureAddons</widget>
+	<widget label="1043" name="1043" type="addons" path="addons://sources/executable/" target="video">ProgramAddons</widget>
+	
+	<widget label="$ADDON[script.extendedinfo 32042]" name="$ADDON[script.extendedinfo 32042]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=incinemas" target="video">ExtendedInfoCinemas</widget>
+	<widget label="$ADDON[script.extendedinfo 32043]" name="$ADDON[script.extendedinfo 32043]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=upcoming" target="video">ExtendedInfoUpcoming</widget>
+	<widget label="$ADDON[script.extendedinfo 32044]" name="$ADDON[script.extendedinfo 32044]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=upcoming" target="video">ExtendedInfoPopular</widget>
+	<widget label="$ADDON[script.extendedinfo 32046]" name="$ADDON[script.extendedinfo 32046]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=topratedmovies" target="video">ExtendedInfoTopRated</widget>
+	<widget label="$ADDON[script.extendedinfo 32041]" name="$ADDON[script.extendedinfo 32041]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=populartvshows" target="video">ExtendedInfoPopularShows</widget>
+	<widget label="$ADDON[script.extendedinfo 32040]" name="$ADDON[script.extendedinfo 32040]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=topratedtvshows" target="video">ExtendedInfoTopRatedShows</widget>
+	<widget label="$ADDON[script.extendedinfo 32039]" name="$ADDON[script.extendedinfo 32039]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=onairtvshows" target="video">ExtendedInfoOnAirShows</widget>
+	<widget label="$ADDON[script.extendedinfo 32038]" name="$ADDON[script.extendedinfo 32038]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=airingtodaytvshows" target="video">ExtendedInfoAiringTodayShows</widget>
+
+
+<!--home menu properties-->
+	<propertyfallback property="homeSymbol">&#57424;</propertyfallback>
+	<propertydefault defaultID="Settings" property="homeSymbol">&#59014;</propertydefault>
+	<propertydefault defaultID="13000" property="homeSymbol">&#59039;</propertydefault><!--system-->
+	<propertydefault defaultID="24001" property="homeSymbol">&#57389;</propertydefault><!--add-ons-->
+	<propertydefault defaultID="744" property="homeSymbol">&#57477;</propertydefault><!--files-->
+	<propertydefault defaultID="1037" property="homeSymbol">&#57389;</propertydefault><!--files-->
+	<propertydefault defaultID="31516" property="homeSymbol">&#59179;</propertydefault><!--recently added movies-->
+	<propertydefault defaultID="31532" property="homeSymbol">&#59055;</propertydefault><!--watchlist-->
+	<propertydefault defaultID="musicvideos" property="homeSymbol">&#57352;</propertydefault>
+	<propertydefault defaultID="movies" property="homeSymbol">&#57402;</propertydefault>
+	<propertydefault defaultID="videos" property="homeSymbol">&#57352;</propertydefault>
+	<propertydefault defaultID="tvshows" property="homeSymbol">&#57361;</propertydefault>
+	<propertydefault defaultID="livetv" property="homeSymbol">&#58944;</propertydefault>
+	<propertydefault defaultID="radio" property="homeSymbol">&#57443;</propertydefault>
+	<propertydefault defaultID="music" property="homeSymbol">&#57441;</propertydefault>
+	<propertydefault defaultID="pictures" property="homeSymbol">&#57394;</propertydefault>
+	<propertydefault defaultID="weather" property="homeSymbol">&#59000;</propertydefault>
+	<propertydefault defaultID="programs" property="homeSymbol">&#57498;</propertydefault>
+	<propertydefault defaultID="dvd" property="homeSymbol">&#57378;</propertydefault>
+	<propertydefault defaultID="32033" property="homeSymbol">&#57378;</propertydefault>
+	<propertydefault defaultID="settings" property="homeSymbol">&#59014;</propertydefault>
+	<propertydefault defaultID="7" property="homeSymbol">&#58937;</propertydefault>
+	<propertydefault defaultID="13200" property="homeSymbol">&#57348;</propertydefault>
+	<propertydefault defaultID="10003" property="homeSymbol">&#59159;</propertydefault>
+	<propertydefault defaultID="32046" property="homeSymbol">&#57496;</propertydefault>
+	<propertydefault defaultID="32047" property="homeSymbol">&#57496;</propertydefault>
+	<propertydefault defaultID="136" property="homeSymbol">&#57392;</propertydefault>
+	<propertydefault defaultID="20386" property="homeSymbol">&#57402;</propertydefault>
+	<propertydefault defaultID="20451" property="homeSymbol">&#57480;</propertydefault>
+	<propertydefault defaultID="20348" property="homeSymbol">&#59086;</propertydefault>
+	<propertydefault defaultID="135" property="homeSymbol">&#57407;</propertydefault>
+	<propertydefault defaultID="20434" property="homeSymbol">&#57450;</propertydefault>
+	<propertydefault defaultID="20348" property="homeSymbol">&#20388;</propertydefault>
+	<propertydefault defaultID="20434" property="homeSymbol">&#59086;</propertydefault>
+	<propertydefault defaultID="20388" property="homeSymbol">&#59087;</propertydefault>
+	<propertydefault defaultID="20459" property="homeSymbol">&#57429;</propertydefault>
+	<propertydefault defaultID="369" property="homeSymbol">&#57352;</propertydefault>
+	<propertydefault defaultID="562" property="homeSymbol">&#57461;</propertydefault>
+	<propertydefault defaultID="20387" property="homeSymbol">&#57352;</propertydefault>
+	<propertydefault defaultID="19023" property="homeSymbol">&#58944;</propertydefault>
+	<propertydefault defaultID="19024" property="homeSymbol">&#57443;</propertydefault>
+	<propertydefault defaultID="19069" property="homeSymbol">&#58944;</propertydefault>
+	<propertydefault defaultID="19163" property="homeSymbol">&#59172;</propertydefault>
+	<propertydefault defaultID="32023" property="homeSymbol">&#58990;</propertydefault>
+	<propertydefault defaultID="20390" property="homeSymbol">&#57352;</propertydefault>
+	<propertydefault defaultID="626" property="homeSymbol">&#59055;</propertydefault>
+	<propertydefault defaultID="20389" property="homeSymbol">&#57352;</propertydefault>
+	<propertydefault defaultID="133" property="homeSymbol">&#58944;</propertydefault>
+	<propertydefault defaultID="19024" property="homeSymbol">&#57443;</propertydefault>
+	<propertydefault defaultID="15100" property="homeSymbol">&#57401;</propertydefault>
+	<propertydefault defaultID="132" property="homeSymbol">&#57378;</propertydefault>
+	<propertydefault defaultID="134" property="homeSymbol">&#57441;</propertydefault>
+	<propertydefault defaultID="652" property="homeSymbol">&#57461;</propertydefault>
+	<propertydefault defaultID="271" property="homeSymbol">&#57392;</propertydefault>
+	<propertydefault defaultID="10504" property="homeSymbol">&#57392;</propertydefault>
+	<propertydefault defaultID="10505" property="homeSymbol">&#57392;</propertydefault>
+	<propertydefault defaultID="359" property="homeSymbol">&#57392;</propertydefault>
+	<propertydefault defaultID="517" property="homeSymbol">&#57392;</propertydefault>
+	<propertydefault defaultID="1037" property="homeSymbol">&#57389;</propertydefault>
+	<propertydefault defaultID="1038" property="homeSymbol">&#57389;</propertydefault>
+	<propertydefault defaultID="1039" property="homeSymbol">&#57389;</propertydefault>
+	<propertydefault defaultID="32023" property="homeSymbol">&#57389;</propertydefault>
+
+<!--user selectable symbols-->
+	<propertySettings property="homeSymbol" buttonID="501" title="$LOCALIZE[31223]" showNone="False"/>
+	<propertyfallback property="homeSymbol">&#57425;</propertyfallback>
+	<property property="homeSymbol">&#57344;</property>
+	<property property="homeSymbol">&#57345;</property>
+	<property property="homeSymbol">&#57349;</property>
+	<property property="homeSymbol">&#57352;</property>
+	<property property="homeSymbol">&#57356;</property>
+	<property property="homeSymbol">&#57357;</property>
+	<property property="homeSymbol">&#57359;</property>
+	<property property="homeSymbol">&#57360;</property>
+	<property property="homeSymbol">&#57361;</property>
+	<property property="homeSymbol">&#57362;</property>
+	<property property="homeSymbol">&#57363;</property>
+	<property property="homeSymbol">&#57366;</property>
+	<property property="homeSymbol">&#57369;</property>
+	<property property="homeSymbol">&#57370;</property>
+	<property property="homeSymbol">&#57371;</property>
+	<property property="homeSymbol">&#57373;</property>
+	<property property="homeSymbol">&#57374;</property>
+	<property property="homeSymbol">&#57376;</property>
+	<property property="homeSymbol">&#57377;</property>
+	<property property="homeSymbol">&#57378;</property>
+	<property property="homeSymbol">&#57382;</property>
+	<property property="homeSymbol">&#57383;</property>
+	<property property="homeSymbol">&#57384;</property>
+	<property property="homeSymbol">&#57386;</property>
+	<property property="homeSymbol">&#57388;</property>
+	<property property="homeSymbol">&#57389;</property>
+	<property property="homeSymbol">&#57392;</property>
+	<property property="homeSymbol">&#57393;</property>
+	<property property="homeSymbol">&#57394;</property>
+	<property property="homeSymbol">&#57395;</property>
+	<property property="homeSymbol">&#57396;</property>
+	<property property="homeSymbol">&#57397;</property>
+	<property property="homeSymbol">&#57399;</property>
+	<property property="homeSymbol">&#57401;</property>
+	<property property="homeSymbol">&#57402;</property>
+	<property property="homeSymbol">&#57403;</property>
+	<property property="homeSymbol">&#57404;</property>
+	<property property="homeSymbol">&#57406;</property>
+	<property property="homeSymbol">&#57407;</property>
+	<property property="homeSymbol">&#57408;</property>
+	<property property="homeSymbol">&#57410;</property>
+	<property property="homeSymbol">&#57411;</property>
+	<property property="homeSymbol">&#57412;</property>
+	<property property="homeSymbol">&#57413;</property>
+	<property property="homeSymbol">&#57418;</property>
+	<property property="homeSymbol">&#57419;</property>
+	<property property="homeSymbol">&#57420;</property>
+	<property property="homeSymbol">&#57424;</property>
+	<property property="homeSymbol">&#57425;</property>
+	<property property="homeSymbol">&#57426;</property>
+	<property property="homeSymbol">&#57427;</property>
+	<property property="homeSymbol">&#57429;</property>
+	<property property="homeSymbol">&#57434;</property>
+	<property property="homeSymbol">&#57435;</property>
+	<property property="homeSymbol">&#57436;</property>
+	<property property="homeSymbol">&#57437;</property>
+	<property property="homeSymbol">&#57441;</property>
+	<property property="homeSymbol">&#57443;</property>
+	<property property="homeSymbol">&#57447;</property>
+	<property property="homeSymbol">&#57449;</property>
+	<property property="homeSymbol">&#57450;</property>
+	<property property="homeSymbol">&#57461;</property>
+	<property property="homeSymbol">&#57463;</property>
+	<property property="homeSymbol">&#57470;</property>
+	<property property="homeSymbol">&#57471;</property>
+	<property property="homeSymbol">&#57473;</property>
+	<property property="homeSymbol">&#57475;</property>
+	<property property="homeSymbol">&#57476;</property>
+	<property property="homeSymbol">&#57477;</property>
+	<property property="homeSymbol">&#57479;</property>
+	<property property="homeSymbol">&#57480;</property>
+	<property property="homeSymbol">&#57482;</property>
+	<property property="homeSymbol">&#57483;</property>
+	<property property="homeSymbol">&#57489;</property>
+	<property property="homeSymbol">&#58898;</property>
+	<property property="homeSymbol">&#58899;</property>
+	<property property="homeSymbol">&#58931;</property>
+	<property property="homeSymbol">&#58944;</property>
+	<property property="homeSymbol">&#59000;</property>
+	<property property="homeSymbol">&#59014;</property>
+	<property property="homeSymbol">&#59038;</property>
+	<property property="homeSymbol">&#59039;</property>
+	<property property="homeSymbol">&#59053;</property>
+	<property property="homeSymbol">&#59086;</property>
+	<property property="homeSymbol">&#59087;</property>
+	<property property="homeSymbol">&#59176;</property>
+	<property property="homeSymbol">&#59177;</property>
+	<property property="homeSymbol">&#59187;</property>
+	<property property="homeSymbol">&#59204;</property>
+	<property property="homeSymbol">&#59205;</property>
+	<property property="homeSymbol">&#59206;</property>
+	<property property="homeSymbol">&#59207;</property>
+	<property property="homeSymbol">&#59221;</property>
+</overrides>

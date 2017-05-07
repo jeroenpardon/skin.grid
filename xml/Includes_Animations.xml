@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	 <include name="Burns">
+		<animation type="Conditional" condition="Skin.HasSetting(burns.enable)" loop="true">
+			<effect type="fade" start="0" end="100" time="2000" tween="Cubic" easing="InOut"/>
+			<effect type="zoom" center="auto" start="130" end="100" time="15000" tween="Cubic" easing="InOut"/>
+			<effect type="fade" start="100" end="0" time="1000" delay="14000" tween="Cubic" easing="InOut"/>
+		</animation>
+	</include>
+
+	<include name="UnfocusList">
+		<param name="FadeCondition" default="false"/>
+		<definition>
+			<animation type="Conditional" condition="$PARAM[FadeCondition]">
+				<effect type="Fade" start="100" end="25" time="150"/>
+			</animation>
+		</definition>
+	</include>
+
+<!--global-->
+	<include name="fadeinout">
+		<animation type="WindowOpen">
+			<effect type="Fade" start="0" end="100" time="350" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="Fade" start="100" end="0" time="250" />
+		</animation>
+		<animation type="Visible">
+			<effect type="Fade" start="0" end="100" time="250" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="Fade" start="100" end="0" time="150" />
+		</animation>
+	</include>
+
+	<include name="transition_ViewChange">
+		<animation type="WindowOpen">
+			<effect type="Fade" start="0" end="100" time="350" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="Fade" start="100" end="0" time="150" />
+		</animation>
+		<animation type="Visible">
+			<effect type="Fade" start="0" end="100" time="350" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="Fade" start="100" end="0" time="150" />
+		</animation>
+	</include>
+
+<!--transitions-->
+	<include name="transition_Content">
+		<animation type="WindowOpen">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Open" start="0,108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Close" start="0,0"  end="0,108" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+		<animation type="Visible">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Open" start="0,108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
+		</animation>			
+		<animation type="Hidden">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Close" start="0,0"  end="0,108" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+	</include>
+
+	<include name="transition_Menu">
+		<animation type="WindowClose">
+			<effect type="slide" time="transition_Close" start="0"  end="-384" tween="cubic" easing="Out" center="auto" />
+		</animation>
+	</include>
+
+	<include name="transition_Chrome">
+		<animation type="WindowOpen">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Open" start="0,-108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Close" start="0,0"  end="0,-108" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+		<animation type="VisibleChange">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Open" start="0,-108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+	</include>
+
+	<include name="transition_HomeMenu">
+		<animation type="WindowClose" condition="![Skin.HasSetting(global.backgroundvideo) + Player.HasVideo]">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
+		</animation>
+		<animation type="WindowOpen" condition="![Skin.HasSetting(global.backgroundvideo) + Player.HasVideo]">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+		</animation>
+		<animation type="Hidden" condition="![Skin.HasSetting(global.backgroundvideo) + Player.HasVideo]">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
+		</animation>
+		<animation type="Visible" condition="![Skin.HasSetting(global.backgroundvideo) + Player.HasVideo]">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+		</animation>
+	</include>
+
+	<include name="transition_Info">
+		<animation type="WindowOpen">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Open" start="0,108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Close" start="0,0"  end="0,108" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+		<animation type="Visible">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Open" start="0,108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
+		</animation>			
+		<animation type="Hidden">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Close" start="0,0"  end="0,108" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+	</include>
+
+	<include name="transition_Seekbar">
+		<animation type="WindowOpen">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Open" start="0,-108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+		<animation type="WindowClose">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Close" start="0,0"  end="0,-108" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+		<animation type="VisibleChange">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+			<effect type="slide" time="transition_Open" start="0,-108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+	</include>
+
+
+<!--toggles-->
+	<include name="toggle_Menu">
+		<animation type="Conditional" condition="Control.HasFocus(7100) | ControlGroup(7000).HasFocus() | Control.HasFocus(8000)" reversible="true">
+			<effect type="Slide" start="0" end="384" time="350" tween="Quadratic" easing="Out" />
+		</animation>
+		<!--
+		<animation type="Conditional" condition="String.IsEqual(Window(Home).Property(MenuOpen),true) | [Control.HasFocus(7100) | ControlGroup(7000).HasFocus() | Control.HasFocus(8000)]" reversible="true">
+			<effect type="Slide" start="0" end="384" time="350" tween="Quadratic" easing="Out" />
+		</animation>
+		-->
+	</include>
+
+	<include name="toggle_Stream">
+		<animation effect="slide" start="0" end="-128" time="250" tween="Quadratic" easing="Out" condition="String.IsEqual(Skin.String(homemenu.type),stream) + ControlGroup(9100).HasFocus()">Conditional</animation>
+	</include>
+
+	<include name="toggle_Focus">
+		<animation type="Conditional" condition="$EXP[!Views.ListHasFocus]">
+			<effect type="Fade" start="100" end="0" time="150"/>
+		</animation>
+	</include>
+
+</includes>

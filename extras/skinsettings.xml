@@ -1,0 +1,77 @@
+<settings>
+
+	<!-- Home menu layout -->
+	<setting id="homemenu.type" value="vertical" label="$LOCALIZE[31023]" default="true">
+		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onselect>
+		
+	</setting>
+	<setting id="homemenu.type" value="vertical2" label="$LOCALIZE[31024]">
+		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onselect>
+	</setting>
+	<setting id="homemenu.type" value="stream" label="$LOCALIZE[31025]">
+		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onselect>
+	</setting>
+
+	<!-- Home statusbar -->
+	<setting id="home.status" value="none" label="$LOCALIZE[13113]" default="true"/>
+	<setting id="home.status" value="library" label="$LOCALIZE[31067]"/>
+	<setting id="home.status" value="pvr" label="$LOCALIZE[19053]"/>
+	<setting id="home.status" value="rss" label="$LOCALIZE[20304]">
+		<onselect condition="True">RunScript(script.skin.helper.service,action=togglekodisetting,setting=lookandfeel.enablerssfeeds)</onselect>
+	</setting>
+	<setting id="home.status" value="system" label="$LOCALIZE[10511]"/>
+	<setting id="home.status" value="feed" label="$LOCALIZE[31020]"/>
+
+	<!-- Global background type -->
+	<setting id="background.type" value="none" label="$LOCALIZE[36502]"/>
+	<setting id="background.type" value="fanart" label="$LOCALIZE[31118]"/>
+	<setting id="background.type" value="single" label="$LOCALIZE[31055]"/>
+	<setting id="background.type" value="multi" label="$LOCALIZE[31056]" default="true"/>
+
+	<!-- Global scrolling type -->
+	<setting id="global.scrolltype" value="active" label="$LOCALIZE[31220]"/>
+	<setting id="global.scrolltype" value="passive" label="$LOCALIZE[31221]" default="true"/>
+
+	<!-- Autoscroll speed -->
+	<setting id="autoscroll.speed" value="none" label="$LOCALIZE[13113]" default="true"/>
+	<setting id="autoscroll.speed" value="normal" label="$LOCALIZE[31227]"/>
+	<setting id="autoscroll.speed" value="slow" label="$LOCALIZE[31230]"/>
+	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31228]"/>
+
+	<!-- Visualisation mode -->
+	<setting id="viz.mode" value="fanart" label="$LOCALIZE[31124]" default="true"/>
+	<setting id="viz.mode" value="viz" label="$LOCALIZE[250]"/>
+	<setting id="viz.mode" value="blend" label="$LOCALIZE[20131]"/>
+
+	<!-- Ratings source -->
+	<setting id="video.ratings" value="disabled" label="$LOCALIZE[36502]" default="true"/>
+	<setting id="video.ratings" value="default" label="Kodi $LOCALIZE[571]"/>
+	<setting id="video.ratings" value="user" label="$LOCALIZE[38018]"/>
+	<setting id="video.ratings" value="imdb" label="IMDB"/>
+	<setting id="video.ratings" value="imdbpercent" label="IMDB ($LOCALIZE[31241])"/>
+	<setting id="video.ratings" value="mc" label="Metacritic"/>
+	<setting id="video.ratings" value="rt" label="Rotten Tomatoes"/>
+	<setting id="video.ratings" value="tmdb" label="TMDB"/>
+	<setting id="video.ratings" value="tmdbpercent" label="TMDB ($LOCALIZE[31241])"/>
+
+	<!-- Options menu player controls type -->
+	<setting id="menu.controls" value="none" label="$LOCALIZE[36502]"/>
+	<setting id="menu.controls" value="player" label="$LOCALIZE[31268]" default="true"/>
+	<setting id="menu.controls" value="fullscreen" label="$LOCALIZE[31267]"/>
+
+	<!-- EPG timeline scrolling speed -->
+	<setting id="epg.scrollspeed" value="normal" label="$LOCALIZE[31227]" default="true"/>
+	<setting id="epg.scrollspeed" value="fast" label="$LOCALIZE[31228]"/>
+	<setting id="epg.scrollspeed" value="instant" label="$LOCALIZE[31229]"/>
+
+	<!-- List view artwork type -->
+	<setting id="view.list.art" value="posters" label="$LOCALIZE[31100]"/>
+	<setting id="view.list.art" value="fanart" label="$LOCALIZE[31118]" default="true"/>
+	<setting id="view.list.art" value="landscape" label="$LOCALIZE[31102]"/>
+
+	<!-- Global landscape artwork type -->
+	<setting id="views.landscape.art" value="fanart" label="$LOCALIZE[31118]" default="true"/>
+	<setting id="views.landscape.art" value="landscape" label="$LOCALIZE[31102]"/>
+
+</settings>
+

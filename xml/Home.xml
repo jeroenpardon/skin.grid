@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload condition="String.IsEmpty(Skin.String(homemenu.type))">RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
+	<onload condition="String.IsEqual(Skin.String(homemenu.type),vertical)">RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
+	<onload condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
+	<onload condition="String.IsEqual(Skin.String(homemenu.type),stream)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
+	<onload condition="Window.Previous(startup)">Skin.SetString(HomeLoaded,True)</onload>
+	<onunload>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onunload>
+
+	<controls>
+
+		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Menu-vertical</include>
+
+		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">home_Menu-vertical2</include>
+
+		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + Skin.HasSetting(home.clock)">
+			<param name="Top">108</param>
+			<param name="Height">972</param>
+		</include>
+
+		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + !Skin.HasSetting(home.clock)">
+			<param name="Top">0</param>
+			<param name="Height">screen_Height</param>
+		</include>
+
+		<!-- Post startup -->
+		<control type="group">
+			<include>screen_Dimensions</include>
+			<animation type="Conditional" condition="[String.IsEqual(Skin.String(background.type),fanart) + !String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))] | [!String.IsEqual(Skin.String(background.type),fanart) + Skin.String(HomeLoaded,True)]">
+				<effect type="fade" start="0" end="100" time="0" delay="0"/>
+				<effect type="slide" start="0,0" end="0,1080" time="500" easing="InOut" tween="cubic" delay="0"/>
+			</animation>
+			<include>startup_Background</include>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<centertop>50%</centertop>
+				<width>300</width>
+				<height>193</height>
+				<texture>logos/grid.png</texture>
+				<aspectratio align="center">scale</aspectratio>
+				<colordiffuse>$VAR[color:Accent]</colordiffuse>
+			</control>
+		</control>
+	</controls>
+</window>

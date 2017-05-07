@@ -1,0 +1,464 @@
+<includes>
+
+	<include name="global_Background">
+		<param name="DiffuseTexture"/>
+		<param name="GridTexture" default="overlays/90.png"/>
+		<param name="DiffuseColor"/>
+		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)]"/>
+		<definition>
+			<control type="group">
+				<include>transition_HomeMenu</include>
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>String.IsEqual(Skin.String(background.type),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
+				</control>
+				<control type="multiimage">
+					<timeperimage>30000</timeperimage>
+					<fadetime>300</fadetime>
+					<pauseatend>10000</pauseatend>
+					<randomize>true</randomize>
+					<include>screen_Dimensions</include>
+					<include>Burns</include>
+					<aspectratio>scale</aspectratio>
+					<imagepath background="true">$VAR[background:Path]</imagepath>
+					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
+						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
+					</animation>
+					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
+					<visible>!String.IsEqual(Skin.String(background.type),none)</visible>
+				</control>
+				<!--playing video background-->
+				<control type="group">
+					<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + ![String.IsEqual(Skin.String(homemenu.type),stream) + Window.IsActive(home)]</visible>
+					<control type="image">
+						<aspectratio>stretch</aspectratio>
+						<include>screen_Dimensions</include>
+						<texture colordiffuse="ff000000">colorize/white.png</texture>
+					</control>
+					<control type="videowindow">
+						<include>screen_Dimensions</include>
+					</control>
+				</control>
+				<!--overlay-->
+				<control type="group">
+					<control type="image">
+						<include>screen_Dimensions</include>
+						<texture background="true" diffuse="$PARAM[DiffuseTexture]">overlays/background.png</texture>
+						<colordiffuse>$VAR[color:Main]</colordiffuse> 
+						<fadetime>fadetime_Fanart</fadetime>
+					</control>
+					<control type="image">
+						<colordiffuse>$VAR[color:Accent]</colordiffuse>
+						<include>screen_Dimensions</include>
+						<texture background="true" diffuse="$PARAM[DiffuseTexture]" colordiffuse="$PARAM[DiffuseColor]">$PARAM[GridTexture]</texture>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="player_Background">
+		<control type="group">
+			<animation type="conditional" condition="Skin.HasSetting(burns.enable)" loop="true">
+				<effect type="Fade" start="0" end="100" time="2000"/>
+				<effect type="Zoom" center="screen_Center" start="130" end="100" time="15000"/>
+				<effect type="Fade" start="100" end="0" time="1000" delay="14000"/>
+			</animation>
+			<control type="multiimage">
+				<include>screen_Dimensions</include>
+				<aspectratio align="center">scale</aspectratio>
+				<randomize>true</randomize>
+				<loop>true</loop>
+				<timeperimage>8000</timeperimage>
+				<fadetime>fadetime_Slideshow</fadetime>
+				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
+				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
+				<visible>System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + !String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))</visible>
+			</control>
+			<control type="image">
+				<include>screen_Dimensions</include>
+				<texture>$VAR[player:Art]</texture>
+				<fadetime>fadetime_Fanart</fadetime>
+				<aspectratio align="center" aligny="center">scale</aspectratio>
+				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
+				<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))</visible>
+			</control>
+		</control>
+	</include>
+
+	<include name="global_WindowTitle">
+		<param name="ID"/>
+		<param name="Top" default="0"/>
+		<param name="TextWidth" default="1600"/>
+		<param name="Width" default="1664"/>
+		<param name="TextureWidth" default="1664"/>
+		<param name="Height" default="108"/>
+		<param name="Label" default="$VAR[window:Title]"/>
+		<param name="Font" default="Black-48"/>
+		<param name="Symbol" default="$VAR[window:Symbol]"/>
+		<param name="SymbolFont" default="Symbols-32"/>
+		<param name="ItemCount" default="$INFO[Container.NumItems]"/>
+		<definition>
+			<control type="group">
+				<control type="image">
+					<width>128</width>
+					<height>$PARAM[Height]</height>
+					<texture colordiffuse="ff000000">colorize/30.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!Window.IsActive(Home)</visible>
+				</control>
+				<control type="label">
+					<width>128</width>
+					<height>$PARAM[Height]</height>
+					<label>$PARAM[ItemCount]</label>
+					<font>Thin-48</font>
+					<align>center</align>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<include>fadeinout</include>
+					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(DialogVolumebar.xml) | Player.Muted] + !Window.IsVisible(smartplaylistrule) + !Window.IsVisible(filebrowser) + !Window.IsVisible(busydialog) + !Window.IsVisible(contextmenu) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(DialogConfirm.xml)</visible>
+				</control>
+				<control type="label">
+					<width>128</width>
+					<height>$PARAM[Height]</height>
+					<label>$PARAM[Symbol]</label>
+					<font>$PARAM[SymbolFont]</font>
+					<align>center</align>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<include>fadeinout</include>
+					<visible>!Window.IsVisible(busydialog)</visible>
+				</control>
+				<include content="global_Busy">
+					<param name="Left">32</param>
+					<param name="Top">22</param>
+					<param name="Size">64</param>
+					<param name="Visible">Window.IsVisible(busydialog)</param>
+				</include>
+				<control type="image">
+					<left>128</left>
+					<width>$PARAM[TextureWidth]</width>
+					<height>$PARAM[Height]</height>
+					<texture colordiffuse="ff000000">colorize/20.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!Window.IsActive(Home)</visible>
+				</control>
+				<control type="label" id="$PARAM[ID]">
+					<left>160</left>
+					<top>$PARAM[Top]</top>
+					<width>$PARAM[TextWidth]</width>
+					<height>$PARAM[Height]</height>
+					<label>$PARAM[Label]</label>
+					<aligny>center</aligny>
+					<font>$PARAM[Font]</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>$EXP[!Window.HasOverlay]</visible>
+				</control>
+				<control type="label" id="$PARAM[ID]">
+					<left>160</left>
+					<top>$PARAM[Top]</top>
+					<width>832</width>
+					<height>$PARAM[Height]</height>
+					<label>$PARAM[Label]</label>
+					<aligny>center</aligny>
+					<font>$PARAM[Font]</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>$EXP[Window.HasOverlay]</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="global_Includes">
+		<definition>
+			<include>global_Clock</include>
+			<include>global_Itemcount</include>
+		</definition>
+	</include>
+
+	<include name="global_Clock">
+		<param name="Left" default="1792"/>
+		<param name="Width" default="128"/>
+		<param name="Height" default="108"/>
+		<param name="Font" default="Black-28"/>
+		<param name="Font2" default="Black-22"/>
+		<param name="DateFont" default="Regular-22-L"/>
+		<param name="DateTextColor" default="$VAR[color:Accent]"/>
+		<param name="ShowClock" default="true"/>
+		<definition>
+			<!--date-->
+			<control type="group">
+				<visible>[Skin.HasSetting(global.showdate) | [Window.IsActive(Home) + Skin.HasSetting(home.date)]] + [!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia]</visible>
+				<!--
+				<control type="image">
+					<right>128</right>
+					<width>756</width>
+					<height>98</height>
+					<texture colordiffuse="ff000000">colorize/20.png</texture>
+					<visible>Window.IsActive(home)</visible>
+				</control>
+				-->
+				<control type="label">
+					<right>160</right>
+					<width min="128" max="384">auto</width>
+					<height>$PARAM[Height]</height>
+					<label>$INFO[System.Date]</label>
+					<font>$PARAM[DateFont]</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$PARAM[DateTextColor]</textcolor>
+				</control>
+			</control>
+			<!-- Fullscreen info -->
+			<control type="group">
+				<right>148</right>
+				<width>600</width>
+				<visible>Window.IsVisible(seekbar) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Window.IsActive(volumebar)</visible>
+				<control type="grouplist">
+					<top>16</top>
+					<width>600</width>
+					<height>108</height>
+					<align>right</align>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width>auto</width>
+						<height>54</height>
+						<font>Black-22</font>
+						<align>right</align>
+						<visible>!VideoPlayer.Content(livetv)</visible>
+						<textcolor>$PARAM[DateTextColor]</textcolor>
+						<label>$INFO[Player.Time(hh:mm:ss)]</label>
+					</control>
+					<control type="label">
+						<width>32</width>
+						<height>54</height>
+						<font>Black-22</font>
+						<align>center</align>
+						<visible>!VideoPlayer.Content(livetv)</visible>
+						<textcolor>$PARAM[DateTextColor]</textcolor>
+						<label>/</label>
+					</control>
+					<control type="label">
+						<width>auto</width>
+						<height>54</height>
+						<font>Black-22</font>
+						<align>right</align>
+						<visible>!VideoPlayer.Content(livetv)</visible>
+						<textcolor>$PARAM[DateTextColor]</textcolor>
+						<label>$INFO[Player.Duration(hh:mm:ss)]</label>
+					</control>
+				</control>
+				<control type="label">
+					<top>54</top>
+					<width>600</width>
+					<height>54</height>
+					<align>right</align>
+					<aligny>top</aligny>
+					<font>Regular-20</font>
+					<label>$INFO[Player.FinishTime,$LOCALIZE[31323] ]</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+			</control>
+			<!--time-->
+			<control type="group">
+				<left>$PARAM[Left]</left>
+				<width>$PARAM[Width]</width>
+				<height>$PARAM[Height]</height>
+				<include>toggle_Menu</include>
+				<visible>$PARAM[ShowClock]</visible>
+				<control type="image">
+					<width>$PARAM[Width]</width>
+					<height>$PARAM[Height]</height>
+					<texture colordiffuse="ff000000">colorize/30.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="grouplist">
+					<width>$PARAM[Width]</width>
+					<height>$PARAM[Height]</height>
+					<itemgap>0</itemgap>
+					<align>center</align>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<width>55.32</width>
+						<height>$PARAM[Height]</height>
+						<label>$INFO[System.Time(hh)]</label>
+						<font>$PARAM[Font]</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Accent]</textcolor>
+					</control>
+					<control type="list">
+						<width>17.33</width>
+						<height>$PARAM[Height]</height>
+						<scrolltime>0</scrolltime>
+						<autoscroll time="750">true</autoscroll>
+						<visible>true</visible>
+						<orientation>vertical</orientation>
+						<itemlayout width="auto" height="$PARAM[Height]">
+							<control type="label">
+								<width>17.33</width>
+								<height>$PARAM[Height]</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>$PARAM[Font2]</font>
+								<textcolor>$VAR[color:Accent]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</itemlayout>
+						<focusedlayout width="auto" height="$PARAM[Height]">
+							<control type="label">
+								<width>17.33</width>
+								<height>$PARAM[Height]</height>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>$PARAM[Font2]</font>
+								<textcolor>$VAR[color:Accent]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+							</control>
+						</focusedlayout>
+						<content>
+							<item>
+								<label>&#32;</label>
+								<onclick>noop</onclick>
+							</item>
+							<item>
+								<label>&#58;</label>
+								<onclick>noop</onclick>
+							</item>
+						</content>
+					</control>
+					<control type="label">
+						<width>55.32</width>
+						<height>$PARAM[Height]</height>
+						<label>$INFO[System.Time(mm)]</label>
+						<font>$PARAM[Font]</font>
+						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Accent]</textcolor>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="global_Busy">
+		<param name="Left"/>
+		<param name="CenterLeft"/>
+		<param name="Top"/>
+		<param name="Size" default="64"/>
+		<param name="Visible"/>
+		<definition>
+			<control type="multiimage">
+				<centerleft>$PARAM[CenterLeft]</centerleft>
+				<left>$PARAM[Left]</left>
+				<top>$PARAM[Top]</top>
+				<width>$PARAM[Size]</width>
+				<height>$PARAM[Size]</height>
+				<aspectratio>keep</aspectratio>
+				<imagepath>busy</imagepath>
+				<timeperimage>150</timeperimage>
+				<fadetime>250</fadetime>
+				<pauseatend>500</pauseatend>
+				<randomize>false</randomize>
+				<colordiffuse>$VAR[color:Accent]</colordiffuse>
+				<include>fadeinout</include>
+				<visible>$PARAM[Visible]</visible>
+			</control>
+		</definition>
+	</include>
+
+	<include name="global_Playing">
+		<param name="Left"/>
+		<param name="Right"/>
+		<param name="Width" default="756"/>
+		<param name="Height" default="108"/>
+		<param name="TextWidth" default="624"/>
+		<param name="ShowSymbol" default="true"/>
+		<param name="TextLeft" default="108"/>
+		<param name="DiffuseLevel" default="50"/>
+		<param name="Symbol" default="$VAR[toast:Symbol]"/>
+		<param name="Label" default="$VAR[toast:PlayingTitle]"/>
+		<param name="Label2" default="$VAR[toast:PlayingTitle]"/>
+		<definition>
+			<control type="group">
+				<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),stream)">Conditional</animation>
+				<left>$PARAM[Left]</left>
+				<right>$PARAM[Right]</right>
+				<width>$PARAM[Width]</width>
+				<height>$PARAM[Height]</height>
+				<include>toggle_Menu</include>
+				<include>fadeinout</include>
+				<control type="image">
+					<width>$PARAM[Width]</width>
+					<height>$PARAM[Height]</height>
+					<texture colordiffuse="$VAR[color:Accent]">colorize/$PARAM[DiffuseLevel].png</texture>
+				</control>
+				<control type="progress" id="29998">
+					<width>100%</width>
+					<height>$PARAM[Height]</height>
+					<info>Player.Progress</info>
+					<lefttexture></lefttexture>
+					<midtexture colordiffuse="$VAR[color:Accent]">colorize/$PARAM[DiffuseLevel].png</midtexture>
+					<righttexture></righttexture>
+				</control>
+				<control type="label">
+					<width>$PARAM[Height]</width>
+					<height>$PARAM[Height]</height>
+					<font>Symbols-32</font>
+					<label>$PARAM[Symbol]</label>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Main]</textcolor>
+					<visible>$PARAM[ShowSymbol]</visible>
+				</control>
+				<control type="group">
+					<left>$PARAM[TextLeft]</left>
+					<control type="label" id="30">
+						<top>16</top>
+						<width>$PARAM[TextWidth]</width>
+						<height>50%</height>
+						<font>Black-22</font>
+						<label>$VAR[toast:PlayingTitle]</label>
+						<textcolor>$VAR[color:Main]</textcolor>
+					</control>
+					<control type="label" id="31">
+						<top>50%</top>
+						<width>$PARAM[TextWidth]</width>
+						<height>50%</height>
+						<aligny>top</aligny>
+						<font>Regular-20</font>
+						<label>$VAR[toast:PlayingInfo]</label>
+						<textcolor>$VAR[color:Main]</textcolor>
+					</control>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<!--pagecontrol-->
+	<include name="global_Scrollbar">
+		<param name="Left" default="50"/>
+		<param name="Top" default="108"/>
+		<param name="OnLeft" default="50"/>
+		<param name="OnUp"/>
+		<param name="Height" default="972"/>
+		<param name="Width" default="8"/>
+		<param name="Orientation" default="vertical"/>
+		<param name="Visible" default="String.IsEqual(Skin.String(global.scrolltype),active) | Control.HasFocus(6500) + String.IsEqual(Skin.String(global.scrolltype),passive)"/>
+		<definition>
+			<control type="scrollbar" id="6500">
+				<top>$PARAM[Top]</top>
+				<right>$PARAM[Right]</right>
+				<width>$PARAM[Width]</width>
+				<height>$PARAM[Height]</height>
+				<onleft>$PARAM[OnLeft]</onleft>
+				<onup>$PARAM[OnUp]</onup>
+				<onright>6000</onright>
+				<include>fadeinout</include>
+				<include>toggle_Menu</include>
+				<orientation>$PARAM[Orientation]</orientation>
+				<visible allowhiddenfocus="true">$PARAM[Visible]</visible>
+			</control>
+		</definition>
+	</include>
+</includes>

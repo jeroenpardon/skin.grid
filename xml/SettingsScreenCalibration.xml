@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>8</defaultcontrol>
+	<controls>
+		<control type="videowindow" id="20">
+			<include>screen_Dimensions</include>
+			<visible>Player.HasVideo</visible>
+		</control>
+		<!--overlay-->
+		<control type="image">
+			<include>screen_Dimensions</include>
+			<texture colordiffuse="ff000000">colorize/95.png</texture>
+			<visible>!Player.HasVideo</visible>
+		</control>	
+		<!--top left mover-->
+		<control type="mover" id="8">
+			<width>128</width>
+			<height>128</height>
+			<texturenofocus>calibration/topleft.png</texturenofocus>
+			<texturefocus>calibration/topleft-focus.png</texturefocus>
+		</control>
+		<!--right bottom mover-->
+		<control type="mover" id="9">
+			<left>700</left>
+			<top>500</top>
+			<width>128</width>
+			<height>128</height>
+			<texturenofocus>calibration/bottomright.png</texturenofocus>
+			<texturefocus>calibration/bottomright-focus.png</texturefocus>
+		</control>
+		<!--subtitle position mover-->
+		<control type="mover" id="10">
+			<left>200</left>
+			<top>500</top>
+			<width>512</width>
+			<height>128</height>
+			<texturenofocus>calibration/subtitles.png</texturenofocus>
+			<texturefocus>calibration/subtitles-focus.png</texturefocus>
+		</control>
+		<!--pixel aspect ratio box-->
+		<control type="resize" id="11">
+			<top>232</top>
+			<width>256</width>
+			<height>256</height>
+			<texturenofocus>calibration/pixelratio.png</texturenofocus>
+			<texturefocus>calibration/pixelratio-focus.png</texturefocus>
+		</control>
+		<control type="group">
+			<top>80</top>
+			<!--coordinates label-->
+			<control type="label" id="2">
+				<top>10</top>
+				<width>screen_Width</width>
+				<label></label>
+				<font>Black-22</font>
+				<align>center</align>
+				<textcolor>white</textcolor>
+			</control>
+			<!--help information-->
+			<control type="label" id="3">
+				<top>50</top>
+				<width>screen_Width</width>
+				<label></label>
+				<font>Regular-22-L</font>
+				<align>center</align>
+				<textcolor>grey</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

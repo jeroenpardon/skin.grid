@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>	
+	<include name="home_Menu-stream">
+		<param name="Top" default="0"/>
+		<param name="Height" default="screen_Height"/>
+		<definition>
+			<control type="group">
+				<include>transition_HomeMenu</include>
+
+				<!--background-->
+				<include content="global_Background">
+					<param name="GridTexture">overlays/108.png</param>
+				</include>
+
+				<include content="global_Clock" condition="Skin.HasSetting(home.clock)">
+					<param name="Left">0</param>
+				</include>
+
+				<include content="home_Feed" condition="String.IsEqual(Skin.String(homemenu.type),stream)">
+					<param name="Width">1792</param>
+					<param name="Left">128</param>
+				</include>
+
+				<control type="list" id="9000">
+					<top>$PARAM[Top]</top>
+					<left>0</left>
+					<width>128</width>
+					<height>$PARAM[Height]</height>
+					<onup>9000</onup>
+					<onleft>8000</onleft>
+					<onright>9100</onright>
+					<ondown>9000</ondown>
+					<pagecontrol>80</pagecontrol>
+					<include>global_ListScroll</include>
+					<orientation>vertical</orientation>
+
+					<visible>!Control.IsVisible(5000)</visible>
+					<itemlayout width="128" height="108">
+						<control type="label">
+							<width>128</width>
+							<height>108</height>
+							<font>Symbols-32</font>
+							<label>$INFO[ListItem.Property(homeSymbol)]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.2]</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout width="128" height="108">
+						<control type="group">
+							<control type="label">
+								<width>128</width>
+								<height>108</height>
+								<font>Symbols-32</font>
+								<label>$INFO[ListItem.Property(homeSymbol)]</label>
+								<align>center</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[color:Accent]</textcolor>
+							</control>
+						</control>
+						<control type="group">
+							<visible>Control.HasFocus(9000) | Control.HasFocus(8000)</visible>
+							<control type="group">
+								<control type="image">
+									<aspectratio>stretch</aspectratio>
+									<width>128</width>
+									<height>108</height>
+									<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+								</control>
+							</control>
+							<control type="label">
+								<width>128</width>
+								<height>108</height>
+								<font>Symbols-32</font>
+								<label>$INFO[ListItem.Property(homeSymbol)]</label>
+								<align>center</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[color:Main]</textcolor>
+							</control>
+						</control>	
+					</focusedlayout>
+					<content>
+						 <include>skinshortcuts-mainmenu</include>
+					</content>
+				</control>
+				<control type="image">
+					<left>128</left>
+					<aspectratio>stretch</aspectratio>
+					<include>screen_Width</include>
+					<texture colordiffuse="ff000000">colorize/20.png</texture>
+				</control>
+			</control>
+		</definition> 
+	</include>
+
+
+
+
+
+
+
+	<include name="home_Menu-vertical">
+
+		<include content="global_Background">
+			<param name="GridTexture">overlays/home.png</param>
+			<param name="DiffuseColor">ff000000</param>
+			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
+		</include>
+
+		<include content="global_WindowTitle">
+			<param name="Left">1792</param>
+			<param name="Height">98</param>
+		</include>
+
+		<include content="global_Clock" condition="Skin.HasSetting(home.clock)">
+			<param name="Left">1792</param>
+			<param name="Height">98</param>
+		</include>
+
+		<control type="group">
+
+			<include>transition_HomeMenu</include>
+
+			<!-- Scroll indicators -->
+			<control type="label">
+				<width>128</width>
+				<height>98</height>
+				<font>Symbols-32</font>
+				<label>&#58919;</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[color:Text.3]</textcolor>
+				<include>fadeinout</include>
+				<visible>Container(9000).HasPrevious + IntegerGreaterThan(Container(9000).NumItems,8) + !Player.Muted</visible>
+			</control>
+			<control type="label">
+				<bottom>0</bottom>
+				<width>128</width>
+				<height>98</height>
+				<font>Symbols-32</font>
+				<label>&#58922;</label>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>$VAR[color:Text.3]</textcolor>
+				<include>fadeinout</include>
+				<visible>Container(9000).HasNext + IntegerGreaterThan(Container(9000).NumItems,8)</visible>
+			</control>
+
+			<!-- Widget feed -->
+			<include content="home_Feed" condition="String.IsEqual(Skin.String(homemenu.type),vertical)">
+				<param name="Left">1920</param>
+			</include>
+
+			<control type="list" id="9000">
+				<top>100</top>
+				<width>1920</width>
+				<height>900</height>
+				<onleft>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onleft>
+				<onback>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onback>
+				<onright>SetFocus(9100)</onright>
+				<onright condition="Integer.IsGreater(ControlGroup(9100).NumItems(0))">SetFocus(9100)</onright>
+				<ondown>9000</ondown>
+				<orientation>vertical</orientation>
+				<include>global_ListScroll</include>
+				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.type),vertical)">
+					<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="none"/>
+				</animation>
+				<animation effect="slide" end="0,98" time="0" condition="String.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
+				<animation effect="slide" end="0,196" time="0" condition="String.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
+				<animation effect="slide" end="0,294" time="0" condition="String.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
+				<animation effect="slide" end="0,392" time="0" condition="String.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+				<itemlayout width="1920" height="98">
+					<!--main-->
+					<control type="group">
+
+						<control type="label">
+							<width>128</width>
+							<height>98</height>
+							<font>Symbols-32</font>
+							<label>$VAR[home:Symbol]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.2]</textcolor>
+						</control>
+						<control type="label">
+							<left>160</left>
+							<width>1920</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Thin-64</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+							<animation effect="fade" start="100" end="35" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
+						</control>
+					</control>
+					<!--sub-->
+					<control type="group">
+						<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
+						<control type="label">
+							<width>128</width>
+							<height>98</height>
+							<font>Symbols-32</font>
+							<label>$INFO[ListItem.Property(homeSymbol)]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.2]</textcolor>
+						</control>
+						<control type="label">
+							<left>160</left>
+							<width>1920</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Thin-64</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="1920" height="98">
+					<!--main-->
+					<control type="group">
+						<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
+						<control type="label">
+							<width>128</width>
+							<height>98</height>
+							<font>Symbols-32</font>
+							<label>$INFO[ListItem.Property(homeSymbol)]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>	
+						<control type="label">
+							<top>0</top>
+							<left>160</left>
+							<width>1920</width>
+							<height>98</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Black-72</font>
+							<align>left</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+						<control type="label">
+							<left>160</left>
+							<visible>!Control.HasFocus(9000)</visible>
+							<width>1920</width>
+							<height>98</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Black-72</font>
+							<aligny>center</aligny>
+							<align>left</align>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+					</control>
+					<!--sub-->
+					<control type="group">
+						<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
+						<control type="label">
+							<width>128</width>
+							<height>98</height>
+							<font>Symbols-32</font>
+							<label>$INFO[ListItem.Property(homeSymbol)]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>	
+						<control type="label">
+							<left>160</left>
+							<width>1920</width>
+							<height>98</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Black-72</font>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+						<control type="label">
+							<left>160</left>
+							<visible>!Control.HasFocus(9000)</visible>
+							<width>1920</width>
+							<height>98</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Black-72</font>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					 <include>skinshortcuts-allmenus</include>
+				</content>
+			</control>
+		</control>
+		<include content="home_Status">
+			<param name="Left">128"</param>
+			<param name="Width">1772"</param>
+		</include>
+	</include>
+
+
+
+
+
+
+	<include name="home_Menu-vertical2">
+		<definition>
+			<control type="group">
+				<include>transition_HomeMenu</include>
+
+				<!--background-->
+				<include content="global_Background">
+					<param name="GridTexture">overlays/98.png</param>
+				</include>
+
+				<include content="global_Clock" condition="Skin.HasSetting(home.clock)">
+					<param name="Left">0</param>
+				</include>
+
+				<control type="image">
+					<left>566</left>
+					<width>1344</width>
+					<height>$PARAM[Height]</height>
+					<texture colordiffuse="ff000000">colorize/40.png</texture>
+				</control>
+
+				<!-- Scroll indicators -->
+				<control type="label">
+					<width>528</width>
+					<height>98</height>
+					<font>Symbols-32</font>
+					<label>&#58919;</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Text.3]</textcolor>
+					<include>fadeinout</include>
+					<visible>Container(9000).HasPrevious + IntegerGreaterThan(Container(9000).NumItems,8)</visible>
+				</control>
+				<control type="label">
+					<bottom>0</bottom>
+					<width>528</width>
+					<height>98</height>
+					<font>Symbols-32</font>
+					<label>&#58922;</label>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Text.3]</textcolor>
+					<include>fadeinout</include>
+					<visible>Container(9000).HasNext + IntegerGreaterThan(Container(9000).NumItems,8)</visible>
+				</control>
+
+				<include content="home_Feed" condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">
+					<param name="Width">1344</param>
+					<param name="Left">576</param>
+				</include>
+
+				<control type="list" id="9000">
+					<top>98</top>
+					<width>576</width>
+					<height>882</height>
+					<onup>9000</onup>
+					<onleft>noop</onleft>
+					<onright>9100</onright>
+					<ondown>9000</ondown>
+					<include>global_ListScroll</include>
+					<orientation>vertical</orientation>
+					<visible>!Control.IsVisible(5000)</visible>
+					<itemlayout width="576" height="98">
+						<control type="label">
+							<width>576</width>
+							<height>98</height>
+							<font>Symbols-32</font>
+							<textoffsetx>48</textoffsetx>
+							<label>$INFO[ListItem.Property(homeSymbol)]</label>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.2]</textcolor>
+						</control>
+						<control type="label">
+							<textoffsetx>100</textoffsetx>
+							<width>576</width>
+							<height>98</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Thin-54</font>
+							<align>right</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout width="112" height="98">
+						<control type="group">
+							<visible>ControlGroup(9100).HasFocus()</visible>
+							<control type="label">
+								<width>576</width>
+								<height>98</height>
+								<font>Symbols-32</font>
+								<textoffsetx>48</textoffsetx>
+								<label>$INFO[ListItem.Property(homeSymbol)]</label>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[color:Text.2]</textcolor>
+							</control>
+							<control type="label">
+								<textoffsetx>112</textoffsetx>
+								<width>576</width>
+								<height>98</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Thin-54</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[color:Accent]</textcolor>
+							</control>
+						</control>
+						<control type="group">
+							<visible>!ControlGroup(9100).HasFocus()</visible>
+							<control type="label">
+								<width>576</width>
+								<height>98</height>
+								<font>Symbols-32</font>
+								<textoffsetx>48</textoffsetx>
+								<label>$INFO[ListItem.Property(homeSymbol)]</label>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[color:Accent]</textcolor>
+							</control>
+							<control type="label">
+								<textoffsetx>100</textoffsetx>
+								<width>576</width>
+								<height>98</height>
+								<label>$INFO[ListItem.Label]</label>
+								<font>Black-60</font>
+								<align>right</align>
+								<aligny>center</aligny>
+								<textcolor>$VAR[color:Accent]</textcolor>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						 <include>skinshortcuts-mainmenu</include>
+					</content>
+				</control>
+			</control>
+		</definition> 
+	</include>
+</includes>

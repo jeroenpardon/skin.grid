@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">703</defaultcontrol>
+	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow, daemon=True)</onload>
+	<controls>
+		<control type="visualisation" id="2">
+			<include>screen_Dimensions</include>
+		</control>
+		<include>player_Background</include>
+		<control type="group">
+			<include>fadeinout</include>
+			<visible>Player.ShowInfo + ![Window.IsActive(MusicOSD) | Window.IsVisible(okdialog) | Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
+			<include content="player_Info">
+				<param name="Left" value="148"/>
+				<param name="InfoLeft" value="256"/>
+				<param name="Top" value="734"/>
+				<param name="InfoTop" value="900"/>
+			</include>
+		</control>
+	</controls>
+</window>

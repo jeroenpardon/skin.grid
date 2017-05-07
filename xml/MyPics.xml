@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<menucontrol>7000</menucontrol>
+	<views>50,55</views>
+	<controls>
+
+	<!--menu trigger-->
+		<control type="button" id="5500">
+			<onfocus>Control.SetFocus(50)</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+
+		<include content="global_Background">
+			<param name="GridTexture">$VAR[window:Grid]</param>
+		</include>
+
+	<!--global includes-->
+		<control type="group">
+			<include>transition_Chrome</include>
+			<include>toggle_Menu</include>
+			<include>global_Includes</include>
+			<include>global_Itemcount</include>
+			<include>global_WindowTitle</include>
+		</control>
+
+	<!--content-->
+		<control type="group">
+			<include>toggle_Menu</include>
+			<include>transition_Content</include>
+
+		<!--view includes-->
+			<control type="group">
+				<visible>Control.IsVisible(50)</visible>
+				<include>transition_ViewChange</include>
+				<include>view_List</include>
+			</control>
+
+			<control type="group">
+				<visible>Control.IsVisible(50)</visible>
+				<!--landscape-->
+				<include content="info_List">
+					<param name="AspectRatio">keep</param>
+					<param name="AspectRatioAlign">top</param>
+					<param name="Visible">$EXP[ArtLandscape]</param>
+				</include>
+			</control>
+
+			<include>info_List</include>
+
+			<include content="view_Thumbnails">
+				<param name="ID" value="55"/>
+				<param name="Label2" value="$VAR[media:Info]"/>
+			</include>
+
+		</control>
+
+	<!-- Scrollbar-->
+		<include>global_Scrollbar</include>
+	
+	<!--menu-->
+		<include>menu_Options</include>
+	</controls>
+</window>
