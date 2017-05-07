@@ -477,7 +477,7 @@
 		<param name="InfoWidth" default="1490"/>
 		<param name="ArtWidth" default="174"/>
 		<param name="ArtHeight" default="256"/>
-		<param name="TextWidth" default="1426"/>
+		<param name="TextWidth" default="1280"/>
 		<definition>
 			<control type="group">
 				<top>800</top>
@@ -533,8 +533,8 @@
 					</control>
 					<control type="textbox">
 						<top>120</top>
-						<width>1344</width>
-						<height>145</height>
+						<width max="$PARAM[TextWidth]">auto</width>
+						<height>120</height>
 						<label>$INFO[VideoPlayer.Plot]</label>
 						<font>Slab-22</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
