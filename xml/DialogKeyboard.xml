@@ -2,19 +2,51 @@
 <window>
 	<defaultcontrol always="true">300</defaultcontrol>
 	<coordinates>
-		<left>360</left>
-		<top>423</top>
+		<left>348</left>
+		<top>0</top>
 	</coordinates>
 	<controls>
 
+
 		<control type="group">
-			<width>1920</width>
-			<height>648</height>
-
+			<top>906</top>
+			<height>110</height>
 			<include>fadeinout</include>
-			<animation effect="slide" start="0,0" end="0,200" time="0" condition="Skin.HasSetting(keyboard.disable)">Conditional</animation>
+			<visible>Skin.HasSetting(keyboard.disable)</visible>
 			<visible>!Window.IsVisible(numericinput)</visible>
+			<control type="image">
+				<width>1224</width>
+				<height>110</height>
+				<texture colordiffuse="ff000000">colorize/100.png</texture>
+				<aspectratio align="center" aligny="top">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<width>1224</width>
+				<height>110</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<aspectratio align="center" aligny="top">stretch</aspectratio>
+			</control>
+			<control type="label" id="311">
+				<width>761</width>
+				<visible>!Control.IsVisible(312)</visible>
+			</control>
+			<control type="edit" id="312">
+				<left>10</left>
+				<top>10</top>
+				<align>center</align>
+				<width>1204</width>
+				<hinttext>$INFO[Control.GetLabel(311)]</hinttext>
+				<texturenofocus colordiffuse="$VAR[color:Accent]">colorize/10.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[color:Accent]">colorize/20.png</texturefocus>
+			</control>
+		</control>
 
+		<control type="group">
+			<bottom>108</bottom>
+			<height>612</height>
+			<include>fadeinout</include>
+			<visible>!Skin.HasSetting(keyboard.disable)</visible>
+			<visible>!Window.IsVisible(numericinput)</visible>
 			<control type="image">
 				<width>1224</width>
 				<height>612</height>
@@ -27,12 +59,10 @@
 				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 				<aspectratio align="center" aligny="top">stretch</aspectratio>
 			</control>
-
 			<control type="label" id="311">
 				<width>761</width>
 				<visible>!Control.IsVisible(312)</visible>
 			</control>
-
 			<control type="edit" id="312">
 				<left>0</left>
 				<top>0</top>
@@ -42,14 +72,11 @@
 				<texturenofocus colordiffuse="$VAR[color:Accent]">colorize/10.png</texturenofocus>
 				<texturefocus colordiffuse="$VAR[color:Accent]">colorize/20.png</texturefocus>
 			</control>
-
 			<control type="grouplist" id="1000">
 				<left>24</left>
 				<top>135</top>
 				<height>456</height>
-				<visible>!Skin.HasSetting(keyboard.disable)</visible>
-
-			<!-- row 1 -->
+				<!-- row 1 -->
 				<control type="grouplist" id="1100">
 					<itemgap>2</itemgap>
 					<height>90</height>

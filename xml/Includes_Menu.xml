@@ -529,7 +529,7 @@
 				<onleft>7100</onleft>
 				<onright>5500</onright>
 				<include>menu_Button</include>
-				<onclick>Right</onclick>
+				<onclick>Back</onclick>
 				<visible>Window.IsActive(videos) | Window.IsActive(music)</visible>
 			</control>
 			<control type="group">
