@@ -16,7 +16,7 @@
 
 	<!-- ListItems -->
 	<expression name="IsParent">[ListItem.IsParentFolder | String.IsEqual(ListItem.Label,* All seasons)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
-	<expression name="!IsParent">! [ListItem.IsParentFolder | String.IsEqual(ListItem.Label,* All seasons) | String.StartsWith(Container.FolderPath,videodb://movies/sets)]</expression>
+	<expression name="!IsParent">!ListItem.IsParentFolder + !String.IsEqual(ListItem.Label,* All seasons) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
 
 	<!-- Player -->
 	<expression name="IsPlaying">![Player.Paused | Player.Caching | Player.Seeking | Player.Rewinding | Player.Forwarding | Player.DisplayAfterSeek]</expression>
