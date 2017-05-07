@@ -51,12 +51,6 @@
 			<size>64</size>
 		</font>
 
-		<font>
-			<name>User-32</name>
-			<filename>Default/User.ttf</filename>
-			<size>32</size>
-		</font>
-
 		<!-- Black -->
 		<font>
 			<name>Black-18</name>
