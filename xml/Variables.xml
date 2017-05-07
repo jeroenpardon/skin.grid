@@ -886,7 +886,7 @@
 		<value condition="VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TVShowTitle]</value>
-		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Title]</value>
+		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Title]</value>
 	</variable>
 
 	<variable name="player:Info2">
