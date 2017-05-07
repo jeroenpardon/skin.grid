@@ -1356,6 +1356,8 @@
 		<value condition="Window.IsActive(DialogMusicInfo.xml)">&#57483;</value>
 		<value condition="Window.IsActive(pictureinfo) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo)">&#57483;</value>
 		<!-- Add-ons -->
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),optionsmenu)">&#58983;</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml)">&#57449;</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml)">&#57449;</value>
 		<value condition="Window.IsActive(script-skin_helper_service-ColorPicker.xml)">&#59104;</value>
 		<value condition="Window.IsActive(script-cu-lrclyrics-main.xml)">&#57420;</value>
@@ -1402,6 +1404,10 @@
 		<value condition="VideoPlayer.IsFullscreen + !Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
 		<value condition="VideoPlayer.IsFullscreen">$LOCALIZE[31531]</value>
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
+
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31211]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),optionsmenu)">$LOCALIZE[31210]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml)">$LOCALIZE[31212] $INFO[Window.Property(groupname)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=youtubesearchvideos)">YouTube</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31508]</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies)">TMDb: $ADDON[script.extendedinfo 32043]</value>
@@ -1425,9 +1431,6 @@
 		<value condition="Window.IsActive(pictures) + IsEmpty(Container.FolderName)">$LOCALIZE[1]</value>
 		<value condition="Window.IsActive(MyPVRSearch.xml)">$LOCALIZE[137]</value>
 		<value condition="Window.IsActive(1110)">$LOCALIZE[24001]</value>
-		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31211]</value>
-		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),optionsmenu)">$LOCALIZE[31210]</value>
-		<value condition="Window.IsActive(script-skinshortcuts.xml)">$LOCALIZE[31212] $INFO[Window.Property(groupname)]</value>
 		<value condition="Window.IsActive(InterfaceSettings)">$LOCALIZE[14207]</value>	
 		<value condition="Window.IsActive(PlayerSettings)">$LOCALIZE[14201]</value>
 		<value condition="Window.IsActive(MediaSettings)">$LOCALIZE[14212]</value>
