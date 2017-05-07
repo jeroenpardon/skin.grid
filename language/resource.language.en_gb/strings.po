@@ -562,7 +562,7 @@ msgid "Debug info"
 msgstr ""
 
 msgctxt "#31238"
-msgid "EPG Timeline scrolling speed"
+msgid "TV Guide scrolling speed"
 msgstr ""
 
 msgctxt "#31239"
@@ -596,7 +596,7 @@ msgid "Ratings"
 msgstr ""
 
 msgctxt "#31263"
-msgid "Enable virtual keyboard"
+msgid "Enable full virtual keyboard"
 msgstr ""
 
 
