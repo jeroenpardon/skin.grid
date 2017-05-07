@@ -348,14 +348,14 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://) + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | [Container.Content(files) + !Container.HasFiles] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(sets) | Container.Content(tags) | Container.Content(years) | Container.Content(events)</visible>
+						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | [Container.Content(files) + !Container.HasFiles] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(sets) | Container.Content(tags) | Container.Content(years) | Container.Content(events)</visible>
 					</control>
 					<control type="image">
 						<width>1036</width>
 						<height>$PARAM[ItemHeight]</height>
 						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[Container.Content(files) + Container.HasFiles] | Container.Content(videos) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | Container.Content(episodes) | Container.Content(images) | Container.Content(musicvideos) | Container.Content(songs) | String.StartsWith(Container.FolderPath,pvr://) | String.StartsWith(Container.FolderPath,plugin://plugin.video) | [!String.IsEqual(Skin.String(view.list.art),posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+						<visible>[Container.Content(files) + Container.HasFiles] | $EXP[Content.IsPVR] | Container.Content(videos) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | Container.Content(episodes) | Container.Content(images) | Container.Content(musicvideos) | Container.Content(songs) | String.StartsWith(Container.FolderPath,pvr://) | String.StartsWith(Container.FolderPath,plugin://plugin.video) | [!String.IsEqual(Skin.String(view.list.art),posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>

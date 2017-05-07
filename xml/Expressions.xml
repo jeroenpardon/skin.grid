@@ -10,6 +10,7 @@
 	<expression name="Content.IsAudio">Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(roles)</expression>
 	<expression name="Content.IsMusic">Window.IsActive(music) | String.Contains(Container.FolderPath,special://musicplaylists)</expression>
 	<expression name="Content.IsPVR">Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml) | Window.IsActive(MyPVRTimers.xml)</expression>
+	<expression name="!Content.IsPVR">!Window.IsActive(MyPVRChannels.xml) +!Window.IsActive(MyPVRRecordings.xml) +!Window.IsActive(MyPVRGuide.xml) +!Window.IsActive(MyPVRTimers.xml) +!Window.IsActive(MyPVRSearch.xml) +!Window.IsActive(MyPVRTimers.xml)</expression>
 	<expression name="Content.IsVideo">Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</expression>
 
 	<!-- Folderpath -->
