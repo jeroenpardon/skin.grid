@@ -577,13 +577,6 @@
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultVideo.png)">&#57352;</value>
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultVideoDeleted.png)">&#57428;</value>
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultYear.png)">&#57461;</value>
-		<!-- Widget layout selection 
-		<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31044])">&#59137;</value>
-		<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31072])">&#59133;</value>
-		<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31102])">&#59141;</value>
-		<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31101])">&#59154;</value>
-		<value condition="String.IsEqual(ListItem.Label,$LOCALIZE[31125])">&#59112;</value>
-		-->
 		<value>&#59200;</value>
 	</variable>
 
