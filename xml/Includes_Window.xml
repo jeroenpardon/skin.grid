@@ -14,6 +14,7 @@
 					<aspectratio>stretch</aspectratio>
 					<visible>String.IsEqual(Skin.String(background.type),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
 				</control>
+				<!--
 				<control type="multiimage">
 					<timeperimage>30000</timeperimage>
 					<fadetime>300</fadetime>
@@ -28,6 +29,15 @@
 					</animation>
 					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
 					<visible>!String.IsEqual(Skin.String(background.type),none)</visible>
+				</control>
+				-->
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<include>Burns</include>
+					<aspectratio>scale</aspectratio>
+					<texture background="true">$VAR[background:Path]</texture>
+					<visible>!String.IsEqual(Skin.String(background.type),none)</visible>
+					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
 				</control>
 				<!--playing video background-->
 				<control type="group">

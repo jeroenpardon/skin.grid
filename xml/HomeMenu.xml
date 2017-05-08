@@ -172,7 +172,6 @@
 				<itemlayout width="1920" height="98">
 					<!--main-->
 					<control type="group">
-
 						<control type="label">
 							<width>128</width>
 							<height>98</height>

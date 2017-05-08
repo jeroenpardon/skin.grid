@@ -6,8 +6,6 @@
 	<onload condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
 	<onload condition="String.IsEqual(Skin.String(homemenu.type),stream)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
 	<onload condition="Window.Previous(startup)">Skin.SetString(HomeLoaded,True)</onload>
-	<onunload>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onunload>
-
 	<controls>
 
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Menu-vertical</include>
@@ -27,9 +25,9 @@
 		<!-- Post startup -->
 		<control type="group">
 			<include>screen_Dimensions</include>
-			<animation type="Conditional" condition="[String.IsEqual(Skin.String(background.type),fanart) + !String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))] | [!String.IsEqual(Skin.String(background.type),fanart) + Skin.String(HomeLoaded,True)]">
+			<animation type="Conditional" condition="[[String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)] + !String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))] | [!String.IsEqual(Skin.String(background.type),fanart) + String.IsEqual(Skin.String(background.type),videofanart) + Skin.String(HomeLoaded,True)]">
 				<effect type="fade" start="0" end="100" time="0" delay="0"/>
-				<effect type="slide" start="0,0" end="0,1080" time="500" easing="InOut" tween="cubic" delay="3000"/>
+				<effect type="slide" start="0,0" end="0,1080" time="500" easing="InOut" tween="cubic" delay="5000"/>
 			</animation>
 			<include>startup_Background</include>
 			<control type="image">
@@ -41,6 +39,12 @@
 				<aspectratio align="center">scale</aspectratio>
 				<colordiffuse>$VAR[color:Accent]</colordiffuse>
 			</control>
+		</control>
+
+		<!-- Preload weather -->
+		<control type="label">
+			<label>$INFO[Weather.Conditions]</label>
+			<font></font>
 		</control>
 	</controls>
 </window>
