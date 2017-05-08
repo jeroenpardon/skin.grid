@@ -338,7 +338,7 @@ msgid "Download posters"
 msgstr ""
 
 msgctxt "#31124"
-msgid "Fanart slideshow"
+msgid "Video fanart"
 msgstr ""
 
 msgctxt "#31125"
@@ -357,13 +357,13 @@ msgctxt "#31128"
 msgid "Download characterart"
 msgstr ""
 
+msgctxt "#31129"
+msgid "Fanart (movies and TV shows only)"
+msgstr ""
+
 
 
 #: backgrounds
-msgctxt "#31130"
-msgid "Background images"
-msgstr ""
-
 msgctxt "#31131"
 msgid "Set background type"
 msgstr ""
