@@ -242,7 +242,7 @@
 				<param name="ItemHeight">90</param>
 				<param name="TextLeft">132</param>
 				<param name="OnLeft">5000</param>
-				<param name="OnRight">70</param>
+				<param name="OnRight">5000</param>
 				<param name="OnUp">50</param>
 				<param name="OnDown">50</param>
 			</include>
