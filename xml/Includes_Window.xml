@@ -146,12 +146,25 @@
 				<control type="label" id="$PARAM[ID]">
 					<left>160</left>
 					<top>$PARAM[Top]</top>
-					<width>$PARAM[TextWidth]</width>
+					<width max="$PARAM[TextWidth]">auto</width>
 					<height>$PARAM[Height]</height>
 					<label>$PARAM[Label]</label>
 					<aligny>center</aligny>
 					<font>$PARAM[Font]</font>
 					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>!Skin.HasSetting(global.showdate)</visible>
+					<visible>$EXP[!Window.HasOverlay]</visible>
+				</control>
+				<control type="label" id="$PARAM[ID]">
+					<left>160</left>
+					<top>$PARAM[Top]</top>
+					<width>1280</width>
+					<height>$PARAM[Height]</height>
+					<label>$PARAM[Label]</label>
+					<aligny>center</aligny>
+					<font>$PARAM[Font]</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>Skin.HasSetting(global.showdate)</visible>
 					<visible>$EXP[!Window.HasOverlay]</visible>
 				</control>
 				<control type="label" id="$PARAM[ID]">
