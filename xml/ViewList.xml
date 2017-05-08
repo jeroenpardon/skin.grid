@@ -335,6 +335,7 @@
 						<align>center</align>
 						<font>Symbols-32</font>
 						<textcolor>$VAR[color:Text.3]</textcolor>
+						<visible>String.StartsWith(Container.FolderPath,pvr://channels/)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
@@ -439,6 +440,7 @@
 							<font>Symbols-32</font>
 							<textcolor>$VAR[color:Main]</textcolor>
 							<selectedcolor>$VAR[color:Main]</selectedcolor>
+							<visible>String.StartsWith(Container.FolderPath,pvr://channels/)</visible>
 						</control>
 					</control>
 
@@ -515,6 +517,7 @@
 							<font>Symbols-32</font>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<visible>String.StartsWith(Container.FolderPath,pvr://channels/)</visible>
 						</control>
 					</control>
 				</focusedlayout>
