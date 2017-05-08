@@ -18,7 +18,7 @@
 					<aspectratio>stretch</aspectratio>
 					<width>540</width>
 					<height>90</height>
-					<texture colordiffuse="$VAR[color:Main]">colorize/75.png</texture>
+					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 				</control>
 				<control type="image">
 					<aspectratio>stretch</aspectratio>
@@ -53,7 +53,7 @@
 						<aspectratio>stretch</aspectratio>
 						<width>540</width>
 						<height>90</height>
-						<texture colordiffuse="$VAR[color:Main]">colorize/75.png</texture>
+						<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 					</control>
 					<control type="image">
 						<aspectratio>stretch</aspectratio>
@@ -191,16 +191,22 @@
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
 					<!--record-->
-					<control type="togglebutton" id="709">
+					<control type="button" id="709">
 						<label>&#59172;</label>
-						<altlabel>&#59172;</altlabel>
-						<usealttexture>Player.Recording</usealttexture>
-						<include>player_Control</include>
+						<textcolor>Attention</textcolor>
+						<focusedcolor>Attention</focusedcolor>
 						<onclick>PlayerControl(Record)</onclick>
-						<visible>VideoPlayer.Content(LiveTV)</visible>
+						<include>player_Control</include>
+						<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
+					</control>
+					<control type="button" id="710">
+						<label>&#59172;</label>
+						<onclick>PlayerControl(Record)</onclick>
+						<include>player_Control</include>
+						<visible>VideoPlayer.Content(LiveTV) + !Player.Recording</visible>
 					</control>
 					<!--channels-->
-					<control type="button" id="710">
+					<control type="button" id="711">
 						<label>&#59138;</label>
 						<onclick>Dialog.Close(VideoOSD,true)</onclick>
 						<onclick>ActivateWindow(PVROSDChannels)</onclick>
@@ -208,7 +214,7 @@
 						<visible>VideoPlayer.Content(LiveTV)</visible>
 					</control>
 					<!--channels-->
-					<control type="button" id="711">
+					<control type="button" id="712">
 						<label>&#58986;</label>
 						<onclick>Dialog.Close(VideoOSD,true)</onclick>
 						<include>player_Control</include>
