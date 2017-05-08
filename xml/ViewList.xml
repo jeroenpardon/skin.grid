@@ -242,10 +242,6 @@
 		<param name="TextLeft" default="152"/>
 		<param name="ListWidth" default="1124"/><!--1036-->
 		<param name="TextWidth" default="832"/>
-		<!--
-		<param name="UseCustomPath" default="false"/>
-		<param name="Path"/>
-		-->
 		<definition>
 			<control type="list" id="$PARAM[ID]">
 				<viewtype label="535">list</viewtype>
@@ -331,15 +327,14 @@
 						<visible>$EXP[Listview.MultiLine]</visible>
 					</control>
 					<control type="label" id="4">
-						<left>900</left>
+						<left>928</left>
 						<width>108</width>
 						<height>108</height>
 						<label>$VAR[pvr:Symbol]</label>
 						<aligny>center</aligny>
-						<align>right</align>
+						<align>center</align>
 						<font>Symbols-32</font>
 						<textcolor>$VAR[color:Text.3]</textcolor>
-						<visible>Container.Content(LiveTV)</visible>
 					</control>
 				</itemlayout>
 				<focusedlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
@@ -433,6 +428,18 @@
 							<aligny>top</aligny>
 							<visible>$EXP[Listview.MultiLine]</visible>
 						</control>
+						<!-- PVR Status -->
+						<control type="label">
+							<left>928</left>
+							<width>108</width>
+							<height>108</height>
+							<label>$VAR[pvr:Symbol]</label>
+							<aligny>center</aligny>
+							<align>center</align>
+							<font>Symbols-32</font>
+							<textcolor>$VAR[color:Main]</textcolor>
+							<selectedcolor>$VAR[color:Main]</selectedcolor>
+						</control>
 					</control>
 
 					<control type="group">
@@ -497,25 +504,23 @@
 							<aligny>top</aligny>
 							<visible>$EXP[Listview.MultiLine]</visible>
 						</control>
+						<!-- PVR Status -->
+						<control type="label">
+							<left>928</left>
+							<width>108</width>
+							<height>108</height>
+							<label>$VAR[pvr:Symbol]</label>
+							<aligny>center</aligny>
+							<align>center</align>
+							<font>Symbols-32</font>
+							<textcolor>$VAR[color:Accent]</textcolor>
+							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						</control>
 					</control>
 				</focusedlayout>
-				<!--
-				<include content="customPath" condition="$PARAM[UseCustomPath]">
-					<param name="Path">$PARAM[Path]</param>
-				</include>
-				-->
 			</control>
 		</definition>
 	</include>
-
-	<!--
-	<include name="customPath">
-		<param name="Path"/>
-		<definition>
-			<content target="video">$PARAM[Path]</content>
-		</definition>
-	</include>
-	-->
 
 	<include name="info_List">
 		<param name="Visible" default="false"/>

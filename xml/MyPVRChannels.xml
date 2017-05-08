@@ -35,7 +35,7 @@
 			<include content="view_List">
 				<param name="Label">$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,: ]$INFO[ListItem.Title]</param>
 				<param name="Label2">$VAR[media:Info]</param>
-				<param name="ShowSymbol">String.IsEmpty(ListItem.Icon)</param>
+				<param name="ShowSymbol">false</param>
 			</include>
 
 			<control type="group">
