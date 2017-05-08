@@ -1333,7 +1333,7 @@
 		<value condition="Window.IsActive(osdaudiosettings)">&#57371;</value>
 		<value condition="Window.IsActive(gamepadinput) | Window.IsActive(gamecontrollers)">&#57371;</value>
 		<value condition="Window.IsActive(visualisationpresetlist)">&#57463;</value>
-		<value condition="Window.IsActive(peripherals) | Window.IsActive(peripheralsettings)">&#59018;</value>
+		<!--<value condition="Window.IsActive(peripherals) | Window.IsActive(peripheralsettings)">&#59018;</value>-->
 		<value condition="Window.IsActive(DialogSelect.xml)">&#57447;</value>
 		<!-- DialogConfirm.xml -->
 		<value condition="Window.IsActive(yesnodialog)">&#57437;</value>
