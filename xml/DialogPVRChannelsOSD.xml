@@ -4,7 +4,7 @@
 	<coordinates>
 		<system>1</system>
 		<left>510</left>
-		<top>315</top>
+		<top>225</top>
 	</coordinates>
 	<controls>
 		<control type="group">
@@ -27,7 +27,7 @@
 					<font>Symbols-32</font>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>&#57483;</label>
+					<label>&#59138;</label>
 				</control>
 				<control type="label">
 					<left>114</left>
@@ -61,18 +61,18 @@
 				<height>450</height>
 				<control type="image">
 					<width>100%</width>
-					<height>450</height>
-					<texture colordiffuse="$VAR[color:Main]">colorize/75.png</texture>
+					<height>540</height>
+					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 				</control>
 				<control type="image">
 					<width>900</width>
-					<height>450</height>
+					<height>540</height>
 					<texture colordiffuse="ff000000">grid/osd/90.png</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<control type="image">
 					<width>90</width>
-					<height>450</height>
+					<height>540</height>
 					<texture colordiffuse="ff000000">colorize/15.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
@@ -80,7 +80,7 @@
 				<!--programme listing-->
 				<control type="list" id="11">
 					<width>100%</width>
-					<height>450</height>
+					<height>540</height>
 					<onup>11</onup>
 					<ondown>11</ondown>
 					<orientation>vertical</orientation>
@@ -111,7 +111,7 @@
 								<top>10</top>
 								<width>744</width>
 								<height>45</height>
-								<label>$INFO[ListItem.StartTime]$INFO[ListItem.Label, - ]</label>
+								<label>$INFO[ListItem.ChannelName,]$INFO[ListItem.Title, - ]</label>
 								<font>Black-22</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -121,7 +121,7 @@
 							<control type="label">
 								<top>45</top>
 								<width>744</width>
-								<label>$INFO[ListItem.Genre]</label>
+								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Genre,  |  ]</label>
 								<font>Regular-20</font>
 								<align>left</align>
 								<aligny>top</aligny>
@@ -162,7 +162,7 @@
 								<top>10</top>
 								<width>744</width>
 								<height>45</height>
-								<label>$INFO[ListItem.StartTime]$INFO[ListItem.Label, - ]</label>
+								<label>$INFO[ListItem.ChannelName,]$INFO[ListItem.Title, - ]</label>
 								<font>Black-22</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -172,7 +172,7 @@
 							<control type="label">
 								<top>45</top>
 								<width>744</width>
-								<label>$INFO[ListItem.Genre]</label>
+								<label>$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ]$INFO[ListItem.Genre,  |  ]</label>
 								<font>Regular-20</font>
 								<align>left</align>
 								<aligny>top</aligny>
