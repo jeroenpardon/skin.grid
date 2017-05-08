@@ -145,11 +145,6 @@
 		<animation type="Conditional" condition="[Control.HasFocus(7100) | ControlGroup(7000).HasFocus() | Control.HasFocus(8000)] + !Window.IsVisible(virtualkeyboard)" reversible="true">
 			<effect type="Slide" start="0" end="384" time="350" tween="Quadratic" easing="Out" />
 		</animation>
-		<!--
-		<animation type="Conditional" condition="String.IsEqual(Window(Home).Property(MenuOpen),true) | [Control.HasFocus(7100) | ControlGroup(7000).HasFocus() | Control.HasFocus(8000)]" reversible="true">
-			<effect type="Slide" start="0" end="384" time="350" tween="Quadratic" easing="Out" />
-		</animation>
-		-->
 	</include>
 
 	<include name="toggle_Stream">

@@ -7,75 +7,66 @@
 	</coordinates>
 	<controls>
 
-
 		<control type="group">
-			<top>906</top>
-			<height>110</height>
+			<bottom>108</bottom>
+			<height>612</height>
 			<include>fadeinout</include>
-			<visible>Skin.HasSetting(keyboard.disable)</visible>
 			<visible>!Window.IsVisible(numericinput)</visible>
-			<control type="image">
-				<width>1224</width>
-				<height>110</height>
-				<texture colordiffuse="ff000000">colorize/100.png</texture>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
+
+			<animation effect="slide" end="0,395" time="0" condition="Skin.HasSetting(keyboard.disable)">Conditional</animation>
+
+			<control type="group">
+				<visible>Skin.HasSetting(keyboard.disable)</visible>
+				<control type="image">
+					<width>1224</width>
+					<height>110</height>
+					<texture colordiffuse="ff000000">colorize/100.png</texture>
+					<aspectratio align="center" aligny="top">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<width>1224</width>
+					<height>110</height>
+					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+					<aspectratio align="center" aligny="top">stretch</aspectratio>
+				</control>
 			</control>
-			<control type="image">
-				<width>1224</width>
-				<height>110</height>
-				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
+			
+			<control type="group">
+				<visible>!Skin.HasSetting(keyboard.disable)</visible>
+				<control type="image">
+					<width>1224</width>
+					<height>612</height>
+					<texture colordiffuse="ff000000">colorize/100.png</texture>
+					<aspectratio align="center" aligny="top">stretch</aspectratio>
+				</control>
+				<control type="image">
+					<width>1224</width>
+					<height>612</height>
+					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+					<aspectratio align="center" aligny="top">stretch</aspectratio>
+				</control>
+				<control type="label" id="311">
+					<width>761</width>
+					<visible>!Control.IsVisible(312)</visible>
+				</control>
 			</control>
-			<control type="label" id="311">
-				<width>761</width>
-				<visible>!Control.IsVisible(312)</visible>
-			</control>
+
 			<control type="edit" id="312">
 				<left>10</left>
 				<top>10</top>
 				<align>center</align>
 				<width>1204</width>
 				<hinttext>$INFO[Control.GetLabel(311)]</hinttext>
+				<focusedcolor>$VAR[color:Accent]</focusedcolor>
 				<texturenofocus colordiffuse="$VAR[color:Accent]">colorize/10.png</texturenofocus>
 				<texturefocus colordiffuse="$VAR[color:Accent]">colorize/20.png</texturefocus>
 			</control>
-		</control>
 
-		<control type="group">
-			<bottom>108</bottom>
-			<height>612</height>
-			<include>fadeinout</include>
-			<visible>!Skin.HasSetting(keyboard.disable)</visible>
-			<visible>!Window.IsVisible(numericinput)</visible>
-			<control type="image">
-				<width>1224</width>
-				<height>612</height>
-				<texture colordiffuse="ff000000">colorize/100.png</texture>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
-			</control>
-			<control type="image">
-				<width>1224</width>
-				<height>612</height>
-				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-				<aspectratio align="center" aligny="top">stretch</aspectratio>
-			</control>
-			<control type="label" id="311">
-				<width>761</width>
-				<visible>!Control.IsVisible(312)</visible>
-			</control>
-			<control type="edit" id="312">
-				<left>0</left>
-				<top>0</top>
-				<align>center</align>
-				<width>1224</width>
-				<hinttext>$INFO[Control.GetLabel(311)]</hinttext>
-				<texturenofocus colordiffuse="$VAR[color:Accent]">colorize/10.png</texturenofocus>
-				<texturefocus colordiffuse="$VAR[color:Accent]">colorize/20.png</texturefocus>
-			</control>
 			<control type="grouplist" id="1000">
 				<left>24</left>
 				<top>135</top>
 				<height>456</height>
+				<visible>!Skin.HasSetting(keyboard.disable)</visible>
 				<!-- row 1 -->
 				<control type="grouplist" id="1100">
 					<itemgap>2</itemgap>

@@ -521,7 +521,7 @@
 				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 				<visible>Control.HasFocus(8)</visible>
 			</control>
-			<control type="radiobutton" id="8">
+			<control type="button" id="8">
 				<top>12</top>
 				<label>$LOCALIZE[137]</label>
 				<onup>7012</onup>
@@ -529,7 +529,7 @@
 				<onleft>7100</onleft>
 				<onright>5500</onright>
 				<include>menu_Button</include>
-				<onclick>Back</onclick>
+				<onclick>Right</onclick>
 				<visible>Window.IsActive(videos) | Window.IsActive(music)</visible>
 			</control>
 			<control type="group">
@@ -1549,7 +1549,7 @@
 				<onleft>7100</onleft>
 				<onright>5500</onright>
 				<include>menu_Button</include>
-				<onclick>5500</onclick>
+				<onclick>Action(Right)</onclick>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioSearch)</onclick>
 			</control>
