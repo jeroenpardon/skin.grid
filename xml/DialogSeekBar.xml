@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
-	<visible>VideoPlayer.IsFullscreen</visible>
+	<visible>VideoPlayer.IsFullscreen | Window.IsActive(visualisation)</visible>
 	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(fullscreeninfo)</visible>
 	<visible>!Window.IsActive(videoosd) + !Window.IsActive(playerprocessinfo) + !Window.IsActive(subtitlesearch)</visible>
 	<controls>

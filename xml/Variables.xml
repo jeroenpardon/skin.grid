@@ -862,6 +862,7 @@
 	</variable>
 
 	<variable name="player:Description">
+		<value condition="Player.HasAudio + MusicPlayer.HasNext">$INFO[MusicPlayer.Offset(1).Artist,$LOCALIZE[209]: ]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre,,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Plot]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.PlotOutline]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Plot]</value>
@@ -883,7 +884,7 @@
 	</variable>
 
 	<variable name="player:Info">
-		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelName,,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Title]</value>
@@ -892,7 +893,8 @@
 	</variable>
 
 	<variable name="player:Info2">
-		<value condition="Player.HasAudio">$VAR[player:Time]$VAR[player:Duration, / ]</value>
+		<!--<value condition="Player.HasAudio">$VAR[player:Time]$VAR[player:Duration, / ]</value>-->
+		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ] ($INFO[VideoPlayer.Endtime])</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Director,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Title]&#32;&#32;|&#32;&#32;$INFO[VideoPlayer.Season,$LOCALIZE[20373] , - ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]&#32;&#32;|&#32;&#32;$INFO[VideoPlayer.Premiered]</value>
@@ -1396,14 +1398,14 @@
 	<variable name="window:Title">
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsVisible(home)"></value>
-		<value condition="VideoPlayer.IsFullscreen + Player.Paused + !Player.Caching">$LOCALIZE[112]</value>
-		<value condition="VideoPlayer.IsFullscreen + [Player.Paused + Player.Caching] + !Player.Seeking">$INFO[Player.ProgressCache]</value>
-		<value condition="VideoPlayer.IsFullscreen + Player.Rewinding">$LOCALIZE[31300] $VAR[player:Speed]</value>
-		<value condition="VideoPlayer.IsFullscreen + Player.Forwarding">$LOCALIZE[31301] $VAR[player:Speed]</value>
-		<value condition="VideoPlayer.IsFullscreen + !String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
-		<value condition="VideoPlayer.IsFullscreen + Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31530] $INFO[Player.SeekOffset]</value>
-		<value condition="VideoPlayer.IsFullscreen + !Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
-		<value condition="VideoPlayer.IsFullscreen">$LOCALIZE[31531]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.Paused + !Player.Caching">$LOCALIZE[112]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Paused + Player.Caching] + !Player.Seeking">$INFO[Player.ProgressCache]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.Rewinding">$LOCALIZE[31300] $VAR[player:Speed]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.Forwarding">$LOCALIZE[31301] $VAR[player:Speed]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + !String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31530] $INFO[Player.SeekOffset]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + !Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]">$LOCALIZE[31531]</value>
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31211]</value>

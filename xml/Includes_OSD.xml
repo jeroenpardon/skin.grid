@@ -535,7 +535,7 @@
 						<top>120</top>
 						<width max="$PARAM[TextWidth]">auto</width>
 						<height>120</height>
-						<label>$INFO[VideoPlayer.Plot]</label>
+						<label>$VAR[player:Description]</label>
 						<font>Slab-22</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 					</control>
