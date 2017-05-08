@@ -4,7 +4,6 @@
 	<zorder>20</zorder>
 	<controls>
 		<control type="group">
-			<include>toggle_Menu</include>
 			<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),stream)">Conditional</animation>
 			<include content="global_Playing" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
 				<param name="Left" value="1036"/>

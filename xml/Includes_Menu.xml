@@ -38,9 +38,8 @@
 			<label>$PARAM[Label]</label>
 			<align>$PARAM[Align]</align>
 			<aligny>$PARAM[AlignY]</aligny>
-			<!--
+			<onback>ClearProperty(MenuOpen,Home)</onback>
 			<onright>ClearProperty(MenuOpen,Home)</onright>
-			-->
 			<textcolor>$PARAM[TextColor]</textcolor>
 			<focusedcolor>$PARAM[FocusedColor]</focusedcolor>
 			<texturenofocus></texturenofocus>
