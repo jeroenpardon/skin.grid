@@ -144,7 +144,7 @@
 				<control type="label">
 					<left>$PARAM[TextLeft]</left>
 					<width>1664</width>
-					<label>$INFO[ListItem.Label]</label>
+					<label fallback="19055">$INFO[ListItem.Label]</label>
 					<height>45</height>
 					<font>Black-28</font>
 					<aligny>center</aligny>
@@ -153,7 +153,7 @@
 				<control type="label">
 					<height>45</height>
 					<width>1354</width>
-					<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime]  |  $INFO[ListItem.StartDate]  |  $INFO[ListItem.Genre]</label>
+					<label>$INFO[ListItem.StartTime,, - ]$INFO[ListItem.EndTime,,  |  ]$INFO[ListItem.StartDate,,  |  ]$INFO[ListItem.Genre]</label>
 					<font>Regular-22</font>
 					<textcolor>$VAR[color:Text.2]</textcolor>
 					<aligny>top</aligny>
