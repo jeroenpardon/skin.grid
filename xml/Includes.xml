@@ -330,7 +330,8 @@
 				<label>&#57499;</label>
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Symbols-24</font>
-				<visible>!String.IsEmpty(Skin.String(video.ratings)) + !String.IsEqual(Skin.String(video.ratings),disabled) + !ListItem.IsParentFolder</visible>
+				<visible>$EXP[Content.IsVideo]</visible>
+				<visible>!String.IsEmpty(Skin.String(ratings.video)) + !String.IsEqual(Skin.String(ratings.video),disabled) + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
 				<width min="50" max="256">auto</width>
@@ -338,8 +339,28 @@
 				<label>$VAR[info:Rating]&#32;&#32;</label>
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Regular-20</font>
-				<visible>!String.IsEmpty(Skin.String(video.ratings)) + !String.IsEqual(Skin.String(video.ratings),disabled) + !ListItem.IsParentFolder</visible>
+				<visible>$EXP[Content.IsVideo]</visible>
+				<visible>!String.IsEmpty(Skin.String(ratings.video)) + !String.IsEqual(Skin.String(ratings.video),disabled) + !ListItem.IsParentFolder</visible>
 			</control>
+			<control type="label">
+				<width min="0">auto</width>
+				<height>$PARAM[Height]</height>
+				<label>&#57499;</label>
+				<textcolor>$VAR[color:Text.2]</textcolor>
+				<font>Symbols-24</font>
+				<visible>String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)</visible>
+				<visible>!String.IsEmpty(ListItem.UserRating) + !String.IsEmpty(Skin.String(ratings.music)) + !String.IsEqual(Skin.String(ratings.music),disabled) + !ListItem.IsParentFolder</visible>
+			</control>
+			<control type="label">
+				<width min="50" max="256">auto</width>
+				<height>$PARAM[Height]</height>
+				<label>$VAR[info:Rating]&#32;&#32;</label>
+				<textcolor>$VAR[color:Text.2]</textcolor>
+				<font>Regular-20</font>
+				<visible>String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)</visible>
+				<visible>!String.IsEmpty(ListItem.UserRating) + !String.IsEmpty(Skin.String(ratings.music)) + !String.IsEqual(Skin.String(ratings.music),disabled) + !ListItem.IsParentFolder</visible>
+			</control>
+
 			<!--addon version-->
 			<control type="label">
 				<width min="0">auto</width>

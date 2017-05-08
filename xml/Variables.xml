@@ -182,13 +182,15 @@
 	</variable>
 
 	<variable name="info:Rating">
-		<value condition="String.IsEqual(Skin.String(video.ratings),default)">$INFO[ListItem.Rating]</value>
-		<value condition="String.IsEqual(Skin.String(video.ratings),user)">$INFO[ListItem.UserRating]</value>
-		<value condition="String.IsEqual(Skin.String(video.ratings),imdb)">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.IMDB)]</value>
-		<value condition="String.IsEqual(Skin.String(video.ratings),imdbpercent)">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.percent.IMDB),,%]</value>
-		<value condition="String.IsEqual(Skin.String(video.ratings),mc)">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.MC),,%]</value>
-		<value condition="String.IsEqual(Skin.String(video.ratings),rt)">$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating)]</value>
-		<value condition="String.IsEqual(Skin.String(video.ratings),tmdb)">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB)]</value>
+		<value condition="String.IsEqual(Skin.String(ratings.music),user) + String.IsEqual(ListItem.DBTYPE,musicvideo) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)">$INFO[ListItem.UserRating]</value>
+
+		<value condition="String.IsEqual(Skin.String(ratings.video),default)">$INFO[ListItem.Rating]</value>
+		<value condition="String.IsEqual(Skin.String(ratings.video),user)">$INFO[ListItem.UserRating]</value>
+		<value condition="String.IsEqual(Skin.String(ratings.video),imdb)">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.IMDB)]</value>
+		<value condition="String.IsEqual(Skin.String(ratings.video),imdbpercent) + Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.IMDB),,%]</value>
+		<value condition="String.IsEqual(Skin.String(ratings.video),mc)">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.MC),,%]</value>
+		<value condition="String.IsEqual(Skin.String(ratings.video),rt)">$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating)]</value>
+		<value condition="String.IsEqual(Skin.String(ratings.video),tmdb)">$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB)]</value>
 	</variable>
 
 	<variable name="info:ShowStatus">
@@ -258,8 +260,8 @@
 		<value condition="Container.Content(sets)">$INFO[ListItem.Year]</value>
 		<value condition="Container.Content(files)">$INFO[ListItem.Date]$INFO[ListItem.Size,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(movies) + Control.IsVisible(50)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(video.ratings),disabled) + Skin.HasSetting(ratings.pg.enable)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$VAR[info:Rating,&#32;&#32;|&#32;&#32;]$INFO[ListItem.MPAA,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(video.ratings),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$VAR[info:Rating,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled) + Skin.HasSetting(ratings.pg.enable)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$VAR[info:Rating,&#32;&#32;|&#32;&#32;]$INFO[ListItem.MPAA,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$VAR[info:Rating,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(tvshows)">$INFO[ListItem.Property(UnWatchedEpisodes)] $VAR[count:UnwatchedEpisodes]$VAR[info:Rating,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Studio,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>

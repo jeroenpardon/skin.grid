@@ -17,8 +17,8 @@
 	<expression name="FolderPath.IsTMDB">String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb) | String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies) | String.StartsWith(ListItem.Icon,http://image.tmdb.org/) | String.Contains(ListItem.FilenameAndPath,tmdb)</expression>
 
 	<!-- ListItems -->
-	<expression name="IsParent">[ListItem.IsParentFolder | String.IsEqual(ListItem.Label,* All seasons)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
-	<expression name="!IsParent">!ListItem.IsParentFolder + !String.IsEqual(ListItem.Label,* All seasons) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
+	<expression name="IsParent">[ListItem.IsParentFolder | String.StartsWith(ListItem.Label,* All)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
+	<expression name="!IsParent">!ListItem.IsParentFolder + !String.StartsWith(ListItem.Label,* All) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
 
 	<!-- Player -->
 	<expression name="IsPlaying">![Player.Paused | Player.Caching | Player.Seeking | Player.Rewinding | Player.Forwarding | Player.DisplayAfterSeek]</expression>

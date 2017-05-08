@@ -349,7 +349,6 @@
 					<ondown>400</ondown>
 					<onright condition="Integer.IsGreater(Container(400).NumPages,1)">6500</onright>
 					<visible>Skin.String(category,library)</visible>
-
 					<!-- Autoscroll -->
 					<control type="button" id="402">
 						<label>$LOCALIZE[31225]</label>
@@ -358,7 +357,6 @@
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-
 					<!-- Context menu -->
 					<control type="label" id="410">
 						<label>$LOCALIZE[31061]</label>
@@ -378,22 +376,28 @@
 						<selected>Skin.HasSetting(context.trailer)</selected>
 						<include>radio_Settings</include>
 					</control>
-					
 					<!-- Ratings -->
 					<control type="label" id="420">
 						<label>$LOCALIZE[31253]</label>
 						<include>global_Header</include>
 					</control>
-					<!-- Ratings source -->
-					<control type="button" id="430">
-						<label>$LOCALIZE[31240]</label>
-						<label2>$INFO[Skin.String(video.ratings.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=video.ratings,header=$LOCALIZE[31240])</onclick>
+					<!-- Ratings sources -->
+					<control type="button" id="420">
+						<label>$LOCALIZE[31240] - $LOCALIZE[157]</label>
+						<label2>$INFO[Skin.String(ratings.video.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.video,header=$LOCALIZE[31240])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+					<control type="button" id="421">
+						<label>$LOCALIZE[31240] - $LOCALIZE[2]</label>
+						<label2>$INFO[Skin.String(ratings.music.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.music,header=$LOCALIZE[31240])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
 					<!-- Parental Guidance ratings-->
-					<control type="radiobutton" id="440">
+					<control type="radiobutton" id="425">
 						<label>$LOCALIZE[31242]</label>
 						<onclick>Skin.ToggleSetting(ratings.pg.enable)</onclick>
 						<selected>Skin.HasSetting(ratings.pg.enable)</selected>

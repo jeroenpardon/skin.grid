@@ -16,7 +16,8 @@
 	<onload condition="String.IsEmpty(Skin.String(homemenu.type))">Skin.SetString(homemenu.type,vertical)</onload>
 	<onload condition="String.IsEmpty(Skin.String(home.status))">Skin.SetString(home.status,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(menu.controls))">Skin.SetString(menu.controls,player)</onload>
-	<onload condition="String.IsEmpty(Skin.String(video.ratings))">Skin.SetString(video.ratings,disabled)</onload>
+	<onload condition="String.IsEmpty(Skin.String(ratings.video))">Skin.SetString(ratings.video,disabled)</onload>
+	<onload condition="String.IsEmpty(Skin.String(ratings.music))">Skin.SetString(ratings.music,disabled)</onload>
 	<onload condition="String.IsEmpty(Skin.String(view.list.art))">Skin.SetString(view.list.art,fanart)</onload>
 	<onload condition="String.IsEmpty(Skin.String(views.landscape.art))">Skin.SetString(views.landscape.art,fanart)</onload>
 </window>
