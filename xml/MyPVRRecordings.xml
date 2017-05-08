@@ -40,7 +40,7 @@
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
 				<include content="info_List">
-					<param name="Visible">$EXP[HasMedia]</param>
+					<param name="Visible">true</param>
 				</include>
 			</control>
 
