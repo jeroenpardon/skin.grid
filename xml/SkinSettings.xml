@@ -233,7 +233,7 @@
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<!--single-->
+					<!-- Custom -->
 					<control type="button" id="311">
 						<label>$LOCALIZE[31132]</label>
 						<label2>$INFO[Skin.String(background.path.Label)]</label2>
@@ -243,8 +243,8 @@
 						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=background.path,header=$LOCALIZE[31132],allowmulti=true,resourceaddon=resource.images.skinbackgrounds)</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
-						<visible>!String.IsEqual(Skin.String(background.type),fanart)</visible>
-						<enable>!String.IsEqual(Skin.String(background.type),fanart)</enable>
+						<visible>String.IsEqual(Skin.String(background.type),custom)</visible>
+						<enable>String.IsEqual(Skin.String(background.type),custom)</enable>
 					</control>
 					<!--animated backgrounds-->
 					<control type="radiobutton" id="312">

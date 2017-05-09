@@ -11,9 +11,8 @@
 		<value condition="Player.HasAudio + [Skin.HasSetting(home.nowplaying) + Window.IsActive(Home)] + System.HasAddon(script.artistslideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
 		<value condition="Player.HasAudio + [Skin.HasSetting(home.nowplaying) + Window.IsActive(Home)]">$VAR[player:Art]</value>
 		<value condition="String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)">$VAR[window:Background]</value>
-		<value condition="!String.IsEmpty(Skin.String(background.path))">$INFO[Skin.String(background.path)]</value>
-		<value condition="String.IsEqual(Skin.String(background.type),single)">special://skin/backgrounds/01.jpg</value>
-		<value>special://skin/backgrounds/</value>
+		<value condition="!String.IsEmpty(Skin.String(background.path)) | String.IsEqual(Skin.String(background.path.Label),None)">$INFO[Skin.String(background.path)]</value>
+		<value>special://skin/backgrounds/01.jpg</value>
 	</variable>
 
 

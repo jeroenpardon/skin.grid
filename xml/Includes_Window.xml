@@ -34,6 +34,7 @@
 				<control type="image">
 					<include>screen_Dimensions</include>
 					<include>Burns</include>
+					<fadetime>500</fadetime>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$VAR[background:Path]</texture>
 					<visible>!String.IsEqual(Skin.String(background.type),none)</visible>

@@ -23,8 +23,7 @@
 	<setting id="background.type" value="none" label="$LOCALIZE[36502]"/>
 	<setting id="background.type" value="fanart" label="$LOCALIZE[31118]"/>
 	<setting id="background.type" value="videofanart" label="$LOCALIZE[31129]"/>
-	<setting id="background.type" value="single" label="$LOCALIZE[31055]"/>
-	<setting id="background.type" value="multi" label="$LOCALIZE[31056]" default="true"/>
+	<setting id="background.type" value="custom" label="$LOCALIZE[636]" default="true"/>
 
 	<!-- Global scrolling type -->
 	<setting id="global.scrolltype" value="active" label="$LOCALIZE[31220]"/>
