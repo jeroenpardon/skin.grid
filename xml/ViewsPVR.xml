@@ -21,7 +21,6 @@
 				<onright></onright>
 				<onback>7000</onback>
 				<pagecontrol>10</pagecontrol>
-				<onback>9000</onback>
 				<rulerlayout height="90" width="256">
 					<control type="label" id="2">
 						<left>24</left>
