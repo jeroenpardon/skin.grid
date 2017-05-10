@@ -68,8 +68,8 @@
 					<include content="button_Dialog">
 						<param name="Font">Symbols-24</param>
 					</include>
-					<onup>Action(left)</onup>
-					<ondown>Action(left)</ondown>
+					<onup>Control.Move(211,-1)</onup>
+					<ondown>Control.Move(211,1)</ondown>
 				</control>
 				<control type="button" id="606">
 					<label>&#58882;</label>
@@ -79,9 +79,8 @@
 					<onfocus>SetProperty(SelectDialog,icon,home)</onfocus>
 					<onunfocus>SetProperty(SelectDialog,regular,home)</onunfocus>
 					<onclick>Action(contextmenu)</onclick>
-					<onup>Action(left)</onup>
-					<ondown>Action(left)</ondown>
-					<onback>Action(right)</onback>
+					<onup>Control.Move(211,-1)</onup>
+					<ondown>Control.Move(211,1)</ondown>
 				</control>
 			</control>
 
