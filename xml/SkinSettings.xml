@@ -800,7 +800,7 @@
 					</control>
 				</control>
 
-			<!-- Other -->
+			<!-- Advanced -->
 				<control type="grouplist" id="1000">
 					<width>1216</width>
 					<height>810</height>
@@ -818,19 +818,19 @@
 					</control>
 					<control type="button" id="1011">
 						<label>$LOCALIZE[31058]</label>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=backup)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=backup,promptfilename=true)</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
 					<control type="button" id="1012">
 						<label>$LOCALIZE[31057]</label>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=restore)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=restore)</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
 					<control type="button" id="1013">
 						<label>[COLOR=Warning]$LOCALIZE[31233][/COLOR]</label>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10035],message=$LOCALIZE[31234][CR]$LOCALIZE[750],yesaction=Skin.ResetSettings|SetProperty(skinshortcuts-reloadmainmenu,True,Home)|ActivateWindow(startup)|SetFocus(9001),noaction=Close)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10035],message=$LOCALIZE[31234][CR]$LOCALIZE[750],yesaction=Skin.ResetSettings|SetProperty(skinshortcuts-reloadmainmenu,True,Home)|ActivateWindow(startup)|SetFocus(9001),noaction=Close)</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
