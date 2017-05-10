@@ -19,7 +19,6 @@
 				<rulerunit>6</rulerunit>
 				<onleft>7000</onleft>
 				<onright></onright>
-				<onback>7000</onback>
 				<pagecontrol>10</pagecontrol>
 				<rulerlayout height="90" width="256">
 					<control type="label" id="2">
