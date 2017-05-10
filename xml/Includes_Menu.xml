@@ -59,7 +59,7 @@
 	<include name="menu_Shortcuts">
 		<control type="list" id="7100">
 			<top>0</top>
-			<onback>SetProperty(MenuClose,true,Home)</onback>
+			<onback>5597</onback>
 			<onup>7100</onup>
 			<ondown>7100</ondown>
 			<onleft>noop</onleft>

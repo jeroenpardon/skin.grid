@@ -83,6 +83,14 @@
 				</control>
 			</control>
 
+			<!-- Trigger button for the left tab to pass a value to, so the window back action can be overriden and menu can be closed -->
+			<control type="button" id="5597">
+				<label>test</label>
+				<onfocus>SetFocus(5500)</onfocus>
+				<onfocus>ClearProperty(MenuOpen,Home)</onfocus>
+				<visible allowhiddenfocus="true">false</visible>
+			</control>
+
 			<control type="group" id="5998">
 				<top>108</top>
 				<width>384</width>
