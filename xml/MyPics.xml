@@ -19,8 +19,6 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>toggle_Menu</include>
-			<include>global_Includes</include>
-			<include>global_Itemcount</include>
 			<include>global_WindowTitle</include>
 		</control>
 

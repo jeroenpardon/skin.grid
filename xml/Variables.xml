@@ -1371,7 +1371,7 @@
 		<value condition="Window.IsActive(PVRSettings)">&#58944;</value>
 		<value condition="Window.IsActive(Profiles)">&#57345;</value>
 		<!-- Playlists -->
-		<value condition="Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule)">&#57392;</value>
+		<value condition="Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(musicplaylisteditor)">&#57392;</value>
 		<!-- Other -->
 		<value condition="Window.IsActive(weather)">&#59000;</value>
 		<value condition="Window.IsActive(sliderdialog)">&#58968;</value>
