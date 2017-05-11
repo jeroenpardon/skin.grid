@@ -128,7 +128,7 @@
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<include>fadeinout</include>
-					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(DialogVolumebar.xml) | Player.Muted] + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(smartplaylistrule) + !Window.IsVisible(filebrowser) + !Window.IsVisible(busydialog) + !Window.IsVisible(contextmenu) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(DialogConfirm.xml) + !Window.IsVisible(script-skinshortcuts.xml)</visible>
+
 				</control>
 				<control type="label">
 					<width>128</width>
