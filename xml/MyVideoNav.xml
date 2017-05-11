@@ -12,9 +12,12 @@
 		</control>
 
 		<!--background-->
-		<include content="global_Background">
-			<param name="GridTexture">$VAR[window:Grid]</param>
-		</include>
+		<control type="group">
+			<visible>!Control.IsVisible(53)</visible>
+			<include content="global_Background">
+				<param name="GridTexture">$VAR[window:Grid]</param>
+			</include>
+		</control>
 
 		<!--content-->
 		<control type="group">
