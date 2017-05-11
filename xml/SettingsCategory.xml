@@ -67,6 +67,13 @@
 				<include>button_Settings</include>
 			</control>
 
+		<!--default spin-->
+			<control type="spincontrolex" id="9">
+				<width>1190</width>
+				<height>90</height>
+				<include>button_Settings</include>
+			</control>
+
 		<!--default radiobutton-->
 			<control type="radiobutton" id="8">
 				<width>1190</width>
