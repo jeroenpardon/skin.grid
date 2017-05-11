@@ -4,11 +4,12 @@
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<onload>RunScript(script.grab.fanart,mode=random,refresh=20)</onload>
 	<!--<onload>Skin.SetString(SkinHelper.RandomFanartDelay,30)</onload>-->
+	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 	<onload condition="!String.IsEqual(Skin.String(background.type),fanart) + !String.IsEqual(Skin.String(background.type),videofanart)">Skin.SetString(HomeLoaded,True)</onload>
 	<onload condition="Skin.HasSetting(startup.playlist)">PlayMedia($INFO[Skin.String(startup.playlist.path)])</onload>
 	<onload condition="System.HasAddon(script.artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 	<onload condition="String.IsEmpty(Skin.String(autoscroll.speed))">Skin.SetString(autoscroll.speed,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(background.type))">Skin.SetString(background.type,multi)</onload>
 	<onload condition="String.IsEmpty(Skin.String(epg.scrollspeed))">Skin.SetString(epg.scrollspeed,normal)</onload>
