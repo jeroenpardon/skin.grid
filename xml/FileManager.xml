@@ -11,9 +11,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
-			<include content="global_WindowTitle">
-				<param name="Label" value="$VAR[window:Title.System]"/>
-			</include>
+			<include>global_WindowTitle</include>
 			<include content="global_Itemcount">
 				<param name="Label" value="$INFO[Container(20).NumItems]"/>
 				<param name="Visible" value="Control.HasFocus(20)"/>
