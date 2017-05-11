@@ -479,71 +479,52 @@
 
 	<!--fullscreen info-->
 	<include name="player_Info">
-		<param name="Left" default="128"/>
-		<param name="InfoWidth" default="1490"/>
-		<param name="ArtWidth" default="174"/>
-		<param name="ArtHeight" default="256"/>
-		<param name="TextWidth" default="1280"/>
 		<definition>
 			<control type="group">
-				<top>800</top>
-				<width>1920</width>
-				<height>285</height>
-				<include>fadeinout</include>
+				<include>transition_Content</include>
 				<control type="image">
-					<top>98</top>
+					<width>screen_Width</width>
+					<height>screen_Height</height>
+					<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
+				</control>
+				<control type="group">
+					<top>750</top>
 					<width>1920</width>
-					<height>182</height>
-					<texture colordiffuse="ff000000">colorize/40.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="group">
-					<left>64</left>
-					<height>384</height>
-					<bottom>64</bottom>
-					<control type="image">
-						<width>384</width>
+					<height>285</height>
+					<include>fadeinout</include>
+					<control type="group">
+						<left>64</left>
 						<height>384</height>
-						<fadetime>fadetime_Thumb</fadetime>
-						<texture>$VAR[player:ExtraArt]</texture>
-						<aspectratio align="center" aligny="bottom">keep</aspectratio>
+						<bottom>64</bottom>
 					</control>
-					<control type="image">
-						<top>384</top>
-						<width>384</width>
-						<height>384</height>
-						<fadetime>fadetime_Thumb</fadetime>
-						<texture flipy="true" diffuse="views/diffuse/portrait.png">$VAR[player:ExtraArt]</texture>
-						<aspectratio align="center" aligny="top">keep</aspectratio>
-					</control>
-				</control>
-				<control type="group">
-					<left>512</left>
-					<control type="label">
-						<label>$VAR[player:Info]</label>
-						<width max="$PARAM[TextWidth]">auto</width>
-						<height>64</height>
-						<aligny>center</aligny>
-						<font>Black-54</font>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
-					<control type="label">
-						<top>64</top>
-						<label>$VAR[player:Info2]</label>
-						<width max="$PARAM[TextWidth]">auto</width>
-						<textoffsety>10</textoffsety>
-						<height>26</height>
-						<aligny>center</aligny>
-						<font>Black-26</font>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
-					<control type="textbox">
-						<top>120</top>
-						<width max="$PARAM[TextWidth]">auto</width>
-						<height>120</height>
-						<label>$VAR[player:Description]</label>
-						<font>Slab-22</font>
-						<textcolor>$VAR[color:Accent]</textcolor>
+					<control type="group">
+						<left>128</left>
+						<control type="label">
+							<bottom>180</bottom>
+							<label>$VAR[player:Title]</label>
+							<width>$PARAM[TextWidth]</width>
+							<height>28</height>
+							<font>Black-64</font>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+						<control type="label">
+							<bottom>146</bottom>
+							<height>0</height>
+							<width>$PARAM[TextWidth]</width>
+							<label>$VAR[player:Info]</label>
+							<font>Black-26</font>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.2]</textcolor>
+						</control>
+						<control type="textbox">
+							<bottom>0</bottom>
+							<width>1664</width>
+							<height>115</height>
+							<label>$VAR[player:Description]</label>
+							<font>Slab-24</font>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
 					</control>
 				</control>
 			</control>

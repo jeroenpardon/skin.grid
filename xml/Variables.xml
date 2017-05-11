@@ -866,7 +866,7 @@
 	<variable name="player:Description">
 		<value condition="Player.HasAudio + MusicPlayer.HasNext">$INFO[MusicPlayer.Offset(1).Artist,$LOCALIZE[209]: ]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre,,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Plot]</value>
-		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(episodes) + !String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.PlotOutline]</value>
+		<value condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)] + !String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.PlotOutline]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Plot]</value>
 		<value condition="VideoPlayer.Content(files)">$INFO[Player.Folderpath]</value>
 		<value>$INFO[Player.FolderPath]</value>
