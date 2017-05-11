@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">2</defaultcontrol>
+	<defaultcontrol always="true">11</defaultcontrol>
 	<controls>
 
 	<!--window chrome-->		
@@ -15,20 +15,17 @@
 		<control type="group">
 			<top>108</top>
 			<include>transition_Content</include>
-
-			<!--thumbnail list-->
 			<include content="view_Thumbnails">
 				<param name="ID" value="11"/>
-				<param name="Top" value="0"/>
-				<param name="OnUp" value="11"/>
-				<param name="OnDown" value="11"/>
-				<param name="OnRight" value="9000"/>
-				<param name="Width" value="1358"/>
-				<param name="Height" value="972"/>
-				<param name="ItemHeight" value="255"/>
-				<param name="ArtWidth" value="452.6"/>
-				<param name="ArtHeight" value="255"/>
 				<param name="Art" value="$INFO[ListItem.Art(thumb)]"/>
+				<param name="Label" value="$INFO[ListItem.Label]"/>
+				<param name="Label2" value="$INFO[ListItem.Label2]"/>
+				<param name="ShowInfo" value="true"/>
+				<param name="ArtWidth" value="461.3"/>
+				<param name="ArtHeight" value="267"/>
+				<param name="ItemWidth" value="461.3"/>
+				<param name="ItemHeight" value="267"/>
+				<param name="PageControl" value="2"/>
 			</include>
 
 			<!--dialog controls-->
@@ -39,24 +36,22 @@
 				<height>108</height>
 				<itemgap>0</itemgap>
 				<onleft>11</onleft>
-				<onright>noop</onright>
+				<onright></onright>
 				<orientation>horizontal</orientation>
-				<!--add-->
-				<include content="global_Button">
-					<param name="ID" value="2" />
-					<param name="Label" value="&#58906;" />
-					<param name="Font" value="Symbols-26" />
-					<param name="TextColor">$VAR[color:Accent]</param>
-					<param name="Width">108</param>
-				</include>
-				<!--clear-->
-				<include content="global_Button">
-					<param name="ID" value="3" />
-					<param name="Label" value="&#58960;" />
-					<param name="Font" value="Symbols-26" />
-					<param name="TextColor">$VAR[color:Accent]</param>
-					<param name="Width">108</param>
-				</include>
+
+				<!-- Add -->
+				<control type="button" id="2">
+					<label>&#58906;</label>
+					<font>Symbols-26</font>
+					<align>center</align>
+				</control>
+				<!-- Clear -->
+				<control type="button" id="3">
+					<label>&#58960;</label>
+					<font>Symbols-26</font>
+					<align>center</align>
+					<include>button_Dialog</include>
+				</control>
 			</control>
 		</control>
 	</controls>

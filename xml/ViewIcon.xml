@@ -43,6 +43,7 @@
 				<ondown>$PARAM[ID]</ondown>
 				<onleft>7000</onleft>
 				<onleft>SetProperty(MenuOpen,true,Home)</onleft>
+				<onright condition="Window.IsActive(bookmarks)">9000</onright>
 				<onright condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</onright>
 				<orientation>$PARAM[Orientation]</orientation>
 				<pagecontrol>$PARAM[PageControl]</pagecontrol>
@@ -121,11 +122,10 @@
 							<label>$PARAM[Label]</label>
 							<height>60</height>
 							<font>Black-24</font>
-							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-							<visible>String.IsEqual(Container.ViewMode,landscape) + [Container.Content(movies) | Container.Content(tvshows)] | Window.IsActive(videobookmarks)</visible>
+							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
 						</control>
 						<control type="label">
 							<width>$PARAM[TextWidth]</width>
