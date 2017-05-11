@@ -120,6 +120,11 @@
 		<value condition="String.IsEqual(ListItem.Season,1)">$LOCALIZE[20373]</value>
 	</variable>
 
+	<variable name="count:Subtitles">
+		<value condition="Integer.IsGreater(Container(120).NumItems,1) | String.IsEqual(Container(120).NumItems,0)">$INFO[Container(120).NumItems] $LOCALIZE[24012]</value>
+		<value condition="String.IsEqual(Container(120).NumItems,1)">$INFO[Container(120).NumItems] $LOCALIZE[462]</value>
+	</variable>
+
 	<variable name="count:UnwatchedEpisodes">
 		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),1) | String.IsEqual(ListItem.Property(UnWatchedEpisodes),0)">$LOCALIZE[31529]</value>
 		<value condition="String.IsEqual(ListItem.Property(UnWatchedEpisodes),1)">$LOCALIZE[31528]</value>
@@ -1384,6 +1389,7 @@
 	<variable name="window:Title">
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsVisible(home)"></value>
+		<value condition="Window.IsActive(subtitlesearch) + Integer.IsGreater(Container(120).NumItems,0)">$VAR[count:Subtitles]</value>
 		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.Paused + !Player.Caching">$LOCALIZE[112]</value>
 		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Paused + Player.Caching] + !Player.Seeking">$INFO[Player.ProgressCache]</value>
 		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.Rewinding">$LOCALIZE[31300] $VAR[player:Speed]</value>

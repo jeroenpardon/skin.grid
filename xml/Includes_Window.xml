@@ -289,7 +289,7 @@
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
 				<include>toggle_Menu</include>
-				<visible>$PARAM[ShowClock]</visible>
+
 				<control type="image">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[Height]</height>
