@@ -6,6 +6,8 @@
 	<onload condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
 	<onload condition="String.IsEqual(Skin.String(homemenu.type),stream)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
 	<onload condition="Window.Previous(startup)">Skin.SetString(HomeLoaded,True)</onload>
+	<onunload>Control.Move(9000,-1)</onunload>
+	<onunload>RunScript(script.skinshortcuts,type=hidesubmenu)</onunload>
 	<controls>
 
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Menu-vertical</include>
