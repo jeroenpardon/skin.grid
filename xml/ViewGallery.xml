@@ -54,6 +54,11 @@
 						<texture>$PARAM[Art]</texture>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					</control>
+					<control type="image">
+						<width>screen_Width</width>
+						<height>screen_Height</height>
+						<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
+					</control>
 				</itemlayout>
 				<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
 					<control type="image">
@@ -69,112 +74,51 @@
 						<texture>$PARAM[Art]</texture>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
 					</control>
+					<control type="image">
+						<width>screen_Width</width>
+						<height>screen_Height</height>
+						<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
+					</control>
 				</focusedlayout>
 			</control>
 		</definition>
 	</include>
 
 	<include name="info_Gallery">
-		<param name="ID"/>
-		<param name="ItemWidth"/>
-		<param name="Height"/>
-		<param name="Art"/>
-		<param name="ShowLogo"/>
-		<param name="ShowInfo"/>
-		<param name="Title"/>
-		<param name="Info"/>
-		<param name="Description"/>
-		<param name="TitleFont"/>
-		<param name="InfoFont"/>
-		<param name="PlotHeight"/>
-		<param name="InfoTop"/>
 		<definition>
 			<control type="group">
-				<top>784</top>
+				<top>0</top>
 				<width>1920</width>
-				<height>285</height>
-				<control type="image">
-					<top>98</top>
-					<width>1920</width>
-					<height>197</height>
-					<texture colordiffuse="ff000000">colorize/40.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
+				<height>1080</height>
 				<control type="group">
 					<left>128</left>
-					<height>384</height>
-					<bottom>32</bottom>
-					<control type="group">
-						<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
-						<control type="image">
-							<width>277</width>
-							<height>384</height>
-							<fadetime>fadetime_Thumb</fadetime>
-							<texture colordiffuse="$VAR[color:Text.2]">views/fallback/portrait.png</texture>
-							<aspectratio align="center" aligny="bottom">scale</aspectratio>
-							<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
-						</control>
-						<control type="image">
-							<width>277</width>
-							<height>384</height>
-							<fadetime>fadetime_Thumb</fadetime>
-							<texture colordiffuse="$VAR[color:Text.2]">views/fallback/portrait.png</texture>
-							<aspectratio align="center" aligny="bottom">stretch</aspectratio>
-						</control>
-						<control type="label">
-							<label>$VAR[symbol:Global]</label>
-							<width>300</width>
-							<height>384</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Symbols-46</font>
-							<textcolor>$VAR[color:Accent]</textcolor>
-						</control>
+					<control type="label">
+						<bottom>180</bottom>
+						<label>$VAR[media:Title]</label>
+						<width>$PARAM[TextWidth]</width>
+						<height>28</height>
+						<font>Black-64</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Accent]</textcolor>
 					</control>
-					<control type="image">
-						<width>300</width>
-						<height>384</height>
-						<fadetime>fadetime_Thumb</fadetime>
-						<texture>$INFO[ListItem.Art(poster)]</texture>
-						<aspectratio align="left" aligny="bottom">keep</aspectratio>
-					</control>
-					<control type="image">
-						<top>384</top>
-						<width>300</width>
-						<height>384</height>
-						<fadetime>fadetime_Thumb</fadetime>
-						<texture flipy="true" diffuse="views/diffuse/portrait.png">$INFO[ListItem.Art(poster)]</texture>
-						<aspectratio align="left" aligny="top">keep</aspectratio>
+					<control type="label">
+						<bottom>140</bottom>
+						<height>24</height>
+						<width>$PARAM[TextWidth]</width>
+						<label>$VAR[media:Info]</label>
+						<font>Black-26</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.2]</textcolor>
 					</control>
 				</control>
-				<control type="group">
-					<left>448</left>
-					<control type="label">
-						<label>$VAR[media:Title]</label>
-						<width max="$PARAM[TextWidth]">auto</width>
-						<height>64</height>
-						<aligny>center</aligny>
-						<font>Black-54</font>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
-					<control type="label">
-						<top>64</top>
-						<label>$VAR[media:Info]</label>
-						<width max="$PARAM[TextWidth]">auto</width>
-						<textoffsety>10</textoffsety>
-						<height>26</height>
-						<aligny>center</aligny>
-						<font>Black-26</font>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
-					<control type="textbox">
-						<top>120</top>
-						<width>1344</width>
-						<height>145</height>
-						<label>$INFO[ListItem.Plot]</label>
-						<font>Slab-22</font>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
+				<control type="textbox">
+					<left>128</left>
+					<bottom>48</bottom>
+					<width>1664</width>
+					<height>70</height>
+					<label>$VAR[media:Description]</label>
+					<font>Slab-24</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
 			</control>
 		</definition>

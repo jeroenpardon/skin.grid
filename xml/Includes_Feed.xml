@@ -15,7 +15,7 @@
 					<width>100%</width>
 					<height>screen_Height</height>
 					<texture colordiffuse="ff000000">colorize/white.png</texture>
-					<visible>!Player.HasMedia + Skin.HasSetting(background.video)</visible>
+					<visible>![Player.HasMedia + Skin.HasSetting(background.video)]</visible>
 				</control>
 				<control type="grouplist" id="9100">
 					<itemgap>0</itemgap>
@@ -33,25 +33,20 @@
 		</definition>
 	</include>
 
+	<variable name="widget:Label">
+		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>	
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="widget:Label2">
+		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+	<variable name="widget:Descriptiom">
+		<value>$INFO[ListItem.Plot]</value>
+	</variable>
+
 	<include name="widget_Layout">
-		<param name="ID"/>
-		<param name="ItemWidth"/>
-		<param name="FrameWidth"/>
-		<param name="FrameHeight" default="187"/>
-		<param name="Height"/>
-		<param name="Art"/>
-		<param name="ShowLogo"/>
-		<param name="ShowInfo"/>
-		<param name="Title"/>
-		<param name="Info"/>
-		<param name="Description"/>
-		<param name="TitleFont"/>
-		<param name="InfoFont"/>
-		<param name="InfoLeft" default="128"/>
-		<param name="PlotWidth" default="1664"/>
-		<param name="PlotHeight"/>
-		<param name="InfoTop"/>
-		<param name="ExtraArtSize"/>
 		<definition>
 			<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
 				<control type="image">
@@ -61,81 +56,39 @@
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<bordersize>10</bordersize>
 				</control>
-			</itemlayout>
-			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
-				<control type="group">
+				<control type="image">
 					<width>$PARAM[ItemWidth]</width>
-					<visible>Control.HasFocus($PARAM[ID])</visible>
-					<control type="image">
-						<width>$PARAM[ItemWidth]</width>
-						<height>$PARAM[Height]</height>
-						<texture>$PARAM[Art]</texture>
-						<aspectratio align="center" aligny="top">scale</aspectratio>
-						<bordertexture>colorize/100.png</bordertexture>
-						<bordersize>10</bordersize>
+					<height>$PARAM[Height]</height>
+					<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
+					<bordersize>10</bordersize>
+					<visible>$PARAM[Info]</visible>
+				</control>
+				<control type="group">
+					<left>32</left>
+					<width>$PARAM[ItemWidth]</width>
+					<height>$PARAM[Height]</height>
+					<visible>$PARAM[Info]</visible>
+					<control type="label">
+						<bottom>48</bottom>
+						<label>$VAR[widget:Label]</label>
+						<width>$PARAM[TextWidth]</width>
+						<height>28</height>
+						<font>Black-24</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Accent]</textcolor>
 					</control>
-					<control type="group">
-						<top>$PARAM[InfoTop]</top>
-						<width>$PARAM[ItemWidth]</width>
-						<height>285</height>
-						<visible>$PARAM[ShowInfo]</visible>
-						<control type="image">
-							<left>10</left>>
-							<top>98</top>
-							<width>$PARAM[FrameWidth]</width>
-							<height>$PARAM[FrameHeight]</height>
-							<texture colordiffuse="ff000000">colorize/40.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="group">
-							<left>$PARAM[InfoLeft]</left>
-							<control type="label">
-								<label>$PARAM[Title]</label>
-								<width max="$PARAM[TextWidth]">auto</width>
-								<height>64</height>
-								<aligny>center</aligny>
-								<font>Black-64</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-							</control>
-							<control type="label">
-								<top>64</top>
-								<label>$PARAM[Info]</label>
-								<width max="$PARAM[TextWidth]">auto</width>
-								<textoffsety>10</textoffsety>
-								<height>26</height>
-								<aligny>center</aligny>
-								<font>Black-26</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-							</control>
-							<control type="textbox">
-								<top>120</top>
-								<width>$PARAM[InfoWidth]</width>
-								<height>$PARAM[PlotHeight]</height>
-								<label>$INFO[ListItem.Plot]</label>
-								<font>Slab-22</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-								<visible>String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
-							</control>
-							<control type="textbox">
-								<top>120</top>
-								<width>$PARAM[PlotWidth]</width>
-								<height>$PARAM[PlotHeight]</height>
-								<label>$INFO[ListItem.Plot]</label>
-								<font>Slab-22</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-								<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
-							</control>
-						</control>
-						<control type="image">
-							<right>10</right>
-							<bottom>10</bottom>
-							<width>$PARAM[ExtraArtSize]</width>
-							<height>$PARAM[ExtraArtSize]</height>
-							<texture>$INFO[ListItem.Art(tvshow.characterart)]</texture>
-							<aspectratio align="right" aligny="bottom">keep</aspectratio>
-						</control>
+					<control type="label">
+						<bottom>24</bottom>
+						<height>24</height>
+						<width>$PARAM[TextWidth]</width>
+						<label>$VAR[widget:Label2]</label>
+						<font>Regular-20</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.2]</textcolor>
 					</control>
 				</control>
+			</itemlayout>
+			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
 				<control type="group">
 					<visible>!Control.HasFocus($PARAM[ID])</visible>
 					<control type="image">
@@ -145,70 +98,89 @@
 						<aspectratio align="center" aligny="top">scale</aspectratio>
 						<bordersize>10</bordersize>
 					</control>
-					<control type="group">
-						<top>$PARAM[InfoTop]</top>
-						<width>$PARAM[Width]</width>
-						<height>285</height>
-						<visible>$PARAM[ShowInfo]</visible>
-						<animation type="Conditional" condition="!Control.HasFocus($PARAM[ID])">
-							<effect type="Fade" time="500" start="100" end="25" tween="cubic" easing="InOut"/>
-						</animation>
-						<control type="image">
-							<left>10</left>>
-							<top>98</top>
-							<width>$PARAM[FrameWidth]</width>
-							<height>187</height>
-							<texture colordiffuse="ff000000">colorize/40.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="group">
-							<left>$PARAM[InfoLeft]</left>
-							<control type="label">
-								<label>$PARAM[Title]</label>
-								<width max="$PARAM[TextWidth]">auto</width>
-								<height>64</height>
-								<aligny>center</aligny>
-								<font>Black-64</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-							</control>
-							<control type="label">
-								<top>64</top>
-								<label>$PARAM[Info]</label>
-								<width max="$PARAM[TextWidth]">auto</width>
-								<textoffsety>10</textoffsety>
-								<height>26</height>
-								<aligny>center</aligny>
-								<font>Black-26</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-							</control>
-							<control type="textbox">
-								<top>120</top>
-								<width>$PARAM[InfoWidth]</width>
-								<height>$PARAM[PlotHeight]</height>
-								<label>$INFO[ListItem.Plot]</label>
-								<font>Slab-22</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-								<visible>String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
-							</control>
-							<control type="textbox">
-								<top>120</top>
-								<width>$PARAM[PlotWidth]</width>
-								<height>$PARAM[PlotHeight]</height>
-								<label>$INFO[ListItem.Plot]</label>
-								<font>Slab-22</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-								<visible>!String.IsEmpty(ListItem.Art(tvshow.characterart))</visible>
-							</control>
-						</control>
-						<control type="image">
-							<right>10</right>
-							<bottom>10</bottom>
-							<width>$PARAM[ExtraArtSize]</width>
-							<height>$PARAM[ExtraArtSize]</height>
-							<texture>$INFO[ListItem.Art(tvshow.characterart)]</texture>
-							<aspectratio align="right" aligny="bottom">keep</aspectratio>
-						</control>
+					<control type="image">
+						<width>$PARAM[ItemWidth]</width>
+						<height>$PARAM[Height]</height>
+						<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
+						<bordersize>10</bordersize>
+						<visible>$PARAM[Overlay]</visible>
 					</control>
+				</control>
+				<control type="group">
+					<visible>Control.HasFocus($PARAM[ID])</visible>
+					<control type="image">
+						<width>$PARAM[ItemWidth]</width>
+						<height>$PARAM[Height]</height>
+						<texture>$PARAM[Art]</texture>
+						<aspectratio align="center" aligny="top">scale</aspectratio>
+						<bordertexture>colorize/100.png</bordertexture>
+						<bordersize>10</bordersize>
+					</control>
+					<control type="image">
+						<width>$PARAM[ItemWidth]</width>
+						<height>$PARAM[Height]</height>
+						<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
+						<bordersize>10</bordersize>
+						<visible>$PARAM[Overlay]</visible>
+					</control>
+				</control>
+				<control type="group">
+					<left>32</left>
+					<width>$PARAM[ItemWidth]</width>
+					<height>$PARAM[Height]</height>
+					<visible>$PARAM[Info]</visible>
+					<control type="label">
+						<bottom>48</bottom>
+						<label>$VAR[widget:Label]</label>
+						<width>$PARAM[TextWidth]</width>
+						<height>28</height>
+						<font>Black-24</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Accent]</textcolor>
+					</control>
+					<control type="label">
+						<bottom>24</bottom>
+						<height>24</height>
+						<width>$PARAM[TextWidth]</width>
+						<label>$VAR[widget:Label2]</label>
+						<font>Regular-20</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.2]</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<left>64</left>
+					<width>$PARAM[ItemWidth]</width>
+					<height>$PARAM[Height]</height>
+					<visible>$PARAM[BigInfo]</visible>
+					<control type="label">
+						<bottom>180</bottom>
+						<label>$VAR[widget:Label]</label>
+						<width>$PARAM[TextWidth]</width>
+						<height>28</height>
+						<font>Black-64</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Accent]</textcolor>
+					</control>
+					<control type="label">
+						<bottom>140</bottom>
+						<height>24</height>
+						<width>$PARAM[TextWidth]</width>
+						<label>$VAR[widget:Label2]</label>
+						<font>Black-26</font>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.2]</textcolor>
+					</control>
+				</control>
+				<control type="textbox">
+					<left>64</left>
+					<bottom>48</bottom>
+					<width>90%</width>
+					<height>74</height>
+					<label>$INFO[ListItem.Plot]</label>
+					<font>Slab-24</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>$PARAM[BigInfo]</visible>
 				</control>
 			</focusedlayout>
 		</definition>

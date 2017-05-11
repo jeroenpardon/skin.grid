@@ -7,28 +7,28 @@
 		<property name="sortmethod" tag="property" attribute="name|widgetSortMethod" />
 		<property name="sortdirection" tag="property" attribute="name|widgetSortDirection" />
 		<property name="type" tag="property" attribute="name|widgetType" />
-		<property name="layout" tag="property" attribute="name|widgetLayout" value="Fullscreen">$VAR[widget:Fanart]</property>
-		<property name="layout" tag="property" attribute="name|widgetLayout" value="Spotlight">$VAR[widget:Fanart]</property>
-		<property name="layout" tag="property" attribute="name|widgetLayout" value="Landscape">$VAR[widget:Landscape]</property>
-		<property name="layout" tag="property" attribute="name|widgetLayout" value="Portrait">$VAR[widget:Poster]</property>
-		<property name="layout" tag="property" attribute="name|widgetLayout" value="Square">$INFO[ListItem.Art(thumb)]</property>
-		<property name="layout" tag="property" attribute="name|widgetLayout" value="Thumbnail">$INFO[ListItem.Art(thumb)]</property>
-		<property name="layout" tag="property" attribute="name|widgetLayout" value="Banner">$VAR[widget:Banner]</property>
-		<property name="showinfo" tag="property" attribute="name|widgetLayout" value="Fullscreen">true</property>
-		<property name="showinfo" tag="property" attribute="name|widgetLayout" value="Spotlight">true</property>
-		<property name="showinfo">false</property>
-		<property name="extraartsize">448</property>
+		<property name="artwork" tag="property" attribute="name|widgetLayout" value="Fullscreen">$VAR[widget:Fanart]</property>
+		<property name="artwork" tag="property" attribute="name|widgetLayout" value="Spotlight">$VAR[widget:Fanart]</property>
+		<property name="artwork" tag="property" attribute="name|widgetLayout" value="Landscape">$VAR[widget:Landscape]</property>
+		<property name="artwork" tag="property" attribute="name|widgetLayout" value="Portrait">$VAR[widget:Poster]</property>
+		<property name="artwork" tag="property" attribute="name|widgetLayout" value="Square">$INFO[ListItem.Art(thumb)]</property>
+		<property name="artwork" tag="property" attribute="name|widgetLayout" value="Thumbnail">$INFO[ListItem.Art(thumb)]</property>
+		<property name="artwork" tag="property" attribute="name|widgetLayout" value="Banner">$VAR[widget:Banner]</property>
+		<property name="info" tag="property" attribute="name|widgetLayout" value="Thumbnail">true</property>
+		<property name="info">false</property>
+		<property name="biginfo" tag="property" attribute="name|widgetLayout" value="Fullscreen">true</property>
+		<property name="biginfo" tag="property" attribute="name|widgetLayout" value="Spotlight">true</property>
+		<property name="biginfo" tag="property" attribute="name|widgetLayout" value="Thumbnail">false</property>
+		<property name="biginfo">false</property>
+		<property name="overlay" tag="property" attribute="name|widgetLayout" value="Fullscreen">true</property>
+		<property name="overlay" tag="property" attribute="name|widgetLayout" value="Spotlight">true</property>
+		<property name="overlay" tag="property" attribute="name|widgetLayout" value="Thumbnail">true</property>
+		<property name="overlay">false</property>
 		<property name="plotheight" tag="property" attribute="name|widgetLayout" value="Fullscreen">120</property>
 		<property name="plotheight" tag="property" attribute="name|widgetLayout" value="Spotlight">120</property>
 		<property name="frameheight" tag="property" attribute="name|widgetLayout" value="Fullscreen">187</property>
 		<property name="frameheight" tag="property" attribute="name|widgetLayout" value="Spotlight">167</property>
-		<property name="infotop" tag="property" attribute="name|widgetLayout" value="Fullscreen">784</property>
-		<property name="infotop" tag="property" attribute="name|widgetLayout" value="Spotlight">481</property>
-		<property name="infoleft" tag="property" attribute="name|widgetLayout">64</property>
-		<property name="title" tag="property" attribute="name|widgetType">$INFO[ListItem.Label]</property>
-		<property name="info" tag="property" attribute="name|widgetType" value="movies">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</property>
-		<property name="info" tag="property" attribute="name|widgetType" value="episodes">$INFO[ListItem.TVShowTitle,,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</property>
-		<property name="description" tag="property" attribute="name|widgetType">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</property>
+		<property name="description" tag="property" attribute="name|widgetType">$INFO[ListItem.Plot]</property>
 	</propertyGroup>
 
 	<other include="widget_Regular">
@@ -37,17 +37,17 @@
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Fullscreen">1080</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Spotlight">756</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Landscape">370</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="Thumbnail">370</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Portrait">566</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Square">384</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Banner">190</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Fullscreen">1920</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Spotlight">1920</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Landscape">640</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Thumbnail">640</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Portrait">384</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Square">384</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Banner">960</property>
-		<property name="plotwidth" tag="property" attribute="name|widgetLayout" value="Fullscreen">1280</property>
-		<property name="plotwidth" tag="property" attribute="name|widgetLayout">1664</property>
 		<controls>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1920</width>
@@ -64,16 +64,12 @@
 					<param name="ItemWidth" value="$SKINSHORTCUTS[itemwidth]"/>
 					<param name="FrameWidth" value="$PYTHON[int(itemwidth) - 20]"/>
 					<param name="FrameHeight" value="$SKINSHORTCUTS[frameheight]"/>
-					<param name="Art" value="$SKINSHORTCUTS[layout]"/>
-					<param name="ShowInfo" value="$SKINSHORTCUTS[showinfo]"/>
-					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
-					<param name="InfoTop" value="$SKINSHORTCUTS[infotop]"/>
-					<param name="InfoLeft" value="$SKINSHORTCUTS[infoleft]"/>
-					<param name="Title" value="$SKINSHORTCUTS[title]"/>
+					<param name="Art" value="$SKINSHORTCUTS[artwork]"/>
 					<param name="Info" value="$SKINSHORTCUTS[info]"/>
-					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128 - int(extraartsize)]"/>
-					<param name="PlotHeight" value="$SKINSHORTCUTS[plotheight]"/>
-					<param name="ExtraArtSize" value="$SKINSHORTCUTS[extraartsize]"/>
+					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
+					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128]"/>
+					<param name="BigInfo" value="$SKINSHORTCUTS[biginfo]"/>
+					<param name="Overlay" value="$SKINSHORTCUTS[overlay]"/>
 				</include>
 				<content target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortmethod]" sortorder="$SKINSHORTCUTS[sortdirection]">$SKINSHORTCUTS[path]</content>
 			</control>
@@ -99,7 +95,7 @@
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Banner">896</property>
 		<controls>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
-				<width>1792</width>
+				<width>1920</width>
 				<height>$SKINSHORTCUTS[height]</height>
 				<onleft>9000</onleft>
 				<onback>9000</onback>
@@ -113,16 +109,12 @@
 					<param name="ItemWidth" value="$SKINSHORTCUTS[itemwidth]"/>
 					<param name="FrameWidth" value="$PYTHON[int(itemwidth) - 20]"/>
 					<param name="FrameHeight" value="$SKINSHORTCUTS[frameheight]"/>
-					<param name="Art" value="$SKINSHORTCUTS[layout]"/>
-					<param name="ShowInfo" value="$SKINSHORTCUTS[showinfo]"/>
-					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
-					<param name="InfoTop" value="$SKINSHORTCUTS[infotop]"/>
-					<param name="InfoLeft" value="$SKINSHORTCUTS[infoleft]"/>
-					<param name="Title" value="$SKINSHORTCUTS[title]"/>
+					<param name="Art" value="$SKINSHORTCUTS[artwork]"/>
 					<param name="Info" value="$SKINSHORTCUTS[info]"/>
-					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128 - int(extraartsize)]"/>
-					<param name="PlotHeight" value="$SKINSHORTCUTS[plotheight]"/>
-					<param name="ExtraArtSize" value="$SKINSHORTCUTS[extraartsize]"/>
+					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
+					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128]"/>
+					<param name="BigInfo" value="$SKINSHORTCUTS[biginfo]"/>
+					<param name="Overlay" value="$SKINSHORTCUTS[overlay]"/>
 				</include>
 				<content target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortmethod]" sortorder="$SKINSHORTCUTS[sortdirection]">$SKINSHORTCUTS[path]</content>
 			</control>
@@ -135,12 +127,14 @@
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Fullscreen">1080</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Spotlight">777</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Landscape">389</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="Thumbnail">389</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Portrait">496</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Square">336</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="Banner">190</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Fullscreen">1344</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Spotlight">1344</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Landscape">672</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Thumbnail">672</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Portrait">336</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Square">336</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="Banner">960</property>
@@ -160,16 +154,12 @@
 					<param name="ItemWidth" value="$SKINSHORTCUTS[itemwidth]"/>
 					<param name="FrameWidth" value="$PYTHON[int(itemwidth) - 20]"/>
 					<param name="FrameHeight" value="$SKINSHORTCUTS[frameheight]"/>
-					<param name="Art" value="$SKINSHORTCUTS[layout]"/>
-					<param name="ShowInfo" value="$SKINSHORTCUTS[showinfo]"/>
-					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
-					<param name="InfoTop" value="$SKINSHORTCUTS[infotop]"/>
-					<param name="InfoLeft" value="$SKINSHORTCUTS[infoleft]"/>
-					<param name="Title" value="$SKINSHORTCUTS[title]"/>
+					<param name="Art" value="$SKINSHORTCUTS[artwork]"/>
 					<param name="Info" value="$SKINSHORTCUTS[info]"/>
-					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128 - int(extraartsize)]"/>
-					<param name="PlotHeight" value="$SKINSHORTCUTS[plotheight]"/>
-					<param name="ExtraArtSize" value="$SKINSHORTCUTS[extraartsize]"/>
+					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
+					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128]"/>
+					<param name="BigInfo" value="$SKINSHORTCUTS[biginfo]"/>
+					<param name="Overlay" value="$SKINSHORTCUTS[overlay]"/>
 				</include>
 				<content target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortmethod]" sortorder="$SKINSHORTCUTS[sortdirection]">$SKINSHORTCUTS[path]</content>
 			</control>
