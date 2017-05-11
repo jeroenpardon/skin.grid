@@ -1294,14 +1294,6 @@
 		<value condition="!String.IsEmpty(ListItem.Art(artist.fanart))">$INFO[ListItem.Art(artist.fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
 		<value>views/fallback/fanart.jpg</value>
-		<!--
-		<value condition="String.StartsWith(Container.FolderPath,videodb://) | String.Contains(Container.FolderPath,pvr://) | Window.IsActive(tvguide) | Window.IsActive(radioguide) | Window.IsActive(tvsearch) | Window.IsActive(radiosearch)">views/fallback/tmp.jpg</value>
-		<value condition="String.StartsWith(Container.FolderPath,musicdb://) | String.StartsWith(Container.FolderPath,videodb://musicvideos) | String.StartsWith(Container.FolderPath,library://music) | String.StartsWith(ListItem.FolderPath,library://music) | String.StartWith(Container.FolderPath,special://musicplaylists)">views/fallback/music-fanart.jpg</value>
-		<value condition="Window.IsActive(pictures)">views/fallback/pictures-fanart.jpg</value>
-		<value condition="Window.IsActive(addonbrowser) | Window.IsActive(programs) | Window.IsActive(1110)">views/fallback/addons-fanart.jpg</value>
-		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(filemanager) | Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsActive(skinsettings) | Window.IsActive(eventlog)">views/fallback/fanart.jpg</value>
-		<value>$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
-		-->
 	</variable>
 
 	<variable name="window:Grid">
