@@ -152,12 +152,17 @@
 			<size>22</size>
 			<linespacing>1.3</linespacing>
 		</font>
-
 		<font>
 			<name>Slab-20</name>
 			<filename>Default/Slab.ttf</filename>
 			<size>20</size>
 			<linespacing>1</linespacing>
+		</font>
+		<font>
+			<name>Slab-22</name>
+			<filename>Default/Slab.ttf</filename>
+			<size>22</size>
+			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Slab-24</name>
@@ -166,9 +171,9 @@
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
-			<name>Slab-22</name>
+			<name>Slab-26</name>
 			<filename>Default/Slab.ttf</filename>
-			<size>22</size>
+			<size>26</size>
 			<linespacing>1.3</linespacing>
 		</font>
 

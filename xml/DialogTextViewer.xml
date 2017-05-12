@@ -20,7 +20,7 @@
 			<width>1632</width>
 			<height>794</height>
 			<textcolor>$VAR[color:Accent]</textcolor>
-			<font>Slab-24</font>
+			<font>Slab-26</font>
 			<pagecontrol>6500</pagecontrol>
 			<include>transition_Content</include>
 		</control>
