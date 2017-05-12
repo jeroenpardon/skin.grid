@@ -11,18 +11,13 @@
 	<onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 	<onunload>Control.Move(9000,-1)</onunload>
 	<onunload>RunScript(script.skinshortcuts,type=hidesubmenu)</onunload>
-	
 	<controls>
-
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Menu-vertical</include>
-
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">home_Menu-vertical2</include>
-
 		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + Skin.HasSetting(home.clock)">
 			<param name="Top">108</param>
 			<param name="Height">972</param>
 		</include>
-
 		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + !Skin.HasSetting(home.clock)">
 			<param name="Top">0</param>
 			<param name="Height">screen_Height</param>
@@ -33,24 +28,27 @@
 			<include>screen_Dimensions</include>
 			<animation type="Conditional" condition="!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))">
 				<effect type="fade" start="0" end="100" time="0" delay="0"/>
-				<effect type="slide" start="0,0" end="0,1080" time="500" easing="InOut" tween="cubic" delay="3000"/>
+				<effect type="slide" start="0,0" end="0,1080" time="500" easing="InOut" tween="cubic" delay="2000"/>
 			</animation>
 			<include>startup_Background</include>
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
-				<width>300</width>
-				<height>193</height>
-				<texture>logos/grid.png</texture>
-				<aspectratio align="center">scale</aspectratio>
+				<width>384</width>
+				<height>128</height>
+				<texture>logos/grid2.png</texture>
+				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>$VAR[color:Accent]</colordiffuse>
+				<include>fadeinout</include>
 			</control>
-		</control>
-
-		<!-- Preload weather -->
-		<control type="label">
-			<label>$INFO[Weather.Conditions]</label>
-			<font></font>
+			<control type="group">
+				<left>924</left>
+				<bottom>108</bottom>
+				<width>72</width>
+				<height>72</height>
+				<include>global_Busy</include>
+				<visible>String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))</visible>
+			</control>
 		</control>
 	</controls>
 </window>
