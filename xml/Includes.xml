@@ -7,7 +7,6 @@
 	<include file="Includes_Feed.xml" />
 	<include file="Includes_Menu.xml" />
 	<include file="Includes_OSD.xml" />
-	<include file="Includes_PVR.xml" />
 	<include file="Includes_Window.xml" />
 	<include file="Menu.xml" />
 	<include file="Variables.xml" />
