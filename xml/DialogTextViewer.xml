@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">500</defaultcontrol>
+	<defaultcontrol always="true">6500</defaultcontrol>
 	<controls>
 
 		<!--global includes-->
@@ -11,16 +11,14 @@
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
 			<include content="global_WindowTitle">
-				<param name="ID">1</param>
 			</include>
 		</control>
 
 		<control type="textbox" id="5">
-			<left>176</left>
+			<left>160</left>
 			<top>222</top>
-			<width>1664</width>
-			<height>810</height>
-			<align>left</align>
+			<width>1632</width>
+			<height>794</height>
 			<textcolor>$VAR[color:Accent]</textcolor>
 			<font>Slab-24</font>
 			<pagecontrol>6500</pagecontrol>
