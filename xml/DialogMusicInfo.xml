@@ -11,7 +11,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
-			<include content="global_WindowTitle">
+			<include content="global_WindowChrome">
 				<param name="Label">$VAR[window:Title.Info]</param>
 			</include>
 		</control>

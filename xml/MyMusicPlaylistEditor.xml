@@ -16,7 +16,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>toggle_Menu</include>
-			<include>global_WindowTitle</include>
+			<include>global_WindowChrome</include>
 		</control>
 
 	<!--content-->

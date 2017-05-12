@@ -7,7 +7,6 @@
 	<controls>
 		<control type="group">
 			<include>fadeinout</include>
-			<include>global_Includes</include>
 			<control type="progress" id="12">
 				<left>128</left>
 				<width>1664</width>
@@ -19,7 +18,7 @@
 				<righttexture></righttexture>
 				<visible>!Window.IsActive(volumebar)</visible>
 			</control>
-			<include>global_WindowTitle</include>
+			<include>global_WindowChrome</include>
 			<control type="group">
 				<visible>Player.ShowInfo</visible>
 				<include condition="!VideoPlayer.Content(livetv)">player_Info</include>

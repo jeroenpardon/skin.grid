@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1105">
-	<visible>Player.HasMedia + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
+	<visible>Player.HasMedia + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(visualisation) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
 	<controls>
 		<control type="group">
+			<visible>!Window.IsVisible(fullscreenvideo)</visible>
 			<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),stream)">Conditional</animation>
 			<include content="global_Playing" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
 				<param name="Left" value="1036"/>
@@ -14,6 +15,54 @@
 				<param name="Width" value="668"/>
 				<param name="TextWidth" value="508"/>
 			</include>
+		</control>
+
+		<!-- Fullscreen info -->
+		<control type="group">
+			<include>fadeinout</include>
+			<visible>Window.IsVisible(seekbar) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Window.IsActive(volumebar)</visible>
+			<control type="grouplist">
+				<top>14</top>
+				<right>148</right>
+				<width>600</width>
+				<height>54</height>
+				<align>right</align>
+				<orientation>horizontal</orientation>
+				<control type="label">
+					<width>auto</width>
+					<height>54</height>
+					<align>right</align>
+					<font>Regular-20</font>
+					<label>$INFO[Player.Time]</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label">
+					<width>32</width>
+					<height>54</height>
+					<align>center</align>
+					<font>Regular-20</font>
+					<label>/</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<height>54</height>
+					<align>right</align>
+					<font>Regular-20</font>
+					<label>$INFO[Player.Duration]</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+			</control>
+			<control type="label">
+				<top>40</top>
+				<right>148</right>
+				<width>600</width>
+				<height>54</height>
+				<align>right</align>
+				<font>Regular-20</font>
+				<label>$INFO[Player.FinishTime,$LOCALIZE[31323] ]</label>
+				<textcolor>$VAR[color:Accent]</textcolor>
+			</control>
 		</control>
 	</controls>
 </window>

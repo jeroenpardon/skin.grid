@@ -35,7 +35,7 @@
 			<!--chrome-->
 			<control type="group">
 				<include>transition_Chrome</include>
-				<include>global_WindowTitle</include>
+				<include>global_WindowChrome</include>
 				<include>global_Includes</include>
 				<visible>!Window.IsActive(movieinformation)</visible>
 			</control>

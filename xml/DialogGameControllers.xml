@@ -10,7 +10,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
-			<include content="global_WindowTitle">
+			<include content="global_WindowChrome">
 				<param name="Label">35058</param>
 				<param name="ID">2</param>
 			</include>

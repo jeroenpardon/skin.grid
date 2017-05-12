@@ -2,7 +2,7 @@
 <window>
 	<controls>
 		<control type="group">
-			<include>global_WindowTitle</include>
+			<include>global_WindowChrome</include>
 			<include>fadeinout</include>
 			<include>toggle_Menu</include>
 			<visible>IntegerGreaterThan(Player.Volume,0) + !Window.IsActive(Home)</visible>
@@ -71,7 +71,7 @@
 				<righttexture></righttexture>
 			</control>
 			<!--
-			<include content="global_WindowTitle">
+			<include content="global_WindowChrome">
 				<param name="Left">138</param>
 				<param name="Width">1772</param>
 				<param name="TextureWidth">1644</param>
