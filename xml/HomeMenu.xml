@@ -14,6 +14,7 @@
 
 				<include content="global_Clock" condition="Skin.HasSetting(home.clock)">
 					<param name="Left">0</param>
+					<param name="Height">108</param>
 				</include>
 
 				<include content="home_Feed" condition="String.IsEqual(Skin.String(homemenu.type),stream)">
@@ -94,13 +95,7 @@
 	</include>
 
 
-
-
-
-
-
 	<include name="home_Menu-vertical">
-
 		<include content="global_Background">
 			<param name="GridTexture">overlays/home.png</param>
 			<param name="DiffuseColor">ff000000</param>
@@ -112,9 +107,7 @@
 			<param name="Height">98</param>
 		</include>
 
-
 		<control type="group">
-
 			<include>transition_HomeMenu</include>
 
 			<!-- Scroll indicators -->
@@ -183,7 +176,6 @@
 							<height>90</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Thin-64</font>
-							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<animation effect="fade" start="100" end="35" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
@@ -207,7 +199,6 @@
 							<height>90</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Thin-64</font>
-							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
@@ -233,7 +224,6 @@
 							<height>98</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Black-72</font>
-							<align>left</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
@@ -245,7 +235,6 @@
 							<label>$INFO[ListItem.Label]</label>
 							<font>Black-72</font>
 							<aligny>center</aligny>
-							<align>left</align>
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
 					</control>
@@ -293,11 +282,6 @@
 		</include>
 	</include>
 
-
-
-
-
-
 	<include name="home_Menu-vertical2">
 		<definition>
 			<control type="group">
@@ -306,10 +290,6 @@
 				<!--background-->
 				<include content="global_Background">
 					<param name="GridTexture">overlays/98.png</param>
-				</include>
-
-				<include content="global_Clock" condition="Skin.HasSetting(home.clock)">
-					<param name="Left">0</param>
 				</include>
 
 				<control type="image">
