@@ -699,7 +699,7 @@
 		<param name="Icon" default="$VAR[symbol:Global]"/>
 		<param name="Art" default="$VAR[art:Landscape]"/>
 		<param name="FadeCondition" default="$EXP[!Views.ListHasFocus]"/>
-		<param name="Logo" default="$INFO[ListItem.Art(clearlogo)]"/>
+		<param name="Logo" default="$VAR[art:Logo]"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="PageControl" default="6500"/>
 		<definition>
