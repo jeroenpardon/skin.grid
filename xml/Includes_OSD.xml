@@ -166,8 +166,6 @@
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
 						<include>player_Control</include>
 						<onclick>PlayerControl(Play)</onclick>
-						<visible>!VideoPlayer.Content(LiveTV)</visible>
-						<enable>Player.PauseEnabled</enable>
 					</control>
 					<!--stop-->
 					<control type="button" id="706">
@@ -205,15 +203,7 @@
 						<include>player_Control</include>
 						<visible>VideoPlayer.Content(LiveTV) + !Player.Recording</visible>
 					</control>
-					<!--channels-->
-					<control type="button" id="711">
-						<label>&#59138;</label>
-						<onclick>Dialog.Close(VideoOSD,true)</onclick>
-						<onclick>ActivateWindow(PVROSDChannels)</onclick>
-						<include>player_Control</include>
-						<visible>VideoPlayer.Content(LiveTV)</visible>
-					</control>
-					<!--channels-->
+					<!-- Teletext -->
 					<control type="button" id="712">
 						<label>&#58986;</label>
 						<onclick>Dialog.Close(VideoOSD,true)</onclick>
@@ -341,7 +331,7 @@
 							<visible>Player.HasAudio</visible>
 							<visible>String.IsEmpty(Skin.String(OSD))</visible>
 						</item>
-						<!--guide-->
+						<!-- Guide -->
 						<item id="22">
 							<label>$LOCALIZE[22020]$INFO[VideoPlayer.ChannelName, - ]</label>
 							<label2>&#57361;</label2>
@@ -349,7 +339,15 @@
 							<onclick>ActivateWindow(PVROSDGuide)</onclick>
 							<visible>VideoPlayer.Content(LiveTV)</visible>
 						</item>
-						<!--dvd menu-->
+						<!-- Channels -->
+						<item id="22">
+							<label>$LOCALIZE[14301]</label>
+							<label2>&#59138;</label2>
+							<onclick>Dialog.Close(VideoOSD,true)</onclick>
+							<onclick>ActivateWindow(PVROSDChannels)</onclick>
+							<visible>VideoPlayer.Content(LiveTV)</visible>
+						</item>
+						<!-- DVD Menu -->
 						<item id="23">
 							<label>$LOCALIZE[33061]</label>
 							<label2>&#59138;</label2>
