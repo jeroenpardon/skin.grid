@@ -107,15 +107,11 @@
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
 		</include>
 
-		<include content="global_WindowTitle">
+		<include content="global_WindowChrome">
 			<param name="Left">1792</param>
 			<param name="Height">98</param>
 		</include>
 
-		<include content="global_Clock" condition="Skin.HasSetting(home.clock)">
-			<param name="Left">1792</param>
-			<param name="Height">98</param>
-		</include>
 
 		<control type="group">
 

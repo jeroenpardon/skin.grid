@@ -18,7 +18,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
-			<include content="global_WindowTitle">
+			<include content="global_WindowChrome">
 			</include>
 		</control>
 
@@ -758,8 +758,8 @@
 					<!-- Date -->
 					<control type="radiobutton" id="911">
 						<label>$LOCALIZE[31224]</label>
-						<onclick>Skin.ToggleSetting(global.showdate)</onclick>
-						<selected>Skin.HasSetting(global.showdate)</selected>
+						<onclick>Skin.ToggleSetting(global.date)</onclick>
+						<selected>Skin.HasSetting(global.date)</selected>
 						<include>radio_Settings</include>
 					</control>
 					<!-- Background video -->

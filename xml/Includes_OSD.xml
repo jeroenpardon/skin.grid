@@ -491,7 +491,6 @@
 					<top>750</top>
 					<width>1920</width>
 					<height>285</height>
-					<include>fadeinout</include>
 					<control type="group">
 						<left>64</left>
 						<height>384</height>
