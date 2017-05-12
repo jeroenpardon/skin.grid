@@ -6,12 +6,12 @@
 
 	<!--chrome-->
 		<control type="group">
-
-			<include>player_Background</include>
-			<include content="global_Overlay">
-				<param name="GridTexture">overlays/90.png</param>
-			</include>
-
+			<control type="image">
+				<include>screen_Dimensions</include>
+				<texture background="true">overlays/background.png</texture>
+				<colordiffuse>$VAR[color:Main]</colordiffuse> 
+				<fadetime>fadetime_Fanart</fadetime>
+			</control>
 			<control type="group">
 				<include>transition_Chrome</include>
 				<include>global_Includes</include>
@@ -20,7 +20,6 @@
 			</control>
 
 		<!--content-->
-
 			<control type="image">
 				<top>198</top>
 				<width>screen_Width</width>
