@@ -3,9 +3,6 @@
 	<defaultcontrol always="true">703</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow, daemon=True)</onload>
 	<controls>
-		<control type="visualisation" id="2">
-			<include>screen_Dimensions</include>
-		</control>
 		<include>player_Background</include>
 		<control type="group">
 			<include>fadeinout</include>

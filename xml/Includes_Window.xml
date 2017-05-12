@@ -76,6 +76,10 @@
 				<effect type="Zoom" center="screen_Center" start="130" end="100" time="15000"/>
 				<effect type="Fade" start="100" end="0" time="1000" delay="14000"/>
 			</animation>
+			<control type="visualisation" id="2">
+				<include>screen_Dimensions</include>
+				<visible>String.IsEqual(Skin.String(viz.mode),viz) | String.IsEqual(Skin.String(viz.mode),blend)</visible>
+			</control>
 			<control type="multiimage">
 				<include>screen_Dimensions</include>
 				<aspectratio align="center">scale</aspectratio>
@@ -85,7 +89,7 @@
 				<fadetime>fadetime_Slideshow</fadetime>
 				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
 				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
-				<visible>System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + !String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))</visible>
+				<visible>!String.IsEqual(Skin.String(viz.mode),viz) + [System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + !String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))]</visible>
 			</control>
 			<control type="image">
 				<include>screen_Dimensions</include>
@@ -93,7 +97,7 @@
 				<fadetime>fadetime_Fanart</fadetime>
 				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
-				<visible>String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))</visible>
+				<visible>!String.IsEqual(Skin.String(viz.mode),viz) + [String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))]</visible>
 			</control>
 		</control>
 	</include>
