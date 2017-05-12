@@ -133,6 +133,8 @@
 					<height>90</height>
 					<itemgap>0</itemgap>
 					<onup condition="String.IsEqual(Window.Property(InfoSwitch),$LOCALIZE[21888])">50</onup>
+					<onup condition="Control.IsVisible(50)">50</onup>
+					<onup condition="!Control.IsVisible(50) + Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=test,message='"$VAR[media:Description]"')</onup>
 					<onleft>5000</onleft>
 					<onright>5000</onright>
 					<align>center</align>
@@ -142,7 +144,6 @@
 						<label>$LOCALIZE[1024]</label>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)">Close</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,artist)">ActivateWindow(musicdb://artists/$INFO[ListItem.DBID])</onclick>
-						<onup>50</onup>
 						<width min="256">auto</width>
 						<align>center</align>
 						<font>Black-20</font>
@@ -152,7 +153,6 @@
 					<control type="togglebutton" id="5">
 						<label>$LOCALIZE[21821]</label>
 						<altlabel>$LOCALIZE[21888]</altlabel>
-						<onup>50</onup>
 						<align>center</align>
 						<font>Black-20</font>
 						<width min="256">auto</width>
@@ -167,7 +167,6 @@
 					<control type="togglebutton" id="208">
 						<label>$LOCALIZE[182]</label>
 						<altlabel>$LOCALIZE[21821]</altlabel>
-						<onup>50</onup>
 						<align>center</align>
 						<font>Black-20</font>
 						<width min="256">auto</width>
@@ -183,7 +182,6 @@
 						<width min="256">auto</width>
 						<align>center</align>
 						<font>Black-20</font>
-						<onup>50</onup>
 						<label>YouTube</label>
 						<texturenofocus></texturenofocus>
 						<onclick>Dialog.Close(all)</onclick>
@@ -196,7 +194,6 @@
 						<width min="256">auto</width>
 						<align>center</align>
 						<font>Black-20</font>
-						<onup>50</onup>
 						<label>$LOCALIZE[16106]</label>
 						<onclick>ActivateWindow(1101)</onclick>
 						<texturenofocus></texturenofocus>
@@ -321,8 +318,8 @@
 					<param name="Height">630</param>
 					<param name="ItemHeight">90</param>
 					<param name="TextLeft">132</param>
-					<param name="OnLeft">5000</param>
-					<param name="OnRight">70</param>
+					<param name="OnLeft">9000</param>
+					<param name="OnRight">9000</param>
 					<param name="OnUp">50</param>
 					<param name="OnDown">9000</param>
 					<param name="Label">$INFO[ListItem.Label]</param>

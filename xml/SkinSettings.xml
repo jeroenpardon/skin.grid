@@ -732,14 +732,21 @@
 					<onright condition="Integer.IsGreater(Container(900).NumPages,1)">6500</onright>
 					<visible>Skin.String(category,other)</visible>
 
-					<!-- Startup playlist-->
 					<control type="radiobutton" id="901">
+						<label>$LOCALIZE[31264]</label>
+						<onclick>Skin.ToggleSetting(plot.window)</onclick>
+						<selected>Skin.HasSetting(plot.window)</selected>
+						<include>radio_Settings</include>
+					</control>
+
+					<!-- Startup playlist-->
+					<control type="radiobutton" id="905">
 						<label>$LOCALIZE[31208]</label>
 						<onclick>Skin.ToggleSetting(startup.playlist)</onclick>
 						<selected>Skin.HasSetting(startup.playlist)</selected>
 						<include>radio_Settings</include>
 					</control>
-					<control type="button" id="902">
+					<control type="button" id="906">
 						<label>$LOCALIZE[573]</label>
 						<label2>$INFO[Skin.String(startup.playlist)]</label2>
 						<onclick>Skin.SetFile(startup.playlist.path,,special://musicplaylists)</onclick>

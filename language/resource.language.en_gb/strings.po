@@ -599,6 +599,10 @@ msgctxt "#31263"
 msgid "Enable full virtual keyboard"
 msgstr ""
 
+msgctxt "#31264"
+msgid "Press up in information screens for big (plot) descriptions"
+msgstr ""
+
 
 msgctxt "#31266"
 msgid "Select menu playback controls"

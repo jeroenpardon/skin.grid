@@ -10,9 +10,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
-			<include content="global_WindowTitle">
-				<param name="Label">$INFO[ListItem.Label]</param>
-			</include>
+			<include>global_WindowTitle</include>
 		</control>
 
 		<!-- Content -->
@@ -108,6 +106,7 @@
 					<width>1664</width>
 					<height>90</height>
 					<itemgap>0</itemgap>
+					<onup condition="Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=$INFO[ListItem.Title],message=$INFO[ListItem.Plot])</onup>
 					<onleft>5000</onleft>
 					<onright>5000</onright>
 					<align>center</align>
