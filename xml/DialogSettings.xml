@@ -23,9 +23,8 @@
 		<!--control area-->
 			<control type="group">
 				<left>128</left>
-
 				<control type="image">
-					<width>1340</width>
+					<width>1344</width>
 					<height>810</height>
 					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 					<visible>VideoPlayer.IsFullscreen</visible>
@@ -42,37 +41,37 @@
 
 			<!--default button-->
 				<control type="button" id="7">
-					<width>1340</width>
+					<width>1344</width>
 					<height>90</height>
 				</control>
 
 			<!--default radiobutton-->
 				<control type="radiobutton" id="8">
-					<width>1340</width>
+					<width>1344</width>
 					<height>90</height>
 				</control>
 
 			<!--default spincontrol-->
 				<control type="spincontrolex" id="9">
-					<width>1340</width>
+					<width>1344</width>
 					<height>90</height>
 				</control>
 
 			<!--default edit control-->
 				<control type="edit" id="12">
-					<width>1340</width>
+					<width>1344</width>
 					<height>90</height>
 				</control>
 
 			<!--default slider control-->
 				<control type="edit" id="13">
-					<width>1340</width>
+					<width>1344</width>
 					<height>90</height>
 				</control>
 
 			<!--default label-->
 				<control type="label" id="14">
-					<width>1340</width>
+					<width>1344</width>
 					<height>90</height>
 					<include>global_Header</include>
 				</control>
@@ -110,21 +109,7 @@
 						<include>button_Dialog</include>
 					</control>
 				</control>
-
 			</control>
-
-
-
-
-			<!--settings
-			<control type="button" id="30">
-				<right>128</right>
-				<top>180</top>
-				<width>216</width>
-				<label></label>
-				<font>Black-22</font>
-				<include>button_Dialog</include>
-			</control>-->
 		</control>
 	
 	<!--triggered dialog buttons-->
