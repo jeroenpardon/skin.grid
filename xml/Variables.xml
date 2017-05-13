@@ -1385,6 +1385,8 @@
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsVisible(home)"></value>
 		<value condition="Window.IsActive(subtitlesearch) + Integer.IsGreater(Container(120).NumItems,0)">$VAR[count:Subtitles]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.IsVisible(osdvideosettings)">$LOCALIZE[13395]</value>
+		<value condition="VideoPlayer.IsFullscreen + Window.IsVisible(osdaudiosettings)">$LOCALIZE[13396]</value>
 		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.Paused + !Player.Caching">$LOCALIZE[112]</value>
 		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + [Player.Paused + Player.Caching] + !Player.Seeking">$INFO[Player.ProgressCache]</value>
 		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.Rewinding">$LOCALIZE[31300] $VAR[player:Speed]</value>
