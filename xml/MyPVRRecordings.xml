@@ -4,7 +4,6 @@
 	<menucontrol>7000</menucontrol>
 	<views>50</views>
 	<onload>ClearProperty(MenuOpen,Home)</onload>
-
 	<controls>
 
 	<!--menu trigger-->

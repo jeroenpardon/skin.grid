@@ -1337,7 +1337,6 @@
 		<!--channels-->
 		<control type="group" id="7050">
 			<height>108</height>
-			<visible>!Window.IsActive(MyPVRChannels.xml)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -1377,7 +1376,6 @@
 		<!--guide-->
 		<control type="group" id="7051">
 			<height>108</height>
-			<visible>!Window.IsActive(MyPVRGuide.xml)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -1417,7 +1415,6 @@
 		<!--recordings-->
 		<control type="group" id="7052">
 			<height>108</height>
-			<visible>!Window.IsActive(MyPVRRecordings.xml)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -1441,61 +1438,21 @@
 				<left>32</left>
 				<control type="label">
 					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$INFO[Pvr.BackendRecordings,, $LOCALIZE[31051]]</label>
+					<label>$INFO[Pvr.BackendDiskspace]</label>
 					<include>menu_Label</include>
 					<visible>!Control.HasFocus(103)</visible>
 				</control>
 				<control type="label">
 					<width>384</width>
-					<label>$INFO[Pvr.BackendRecordings,, $LOCALIZE[31051]]</label>
+					<label>$INFO[Pvr.BackendDiskspace]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(103)</visible>
 				</control>
 			</control>
 		</control>
-		<!--timer rules
-		<control type="group" id="7053">
-			<height>108</height>
-			<visible>!Window.IsActive(MyPVRTimers.xml)</visible>
-			<control type="image">
-				<width>384</width>
-				<height>108</height>
-				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-				<visible>Control.HasFocus(104)</visible>
-			</control>
-			<control type="button" id="104">
-				<top>12</top>
-				<label>$LOCALIZE[19138]</label>
-				<onup>103</onup>
-				<ondown>105</ondown>
-				<onleft>7100</onleft>
-				<onright>5500</onright>
-				<include>menu_Button</include>
-				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimerRules)</onclick>
-				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimerRules)</onclick>
-			</control>
-			<control type="group">
-				<top>54</top>
-				<left>32</left>
-				<control type="label">
-					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$INFO[Pvr.BackendTimers,, $LOCALIZE[305]]</label>
-					<include>menu_Label</include>
-					<visible>!Control.HasFocus(104)</visible>
-				</control>
-				<control type="label">
-					<width>384</width>
-					<label>$INFO[Pvr.BackendTimers,, $LOCALIZE[305]]</label>
-					<include>menu_Label</include>
-					<visible>Control.HasFocus(104)</visible>
-				</control>
-			</control>
-		</control>
-		-->
 		<!--timers-->
 		<control type="group" id="7054">
 			<height>108</height>
-			<visible>!Window.IsActive(MyPVRTimers.xml)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
