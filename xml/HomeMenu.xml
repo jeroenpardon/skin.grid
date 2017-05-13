@@ -55,7 +55,7 @@
 							</control>
 						</control>
 						<control type="group">
-							<visible>Control.HasFocus(9000) | Control.HasFocus(8000)</visible>
+							<visible>Control.HasFocus(9000)</visible>
 							<control type="group">
 								<control type="image">
 									<aspectratio>stretch</aspectratio>
@@ -295,7 +295,7 @@
 				</control>
 
 				<include content="global_WindowChrome">
-					<param name="TimeLeft">0</param>
+					<param name="TimeLeft">0</param>P
 					<param name="Height">98</param>
 				</include>
 

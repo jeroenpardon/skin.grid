@@ -450,7 +450,7 @@
 							<visible>Player.HasVideo</visible>
 							<visible>String.IsEmpty(Skin.String(OSD))</visible>
 						</item>
-						<!--audio settngs-->
+						<!--audio settings-->
 						<item>
 							<label>$LOCALIZE[13396]</label>
 							<label2>&#57504;</label2>
@@ -465,7 +465,6 @@
 							<label2>&#57483;</label2>
 							<onclick>Dialog.Close(VideoOSD,true)</onclick>
 							<onclick>Skin.Reset(OSD)</onclick>
-							<onclick>SetFocus(43260)</onclick>
 							<onclick>Action(Info)</onclick>
 							<visible>String.IsEmpty(Skin.String(OSD))</visible>
 						</item>

@@ -156,8 +156,6 @@
 					<font>Slab-20</font>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<pagecontrol>6500</pagecontrol>
-					<onright>6500</onright>
-					<font>Slab-24</font>
 				</control>
 			</control>
 		</control>

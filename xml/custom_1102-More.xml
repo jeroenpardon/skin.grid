@@ -42,7 +42,7 @@
 						<onright>9000</onright>
 						<onup>601</onup>
 						<ondown>511</ondown>
-						<onclick>Dialog.Close(1130)</onclick>
+						<onclick>Dialog.Close(1102)</onclick>
 	                    <onclick>Dialog.Close(movieinformation)</onclick>
 	                    <onclick>RunScript(script.cinemavision,experience)</onclick>
 						<include>button_Settings</include>
