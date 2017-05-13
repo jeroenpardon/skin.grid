@@ -2,16 +2,12 @@
 <window>
 	<defaultcontrol>5</defaultcontrol>
 	<controls>
-	<!--global includes-->
 		<include condition="!VideoPlayer.IsFullscreen | Window.IsActive(osdaudiodspsettings)">global_Background</include>
 
-	<!--window chrome-->		
+		<!-- Window chrome -->		
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include>global_Includes</include>
-			<include content="global_WindowChrome">
-
-			</include>
+			<include>global_WindowChrome</include>
 		</control>
 		<control type="group">
 			<top>198</top>
@@ -20,7 +16,7 @@
 			<visible>!Window.IsVisible(sliderdialog)</visible>
 			<include>transition_Content</include>
 		
-		<!--control area-->
+			<!-- Control area -->
 			<control type="group">
 				<left>128</left>
 				<control type="image">
@@ -39,37 +35,37 @@
 					<itemgap>0</itemgap>
 				</control>
 
-			<!--default button-->
+				<!-- Default button -->
 				<control type="button" id="7">
 					<width>1344</width>
 					<height>90</height>
 				</control>
 
-			<!--default radiobutton-->
+				<!-- Default radiobutton -->
 				<control type="radiobutton" id="8">
 					<width>1344</width>
 					<height>90</height>
 				</control>
 
-			<!--default spincontrol-->
+				<!-- Default spin -->
 				<control type="spincontrolex" id="9">
 					<width>1344</width>
 					<height>90</height>
 				</control>
 
-			<!--default edit control-->
+				<!-- Default edit -->
 				<control type="edit" id="12">
 					<width>1344</width>
 					<height>90</height>
 				</control>
 
-			<!--default slider control-->
+				<!-- Default slider -->
 				<control type="edit" id="13">
 					<width>1344</width>
 					<height>90</height>
 				</control>
 
-			<!--default label-->
+				<!-- Default label -->
 				<control type="label" id="14">
 					<width>1344</width>
 					<height>90</height>
@@ -77,7 +73,7 @@
 				</control>
 			</control>
 
-		<!--dialog controls-->
+			<!-- Dialog controls -->
 			<control type="grouplist">
 				<right>128</right>
 				<width>216</width>
@@ -92,7 +88,7 @@
 					<ondown>30</ondown>
 					<align>right</align>
 					<orientation>horizontal</orientation>
-					<!--ok-->
+					<!-- Ok -->
 					<control type="button" id="128">
 						<label>&#58956;</label>
 						<onclick>SendClick(28)</onclick>
@@ -100,7 +96,7 @@
 						<font>Symbols-26</font>
 						<include>button_Dialog</include>
 					</control>
-					<!--cancel-->
+					<!-- Cancel -->
 					<control type="button" id="129">
 						<label>&#58950;</label>
 						<onclick>SendClick(29)</onclick>
@@ -112,7 +108,7 @@
 			</control>
 		</control>
 	
-	<!--triggered dialog buttons-->
+		<!-- Triggered dialog buttons -->
 		<control type="button" id="28">
 			<top>-5000</top>
 			<label></label>
