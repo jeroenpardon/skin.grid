@@ -11,7 +11,7 @@
 	<onload condition="Skin.HasSetting(startup.playlist)">PlayMedia($INFO[Skin.String(startup.playlist.path)])</onload>
 	<onload condition="System.HasAddon(script.artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<onload condition="String.IsEmpty(Skin.String(autoscroll.speed))">Skin.SetString(autoscroll.speed,none)</onload>
-	<onload condition="String.IsEmpty(Skin.String(background.type))">Skin.SetString(background.type,multi)</onload>
+	<onload condition="String.IsEmpty(Skin.String(background.type))">Skin.SetString(background.type,custom)</onload>
 	<onload condition="String.IsEmpty(Skin.String(epg.scrollspeed))">Skin.SetString(epg.scrollspeed,normal)</onload>
 	<onload condition="String.IsEmpty(Skin.String(global.scrolltype))">Skin.SetString(global.scrolltype,active)</onload>
 	<onload condition="String.IsEmpty(Skin.String(homemenu.type))">Skin.SetString(homemenu.type,vertical)</onload>
