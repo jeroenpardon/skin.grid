@@ -12,11 +12,6 @@
 					<param name="GridTexture">overlays/108.png</param>
 				</include>
 
-				<include content="global_Clock" condition="Skin.HasSetting(home.clock)">
-					<param name="Left">0</param>
-					<param name="Height">108</param>
-				</include>
-
 				<include content="home_Feed" condition="String.IsEqual(Skin.String(homemenu.type),stream)">
 					<param name="Width">1792</param>
 					<param name="Left">128</param>
@@ -298,6 +293,11 @@
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/40.png</texture>
 				</control>
+
+				<include content="global_WindowChrome">
+					<param name="TimeLeft">0</param>
+					<param name="Height">98</param>
+				</include>
 
 				<!-- Scroll indicators -->
 				<control type="label">
