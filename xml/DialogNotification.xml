@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
-	<zorder>20</zorder>
 	<controls>
 		<control type="group">
 			<right>128</right>
@@ -9,19 +8,14 @@
 			<include>fadeinout</include>
 			<include>toggle_Menu</include>
 			<visible>!Window.IsActive(startup)</visible>
-			<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + [String.IsEqual(Skin.String(homemenu.type),stream)]">Conditional</animation>
-			<animation effect="slide" time="100" end="128,0" condition="Window.IsActive(Home) + [String.IsEqual(Skin.String(homemenu.type),vertical)] + !Skin.HasSetting(home.clock)">Conditional</animation>
-			<control type="image">
-				<width>756</width>
-				<height>108</height>
-				<texture colordiffuse="$VAR[color:Accent]">colorize/50.png</texture>
-				<visible>!Window.IsActive(home)</visible>
-			</control>
+			<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),stream)">Conditional</animation>
+			<animation effect="slide" time="100" end="128,0" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical) +  !Skin.HasSetting(home.clock)">Conditional</animation>
+			<animation effect="slide" time="100" end="-618,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical2)">Conditional</animation>
 			<control type="image">
 				<width>756</width>
 				<height>98</height>
-				<texture colordiffuse="$VAR[color:Accent]">colorize/50.png</texture>
-				<visible>Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),vertical)</visible>
+				<texture colordiffuse="$VAR[color:Accent]">colorize/85.png</texture>
+				<!--<visible>!Window.IsActive(home)</visible>-->
 			</control>
 			<control type="group">
 				<animation effect="slide" time="0" end="0,-7" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical)">Conditional</animation>
