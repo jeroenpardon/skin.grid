@@ -36,7 +36,7 @@
 				<centertop>50%</centertop>
 				<width>384</width>
 				<height>128</height>
-				<texture>logos/grid2.png</texture>
+				<texture>logos/grid.png</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>$VAR[color:Accent]</colordiffuse>
 				<include>fadeinout</include>
