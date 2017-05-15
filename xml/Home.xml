@@ -26,7 +26,7 @@
 		<!-- Post startup -->
 		<control type="group">
 			<include>screen_Dimensions</include>
-			<animation type="Conditional" condition="!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))">
+			<animation type="Conditional" condition="!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready)) | !System.HasAddon(script.grab.fanart)">
 				<effect type="fade" start="0" end="100" time="0" delay="0"/>
 				<effect type="slide" start="0,0" end="0,1080" time="500" easing="InOut" tween="cubic" delay="2000"/>
 			</animation>
