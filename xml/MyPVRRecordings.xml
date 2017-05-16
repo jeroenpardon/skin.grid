@@ -27,7 +27,7 @@
 			</control>
 
 			<!-- Content -->		
-			<control type="group">
+
 				<include>transition_Content</include>
 				
 				<include content="view_List">
@@ -47,7 +47,7 @@
 
 				<!-- Pagecontrol -->
 				<include>global_Scrollbar</include>
-			</control>
+	
 		</control>
 
 		<!--menu-->
