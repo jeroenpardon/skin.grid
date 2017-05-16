@@ -10,8 +10,8 @@
 	<onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 
-	<!-- Collapse menu on exit -->
-	<onunload>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onunload>
+	<!-- Collapse menu on return -->
+	<onload>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onload>
 
 	<controls>
 
