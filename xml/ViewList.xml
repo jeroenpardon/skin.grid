@@ -59,7 +59,7 @@
 					<width>$PARAM[Width]</width>
 					<label>$INFO[ListItem.Label2]</label>
 					<height>50%</height>
-					<font>Regular-18</font>
+					<font>Regular-20</font>
 					<aligny>center</aligny>
 					<textcolor>$PARAM[TextColor2]</textcolor>
 					<selectedcolor>$PARAM[TextColor2]</selectedcolor>
