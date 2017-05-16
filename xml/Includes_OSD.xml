@@ -498,7 +498,7 @@
 						<control type="label">
 							<bottom>180</bottom>
 							<label>$VAR[player:Title]</label>
-							<width>$PARAM[TextWidth]</width>
+							<width>1664</width>
 							<height>28</height>
 							<font>Black-64</font>
 							<aligny>center</aligny>
@@ -507,7 +507,7 @@
 						<control type="label">
 							<bottom>146</bottom>
 							<height>0</height>
-							<width>$PARAM[TextWidth]</width>
+							<width>1664</width>
 							<label>$VAR[player:Info]</label>
 							<font>Black-26</font>
 							<aligny>center</aligny>
