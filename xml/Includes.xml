@@ -666,6 +666,9 @@
 	<include name="install_Info">
 		<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 	</include>
+	<include name="install_GrabFanart">
+		<onclick condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onclick>
+	</include>
 
 <!--pvr-->
 	<include name="epgscroll_Instant">

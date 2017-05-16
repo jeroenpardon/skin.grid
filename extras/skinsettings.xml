@@ -21,8 +21,12 @@
 
 	<!-- Global background type -->
 	<setting id="background.type" value="none" label="$LOCALIZE[36502]"/>
-	<setting id="background.type" value="fanart" label="$LOCALIZE[31118]"/>
-	<setting id="background.type" value="videofanart" label="$LOCALIZE[31129]"/>
+	<setting id="background.type" value="fanart" label="$LOCALIZE[31118]">
+		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
+	</setting>
+	<setting id="background.type" value="videofanart" label="$LOCALIZE[31129]">
+		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
+	</setting>
 	<setting id="background.type" value="custom" label="$LOCALIZE[636]" default="true"/>
 
 	<!-- Global scrolling type -->
