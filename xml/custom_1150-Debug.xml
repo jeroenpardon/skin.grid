@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window type="dialog" id="1100">
-	<visible>!Window.IsVisible(startup)</visible>
-	<zorder>20</zorder>
+<window id="1150">
 	<controls>
 		<!--grid-->
 		<control type="group">
