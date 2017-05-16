@@ -9,8 +9,9 @@
 		<!-- Chrome -->
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include>global_Includes</include>
-			<include>global_WindowChrome</include>
+			<include content="global_WindowChrome">
+				<param name="Title">$VAR[window:Title.Info]</param>
+			</include>
 		</control>
 
 		<!-- Content -->

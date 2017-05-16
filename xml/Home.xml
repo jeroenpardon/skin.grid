@@ -1,23 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload condition="Window.Previous(startup)">Skin.SetString(HomeLoaded,True)</onload>
-	<onload condition="String.IsEmpty(Skin.String(homemenu.type))">RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
-	<onload condition="String.IsEqual(Skin.String(homemenu.type),vertical)">RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
-	<onload condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
-	<onload condition="String.IsEqual(Skin.String(homemenu.type),stream)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
+
+	<!-- Skin Shortcuts -->
+	<onload >RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
+	
+	<!-- Skin Helper -->
 	<onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 	<onload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
-	<onunload>Control.Move(9000,-1)</onunload>
-	<onunload>RunScript(script.skinshortcuts,type=hidesubmenu)</onunload>
+
+	<!-- Collapse menu on exit -->
+	<onunload>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onunload>
+
 	<controls>
+
+		<!-- Preload weather -->
+		<control type="label">
+			<font></font>
+			<label>$INFO[Weather.Conditions]</label>
+		</control>
+
+		<!-- Main menu layouts -->
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Menu-vertical</include>
+		
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">home_Menu-vertical2</include>
+		
 		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + Skin.HasSetting(home.clock)">
 			<param name="Top">108</param>
 			<param name="Height">972</param>
 		</include>
+		
 		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + !Skin.HasSetting(home.clock)">
 			<param name="Top">0</param>
 			<param name="Height">screen_Height</param>

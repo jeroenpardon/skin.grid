@@ -102,22 +102,57 @@
 		</control>
 	</include>
 
+	<include name="global_WindowTitle">
+		<param name="Width" default="screen_Width"/>
+		<param name="Height" default="108"/>
+		<param name="Label" default="$VAR[window:Title]"/>
+		<param name="Font" default="Black-48"/>
+		<param name="Visible"/>
+		<definition>
+			<control type="label" id="1">
+				<visible>false</visible>
+			</control>
+			<control type="label">
+				<left>160</left>
+				<width max="$PARAM[TextWidth]">auto</width>
+				<height>$PARAM[Height]</height>
+				<label>$PARAM[Label]</label>
+				<aligny>center</aligny>
+				<font>$PARAM[Font]</font>
+				<textcolor>$VAR[color:Accent]</textcolor>
+				<visible>!Skin.HasSetting(global.showdate)</visible>
+				<visible>$EXP[!Window.HasOverlay]</visible>
+				<visible>$PARAM[Visible]</visible>
+			</control>
+			<control type="label">
+				<left>160</left>
+				<width>1280</width>
+				<label>$PARAM[Label]</label>
+				<font>$PARAM[Font]</font>
+				<textcolor>$VAR[color:Accent]</textcolor>
+				<visible>Skin.HasSetting(global.showdate)</visible>
+				<visible>$PARAM[Visible]</visible>
+			</control>
+		</definition>
+	</include>
+
 	<include name="global_WindowChrome">
-		<param name="ID"/>
 		<param name="Top" default="0"/>
 		<param name="TextWidth" default="1600"/>
 		<param name="Width" default="screen_Width"/>
 		<param name="TextureWidth" default="1664"/>
 		<param name="Height" default="108"/>
-		<param name="Label" default="$VAR[window:Title]"/>
 		<param name="Font" default="Black-48"/>
 		<param name="Symbol" default="$VAR[window:Symbol]"/>
 		<param name="SymbolFont" default="Symbols-32"/>
 		<param name="ItemCount" default="$INFO[Container.NumItems]"/>
 		<param name="TimeLeft" default="1792"/>
+		<param name="Title" default="$INFO[Control.GetLabel(1)]"/>
+		<param name="ShowItemCount" default="True" />
 		<definition>
 			<control type="group">
-				<include>screen_Width</include>
+				<height>108</height>
+				<width>screen_Width</width>
 				<control type="image">
 					<width>128</width>
 					<height>$PARAM[Height]</height>
@@ -132,7 +167,8 @@
 					<font>Thin-48</font>
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
-					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(DialogVolumebar.xml) | Player.Muted] + !Window.IsVisible(DialogSelect.xml) + !Window.IsVisible(musicplaylisteditor) + !Window.IsVisible(smartplaylistrule) + !Window.IsVisible(filebrowser) + !Window.IsVisible(busydialog) + !Window.IsVisible(contextmenu) + !Window.IsVisible(shutdownmenu) + !Window.IsVisible(DialogConfirm.xml) + !Window.IsVisible(script-skinshortcuts.xml)</visible>
+					<visible>$PARAM[ShowItemCount]</visible>
+					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(DialogVolumebar.xml) | Player.Muted] + !Window.IsVisible(busydialog)</visible>
 				</control>
 				<control type="label">
 					<width>128</width>
@@ -141,7 +177,7 @@
 					<font>$PARAM[SymbolFont]</font>
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
-					<visible>!Window.IsVisible(busydialog)</visible>
+					<visible>!Window.IsVisible(busydialog) + !Window.IsVisible(pictureinfo)</visible>
 				</control>
 				<include content="global_Busy">
 					<param name="Left">32</param>
@@ -157,40 +193,66 @@
 					<aspectratio>stretch</aspectratio>
 					<visible>!Window.IsActive(Home)</visible>
 				</control>
-				<control type="group">
+
+				<!-- Window title -->
+				<control type="label" id="1">
+					<visible>false</visible>
+				</control>
+				<control type="grouplist">
 					<left>160</left>
-					<top>$PARAM[Top]</top>
-					<control type="label" id="$PARAM[ID]">
-						<width max="$PARAM[TextWidth]">auto</width>
-						<height>$PARAM[Height]</height>
-						<label>$PARAM[Label]</label>
-						<aligny>center</aligny>
-						<font>$PARAM[Font]</font>
-						<textcolor>$VAR[color:Accent]</textcolor>
-						<visible>!Skin.HasSetting(global.showdate)</visible>
-						<visible>$EXP[!Window.HasOverlay]</visible>
-					</control>
-					<control type="label" id="$PARAM[ID]">
+					<width>1000</width>
+					<height>$PARAM[Height]</height>
+					<orientation>vertical</orientation>
+					<control type="label">
 						<width>1280</width>
 						<height>$PARAM[Height]</height>
-						<label>$PARAM[Label]</label>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
-						<visible>Skin.HasSetting(global.showdate)</visible>
+						<label>$PARAM[Title]</label>
 						<visible>$EXP[!Window.HasOverlay]</visible>
+						<visible>Skin.HasSetting(global.showdate)</visible>
 					</control>
-					<control type="label" id="$PARAM[ID]">
+					<control type="label">
+						<width>1500</width>
+						<height>$PARAM[Height]</height>
+						<aligny>center</aligny>
+						<font>$PARAM[Font]</font>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<label>$PARAM[Title]</label>
+						<visible>$EXP[!Window.HasOverlay]</visible>
+						<visible>!Skin.HasSetting(global.showdate)</visible>
+					</control>
+					<control type="label">
 						<width>832</width>
 						<height>$PARAM[Height]</height>
-						<label>$PARAM[Label]</label>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
+						<label>$PARAM[Title]</label>
 						<visible>$EXP[Window.HasOverlay]</visible>
+						<visible>!Skin.HasSetting(global.showdate)</visible>
 					</control>
 				</control>
 
+				<control type="grouplist">
+					<right>128</right>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<control type="button">
+						<width>auto</width>
+						<height>$PARAM[Height]</height>
+						<label>$INFO[System.Date]</label>
+						<font>Regular-22-L</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<texturenofocus colordiffuse="ff000000">colorize/5.png</texturenofocus>
+						<visible>![Window.IsVisible(volumebar) + !Player.Muted]</visible>
+						<visible>[[Skin.HasSetting(global.date) + !Window.IsActive(home)] | [Skin.HasSetting(home.date) + Window.IsActive(home)]] + [!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia]</visible>
+					</control>
+				</control>
+				
 				<!-- Clock -->
 				<control type="group">
 					<top>0</top>
@@ -270,113 +332,9 @@
 						</control>
 					</control>
 				</control>
-
-				<!-- Date & Time -->
-				<control type="grouplist">
-					<align>right</align>
-					<orientation>horizontal</orientation>
-					<control type="button">
-						<right>128</right>
-						<width min="200" max="400">auto</width>
-						<height>$PARAM[Height]</height>
-						<label>$INFO[System.Date]</label>
-						<font>Regular-22-L</font>
-						<align>right</align>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:Accent]</textcolor>
-						<visible>![Window.IsVisible(volumebar) + !Player.Muted]</visible>
-						<visible>[[Skin.HasSetting(global.date) + !Window.IsActive(home)] | [Skin.HasSetting(home.date) + Window.IsActive(home)]] + [!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia]</visible>
-					</control>
-				</control>
 			</control>
 		</definition>
 	</include>
-
-
-	<include name="1global_Clock">
-		<param name="Left" default="1792"/>
-		<definition>
-			<control type="group">
-				<top>0</top>
-				<left>$PARAM[Left]</left>
-				<width>128</width>
-				<height>$PARAM[Height]</height>
-				<visible>![Window.IsActive(home) + !Skin.HasSetting(home.clock)]</visible>
-				<control type="image">
-					<width>100%</width>
-					<height>$PARAM[Height]</height>
-					<texture colordiffuse="ff000000">colorize/30.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-				<control type="grouplist">
-					<width>100%</width>
-					<height>$PARAM[Height]</height>
-					<itemgap>0</itemgap>
-					<align>center</align>
-					<orientation>horizontal</orientation>
-					<control type="label">
-						<width>55.32</width>
-						<height>$PARAM[Height]</height>
-						<label>$INFO[System.Time(hh)]</label>
-						<font>Black-28</font>
-						<align>right</align>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
-					<control type="list">
-						<width>17.33</width>
-						<height>$PARAM[Height]</height>
-						<scrolltime>0</scrolltime>
-						<autoscroll time="750">true</autoscroll>
-						<visible>true</visible>
-						<orientation>vertical</orientation>
-						<itemlayout width="auto" height="$PARAM[Height]">
-							<control type="label">
-								<width>17.33</width>
-								<height>$PARAM[Height]</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<font>Black-22</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-						</itemlayout>
-						<focusedlayout width="auto" height="$PARAM[Height]">
-							<control type="label">
-								<width>17.33</width>
-								<height>$PARAM[Height]</height>
-								<align>center</align>
-								<aligny>center</aligny>
-								<font>Black-22</font>
-								<textcolor>$VAR[color:Accent]</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-						</focusedlayout>
-						<content>
-							<item>
-								<label>&#32;</label>
-								<onclick>noop</onclick>
-							</item>
-							<item>
-								<label>&#58;</label>
-								<onclick>noop</onclick>
-							</item>
-						</content>
-					</control>
-					<control type="label">
-						<width>55.32</width>
-						<height>$PARAM[Height]</height>
-						<label>$INFO[System.Time(mm)]</label>
-						<font>Black-28</font>
-						<align>left</align>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
-				</control>
-			</control>
-		</definition>
-	</include>
-
 
 	<include name="global_Busy">
 		<param name="Left"/>

@@ -178,7 +178,7 @@
 				<height>$PARAM[Height]</height>
 				<texture colordiffuse="$PARAM[TextureColor]">$PARAM[TextureDiffuse]</texture>
 				<visible>$PARAM[Visible]</visible>
-				<visible>![ControlGroup(6000).HasFocus | ControlGroup(4000).HasFocus | Control.HasFocus(70) | Control.HasFocus(99) | ControlGroup(9050).HasFocus]</visible>
+				<visible>![ControlGroup(6000).HasFocus | ControlGroup(4000).HasFocus | Control.HasFocus(70) | Control.HasFocus(99)]</visible>
 				<animation type="Conditional" condition="$PARAM[FadeCondition]">
 					<effect type="Fade" start="100" end="25" time="150" />
 				</animation>
@@ -366,7 +366,6 @@
 						<texture colordiffuse="ff000000">colorize/15.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
-
 					<control type="group">
 						<visible>Control.HasFocus($PARAM[ID])</visible>
 						<!--item symbol-->
@@ -569,7 +568,7 @@
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ArtHeight]</height>
 						<texture>$PARAM[Art]</texture>
-						<fadetime>fadetime_Thumb</fadetime>
+						<fadetime>fadetime_Fanart</fadetime>
 						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
 					</control>
 					<!--clearlogo-->
@@ -578,7 +577,7 @@
 						<width>100%</width>
 						<height>40%</height>
 						<texture>$PARAM[Logo]</texture>
-						<fadetime>fadetime_Thumb</fadetime>
+						<fadetime>fadetime_Fanart</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<visible>$PARAM[ShowLogo]</visible>
 					</control>
@@ -589,7 +588,7 @@
 						<width>64</width>
 						<height>64</height>
 						<texture>$PARAM[ProviderLogo]</texture>
-						<fadetime>fadetime_Thumb</fadetime>
+						<fadetime>fadetime_Fanart</fadetime>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						<visible>!ListItem.IsParentFolder</visible>
 						<visible>$PARAM[ShowProviderLogo]</visible>
@@ -628,7 +627,7 @@
 					<width>256</width>
 					<height>256</height>
 					<texture>$PARAM[Art2]</texture>
-					<fadetime>fadetime_Thumb</fadetime>
+					<fadetime>fadetime_Fanart</fadetime>
 					<aspectratio align="right" aligny="top">$PARAM[AspectRatio]</aspectratio>
 					<visible>Container.Content(addons) + String.IsEmpty(ListItem.Art(fanart))</visible>
 				</control>
@@ -689,6 +688,8 @@
 
 <!--BIGLIST-->
 	<include name="view_BigList">
+		<param name="ID" default="51"/>
+		<param name="Top" default="108"/>
 		<param name="Width" default="1792"/>
 		<param name="Height" default="972"/>
 		<param name="ArtWidth" default="481"/>
@@ -703,10 +704,10 @@
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="PageControl" default="6500"/>
 		<definition>
-			<control type="panel" id="51">
+			<control type="list" id="$PARAM[ID]">
 				<viewtype label="537">biglist</viewtype>
 				<left>0</left>
-				<top>108</top>
+				<top>$PARAM[Top]</top>
 				<width>1792</width>
 				<height>$PARAM[Height]</height>
 				<onleft>7000</onleft>

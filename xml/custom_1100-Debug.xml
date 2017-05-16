@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window id="1150">
+<window type="dialog" id="1100">
+	<visible>Skin.HasSetting(dev.grid) | Skin.HasSetting(dev.overlay)</visible>
 	<controls>
 		<!--grid-->
 		<control type="group">

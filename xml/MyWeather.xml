@@ -20,9 +20,8 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>toggle_Menu</include>
-			<include>global_Includes</include>
 			<include content="global_WindowChrome">
-				<param name="Label">$LOCALIZE[8]</param>
+				<param name="Title">$VAR[window:Title.Info]</param>
 				<param name="Symbol">$VAR[weather:Symbol]</param>
 				<param name="SymbolFont">Weather-32</param>
 			</include>

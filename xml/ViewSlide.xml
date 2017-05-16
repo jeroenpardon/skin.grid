@@ -62,6 +62,10 @@
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
 					</control>
+					<!-- Status -->
+					<include content="media_Status">
+						<param name="Right">-118</param>
+					</include>
 				</itemlayout>
 				<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
 					<control type="image">
@@ -90,6 +94,10 @@
 						<aspectratio align="center">scale</aspectratio>
 						<texture background="true">$PARAM[Art]</texture>
 					</control>
+					<!-- Status -->
+					<include content="media_Status">
+						<param name="Right">-118</param>
+					</include>
 				</focusedlayout>
 			</control>
 			<control type="image">
@@ -125,7 +133,7 @@
 					<aligny>top</aligny>
 				</control>
 				<control type="textbox">
-					<height>300</height>
+					<height>120</height>
 					<width>1664</width>
 					<label>$VAR[media:Description]</label>
 					<font>Slab-24</font>

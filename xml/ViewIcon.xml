@@ -149,41 +149,8 @@
 							<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
 					</control>
-					<!--unwatched-->
-					<control type="group">
-						<right>10</right>
-						<top>10</top>
-						<width>54</width>
-						<height>54</height>
-						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
-						<control type="image">
-							<width>54</width>
-							<height>54</height>
-							<texture colordiffuse="$VAR[color:Text.2]">colorize/100.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="label">
-							<width>54</width>
-							<height>54</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$PARAM[Symbol]</label>
-							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-							<font>$PARAM[SymbolFont]</font>
-							<visible>Container.Content(episodes)</visible>
-						</control>
-						<control type="label">
-							<width>54</width>
-							<height>54</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Black-20</font>
-							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-						</control>
-					</control>
+					<!-- Status -->
+					<include>media_Status</include>
 				</itemlayout>
 				<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
 					<control type="group">
@@ -284,41 +251,8 @@
 							<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
 					</control>
-					<!--unwatched-->
-					<control type="group">
-						<right>10</right>
-						<top>10</top>
-						<width>54</width>
-						<height>54</height>
-						<visible>[Container.Content(tvshows) | Container.Content(seasons)] + [Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
-						<control type="image">
-							<width>54</width>
-							<height>54</height>
-							<texture colordiffuse="$VAR[color:Text.2]">colorize/100.png</texture>
-							<aspectratio>stretch</aspectratio>
-						</control>
-						<control type="label">
-							<width>54</width>
-							<height>54</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<label>$PARAM[Symbol]</label>
-							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-							<font>$PARAM[SymbolFont]</font>
-							<visible>Container.Content(episodes)</visible>
-						</control>
-						<control type="label">
-							<width>54</width>
-							<height>54</height>
-							<align>center</align>
-							<aligny>center</aligny>
-							<font>Black-20</font>
-							<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
-							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-						</control>
-					</control>		
+					<!-- Status -->
+					<include>media_Status</include>
 				</focusedlayout>
 			</control>
 		</definition>

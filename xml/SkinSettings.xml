@@ -2,10 +2,7 @@
 <window>
 	<defaultcontrol always="true">5500</defaultcontrol>
 	<menucontrol>7000</menucontrol>
-	<onunload condition="String.IsEmpty(Skin.String(homemenu.type))">RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
-	<onunload condition="String.IsEqual(Skin.String(homemenu.type),vertical)">RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
-	<onunload condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
-	<onunload condition="String.IsEqual(Skin.String(homemenu.type),stream)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
+	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
 
 	<controls>
 
@@ -17,8 +14,8 @@
 	<!-- Window chrome -->		
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include>global_Includes</include>
 			<include content="global_WindowChrome">
+				<param name="Title">$VAR[window:Title.System]</param>
 			</include>
 		</control>
 
@@ -377,7 +374,7 @@
 						<include>radio_Settings</include>
 					</control>
 					<!-- Ratings -->
-					<control type="label" id="420">
+					<control type="label" id="415">
 						<label>$LOCALIZE[31253]</label>
 						<include>global_Header</include>
 					</control>
@@ -396,13 +393,20 @@
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
+					<!-- Movie ratings overlay on artwork -->
+					<control type="radiobutton" id="422">
+						<label>$LOCALIZE[31265]</label>
+						<onclick>Skin.ToggleSetting(ratings.overlay)</onclick>
+						<selected>Skin.HasSetting(ratings.overlay)</selected>
+						<include>radio_Settings</include>
+					</control>
 					<!-- Parental Guidance ratings-->
 					<control type="radiobutton" id="425">
 						<label>$LOCALIZE[31242]</label>
 						<onclick>Skin.ToggleSetting(ratings.pg.enable)</onclick>
 						<selected>Skin.HasSetting(ratings.pg.enable)</selected>
 						<include>radio_Settings</include>
-					</control>				
+					</control>
 				</control>
 
 
@@ -826,19 +830,19 @@
 					<control type="button" id="1011">
 						<label>$LOCALIZE[31058]</label>
 						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=backup,promptfilename=true)</onclick>
-						<include>install_HelperService</include>
+						<include>install_HelperBackup</include>
 						<include>button_Settings</include>
 					</control>
 					<control type="button" id="1012">
 						<label>$LOCALIZE[31057]</label>
 						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=restore)</onclick>
-						<include>install_HelperService</include>
+						<include>install_HelperBackup</include>
 						<include>button_Settings</include>
 					</control>
 					<control type="button" id="1013">
 						<label>[COLOR=Warning]$LOCALIZE[31233][/COLOR]</label>
 						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10035],message=$LOCALIZE[31234][CR]$LOCALIZE[750],yesaction=Skin.ResetSettings|SetProperty(skinshortcuts-reloadmainmenu,True,Home)|ActivateWindow(startup)|SetFocus(9001),noaction=Close)</onclick>
-						<include>install_HelperService</include>
+						<include>install_HelperBackup</include>
 						<include>button_Settings</include>
 					</control>
 

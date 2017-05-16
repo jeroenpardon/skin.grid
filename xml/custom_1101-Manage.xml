@@ -9,14 +9,12 @@
 	<!--window chrome-->		
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include>global_Includes</include>
 			<include content="global_WindowChrome">
-				<param name="Label">$VAR[window:Title.Custom]</param>
+				<param name="Title">$VAR[window:Title.Custom]</param>
 			</include>
 		</control>
 
 	<!--content-->
-
 		<control type="group">
 			<left>128</left>
 			<top>108</top>

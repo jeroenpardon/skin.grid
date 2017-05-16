@@ -293,6 +293,73 @@
 		</control>
 	</include>
 
+<!-- Media status -->
+	<include name="media_Status">
+		<param name="Right" default="10"/>
+		<param name="Top" default="10"/>
+		<definition>
+			<control type="group" id="96">
+				<right>$PARAM[Right]</right>
+				<top>$PARAM[Top]</top>
+				<width>54</width>
+				<height>54</height>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + [Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
+				<control type="image">
+					<width>54</width>
+					<height>54</height>
+					<texture colordiffuse="$VAR[color:Text.2]">colorize/100.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<width>54</width>
+					<height>54</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$VAR[symbol:Global]</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<selectedcolor>$VAR[color:Accent]</selectedcolor>
+					<font>Symbols-26</font>
+					<visible>Container.Content(episodes) | Container.Content(movies)</visible>
+				</control>
+				<control type="label">
+					<width>54</width>
+					<height>54</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Black-20</font>
+					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<selectedcolor>$VAR[color:Accent]</selectedcolor>
+				</control>
+			</control>
+			<control type="group" id="97">
+				<right>$PARAM[Right]</right>
+				<top>$PARAM[Top]</top>
+				<width>54</width>
+				<height>54</height>
+				<visible>Skin.HasSetting(ratings.overlay)</visible>
+				<visible>Container.Content(movies) + !Listitem.IsParentFolder</visible>
+				<animation effect="slide" end="-54" time="0" condition="[ListItem.IsResumable + !String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | !String.IsEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
+				<control type="image">
+					<width>54</width>
+					<height>54</height>
+					<texture colordiffuse="$VAR[color:Main]">colorize/90.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<width>54</width>
+					<height>54</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Rating]</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<selectedcolor>$VAR[color:Accent]</selectedcolor>
+					<font>Regular-18</font>
+				</control>
+			</control>
+		</definition>
+	</include>
+
 <!-- Media info grouplist -->
 	<include name="media_Info">
 		<param name="Height" default="108"/>
@@ -359,7 +426,6 @@
 				<visible>String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)</visible>
 				<visible>!String.IsEmpty(ListItem.UserRating) + !String.IsEmpty(Skin.String(ratings.music)) + !String.IsEqual(Skin.String(ratings.music),disabled) + !ListItem.IsParentFolder</visible>
 			</control>
-
 			<!--addon version-->
 			<control type="label">
 				<width min="0">auto</width>
@@ -584,6 +650,9 @@
 <!-- Dependency installers -->
 	<include name="install_HelperService">
 		<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
+	</include>
+	<include name="install_HelperBackup">
+		<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
 	</include>
 	<include name="install_ColorPicker">
 		<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>

@@ -432,7 +432,7 @@
 						<!--bookmarks-->
 						<item>
 							<label>$LOCALIZE[298]</label>
-							<label2>&#57499;</label2>
+							<label2>&#59207;</label2>
 							<onclick>Dialog.Close(VideoOSD,true)</onclick>
 							<onclick>Skin.Reset(OSD)</onclick>
 							<onclick>ActivateWindow(videobookmarks)</onclick>

@@ -14,7 +14,7 @@
 				<top>108</top>
 				<width>1792</width>
 				<height>720</height>
-				<timeblocks>30</timeblocks>
+				<timeblocks>50</timeblocks>
 				<progresstexture border="0,33,18,0" colordiffuse="$VAR[color:Text.2]">pvr/progress.png</progresstexture>
 				<rulerunit>6</rulerunit>
 				<onleft>7000</onleft>

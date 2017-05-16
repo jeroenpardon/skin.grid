@@ -11,8 +11,7 @@
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
 			<include content="global_WindowChrome">
-				<param name="ID">1</param>
-				<param name="Label">$LOCALIZE[13406]</param>
+				<param name="Title">$VAR[window:Title.Dialog]</param>
 			</include>
 		</control>
 	<!--content-->

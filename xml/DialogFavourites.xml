@@ -3,28 +3,26 @@
 	<defaultcontrol always="true">450</defaultcontrol>
 	<controls>
 
-	<!--menu trigger-->
+	<!-- Menu trigger -->
 		<control type="button" id="5500">
 			<onfocus>Control.SetFocus(450)</onfocus>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 
-	<!--background-->
+	<!-- Background -->
 		<include>global_Background</include>
 
-	<!--chrome-->
+	<!-- Chrome -->
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include>global_Includes</include>
 			<include content="global_WindowChrome">
-			<param name="Label" value="$LOCALIZE[1036]"/>
-				<param name="ID" value="1"/>
+				<param name="Title">$VAR[window:Title.Dialog]</param>
 			</include>
 		</control>
 
-	<!--content-->
+	<!-- Content -->
 		<control type="group">
-			<include>transition_Content</include<name />
+			<include>transition_Content</include>
 			<include content="dialog_List">
 				<param name="ID">450</param>
 				<param name="Top">108</param>

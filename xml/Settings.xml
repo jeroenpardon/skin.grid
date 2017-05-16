@@ -22,8 +22,8 @@
 		
 			<control type="group">
 				<include>transition_Chrome</include>
-				<include>global_Includes</include>
 				<include content="global_WindowChrome">
+					<param name="Title">$VAR[window:Title.System]</param>
 				</include>
 			</control>
 
@@ -115,7 +115,7 @@
 						</item>
 						<!--tv-->
 						<item id="8">
-							<label>$LOCALIZE[19020]</label>
+							<label>$LOCALIZE[14204]</label>
 							<label2>$LOCALIZE[19019] &#8226; $LOCALIZE[19181] &#8226; $LOCALIZE[19222] &#8226; $LOCALIZE[14086] &#8226; $LOCALIZE[19043] &#8226; $LOCALIZE[14095] &#8226; $LOCALIZE[19259]</label2>
 							<property name="Icon">&#58944;</property>
 							<onclick>ActivateWindow(PVRSettings)</onclick>

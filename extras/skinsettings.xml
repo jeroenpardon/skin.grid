@@ -2,13 +2,13 @@
 
 	<!-- Home menu layout -->
 	<setting id="homemenu.type" value="vertical" label="$LOCALIZE[31023]" default="true">
-		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onselect>
+		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
 	<setting id="homemenu.type" value="vertical2" label="$LOCALIZE[31024]">
-		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onselect>
+		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
 	<setting id="homemenu.type" value="stream" label="$LOCALIZE[31025]">
-		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onselect>
+		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
 
 	<!-- Home statusbar -->

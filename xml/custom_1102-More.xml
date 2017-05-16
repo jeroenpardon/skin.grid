@@ -11,7 +11,7 @@
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
 			<include content="global_WindowChrome">
-				<param name="Label">$VAR[window:Title.Custom]</param>
+				<param name="Title">$VAR[window:Title.Custom]</param>
 			</include>
 		</control>
 
@@ -164,13 +164,13 @@
 						<include>button_Settings</include>
 					</control>
 					<control type="label">
-						<label>&#57470;</label>
+						<label>&#59086;</label>
 						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(541)</visible>
 					</control>
 					<control type="label">
-						<label>&#57470;</label>
+						<label>&#59086;</label>
 						<textcolor>$VAR[color:Text.3]</textcolor>
 						<include>global_Symbol</include>
 						<visible>!Control.HasFocus(541)</visible>

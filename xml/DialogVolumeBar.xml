@@ -43,17 +43,6 @@
 				<midtexture colordiffuse="$VAR[color:Accent]">colorize/25.png</midtexture>
 				<righttexture></righttexture>
 			</control>
-			<!--
-			<control type="label">
-				<width>128</width>
-				<height>101</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>Symbols-32</font>
-				<label>$VAR[window:Volume]</label>
-			</control>
-			-->
-
 		</control>
 		<control type="group">
 			<left>138</left>
@@ -70,14 +59,6 @@
 				<midtexture colordiffuse="$VAR[color:Accent]">colorize/25.png</midtexture>
 				<righttexture></righttexture>
 			</control>
-			<!--
-			<include content="global_WindowChrome">
-				<param name="Left">138</param>
-				<param name="Width">1772</param>
-				<param name="TextureWidth">1644</param>
-				<param name="Height">98</param>
-			</include>
-			-->
 		</control>
 		<include condition="Window.IsVisible(fullscreenvideo)">global_Clock</include>
 	</controls>

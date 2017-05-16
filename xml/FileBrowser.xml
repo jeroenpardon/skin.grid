@@ -13,8 +13,8 @@
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
 			<include content="global_WindowChrome">
-				<param name="Label" value="" />
-				<param name="ID" value="411" />
+				<param name="Title">$VAR[window:Title.Dialog]</param>
+				<param name="ShowItemCount">false</param>
 			</include>
 		</control>
 

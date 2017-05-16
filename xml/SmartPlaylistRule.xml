@@ -11,9 +11,8 @@
 			<include>transition_Chrome</include>
 			<include>global_Includes</include>
 			<include content="global_WindowChrome">
-				<param name="Label">$LOCALIZE[21421]</param>
-				<param name="ID">2</param>
-				<param name="ShowNumItems">false</param>
+				<param name="Title">$VAR[window:Title.Dialog]</param>
+				<param name="ShowItemCount">false</param>
 			</include>
 		</control>
 

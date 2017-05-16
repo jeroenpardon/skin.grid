@@ -7,7 +7,9 @@
 		<!-- Window chrome -->		
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include>global_WindowChrome</include>
+			<include content="global_WindowChrome">
+				<param name="Title">$VAR[window:Title.Dialog]</param>
+			</include>
 		</control>
 		<control type="group">
 			<top>198</top>

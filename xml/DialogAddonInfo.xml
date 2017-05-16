@@ -9,9 +9,8 @@
 	<!-- Chrome -->
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include>global_Includes</include>
 			<include content="global_WindowChrome">
-				<param name="Label">$LOCALIZE[24003]</param>
+				<param name="Title">$VAR[window:Title.Info]</param>
 			</include>
 		</control>
 

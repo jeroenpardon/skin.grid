@@ -16,7 +16,10 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include>toggle_Menu</include>
-			<include>global_WindowChrome</include>
+			<include content="global_WindowChrome">
+				<param name="Title">$VAR[window:Title.Dialog]</param>
+				<param name="ShowItemCount">false</param>
+			</include>
 		</control>
 
 	<!--content-->

@@ -17,9 +17,11 @@
 
 	<!--global includes-->
 		<control type="group">
-			<include>transition_Chrome</include>
 			<include>toggle_Menu</include>
-			<include>global_WindowChrome</include>
+			<include>transition_Chrome</include>
+			<include content="global_WindowChrome">
+				<param name="Title">$VAR[window:Title.Media]</param>
+			</include>
 		</control>
 
 	<!--content-->
@@ -40,11 +42,9 @@
 				<include content="info_List">
 					<param name="AspectRatio">keep</param>
 					<param name="AspectRatioAlign">top</param>
-					<param name="Visible">$EXP[ArtLandscape]</param>
+					<param name="Visible">$EXP[Art.IsLandscape]</param>
 				</include>
 			</control>
-
-			<include>info_List</include>
 
 			<include content="view_Thumbnails">
 				<param name="ID" value="55"/>

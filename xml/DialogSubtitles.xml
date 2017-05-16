@@ -8,9 +8,9 @@
 	<!--window chrome-->		
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include>global_Includes</include>
-			<include>global_WindowChrome</include>
-			<include>global_Clock</include>
+			<include content="global_WindowChrome">
+				<param name="Title">$VAR[window:Title.Player]</param>
+			</include>
 
 		<!--content-->
 			<control type="group">
