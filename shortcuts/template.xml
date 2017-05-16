@@ -66,8 +66,7 @@
 					<param name="FrameHeight" value="$SKINSHORTCUTS[frameheight]"/>
 					<param name="Art" value="$SKINSHORTCUTS[artwork]"/>
 					<param name="Info" value="$SKINSHORTCUTS[info]"/>
-					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
-					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128]"/>
+					<param name="TextWidth" value="$PYTHON[int(itemwidth) - 64]"/>
 					<param name="BigInfo" value="$SKINSHORTCUTS[biginfo]"/>
 					<param name="Overlay" value="$SKINSHORTCUTS[overlay]"/>
 				</include>
@@ -111,8 +110,7 @@
 					<param name="FrameHeight" value="$SKINSHORTCUTS[frameheight]"/>
 					<param name="Art" value="$SKINSHORTCUTS[artwork]"/>
 					<param name="Info" value="$SKINSHORTCUTS[info]"/>
-					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
-					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128]"/>
+					<param name="TextWidth" value="$PYTHON[int(itemwidth) - 120]"/>
 					<param name="BigInfo" value="$SKINSHORTCUTS[biginfo]"/>
 					<param name="Overlay" value="$SKINSHORTCUTS[overlay]"/>
 				</include>
@@ -156,8 +154,7 @@
 					<param name="FrameHeight" value="$SKINSHORTCUTS[frameheight]"/>
 					<param name="Art" value="$SKINSHORTCUTS[artwork]"/>
 					<param name="Info" value="$SKINSHORTCUTS[info]"/>
-					<param name="InfoWidth" value="$PYTHON[int(itemwidth) - 120]"/>
-					<param name="PlotWidth" value="$PYTHON[int(itemwidth) - 128]"/>
+					<param name="TextWidth" value="$PYTHON[int(itemwidth) - 120]"/>
 					<param name="BigInfo" value="$SKINSHORTCUTS[biginfo]"/>
 					<param name="Overlay" value="$SKINSHORTCUTS[overlay]"/>
 				</include>
