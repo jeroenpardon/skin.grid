@@ -221,7 +221,9 @@
 	<widget label="1039" name="1039" type="addons" path="addons://sources/image/" target="video">PictureAddons</widget>
 	<widget label="1043" name="1043" type="addons" path="addons://sources/executable/" target="video">ProgramAddons</widget>
 	
-	<widget label="YouTube" name="YouTube" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/popular_right_now/" target="video">YouTube</widget>
+	<widget label="$ADDON[plugin.video.youtube 30513]" name="$ADDON[plugin.video.youtube 30513]" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/popular_right_now/" target="video">YouTubePopular</widget>
+	<widget label="$ADDON[plugin.video.youtube 30539]" name="$ADDON[plugin.video.youtube 30539]" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/live/" target="video">YouTubeLive</widget>
+	
 	<widget label="$ADDON[script.extendedinfo 32042]" name="$ADDON[script.extendedinfo 32042]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=incinemas" target="video">ExtendedInfoCinemas</widget>
 	<widget label="$ADDON[script.extendedinfo 32043]" name="$ADDON[script.extendedinfo 32043]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=upcoming" target="video">ExtendedInfoUpcoming</widget>
 	<widget label="$ADDON[script.extendedinfo 32044]" name="$ADDON[script.extendedinfo 32044]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=upcoming" target="video">ExtendedInfoPopular</widget>
