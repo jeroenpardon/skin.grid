@@ -6,21 +6,19 @@
 	<onload>ClearProperty(MenuOpen,Home)</onload>
 	<controls>
 
-	<!--menu trigger-->
+		<!-- Menu trigger -->
 		<control type="button" id="5500">
 			<onfocus>Control.SetFocus(50)</onfocus>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 
-	<!--background-->
+		<!-- Chrome -->
 		<include content="global_Background">
 			<param name="GridTexture">overlays/108.png</param>
 		</include>
 
 		<control type="group">
 			<include>toggle_Menu</include>
-
-		<!--chrome-->
 			<control type="group">
 				<include>transition_Chrome</include>
 				<include content="global_WindowChrome">
@@ -28,33 +26,31 @@
 				</include>
 			</control>
 
-		<!--views-->
-		
-			<include>transition_Content</include>
-			
-			<include content="view_List">
-				<param name="Label">$INFO[ListItem.Label]</param>
-				<param name="Label2">$INFO[ListItem.Date]$INFO[ListItem.ChannelName, - ]</param>
-			</include>
-
+			<!-- Content -->		
 			<control type="group">
-				<visible>Control.IsVisible(50)</visible>
-				<include content="info_List">
-					<param name="Visible">true</param>
-					<param name="ProviderLogo">$INFO[ListItem.Icon]</param>
-					<param name="ShowProviderLogo">true</param>
+				<include>transition_Content</include>
+				
+				<include content="view_List">
+					<param name="Label">$INFO[ListItem.Label]</param>
+					<param name="Label2">$INFO[ListItem.Date]$INFO[ListItem.ChannelName, - ]</param>
+					<param name="ShowIcon">false</param>
 				</include>
+
+				<control type="group">
+					<visible>Control.IsVisible(50)</visible>
+					<include content="info_List">
+						<param name="Visible">true</param>
+						<param name="ProviderLogo">$INFO[ListItem.Icon]</param>
+						<param name="ShowProviderLogo">true</param>
+					</include>
+				</control>
+
+				<!-- Pagecontrol -->
+				<include>global_Scrollbar</include>
 			</control>
-
-			<!--scrollbars-->
-			<include>global_Scrollbar</include>
-
 		</control>
 
 		<!--menu-->
 		<include>menu_Options</include>
-
 	</controls>
 </window>
-
-
