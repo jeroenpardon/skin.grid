@@ -997,16 +997,7 @@
 		<value condition="ListItem.IsFolder">&#57401;</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/tv/)">&#57352;</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/radio/)">&#57443;</value>
-		<value>&#57443;</value>
 	</variable>
-
-	<!--
-	<variable name="symbol:PVR">
-		<value condition="[ListItem.HasTimer | ListItem.HasTimerSchedule] + !ListItem.IsRecording">&#57473;</value>
-		<value condition="ListItem.IsRecording">&#58904;</value>
-		<value condition="ListItem.HasEpg">&#57483;</value>
-	</variable>
-	-->
 
 	<variable name="pvr:Title">
 		<value condition="!String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
