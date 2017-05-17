@@ -37,6 +37,7 @@
 			<param name="Left">1124</param>
 			<param name="Height">108</param>
 			<param name="Width">668</param>
+			<param name="TextWidth">512</param>
 		</include>
 
 		<include content="global_Notification" condition="!Window.IsActive(home) + !String.IsEqual(Skin.String(view.list.art.Label),posters)">

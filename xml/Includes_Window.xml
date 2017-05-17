@@ -369,6 +369,7 @@
 		<param name="InfoTop" default="16"/>
 		<param name="Height" default="108"/>
 		<param name="Width" default="756"/>
+		<param name="TextWidth" default="600"/>
 		<param name="Label"/>
 		<param name="Label2"/>
 		<param name="Symbol"/>
@@ -404,7 +405,7 @@
 							<top>$PARAM[InfoTop]</top>
 							<left>108</left>
 							<control type="label">
-								<width>624</width>
+								<width>$PARAM[TextWidth]</width>
 								<height>54</height>
 								<label>$PARAM[Label]</label>
 								<font>Black-22</font>
@@ -412,7 +413,7 @@
 							</control>
 							<control type="label">
 								<top>38</top>
-								<width>624</width>
+								<width>$PARAM[TextWidth]</width>
 								<height>54</height>
 								<label>$PARAM[Label2]</label>
 								<aligny>top</aligny>
@@ -438,18 +439,18 @@
 						<top>$PARAM[InfoTop]</top>
 						<left>108</left>
 						<control type="label" id="401">
-							<width>624</width>
+							<width>$PARAM[TextWidth]</width>
 							<height>54</height>
 							<font>Black-22</font>
 							<textcolor>$VAR[color:Main]</textcolor>
 						</control>
 						<control type="label" id="402">
 							<top>38</top>
-							<width>624</width>
+							<width>$PARAM[TextWidth]</width>
 							<height>54</height>
 							<aligny>top</aligny>
 							<font>Regular-20</font>
-							<textcolor>$VAR[color:Main]</textcolor>
+							<textcolor>$VAR[color:Main]</textcolor><scroll>true</scroll>
 						</control>
 					</control>
 				</control>
