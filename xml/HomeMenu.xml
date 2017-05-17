@@ -29,8 +29,6 @@
 					<pagecontrol>80</pagecontrol>
 					<include>global_ListScroll</include>
 					<orientation>vertical</orientation>
-
-					<visible>!Control.IsVisible(5000)</visible>
 					<itemlayout width="128" height="108">
 						<control type="label">
 							<width>128</width>

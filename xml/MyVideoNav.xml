@@ -168,7 +168,6 @@
 					<param name="ShowInfo">false</param>
 				</include>
 			</control>
-
 		</control>
 
 		<!--scrollbars-->

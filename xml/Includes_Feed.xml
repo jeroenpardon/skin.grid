@@ -29,6 +29,38 @@
 					<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">skinshortcuts-template-widget_Mixed</include>
 					<include condition="String.IsEqual(Skin.String(homemenu.type),stream)">skinshortcuts-template-widget_Stream</include>
 				</control>
+
+
+
+				<control type="label">
+					<right>10</right>
+					<top>10</top>
+					<width>128</width>
+					<height>98</height>
+					<label>&#58919;</label>
+					<font>Symbols-32</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<include>fadeinout</include>
+					<visible>Container(9100).HasPrevious + IntegerGreaterThan(Container(9100).NumItems,1)</visible>
+				</control>
+
+
+				<control type="label">
+					<right>10</right>
+					<bottom>10</bottom>
+					<width>128</width>
+					<height>98</height>
+					<label>&#58922;</label>
+					<font>Symbols-32</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<include>fadeinout</include>
+					<visible>Container(9100).HasNext + IntegerGreaterThan(Container(9100).NumItems,1)</visible>
+				</control>
+
 			</control>
 		</definition>
 	</include>
