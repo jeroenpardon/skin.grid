@@ -3,23 +3,25 @@
 	<visible>Player.HasMedia + !Window.IsVisible(home) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(visualisation) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
 	<controls>
 
-		<include content="global_Notification" condition="String.IsEqual(Skin.String(view.list.art.Label),posters)">
-			<param name="Left">1124</param>
-			<param name="Height">108</param>
-			<param name="Width">668</param>
-			<param name="Symbol">$VAR[toast:Symbol]</param>
-			<param name="Label">$VAR[toast:PlayingTitle]</param>
-			<param name="Label2">$VAR[toast:PlayingInfo]</param>
-		</include>
-
-		<include content="global_Notification" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
-			<param name="Left">1036</param>
-			<param name="Height">108</param>
-			<param name="Width">756</param>
-			<param name="Symbol">$VAR[toast:Symbol]</param>
-			<param name="Label">$VAR[toast:PlayingTitle]</param>
-			<param name="Label2">$VAR[toast:PlayingInfo]</param>
-		</include>
+		<control type="group">
+			<visible>!Window.IsVisible(fullscreenvideo)</visible>
+			<include content="global_Notification" condition="String.IsEqual(Skin.String(view.list.art.Label),posters)">
+				<param name="Left">1124</param>
+				<param name="Height">108</param>
+				<param name="Width">668</param>
+				<param name="Symbol">$VAR[toast:Symbol]</param>
+				<param name="Label">$VAR[toast:PlayingTitle]</param>
+				<param name="Label2">$VAR[toast:PlayingInfo]</param>
+			</include>
+			<include content="global_Notification" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
+				<param name="Left">1036</param>
+				<param name="Height">108</param>
+				<param name="Width">756</param>
+				<param name="Symbol">$VAR[toast:Symbol]</param>
+				<param name="Label">$VAR[toast:PlayingTitle]</param>
+				<param name="Label2">$VAR[toast:PlayingInfo]</param>
+			</include>
+		</control>
 
 		<!-- Fullscreen info -->
 		<control type="group">

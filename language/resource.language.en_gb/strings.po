@@ -510,7 +510,7 @@ msgid "Show date"
 msgstr ""
 
 msgctxt "#31225"
-msgid "Speed of automatically scrolling descriptions"
+msgid "Descriptions scrolling speed"
 msgstr ""
 
 msgctxt "#31226"

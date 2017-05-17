@@ -43,7 +43,7 @@
 
 			<!--list-->
 			<control type="group">
-				<visible>Control.IsVisible(50)</visible>
+
 				<include>transition_ViewChange</include>
 				<include>view_List</include>
 			</control>
