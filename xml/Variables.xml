@@ -23,8 +23,8 @@
 	</variable>
 
 	<variable name="home:Symbol">
-		<value condition="String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))">$INFO[ListItem.Property(homeSymbol)]</value>
-		<value>&#58921;</value>
+		<value condition="String.IsEmpty(Container(9000).ListItemAbsolute.Property(isSubmenu))">$INFO[ListItem.Property(homeSymbol)]</value>
+		<value condition="!String.IsEmpty(Container(9000).ListItemAbsolute.Property(isSubmenu))">&#57425;</value>
 	</variable>
 
 	<variable name="home:Status">
