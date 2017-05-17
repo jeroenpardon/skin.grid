@@ -738,6 +738,10 @@ msgctxt "#31406"
 msgid "Hidden channels"
 msgstr ""
 
+#. example usage: Used as name of PVR last played widget
+msgctxt "#31407"
+msgid "Recent TV Channels"
+msgstr ""
 
 msgctxt "#31408"
 msgid "Channel type"
@@ -933,6 +937,13 @@ msgctxt "#31601"
 msgid "Currently"
 msgstr ""
 
+msgctxt "#31602"
+msgid "YouTube: Popular"
+msgstr ""
+
+msgctxt "#31603"
+msgid "YouTube: Live"
+msgstr ""
 
 
 #: colours
