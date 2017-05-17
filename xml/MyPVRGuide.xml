@@ -34,6 +34,15 @@
 		<include>transition_Content</include>
 		<include>view_GuideTimeline</include>
 
+
+		<control type="image">
+			<top>190</top>
+			<left>374</left>
+			<width>1547</width>
+			<height>646</height>
+			<texture colordiffuse="ff000000">colorize/20.png</texture>
+		</control>
+
 		</control>
 
 		<!--menu-->

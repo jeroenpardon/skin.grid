@@ -2,33 +2,29 @@
 <includes>
 	<include name="view_GuideTimeline">
 		<definition>
-			<control type="image">
-				<top>190</top>
-				<left>374</left>
-				<width>1547</width>
-				<height>646</height>
-				<texture colordiffuse="ff000000">colorize/20.png</texture>
-			</control>
 			<control type="epggrid" id="10">
 				<left>128</left>
 				<top>108</top>
 				<width>1792</width>
 				<height>720</height>
 				<timeblocks>50</timeblocks>
-				<progresstexture border="0,33,18,0" colordiffuse="$VAR[color:Text.2]">pvr/progress.png</progresstexture>
+
+
+
+				<progresstexture border="0,94,11,11" colordiffuse="$VAR[color:Text.2]">pvr/progress.png</progresstexture>
 				<rulerunit>6</rulerunit>
 				<onleft>7000</onleft>
 				<onright></onright>
 				<pagecontrol>10</pagecontrol>
-				<rulerlayout height="90" width="256">
-					<control type="label" id="2">
-						<left>24</left>
+				
+				<rulerlayout width="256" height="90">
+					<control type="label">
 						<width>256</width>
 						<height>90</height>
 						<font>Regular-20</font>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$INFO[ListItem.Label]</label>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>String.Contains(ListItem.Label,:)</visible>
 					</control>
 				</rulerlayout>
 				<channellayout width="256" height="90">
@@ -74,9 +70,10 @@
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</focusedchannellayout>
-				<itemlayout width="216" height="90">
+
+				<itemlayout width="52" height="90">
 					<control type="image" id="1">
-						<width>216</width>
+						<width>52</width>
 						<height>90</height>
 						<aspectratio>stretch</aspectratio>
 						<texture fallback="pvr/genres/0.png" border="5">$INFO[ListItem.Property(GenreType),pvr/genres/,.png]</texture>
@@ -85,7 +82,7 @@
 					</control>
 					<control type="label" id="2">
 						<top>10</top>
-						<width>216</width>
+						<width>30</width>
 						<height>45</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Black-22</font>
@@ -94,7 +91,7 @@
 					</control>
 					<control type="label" id="3">
 						<bottom>10</bottom>
-						<width>216</width>
+						<width>30</width>
 						<height>45</height>
 						<label>$INFO[ListItem.Genre]</label>
 						<font>Regular-18</font>
@@ -102,9 +99,9 @@
 						<textoffsetx>24</textoffsetx>
 					</control>
 				</itemlayout>
-				<focusedlayout width="216" height="90">
+				<focusedlayout width="52" height="90">
 					<control type="image" id="1">
-						<width>216</width>
+						<width>52</width>
 						<height>90</height>
 						<aspectratio>stretch</aspectratio>
 						<texture fallback="pvr/genres/0.png" border="5">$INFO[ListItem.Property(GenreType),pvr/genres/,.png]</texture>
@@ -113,7 +110,7 @@
 					</control>
 					<control type="label" id="2">
 						<top>10</top>
-						<width>216</width>
+						<width>30</width>
 						<height>45</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Black-22</font>
@@ -122,7 +119,7 @@
 					</control>
 					<control type="label" id="3">
 						<bottom>10</bottom>
-						<width>216</width>
+						<width>30</width>
 						<height>45</height>
 						<label>$INFO[ListItem.Genre]</label>
 						<font>Regular-18</font>

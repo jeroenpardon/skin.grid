@@ -1437,7 +1437,7 @@
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/tv/)">$LOCALIZE[19023]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/radio/)">$LOCALIZE[19024]</value>
-		<value condition="Window.IsActive(MyPVRGuide.xml)">$LOCALIZE[19069]</value>
+		<value condition="Window.IsActive(MyPVRGuide.xml)">$LOCALIZE[19069]$INFO[Container(10).ListItem(0).StartDate, - ]</value>
 		<value condition="Window.IsActive(MyPVRRecordings.xml)">$LOCALIZE[19163]</value>
 		<value condition="Window.IsActive(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
 		<value condition="Window.IsActive(MyPVRSearch.xml)">$LOCALIZE[137]</value>
