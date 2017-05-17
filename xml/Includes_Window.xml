@@ -400,6 +400,7 @@
 							<lefttexture></lefttexture>
 							<midtexture colordiffuse="$VAR[color:Accent]">colorize/100.png</midtexture>
 							<righttexture></righttexture>
+							<visible>Window.IsActive(extendedprogressdialog)</visible>
 						</control>
 						<control type="group">
 							<top>$PARAM[InfoTop]</top>
