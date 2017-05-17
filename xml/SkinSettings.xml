@@ -252,8 +252,6 @@
 						<label>$LOCALIZE[31132]</label>
 						<label2>$INFO[Skin.String(background.path.Label)]</label2>
 						<!-- Use a property to force the select dialog to use the layout we want -->
-						<onfocus>SetProperty(SelectDialog,rich,home)</onfocus>
-						<onunfocus>SetProperty(SelectDialog,regular,home)</onunfocus>
 						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=background.path,header=$LOCALIZE[31132],allowmulti=true,resourceaddon=resource.images.skinbackgrounds)</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
