@@ -187,16 +187,6 @@
 						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 						<include>button_Settings</include>
 					</control>
-
-					<!-- Reset menu configuration -->
-					<control type="radiobutton" id="209">
-						<label>combine</label>
-						<onclick>Skin.ToggleSetting(homemenu.combine)</onclick>
-						<selected>Skin.HasSetting(homemenu.combine)</selected>
-						<include>radio_Settings</include>
-					</control>
-
-
 					<!--options menu-->
 					<control type="label" id="216">
 						<label>$LOCALIZE[31239]</label>
