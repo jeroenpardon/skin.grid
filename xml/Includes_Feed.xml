@@ -7,16 +7,22 @@
 				<top>$PARAM[Top]</top>
 				<left>$PARAM[Left]</left>
 				<width>1920</width>
+
+				<!-- Slide in feed for vertical menu -->
 				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.type),vertical)">
 					<effect type="slide" time="500" start="0"  end="-1920" tween="cubic" easing="InOut" center="auto" />
 					<effect type="Fade" time="500" start="0" end="100" tween="cubic" easing="InOut"/>
 				</animation>
+
+				<!-- Solid background -->
 				<control type="image">
 					<width>100%</width>
 					<height>screen_Height</height>
 					<texture colordiffuse="ff000000">colorize/white.png</texture>
 					<visible>![Player.HasMedia + Skin.HasSetting(background.video)]</visible>
 				</control>
+
+				<!-- Feed container-->
 				<control type="grouplist" id="9100">
 					<itemgap>0</itemgap>
 					<orientation>vertical</orientation>
@@ -30,8 +36,7 @@
 					<include condition="String.IsEqual(Skin.String(homemenu.type),stream)">skinshortcuts-template-widget_Stream</include>
 				</control>
 
-
-
+				<!-- Widget scroll inficators -->
 				<control type="label">
 					<right>10</right>
 					<top>10</top>
@@ -45,8 +50,6 @@
 					<include>fadeinout</include>
 					<visible>Container(9100).HasPrevious + IntegerGreaterThan(Container(9100).NumItems,1)</visible>
 				</control>
-
-
 				<control type="label">
 					<right>10</right>
 					<bottom>10</bottom>
@@ -60,24 +63,11 @@
 					<include>fadeinout</include>
 					<visible>Container(9100).HasNext + IntegerGreaterThan(Container(9100).NumItems,1)</visible>
 				</control>
-
 			</control>
 		</definition>
 	</include>
 
-	<variable name="widget:Label">
-		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>	
-		<value>$INFO[ListItem.Label]</value>
-	</variable>
-	<variable name="widget:Label2">
-		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
-		<value>$INFO[ListItem.Label]</value>
-	</variable>
-	<variable name="widget:Descriptiom">
-		<value>$INFO[ListItem.Plot]</value>
-	</variable>
-
+	<!-- Widget base layout -->
 	<include name="widget_Layout">
 		<definition>
 			<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">

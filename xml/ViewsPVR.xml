@@ -8,15 +8,11 @@
 				<width>1792</width>
 				<height>720</height>
 				<timeblocks>50</timeblocks>
-
-
-
 				<progresstexture border="0,94,11,11" colordiffuse="$VAR[color:Text.2]">pvr/progress.png</progresstexture>
 				<rulerunit>6</rulerunit>
 				<onleft>7000</onleft>
 				<onright></onright>
 				<pagecontrol>10</pagecontrol>
-				
 				<rulerlayout width="256" height="90">
 					<control type="label">
 						<width>256</width>
@@ -70,7 +66,6 @@
 						<label>$INFO[ListItem.ChannelName]</label>
 					</control>
 				</focusedchannellayout>
-
 				<itemlayout width="52" height="90">
 					<control type="image" id="1">
 						<width>52</width>
@@ -84,7 +79,7 @@
 						<top>10</top>
 						<width>30</width>
 						<height>45</height>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[pvr:GuideLabel]</label>
 						<font>Black-22</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<textoffsetx>24</textoffsetx>
@@ -112,7 +107,7 @@
 						<top>10</top>
 						<width>30</width>
 						<height>45</height>
-						<label>$INFO[ListItem.Label]</label>
+						<label>$VAR[pvr:GuideLabel]</label>
 						<font>Black-22</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<textoffsetx>24</textoffsetx>

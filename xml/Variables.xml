@@ -33,30 +33,45 @@
 		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.HasTVTimer | Pvr.HasRadioTimer">$INFO[Pvr.NextRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.NextRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),library)">$VAR[stats:MovieCount]$VAR[stats:ShowCount]$VAR[stats:EpisodeCount]$VAR[stats:MusicVideoCount]$VAR[stats:SongCount]$VAR[stats:AlbumCount]$VAR[stats:ArtistCount]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),system)">$INFO[System.ProfileName]$INFO[System.FriendlyName, | ]$INFO[Network.IPAddress, | ]$INFO[System.InternetState, | ]$INFO[System.Uptime(dd:mm), | ]</value>
-		<value condition="String.IsEqual(Skin.String(home.status),feed)">$VAR[home:Status.FeedItem.1]$VAR[home:Status.FeedItem.2,  |  ]$VAR[home:Status.FeedItem.3,  |  ]$VAR[home:Status.FeedItem.4,  |  ]$VAR[home:Status.FeedItem.5,  |  ]</value>
+		<value condition="String.IsEqual(Skin.String(home.status),feed)">$VAR[home:Status.FeedItem.1,,  |  ]$VAR[home:Status.FeedItem.2,,  |  ]</value>
 	</variable>
 
 	<variable name="home:Status.FeedItem.1">
+		<value condition="!String.IsEmpty(Container(10001).ListItem().Label)">$INFO[Container(10001).ListItem().TVShowTitle,,: ]$INFO[Container(10001).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10002).ListItem().Label)">$INFO[Container(10002).ListItem().TVShowTitle,,: ]$INFO[Container(10002).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10003).ListItem().Label)">$INFO[Container(10003).ListItem().TVShowTitle,,: ]$INFO[Container(10003).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10004).ListItem().Label)">$INFO[Container(10004).ListItem().TVShowTitle,,: ]$INFO[Container(10004).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10005).ListItem().Label)">$INFO[Container(10005).ListItem().TVShowTitle,,: ]$INFO[Container(10005).ListItem().Title]</value>
+	</variable>
+
+	<variable name="home:Status.FeedItem.2">
+		<value condition="!String.IsEmpty(Container(10002).ListItem().Label)">$INFO[Container(10002).ListItem().TVShowTitle,,: ]$INFO[Container(10002).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10003).ListItem().Label)">$INFO[Container(10003).ListItem().TVShowTitle,,: ]$INFO[Container(10003).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10004).ListItem().Label)">$INFO[Container(10004).ListItem().TVShowTitle,,: ]$INFO[Container(10004).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10005).ListItem().Label)">$INFO[Container(10005).ListItem().TVShowTitle,,: ]$INFO[Container(10005).ListItem().Title]</value>
+	</variable>
+
+	<variable name="home:Status.FeedItem.3">
 		<value condition="!String.IsEmpty(Container(10003).ListItem().TVShowTitle)">$INFO[Container(10003).ListItem().TVShowTitle,,: ]$INFO[Container(10003).ListItem().Title]</value>
 		<value>$INFO[Container(10003).ListItem().Title]</value>
 	</variable>
 
-	<variable name="home:Status.FeedItem.2">
+	<variable name="home:Status.FeedItem.4">
 		<value condition="!String.IsEmpty(Container(10004).ListItem().TVShowTitle)">$INFO[Container(10004).ListItem().TVShowTitle,,: ]$INFO[Container(10004).ListItem().Title]</value>
 		<value>$INFO[Container(10004).ListItem().Title]</value>
 	</variable>
 
-	<variable name="home:Status.FeedItem.3">
+	<variable name="home:Status.FeedItem.5">
 		<value condition="!String.IsEmpty(Container(10005).ListItem().TVShowTitle)">$INFO[Container(10005).ListItem().TVShowTitle,,: ]$INFO[Container(10005).ListItem().Title]</value>
 		<value>$INFO[Container(10005).ListItem().Title]</value>
 	</variable>
 
-	<variable name="home:Status.FeedItem.4">
+	<variable name="home:Status.FeedItem.6">
 		<value condition="!String.IsEmpty(Container(10006).ListItem().TVShowTitle)">$INFO[Container(10006).ListItem().TVShowTitle,,: ]$INFO[Container(10006).ListItem().Title]</value>
 		<value>$INFO[Container(10006).ListItem().Title]</value>
 	</variable>
 	
-	<variable name="home:Status.FeedItem.5">
+	<variable name="home:Status.FeedItem.7">
 		<value condition="!String.IsEmpty(Container(10007).ListItem().TVShowTitle)">$INFO[Container(10007).ListItem().TVShowTitle,,: ]$INFO[Container(10007).ListItem().Title]</value>
 		<value>$INFO[Container(10007).ListItem().Title]</value>
 	</variable>
@@ -1004,6 +1019,12 @@
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
+	<variable name="pvr:GuideLabel">
+		<value condition="ListItem.HasTimer + !ListItem.IsRecording">&#59179;  $INFO[ListItem.Label]</value>
+		<value condition="ListItem.IsRecording">&#58904;  $INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
 
 <!-- Toast -->
 	<variable name="toast:Symbol">
@@ -1173,6 +1194,11 @@
 
 
 <!-- Widgets -->
+
+	<variable name="widget:Descriptiom">
+		<value>$INFO[ListItem.Plot]</value>
+	</variable>
+
 	<variable name="widget:Name">
 		<value condition="String.IsEmpty(Container(211).ListItem.Property(widgetName))">$LOCALIZE[31069]</value>
 		<value>$INFO[Container(211).ListItem.Property(widgetName),$LOCALIZE[31068]: ]</value>
@@ -1181,6 +1207,17 @@
 	<variable name="widget:Symbol">
 		<value condition="String.IsEmpty(Container(211).ListItem.Property(widgetName))">&#57502;</value>
 		<value>&#57450;</value>
+	</variable>
+
+	<variable name="widget:Label">
+		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>	
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
+	<variable name="widget:Label2">
+		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="widget:Layout">
@@ -1411,6 +1448,7 @@
 		<value condition="Window.IsActive(MyPlaylist.xml)">$LOCALIZE[13350]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.watchlist) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=recommendedmovies) | String.StartsWith(Container.FolderPath,plugin://service.library.data.provider?type=recommended)">$LOCALIZE[31532]</value>
 		<value condition="String.IsEqual(Container.FolderPath,sources://video/)">$LOCALIZE[31512]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
 		<value condition="String.IsEqual(Container.FolderName,$LOCALIZE[369])">$INFO[Container.Content]</value>
 		<value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container.Content]</value>
@@ -1477,6 +1515,22 @@
 
 
 <!-- Other -->
+	<variable name="tmdb:Path">
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31509]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31509]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=airingtodaytvshows)">$ADDON[script.extendedinfo 32038]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=onairtvshows)">$ADDON[script.extendedinfo 32039]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=populartvshows)">$ADDON[script.extendedinfo 32041]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies)">$ADDON[script.extendedinfo 32042]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=upcomingmovies)">$ADDON[script.extendedinfo 32043]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=topratedtvshows)">$ADDON[script.extendedinfo 32044]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=topratedmovies)">$ADDON[script.extendedinfo 32046]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=ratedmovies)">$ADDON[script.extendedinfo 32135]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=ratedtvshows)">$ADDON[script.extendedinfo 32145]</value>
+		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/)">Extended Info</value>
+		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb)">The Movie Database</value>
+	</variable>
+
 	<variable name="login:Hello">
 		<value condition="System.Time(00:00,12:00)">$LOCALIZE[31718]</value>
 		<value condition="System.Time(12:00,18:00)">$LOCALIZE[31719]</value>

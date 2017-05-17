@@ -47,9 +47,9 @@
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<centertop>50%</centertop>
-				<width>256</width>
-				<height>72</height>
-				<texture>logos/grid2.png</texture>
+				<width>200</width>
+				<height>84</height>
+				<texture>logos/grid.png</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>$VAR[color:Accent]</colordiffuse>
 				<include>fadeinout</include>
