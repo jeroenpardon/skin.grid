@@ -187,6 +187,16 @@
 						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 						<include>button_Settings</include>
 					</control>
+
+					<!-- Reset menu configuration -->
+					<control type="radiobutton" id="209">
+						<label>combine</label>
+						<onclick>Skin.ToggleSetting(homemenu.combine)</onclick>
+						<selected>Skin.HasSetting(homemenu.combine)</selected>
+						<include>radio_Settings</include>
+					</control>
+
+
 					<!--options menu-->
 					<control type="label" id="216">
 						<label>$LOCALIZE[31239]</label>
@@ -886,7 +896,7 @@
 
 			<!-- About -->         
 				<control type="grouplist" id="1100">
-					<top>0</top>
+					<top>10</top>
 					<left>0</left>
 					<width>1216</width>
 					<height>810</height>
@@ -895,8 +905,8 @@
 					<onright condition="Integer.IsGreater(Container(1100).NumPages,1)">6500</onright>
 					<visible>Skin.String(category,about)</visible>
 					<control type="image">
-						<width>280</width>
-						<height>128</height>
+						<width>256</width>
+						<height>72</height>
 						<texture>logos/grid.png</texture>
 						<aspectratio align="left" aligny="center">keep</aspectratio>
 					</control>
