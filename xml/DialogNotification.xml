@@ -1,52 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
 	<controls>
+
 		<control type="group">
-			<right>128</right>
-			<width>756</width>
-			<height>108</height>
-			<include>fadeinout</include>
-			<include>toggle_Menu</include>
-			<visible>!Window.IsActive(startup)</visible>
-			<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),stream)">Conditional</animation>
-			<animation effect="slide" time="100" end="128,0" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical) +  !Skin.HasSetting(home.clock)">Conditional</animation>
-			<animation effect="slide" time="100" end="-618,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical2)">Conditional</animation>
-			<control type="image">
-				<width>756</width>
-				<height>98</height>
-				<texture colordiffuse="$VAR[color:Accent]">colorize/85.png</texture>
-				<!--<visible>!Window.IsActive(home)</visible>-->
-			</control>
-			<control type="group">
-				<animation effect="slide" time="0" end="0,-7" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical)">Conditional</animation>
-				<control type="label">
-					<width>108</width>
-					<height>108</height>
-					<font>Symbols-38</font>
-					<label>&#57483;</label>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>$VAR[color:Main]</textcolor>
-				</control>
-				<control type="group">
-					<left>108</left>
-					<control type="label" id="401">
-						<top>16</top>
-						<width>624</width>
-						<height>54</height>
-						<font>Black-22</font>
-						<textcolor>$VAR[color:Main]</textcolor>
-					</control>
-					<control type="label" id="402">
-						<top>54</top>
-						<width>624</width>
-						<height>54</height>
-						<aligny>top</aligny>
-						<font>Regular-20</font>
-						<textcolor>$VAR[color:Main]</textcolor>
-					</control>
-				</control>
-			</control>
+			<animation effect="slide" time="100" end="-128,0" condition="Skin.HasSetting(home.clock)">Conditional</animation>
+			<visible>Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),vertical)</visible>
+			<include content="global_Notification" condition="Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),vertical)">
+				<param name="Left">1164</param>
+				<param name="Top">0</param>
+				<param name="InfoTop">11</param>
+				<param name="Height">98</param>
+				<param name="Width">756</param>
+			</include>
 		</control>
+
+		<control type="group">
+			<visible>Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),vertical2)</visible>
+			<include content="global_Notification" condition="Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),vertical2)">
+				<param name="Left">1154</param>
+				<param name="Top">10</param>
+				<param name="InfoTop">11</param>
+				<param name="Height">98</param>
+				<param name="Width">756</param>
+			</include>
+		</control>
+
+		<include content="global_Notification" condition="Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)">
+			<param name="Left">1154</param>
+			<param name="Top">10</param>
+			<param name="InfoTop">11</param>
+			<param name="Height">98</param>
+			<param name="Width">756</param>
+		</include>
+
+		<include content="global_Notification" condition="!Window.IsActive(home) + String.IsEqual(Skin.String(view.list.art.Label),posters)">
+			<param name="Left">1124</param>
+			<param name="Height">108</param>
+			<param name="Width">668</param>
+		</include>
+
+		<include content="global_Notification" condition="!Window.IsActive(home) + !String.IsEqual(Skin.String(view.list.art.Label),posters)">
+			<param name="Left">1036</param>
+			<param name="Height">108</param>
+			<param name="Width">756</param>
+		</include>
+
 	</controls>
 </window>

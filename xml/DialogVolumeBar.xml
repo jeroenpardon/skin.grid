@@ -32,7 +32,7 @@
 		</control>
 		<control type="group">
 			<include>fadeinout</include>
-			<visible>IntegerGreaterThan(Player.Volume,0) + Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical)</visible>
+			<visible>IntegerGreaterThan(Player.Volume,0) + Window.IsActive(Home) + [String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEqual(Skin.String(homemenu.type),vertical2)]</visible>
 			<control type="progress" id="29999">
 				<left>128</left>
 				<width>1664</width>
@@ -45,7 +45,7 @@
 			</control>
 		</control>
 		<control type="group">
-			<left>138</left>
+			<left>0</left>
 			<top>10</top>
 			<include>fadeinout</include>
 			<visible>IntegerGreaterThan(Player.Volume,0) + Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
@@ -60,6 +60,7 @@
 				<righttexture></righttexture>
 			</control>
 		</control>
+
 		<include condition="Window.IsVisible(fullscreenvideo)">global_Clock</include>
 	</controls>
 </window>
