@@ -101,5 +101,10 @@
 	<!--menu-->
 		<include>menu_Options</include>
 
+	<!-- Scrollbar-->
+		<include content="global_Scrollbar">
+			<param name="OnLeft">5</param>
+		</include>
+
 	</controls>
 </window>
