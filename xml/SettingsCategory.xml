@@ -90,12 +90,6 @@
 			<control type="label" id="14">
 				<include>global_Header</include>
 			</control>
-
-		<!-- Scrollbar-->
-			<include content="global_Scrollbar">
-				<param name="OnLeft">5</param>
-			</include>
-
 		</control>
 
 	<!--menu-->
