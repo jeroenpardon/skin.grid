@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1105">
-	<visible>Player.HasMedia + !Window.IsVisible(home) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(visualisation) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
+	<visible>Player.HasMedia + !Window.IsVisible(home) + !Window.IsActive(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(visualisation) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>
 	<controls>
 
 		<control type="group">
-			<visible>!Window.IsVisible(fullscreenvideo)</visible>
+			<visible>!Window.IsVisible(fullscreenvideo) + !Window.IsActive(screensaver)</visible>
 			<include content="global_Notification" condition="String.IsEqual(Skin.String(view.list.art.Label),posters)">
 				<param name="Left">1124</param>
 				<param name="Height">108</param>

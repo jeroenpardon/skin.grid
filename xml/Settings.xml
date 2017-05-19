@@ -4,12 +4,6 @@
 	<menucontrol>7000</menucontrol>
 	<controls>
 
-	<!--menu trigger-->
-		<control type="button" id="5500">
-			<onfocus>Control.SetFocus(50)</onfocus>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-
 	<!--background-->
 		<include content="global_Background">
 			<param name="GridTexture">overlays/108.png</param>

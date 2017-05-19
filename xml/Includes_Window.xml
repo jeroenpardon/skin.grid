@@ -102,40 +102,6 @@
 		</control>
 	</include>
 
-	<include name="global_WindowTitle">
-		<param name="Width" default="screen_Width"/>
-		<param name="Height" default="108"/>
-		<param name="Label" default="$VAR[window:Title]"/>
-		<param name="Font" default="Black-48"/>
-		<param name="Visible"/>
-		<definition>
-			<control type="label" id="1">
-				<visible>false</visible>
-			</control>
-			<control type="label">
-				<left>160</left>
-				<width max="$PARAM[TextWidth]">auto</width>
-				<height>$PARAM[Height]</height>
-				<label>$PARAM[Label]</label>
-				<aligny>center</aligny>
-				<font>$PARAM[Font]</font>
-				<textcolor>$VAR[color:Accent]</textcolor>
-				<visible>!Skin.HasSetting(global.showdate)</visible>
-				<visible>$EXP[!Window.HasOverlay]</visible>
-				<visible>$PARAM[Visible]</visible>
-			</control>
-			<control type="label">
-				<left>160</left>
-				<width>1280</width>
-				<label>$PARAM[Label]</label>
-				<font>$PARAM[Font]</font>
-				<textcolor>$VAR[color:Accent]</textcolor>
-				<visible>Skin.HasSetting(global.showdate)</visible>
-				<visible>$PARAM[Visible]</visible>
-			</control>
-		</definition>
-	</include>
-
 	<include name="global_WindowChrome">
 		<param name="Top" default="0"/>
 		<param name="TextWidth" default="1600"/>
@@ -144,6 +110,7 @@
 		<param name="Height" default="108"/>
 		<param name="Font" default="Black-48"/>
 		<param name="Symbol" default="$VAR[window:Symbol]"/>
+		<param name="ShowSymbol" default="true"/>
 		<param name="SymbolFont" default="Symbols-32"/>
 		<param name="ItemCount" default="$INFO[Container.NumItems]"/>
 		<param name="TimeLeft" default="1792"/>
@@ -169,7 +136,7 @@
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<visible>$PARAM[ShowItemCount]</visible>
-					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(DialogVolumebar.xml) | Player.Muted] + !Window.IsVisible(busydialog)</visible>
+					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(volumebar) | Player.Muted] + !Window.IsVisible(busydialog)</visible>
 				</control>
 				<control type="label">
 					<width>128</width>
@@ -179,6 +146,7 @@
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<visible>!Window.IsVisible(busydialog) + !Window.IsVisible(pictureinfo)</visible>
+					<visible>$PARAM[ShowSymbol]</visible>
 				</control>
 				<include content="global_Busy">
 					<param name="Left">32</param>
@@ -201,7 +169,7 @@
 				</control>
 				<control type="grouplist">
 					<left>160</left>
-					<width>1000</width>
+					<width>1600</width>
 					<height>$PARAM[Height]</height>
 					<orientation>vertical</orientation>
 					<control type="label">
@@ -215,7 +183,7 @@
 						<visible>Skin.HasSetting(global.showdate)</visible>
 					</control>
 					<control type="label">
-						<width>1500</width>
+						<width>1600</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
@@ -400,7 +368,7 @@
 							<lefttexture></lefttexture>
 							<midtexture colordiffuse="$VAR[color:Accent]">colorize/100.png</midtexture>
 							<righttexture></righttexture>
-							<visible>Window.IsActive(extendedprogressdialog)</visible>
+							<!--<visible>Window.IsActive(extendedprogressdialog)</visible>-->
 						</control>
 						<control type="group">
 							<top>$PARAM[InfoTop]</top>

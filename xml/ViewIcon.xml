@@ -28,7 +28,7 @@
 		<param name="Fallback" default="views/fallback/landscape.png"/>
 		<param name="ShowFallback" default="ListItem.IsParentFolder | [String.IsEmpty(ListItem.Art(fanart)) + !Container.Content(images)]"/>
 		<param name="Logo" default="$VAR[art:Logo]"/>
-		<param name="Views.ShowLogo" default="$EXP[Views.ShowLogo]"/>
+		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
 		<param name="SymbolFont" default="Symbols-26"/>
 		<param name="Visible"/>
@@ -97,7 +97,7 @@
 							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<visible>!Container.Content(episodes)</visible>
-							<visible>$PARAM[Views.ShowLogo]</visible>
+							<visible>$PARAM[ShowLogo]</visible>
 						</control>
 						<control type="image">
 							<left>24</left>
@@ -107,7 +107,7 @@
 							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="left" aligny="bottom">keep</aspectratio>
 							<visible>Container.Content(episodes)</visible>
-							<visible>$PARAM[Views.ShowLogo]</visible>
+							<visible>$PARAM[ShowLogo]</visible>
 						</control>
 					</control>
 					<!--info-->
@@ -199,7 +199,7 @@
 							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<visible>!Container.Content(episodes)</visible>
-							<visible>$PARAM[Views.ShowLogo]</visible>
+							<visible>$PARAM[ShowLogo]</visible>
 						</control>
 						<control type="image">
 							<left>24</left>
@@ -209,7 +209,7 @@
 							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="left" aligny="bottom">keep</aspectratio>
 							<visible>Container.Content(episodes)</visible>
-							<visible>$PARAM[Views.ShowLogo]</visible>
+							<visible>$PARAM[ShowLogo]</visible>
 						</control>
 					</control>
 					<!--info-->

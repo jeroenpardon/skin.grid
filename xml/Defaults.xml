@@ -133,7 +133,7 @@
 
 	<default type="sliderex">
 		<height>90</height>
-		<font>Black-32</font>
+		<font>Regular-22-L</font>
 		<aligny>center</aligny>
 		<textoffsetx>32</textoffsetx>
 		<textcolor>$VAR[color:Accent]</textcolor>
@@ -142,12 +142,12 @@
 		<selectedcolor>$VAR[color:Accent]</selectedcolor>
 		<texturenofocus colordiffuse="ff000000">colorize/10.png</texturenofocus>
 		<texturefocus colordiffuse="$VAR[color:Accent]">colorize/75.png</texturefocus>
-		<sliderwidth>200</sliderwidth>
+		<sliderwidth>256</sliderwidth>
 		<sliderheight>54</sliderheight>
 		<texturesliderbar colordiffuse="$VAR[color:Accent]">glyphs/slider/bar_small.png</texturesliderbar>
 		<texturesliderbarfocus colordiffuse="$VAR[color:Main]">glyphs/slider/bar_small.png</texturesliderbarfocus>
-		<textureslidernib colordiffuse="$VAR[color:Accent]">glyphs/slider/nib-nf.png</textureslidernib>
-		<textureslidernibfocus colordiffuse="$VAR[color:Main]">glyphs/slider/nib-fo.png</textureslidernibfocus>
+		<textureslidernib colordiffuse="$VAR[color:Accent]">glyphs/slider/nib_small.png</textureslidernib>
+		<textureslidernibfocus colordiffuse="$VAR[color:Main]">glyphs/slider/nib_small.png</textureslidernibfocus>
 		<pulseonselect>false</pulseonselect>
 		<orientation>horizontal</orientation>
 	</default>

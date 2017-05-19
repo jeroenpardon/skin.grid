@@ -620,17 +620,6 @@
 						<visible>String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])</visible>
 					</control>
 				</control>
-				<!--square art-->
-				<control type="image">
-					<left>32</left>
-					<top>88</top>
-					<width>256</width>
-					<height>256</height>
-					<texture>$PARAM[Art2]</texture>
-					<fadetime>fadetime_Fanart</fadetime>
-					<aspectratio align="right" aligny="top">$PARAM[AspectRatio]</aspectratio>
-					<visible>Container.Content(addons) + String.IsEmpty(ListItem.Art(fanart))</visible>
-				</control>
 				<!--media info-->
 				<control type="group">
 					<top>$PARAM[ArtHeight]</top>

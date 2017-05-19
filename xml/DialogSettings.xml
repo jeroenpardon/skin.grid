@@ -9,6 +9,8 @@
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
 				<param name="Title">$VAR[window:Title.Dialog]</param>
+				<param name="ShowSymbol">!Window.Is(mediafilter)</param>
+				<param name="ShowItemCount">true</param>
 			</include>
 		</control>
 		<control type="group">
@@ -57,12 +59,12 @@
 
 				<!-- Default edit -->
 				<control type="edit" id="12">
-					<width>1344</width>
+	
 					<height>90</height>
 				</control>
 
 				<!-- Default slider -->
-				<control type="edit" id="13">
+				<control type="sliderex" id="13">
 					<width>1344</width>
 					<height>90</height>
 				</control>

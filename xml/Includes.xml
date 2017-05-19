@@ -337,6 +337,7 @@
 				<top>$PARAM[Top]</top>
 				<width>54</width>
 				<height>54</height>
+				<visible>$EXP[HasRatingOverlay]</visible>
 				<visible>Skin.HasSetting(ratings.overlay)</visible>
 				<visible>Container.Content(movies) + !Listitem.IsParentFolder</visible>
 				<animation effect="slide" end="-54" time="0" condition="[ListItem.IsResumable + !String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | !String.IsEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
@@ -346,12 +347,12 @@
 					<texture colordiffuse="$VAR[color:Main]">colorize/90.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
-				<control type="label">
+				<control type="label" id="66">
 					<width>54</width>
 					<height>54</height>
 					<align>center</align>
 					<aligny>center</aligny>
-					<label>$INFO[ListItem.Rating]</label>
+					<label>$VAR[info:Rating]</label>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<selectedcolor>$VAR[color:Accent]</selectedcolor>
 					<font>Regular-18</font>
@@ -397,6 +398,7 @@
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Symbols-24</font>
 				<visible>$EXP[Content.IsVideo]</visible>
+				<visible>$EXP[HasRatingOverlay]</visible>
 				<visible>!String.IsEmpty(Skin.String(ratings.video)) + !String.IsEqual(Skin.String(ratings.video),disabled) + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
@@ -406,6 +408,7 @@
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Regular-20</font>
 				<visible>$EXP[Content.IsVideo]</visible>
+				<visible>$EXP[HasRatingOverlay]</visible>
 				<visible>!String.IsEmpty(Skin.String(ratings.video)) + !String.IsEqual(Skin.String(ratings.video),disabled) + !ListItem.IsParentFolder</visible>
 			</control>
 			<control type="label">
@@ -724,6 +727,7 @@
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Text.3]</textcolor>
 					<include>fadeinout</include>
+					<visible>!String.IsEqual(Skin.String(home.status),feed)</visible>
 				</control>
 				<control type="rss">
 					<bottom>0</bottom>
@@ -738,6 +742,22 @@
 					<include>fadeinout</include>
 					<visible>String.IsEqual(Skin.String(home.status),rss)</visible>
 				</control>
+
+
+				<control type="fadelabel">
+			        <scrollout>true</scrollout>
+			        <pauseatend>200</pauseatend>
+
+			        <label>$INFO[Container(10004).ListItem().Title]</label>
+					<info>$INFO[Container(10004).ListItem().Title]</info>
+			        <font>Black-22</font>
+			        <textcolor>FFB2D4F5</textcolor>
+			        <textoffsetx>20</textoffsetx>
+			        <scroll>true</scroll>
+			        <randomize>true</randomize>
+			  </control>
+
+
 				<!-- Feed Indicator -->
 				<control type="group">
 					<bottom>0</bottom>

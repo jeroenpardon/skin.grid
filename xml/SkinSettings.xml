@@ -6,17 +6,27 @@
 
 	<controls>
 
-	<!-- Global Includes -->
+		<!--menu trigger-->
+		<control type="button" id="50">
+			<onfocus>Control.SetFocus(9001)</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+
+		<!-- Global Includes -->
 		<include content="global_Background">
 			<param name="GridTexture">overlays/90.png</param>
 		</include>
 
-	<!-- Window chrome -->		
+		<!-- Window chrome -->		
+
 		<control type="group">
-			<include>transition_Chrome</include>
-			<include content="global_WindowChrome">
-				<param name="Title">$VAR[window:Title.System]</param>
-			</include>
+			<include>toggle_Menu</include>
+			<control type="group">
+				<include>transition_Chrome</include>
+				<include content="global_WindowChrome">
+					<param name="Title">$VAR[window:Title.System]</param>
+				</include>
+			</control>
 		</control>
 
 		<control type="group" id="5500">
@@ -25,7 +35,7 @@
 			<include>toggle_Menu</include>
 			<include>transition_Content</include>
 
-	<!-- Categories -->
+			<!-- Categories -->
 			<control type="grouplist" id="9001">
 				<itemgap>0</itemgap>
 				<width>384</width>
@@ -35,7 +45,7 @@
 				<!--homescreen-->
 				<control type="button" id="10">
 					<include>settings_Menu</include>
-					<label>$LOCALIZE[31200]</label>
+					<label>$LOCALIZE[24997]</label>
 					<onfocus>Skin.SetString(category,home)</onfocus>
 					<onright>100</onright>
 				</control>
@@ -231,9 +241,9 @@
 					</control>
 					<!--background type-->
 					<control type="button" id="310">
-						<label>$LOCALIZE[31131]</label>
+						<label>$LOCALIZE[31134]</label>
 						<label2>$INFO[Skin.String(background.type.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.type,header=$LOCALIZE[31131])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.type,header=$LOCALIZE[31134])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>

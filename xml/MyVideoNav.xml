@@ -5,12 +5,6 @@
 	<views>50,51,52,521,53,54,55,56</views>
 	<controls>
 
-		<!--menu trigger-->
-		<control type="button" id="5500">
-			<onfocus>Control.SetFocus(50)</onfocus>
-			<visible allowhiddenfocus="true">false</visible>
-		</control>
-
 		<!--background-->
 		<control type="group">
 			<visible>!Control.IsVisible(53)</visible>
@@ -125,7 +119,7 @@
 					<param name="ArtHeight" value="410"/>
 					<param name="ItemWidth" value="277.3"/>
 					<param name="ItemHeight" value="408"/>
-					<param name="Views.ShowLogo" value="false"/>
+					<param name="ShowLogo" value="false"/>
 					<param name="ShowInfo" value="Container.Content(seasons)"/>
 					<param name="Visible" value="[Container.Content(files) + !Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>
 				</include>
@@ -139,7 +133,7 @@
 					<param name="ID" value="55"/>
 					<param name="Label2" value="$VAR[media:Info]"/>
 					<param name="Visible" value="Container.Content(files) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>
-					<param name="Views.ShowLogo" value="$EXP[Views.ShowLogo]"/>
+					<param name="ShowLogo" value="$EXP[Views.ShowLogo]"/>
 					<param name="ShowInfo" value="$EXP[Thumbview.ShowInfo]"/>
 				</include>
 			</control>

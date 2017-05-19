@@ -354,20 +354,19 @@ msgid "Only in movie information screen"
 msgstr ""
 
 msgctxt "#31128"
-msgid "Download characterart"
-msgstr ""
-
-msgctxt "#31129"
 msgid "Fanart (movies and TV shows only)"
 msgstr ""
 
+msgctxt "#31129"
+msgid "Prefer Landscape thumbnails"
+msgstr ""
+
+msgctxt "#31130"
+msgid "Prefer Fanart"
+msgstr ""
 
 
 #: backgrounds
-msgctxt "#31131"
-msgid "Set background type"
-msgstr ""
-
 msgctxt "#31132"
 msgid "Select image(s)"
 msgstr ""
@@ -376,17 +375,15 @@ msgctxt "#31133"
 msgid "Enable animated backgrounds (resource intensive)"
 msgstr ""
 
+msgctxt "#31134"
+msgid "Set background type"
+msgstr ""
 
 
 
 #: options menu
-
 msgctxt "#31140"
 msgid "Sorting"
-msgstr ""
-
-msgctxt "#31141"
-msgid "Order"
 msgstr ""
 
 msgctxt "#31142"
@@ -395,15 +392,6 @@ msgstr ""
 
 msgctxt "#31143"
 msgid "Items"
-msgstr ""
-
-
-msgctxt "#31149"
-msgid "Sort by"
-msgstr ""
-
-msgctxt "#31150"
-msgid "Files mode"
 msgstr ""
 
 

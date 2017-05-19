@@ -6,7 +6,7 @@
 	<controls>
 
 	<!--menu trigger-->
-		<control type="button" id="5500">
+		<control type="button" id="50">
 			<onfocus>Control.SetFocus(3)</onfocus>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>

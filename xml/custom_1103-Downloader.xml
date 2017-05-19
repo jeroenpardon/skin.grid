@@ -117,7 +117,7 @@
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>530</onup>
-						<ondown>550</ondown>
+						<ondown>560</ondown>
 						<onclick>RunScript(script.artwork.downloader, mode=custom, silent=true, clearlogo)</onclick>
 						<include>button_Settings</include>
 					</control>
@@ -135,33 +135,6 @@
 					</control>
 				</control>
 
-				<!-- Character -->
-				<control type="group" id="550">
-					<height>90</height>
-					<control type="button" id="551">
-						<width>1466</width>
-						<label>$LOCALIZE[31128]</label>
-						<textoffsetx>114</textoffsetx>
-						<onright>9000</onright>
-						<onup>540</onup>
-						<ondown>560</ondown>
-						<onclick>RunScript(script.artwork.downloader, mode=custom, silent=true, characterart)</onclick>
-						<include>button_Settings</include>
-					</control>
-					<control type="label">
-						<label>&#57475;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
-						<include>global_Symbol</include>
-						<visible>Control.HasFocus(551)</visible>
-					</control>
-					<control type="label">
-						<label>&#57475;</label>
-						<textcolor>$VAR[color:Text.3]</textcolor>
-						<include>global_Symbol</include>
-						<visible>!Control.HasFocus(551)</visible>
-					</control>
-				</control>
-
 				<!--extrafanart-->
 				<control type="group" id="560">
 					<height>90</height>
@@ -170,7 +143,7 @@
 						<label>$LOCALIZE[31112]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
-						<onup>550</onup>
+						<onup>540</onup>
 						<ondown>600</ondown>
 						<onclick>RunScript(script.artwork.downloader, mode=custom, silent=true, extrafanart)</onclick>
 						<include>button_Settings</include>

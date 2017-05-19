@@ -39,7 +39,10 @@
 			<align>$PARAM[Align]</align>
 			<aligny>$PARAM[AlignY]</aligny>
 			<onback>ClearProperty(MenuOpen,Home)</onback>
-			<onright>ClearProperty(MenuOpen,Home)</onright>
+
+			<onclick>SetProperty(MenuOpen,false,Home)</onclick>
+
+			<onright>50</onright>
 			<textcolor>$PARAM[TextColor]</textcolor>
 			<focusedcolor>$PARAM[FocusedColor]</focusedcolor>
 			<texturenofocus></texturenofocus>
@@ -52,7 +55,7 @@
 			<textureradioofffocus></textureradioofffocus>
 			<textureradioondisabled></textureradioondisabled>
 			<textureradiooffdisabled></textureradiooffdisabled>
-			<onback condition="ControlGroup(7000).HasFocus()">5500</onback>
+			<onback condition="ControlGroup(7000).HasFocus()">50</onback>
 		</definition>
 	</include>
 
@@ -116,7 +119,7 @@
 				<onup>300</onup>
 				<ondown>7003</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
@@ -156,7 +159,7 @@
 				<onup condition="!Window.IsActive(eventlog)">7002</onup>
 				<ondown>7004</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Container.NextSortMethod</onclick>
 			</control>
@@ -192,7 +195,7 @@
 				<onup>7003</onup>
 				<ondown>7010</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Container.SetSortDirection</onclick>
 			</control>
@@ -235,7 +238,7 @@
 				<onup>7014</onup>
 				<ondown>7091</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -271,7 +274,7 @@
 				<onup>7090</onup>
 				<ondown>7092</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<onclick>$VAR[menu:GetAddons]</onclick>
 				<include>menu_Button</include>
 			</control>
@@ -309,13 +312,12 @@
 				<onleft>noop</onleft>
 				<onup>7091</onup>
 				<ondown>7093</ondown>
-				<onright>5500</onright>
-				<onright>ClearProperty(MenuOpen,Home)</onright>
+				<onright>50</onright>
 				<orientation>horizontal</orientation>
 				<control type="button" id="301">
 					<label>&#59171;</label>
 					<onclick>PlayerControl(Previous)</onclick>
-					<onback>5500</onback>
+					<onback>50</onback>
 					<include>menu_PlayerControl</include>
 				</control>
 				<control type="togglebutton" id="302">
@@ -323,14 +325,14 @@
 					<altlabel>&#59053;</altlabel>
 					<usealttexture>Player.Paused</usealttexture>
 					<onclick>PlayerControl(Play)</onclick>
-					<onback>5500</onback>
+					<onback>50</onback>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
 					<include>menu_PlayerControl</include>
 				</control>
 				<control type="button" id="303">
 					<label>&#59170;</label>
 					<onclick>PlayerControl(Next)</onclick>
-					<onback>5500</onback>
+					<onback>50</onback>
 					<include>menu_PlayerControl</include>
 				</control>
 				<control type="button" id="304">
@@ -338,7 +340,7 @@
 					<onclick condition="Player.HasVideo">Right</onclick>
 					<onclick condition="Player.HasVideo">Action(fullscreen)</onclick>
 					<onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
-					<onback>5500</onback>
+					<onback>50</onback>
 					<include>menu_PlayerControl</include>
 				</control>
 			</control>
@@ -359,7 +361,7 @@
 				<onup>7092</onup>
 				<ondown>7094</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<onclick condition="Player.HasAudio">ActivateWindow(musicplaylist)</onclick>
 				<onclick condition="Player.HasVideo">Action(fullscreen)</onclick>
 				<include>menu_Button</include>
@@ -402,7 +404,7 @@
 				<onup>44</onup>
 				<ondown>7011</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Container.SetSortDirection</onclick>
 			</control>
@@ -439,7 +441,7 @@
 				<onup>7010</onup>
 				<ondown>7012</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<onclick>right</onclick>
 				<include>menu_Button</include>
 				<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
@@ -450,7 +452,7 @@
 				<onup>7010</onup>
 				<ondown>7012</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<onclick>right</onclick>
 				<onclick>Filter</onclick>
 				<include>menu_Button</include>
@@ -489,7 +491,7 @@
 				<onup>7011</onup>
 				<ondown>7013</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<visible>Container.Content(musicvideos)</visible>
 			</control>
@@ -526,7 +528,7 @@
 				<onup>7012</onup>
 				<ondown>7014</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Right</onclick>
 				<visible>Window.IsActive(videos) | Window.IsActive(music)</visible>
@@ -564,7 +566,7 @@
 				<onup>7013</onup>
 				<ondown>7090</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<selected>System.IsMaster</selected>
 				<onclick>xbmc.mastermode</onclick>
@@ -614,7 +616,7 @@
 				<onup>7004</onup>
 				<ondown>7011</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -650,7 +652,7 @@
 				<onup>7010</onup>
 				<ondown>7012</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<visible>Window.IsActive(pictures)</visible>
 			</control>
@@ -687,7 +689,7 @@
 				<onup>7011</onup>
 				<ondown>7090</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<visible>Window.IsActive(pictures)</visible>
 			</control>
@@ -734,7 +736,7 @@
 					<onup>7004</onup>
 					<ondown>7090</ondown>
 					<onleft>7100</onleft>
-					<onright>5500</onright>
+					<onright>50</onright>
 					<include>menu_Button</include>
 					<visible>Window.IsActive(music) | Container.Content(musicvideos)</visible>
 				</control>
@@ -769,13 +771,13 @@
 
 	<include name="menu_Addons">	
 
-		<include condition="!Window.IsActive(1100)">menu_Views</include>
-		<include condition="!Window.IsActive(1100)">menu_Commons</include>
+		<include condition="!Window.IsActive(1110)">menu_Views</include>
+		<include condition="!Window.IsActive(1110)">menu_Commons</include>
 
 	<!--hide broken-->
 		<control type="group" id="7010">
 			<height>108</height>
-			<visible>Control.IsEnabled(7) + !Window.IsActive(1100)</visible>
+			<visible>Control.IsEnabled(7) + !Window.IsActive(1110)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -788,7 +790,7 @@
 				<onup>7004</onup>
 				<ondown>7011</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -811,7 +813,7 @@
 		<!--hide foreign-->
 		<control type="group" id="7011">
 			<height>108</height>
-			<visible>Control.IsEnabled(7) + !Window.IsActive(1100)</visible>
+			<visible>Control.IsEnabled(7) + !Window.IsActive(1110)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -824,7 +826,7 @@
 				<onup>7010</onup>
 				<ondown>7090</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -847,7 +849,7 @@
 		<!-- Refresh repositories -->
 		<control type="group" id="7012">
 			<height>108</height>
-			<visible>Window.IsActive(1100)</visible>
+			<visible>Window.IsActive(1110)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -860,7 +862,7 @@
 				<onup>7011</onup>
 				<ondown>7013</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<onclick>Right</onclick>
 				<onclick>UpdateAddonRepos</onclick>
 				<include>menu_Button</include>
@@ -885,7 +887,7 @@
 		<!-- Refresh add-on folders -->
 		<control type="group" id="7013">
 			<height>108</height>
-			<visible>Window.IsActive(1100)</visible>
+			<visible>Window.IsActive(1110)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -896,9 +898,9 @@
 				<top>12</top>
 				<label>$LOCALIZE[31518]</label>
 				<onup>7012</onup>
-				<ondown>7014</ondown>
+				<ondown>7092</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<onclick>Right</onclick>
 				<onclick>UpdateLocalAddons</onclick>
 				<include>menu_Button</include>
@@ -942,7 +944,7 @@
 				<onup>22</onup>
 				<ondown>20</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Container.NextViewMode</onclick>
 			</control>
@@ -978,7 +980,7 @@
 				<onup>2</onup>
 				<ondown>36</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -1013,7 +1015,7 @@
 				<onup>20</onup>
 				<ondown>21</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>SendClick(26)</onclick>
 			</control>
@@ -1052,7 +1054,7 @@
 				<onup>36</onup>
 				<ondown>22</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -1087,7 +1089,7 @@
 				<onup>21</onup>
 				<ondown>2</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -1126,7 +1128,7 @@
 				<onup>7004</onup>
 				<ondown>7011</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>SettingsLevelChange</onclick>
 			</control>
@@ -1163,7 +1165,7 @@
 				<onup>7010</onup>
 				<ondown>7012</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>ActivateWindow(filemanager)</onclick>
 			</control>
@@ -1200,7 +1202,7 @@
 				<onup>7011</onup>
 				<ondown>7013</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>ActivateWindow(eventlog)</onclick>
 			</control>
@@ -1236,7 +1238,7 @@
 				<onup>7012</onup>
 				<ondown>7014</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -1271,7 +1273,7 @@
 				<onup>7013</onup>
 				<ondown>7015</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -1307,7 +1309,7 @@
 				<onup>7014</onup>
 				<ondown>7090</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -1324,6 +1326,80 @@
 					<label>$LOCALIZE[14114]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(20)</visible>
+				</control>
+			</control>
+		</control>
+		<!-- Skin debug grid -->
+		<control type="group" id="7016">
+			<height>108</height>
+			<visible>Window.IsActive(SkinSettings)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(30)</visible>
+			</control>
+			<control type="radiobutton" id="30">
+				<top>12</top>
+				<label>$LOCALIZE[31236]</label>
+				<onup>7011</onup>
+				<ondown>7017</ondown>
+				<onleft>7100</onleft>
+				<onright>9001</onright>
+				<include>menu_Button</include>
+				<onclick>Skin.ToggleSetting(dev.grid)</onclick>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$VAR[menu:DebugGrid]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(30)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$VAR[menu:DebugGrid]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(30)</visible>
+				</control>
+			</control>
+		</control>
+		<!-- Skin debug labels -->
+		<control type="group" id="7017">
+			<height>108</height>
+			<visible>Window.IsActive(SkinSettings)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(31)</visible>
+			</control>
+			<control type="radiobutton" id="31">
+				<top>12</top>
+				<label>$LOCALIZE[31237]</label>
+				<onup>7016</onup>
+				<ondown>7090</ondown>
+				<onleft>7100</onleft>
+				<onright>9001</onright>
+				<include>menu_Button</include>
+				<onclick>Skin.ToggleSetting(dev.overlay)</onclick>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$VAR[menu:DebugOverlay]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(31)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$VAR[menu:DebugOverlay]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(31)</visible>
 				</control>
 			</control>
 		</control>
@@ -1349,9 +1425,9 @@
 				<onup>7059</onup>
 				<ondown>102</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
-				<onclick>5500</onclick>
+				<onclick>50</onclick>
 				<onclick condition="Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)">NextChannelGroup</onclick>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVChannels)</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioChannels)</onclick>
@@ -1388,9 +1464,9 @@
 				<onup>101</onup>
 				<ondown>103</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
-				<onclick>5500</onclick>
+				<onclick>50</onclick>
 				<onclick condition="Window.IsActive(TVGuide) | Window.IsActive(RadioGuide)">NextChannelGroup</onclick>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVGuide)</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioGuide)</onclick>
@@ -1427,9 +1503,9 @@
 				<onup>102</onup>
 				<ondown>7054</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
-				<onclick>5500</onclick>
+				<onclick>50</onclick>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVRecordings)</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioRecordings)</onclick>
 			</control>
@@ -1465,9 +1541,9 @@
 				<onup>7052</onup>
 				<ondown>106</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
-				<onclick>5500</onclick>
+				<onclick>50</onclick>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVTimers)</onclick>
 				<onclick condition="!String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(RadioTimers)</onclick>
 			</control>
@@ -1503,7 +1579,7 @@
 				<onup>105</onup>
 				<ondown>28</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Action(Right)</onclick>
 				<onclick condition="String.IsEmpty(Window.Property(IsRadio))">ActivateWindow(TVSearch)</onclick>
@@ -1540,9 +1616,9 @@
 				<onup>106</onup>
 				<ondown>33</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
-				<onclick>5500</onclick>
+				<onclick>50</onclick>
 			</control>
 			<control type="group">
 				<top>54</top>
@@ -1576,7 +1652,7 @@
 				<onup>28</onup>
 				<ondown>44</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Container.NextSortMethod</onclick>
 			</control>
@@ -1612,7 +1688,7 @@
 				<onup>33</onup>
 				<ondown>31</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 				<onclick>Container.SetSortDirection</onclick>
 			</control>
@@ -1650,8 +1726,8 @@
 				<onup>44</onup>
 				<ondown>101</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
-				<onclick>5500</onclick>
+				<onright>50</onright>
+				<onclick>50</onclick>
 				<selected>Container.Filtered</selected>
 				<include>menu_Button</include>
 			</control>
@@ -1690,7 +1766,7 @@
 				<onup>7014</onup>
 				<ondown>7011</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<onclick>Weather.LocationNext</onclick>
 				<include>menu_Button</include>
 			</control>
@@ -1726,7 +1802,7 @@
 				<onup>7010</onup>
 				<ondown>7012</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -1761,7 +1837,7 @@
 				<onup>7011</onup>
 				<ondown>7013</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
+				<onright>50</onright>
 				<onclick>ActivateWindow(servicesettings,weather)</onclick>
 				<include>menu_Button</include>
 			</control>
@@ -1797,8 +1873,8 @@
 				<onup>7012</onup>
 				<ondown>7014</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
-				<onclick>SetFocus(5500)</onclick>
+				<onright>50</onright>
+				<onclick>SetFocus(50)</onclick>
 				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=weather.icons,addontype=resource.images.weathericons)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 				<include>menu_Button</include>
@@ -1835,8 +1911,8 @@
 				<onup>7013</onup>
 				<ondown>7010</ondown>
 				<onleft>7100</onleft>
-				<onright>5500</onright>
-				<onclick>SetFocus(5500)</onclick>
+				<onright>50</onright>
+				<onclick>SetFocus(50)</onclick>
 				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=weather.background,addontype=resource.images.weatherfanart)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 				<include>menu_Button</include>

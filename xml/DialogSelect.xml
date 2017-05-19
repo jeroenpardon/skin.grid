@@ -87,7 +87,7 @@
 				<control type="image">
 					<width>567</width>
 					<height>810</height>
-					<texture>$INFO[Container(6).ListItem(0).Icon]</texture>
+					<texture>$INFO[Container(6).ListItem.Icon]</texture>
 					<fadetime>fadetime_Thumb</fadetime>
 					<aspectratio align="right" aligny="bottom">keep</aspectratio>
 				</control>

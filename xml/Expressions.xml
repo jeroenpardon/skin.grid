@@ -23,6 +23,9 @@
 	<!-- Player -->
 	<expression name="IsPlaying">![Player.Paused | Player.Caching | Player.Seeking | Player.Rewinding | Player.Forwarding | Player.DisplayAfterSeek]</expression>
 	<expression name="!IsPlaying">Player.Paused | Player.Caching | Player.Seeking | Player.Rewinding | Player.Forwarding | Player.DisplayAfterSeek</expression>
+
+	<!-- Ratings -->
+	<expression name="HasRatingOverlay">[String.IsEqual(Skin.String(ratings.music),user) + String.IsEqual(ListItem.DBTYPE,musicvideo) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)] | [String.IsEqual(Skin.String(ratings.video),default) + !String.IsEmpty(ListItem.Rating)] | [String.IsEqual(Skin.String(ratings.video),user) + !String.IsEmpty(ListItem.UserRating)] | [String.IsEqual(Skin.String(ratings.video),imdb) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.IMDB))] | [String.IsEqual(Skin.String(ratings.video),imdbpercent) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.percent.IMDB))] | [String.IsEqual(Skin.String(ratings.video),mc) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))] | [String.IsEqual(Skin.String(ratings.video),rt) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))] | [String.IsEqual(Skin.String(ratings.video),tmdb) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))]</expression>
 	
 	<!-- Viewtypes -->
 	<expression name="Listview.SingleLine">String.IsEmpty(ListItem.Label2) + ![Container.Content(seasons) | Container.Content(addons) | String.StartsWith(Container.FolderPath,pvr://channels/)]</expression>
@@ -34,8 +37,8 @@
 	<expression name="Views.ShowLogo">[String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.Contains(Container.FolderName,$LOCALIZE[20387]) | String.Contains(Container.FolderPath,special://skin/playlists/) | String.Contains(Container.FolderPath,special://profile/playlists/) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://service.library.data.provider?type=recommendedepisodes)] + [String.IsEqual(Skin.String(views.landscape.art),fanart) + Skin.HasSetting(logos.enable)] | [String.IsEqual(Skin.String(views.landscape.art),landscape) + Skin.HasSetting(logos.enable) + String.IsEmpty(ListItem.Art(landscape))]</expression>
 
 	<!-- Window -->
-	<expression name="Window.HasOverlay">[Window.IsVisible(volumebar) + !Player.Muted] | Window.IsActive(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog) | Player.HasMedia</expression>
-	<expression name="!Window.HasOverlay">!Window.IsVisible(volumebar) | !Window.IsActive(notification) + !Library.IsScanningVideo + !Library.IsScanningMusic + !Window.IsVisible(extendedprogressdialog) + !Player.HasMedia</expression>
+	<expression name="Window.HasOverlay">[Window.IsVisible(volumebar) + !Player.Muted] | Window.IsActive(1105) | Window.IsActive(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog) | Player.HasMedia</expression>
+	<expression name="!Window.HasOverlay">!Window.IsVisible(volumebar) + !Window.IsActive(1105) + !Window.IsActive(notification) + !Library.IsScanningVideo + !Library.IsScanningMusic + !Window.IsVisible(extendedprogressdialog) + !Player.HasMedia</expression>
 	<expression name="Window.IsInfo">Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(pvrguideinfo)</expression>
 	<expression name="!Window.IsInfo">![Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(pvrguideinfo)]</expression>
 

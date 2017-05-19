@@ -24,7 +24,7 @@
 	<setting id="background.type" value="fanart" label="$LOCALIZE[31118]">
 		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
 	</setting>
-	<setting id="background.type" value="videofanart" label="$LOCALIZE[31129]">
+	<setting id="background.type" value="videofanart" label="$LOCALIZE[31128]">
 		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
 	</setting>
 	<setting id="background.type" value="custom" label="$LOCALIZE[636]" default="true"/>
@@ -74,7 +74,7 @@
 	<setting id="view.list.art" value="landscape" label="$LOCALIZE[31102]"/>
 
 	<!-- Global landscape artwork type -->
-	<setting id="views.landscape.art" value="fanart" label="$LOCALIZE[31118]" default="true"/>
-	<setting id="views.landscape.art" value="landscape" label="$LOCALIZE[31102]"/>
+	<setting id="views.landscape.art" value="fanart" label="$LOCALIZE[31130]" default="true"/>
+	<setting id="views.landscape.art" value="landscape" label="$LOCALIZE[31129]"/>
 
 </settings>

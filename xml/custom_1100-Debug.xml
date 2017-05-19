@@ -177,7 +177,7 @@
 					<include>debug_Label</include>
 				</control>
 				<control type="button" id="205">
-					<label>BrowseAddons: $INFO[Window(Home).Property(BrowseAddons)]</label>
+					<label>Menu: $INFO[Window(Home).Property(MenuOpen)]</label>
 					<include>debug_Label</include>
 				</control>
 			</control>
