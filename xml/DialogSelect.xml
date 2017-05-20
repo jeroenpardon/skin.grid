@@ -121,7 +121,8 @@
 				<width min="108" max="216">auto</width>
 				<height>90</height>
 				<itemgap>0</itemgap>
-				<onleft>6</onleft>
+				<onleft condition="Control.IsVisible(6)">6</onleft>
+				<onleft condition="Control.IsVisible(3)">3</onleft>
 				<onright>noop</onright>
 				<ondown>5</ondown>
 				<align>right</align>
