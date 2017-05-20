@@ -140,10 +140,6 @@ msgctxt "#31056"
 msgid "Images slideshow"
 msgstr ""
 
-msgctxt "#31056"
-msgid "Images slideshow"
-msgstr ""
-
 msgctxt "#31057"
 msgid "Restore"
 msgstr ""
