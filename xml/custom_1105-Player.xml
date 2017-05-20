@@ -23,52 +23,16 @@
 			</include>
 		</control>
 
-		<!-- Fullscreen info -->
 		<control type="group">
-			<include>fadeinout</include>
-			<visible>Window.IsVisible(seekbar) + !Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Window.IsActive(volumebar)</visible>
-			<control type="grouplist">
-				<top>14</top>
-				<right>148</right>
-				<width>600</width>
-				<height>54</height>
-				<align>right</align>
-				<orientation>horizontal</orientation>
-				<control type="label">
-					<width>auto</width>
-					<height>54</height>
-					<align>right</align>
-					<font>Regular-20</font>
-					<label>$INFO[Player.Time]</label>
-					<textcolor>$VAR[color:Accent]</textcolor>
-				</control>
-				<control type="label">
-					<width>32</width>
-					<height>54</height>
-					<align>center</align>
-					<font>Regular-20</font>
-					<label>/</label>
-					<textcolor>$VAR[color:Accent]</textcolor>
-				</control>
-				<control type="label">
-					<width>auto</width>
-					<height>54</height>
-					<align>right</align>
-					<font>Regular-20</font>
-					<label>$INFO[Player.Duration]</label>
-					<textcolor>$VAR[color:Accent]</textcolor>
-				</control>
-			</control>
-			<control type="label">
-				<top>40</top>
-				<right>148</right>
-				<width>600</width>
-				<height>54</height>
-				<align>right</align>
-				<font>Regular-20</font>
-				<label>$INFO[Player.FinishTime,$LOCALIZE[31323] ]</label>
-				<textcolor>$VAR[color:Accent]</textcolor>
-			</control>
+			<visible>Window.IsActive(seekbar)</visible>
+			<include content="global_Notification">
+				<param name="Symbol">&#57473;</param>
+				<param name="Label">$INFO[Player.Time]</param>
+				<param name="Label2">$INFO[Player.FinishTime,$LOCALIZE[31323] ]</param>
+				<param name="ShowProgress">false</param>
+				<param name="ShowFrame">false</param>
+				<param name="TextColor">$VAR[color:Accent]</param>
+			</include>
 		</control>
 	</controls>
 </window>

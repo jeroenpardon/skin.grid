@@ -1418,6 +1418,13 @@
 	</variable>
 
 <!-- Window titles -->
+
+
+	<variable name="window:Title.Home">
+		<value condition="[Window.IsVisible(volumebar) + !Player.Muted] + Window.IsActive(Home)">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
+		<value></value>
+	</variable>
+
 	<variable name="window:Title.Custom">
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle]</value>
@@ -1479,7 +1486,7 @@
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
 		<value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31530] $INFO[Player.SeekOffset]</value>
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
-		<value>$LOCALIZE[31531]</value>
+		<value>$LOCALIZE[31530]</value>
 	</variable>
 
 	<variable name="window:Title.PVR">

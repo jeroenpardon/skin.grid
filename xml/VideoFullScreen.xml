@@ -3,6 +3,8 @@
 	<onload condition="!String.IsEmpty(Window(home).Property(OSDinfodialogButtonActive))">ClearProperty(OSDinfodialogButtonActive,home)</onload>
 	<defaultcontrol></defaultcontrol>
 	<controls>
-		<include>global_Clock</include>
+		<include content="global_WindowChrome">
+			<param name="Title">$VAR[window:Title.Player]</param>
+		</include>
 	</controls>
 </window>

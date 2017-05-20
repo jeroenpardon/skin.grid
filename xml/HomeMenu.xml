@@ -96,7 +96,7 @@
 		</include>
 
 		<include content="global_WindowChrome">
-			<param name="Left">1792</param>
+			<param name="Title">$VAR[window:Title.Home]</param>
 			<param name="Height">98</param>
 		</include>
 
