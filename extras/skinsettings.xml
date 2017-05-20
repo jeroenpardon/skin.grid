@@ -19,6 +19,12 @@
 	<setting id="home.status" value="system" label="$LOCALIZE[10511]"/>
 	<setting id="home.status" value="feed" label="$LOCALIZE[31020]"/>
 
+	<!-- Date -->
+	<setting id="date.enabled" value="none" label="$LOCALIZE[13113]" default="true"/>
+	<setting id="date.enabled" value="home" label="$LOCALIZE[31271]"/>
+	<setting id="date.enabled" value="global" label="$LOCALIZE[31269]"/>
+	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31270]"/>
+
 	<!-- Global background type -->
 	<setting id="background.type" value="none" label="$LOCALIZE[36502]"/>
 	<setting id="background.type" value="fanart" label="$LOCALIZE[31118]">
@@ -32,6 +38,10 @@
 	<!-- Global scrolling type -->
 	<setting id="global.scrolltype" value="active" label="$LOCALIZE[31220]"/>
 	<setting id="global.scrolltype" value="passive" label="$LOCALIZE[31221]" default="true"/>
+
+	<!-- Text input -->
+	<setting id="input.text" value="keyboard" label="$LOCALIZE[31272]"/>
+	<setting id="input.text" value="nokeyboard" label="$LOCALIZE[31273]" default="true"/>
 
 	<!-- Autoscroll speed -->
 	<setting id="autoscroll.speed" value="none" label="$LOCALIZE[13113]" default="true"/>

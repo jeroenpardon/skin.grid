@@ -15,6 +15,8 @@
 		<param name="Art" default="$INFO[ListItem.Icon]"/>
 		<param name="DiffuseLevel" default="15"/>
 		<param name="DiffuseColor" default="ff000000"/>
+		<param name="SingleLine" default="false"/>
+		<param name="MultiLine" default="true"/>
 		<definition>
 			<control type="image">
 				<width>$PARAM[Width]</width>
@@ -42,8 +44,20 @@
 				<font>Symbols-26</font>
 				<visible>$PARAM[ShowSymbol]</visible>
 			</control>
+			<control type="label">
+				<left>$PARAM[TextLeft]</left>
+				<width>$PARAM[Width]</width>
+				<label>$INFO[ListItem.Label]</label>
+				<height>$PARAM[Height]</height>
+				<font>Regular-22-L</font>
+				<aligny>center</aligny>
+				<textcolor>$PARAM[TextColor]</textcolor>
+				<selectedcolor>$PARAM[TextColor]</selectedcolor>
+				<visible>$PARAM[SingleLine]</visible>
+			</control>
 			<control type="group">
 				<left>$PARAM[TextLeft]</left>
+				<visible>$PARAM[MultiLine]</visible>
 				<control type="label">
 					<top>10</top>
 					<width>$PARAM[Width]</width>

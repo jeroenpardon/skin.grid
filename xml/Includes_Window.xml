@@ -180,7 +180,6 @@
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
 						<visible>$EXP[!Window.HasOverlay]</visible>
-						<visible>Skin.HasSetting(global.showdate)</visible>
 					</control>
 					<control type="label">
 						<width>1600</width>
@@ -190,7 +189,6 @@
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
 						<visible>$EXP[!Window.HasOverlay]</visible>
-						<visible>!Skin.HasSetting(global.showdate)</visible>
 					</control>
 					<control type="label">
 						<width>832</width>
@@ -200,7 +198,6 @@
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
 						<visible>$EXP[Window.HasOverlay]</visible>
-						<visible>!Skin.HasSetting(global.showdate)</visible>
 					</control>
 				</control>
 
@@ -217,8 +214,8 @@
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Text.3]</textcolor>
 						<texturenofocus colordiffuse="ff000000">colorize/5.png</texturenofocus>
-						<visible>![Window.IsVisible(volumebar) + !Player.Muted]</visible>
-						<visible>[[Skin.HasSetting(global.date) + !Window.IsActive(home)] | [Skin.HasSetting(home.date) + Window.IsActive(home)]] + [!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia]</visible>
+						<visible>$EXP[!Window.HasOverlay]</visible>
+						<visible>!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia + [Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),home)]] | [!Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),nohome)]]</visible>
 					</control>
 				</control>
 				

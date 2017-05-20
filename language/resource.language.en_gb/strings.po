@@ -64,7 +64,7 @@ msgid "Add shortcut"
 msgstr ""
 
 msgctxt "#31022"
-msgid "Reset menu items to skin defaults"
+msgid "Reset all menu items to defaults"
 msgstr ""
 
 #. example usage: name of a home menu layout option
@@ -237,6 +237,10 @@ msgctxt "#31078"
 msgid "Backup & Restore"
 msgstr ""
 
+msgctxt "#31079"
+msgid "Descriptions"
+msgstr ""
+
 
 
 
@@ -302,11 +306,11 @@ msgid "Get all artwork"
 msgstr ""
 
 msgctxt "#31115"
-msgid "Set landscape art type"
+msgid "Landscape art type"
 msgstr ""
 
 msgctxt "#31116"
-msgid "Set list view artwork type"
+msgid "List view artwork type"
 msgstr ""
 
 msgctxt "#31117"
@@ -372,11 +376,7 @@ msgid "Select image(s)"
 msgstr ""
 
 msgctxt "#31133"
-msgid "Enable animated backgrounds (resource intensive)"
-msgstr ""
-
-msgctxt "#31134"
-msgid "Set background type"
+msgid "Animated backgrounds"
 msgstr ""
 
 
@@ -426,7 +426,7 @@ msgid "Menus"
 msgstr ""
 
 msgctxt "#31207"
-msgid "Select scrolling type"
+msgid "Scrollbar type"
 msgstr ""
 
 msgctxt "#31208"
@@ -458,7 +458,7 @@ msgid "Library views"
 msgstr ""
 
 msgctxt "#31215"
-msgid "Show now playing video in background"
+msgid "Show playing video in background"
 msgstr ""
 
 msgctxt "#31216"
@@ -478,11 +478,11 @@ msgid "Blend the visualisation and fanart"
 msgstr ""
 
 msgctxt "#31220"
-msgid "Active"
+msgid "Always show"
 msgstr ""
 
 msgctxt "#31221"
-msgid "Passive"
+msgid "Show only when focused"
 msgstr ""
 
 msgctxt "#31222"
@@ -494,15 +494,15 @@ msgid "Select icon"
 msgstr ""
 
 msgctxt "#31224"
-msgid "Show date"
+msgid "Show current date"
 msgstr ""
 
 msgctxt "#31225"
-msgid "Descriptions scrolling speed"
+msgid "Autoscrolling speed"
 msgstr ""
 
 msgctxt "#31226"
-msgid "Set speed"
+msgid "resource intensive"
 msgstr ""
 
 msgctxt "#31227"
@@ -550,7 +550,7 @@ msgid "Debug info"
 msgstr ""
 
 msgctxt "#31238"
-msgid "TV Guide scrolling speed"
+msgid "Guide scrolling speed"
 msgstr ""
 
 msgctxt "#31239"
@@ -584,11 +584,11 @@ msgid "Ratings"
 msgstr ""
 
 msgctxt "#31263"
-msgid "Enable full virtual keyboard"
+msgid "Text input"
 msgstr ""
 
 msgctxt "#31264"
-msgid "Press up in information screens for big (plot) descriptions"
+msgid "Press up in information screens for popup"
 msgstr ""
 
 msgctxt "#31265"
@@ -596,7 +596,7 @@ msgid "Show movie rating overlays in selected viewtypes"
 msgstr ""
 
 msgctxt "#31266"
-msgid "Select menu playback controls"
+msgid "Menu playback controls"
 msgstr ""
 
 msgctxt "#31267"
@@ -607,6 +607,25 @@ msgctxt "#31268"
 msgid "Player controls"
 msgstr ""
 
+msgctxt "#31269"
+msgid "All windows"
+msgstr ""
+
+msgctxt "#31270"
+msgid "Except homescreen"
+msgstr ""
+
+msgctxt "#31271"
+msgid "Homescreen only"
+msgstr ""
+
+msgctxt "#31272"
+msgid "Full keyboard"
+msgstr ""
+
+msgctxt "#31273"
+msgid "Input field only"
+msgstr ""
 
 
 #: osd / player
