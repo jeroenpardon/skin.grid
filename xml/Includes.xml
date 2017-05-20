@@ -25,8 +25,7 @@
 	<constant name="screen_Center">960,540</constant>
 	<constant name="screen_Centerx">960</constant>
 	<constant name="screen_Centery">540</constant>
-	<constant name="fadetime_Thumb">100</constant>
-	<constant name="fadetime_Fanart">300</constant>
+	<constant name="fadetime_Thumb">250</constant>
 	<constant name="fadetime_Slideshow">900</constant>
 	<constant name="transition_Open">250</constant>
 	<constant name="transition_Close">250</constant>

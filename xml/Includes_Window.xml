@@ -57,7 +57,7 @@
 						<include>screen_Dimensions</include>
 						<texture background="true" diffuse="$PARAM[DiffuseTexture]">overlays/background.png</texture>
 						<colordiffuse>$VAR[color:Main]</colordiffuse> 
-						<fadetime>fadetime_Fanart</fadetime>
+						<fadetime>fadetime_Thumb</fadetime>
 					</control>
 					<control type="image">
 						<colordiffuse>$VAR[color:Accent]</colordiffuse>
@@ -94,7 +94,7 @@
 			<control type="image">
 				<include>screen_Dimensions</include>
 				<texture>$VAR[player:Art]</texture>
-				<fadetime>fadetime_Fanart</fadetime>
+				<fadetime>fadetime_Thumb</fadetime>
 				<aspectratio align="center" aligny="center">scale</aspectratio>
 				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
 				<visible>!String.IsEqual(Skin.String(viz.mode),viz) + [String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))]</visible>
