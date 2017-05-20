@@ -38,7 +38,7 @@
 
 	<!-- Window -->
 	<expression name="Window.HasOverlay">[Window.IsVisible(volumebar) + !Player.Muted] | Window.IsActive(1105) | Window.IsActive(notification) | Library.IsScanningVideo | Library.IsScanningMusic | Window.IsVisible(extendedprogressdialog) | Player.HasMedia</expression>
-	<expression name="!Window.HasOverlay">!Window.IsVisible(volumebar) + !Window.IsActive(1105) + !Window.IsActive(notification) + !Library.IsScanningVideo + !Library.IsScanningMusic + !Window.IsVisible(extendedprogressdialog) + !Player.HasMedia</expression>
+	<expression name="!Window.HasOverlay">![Window.IsVisible(volumebar) + !Player.Muted]  + !Window.IsActive(1105) + !Window.IsActive(notification) + !Library.IsScanningVideo + !Library.IsScanningMusic + !Window.IsVisible(extendedprogressdialog) + !Player.HasMedia</expression>
 	<expression name="Window.IsInfo">Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(pvrguideinfo)</expression>
 	<expression name="!Window.IsInfo">![Window.IsVisible(movieinformation) | Window.IsVisible(musicinformation) | Window.IsVisible(addoninformation) | Window.IsVisible(pvrguideinfo)]</expression>
 

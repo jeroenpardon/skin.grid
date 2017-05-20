@@ -9,8 +9,8 @@
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
 				<param name="Title">$VAR[window:Title.Dialog]</param>
-				<param name="ShowSymbol">!Window.Is(mediafilter)</param>
-				<param name="ShowItemCount">true</param>
+				<param name="ShowSymbol">!Window.Is(MediaFilter)</param>
+				<param name="ShowItemCount">Window.Is(MediaFilter)</param>
 			</include>
 		</control>
 		<control type="group">
