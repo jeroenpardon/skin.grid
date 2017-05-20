@@ -369,7 +369,7 @@
 		<param name="ShowFrame" default="true"/>
 		<param name="Visible"/>
 		<param name="DiffuseLevel" default="50"/>
-		<param name="TextColor">$VAR[color:Accent]</param>
+		<param name="TextColor" default="$VAR[color:Main]"/>
 		<definition>
 			<control type="group">
 				<top>$PARAM[Top]</top>
