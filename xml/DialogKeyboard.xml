@@ -441,7 +441,7 @@
 						<width>552</width>
 						<label>$LOCALIZE[20182]</label>
 						<onup>161</onup>
-						<ondown>101</ondown>
+						<ondown>103</ondown>
 						<include>button_Keyboard</include>
 					</control>
 					<!--backspace-->
@@ -449,7 +449,7 @@
 						<width>180</width>
 						<label>&#59002;</label>
 						<onup>165</onup>
-						<ondown>105</ondown>
+						<ondown>106</ondown>
 						<font>Symbols-26</font>
 						<include>button_Keyboard</include>
 					</control>
@@ -464,7 +464,7 @@
 					<!--next-->
 					<control type="button" id="306">
 						<onup>169</onup>
-						<ondown>110</ondown>
+						<ondown>109</ondown>
 						<label>&#58920;</label>
 						<font>Symbols-26</font>
 						<include>button_Keyboard</include>
