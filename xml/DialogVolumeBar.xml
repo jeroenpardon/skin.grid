@@ -2,14 +2,10 @@
 <window>
 	<controls>
 		<control type="group">
-			
-
+			<visible>!Window.IsActive(Home)</visible>
 			<include content="global_WindowChrome">
 				<param name="Title">$VAR[window:Title.Player]</param>
 			</include>
-
 		</control>
-
-
 	</controls>
 </window>
