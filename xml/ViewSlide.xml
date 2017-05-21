@@ -218,6 +218,11 @@
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<visible>$PARAM[ShowLogo]</visible>
 					</control>
+					<!-- Status -->
+					<include content="media_Status">
+						<param name="Top">9</param>
+						<param name="Right">-119</param>
+					</include>
 				</itemlayout>
 				<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
 					<control type="image">
@@ -257,6 +262,11 @@
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<visible>$PARAM[ShowLogo]</visible>
 					</control>
+					<!-- Status -->
+					<include content="media_Status">
+						<param name="Top">9</param>
+						<param name="Right">-119</param>
+					</include>
 				</focusedlayout>
 			</control>
 			<control type="image">

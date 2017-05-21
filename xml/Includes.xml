@@ -302,7 +302,7 @@
 				<top>$PARAM[Top]</top>
 				<width>54</width>
 				<height>54</height>
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + [Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + [Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
 				<control type="image">
 					<width>54</width>
 					<height>54</height>
