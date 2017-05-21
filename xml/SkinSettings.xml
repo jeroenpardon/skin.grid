@@ -103,7 +103,8 @@
 					<onright>6500</onright>
 					<onup>100</onup>
 					<ondown>100</ondown>
-					<onright condition="Integer.IsGreater(Container(100).NumPages,1)">6500</onright>
+					<onright>6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,general)</visible>
 
 					<!-- Startup playlist-->
@@ -198,9 +199,11 @@
 					<height>810</height>
 					<onleft>9001</onleft>
 					<onright>6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<onup>200</onup>
 					<ondown>200</ondown>
-					<onright condition="Integer.IsGreater(Container(200).NumPages,1)">6500</onright>
+					<onright>6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,artwork)</visible>
 					<!-- Backgrounds -->
 					<control type="label" id="201">
@@ -320,9 +323,11 @@
 					<height>810</height>
 					<onleft>9001</onleft>
 					<onright>6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<onup>300</onup>
 					<ondown>300</ondown>
-					<onright condition="Integer.IsGreater(Container(300).NumPages,1)">6500</onright>
+					<onright>6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,information)</visible>
 
 					<!-- Descriptions -->
@@ -390,9 +395,11 @@
 					<height>810</height>
 					<onleft>9001</onleft>
 					<onright>6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<onup>400</onup>
 					<ondown>400</ondown>
-					<onright condition="Integer.IsGreater(Container(400).NumPages,1)">6500</onright>
+					<onright>6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,lookandfeel)</visible>
 
 					<!-- Date -->
@@ -590,10 +597,10 @@
 					<onright>6500</onright>
 					<onup>500</onup>
 					<ondown>500</ondown>
-					<onright condition="Integer.IsGreater(Container(500).NumPages,1)">6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,menus)</visible>
 					<!--home menu-->
-					<control type="label" id="301">
+					<control type="label" id="304">
 						<label>$LOCALIZE[31000]</label>
 						<include>global_Header</include>
 					</control>
@@ -679,7 +686,9 @@
 					<height>810</height>
 					<onleft>9001</onleft>
 					<onright>6500</onright>
-					<onright condition="Integer.IsGreater(Container(600).NumPages,1)">6500</onright>
+					<pagecontrol>6500</pagecontrol>
+					<onright>6500</onright>
+					<pagecontrol>6500</pagecontrol>
 					<include>global_ListScroll</include>
 					<visible>Skin.String(category,addons)</visible>
 					<itemlayout width="1216" height="90">
