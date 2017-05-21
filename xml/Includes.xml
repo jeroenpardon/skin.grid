@@ -726,7 +726,6 @@
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Text.3]</textcolor>
 					<include>fadeinout</include>
-					<visible>!String.IsEqual(Skin.String(home.status),feed)</visible>
 				</control>
 				<control type="rss">
 					<bottom>0</bottom>
@@ -741,22 +740,6 @@
 					<include>fadeinout</include>
 					<visible>String.IsEqual(Skin.String(home.status),rss)</visible>
 				</control>
-
-
-				<control type="fadelabel">
-			        <scrollout>true</scrollout>
-			        <pauseatend>200</pauseatend>
-
-			        <label>$INFO[Container(10004).ListItem().Title]</label>
-					<info>$INFO[Container(10004).ListItem().Title]</info>
-			        <font>Black-22</font>
-			        <textcolor>FFB2D4F5</textcolor>
-			        <textoffsetx>20</textoffsetx>
-			        <scroll>true</scroll>
-			        <randomize>true</randomize>
-			  </control>
-
-
 				<!-- Feed Indicator -->
 				<control type="group">
 					<bottom>0</bottom>

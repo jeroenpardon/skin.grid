@@ -33,22 +33,17 @@
 		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.HasTVTimer | Pvr.HasRadioTimer">$INFO[Pvr.NextRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.NextRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),library)">$VAR[stats:MovieCount]$VAR[stats:ShowCount]$VAR[stats:EpisodeCount]$VAR[stats:MusicVideoCount]$VAR[stats:SongCount]$VAR[stats:AlbumCount]$VAR[stats:ArtistCount]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),system)">$INFO[System.ProfileName]$INFO[System.FriendlyName, | ]$INFO[Network.IPAddress, | ]$INFO[System.InternetState, | ]$INFO[System.Uptime(dd:mm), | ]</value>
-		<value condition="String.IsEqual(Skin.String(home.status),feed)">$VAR[home:Status.FeedItem.1,,  |  ]$VAR[home:Status.FeedItem.2,,  |  ]</value>
+		<value condition="String.IsEqual(Skin.String(home.status),feed)">$VAR[home:Status.FeedItem.1,,  |  ]$VAR[home:Status.FeedItem.2,,  |  ]$VAR[home:Status.FeedItem.3,,  |  ]$VAR[home:Status.FeedItem.4,,  |  ]$VAR[home:Status.FeedItem.5,,  |  ]$VAR[home:Status.FeedItem.6,,  |  ]$VAR[home:Status.FeedItem.7,,  |  ]</value>
 	</variable>
 
 	<variable name="home:Status.FeedItem.1">
-		<value condition="!String.IsEmpty(Container(10001).ListItem().Label)">$INFO[Container(10001).ListItem().TVShowTitle,,: ]$INFO[Container(10001).ListItem().Title]</value>
-		<value condition="!String.IsEmpty(Container(10002).ListItem().Label)">$INFO[Container(10002).ListItem().TVShowTitle,,: ]$INFO[Container(10002).ListItem().Title]</value>
-		<value condition="!String.IsEmpty(Container(10003).ListItem().Label)">$INFO[Container(10003).ListItem().TVShowTitle,,: ]$INFO[Container(10003).ListItem().Title]</value>
-		<value condition="!String.IsEmpty(Container(10004).ListItem().Label)">$INFO[Container(10004).ListItem().TVShowTitle,,: ]$INFO[Container(10004).ListItem().Title]</value>
-		<value condition="!String.IsEmpty(Container(10005).ListItem().Label)">$INFO[Container(10005).ListItem().TVShowTitle,,: ]$INFO[Container(10005).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10001).ListItem().TVShowTitle)">$INFO[Container(10001).ListItem().TVShowTitle,,: ]$INFO[Container(10001).ListItem().Title]</value>
+		<value>$INFO[Container(10001).ListItem().Title]</value>
 	</variable>
 
 	<variable name="home:Status.FeedItem.2">
-		<value condition="!String.IsEmpty(Container(10002).ListItem().Label)">$INFO[Container(10002).ListItem().TVShowTitle,,: ]$INFO[Container(10002).ListItem().Title]</value>
-		<value condition="!String.IsEmpty(Container(10003).ListItem().Label)">$INFO[Container(10003).ListItem().TVShowTitle,,: ]$INFO[Container(10003).ListItem().Title]</value>
-		<value condition="!String.IsEmpty(Container(10004).ListItem().Label)">$INFO[Container(10004).ListItem().TVShowTitle,,: ]$INFO[Container(10004).ListItem().Title]</value>
-		<value condition="!String.IsEmpty(Container(10005).ListItem().Label)">$INFO[Container(10005).ListItem().TVShowTitle,,: ]$INFO[Container(10005).ListItem().Title]</value>
+		<value condition="!String.IsEmpty(Container(10002).ListItem().TVShowTitle)">$INFO[Container(10002).ListItem().TVShowTitle,,: ]$INFO[Container(10002).ListItem().Title]</value>
+		<value>$INFO[Container(10002).ListItem().Title]</value>
 	</variable>
 
 	<variable name="home:Status.FeedItem.3">
