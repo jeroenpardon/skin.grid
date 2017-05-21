@@ -47,8 +47,9 @@
 
 		<!--dialog buttons-->
 			<control type="grouplist" id="9000">
+				<centerleft>50%</centerleft>
 				<top>540</top>
-				<width>100%</width>
+				<width>1664</width>
 				<height>90</height>
 				<onup>50</onup>
 				<onleft>noop</onleft>
@@ -65,13 +66,6 @@
 				</control>
 				<!--cancel-->
 				<control type="button" id="10">
-					<label>$LOCALIZE[106]</label>
-					<width>256</width>
-					<font>Black-24</font>
-					<include>button_Dialog</include>
-				</control>
-				<!--custom-->
-				<control type="button" id="12">
 					<label>$LOCALIZE[106]</label>
 					<width>256</width>
 					<font>Black-24</font>
