@@ -44,15 +44,32 @@
 				<effect type="slide" start="0,0" end="0,1080" time="500" easing="InOut" tween="cubic" delay="2000"/>
 			</animation>
 			<include>startup_Background</include>
-			<control type="image">
+			<control type="group">
 				<centerleft>50%</centerleft>
-				<centertop>50%</centertop>
+				<top>498</top>
 				<width>200</width>
-				<height>84</height>
-				<texture>logos/grid.png</texture>
-				<aspectratio align="center">keep</aspectratio>
-				<colordiffuse>$VAR[color:Accent]</colordiffuse>
-				<include>fadeinout</include>
+				<height>168</height>
+				<control type="image">
+					<width>200</width>
+					<height>84</height>
+					<texture>logos/startup_01.png</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<colordiffuse>$VAR[color:Accent]</colordiffuse>
+					<include>fadeinout</include>
+				</control>
+				<control type="image">
+					<top>84</top>
+					<width>200</width>
+					<height>84</height>
+					<texture>logos/startup_02.png</texture>
+					<aspectratio align="center">keep</aspectratio>
+					<colordiffuse>$VAR[color:Accent]</colordiffuse>
+					<visible>!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready)) | !System.HasAddon(script.grab.fanart)</visible>
+					<animation type="Conditional" condition="!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready)) | !System.HasAddon(script.grab.fanart)">
+						<effect type="fade" start="0" end="100" time="250" delay="500"/>
+						<effect type="slide" start="0,0" end="0,-84" time="500" easing="Out" tween="bounce" delay="500"/>
+					</animation>
+				</control>
 			</control>
 			<control type="group">
 				<left>924</left>

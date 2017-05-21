@@ -193,7 +193,7 @@
 		<midtexture border="0" colordiffuse="$VAR[color:Accent]">colorize/75.png</midtexture>
 		<midtexture border="0" colordiffuse="$VAR[color:Accent]">colorize/75.png</midtexture>
 		<righttexture border="0" colordiffuse="$VAR[color:Accent]">>colorize/75.png</righttexture>
-		<overlaytexture>-</overlaytexture>
+		<overlaytexture></overlaytexture>
 	</default>
 
 	<default type="grouplist">§
