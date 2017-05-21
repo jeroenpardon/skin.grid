@@ -1454,6 +1454,7 @@
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[24003]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(weather)">$LOCALIZE[8]</value>
+		<value condition="Window.IsActive(musicinformation) + Container.Content(artists)">$INFO[ListItem.Artist]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.TVShowTitle]</value>
 		<value>$INFO[ListItem.Title]</value>
 	</variable>
