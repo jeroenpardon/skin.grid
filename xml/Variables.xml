@@ -1205,6 +1205,7 @@
 <!-- Widgets -->
 
 	<variable name="widget:Descriptiom">
+		<value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 
@@ -1219,13 +1220,15 @@
 	</variable>
 
 	<variable name="widget:Label">
-		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>	
+		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="!String.IsEmpty(ListItem.Album)">$INFO[ListItem.Album]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="widget:Label2">
 		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="!String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
@@ -1486,7 +1489,7 @@
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
 		<value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31530] $INFO[Player.SeekOffset]</value>
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
-		<value>$LOCALIZE[31530]</value>
+		<value condition="VideoPlayer.IsFullscreen">$LOCALIZE[31530]</value>
 	</variable>
 
 	<variable name="window:Title.PVR">

@@ -58,7 +58,7 @@
 				<width>1204</width>
 				<hinttext>$INFO[Control.GetLabel(311)]</hinttext>
 				<ondown>100</ondown>
-				<onup>312</onup>
+				<onup>300</onup>
 				<onright>300</onright>
 				<onclick>300</onclick>
 				<focusedcolor>$VAR[color:Accent]</focusedcolor>
