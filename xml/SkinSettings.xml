@@ -88,7 +88,7 @@
 					<include>settings_Menu</include>
 					<label>$LOCALIZE[31204] Grid</label>
 					<onfocus>Skin.SetString(category,about)</onfocus>
-					<onright>700</onright>
+					<onright>1000</onright>
 				</control>		
 			</control>
 
@@ -590,7 +590,7 @@
 					<onright>6500</onright>
 					<onup>500</onup>
 					<ondown>500</ondown>
-					<onright condition="Integer.IsGreater(Container(200).NumPages,1)">6500</onright>
+					<onright condition="Integer.IsGreater(Container(500).NumPages,1)">6500</onright>
 					<visible>Skin.String(category,menus)</visible>
 					<!--home menu-->
 					<control type="label" id="301">
@@ -835,34 +835,13 @@
 				</control>
 
 
-			<!-- Other -->
-				<control type="grouplist" id="900">
-					<width>1216</width>
-					<height>810</height>
-					<onleft>9001</onleft>
-					<onright>6500</onright>
-					<onup>900</onup>
-					<ondown>900</ondown>
-					<onright condition="Integer.IsGreater(Container(900).NumPages,1)">6500</onright>
-					<visible>Skin.String(category,other)</visible>
-
-					
-					
-					
-					
-				</control>
-
-
-
 			<!-- About -->         
-				<control type="grouplist" id="1100">
+				<control type="grouplist" id="1000">
 					<top>10</top>
 					<left>0</left>
 					<width>1216</width>
 					<height>810</height>
 					<onleft>9001</onleft>
-					<onright>6500</onright>
-					<onright condition="Integer.IsGreater(Container(1100).NumPages,1)">6500</onright>
 					<visible>Skin.String(category,about)</visible>
 					<control type="image">
 						<width>256</width>

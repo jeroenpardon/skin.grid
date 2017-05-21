@@ -25,6 +25,7 @@
 				<include>transition_Content</include>
 				<control type="list" id="50">
 					<top>108</top>
+					<onright>6500</onright>
 					<include>view_List-Commons</include>
 					<itemlayout width="screen_Width" height="108">
 						<control type="group">
@@ -125,8 +126,8 @@
 				</control>
 			</control>
 		</control>
-
-	<!--menu-->
+		
+		<!-- Menu -->
 		<include>menu_Options</include>
 	</controls>
 </window>

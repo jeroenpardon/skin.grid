@@ -267,7 +267,7 @@
 				<ondown>$PARAM[OnDown]</ondown>
 				<onleft>SetProperty(MenuOpen,true,Home)</onleft>
 				<onleft>$PARAM[OnLeft]</onleft>
-				<onright condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</onright>
+				<onright>$PARAM[PageControl]</onright>
 				<pagecontrol>$PARAM[PageControl]</pagecontrol>
 				<include>global_ListScroll</include>
 				<!--library-->

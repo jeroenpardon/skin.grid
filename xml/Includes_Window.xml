@@ -460,25 +460,23 @@
 	<include name="global_Scrollbar">
 		<param name="Left" default="50"/>
 		<param name="Top" default="108"/>
-		<param name="OnLeft" default="50"/>
-		<param name="OnUp"/>
 		<param name="Height" default="972"/>
 		<param name="Width" default="8"/>
+		<param name="OnLeft" default="50"/>
 		<param name="Orientation" default="vertical"/>
-		<param name="Visible" default="String.IsEqual(Skin.String(global.scrolltype),active) | Control.HasFocus(6500) + String.IsEqual(Skin.String(global.scrolltype),passive)"/>
 		<definition>
 			<control type="scrollbar" id="6500">
 				<top>$PARAM[Top]</top>
 				<right>$PARAM[Right]</right>
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
-				<onleft>$PARAM[OnLeft]</onleft>
-				<onup>$PARAM[OnUp]</onup>
-				<onright>6000</onright>
+				<onleft condition="!Control.IsVisible(52) + !Control.IsVisible(53)">$PARAM[OnLeft]</onleft>
+				<onup condition="Control.IsVisible(52) | Control.IsVisible(53)">50</onup>
 				<include>fadeinout</include>
 				<include>toggle_Menu</include>
 				<orientation>$PARAM[Orientation]</orientation>
-				<visible allowhiddenfocus="true">$PARAM[Visible]</visible>
+				<animation effect="slide" end="8" time="150" condition="!Control.IsVisible(52) + !Control.IsVisible(53) + String.IsEqual(Skin.String(global.scrolltype),passive) + !Control.HasFocus(6500)">Conditional</animation>
+				<animation effect="slide" end="0,8" time="150" condition="[Control.IsVisible(52) | Control.IsVisible(53)] + String.IsEqual(Skin.String(global.scrolltype),passive) + !Control.HasFocus(6500)">Conditional</animation>
 			</control>
 		</definition>
 	</include>

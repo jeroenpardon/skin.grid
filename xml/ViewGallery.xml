@@ -34,7 +34,7 @@
 				<onup>7000</onup>
 				<onleft>$PARAM[ID]</onleft>
 				<onright>$PARAM[ID]</onright>
-				<ondown condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</ondown>
+				<ondown>6500</ondown>
 				<focusposition>0</focusposition>
 				<pagecontrol>$PARAM[PageControl]</pagecontrol>
 				<orientation>horizontal</orientation>
