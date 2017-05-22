@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">451</defaultcontrol>
-	<onunload condition="!String.IsEmpty(Window(home).Property(BrowseAddons))">ActivateWindow(1100)</onunload>
+	<onunload condition="!String.IsEmpty(Window(home).Property(BrowseAddons))">ActivateWindow(1110)</onunload>
 	<onunload>ClearProperty(BrowseAddons,home)</onunload>
 	<controls>
 
