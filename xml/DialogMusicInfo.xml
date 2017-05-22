@@ -110,6 +110,7 @@
 				<font>Regular-18</font>
 				<align>center</align>
 				<aligny>center</aligny>
+				<scroll>true</scroll>
 				<textcolor>$VAR[color:Text.3]</textcolor>
 			</control>
 

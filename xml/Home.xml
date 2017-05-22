@@ -55,7 +55,6 @@
 					<texture>logos/startup_01.png</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<colordiffuse>$VAR[color:Accent]</colordiffuse>
-					<include>fadeinout</include>
 				</control>
 				<control type="image">
 					<top>84</top>
