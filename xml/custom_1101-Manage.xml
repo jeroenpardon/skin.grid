@@ -139,6 +139,7 @@
 				<!-- Choose fanart -->
 				<control type="group" id="535">
 					<height>90</height>
+					<visible>Container.Content(artists)</visible>
 					<control type="button" id="536">
 						<width>832</width>
 						<label>$LOCALIZE[20413]</label>
