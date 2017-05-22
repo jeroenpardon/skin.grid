@@ -46,7 +46,7 @@
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
 
-				<control type="label">
+				<control type="label" id="505">
 					<label>$LOCALIZE[16106]</label>
 					<include>global_Header</include>
 				</control>
@@ -59,8 +59,8 @@
 						<label>$LOCALIZE[184]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
-						<onup>600</onup>
-						<ondown>520</ondown>
+						<onup>601</onup>
+						<ondown>521</ondown>
 						<onclick>Close</onclick>
 						<onclick>SendClick(2003,6)</onclick>
 						<include>button_Settings</include>
@@ -108,7 +108,7 @@
 					</control>
 				</control>
 
-				<!-- Choose art -->
+				<!-- Choose thumb -->
 				<control type="group" id="530">
 					<height>90</height>
 					<control type="button" id="531">
@@ -116,8 +116,8 @@
 						<label>$VAR[manage:SetArt]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
-						<onup>520</onup>
-						<ondown>541</ondown>
+						<onup>521</onup>
+						<ondown>536</ondown>
 						<onclick>Close</onclick>
 						<onclick>SendClick(2003,10)</onclick>
 						<include>button_Settings</include>
@@ -136,7 +136,35 @@
 					</control>
 				</control>
 
-				<control type="label">
+				<!-- Choose fanart -->
+				<control type="group" id="535">
+					<height>90</height>
+					<control type="button" id="536">
+						<width>832</width>
+						<label>$LOCALIZE[20413]</label>
+						<textoffsetx>114</textoffsetx>
+						<onright>9000</onright>
+						<onup>531</onup>
+						<ondown>541</ondown>
+						<onclick>Close</onclick>
+						<onclick>SendClick(2003,12)</onclick>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>&#57394;</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(536)</visible>
+					</control>
+					<control type="label">
+						<label>&#57394;</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(536)</visible>
+					</control>
+				</control>
+
+				<control type="label" id="539">
 					<label>$LOCALIZE[31107]</label>
 					<include>global_Header</include>
 					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
@@ -151,7 +179,7 @@
 						<label>$LOCALIZE[31114]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
-						<onup>531</onup>
+						<onup>536</onup>
 						<ondown>551</ondown>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
@@ -212,7 +240,7 @@
 						<label>$LOCALIZE[31109]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
-						<onup>550</onup>
+						<onup>551</onup>
 						<ondown>570</ondown>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], clearlogo)</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], clearlogo)</onclick>
@@ -243,7 +271,7 @@
 						<label>$LOCALIZE[31112]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
-						<onup>560</onup>
+						<onup>561</onup>
 						<ondown>600</ondown>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
@@ -274,7 +302,7 @@
 						<label>Artwork Downloader $LOCALIZE[5]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
-						<onup>570</onup>
+						<onup>571</onup>
 						<ondown>511</ondown>
 						<onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
 						<onclick condition="!System.HasAddon(script.artwork.downloader)">InstallAddon(script.artwork.downloader)</onclick>
@@ -294,6 +322,7 @@
 					</control>
 				</control>
 			</control>
+
 			<!--dialog buttons-->
 			<control type="grouplist" id="9000">
 				<top>90</top>
