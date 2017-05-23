@@ -109,6 +109,18 @@
 			<style>uppercase</style>
 		</font>
 		<font>
+			<name>Black-50</name>
+			<filename>Default/Black.ttf</filename>
+			<size>50</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-52</name>
+			<filename>Default/Black.ttf</filename>
+			<size>52</size>
+			<style>uppercase</style>
+		</font>
+		<font>
 			<name>Black-54</name>
 			<filename>Default/Black.ttf</filename>
 			<size>54</size>
@@ -141,15 +153,45 @@
 			<style>uppercase</style>
 		</font>
 		<font>
+			<name>Thin-44</name>
+			<filename>Default/Thin.ttf</filename>
+			<size>44</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-46</name>
+			<filename>Default/Thin.ttf</filename>
+			<size>46</size>
+			<style>uppercase</style>
+		</font>
+		<font>
 			<name>Thin-48</name>
 			<filename>Default/Thin.ttf</filename>
 			<size>48</size>
 			<style>uppercase</style>
 		</font>
 		<font>
+			<name>Thin-50</name>
+			<filename>Default/Thin.ttf</filename>
+			<size>50</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-52</name>
+			<filename>Default/Thin.ttf</filename>
+			<size>52</size>
+			<style>uppercase</style>
+		</font>
+		<font>
 			<name>Thin-54</name>
 			<filename>Default/Thin.ttf</filename>
 			<size>54</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-60</name>
+			<filename>Default/Thin.ttf</filename>
+			<size>60</size>
 			<style>uppercase</style>
 		</font>
 		<font>

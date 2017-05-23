@@ -155,7 +155,7 @@
 					<!--main-->
 					<control type="group">
 						<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
-						<animation effect="fade" start="100" end="35" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
+						<animation effect="fade" start="100" end="25" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
 						<control type="label">
 							<width>128</width>
 							<height>98</height>
@@ -192,7 +192,7 @@
 							<width>1920</width>
 							<height>90</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Thin-54</font>
+							<font>Thin-46</font>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
@@ -204,7 +204,6 @@
 						<!--main-->
 						<control type="group">
 							<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
-							<animation effect="fade" start="100" end="20" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
 							<control type="label">
 								<width>128</width>
 								<height>98</height>
@@ -241,7 +240,7 @@
 								<width>1920</width>
 								<height>90</height>
 								<label>$INFO[ListItem.Label]</label>
-								<font>Black-60</font>
+								<font>Black-52</font>
 								<aligny>center</aligny>
 								<textcolor>$VAR[color:Accent]</textcolor>
 							</control>
@@ -253,7 +252,6 @@
 						<!--main-->
 						<control type="group">
 							<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
-							<animation effect="fade" start="100" end="20" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
 							<control type="label">
 								<width>128</width>
 								<height>98</height>
