@@ -318,7 +318,7 @@
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<selectedcolor>$VAR[color:Accent]</selectedcolor>
 					<font>Symbols-26</font>
-					<visible>Container.Content(episodes) | Container.Content(movies)</visible>
+					<visible>Integer.IsLessOrEqual(ListItem.Property(UnWatchedEpisodes),0) | Container.Content(episodes) | Container.Content(movies)</visible>
 				</control>
 				<control type="label">
 					<width>54</width>
@@ -338,7 +338,7 @@
 				<height>54</height>
 				<visible>$EXP[HasRatingOverlay]</visible>
 				<visible>Skin.HasSetting(ratings.overlay)</visible>
-				<visible>Container.Content(movies) + !Listitem.IsParentFolder</visible>
+				<visible>Container.Content(tvshows) | Container.Content(movies) + !Listitem.IsParentFolder</visible>
 				<animation effect="slide" end="-54" time="0" condition="[ListItem.IsResumable + !String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | !String.IsEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 				<control type="image">
 					<width>54</width>
