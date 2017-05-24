@@ -388,5 +388,16 @@
 	<property property="homeSymbol">&#59205;</property>
 	<property property="homeSymbol">&#59206;</property>
 	<property property="homeSymbol">&#59207;</property>
+
+	<property property="homeSymbol">&#59208;</property>
+	<property property="homeSymbol">&#59209;</property>
+
+	<property property="homeSymbol">&#59210;</property>
+	<property property="homeSymbol">&#59211;</property>
+
+	<property property="homeSymbol">&#59212;</property>
+
+
 	<property property="homeSymbol">&#59221;</property>
+	<property property="homeSymbol">&#59227;</property>
 </overrides>
