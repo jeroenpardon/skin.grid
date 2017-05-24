@@ -849,7 +849,7 @@
 		<!-- Refresh repositories -->
 		<control type="group" id="7012">
 			<height>108</height>
-			<visible>Window.IsActive(1110)</visible>
+			<visible>Window.IsActive(1110) | String.IsEqual(Container.FolderPath,addons://)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -887,7 +887,7 @@
 		<!-- Refresh add-on folders -->
 		<control type="group" id="7013">
 			<height>108</height>
-			<visible>Window.IsActive(1110)</visible>
+			<visible>Window.IsActive(1110) | String.IsEqual(Container.FolderPath,addons://)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
