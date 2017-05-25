@@ -130,11 +130,7 @@
 	</include>
 
 
-
-
-
 <!-- Buttons -->
-
 	<include name="button_Settings">
 		<param name="DiffuseNoFocus" default="ff000000"/>
 		<param name="DiffuseFocus" default="$VAR[color:Accent]"/>
@@ -183,37 +179,44 @@
 	</include>
 
 <!--keyboard-->
+
+	<include name="row_Keyboard">
+		<param name="Height" default="92"/>
+		<definition>
+			<width>1196</width>
+			<height>$PARAM[Height]</height>
+			<control type="image">
+				<width>1196</width>
+				<height>$PARAM[Height]</height>
+				<texture colordiffuse="ff000000">colorize/100.png</texture>
+				<aspectratio align="center" aligny="top">stretch</aspectratio>
+			</control>
+			<control type="image">
+				<width>1196</width>
+				<height>$PARAM[Height]</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<aspectratio align="center" aligny="top">stretch</aspectratio>
+			</control>
+		</definition>
+	</include>
+
 	<include name="button_Keyboard">
-		<param name="ID"/>
-		<param name="Label"/>
-		<param name="Label"/>
-		<param name="AltLabel"/>
-		<param name="Top"/>
-		<param name="Left"/>
 		<param name="Width" default="90"/>
 		<param name="Height" default="90"/>
-		<param name="OnUp"/>
-		<param name="OnDown"/>
-		<param name="OnLeft"/>
-		<param name="OnRight"/>
-		<param name="OnFocus"/>
 		<param name="OnClick" default="noop"/>
-		<param name="Visible"/>
 		<param name="Font" default="Regular-22-L"/>
 		<param name="TextColor" default="$VAR[color:Accent]"/>
 		<param name="FocusedColor" default="$VAR[color:Main]"/>
 		<param name="SelectedColor" default="green"/>
 		<param name="Type" default="button"/>
-		<param name="UseAltTexture"/>
 		<param name="Align" default="center"/>
 		<param name="AlignY" default="center"/>
-		<param name="TextOffsetX"/>
 		<param name="DiffuseFocusTexture" default="75"/>
 		<param name="DiffuseNoFocus" default="$VAR[color:Main]"/>
 		<param name="DiffuseFocus" default="ffffffff"/>
 		<param name="AltDiffuseNoFocus" default="$VAR[color:Main]"/>
 		<param name="AltDiffuseFocus" default="ffffffff"/>
-		<param name="TextureNoFocus" default="1colorize/90.png"/>
+		<param name="TextureNoFocus" default="colorize/90.png"/>
 		<param name="TextureFocus" default="colorize/90.png"/> 
 		<definition>
 			<top>$PARAM[Top]</top> 
@@ -240,6 +243,8 @@
 			<ondown>$PARAM[OnDown]</ondown>
 			<onback>$PARAM[OnBack]</onback>
 			<visible>$PARAM[Visible]</visible>
+			<radiowidth>64</radiowidth>
+			<radioheight>64</radioheight>
 			<usealttexture>$PARAM[UseAltTexture]</usealttexture>
 		</definition>
 	</include>

@@ -43,26 +43,22 @@
 					</include>
 				</control>
 
-				<!-- Thumbnails -->
 				<control type="group">
 					<visible>Control.IsVisible(56)</visible>
 					<include>transition_ViewChange</include>
 					<include content="view_Thumbnails">
 						<param name="ID">56</param>
 						<param name="ViewTypeLabel">$LOCALIZE[536]</param>
-						<param name="Label2">$VAR[media:Info]</param>
-						<param name="Width">1080</param>
+						<param name="ShowInfo">String.IsEmpty(ListItem.Art(icon))</param>
 						<param name="Art">$VAR[art:Square]</param>
-						<param name="ArtWidth">270</param>
-						<param name="ArtHeight">270</param>
-						<param name="ItemWidth">270</param>
-						<param name="ItemHeight">270</param>
-						<param name="Height">972</param>
-						<param name="ShowInfo">false</param>
-					</include>
-					<include content="info_Thumbnails">
-						<param name="Art" value="$VAR[art:Landscape]"/>
-						<param name="Visible" value="true"/>
+						<param name="ArtWidth">416</param>
+						<param name="ArtHeight">416</param>
+						<param name="ItemWidth">416</param>
+						<param name="ItemHeight">416</param>
+						<param name="TextWidth">352</param>
+						<param name="Fallback">views/fallback/square.png</param>
+						<param name="ShowOverlay">!String.IsEmpty(ListItem.Art(icon))</param>
+						<param name="ShowFallback">ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(icon))</param>
 					</include>
 				</control>
 
