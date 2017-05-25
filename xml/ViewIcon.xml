@@ -30,7 +30,7 @@
 		<param name="Logo" default="$VAR[art:Logo]"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
-		<param name="SymbolFont" default="Symbols-26"/>
+		<param name="SymbolFont" default="Symbols-64"/>
 		<param name="Visible"/>
 		<definition>
 			<control type="panel" id="$PARAM[ID]">
@@ -66,7 +66,7 @@
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
 							<label>$PARAM[Symbol]</label>
-							<font>Symbols-64</font>
+							<font>$PARAM[SymbolFont]</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
@@ -88,7 +88,7 @@
 							<animation effect="fade" start="0" end="100" time="150">Focus</animation>
 							<animation effect="fade" start="100" end="0" time="150">UnFocus</animation>
 							<visible>!ListItem.IsParentFolder + ![String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(thumb))]</visible>
-							<visible>$PARAM[ShowInfo]</visible>
+							<visible>$PARAM[ShowOverlay]</visible>
 						</control>
 						<control type="image">
 							<bottom>24</bottom>
@@ -169,7 +169,7 @@
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
 							<label>$PARAM[Symbol]</label>
-							<font>Symbols-64</font>
+							<font>$PARAM[SymbolFont]</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
@@ -190,7 +190,7 @@
 							<bordersize>10</bordersize>
 							<aspectratio>stretch</aspectratio>
 							<visible>!ListItem.IsParentFolder + ![String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(thumb))]</visible>
-							<visible>$PARAM[ShowInfo]</visible>
+							<visible>$PARAM[ShowOverlay]</visible>
 						</control>
 						<control type="image">
 							<bottom>24</bottom>

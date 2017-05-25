@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>7000</menucontrol>
-	<views>50,51,52,521,53,54,55,56</views>
+	<views>50,51,52,521,53,54,55,56,57</views>
 	<controls>
 
 		<!--background-->
@@ -37,7 +37,6 @@
 
 			<!--list-->
 			<control type="group">
-
 				<include>transition_ViewChange</include>
 				<include>view_List</include>
 			</control>
@@ -82,7 +81,9 @@
 			<control type="group">
 				<visible>Control.IsVisible(51)</visible>
 				<include>transition_ViewChange</include>
-				<include>view_BigList</include>
+				<include content="view_BigList">
+					<param name="Visible" value="!Container.Content(addons)"/>
+				</include>
 			</control>
 
 			<!-- Slide -->
@@ -106,11 +107,12 @@
 			<control type="group">
 				<visible>Control.IsVisible(54)</visible>
 				<include>transition_ViewChange</include>
-				<include content="view_Thumbnails">
+				<include content="view_Thumbnails" condition="!Container.Content(addons)">
 					<param name="ID" value="54"/>
 					<param name="ViewTypeLabel" value="$LOCALIZE[31100]"/>
 					<param name="Label2" value="$VAR[media:Info]"/>
 					<param name="Art" value="$VAR[art:Portrait]"/>
+					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="Fallback" value="views/fallback/portrait.png"/>
 					<param name="Frame" value="views/frame/p_fo.png"/>
 					<param name="Width" value="1664"/>
@@ -120,8 +122,10 @@
 					<param name="ItemWidth" value="277.3"/>
 					<param name="ItemHeight" value="408"/>
 					<param name="ShowLogo" value="false"/>
-					<param name="ShowInfo" value="Container.Content(seasons)"/>
-					<param name="Visible" value="[Container.Content(files) + !Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>
+					<param name="ShowInfo" value="Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)"/>
+					<param name="Visible" value="!Container.Content(addons)"/>
+					<param name="TextWidth" value="229"/>
+					<!--<param name="Visible" value="[Container.Content(files) + !Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
 				</include>
 			</control>
 
@@ -129,21 +133,45 @@
 			<control type="group">
 				<visible>Control.IsVisible(55)</visible>
 				<include>transition_ViewChange</include>
-				<include content="view_Thumbnails">
+				<include content="view_Thumbnails" condition="!Container.Content(addons)">
 					<param name="ID" value="55"/>
 					<param name="Label2" value="$VAR[media:Info]"/>
-					<param name="Visible" value="Container.Content(files) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>
 					<param name="ShowLogo" value="$EXP[Views.ShowLogo]"/>
 					<param name="ShowInfo" value="$EXP[Thumbview.ShowInfo]"/>
+					<param name="AspectRatioAlignY" default="center"/>
+					<param name="Fallback">views/fallback/landscape.png</param>
+					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
+					<param name="ShowInfo" value="Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)"/>
+					<param name="Visible" value="!Container.Content(addons)"/>
+					<!--<param name="Visible" value="Container.Content(files) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
+				</include>
+			</control>
+
+			<control type="group">
+				<visible>Control.IsVisible(56)</visible>
+				<include>transition_ViewChange</include>
+				<include content="view_Thumbnails">
+					<param name="ID">56</param>
+					<param name="ViewTypeLabel">$LOCALIZE[536]</param>
+					<param name="Label2">$VAR[media:Info]</param>
+					<param name="Art">$VAR[art:Square]</param>
+					<param name="ArtWidth">416</param>
+					<param name="ArtHeight">416</param>
+					<param name="ItemWidth">416</param>
+					<param name="ItemHeight">416</param>
+					<param name="TextWidth">352</param>
+					<param name="Visible">Container.Content(addons)</param>
+					<param name="Fallback">views/fallback/square.png</param>
+					<param name="ShowFallback">ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</param>
 				</include>
 			</control>
 
 			<!-- Banners -->
 			<control type="group">
-				<visible>Control.IsVisible(56)</visible>
+				<visible>Control.IsVisible(57)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails">
-					<param name="ID" value="56"/>
+					<param name="ID" value="57"/>
 					<param name="ViewTypeLabel" value="$LOCALIZE[20020]"/>
 					<param name="Width" value="1664"/>
 					<param name="Height" value="972"/>
@@ -160,6 +188,7 @@
 					<param name="Visible" value="Container.Content(tvshows)"/>
 					<param name="Art" value="$INFO[ListItem.Art(banner)]"/>
 					<param name="ShowInfo">false</param>
+					<param name="SymbolFont" value="Symbols-46"/>
 				</include>
 			</control>
 		</control>

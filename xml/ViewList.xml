@@ -707,7 +707,7 @@
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="PageControl" default="6500"/>
 		<definition>
-			<control type="list" id="$PARAM[ID]">
+			<control type="list" id="51">
 				<viewtype label="537">biglist</viewtype>
 				<left>0</left>
 				<top>$PARAM[Top]</top>
@@ -721,7 +721,6 @@
 				<pagecontrol>6500</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<include>global_ListScroll</include>
-				<include>transition_Content</include>
 				<itemlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
 					<control type="group">
 						<left>128</left>

@@ -642,7 +642,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) | Window.IsVisible(DialogPVRInfo.xml)">$INFO[ListItem.Icon]</value>
-		<value condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(files) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(files) | Container.Content(videos)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(episodes) + ListItem.IsParentFolder">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="String.IsEqual(Skin.String(views.landscape.art),landscape) + !String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="String.IsEqual(Skin.String(views.landscape.art),fanart) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>

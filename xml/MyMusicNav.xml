@@ -43,10 +43,10 @@
 					</include>
 					<include content="info_List">
 						<param name="Visible">Container.Content(albums) | Container.Content(songs)</param>
-						<param name="Width" value="756"/>
-						<param name="Art" value="$VAR[art:Square]"/>
-						<param name="ArtHeight" value="756"/>
-						<param name="ShowDescription" value="true"/>
+						<param name="Width">756</param>
+						<param name="Art">$VAR[art:Square]</param>
+						<param name="ArtHeight">756</param>
+						<param name="ShowDescription">true</param>
 						<param name="DiffuseTexture">views/diffuse/kodi_landscape.png</param>
 					</include>
 				</control>
@@ -79,11 +79,11 @@
 					<visible>Control.IsVisible(55)</visible>
 					<include>transition_ViewChange</include>
 					<include content="view_Thumbnails">
-						<param name="ID" value="55"/>
-						<param name="Label2" value="$VAR[media:Info]"/>
-						<param name="Views.ShowLogo" value="$EXP[Views.ShowLogo]"/>
-						<param name="ShowInfo" value="$EXP[Thumbview.ShowInfo]"/>
-						<param name="Fallback" value="views/fallback/landscape.png"/>
+						<param name="ID">55</param>
+						<param name="Label2">$VAR[media:Info]</param>
+						<param name="Views.ShowLogo">$EXP[Views.ShowLogo]</param>
+						<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
+						<param name="Fallback">views/fallback/landscape.png</param>
 						<param name="Visible">Container.Content(artists)</param>
 					</include>
 				</control>
@@ -92,16 +92,17 @@
 					<visible>Control.IsVisible(56)</visible>
 					<include>transition_ViewChange</include>
 					<include content="view_Thumbnails">
-						<param name="ID" value="56"/>
-						<param name="Label2" value="$VAR[media:Info]"/>
-						<param name="Art" value="$VAR[art:Square]"/>
-						<param name="ArtWidth" value="416"/>
-						<param name="ArtHeight" value="416"/>
-						<param name="ItemWidth" value="416"/>
-						<param name="ItemHeight" value="416"/>
-						<param name="TextWidth" value="352"/>
+						<param name="ID">56</param>
+						<param name="ViewTypeLabel">$LOCALIZE[536]</param>
+						<param name="Label2">$VAR[media:Info]</param>
+						<param name="Art">$VAR[art:Square]</param>
+						<param name="ArtWidth">416</param>
+						<param name="ArtHeight">416</param>
+						<param name="ItemWidth">416</param>
+						<param name="ItemHeight">416</param>
+						<param name="TextWidth">352</param>
 						<param name="Visible">Container.Content(albums) | Container.Content(songs)</param>
-						<param name="Fallback" value="views/fallback/square.png"/>
+						<param name="Fallback">views/fallback/square.png</param>
 						<param name="ShowFallback">ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</param>
 					</include>
 				</control>
