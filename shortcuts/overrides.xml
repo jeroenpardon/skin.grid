@@ -8,6 +8,9 @@
 	<!-- Save any shortcut with a widgetPath property -->
 	<saveWithProperty>widgetPath</saveWithProperty>
 
+	<!-- Don't share additional submenu levels -->
+	<doNotShareLevels />
+
 	<!-- Settings removal warning-->
 	<warn heading="::LOCAL::19098" message="::LOCAL::31018">ActivateWindow(Settings)</warn>
 
@@ -23,7 +26,6 @@
 		<item control="307">$ADDON[script.skinshortcuts 32027]</item><!--change action-->
 		<item control="305">$ADDON[script.skinshortcuts 32025]</item><!--set label-->
 		<item control="501" condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31223]</item><!--select icon-->
-		<!--<item control="405" condition="String.IsEqual(Window.Property(groupname),mainmenu)">$ADDON[script.skinshortcuts 32072]</item>-->
 		<item control="313">$ADDON[script.skinshortcuts 32117]</item><!--disable-->
 		<item control="302">$ADDON[script.skinshortcuts 32001]</item><!--delete-->
 	</contextmenu>
@@ -32,7 +34,6 @@
 	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
 	<widgetdefaultnode defaultID="movies" group="mainmenu" label="20386" type="movies" path="videodb://recentlyaddedmovies/" target="video">RecentlyAddedMovies</widgetdefaultnode>
 	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
--->
 
 	<!-- Widget layouts -->
 	<propertySettings property="widgetLayout" buttonID="601" title="$LOCALIZE[31223]" showNone="False"/>
