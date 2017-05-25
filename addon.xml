@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.grid" version="0.9.3.1" name="Grid" provider-name="Jeroen">
+<addon id="skin.grid" version="0.9.4.0" name="Grid" provider-name="Jeroen">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.grab.fanart" version="0.14.1"/>
@@ -24,7 +24,7 @@
 			<screenshot>resources/screenshots/05.jpg</screenshot>
 		</assets>
 		<summary lang="en">Clean, bold, focused. No gimmicks.</summary>
-		<description lang="en">Clean, bold design. Transcending complexity. No place for gimmicks. Grid takes a step back to let you focus on the content.</description>
+		<description lang="en">Clean, bold design. Transcending complexity. No place for gimmicks. Focus on your content.</description>
 		<disclaimer lang="de">Die Nutzung von Maus und Touchscreen wird nicht unterstützt.</disclaimer>
 		<disclaimer lang="en">Mouse and touchscreen use not supported</disclaimer>
 		<disclaimer lang="es">Uso de ratón y pantalla táctil no compatible</disclaimer>
