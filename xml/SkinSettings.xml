@@ -806,6 +806,13 @@
 							<include>install_Downloader</include>
 						</item>
 						<item>
+							<label>AutoCompletion for virtual keyboard</label>
+							<label2>$INFO[System.AddonVersion(plugin.program.autocompletion),, &#8226; $LOCALIZE[31071]]</label2>
+							<icon>$INFO[System.AddonIcon(plugin.program.autocompletion)]</icon>
+							<onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
+							<onclick condition="!System.HasAddon(plugin.program.autocompletion)">InstallAddon(plugin.program.autocompletion)</onclick>
+						</item>				
+						<item>
 							<label>Cinemavision</label>
 							<label2>$INFO[System.AddonVersion(script.cinemavision),, &#8226; $LOCALIZE[31071]]</label2>
 							<icon>$INFO[System.AddonIcon(script.cinemavision)]</icon>
