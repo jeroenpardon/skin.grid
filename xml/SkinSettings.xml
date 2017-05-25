@@ -214,7 +214,7 @@
 					<control type="button" id="205">
 						<label>$LOCALIZE[31060]</label>
 						<label2>$INFO[Skin.String(background.type.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.type,header=$LOCALIZE[31134])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.type,header=$LOCALIZE[31060])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -233,7 +233,7 @@
 					<control type="button" id="207">
 						<label>$LOCALIZE[31531]</label>
 						<label2>$INFO[Skin.String(viz.mode.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=viz.mode,header=$LOCALIZE[108] &amp; $LOCALIZE[250])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=viz.mode,header=$LOCALIZE[31531])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -259,7 +259,7 @@
 					<control type="button" id="222">
 						<label>$LOCALIZE[31115]</label>
 						<label2>$INFO[Skin.String(views.landscape.art.label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=views.landscape.art,header=$LOCALIZE[31116])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=views.landscape.art,header=$LOCALIZE[31115])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -361,14 +361,14 @@
 					<control type="button" id="311">
 						<label>$LOCALIZE[31240] - $LOCALIZE[157]</label>
 						<label2>$INFO[Skin.String(ratings.video.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.video,header=$LOCALIZE[31240])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.video,header=$LOCALIZE[31240] - $LOCALIZE[157])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
 					<control type="button" id="312">
 						<label>$LOCALIZE[31240] - $LOCALIZE[2]</label>
 						<label2>$INFO[Skin.String(ratings.music.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.music,header=$LOCALIZE[31240])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.music,header=$LOCALIZE[31240] - $LOCALIZE[2])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -406,7 +406,7 @@
 					<control type="button" id="413">
 						<label>$LOCALIZE[31224]</label>
 						<label2>$INFO[Skin.String(date.enabled.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=date.enabled,header=$LOCALIZE[31116])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=date.enabled,header=$LOCALIZE[31224])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -436,7 +436,7 @@
 					<control type="button" id="412">
 						<label>$LOCALIZE[31007]</label>
 						<label2>$INFO[Skin.String(home.status.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.status,header=$LOCALIZE[31116])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.status,header=$LOCALIZE[31007])</onclick>
 						<include>install_HelperService</include>
 						<include>radio_Settings</include>
 						<enable>!String.IsEqual(Skin.String(homemenu.type),stream)</enable>
@@ -611,12 +611,12 @@
 						<include>install_Shortcuts</include>
 						<include>button_Settings</include>
 					</control>
-					<!--home menu layout-->
+					<!--home menu type-->
 					<control type="button" id="306">
 						<label>$LOCALIZE[31002]</label>
 						<label2>$INFO[Skin.String(homemenu.type.Label)]</label2>
 						<onclick>SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onclick>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=homemenu.type,header=$LOCALIZE[31001])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=homemenu.type,header=$LOCALIZE[31002])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
