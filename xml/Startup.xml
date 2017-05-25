@@ -15,6 +15,7 @@
 	<onload condition="String.IsEmpty(Skin.String(epg.scrollspeed))">Skin.SetString(epg.scrollspeed,normal)</onload>
 	<onload condition="String.IsEmpty(Skin.String(global.scrolltype))">Skin.SetString(global.scrolltype,active)</onload>
 	<onload condition="String.IsEmpty(Skin.String(homemenu.type))">Skin.SetString(homemenu.type,vertical)</onload>
+	<onload condition="String.IsEmpty(Skin.String(input.text))">Skin.SetString(input.text,keyboard)</onload>
 	<onload condition="String.IsEmpty(Skin.String(home.status))">Skin.SetString(home.status,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(menu.controls))">Skin.SetString(menu.controls,player)</onload>
 	<onload condition="String.IsEmpty(Skin.String(ratings.video))">Skin.SetString(ratings.video,disabled)</onload>

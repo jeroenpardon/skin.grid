@@ -104,7 +104,7 @@
 				<!-- Row 1 -->
 				<control type="group">
 					<include>row_Keyboard</include>
-					<visible>String.IsEqual(Skin.String(input.text),keyboard)</visible>
+					<visible>!String.IsEqual(Skin.String(input.text),nokeyboard)</visible>
 					<control type="grouplist" id="1100">
 						<left>10</left>
 						<itemgap>2</itemgap>
@@ -210,7 +210,7 @@
 				<!--row 2-->
 				<control type="group">
 					<include>row_Keyboard</include>
-					<visible>String.IsEqual(Skin.String(input.text),keyboard)</visible>
+					<visible>!String.IsEqual(Skin.String(input.text),nokeyboard)</visible>
 					<control type="grouplist">
 						<left>10</left>
 						<orientation>horizontal</orientation>
@@ -303,7 +303,7 @@
 				<!--row 3-->
 				<control type="group">
 					<include>row_Keyboard</include>
-					<visible>String.IsEqual(Skin.String(input.text),keyboard)</visible>
+					<visible>!String.IsEqual(Skin.String(input.text),nokeyboard)</visible>
 					<control type="grouplist">
 						<left>10</left>
 						<height>90</height>
@@ -397,7 +397,7 @@
 				<!--row 4-->
 				<control type="group">
 					<include>row_Keyboard</include>
-					<visible>String.IsEqual(Skin.String(input.text),keyboard)</visible>
+					<visible>!String.IsEqual(Skin.String(input.text),nokeyboard)</visible>
 					<control type="grouplist">
 						<left>10</left>
 						<height>90</height>
@@ -491,7 +491,7 @@
 					<include content="row_Keyboard">
 						<param name="Height">100</param>
 					</include>
-					<visible>String.IsEqual(Skin.String(input.text),keyboard)</visible>
+					<visible>!String.IsEqual(Skin.String(input.text),nokeyboard)</visible>
 					<control type="grouplist">
 						<left>10</left>
 						<itemgap>2</itemgap>
@@ -542,6 +542,7 @@
 				</control>
 
 				<control type="group">
+					<height>8</height>
 					<visible>String.IsEqual(Skin.String(input.text),nokeyboard)</visible>
 					<include content="row_Keyboard">
 						<param name="Height">8</param>
