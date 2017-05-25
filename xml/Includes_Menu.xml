@@ -1577,7 +1577,7 @@
 				<top>12</top>
 				<label>$LOCALIZE[137]</label>
 				<onup>105</onup>
-				<ondown>28</ondown>
+				<ondown>128</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
@@ -1611,13 +1611,15 @@
 				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 				<visible>Control.HasFocus(28)</visible>
 			</control>
-			<control type="button" id="28">
+			<control type="button" id="128">
 				<top>12</top>
 				<onup>106</onup>
 				<ondown>33</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
+				<label>$LOCALIZE[19141]</label>
 				<include>menu_Button</include>
+				<onclick>SendClick(28)</onclick>
 				<onclick>50</onclick>
 			</control>
 			<control type="group">
@@ -1625,15 +1627,15 @@
 				<left>32</left>
 				<control type="label">
 					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$LOCALIZE[31410]</label>
+					<label>$INFO[Container.FolderName]</label>
 					<include>menu_Label</include>
-					<visible>!Control.HasFocus(28)</visible>
+					<visible>!Control.HasFocus(128)</visible>
 				</control>
 				<control type="label">
 					<width>384</width>
-					<label>$LOCALIZE[31410]</label>
+					<label>$INFO[Container.FolderName]</label>
 					<include>menu_Label</include>
-					<visible>Control.HasFocus(28)</visible>
+					<visible>Control.HasFocus(128)</visible>
 				</control>
 			</control>
 		</control>
@@ -1649,7 +1651,7 @@
 			<control type="button" id="33">
 				<top>12</top>
 				<label>$LOCALIZE[581]</label>
-				<onup>28</onup>
+				<onup>128</onup>
 				<ondown>44</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
