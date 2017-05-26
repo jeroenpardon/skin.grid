@@ -138,7 +138,7 @@
 					<height>90</height>
 					<itemgap>0</itemgap>
 					<onup condition="Control.IsVisible(50)">50</onup>
-					<onup condition="!Control.IsVisible(50) + Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=test,message='"$VAR[media:Description]"')</onup>
+					<onup condition="!Control.IsVisible(50) + Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=$INFO[ListItem.Title],message='"$VAR[media:Description]"')</onup>
 					<orientation>horizontal</orientation>
 					<align>left</align>
 					<!--play / browse-->
