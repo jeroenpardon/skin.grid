@@ -342,7 +342,7 @@
 				<width>54</width>
 				<height>54</height>
 				<visible>$EXP[HasRatingOverlay]</visible>
-				<visible>Skin.HasSetting(ratings.overlay)</visible>
+				<visible>Skin.HasSetting(ratings.overlay) + [String.IsEqual(Skin.String(ratings.video),default) | String.IsEqual(Skin.String(ratings.video),user)]</visible>
 				<visible>Container.Content(tvshows) | Container.Content(movies) + !Listitem.IsParentFolder</visible>
 				<animation effect="slide" end="-54" time="0" condition="[ListItem.IsResumable + !String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | !String.IsEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 				<control type="image">
