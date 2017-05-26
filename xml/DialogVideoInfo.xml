@@ -100,7 +100,7 @@
 				<control type="textbox" id="401">
 					<width>1102</width>
 					<height>295</height>
-					<label>$INFO[ListItem.Plot][CR]$VAR[info:Extended]</label>
+					<label>$INFO[ListItem.Genre,, - ]$INFO[ListItem.Plot][CR]$VAR[info:Extended]</label>
 					<font>Slab-24</font>
 					<textcolor>$VAR[color:Text.3]</textcolor>
 				</control>
