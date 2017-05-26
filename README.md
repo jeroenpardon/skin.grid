@@ -16,7 +16,7 @@ This means you are **not** allowed to sell products with Grid (pre)installed wit
 ![CC license badge](http://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-nc-sa.png)
 
 ### SUPPORT
-If you like Grid and would like to buy me a beer (or coffee), a [donation](http://bit.ly/refocusdonate) is greatly appreciated.
+If you like Grid and would like to buy me a beer (or coffee), a [donation](https://github.com/jeroenpardon/skin.grid/wiki/Support-&-contribute) is greatly appreciated.
 
 ### LINKS
 [Kodi](http://www.kodi.tv/)
