@@ -11,9 +11,7 @@ excerpt:
 "NonCommercial — You may *not* use the material for commercial purposes."
 
 **To Kodi box sellers / streambox sellers, etc:**
-This means you are **not** allowed to sell products with Grid (pre)installed without my **prior written consent**!
-
-Further explanation on this subject can be found [here](https://github.com/jeroenpardon/skin.grid/wiki/License-&-terms-of-use)
+This means you are **not** allowed to sell products with Grid (pre)installed without my **prior written consent**! Further explanation on this subject can be found [here](https://github.com/jeroenpardon/skin.grid/wiki/License-&-terms-of-use)
 
 ![CC license badge](http://mirrors.creativecommons.org/presskit/buttons/80x15/png/by-nc-sa.png)
 
