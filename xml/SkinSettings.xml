@@ -377,6 +377,7 @@
 						<label>$LOCALIZE[31265]</label>
 						<onclick>Skin.ToggleSetting(ratings.overlay)</onclick>
 						<selected>Skin.HasSetting(ratings.overlay)</selected>
+						<enable>String.IsEqual(Skin.String(ratings.video),default) | String.IsEqual(Skin.String(ratings.video),user)</enable>
 						<include>radio_Settings</include>
 					</control>
 					<!-- Parental Guidance ratings-->
