@@ -197,7 +197,7 @@
 						<label>$VAR[widget:Name]</label>
 						<textoffsetx>114</textoffsetx>
 						<onleft>8998</onleft>
-						<onup>611</onup>
+						<onup>612</onup>
 						<ondown>501</ondown>
 						<include>button_Settings</include>
 					</control>
