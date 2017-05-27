@@ -31,7 +31,7 @@
 				</control>
 				<control type="label">
 					<left>114</left>
-					<width>672</width>
+					<width>762</width>
 					<height>100%</height>
 					<font>Black-32</font>
 					<aligny>center</aligny>
@@ -87,6 +87,7 @@
 					<include>global_ListScroll</include>
 					<itemlayout width="900" height="90">
 						<control type="label">
+							<right>0</right>
 							<width>90</width>
 							<height>90</height>
 							<label>$VAR[pvr:Symbol]</label>
@@ -146,6 +147,7 @@
 							<aspectratio>keep</aspectratio>
 						</control>
 						<control type="label">
+							<right>0</right>
 							<width>90</width>
 							<height>90</height>
 							<label>$VAR[pvr:Symbol]</label>
