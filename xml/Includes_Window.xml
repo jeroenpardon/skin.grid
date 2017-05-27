@@ -396,6 +396,7 @@
 							<lefttexture></lefttexture>
 							<midtexture colordiffuse="$VAR[color:Accent]">colorize/100.png</midtexture>
 							<righttexture></righttexture>
+							<visible>Player.HasMedia + Window.IsVisible(1105)</visible>
 							<visible>$PARAM[ShowProgress]</visible>
 						</control>
 						<control type="group">
