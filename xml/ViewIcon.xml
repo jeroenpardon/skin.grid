@@ -31,6 +31,7 @@
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
 		<param name="SymbolFont" default="Symbols-64"/>
+		<param name="ShowOverlay" default="true"/>
 		<param name="Visible"/>
 		<definition>
 			<control type="panel" id="$PARAM[ID]">
