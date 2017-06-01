@@ -142,10 +142,10 @@
 
 <!--toggles-->
 	<include name="toggle_Menu">
-		<animation type="Conditional" condition="ControlGroup(4998).HasFocus">
+		<animation type="Conditional" condition="ControlGroup(4998).HasFocus()">
 			<effect type="slide" end="384" tween="Sine" easing="Out" time="transition_Open"/>
 		</animation>
-		<animation type="Conditional" condition="!ControlGroup(4998).HasFocus">
+		<animation type="Conditional" condition="!ControlGroup(4998).HasFocus()">
 			<effect type="slide" end="0" tween="Sine" easing="Out" time="transition_Close"/>
 		</animation>
 	</include>

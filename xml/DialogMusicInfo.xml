@@ -134,7 +134,7 @@
 					<itemgap>0</itemgap>
 					<onup condition="String.IsEqual(Window.Property(InfoSwitch),$LOCALIZE[21888])">50</onup>
 					<onup condition="Control.IsVisible(50)">50</onup>
-					<onup condition="!Control.IsVisible(50) + Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=test,message='"$VAR[media:Description]"')</onup>
+					<onup condition="!Control.IsVisible(50) + Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=$INFO[ListItem.Title],message='"$VAR[media:Description]"')</onup>
 					<onleft>5000</onleft>
 					<onright>5000</onright>
 					<align>center</align>

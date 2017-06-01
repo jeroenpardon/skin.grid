@@ -16,13 +16,13 @@
 				<width>900</width>
 				<height>90</height>
 				<control type="image">
-					<width>810</width>
+					<width>900</width>
 					<height>90</height>
 					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="label">
-					<width>90</width>
+					<width>108</width>
 					<height>100%</height>
 					<font>Symbols-32</font>
 					<align>center</align>
@@ -37,20 +37,6 @@
 					<aligny>center</aligny>
 					<label>$INFO[VideoPlayer.ChannelGroup] $INFO[System.Date(dd MMMMM), - ]$INFO[System.Time(hh:mm), - ]</label>
 					<textcolor>$VAR[color:Accent]</textcolor>
-				</control>
-				<control type="button">
-					<right>0</right>
-					<width>90</width>
-					<height>100%</height>
-					<font>Symbols-32</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<label>&#58950;</label>
-					<onclick>Close</onclick>
-					<textcolor>$VAR[color:Text.3]</textcolor>
-					<focusedcolor>$VAR[color:Main]</focusedcolor>
-					<texturefocus colordiffuse="$VAR[color:Accent]">colorize/100.png</texturefocus>
-					<texturenofocus colordiffuse="$VAR[color:Main]">colorize/100.png</texturenofocus>
 				</control>
 			</control>
 

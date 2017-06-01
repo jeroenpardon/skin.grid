@@ -2,7 +2,12 @@
 
 	<!-- Art -->
 	<expression name="Art.IsPortrait">[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + String.IsEqual(Skin.String(view.list.art),posters)] | Container.Content(actors)</expression>	
-	<expression name="Art.IsLandscape">Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(artists) | Container.Content(addons) | Container.Content(files) | [!Skin.String(view.list.art,posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] | String.StartsWith(Container.FolderPath,plugin://plugin.video)]</expression>
+	
+
+
+	<expression name="Art.IsLandscape">Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(artists) | Container.Content(addons) | [Container.Content(files) + Container.HasFiles] | [!Skin.String(view.list.art,posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] | String.StartsWith(Container.FolderPath,plugin://plugin.video)]</expression>
+
+
 	<expression name="Art.IsSquare">Container.Content(albums) | Container.Content(songs)</expression>
 	<expression name="Art.IsThumb">Container.Content(videos)</expression>
 
@@ -16,10 +21,6 @@
 	<!-- Folderpath -->
 	<expression name="FolderPath.IsTMDB">String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb) | String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies) | String.StartsWith(ListItem.Icon,http://image.tmdb.org/) | String.Contains(ListItem.FilenameAndPath,tmdb)</expression>
 
-	<!-- ListItems -->
-	<expression name="IsParent">[ListItem.IsParentFolder | String.StartsWith(ListItem.Label,* All)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
-	<expression name="!IsParent">!ListItem.IsParentFolder + !String.StartsWith(ListItem.Label,* All) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
-
 	<!-- Player -->
 	<expression name="IsPlaying">![Player.Paused | Player.Caching | Player.Seeking | Player.Rewinding | Player.Forwarding | Player.DisplayAfterSeek]</expression>
 	<expression name="!IsPlaying">Player.Paused | Player.Caching | Player.Seeking | Player.Rewinding | Player.Forwarding | Player.DisplayAfterSeek</expression>
@@ -27,9 +28,13 @@
 	<!-- Ratings -->
 	<expression name="HasRatingOverlay">[String.IsEqual(Skin.String(ratings.music),user) + String.IsEqual(ListItem.DBTYPE,musicvideo) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)] | [String.IsEqual(Skin.String(ratings.video),default) + !String.IsEmpty(ListItem.Rating)] | [String.IsEqual(Skin.String(ratings.video),user) + !String.IsEmpty(ListItem.UserRating)] | [String.IsEqual(Skin.String(ratings.video),imdb) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.IMDB))] | [String.IsEqual(Skin.String(ratings.video),imdbpercent) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.percent.IMDB))] | [String.IsEqual(Skin.String(ratings.video),mc) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.MC))] | [String.IsEqual(Skin.String(ratings.video),rt) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))] | [String.IsEqual(Skin.String(ratings.video),tmdb) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))]</expression>
 	
+	<!-- Listitems -->
+	<expression name="ListItem.IsParent">[ListItem.IsParentFolder | String.StartsWith(ListItem.Label,* All)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
+	<expression name="!ListItem.IsParent">!ListItem.IsParentFolder + !String.StartsWith(ListItem.Label,* All) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
+	<expression name="ListItem.HasInfo">!String.IsEmpty(ListItem.Label2) | [Container.Content(artists) + !String.IsEmpty(ListItem.Genre)] | String.StartsWith(Container.FolderPath,pvr://)</expression>
+	<expression name="!ListItem.HasInfo">String.IsEmpty(ListItem.Label2) + ![Container.Content(artists) + !String.IsEmpty(ListItem.Genre)] + !String.StartsWith(Container.FolderPath,pvr://)</expression>
+
 	<!-- Viewtypes -->
-	<expression name="Listview.SingleLine">String.IsEmpty(ListItem.Label2) + ![Container.Content(seasons) | Container.Content(addons) | String.StartsWith(Container.FolderPath,pvr://channels/)]</expression>
-	<expression name="Listview.MultiLine">!String.IsEmpty(ListItem.Label2) | [String.IsEmpty(ListItem.Label2) + Container.Content(seasons)] | [String.IsEmpty(ListItem.Label2) +Container.Content(addons)] | String.StartsWith(Container.FolderPath,pvr://channels/)</expression>
 	<expression name="Thumbview.ShowInfo">Container.Content(episodes) | [String.IsEqual(Skin.String(views.landscape.art),fanart) + !Skin.HasSetting(logos.enable)] | [String.IsEqual(Skin.String(views.landscape.art),fanart) + Skin.HasSetting(logos.enable)  + String.IsEmpty(ListItem.Art(clearlogo)) + String.IsEmpty(ListItem.Art(tvshow.clearlogo))] | [String.IsEqual(Skin.String(views.landscape.art),landscape) + String.IsEmpty(ListItem.Art(landscape))]</expression>
 	<expression name="Views.ListHasFocus">![Window.IsActive(contextmenu) | Control.HasFocus(6000) | ControlGroup(7000).HasFocus() | Control.HasFocus(8000) | Control.HasFocus(7100) | ControlGroup(8000).HasFocus() | ControlGroup(9000).HasFocus() | ControlGroup(8999).HasFocus() | ControlGroup(8998).HasFocus() | ControlGroup(8997).HasFocus()]</expression>
 	<expression name="!Views.ListHasFocus">Window.IsVisible(virtualkeyboard) | Window.IsActive(contextmenu) | Control.HasFocus(6500) | Control.HasFocus(6000) | ControlGroup(7000).HasFocus() | Control.HasFocus(7100) | Control.HasFocus(8000) | ControlGroup(8000).HasFocus() | ControlGroup(9000).HasFocus() | ControlGroup(8999).HasFocus() | ControlGroup(8998).HasFocus() | ControlGroup(8997).HasFocus()</expression>

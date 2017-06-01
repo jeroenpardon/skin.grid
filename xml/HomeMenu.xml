@@ -7,7 +7,7 @@
 			<control type="group">
 				<include>transition_HomeMenu</include>
 
-				<!--background-->
+				<!-- Background -->
 				<include content="global_Background">
 					<param name="GridTexture">overlays/108.png</param>
 				</include>
@@ -332,7 +332,7 @@
 
 				<!-- Scroll indicators -->
 				<control type="label">
-					<width>128</width>
+					<width>108</width>
 					<height>98</height>
 					<font>Symbols-32</font>
 					<label>&#58919;</label>
@@ -344,7 +344,7 @@
 				</control>
 				<control type="label">
 					<bottom>0</bottom>
-					<width>128</width>
+					<width>108</width>
 					<height>98</height>
 					<font>Symbols-32</font>
 					<label>&#58922;</label>
@@ -375,20 +375,20 @@
 							<animation effect="fade" start="100" end="15" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
 							<control type="label">
 								<left>0</left>
-								<width>128</width>
+								<width>108</width>
 								<height>98</height>
-								<font>Symbols-32</font>
+								<font>Symbols-26</font>
 								<label>$VAR[home:Symbol]</label>
 								<align>center</align>
 								<aligny>center</aligny>
 								<textcolor>$VAR[color:Text.2]</textcolor>
 							</control>
 							<control type="label">
-								<left>128</left>
+								<left>108</left>
 								<width>576</width>
-								<height>90</height>
+								<height>98</height>
 								<label>$INFO[ListItem.Label]</label>
-								<font>Thin-48</font>
+								<font>Thin-42</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>$VAR[color:Accent]</textcolor>
@@ -400,7 +400,7 @@
 							<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 							<control type="label">
 								<left>0</left>
-								<width>128</width>
+								<width>108</width>
 								<height>98</height>
 								<font>Symbols-32</font>
 								<label>$VAR[home:Symbol]</label>
@@ -409,7 +409,7 @@
 								<textcolor>$VAR[color:Text.2]</textcolor>
 							</control>
 							<control type="label">
-								<left>128</left>
+								<left>108</left>
 								<width>576</width>
 								<height>90</height>
 								<label>$INFO[ListItem.Label]</label>
@@ -421,57 +421,119 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="1920" height="98">
-						<!--main-->
+
 						<control type="group">
-							<width>576</width>
-							<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
-							<animation effect="fade" start="100" end="15" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
-							<control type="label">
-								<left>0</left>
-								<width>128</width>
-								<height>98</height>
-								<font>Symbols-32</font>
-								<label>$VAR[home:Symbol]</label>
-								<align>center</align>
-								<aligny>center</aligny>
-								<textcolor>$VAR[color:Text.2]</textcolor>
-							</control>
-							<control type="label">
-								<left>128</left>
+							<visible>Control.HasFocus(9000)</visible>
+
+							<!--main-->
+							<control type="group">
 								<width>576</width>
-								<height>98</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>Black-54</font>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>$VAR[color:Accent]</textcolor>
+								<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
+								<animation effect="fade" start="100" end="15" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
+								<control type="label">
+									<left>0</left>
+									<width>108</width>
+									<height>98</height>
+									<font>Symbols-32</font>
+									<label>$VAR[home:Symbol]</label>
+									<align>center</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[color:Text.2]</textcolor>
+								</control>
+								<control type="label">
+									<left>108</left>
+									<width>576</width>
+									<height>98</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Black-54</font>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[color:Accent]</textcolor>
+								</control>
+							</control>
+							<!--sub-->
+							<control type="group">
+								<width>576</width>
+								<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
+								<control type="label">
+									<left>0</left>
+									<width>108</width>
+									<height>98</height>
+									<font>Symbols-32</font>
+									<label>$VAR[home:Symbol]</label>
+									<align>center</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[color:Text.2]</textcolor>
+								</control>
+								<control type="label">
+									<left>108</left>
+									<width>576</width>
+									<height>98</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Special</font>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[color:Accent]</textcolor>
+								</control>
 							</control>
 						</control>
-						<!--sub-->
+
 						<control type="group">
-							<width>576</width>
-							<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
-							<control type="label">
-								<left>0</left>
-								<width>128</width>
-								<height>98</height>
-								<font>Symbols-32</font>
-								<label>$VAR[home:Symbol]</label>
-								<align>center</align>
-								<aligny>center</aligny>
-								<textcolor>$VAR[color:Text.2]</textcolor>
-							</control>
-							<control type="label">
-								<left>128</left>
+							<visible>!Control.HasFocus(9000)</visible>
+
+							<!--main-->
+							<control type="group">
 								<width>576</width>
-								<height>98</height>
-								<label>$INFO[ListItem.Label]</label>
-								<font>Special</font>
-								<align>left</align>
-								<aligny>center</aligny>
-								<textcolor>$VAR[color:Accent]</textcolor>
+								<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
+								<animation effect="fade" start="100" end="15" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
+								<control type="label">
+									<left>0</left>
+									<width>108</width>
+									<height>98</height>
+									<font>Symbols-26</font>
+									<label>$VAR[home:Symbol]</label>
+									<align>center</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[color:Text.2]</textcolor>
+								</control>
+								<control type="label">
+									<left>108</left>
+									<width>576</width>
+									<height>98</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Thin-42</font>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[color:Accent]</textcolor>
+								</control>
+							</control>
+							<!--sub-->
+							<control type="group">
+								<width>576</width>
+								<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
+								<control type="label">
+									<left>0</left>
+									<width>108</width>
+									<height>98</height>
+									<font>Symbols-32</font>
+									<label>$VAR[home:Symbol]</label>
+									<align>center</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[color:Text.2]</textcolor>
+								</control>
+								<control type="label">
+									<left>108</left>
+									<width>576</width>
+									<height>90</height>
+									<label>$INFO[ListItem.Label]</label>
+									<font>Thin-42</font>
+									<align>left</align>
+									<aligny>center</aligny>
+									<textcolor>$VAR[color:Accent]</textcolor>
+								</control>
 							</control>
 						</control>
+
 					</focusedlayout>
 					<content>
 						 <include>skinshortcuts-allmenus</include>

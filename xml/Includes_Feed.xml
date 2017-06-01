@@ -36,7 +36,7 @@
 					<include condition="String.IsEqual(Skin.String(homemenu.type),stream)">skinshortcuts-template-widget_Stream</include>
 				</control>
 
-				<!-- Widget scroll inficators -->
+				<!-- Widget scroll indicators -->
 				<control type="label">
 					<right>10</right>
 					<top>10</top>
@@ -67,8 +67,38 @@
 		</definition>
 	</include>
 
+	<include name="widget_Header">
+		<definition>
+			<control type="group" id="$PARAM[HeaderID]">
+				<width>1920</width>
+				<height>54</height>
+				<visible>Skin.HasSetting(widget.name)</visible>
+				<control type="label" id="$PARAM[HeaderLabel]">
+					<width>1920</width>
+					<textoffsetx>24</textoffsetx>
+					<label>$PARAM[WidgetHeader]</label>
+					<font>Regular-18</font>
+					<height>54</height>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label" id="$PARAM[HeaderLabel2]">
+					<right>0</right>
+					<width>1920</width>
+					<textoffsetx>24</textoffsetx>
+					<label>$PARAM[WidgetName]</label>
+					<font>Regular-18</font>
+					<height>54</height>
+					<align>right</align>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+			</control>
+		</definition>
+	</include>
+
 	<!-- Widget base layout -->
 	<include name="widget_Layout">
+		<param name="BigInfoFont" default="Black-54"/>
+		<param name="BigInfoFont2" default="Black-26"/>
 		<definition>
 			<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
 				<control type="image">
@@ -83,8 +113,10 @@
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
 					<bordersize>10</bordersize>
-					<visible>$PARAM[Info]</visible>
+					<visible>$PARAM[Overlay]</visible>
 				</control>
+
+				<!-- Info -->
 				<control type="group">
 					<left>32</left>
 					<width>$PARAM[ItemWidth]</width>
@@ -108,6 +140,44 @@
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Text.2]</textcolor>
 					</control>
+				</control>
+
+				<!-- Short info -->
+				<control type="group">
+					<bottom>10</bottom>
+					<width>$PARAM[ItemWidth]</width>
+					<height>$PARAM[Height]</height>
+					<visible>$PARAM[ShortInfo]</visible>
+					<control type="image">
+						<top>20</top>
+						<right>10</right>
+						<width>80</width>
+						<height>54</height>
+						<texture colordiffuse="$VAR[color:Text.2]">colorize/90.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="label" id="66">
+						<top>20</top>
+						<right>10</right>
+						<width>80</width>
+						<height>54</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[widget:ShortLabel]</label>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						<font>Regular-18</font>
+					</control>
+				</control>
+
+				<!-- Logo -->
+				<control type="image">
+					<bottom>20</bottom>
+					<width>100%</width>
+					<height>40%</height>
+					<texture>$VAR[art:Logo]</texture>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<visible>$PARAM[Logo]</visible>
 				</control>
 			</itemlayout>
 			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
@@ -146,6 +216,46 @@
 						<visible>$PARAM[Overlay]</visible>
 					</control>
 				</control>
+
+				<!-- Short info -->
+				<control type="group">
+					<bottom>10</bottom>
+					<width>$PARAM[ItemWidth]</width>
+					<height>$PARAM[Height]</height>
+					<visible>$PARAM[ShortInfo]</visible>
+					<control type="image">
+						<top>20</top>
+						<right>10</right>
+						<width>80</width>
+						<height>54</height>
+						<texture colordiffuse="$VAR[color:Text.2]">colorize/100.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="label" id="66">
+						<top>20</top>
+						<right>10</right>
+						<width>80</width>
+						<height>54</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$VAR[widget:ShortLabel]</label>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						<font>Regular-18</font>
+					</control>
+				</control>
+
+				<!--  Logo -->
+				<control type="image">
+					<bottom>20</bottom>
+					<width>100%</width>
+					<height>40%</height>
+					<texture>$VAR[art:Logo]</texture>
+					<aspectratio align="center" aligny="bottom">keep</aspectratio>
+					<visible>$PARAM[Logo]</visible>
+				</control>
+
+				<!-- Info -->
 				<control type="group">
 					<left>32</left>
 					<width>$PARAM[ItemWidth]</width>
@@ -170,6 +280,8 @@
 						<textcolor>$VAR[color:Text.2]</textcolor>
 					</control>
 				</control>
+
+				<!-- Big Info -->
 				<control type="group">
 					<left>64</left>
 					<width>$PARAM[ItemWidth]</width>
@@ -180,7 +292,7 @@
 						<label>$VAR[widget:Label]</label>
 						<width>$PARAM[TextWidth]</width>
 						<height>28</height>
-						<font>Black-64</font>
+						<font>$PARAM[BigInfoFont]</font>
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Accent]</textcolor>
 					</control>
@@ -189,7 +301,7 @@
 						<height>24</height>
 						<width>$PARAM[TextWidth]</width>
 						<label>$VAR[widget:Label2]</label>
-						<font>Black-26</font>
+						<font>$PARAM[BigInfoFont2]</font>
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Text.2]</textcolor>
 					</control>

@@ -568,7 +568,7 @@
 				<label>&#57483;</label>
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Symbols-24</font>
-				<visible>$EXP[!IsParent]</visible>
+				<visible>$EXP[!ListItem.IsParent]</visible>
 				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)</visible>
 			</control>
 			<control type="label">
@@ -577,7 +577,7 @@
 				<label>$INFO[ListItem.Genre]&#32;&#32;</label>
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Regular-20</font>
-				<visible>$EXP[!IsParent]</visible>
+				<visible>$EXP[!ListItem.IsParent]</visible>
 				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | Container.Content(albums) | Container.Content(artists)</visible>
 			</control>
 			<!-- Playcount -->

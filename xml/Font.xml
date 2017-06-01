@@ -103,6 +103,24 @@
 			<style>uppercase</style>
 		</font>
 		<font>
+			<name>Black-36</name>
+			<filename>Default/Black.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-40</name>
+			<filename>Default/Black.ttf</filename>
+			<size>40</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-42</name>
+			<filename>Default/Black.ttf</filename>
+			<size>42</size>
+			<style>uppercase</style>
+		</font>
+		<font>
 			<name>Black-48</name>
 			<filename>Default/Black.ttf</filename>
 			<size>48</size>

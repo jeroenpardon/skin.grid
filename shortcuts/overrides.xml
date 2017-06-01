@@ -35,16 +35,28 @@
 	<widgetdefaultnode defaultID="movies" group="mainmenu" label="20386" type="movies" path="videodb://recentlyaddedmovies/" target="video">RecentlyAddedMovies</widgetdefaultnode>
 	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
 
-	<!-- Widget layouts -->
+	<!-- Widget layout -->
 	<propertySettings property="widgetLayout" buttonID="601" title="$LOCALIZE[31223]" showNone="False"/>
-	<propertyfallback property="widgetLayout" label="$LOCALIZE[31072]">Fullscreen</propertyfallback>
-	<property property="widgetLayout" label="$LOCALIZE[31072]">Fullscreen</property>
-	<property property="widgetLayout" label="$LOCALIZE[31044]">Spotlight</property>
-	<property property="widgetLayout" label="$LOCALIZE[31102]">Landscape</property>
-	<property property="widgetLayout" label="$LOCALIZE[31101]">Portrait</property>
-	<property property="widgetLayout" label="$LOCALIZE[31125]">Square</property>
-	<property property="widgetLayout" label="$LOCALIZE[21371]">Thumbnail</property>
-	<property property="widgetLayout" label="$LOCALIZE[20020]">Banner</property>
+	<propertyfallback property="widgetLayout" label="$LOCALIZE[31035]">wide</propertyfallback>
+	<property property="widgetLayout" label="$LOCALIZE[31034]">fullscreen</property>
+	<property property="widgetLayout" label="$LOCALIZE[31035]">wide</property>
+	<property property="widgetLayout" label="$LOCALIZE[31036]">landscape</property>
+	<property property="widgetLayout" label="$LOCALIZE[31037]">portrait</property>
+	<property property="widgetLayout" label="$LOCALIZE[31038]">square</property>
+
+	
+	<!-- Widget art -->
+	<propertySettings property="widgetArt" buttonID="602" title="$LOCALIZE[31223]" showNone="False"/>
+	<propertyfallback property="widgetArt" label="fanart">fanart</propertyfallback>
+	
+	<property property="widgetArt" label="fanart" condition="!IsEmpty(Container(8000).ListItem.Art(fanart))">fanart</property>
+	<property property="widgetArt" label="fanart">views/fallback/landscape.png</property>
+
+	<property property="widgetArt" label="landscape">landscape</property>
+	<property property="widgetArt" label="thumbnail" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType),videos)">thumbnail</property>
+
+
+
 
 	<!-- Widget sorting method -->
 	<propertySettings property="widgetSortMethod" buttonID="603" title="$LOCALIZE[581]" showNone="True" />

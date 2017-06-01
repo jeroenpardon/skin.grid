@@ -2,52 +2,44 @@
 <window>
 	<controls>
 		<control type="group">
-			<top>0</top>
-			<right>128</right>
-			<width>756</width>
-			<height>108</height>
-			<include>fadeinout</include>
-			<include>toggle_Menu</include>
-			<animation effect="slide" time="100" end="118,10" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),stream)">Conditional</animation>
-			<visible>!Window.IsActive(startup) + Skin.String(HomeLoaded,True)</visible>
-			<control type="image">
-				<width>756</width>
-				<height>108</height>
-				<texture colordiffuse="$VAR[color:Accent]">colorize/50.png</texture>
-			</control>
-			<control type="progress" id="32">
-				<width>756</width>
-				<lefttexture></lefttexture>
-				<midtexture colordiffuse="$VAR[color:Accent]">colorize/75.png</midtexture>
-				<righttexture></righttexture>
-			</control>
-			<control type="label">
-				<width>108</width>
-				<height>108</height>
-				<font>Symbols-38</font>
-				<label>&#57483;</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>$VAR[color:Main]</textcolor>
-			</control>
-			<control type="group">
-				<left>108</left>
-				<control type="label" id="30">
-					<top>16</top>
-					<width>624</width>
-					<height>54</height>
-					<font>Black-22</font>
-					<textcolor>$VAR[color:Main]</textcolor>
-				</control>
-				<control type="label" id="31">
-					<top>54</top>
-					<width>624</width>
-					<height>54</height>
-					<aligny>top</aligny>
-					<font>Regular-20</font>
-					<textcolor>$VAR[color:Main]</textcolor>
-				</control>
-			</control>
+			<visible>!Window.IsActive(home)</visible>
+			<include content="global_Notification" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
+				<param name="Left">1036</param>
+				<param name="Height">108</param>
+				<param name="Width">756</param>
+				<param name="Symbol">&#57483;</param>
+				<param name="ID1">30</param>
+				<param name="ID2">31</param>
+				<param name="ProgressID">32</param>
+				<param name="ProgressInfo"></param>
+				<param name="TextColor">$VAR[color:Main]</param>
+			</include>
+			<include content="global_Notification" condition="String.IsEqual(Skin.String(view.list.art.Label),posters)">
+				<param name="Left">1124</param>
+				<param name="Height">108</param>
+				<param name="Width">668</param>
+				<param name="Symbol">&#57483;</param>
+				<param name="ID1">30</param>
+				<param name="ID2">31</param>
+				<param name="ProgressID">32</param>
+				<param name="ProgressInfo"></param>
+				<param name="TextColor">$VAR[color:Main]</param>
+			</include>
+		</control>
+		<control type="group">
+			<visible>Window.IsActive(home)</visible>
+			<include content="global_Notification" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
+				<param name="Left">1036</param>
+				<param name="Height">98</param>
+				<param name="Width">756</param>
+				<param name="Symbol">&#57483;</param>
+				<param name="InfoTop">9</param>
+				<param name="ID1">30</param>
+				<param name="ID2">31</param>
+				<param name="ProgressID">32</param>
+				<param name="ProgressInfo"></param>
+				<param name="TextColor">$VAR[color:Main]</param>
+			</include>
 		</control>
 	</controls>
 </window>

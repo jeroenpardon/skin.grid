@@ -49,6 +49,11 @@
 						<param name="ShowDescription">true</param>
 						<param name="DiffuseTexture">views/diffuse/kodi_landscape.png</param>
 					</include>
+
+					<!--landscape-->
+					<include content="info_List">
+						<param name="Visible">$EXP[Art.IsLandscape]</param>
+					</include>
 				</control>
 
 				<!-- Big List -->
@@ -75,6 +80,7 @@
 					</include>
 				</control>
 
+				<!-- Landscape -->
 				<control type="group">
 					<visible>Control.IsVisible(55)</visible>
 					<include>transition_ViewChange</include>
@@ -84,7 +90,7 @@
 						<param name="Views.ShowLogo">$EXP[Views.ShowLogo]</param>
 						<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
 						<param name="Fallback">views/fallback/landscape.png</param>
-						<param name="Visible">Container.Content(artists)</param>
+						<param name="Visible">Container.Content(artists) | Container.Content(musicvideos)</param>
 					</include>
 				</control>
 

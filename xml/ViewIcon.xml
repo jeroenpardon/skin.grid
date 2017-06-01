@@ -150,6 +150,19 @@
 							<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
 					</control>
+
+					<control type="label">
+						<left>$PARAM[TextLeft]</left>
+						<bottom>0</bottom>
+						<height>45</height>
+						<width>$PARAM[TextWidth]</width>
+						<label>$PARAM[Label]</label>
+						<font>Regular-20</font>
+						<align>center</align>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+					</control>
+
 					<!-- Status -->
 					<include>media_Status</include>
 				</itemlayout>

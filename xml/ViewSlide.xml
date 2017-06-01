@@ -161,7 +161,7 @@
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Art" default="$VAR[art:Portrait]"/>
 		<param name="Fallback" default="views/fallback/portrait.png"/>
-		<param name="Visible" default="Container.Content(episodes)"/>
+		<param name="Visible" default="Container.Content(episodes) | Container.Content(musicvideos)"/>
 		<definition>
 			<control type="fixedlist" id="$PARAM[ID]">
 				<viewtype label="31122">bigwrap</viewtype>

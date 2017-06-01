@@ -97,8 +97,8 @@
 		<param name="Label" default="$VAR[media:Title]"/>
 		<param name="Label2"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
-		<param name="SingleLine" default="$EXP[Listview.SingleLine]"/>
-		<param name="MultiLine" default="$EXP[Listview.MultiLine]"/>
+		<param name="SingleLine" default="$EXP[!ListItem.HasInfo]"/>
+		<param name="MultiLine" default="$EXP[ListItem.HasInfo]"/>
 		<param name="ShowArt" default="false"/>
 		<param name="SymbolFont" default="Symbols-32"/>
 		<param name="SymbolSize" default="108"/>
@@ -301,7 +301,7 @@
 						<texture>$PARAM[Icon]</texture>
 						<visible>$PARAM[ShowIcon]</visible>
 					</control>
-					<!--Listview.SingleLine-->
+					<!--!ListItem.HasInfo-->
 					<control type="label">
 						<left>$PARAM[TextLeft]</left>
 						<width>$PARAM[TextWidth]</width>
@@ -312,9 +312,9 @@
 						<aligny>$PARAM[Aligny]</aligny>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<selectedcolor>$VAR[color:Accent]</selectedcolor>
-						<visible>$EXP[Listview.SingleLine]</visible>
+						<visible>$EXP[!ListItem.HasInfo]</visible>
 					</control>
-					<!--Listview.MultiLine-->
+					<!--ListItem.HasInfo-->
 					<control type="label">
 						<top>10</top>
 						<left>$PARAM[TextLeft]</left>
@@ -326,7 +326,7 @@
 						<aligny>$PARAM[Aligny]</aligny>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<selectedcolor>$VAR[color:Accent]</selectedcolor>
-						<visible>$EXP[Listview.MultiLine]</visible>
+						<visible>$EXP[ListItem.HasInfo]</visible>
 					</control>
 					<control type="label">
 						<left>$PARAM[TextLeft]</left>
@@ -338,7 +338,7 @@
 						<textcolor>$VAR[color:Text.2]</textcolor>
 						<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 						<aligny>top</aligny>
-						<visible>$EXP[Listview.MultiLine]</visible>
+						<visible>$EXP[ListItem.HasInfo]</visible>
 					</control>
 					<control type="label" id="4">
 						<left>928</left>
@@ -415,7 +415,7 @@
 							<aligny>$PARAM[Aligny]</aligny>
 							<textcolor>$VAR[color:Main]</textcolor>
 							<selectedcolor>$VAR[color:Main]</selectedcolor>
-							<visible>$EXP[Listview.SingleLine]</visible>
+							<visible>$EXP[!ListItem.HasInfo]</visible>
 						</control>
 						<control type="label">
 							<top>10</top>
@@ -428,7 +428,7 @@
 							<aligny>$PARAM[Aligny]</aligny>
 							<textcolor>$VAR[color:Main]</textcolor>
 							<selectedcolor>$VAR[color:Main]</selectedcolor>
-							<visible>$EXP[Listview.MultiLine]</visible>
+							<visible>$EXP[ListItem.HasInfo]</visible>
 						</control>
 						<control type="label">
 							<left>$PARAM[TextLeft]</left>
@@ -440,7 +440,7 @@
 							<textcolor>$VAR[color:Main]</textcolor>
 							<selectedcolor>$VAR[color:Main]</selectedcolor>
 							<aligny>top</aligny>
-							<visible>$EXP[Listview.MultiLine]</visible>
+							<visible>$EXP[ListItem.HasInfo]</visible>
 						</control>
 						<!-- PVR Status -->
 						<control type="label">
@@ -492,7 +492,7 @@
 							<aligny>$PARAM[Aligny]</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-							<visible>$EXP[Listview.SingleLine]</visible>
+							<visible>$EXP[!ListItem.HasInfo]</visible>
 						</control>
 						<control type="label">
 							<top>10</top>
@@ -505,7 +505,7 @@
 							<aligny>$PARAM[Aligny]</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-							<visible>$EXP[Listview.MultiLine]</visible>
+							<visible>$EXP[ListItem.HasInfo]</visible>
 						</control>
 						<control type="label">
 							<left>$PARAM[TextLeft]</left>
@@ -517,7 +517,7 @@
 							<textcolor>$VAR[color:Text.2]</textcolor>
 							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<aligny>top</aligny>
-							<visible>$EXP[Listview.MultiLine]</visible>
+							<visible>$EXP[ListItem.HasInfo]</visible>
 						</control>
 						<!-- PVR Status -->
 						<control type="label">

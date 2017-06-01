@@ -67,7 +67,7 @@
 			<!--services-->
 				<control type="list" id="150">
 					<top>180</top>
-					<height>810</height>
+					<height>720</height>
 					<onright>120</onright>
 					<onup>5160</onup>
 					<ondown>5160</ondown>

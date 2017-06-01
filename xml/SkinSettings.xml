@@ -628,8 +628,17 @@
 						<selected>Skin.HasSetting(homemenu.collapse)</selected>
 						<include>radio_Settings</include>
 					</control>
+					
+					<!-- Toggle widget names -->
+					<control type="radiobutton" id="308">
+						<label>$LOCALIZE[31040]</label>
+						<onclick>Skin.ToggleSetting(widget.name)</onclick>
+						<selected>Skin.HasSetting(widget.name)</selected>
+						<include>radio_Settings</include>
+					</control>
+
 					<!-- Reset menu configuration -->
-					<control type="button" id="308">
+					<control type="button" id="309">
 						<label>$LOCALIZE[31022]</label>
 						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 						<include>button_Settings</include>

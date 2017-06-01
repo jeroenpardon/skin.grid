@@ -55,25 +55,25 @@
 					<!--square, keep-->
 					<include content="info_List">
 						<param name="Visible">$EXP[Art.IsThumb]</param>
-						<param name="Width" value="756"/>
-						<param name="ArtWidth" value="756"/>
-						<param name="AspectRatio" value="keep"/>
-						<param name="AspectRatioAlign" value="center"/>
-						<param name="AspectRatioAlignY" value="top"/>
-						<param name="ShowDescription" value="false"/>
+						<param name="Width">756</param>
+						<param name="ArtWidth">756</param>
+						<param name="AspectRatio">keep</param>
+						<param name="AspectRatioAlign">center</param>
+						<param name="AspectRatioAlignY">top</param>
+						<param name="ShowDescription">false</param>
 					</include>
 				</control>
 				<!--portrait-->
 				<include content="info_List">
 					<param name="Visible">$EXP[Art.IsPortrait]</param>
-					<param name="Width" value="668"/>
-					<param name="ArtHeight" value="972"/>
-					<param name="AspectRatio" value="scale"/>
-					<param name="ShowDescription" value="false"/>
-					<param name="ShowInfo" value="false"/>
-					<param name="ShowLogo" value="false"/>
-					<param name="Art" value="$VAR[art:Portrait]"/>
-					<param name="Fallback" value="views/fallback/portrait.png"/>
+					<param name="Width">668</param>
+					<param name="ArtHeight">972</param>
+					<param name="AspectRatio">scale</param>
+					<param name="ShowDescription">false</param>
+					<param name="ShowInfo">false</param>
+					<param name="ShowLogo">false</param>
+					<param name="Art">$VAR[art:Portrait]</param>
+					<param name="Fallback">views/fallback/portrait.png</param>
 				</include>
 			</control>
 
@@ -108,23 +108,24 @@
 				<visible>Control.IsVisible(54)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails" condition="!Container.Content(addons)">
-					<param name="ID" value="54"/>
-					<param name="ViewTypeLabel" value="$LOCALIZE[31100]"/>
-					<param name="Label2" value="$VAR[media:Info]"/>
-					<param name="Art" value="$VAR[art:Portrait]"/>
+					<param name="ID">54</param>
+					<param name="ViewTypeLabel">$LOCALIZE[31100]</param>
+					<param name="Label2">$VAR[media:Info]</param>
+					<param name="Art">$VAR[art:Portrait]</param>
 					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
-					<param name="Fallback" value="views/fallback/portrait.png"/>
-					<param name="Frame" value="views/frame/p_fo.png"/>
-					<param name="Width" value="1664"/>
-					<param name="Height" value="972"/>
-					<param name="ArtWidth" value="277.3"/>
-					<param name="ArtHeight" value="410"/>
-					<param name="ItemWidth" value="277.3"/>
-					<param name="ItemHeight" value="408"/>
-					<param name="ShowLogo" value="false"/>
-					<param name="ShowInfo" value="Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)"/>
-					<param name="Visible" value="!Container.Content(addons)"/>
-					<param name="TextWidth" value="229"/>
+					<param name="Fallback">views/fallback/portrait.png</param>
+					<param name="Frame">views/frame/p_fo.png</param>
+					<param name="Width">1664</param>
+					<param name="Height">972</param>
+					<param name="ArtWidth">277.3</param>
+					<param name="ArtHeight">410</param>
+					<param name="ItemWidth">277.3</param>
+					<param name="ItemHeight">408</param>
+					<param name="ShowLogo">false</param>
+					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
+					<param name="Visible">Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</param>
+					<param name="TextWidth">229</param>
+					<param name="ShowOverlay">false</param>
 					<!--<param name="Visible" value="[Container.Content(files) + !Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
 				</include>
 			</control>
@@ -134,19 +135,20 @@
 				<visible>Control.IsVisible(55)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails" condition="!Container.Content(addons)">
-					<param name="ID" value="55"/>
-					<param name="Label2" value="$VAR[media:Info]"/>
-					<param name="ShowLogo" value="$EXP[Views.ShowLogo]"/>
-					<param name="ShowInfo" value="$EXP[Thumbview.ShowInfo]"/>
-					<param name="AspectRatioAlignY" default="center"/>
+					<param name="ID">55"</param>
+					<param name="Label2">$VAR[media:Info]</param>
+					<param name="ShowLogo">$EXP[Views.ShowLogo]</param>
+					<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
+					<param name="AspectRatioAlignY">center</param>
 					<param name="Fallback">views/fallback/landscape.png</param>
 					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
-					<param name="ShowInfo" value="Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)"/>
-					<param name="Visible" value="!Container.Content(addons)"/>
-					<!--<param name="Visible" value="Container.Content(files) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
+					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
+					<param name="Visible">!Container.Content(addons)</param>
+					<!--<param name="Visible">Container.Content(files) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
 				</include>
 			</control>
 
+			<!-- Square -->
 			<control type="group">
 				<visible>Control.IsVisible(56)</visible>
 				<include>transition_ViewChange</include>
@@ -171,24 +173,24 @@
 				<visible>Control.IsVisible(57)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails">
-					<param name="ID" value="57"/>
-					<param name="ViewTypeLabel" value="$LOCALIZE[20020]"/>
-					<param name="Width" value="1664"/>
-					<param name="Height" value="972"/>
-					<param name="ArtLeft" value="10"/>
-					<param name="ArtWidth" value="832"/>
-					<param name="ArtHeight" value="170"/>
-					<param name="ItemWidth" value="832"/>
-					<param name="ItemHeight" value="180"/>
-					<param name="Fallback" value="views/fallback/banner.png"/>
-					<param name="AspectRatioAlign" value="center"/>
-					<param name="AspectRatioAlignY" value="top"/>
-					<param name="AspectRatio" value="stretch"/>
-					<param name="Label2" value="$VAR[media:Info]"/>
-					<param name="Visible" value="Container.Content(tvshows)"/>
-					<param name="Art" value="$INFO[ListItem.Art(banner)]"/>
+					<param name="ID">57</param>
+					<param name="ViewTypeLabel">$LOCALIZE[20020]</param>
+					<param name="Width">1664</param>
+					<param name="Height">972</param>
+					<param name="ArtLeft">10</param>
+					<param name="ArtWidth">832</param>
+					<param name="ArtHeight">170</param>
+					<param name="ItemWidth">832</param>
+					<param name="ItemHeight">180</param>
+					<param name="Fallback">views/fallback/banner.png</param>
+					<param name="AspectRatioAlign">center</param>
+					<param name="AspectRatioAlignY">top</param>
+					<param name="AspectRatio">stretch</param>
+					<param name="Label2">$VAR[media:Info]</param>
+					<param name="Visible">Container.Content(tvshows)</param>
+					<param name="Art">$INFO[ListItem.Art(banner)]</param>
 					<param name="ShowInfo">false</param>
-					<param name="SymbolFont" value="Symbols-46"/>
+					<param name="SymbolFont">Symbols-46</param>
 				</include>
 			</control>
 		</control>
@@ -202,14 +204,14 @@
 		<control type="group">
 			<visible>Control.IsVisible(52) |  Control.IsVisible(521) | Control.IsVisible(53)</visible>
 			<include content="global_Scrollbar">
-				<param name="Left" value="0"/>
-				<param name="Top" value="1072"/>
-				<param name="OnLeft" value="6500"/>
-				<param name="OnRight" value="6500"/>
-				<param name="OnUp" value="5500"/>
-				<param name="OnDown" value="noop"/>
-				<param name="Height" value="8"/>
-				<param name="Width" value="1920"/>
+				<param name="Left">0</param>
+				<param name="Top">1072</param>
+				<param name="OnLeft">6500</param>
+				<param name="OnRight">6500</param>
+				<param name="OnUp">5500</param>
+				<param name="OnDown">noop</param>
+				<param name="Height">8</param>
+				<param name="Width">1920</param>
 				<param name="Orientation">horizontal</param>
 			</include>
 		</control>

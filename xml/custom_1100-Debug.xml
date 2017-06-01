@@ -149,6 +149,10 @@
 					<include>debug_Label</include>
 				</control>
 				<control type="button">
+					<label>ListItem.Art(clearlogo): $INFO[ListItem.Art(clearlogo)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
 					<label></label>
 					<height>24</height>
 				</control>
@@ -174,10 +178,6 @@
 				</control>
 				<control type="button" id="200">
 					<label>[B]Properties[/B]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button" id="205">
-					<label>Menu: $INFO[Window(Home).Property(MenuOpen)]</label>
 					<include>debug_Label</include>
 				</control>
 			</control>

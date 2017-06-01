@@ -84,29 +84,53 @@ msgstr ""
 
 
 #: widgets
-msgctxt "#31040"
+msgctxt "#31030"
 msgid "Widget"
 msgstr ""
 
-msgctxt "#31041"
+msgctxt "#31031"
 msgid "Widgets"
 msgstr ""
 
-msgctxt "#31042"
-msgid "Customize feed"
-msgstr ""
-
-msgctxt "#31043"
+msgctxt "#31032"
 msgid "Select widget layout"
 msgstr ""
 
-msgctxt "#31044"
-msgid "Spotlight"
-msgstr ""
-
-msgctxt "#31045"
+msgctxt "#31033"
 msgid "Select sort direction"
 msgstr ""
+
+msgctxt "#31034"
+msgid "Fullscreen (16:9)"
+msgstr ""
+
+msgctxt "#31035"
+msgid "Wide (21:9)"
+msgstr ""
+
+msgctxt "#31036"
+msgid "Landscape (16:9)"
+msgstr ""
+
+msgctxt "#31037"
+msgid "Portrait (2:3)"
+msgstr ""
+
+msgctxt "#31038"
+msgid "Square (1:1)"
+msgstr ""
+
+
+msgctxt "#31040"
+msgid "Show widget names"
+msgstr ""
+
+
+msgctxt "#31044"
+msgid "Wide"
+msgstr ""
+
+
 
 
 

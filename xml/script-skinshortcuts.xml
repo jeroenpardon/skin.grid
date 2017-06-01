@@ -89,7 +89,7 @@
 			<control type="grouplist" id="9000">
 				<left>920</left>
 				<width>744</width>
-				<height>720</height>
+				<height>810</height>
 				<itemgap>0</itemgap>
 				<onleft>8998</onleft>
 				<onright>noop</onright>
@@ -183,7 +183,7 @@
 				<control type="label" id="300">
 					<width>100%</width>
 					<height>90</height>
-					<label>$LOCALIZE[31040]</label>
+					<label>$LOCALIZE[31030]</label>
 					<include>global_Header</include>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
@@ -225,7 +225,7 @@
 						<textoffsetx>114</textoffsetx>
 						<onleft>8998</onleft>
 						<onup>613</onup>
-						<ondown>503</ondown>
+						<ondown>502</ondown>
 						<include>button_Settings</include>
 					</control>
 					<control type="label">
@@ -242,6 +242,36 @@
 					</control>
 				</control>
 
+				<!-- Widget art -->
+				<control type="group" id="502">
+					<height>90</height>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Container(211).ListItem.Property(widgetLayout),landscape)</visible>
+					<control type="button" id="602">
+						<width>100%</width>
+						<label>$VAR[widget:Art]</label>
+						<textoffsetx>114</textoffsetx>
+						<onleft>8998</onleft>
+						<onup>501</onup>
+						<ondown>503</ondown>
+						<include>button_Settings</include>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:Layout.Symbol]</label>
+						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<include>global_Symbol</include>
+						<visible>Control.HasFocus(602)</visible>
+					</control>
+					<control type="label">
+						<label>$VAR[widget:Layout.Symbol]</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<include>global_Symbol</include>
+						<visible>!Control.HasFocus(602)</visible>
+					</control>
+				</control>
+
+
+
 				<!-- Widget sort method -->
 				<control type="group" id="503">
 					<height>90</height>
@@ -251,7 +281,7 @@
 						<label>$VAR[widget:SortMethod]</label>
 						<textoffsetx>114</textoffsetx>
 						<onleft>8998</onleft>
-						<onup>501</onup>
+						<onup>502</onup>
 						<ondown>604</ondown>
 						<include>button_Settings</include>
 					</control>
@@ -296,6 +326,16 @@
 					</control>
 				</control>
 			</control>
+		</control>
+
+		<control type="wraplist" id="8000">
+			<left>-1000</left>
+			<top>-1000</top>
+			<width>100</width>
+			<height>100</height>
+			<itemlayout height="100" width="100" />
+			<focusedlayout height="100" width="100" />
+			<content>$INFO[Container(211).ListItem.Property(widgetPath)]</content>
 		</control>
 	</controls>
 </window>
