@@ -948,7 +948,7 @@
 							<visible>$PARAM[Label2Empty]</visible>
 						</control>
 						<control type="label">
-							<top>20</top>
+							<top>15</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>bottom</aligny>
@@ -959,7 +959,7 @@
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
-							<top>45</top>
+							<top>40</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>top</aligny>
@@ -1038,7 +1038,7 @@
 							<visible>$PARAM[Label2Empty]</visible>
 						</control>
 						<control type="label">
-							<top>20</top>
+							<top>15</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>bottom</aligny>
@@ -1048,7 +1048,7 @@
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
-							<top>45</top>
+							<top>40</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>top</aligny>
@@ -1075,7 +1075,7 @@
 						</control>
 						<!--a label2 is available, so use two rows-->
 						<control type="label">
-							<top>20</top>
+							<top>15</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>bottom</aligny>
@@ -1086,7 +1086,7 @@
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
-							<top>45</top>
+							<top>40</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>top</aligny>
