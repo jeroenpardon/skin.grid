@@ -32,6 +32,7 @@
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
 		<param name="SymbolFont" default="Symbols-64"/>
 		<param name="ShowOverlay" default="true"/>
+		<param name="ShowIconLabel" default="false"/>
 		<param name="Visible"/>
 		<definition>
 			<control type="panel" id="$PARAM[ID]">
@@ -150,21 +151,21 @@
 							<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
 					</control>
-
+					<!-- Status -->
+					<include>media_Status</include>
+					<!-- Icon Label -->
 					<control type="label">
-						<left>$PARAM[TextLeft]</left>
-						<bottom>0</bottom>
-						<height>45</height>
-						<width>$PARAM[TextWidth]</width>
+						<bottom>35</bottom>
+						<height>10</height>
+						<width>$PARAM[ArtWidth]</width>
 						<label>$PARAM[Label]</label>
 						<font>Regular-20</font>
 						<align>center</align>
+						<aligny>top</aligny>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						<visible>$PARAM[ShowIconLabel]</visible>
 					</control>
-
-					<!-- Status -->
-					<include>media_Status</include>
 				</itemlayout>
 				<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
 					<control type="group">
@@ -267,6 +268,19 @@
 					</control>
 					<!-- Status -->
 					<include>media_Status</include>
+					<!-- Icon Label -->
+					<control type="label">
+						<bottom>35</bottom>
+						<height>10</height>
+						<width>$PARAM[ArtWidth]</width>
+						<label>$PARAM[Label]</label>
+						<font>Regular-20</font>
+						<align>center</align>
+						<aligny>top</aligny>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						<visible>$PARAM[ShowIconLabel]</visible>
+					</control>
 				</focusedlayout>
 			</control>
 		</definition>
