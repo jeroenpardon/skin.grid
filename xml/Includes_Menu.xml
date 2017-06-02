@@ -1768,7 +1768,7 @@
 				<onup>7014</onup>
 				<ondown>7011</ondown>
 				<onleft>7100</onleft>
-				<onright>50</onright>
+				<onright>5500</onright>
 				<onclick>Weather.LocationNext</onclick>
 				<include>menu_Button</include>
 			</control>
@@ -1804,7 +1804,7 @@
 				<onup>7010</onup>
 				<ondown>7012</ondown>
 				<onleft>7100</onleft>
-				<onright>50</onright>
+				<onright>5500</onright>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -1839,7 +1839,7 @@
 				<onup>7011</onup>
 				<ondown>7013</ondown>
 				<onleft>7100</onleft>
-				<onright>50</onright>
+				<onright>5500</onright>
 				<onclick>ActivateWindow(servicesettings,weather)</onclick>
 				<include>menu_Button</include>
 			</control>
@@ -1875,8 +1875,8 @@
 				<onup>7012</onup>
 				<ondown>7014</ondown>
 				<onleft>7100</onleft>
-				<onright>50</onright>
-				<onclick>SetFocus(50)</onclick>
+				<onright>5500</onright>
+				<onclick>SetFocus(5500)</onclick>
 				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=weather.icons,addontype=resource.images.weathericons)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 				<include>menu_Button</include>
@@ -1913,8 +1913,8 @@
 				<onup>7013</onup>
 				<ondown>7010</ondown>
 				<onleft>7100</onleft>
-				<onright>50</onright>
-				<onclick>SetFocus(50)</onclick>
+				<onright>5500</onright>
+				<onclick>SetFocus(5500)</onclick>
 				<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=weather.background,addontype=resource.images.weatherfanart)</onclick>
 				<onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
 				<include>menu_Button</include>
