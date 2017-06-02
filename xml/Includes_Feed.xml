@@ -68,10 +68,12 @@
 	</include>
 
 	<include name="widget_Header">
+		<param name="Visible"/>
 		<definition>
 			<control type="group" id="$PARAM[HeaderID]">
 				<width>1920</width>
 				<height>54</height>
+				<visible>$PARAM[Visible]</visible>
 				<visible>Skin.HasSetting(widget.name)</visible>
 				<control type="label" id="$PARAM[HeaderLabel]">
 					<width>1920</width>
@@ -228,7 +230,7 @@
 						<right>10</right>
 						<width>80</width>
 						<height>54</height>
-						<texture colordiffuse="$VAR[color:Text.2]">colorize/100.png</texture>
+						<texture colordiffuse="$VAR[color:Text.2]">colorize/90.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="label" id="66">

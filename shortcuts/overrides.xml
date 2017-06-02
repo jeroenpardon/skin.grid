@@ -36,7 +36,7 @@
 	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
 
 	<!-- Widget layout -->
-	<propertySettings property="widgetLayout" buttonID="601" title="$LOCALIZE[31223]" showNone="False"/>
+	<propertySettings property="widgetLayout" buttonID="601" title="$LOCALIZE[31032]" showNone="False"/>
 	<propertyfallback property="widgetLayout" label="$LOCALIZE[31035]">wide</propertyfallback>
 	<property property="widgetLayout" label="$LOCALIZE[31034]">fullscreen</property>
 	<property property="widgetLayout" label="$LOCALIZE[31035]">wide</property>
@@ -44,31 +44,23 @@
 	<property property="widgetLayout" label="$LOCALIZE[31037]">portrait</property>
 	<property property="widgetLayout" label="$LOCALIZE[31038]">square</property>
 
-	
 	<!-- Widget art -->
-	<propertySettings property="widgetArt" buttonID="602" title="$LOCALIZE[31223]" showNone="False"/>
-	<propertyfallback property="widgetArt" label="fanart">fanart</propertyfallback>
-	
-	<property property="widgetArt" label="fanart" condition="!IsEmpty(Container(8000).ListItem.Art(fanart))">fanart</property>
-	<property property="widgetArt" label="fanart">views/fallback/landscape.png</property>
-
-	<property property="widgetArt" label="landscape">landscape</property>
-	<property property="widgetArt" label="thumbnail" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType),videos)">thumbnail</property>
-
-
-
+	<propertySettings property="widgetArt" buttonID="602" title="$LOCALIZE[31041]" showNone="False"/>
+	<propertyfallback property="widgetArt" label="fanart">fanart</propertyfallback>	
+	<property property="widgetArt" label="$LOCALIZE[20445]" condition="!IsEmpty(Container(8000).ListItem.Art(fanart))">fanart</property>
+	<property property="widgetArt" label="$LOCALIZE[31102]">landscape</property>
+	<property property="widgetArt" label="$LOCALIZE[21371]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType),videos)">thumbnail</property>
 
 	<!-- Widget sorting method -->
-	<propertySettings property="widgetSortMethod" buttonID="603" title="$LOCALIZE[581]" showNone="True" />
+	<propertySettings property="widgetSortMethod" buttonID="603" title="$LOCALIZE[39010]" showNone="True" />
 	<property property="widgetSortMethod" label="$LOCALIZE[551]">sorttitle</property>
 	<property property="widgetSortMethod" label="$LOCALIZE[563]">rating</property>
 	<property property="widgetSortMethod" label="$LOCALIZE[562]">year</property>
 
 	<!-- Widget sorting direction -->
-	<propertySettings property="widgetSortDirection" buttonID="604" title="$LOCALIZE[580]" showNone="True" />
+	<propertySettings property="widgetSortDirection" buttonID="604" title="$LOCALIZE[31033]" showNone="True" />
 	<property property="widgetSortDirection" label="$LOCALIZE[584]">ascending</property>
 	<property property="widgetSortDirection" label="$LOCALIZE[585]">descending</property>
-
 
 	<propertydefault labelID="widget" property="widgetFallbackArt">Art(thumb)</propertydefault>
 

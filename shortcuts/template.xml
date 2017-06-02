@@ -76,7 +76,7 @@
 		<property name="biginfo">false</property>
 
 		<!-- Other -->
-		<property name="infoline" tag="property">$INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.TVShowTitle,,: ]$INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.Title]</property>
+		<property name="header" tag="property">$INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.TVShowTitle,,: ]$INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.Title]</property>
 
 		<property name="logo" propertyValue="true">
 			<match>all</match>
@@ -92,6 +92,9 @@
 		</property>
 
 		<property name="overlay">false</property>
+
+		<property name="showheader" tag="property" attribute="name|widgetLayout" value="fullscreen">false</property>
+		<property name="showheader">true</property>
 
 		<property name="plotheight" propertyValue="120">
 			<rule tag="property" attribute="name|widgetLayout" value="fullscreen" />
@@ -126,8 +129,9 @@
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel2">992$SKINSHORTCUTS[id]</param>	
-				<param name="WidgetHeader">1000$SKINSHORTCUTS[infoline]</param>
-				<param name="WidgetName">1000$SKINSHORTCUTS[name]</param>
+				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
+				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
+				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1920</width>
@@ -179,13 +183,12 @@
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel2">992$SKINSHORTCUTS[id]</param>
-				
-				<param name="WidgetHeader">1000$SKINSHORTCUTS[infoline]</param>
-				<param name="WidgetName">1000$SKINSHORTCUTS[name]</param>
+				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
+				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
+				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
-				<width>1920</width>
-
+				<width>1792</width>
 				<height>$SKINSHORTCUTS[height]</height>
 				<onleft>9000</onleft>
 				<onback>9000</onback>
@@ -234,8 +237,9 @@
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel2">992$SKINSHORTCUTS[id]</param>
-				<param name="WidgetHeader">[B]$SKINSHORTCUTS[name][/B] - $SKINSHORTCUTS[infoline]</param>
-				<param name="WidgetName">1000$SKINSHORTCUTS[name]</param>
+				<param name="WidgetHeader">[B]$SKINSHORTCUTS[name][/B] - $SKINSHORTCUTS[header]</param>
+				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
+				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1920</width>
