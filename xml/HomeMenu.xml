@@ -367,7 +367,7 @@
 					<orientation>vertical</orientation>
 					<onleft>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onleft>
 					<onback>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onback>
-					<itemlayout width="1920" height="98">
+					<itemlayout width="576" height="98">
 						<!--main-->
 						<control type="group">
 							<width>576</width>
@@ -385,7 +385,7 @@
 							</control>
 							<control type="label">
 								<left>108</left>
-								<width>576</width>
+								<width>465</width>
 								<height>98</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>Thin-42</font>
@@ -410,7 +410,7 @@
 							</control>
 							<control type="label">
 								<left>108</left>
-								<width>576</width>
+								<width>465</width>
 								<height>90</height>
 								<label>$INFO[ListItem.Label]</label>
 								<font>Thin-42</font>
@@ -420,7 +420,7 @@
 							</control>
 						</control>
 					</itemlayout>
-					<focusedlayout width="1920" height="98">
+					<focusedlayout width="576" height="98">
 
 						<control type="group">
 							<visible>Control.HasFocus(9000)</visible>
@@ -442,7 +442,7 @@
 								</control>
 								<control type="label">
 									<left>108</left>
-									<width>576</width>
+									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Black-54</font>
@@ -467,7 +467,7 @@
 								</control>
 								<control type="label">
 									<left>108</left>
-									<width>576</width>
+									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Special</font>
@@ -498,7 +498,7 @@
 								</control>
 								<control type="label">
 									<left>108</left>
-									<width>576</width>
+									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Thin-42</font>
@@ -523,7 +523,7 @@
 								</control>
 								<control type="label">
 									<left>108</left>
-									<width>576</width>
+									<width>465</width>
 									<height>90</height>
 									<label>$INFO[ListItem.Label]</label>
 									<font>Thin-42</font>
