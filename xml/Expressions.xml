@@ -1,13 +1,8 @@
 <includes>
 
 	<!-- Art -->
-	<expression name="Art.IsPortrait">[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + String.IsEqual(Skin.String(view.list.art),posters)] | Container.Content(actors)</expression>	
-	
-
-
+	<expression name="Art.IsPortrait">[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + String.IsEqual(Skin.String(view.list.art),posters)] | Container.Content(actors) | Container.Content(sets)</expression>	
 	<expression name="Art.IsLandscape">Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(artists) | Container.Content(addons) | [Container.Content(files) + Container.HasFiles] | [!Skin.String(view.list.art,posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] | String.StartsWith(Container.FolderPath,plugin://plugin.video)]</expression>
-
-
 	<expression name="Art.IsSquare">Container.Content(albums) | Container.Content(songs)</expression>
 	<expression name="Art.IsThumb">Container.Content(videos)</expression>
 

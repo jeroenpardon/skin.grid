@@ -658,11 +658,11 @@
 		<value condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(files) | Container.Content(videos)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(episodes) + ListItem.IsParentFolder">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="String.IsEqual(Skin.String(views.landscape.art),landscape) + !String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
-		<value condition="String.IsEqual(Skin.String(views.landscape.art),fanart) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="[String.IsEqual(Skin.String(views.landscape.art),fanart) + !String.IsEmpty(ListItem.Art(fanart))] | [String.IsEqual(Skin.String(views.landscape.art),landscape) + String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(fanart)]]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(images) + !ListItem.IsFolder">$INFO[ListItem.FilenameAndPath]</value>
 		<value condition="Container.Content(images) + ListItem.IsFolder">$INFO[ListItem.Art(thumb)]</value>
-		<value>$INFO[ListItem.FilenameAndPath]</value>
+		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 
 	<variable name="art:Logo">

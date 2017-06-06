@@ -18,7 +18,7 @@
 		<param name="PageControl" default="6500"/>
 		<param name="Symbol" default="Symbols-32"/>
 		<param name="Icon" default="$VAR[symbol:Global]"/>
-		<param name="Art" default="$VAR[art:Landscape]"/>
+		<param name="Art" default="$INFO[ListItem.Art(fanart)]"/>
 		<param name="Label" default="$VAR[media:Title]"/>
 		<param name="Label2" default="$VAR[media:Info]"/>
 		<param name="Description" default="$VAR[media:Description]"/>
@@ -44,7 +44,7 @@
 					<control type="image">
 						<width>$PARAM[ItemWidth]</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture>views/fallback/video-fanart.jpg</texture>
+						<texture>views/fallback/fanart.jpg</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>ListItem.IsParentFolder</visible>
 					</control>
@@ -64,7 +64,7 @@
 					<control type="image">
 						<width>$PARAM[ItemWidth]</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture>views/fallback/movie.png</texture>
+						<texture>views/fallback/fanart.jpg</texture>
 						<aspectratio>stretch</aspectratio>
 						<visible>ListItem.IsParentFolder</visible>
 					</control>
@@ -98,6 +98,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>$EXP[!ListItem.IsParent]</visible>
 				</control>
 				<control type="group">
 					<left>128</left>
@@ -118,6 +119,7 @@
 						<font>Black-26</font>
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Text.2]</textcolor>
+						<visible>$EXP[!ListItem.IsParent]</visible>
 					</control>
 				</control>
 				<control type="textbox">

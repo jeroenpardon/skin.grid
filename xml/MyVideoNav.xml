@@ -135,7 +135,7 @@
 				<visible>Control.IsVisible(55)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails" condition="!Container.Content(addons)">
-					<param name="ID">55"</param>
+					<param name="ID">55</param>
 					<param name="Label2">$VAR[media:Info]</param>
 					<param name="ShowLogo">$EXP[Views.ShowLogo]</param>
 					<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
@@ -144,13 +144,14 @@
 					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="Visible">!Container.Content(addons)</param>
+					<param name="ShowOverlay">$EXP[Thumbview.ShowInfo]</param>
 					<!--<param name="Visible">Container.Content(files) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
 				</include>
 			</control>
 
 			<!-- Square -->
 			<control type="group">
-				<visible>Control.IsVisible(56)</visible>
+				<visible>Control.IsVisible(56) + Container.Content(addons)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails">
 					<param name="ID">56</param>
@@ -166,6 +167,7 @@
 					<param name="ShowOverlay">!String.IsEmpty(ListItem.Art(icon))</param>
 					<param name="ShowFallback">ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(icon))</param>
 					<param name="ShowIconLabel">true</param>
+					<param name="Visible">Container.Content(addons)</param>
 				</include>
 			</control>
 
@@ -192,6 +194,7 @@
 					<param name="Art">$INFO[ListItem.Art(banner)]</param>
 					<param name="ShowInfo">false</param>
 					<param name="SymbolFont">Symbols-46</param>
+					<param name="ShowOverlay">false</param>
 				</include>
 			</control>
 		</control>

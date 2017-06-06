@@ -246,6 +246,7 @@
 				<param name="OnRight">5000</param>
 				<param name="OnUp">50</param>
 				<param name="OnDown">50</param>
+				<param name="Symbol">&#57349;</param>
 			</include>
 		</control>
 
