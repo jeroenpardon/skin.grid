@@ -101,17 +101,16 @@
 					<include content="view_Thumbnails">
 						<param name="ID">56</param>
 						<param name="ViewTypeLabel">$LOCALIZE[536]</param>
-						<param name="ShowInfo">false</param>
+						<param name="Label2">$VAR[media:Info]</param>
 						<param name="Art">$VAR[art:Square]</param>
-						<param name="ArtWidth">332.8</param>
-						<param name="ArtHeight">332.8</param>
-						<param name="ItemWidth">332.8</param>
-						<param name="ItemHeight">384</param>
-						<param name="TextWidth">284.8</param>
+						<param name="ArtWidth">416</param>
+						<param name="ArtHeight">416</param>
+						<param name="ItemWidth">416</param>
+						<param name="ItemHeight">416</param>
+						<param name="TextWidth">352</param>
+						<param name="Visible">Container.Content(albums) | Container.Content(songs)</param>
 						<param name="Fallback">views/fallback/square.png</param>
-						<param name="ShowOverlay">!String.IsEmpty(ListItem.Art(icon))</param>
-						<param name="ShowFallback">ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(icon))</param>
-						<param name="ShowIconLabel">true</param>
+						<param name="ShowFallback">ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</param>
 					</include>
 				</control>
 
