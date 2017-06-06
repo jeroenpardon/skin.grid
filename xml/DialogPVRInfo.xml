@@ -154,7 +154,8 @@
 						<height>90</height>
 						<align>center</align>
 						<font>Black-20</font>
-						<label>$LOCALIZE[19687]</label>
+						<label></label>
+						<visible>Window.IsActive(PVRGuideInfo)</visible>
 						<texturenofocus></texturenofocus>
 					</control>
 					<!-- Ok -->
