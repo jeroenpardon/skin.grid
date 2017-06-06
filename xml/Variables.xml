@@ -919,7 +919,7 @@
 		<!--<value condition="Player.HasAudio">$VAR[player:Time]$VAR[player:Duration, / ]</value>-->
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ] ($INFO[VideoPlayer.Endtime])</value>
-		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Director,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Director,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.FinishTime,&#32;&#32;|&#32;&#32;$LOCALIZE[31310]&#32;]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Title]&#32;&#32;|&#32;&#32;$INFO[VideoPlayer.Season,$LOCALIZE[20373] , - ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]&#32;&#32;|&#32;&#32;$INFO[VideoPlayer.Premiered]</value>
 		<value condition="VideoPlayer.Content(files)">$INFO[VideoPlayer.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.VideoResolution,,P]$VAR[player:AudioCodec,&#32;&#32;|&#32;&#32;]$VAR[player:AudioChannels,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.VideoResolution,&#32;&#32;|&#32;&#32;,P]</value>
@@ -1517,14 +1517,14 @@
 		<value condition="Window.IsActive(subtitlesearch) + Integer.IsGreater(Container(120).NumItems,0)">$VAR[count:Subtitles]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.IsVisible(osdvideosettings)">$LOCALIZE[13395]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.IsVisible(osdaudiosettings)">$LOCALIZE[13396]</value>
-		<value condition="Player.Paused + !Player.Caching">$LOCALIZE[112]</value>
+		<value condition="Player.Paused + !Player.Caching">$LOCALIZE[112]$INFO[Player.TimeRemaining, - ]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$INFO[Player.ProgressCache]</value>
 		<value condition="Player.Rewinding">$LOCALIZE[31300] $VAR[player:Speed]</value>
 		<value condition="Player.Forwarding">$LOCALIZE[31301] $VAR[player:Speed]</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
 		<value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31530] $INFO[Player.SeekOffset]</value>
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
-		<value condition="VideoPlayer.IsFullscreen">$LOCALIZE[31530]</value>
+		<value condition="VideoPlayer.IsFullscreen">$INFO[Player.TimeRemaining]</value>
 	</variable>
 
 	<variable name="window:Title.PVR">

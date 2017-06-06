@@ -694,9 +694,6 @@ msgctxt "#31322"
 msgid "Get lyrics"
 msgstr ""
 
-msgctxt "#31323"
-msgid "Finishes at"
-msgstr ""
 
 msgctxt "#31324"
 msgid "Watch in 2D"
