@@ -1519,10 +1519,10 @@
 		<value condition="VideoPlayer.IsFullscreen + Window.IsVisible(osdaudiosettings)">$LOCALIZE[13396]</value>
 		<value condition="Player.Paused + !Player.Caching">$LOCALIZE[112]$INFO[Player.TimeRemaining, - ]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$INFO[Player.ProgressCache]</value>
-		<value condition="Player.Rewinding">$LOCALIZE[31300] $VAR[player:Speed]</value>
-		<value condition="Player.Forwarding">$LOCALIZE[31301] $VAR[player:Speed]</value>
+		<value condition="Player.Rewinding">$LOCALIZE[31300] $VAR[player:Speed]$INFO[Player.TimeRemaining, - ]</value>
+		<value condition="Player.Forwarding">$LOCALIZE[31301] $VAR[player:Speed]$INFO[Player.TimeRemaining, - ]</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
-		<value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[31530] $INFO[Player.SeekOffset]</value>
+		<value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$INFO[Player.TimeRemaining]</value>
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
 		<value condition="VideoPlayer.IsFullscreen">$INFO[Player.TimeRemaining]</value>
 	</variable>
