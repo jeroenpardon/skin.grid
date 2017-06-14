@@ -578,10 +578,9 @@
 							<onleft>9001</onleft>
 							<onclick>Skin.Reset(setcolor.main)</onclick>
 							<onclick>Skin.Reset(setcolor.accent)</onclick>
-							<onclick>Skin.Reset(setcolor.text.1)</onclick>
 							<onclick>Skin.Reset(setcolor.text.2)</onclick>
 							<onclick>Skin.Reset(setcolor.text.3)</onclick>
-							<onclick>Skin.Reset(setcolor.text.4)</onclick>
+							<onclick>Skin.Reset(setcolor.disabled)</onclick>
 							<include>radio_Settings</include>
 							<onup>470</onup>
 							<ondown>405</ondown>
