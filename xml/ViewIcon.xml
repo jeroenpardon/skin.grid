@@ -3,13 +3,13 @@
 	<include name="view_Thumbnails">
 		<param name="ID" default="55"/>
 		<param name="ViewTypeLabel" default="$LOCALIZE[31102]"/>
-		<param name="Top" default="108"/>
 		<param name="Left" default="128"/>
-		<param name="OnRight" default="6500"/>
-		<param name="PageControl" default="6500"/>
-		<param name="Orientation" default="vertical"/>
+		<param name="Top" default="108"/>
 		<param name="Width" default="1664"/>
 		<param name="Height" default="972"/>
+		<param name="OnRight" default="6500"/>
+		<param name="Orientation" default="vertical"/>
+		<param name="PageControl" default="6500"/>
 		<param name="ArtWidth" default="554.6"/>
 		<param name="ArtHeight" default="321"/>
 		<param name="ItemWidth" default="554.6"/>
