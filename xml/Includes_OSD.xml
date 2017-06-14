@@ -482,7 +482,7 @@
 				<control type="image">
 					<width>screen_Width</width>
 					<height>screen_Height</height>
-					<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
+					<texture colordiffuse="ff000000">views/diffuse/fullscreeninfo.png</texture>
 				</control>
 				<control type="group">
 					<top>750</top>
