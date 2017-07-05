@@ -180,6 +180,11 @@
 					<label>[B]Properties[/B]</label>
 					<include>debug_Label</include>
 				</control>
+				<control type="button">
+					<label>views.landscape.art: $INFO[Skin.String(views.landscape.art)]</label>
+					<height>24</height>
+					<include>debug_Label</include>
+				</control>
 			</control>
 		</control>
 	</controls>
