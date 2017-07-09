@@ -190,11 +190,6 @@
 					<height>24</height>
 					<include>debug_Label</include>
 				</control>
-				<control type="button">
-					<label>RunOnce: $INFO[Window(Home).Property(RunOnce)]</label>
-					<height>24</height>
-					<include>debug_Label</include>
-				</control>
 			</control>
 		</control>
 	</controls>

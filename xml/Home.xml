@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">8998</defaultcontrol>
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<onload condition="!Skin.HasSetting(FirstRunWidgets)">ActivateWindow(1106)</onload>
 
 	<!-- Skin Shortcuts -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
@@ -14,23 +15,7 @@
 	<onload condition="Skin.HasSetting(homemenu.collapse)">RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onload>
 
 	<controls>
-
-		<control type="button" id="8998">
-			<onfocus condition="String.IsEmpty(Window.(Home).Property(RunOnce))">SetFocus(8999)</onfocus>
-			<onfocus condition="!String.IsEmpty(Window.(Home).Property(RunOnce))">SetFocus(9000)</onfocus>
-			<texturefocus></texturefocus>
-			<texturenofocus></texturenofocus>
-		</control>
-
-		<control type="button" id="8999">
-			<onright>SetProperty(RunOnce,clear,Home)</onright>
-			<onright>SetFocus(9100)</onright>
-			<ondown>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</ondown>
-			<onback>SetProperty(RunOnce,clear,Home)</onback>
-			<texturefocus></texturefocus>
-			<texturenofocus></texturenofocus>
-		</control>
-
+		
 		<!-- Preload weather -->
 		<control type="label">
 			<font></font>
