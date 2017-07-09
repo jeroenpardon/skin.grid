@@ -185,6 +185,11 @@
 					<height>24</height>
 					<include>debug_Label</include>
 				</control>
+				<control type="button">
+					<label>ratings.overlay.enable: $INFO[Skin.String(ratings.overlay.enable)]</label>
+					<height>24</height>
+					<include>debug_Label</include>
+				</control>
 			</control>
 		</control>
 	</controls>

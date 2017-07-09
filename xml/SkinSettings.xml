@@ -372,11 +372,10 @@
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<!-- Movie ratings overlay on artwork -->
-					<control type="radiobutton" id="313">
+					<!-- Ratings overlay on artwork -->
+					<control type="button" id="313">
 						<label>$LOCALIZE[31265]</label>
-						<onclick>Skin.ToggleSetting(ratings.overlay)</onclick>
-						<selected>Skin.HasSetting(ratings.overlay)</selected>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.overlay.enable,header=$LOCALIZE[31265])</onclick>
 						<enable>String.IsEqual(Skin.String(ratings.video),default) | String.IsEqual(Skin.String(ratings.video),user)</enable>
 						<include>radio_Settings</include>
 					</control>
@@ -388,7 +387,6 @@
 						<include>radio_Settings</include>
 					</control>
 				</control>
-
 
 				<!-- Look and feel -->
 				<control type="grouplist" id="400">

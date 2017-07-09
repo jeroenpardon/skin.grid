@@ -614,7 +614,7 @@ msgid "Press up in information screens for popup"
 msgstr ""
 
 msgctxt "#31265"
-msgid "Show movie rating overlays in selected viewtypes"
+msgid "Show video rating overlays"
 msgstr ""
 
 msgctxt "#31266"
