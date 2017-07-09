@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">9000</defaultcontrol>
+	<defaultcontrol always="true">8998</defaultcontrol>
 
 	<!-- Skin Shortcuts -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
@@ -13,7 +13,25 @@
 	<!-- Collapse menu on return -->
 	<onload condition="Skin.HasSetting(homemenu.collapse)">RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onload>
 
+	<onload>Skin.Reset(RunOnce)</onload>
+
 	<controls>
+
+		<control type="button" id="8998">
+			<onfocus condition="String.IsEmpty(RunOnce)">SetFocus(8999)</onfocus>
+			<onfocus condition="!String.IsEmpty(RunOnce)">SetFocus(9000)</onfocus>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
+
+		<control type="button" id="8999">
+			<onright>Skin.SetString(RunOnce,clear)</onright>
+			<onright>SetFocus(9100)</onright>
+			<ondown>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</ondown>
+			<onback>Skin.SetString(RunOnce,clear)</onback>
+			<texturefocus></texturefocus>
+			<texturenofocus></texturenofocus>
+		</control>
 
 		<!-- Preload weather -->
 		<control type="label">

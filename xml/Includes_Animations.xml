@@ -34,6 +34,15 @@
 		</animation>
 	</include>
 
+	<include name="fadeout">
+		<animation type="WindowClose">
+			<effect type="Fade" start="100" end="0" time="250" />
+		</animation>
+		<animation type="Hidden">
+			<effect type="Fade" start="100" end="0" time="150" />
+		</animation>
+	</include>
+
 	<include name="transition_ViewChange">
 		<animation type="WindowOpen">
 			<effect type="Fade" start="0" end="100" time="350" />

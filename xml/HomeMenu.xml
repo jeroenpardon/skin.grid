@@ -147,6 +147,7 @@
 				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.type),vertical)">
 					<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="none"/>
 				</animation>
+
 				<animation effect="slide" end="0,98" time="0" condition="String.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
 				<animation effect="slide" end="0,196" time="0" condition="String.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
 				<animation effect="slide" end="0,294" time="0" condition="String.IsEqual(Container(9000).NumItems,3)">Conditional</animation>

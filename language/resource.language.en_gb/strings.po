@@ -120,6 +120,7 @@ msgctxt "#31038"
 msgid "Square (1:1)"
 msgstr ""
 
+
 msgctxt "#31040"
 msgid "Show widget names"
 msgstr ""
@@ -132,8 +133,13 @@ msgctxt "#31044"
 msgid "Wide"
 msgstr ""
 
+msgctxt "#31045"
+msgid "Your widgets are here, ready whenever you need them. Access them by pressing right."
+msgstr ""
 
-
+msgctxt "#31046"
+msgid "Press down to configure widgets."
+msgstr ""
 
 
 #: general
@@ -263,6 +269,9 @@ msgctxt "#31079"
 msgid "Descriptions"
 msgstr ""
 
+msgctxt "#31080"
+msgid "Press back to clear message."
+msgstr ""
 
 
 
