@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1106">
 	<defaultcontrol>8999</defaultcontrol>
-	<visible>Window.IsVisible(Home) + String.IsEmpty(Skin.String(RunOnce))</visible>
+	<visible>Window.IsVisible(Home) + String.IsEmpty(Window(Home).Property(RunOnce))</visible>
 	<controls>
 		<control type="group">
 			<include>fadeout</include>
-			<visible>String.IsEmpty(Skin.String(RunOnce))</visible>
+			<visible>String.IsEmpty(Window(Home).Property(RunOnce))</visible>
 
 			<control type="image">
 				<texture colordiffuse="ff000000">colorize/75.png</texture>
 				<include>screen_Dimensions</include>
 				<aspectratio>stretch</aspectratio>
 				<include>fadeout</include>
-				<visible>String.IsEmpty(Skin.String(RunOnce))</visible>
+				<visible>String.IsEmpty(Window(Home).Property(RunOnce))</visible>
 			</control>
 
 			<control type="grouplist">

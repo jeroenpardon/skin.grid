@@ -16,17 +16,17 @@
 	<controls>
 
 		<control type="button" id="8998">
-			<onfocus condition="String.IsEmpty(RunOnce)">SetFocus(8999)</onfocus>
-			<onfocus condition="!String.IsEmpty(RunOnce)">SetFocus(9000)</onfocus>
+			<onfocus condition="String.IsEmpty(Window.(Home).Property(RunOnce))">SetFocus(8999)</onfocus>
+			<onfocus condition="!String.IsEmpty(Window.(Home).Property(RunOnce))">SetFocus(9000)</onfocus>
 			<texturefocus></texturefocus>
 			<texturenofocus></texturenofocus>
 		</control>
 
 		<control type="button" id="8999">
-			<onright>Skin.SetString(RunOnce,clear)</onright>
+			<onright>SetProperty(RunOnce,clear,Home)</onright>
 			<onright>SetFocus(9100)</onright>
 			<ondown>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</ondown>
-			<onback>Skin.SetString(RunOnce,clear)</onback>
+			<onback>SetProperty(RunOnce,clear,Home)</onback>
 			<texturefocus></texturefocus>
 			<texturenofocus></texturenofocus>
 		</control>
