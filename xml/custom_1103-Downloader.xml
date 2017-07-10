@@ -59,7 +59,7 @@
 					<height>90</height>
 					<control type="button" id="521">
 						<width>1466</width>
-						<label>$LOCALIZE[31109]</label>
+						<label>$LOCALIZE[31113]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>510</onup>

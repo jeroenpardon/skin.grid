@@ -402,7 +402,7 @@
 					<visible>Skin.String(category,lookandfeel)</visible>
 
 					<!-- Date -->
-					<control type="button" id="413">
+					<control type="button" id="401">
 						<label>$LOCALIZE[31224]</label>
 						<label2>$INFO[Skin.String(date.enabled.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=date.enabled,header=$LOCALIZE[31224])</onclick>
@@ -411,20 +411,20 @@
 					</control>
 
 					<!-- Home -->
-					<control type="label" id="410">
+					<control type="label" id="405">
 						<label>$LOCALIZE[31200]</label>
 						<include>global_Header</include>
 					</control>
 
 					<!-- Playing item on home -->
-					<control type="radiobutton" id="405">
+					<control type="radiobutton" id="406">
 						<label>$LOCALIZE[31216]</label>
 						<onclick>Skin.ToggleSetting(home.nowplaying)</onclick>
 						<selected>Skin.HasSetting(home.nowplaying)</selected>
 						<include>radio_Settings</include>
 					</control>
 					<!-- Clock -->
-					<control type="radiobutton" id="406">
+					<control type="radiobutton" id="407">
 						<label>$LOCALIZE[31222]</label>
 						<onclick>Skin.ToggleSetting(home.clock)</onclick>
 						<selected>Skin.HasSetting(home.clock)</selected>
@@ -432,13 +432,21 @@
 					</control>
 
 					<!-- Statusbar -->
-					<control type="button" id="412">
+					<control type="button" id="410">
 						<label>$LOCALIZE[31007]</label>
 						<label2>$INFO[Skin.String(home.status.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.status,header=$LOCALIZE[31007])</onclick>
 						<include>install_HelperService</include>
 						<include>radio_Settings</include>
 						<enable>!String.IsEqual(Skin.String(homemenu.type),stream)</enable>
+					</control>
+
+					<!-- Fanart logo -->
+					<control type="radiobutton" id="411">
+						<label>$LOCALIZE[31131]</label>
+						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31274],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(home.fanartlogo),noaction=Close)</onclick>
+						<selected>Skin.HasSetting(home.fanartlogo)</selected>
+						<include>radio_Settings</include>
 					</control>
 
 					<!-- Colours -->
@@ -455,7 +463,7 @@
 							<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.main)</onclick>
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
-							<onup>413</onup>
+							<onup>411</onup>
 							<ondown>430</ondown>
 						</control>
 						<control type="image">
@@ -581,7 +589,7 @@
 							<onclick>Skin.Reset(setcolor.disabled)</onclick>
 							<include>radio_Settings</include>
 							<onup>470</onup>
-							<ondown>405</ondown>
+							<ondown>401</ondown>
 						</control>
 					</control>		
 				</control>

@@ -400,6 +400,11 @@ msgctxt "#31130"
 msgid "Prefer Fanart"
 msgstr ""
 
+msgctxt "#31131"
+msgid "Show the logo for the currently displayed fanart"
+msgstr ""
+
+
 
 #: backgrounds
 msgctxt "#31132"
@@ -656,6 +661,10 @@ msgstr ""
 
 msgctxt "#31273"
 msgid "Input field only"
+msgstr ""
+
+msgctxt "#31274"
+msgid "Grid needs to be reloaded for this. Is that ok?"
 msgstr ""
 
 
