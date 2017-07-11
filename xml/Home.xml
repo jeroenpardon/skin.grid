@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<onload condition="!Skin.HasSetting(FirstRunWidgets)">ActivateWindow(1106)</onload>
+	<!--<onload condition="!Skin.HasSetting(FirstRunWidgets)">ActivateWindow(1106)</onload>-->
 
 	<!-- Skin Shortcuts -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
