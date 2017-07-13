@@ -579,8 +579,20 @@
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Regular-20</font>
 				<visible>$EXP[!ListItem.IsParent]</visible>
-				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | Container.Content(albums) | Container.Content(artists)</visible>
+				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | Container.Content(albums)</visible>
 			</control>
+
+			<control type="label">
+				<width min="50">auto</width>
+				<height>$PARAM[Height]</height>
+				<label>$INFO[ListItem.Property(Artist_Mood),, &#8226; ]&#32;$INFO[ListItem.Property(Artist_Style)]</label>
+				<textcolor>$VAR[color:Text.2]</textcolor>
+				<font>Regular-20</font>
+				<visible>$EXP[!ListItem.IsParent]</visible>
+				<visible>Container.Content(artists)</visible>
+			</control>
+
+
 			<!-- Playcount -->
 			<control type="label">
 				<width min="0">auto</width>
