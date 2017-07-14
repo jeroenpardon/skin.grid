@@ -137,12 +137,12 @@
 				<include content="view_Thumbnails" condition="!Container.Content(addons)">
 					<param name="ID">55</param>
 					<param name="Label2">$VAR[media:Info]</param>
-					<param name="ShowLogo">$EXP[Views.ShowLogo]</param>
 					<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
 					<param name="AspectRatioAlignY">center</param>
 					<param name="Fallback">views/fallback/landscape.png</param>
 					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
+					<param name="ShowLogo">Container.Content(movies) | Container.Content(tvshows)</param>
 					<param name="Visible">!Container.Content(addons)</param>
 					<param name="ShowOverlay">$EXP[Thumbview.ShowInfo]</param>
 					<!--<param name="Visible">Container.Content(files) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
