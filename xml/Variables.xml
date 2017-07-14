@@ -222,7 +222,7 @@
 	<variable name="info:ShowStatus">
 		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Continuing) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Airdate))">$LOCALIZE[31525]</value>
 		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Ended)">$LOCALIZE[31526]</value>
-		<value>$LOCALIZE[31527]</value>
+		<value condition="!ListItem.IsFolder">$LOCALIZE[31527]</value>
 	</variable>
 
 	<variable name="info:SongCount">
