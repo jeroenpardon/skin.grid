@@ -700,12 +700,13 @@
 		<param name="ArtHeight" default="270"/>
 		<param name="ItemHeight" default="270"/>
 		<param name="TextLeft" default="673"/>
-		<param name="Symbol" default="Symbols-32"/>
+		<param name="SymbolFont" default="Symbols-32"/>
 		<param name="Icon" default="$VAR[symbol:Global]"/>
 		<param name="Art" default="$VAR[art:Landscape]"/>
 		<param name="FadeCondition" default="$EXP[!Views.ListHasFocus]"/>
 		<param name="Logo" default="$VAR[art:Logo]"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
+		<param name="Symbol" default="$VAR[symbol:Global]"/>
 		<param name="PageControl" default="6500"/>
 		<definition>
 			<control type="list" id="51">
@@ -725,6 +726,12 @@
 				<itemlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
 					<control type="group">
 						<left>128</left>
+						<control type="image">
+							<width>$PARAM[ArtWidth]</width>
+							<height>$PARAM[ArtHeight]</height>
+							<texture colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						</control>
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
@@ -748,7 +755,7 @@
 						<label>$PARAM[Icon]</label>
 						<textcolor>$VAR[color:Text.3]</textcolor>
 						<selectedcolor>$VAR[color:Text.3]</selectedcolor>
-						<font>$PARAM[Symbol]</font>
+						<font>$PARAM[SymbolFont]</font>
 					</control>
 					<control type="group">
 						<left>$PARAM[TextLeft]</left>
@@ -799,6 +806,12 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
+							<texture colordiffuse="$VAR[color:Text.2]" diffuse="views/diffuse/direction/left.png">$VAR[art:Fallback]</texture>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+						</control>
+						<control type="image">
+							<width>$PARAM[ArtWidth]</width>
+							<height>$PARAM[ArtHeight]</height>
 							<texture diffuse="views/diffuse/direction/left.png">$PARAM[Art]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
@@ -819,7 +832,7 @@
 						<label>$PARAM[Icon]</label>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<selectedcolor>$VAR[color:Accent]</selectedcolor>
-						<font>$PARAM[Symbol]</font>
+						<font>$PARAM[SymbolFont]</font>
 					</control>
 					<control type="group">
 						<left>$PARAM[TextLeft]</left>

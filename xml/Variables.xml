@@ -8,6 +8,7 @@
 	</variable>
 
 	<variable name="background:Path">
+		<value condition="Window.IsActive(weather) + String.IsEmpty(Skin.String(weather.background))">special://skin/backgrounds/03.jpg</value>
 		<value condition="Player.HasAudio + [Skin.HasSetting(home.nowplaying) + Window.IsActive(Home)] + System.HasAddon(script.artistslideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
 		<value condition="Player.HasAudio + [Skin.HasSetting(home.nowplaying) + Window.IsActive(Home)]">$VAR[player:Art]</value>
 		<value condition="String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)">$VAR[window:Background]</value>
@@ -657,7 +658,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) | Window.IsVisible(DialogPVRInfo.xml)">$INFO[ListItem.Icon]</value>
-		<value condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(files) | Container.Content(videos)">$INFO[ListItem.Art(thumb)]</value>
+		<value condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(files) | Container.Content(videos) | Container.Content(actors)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(episodes) + ListItem.IsParentFolder">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="String.IsEqual(Skin.String(views.landscape.art),landscape) + !String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="[String.IsEqual(Skin.String(views.landscape.art),fanart) + !String.IsEmpty(ListItem.Art(fanart))] | [String.IsEqual(Skin.String(views.landscape.art),landscape) + String.IsEmpty(ListItem.Art(landscape))]">$INFO[ListItem.Art(fanart)]</value>
@@ -684,8 +685,15 @@
 
 	<variable name="art:Square">
 		<value condition="!String.IsEqual(ListItem.Icon,DefaultFolder.png) + !String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
-		<value condition="!String.IsEqual(ListItem.Icon,DefaultFolderBack.png) + [Container.Content(albums) | Container.Content(songs)]">views/fallback/music.jpg</value>
+		<!--<value condition="!String.IsEqual(ListItem.Icon,DefaultFolderBack.png) + [Container.Content(albums) | Container.Content(songs)]">views/fallback/music.jpg</value>-->
 	</variable>
+
+	<variable name="art:Fallback">
+		<value condition="[Container.Content(artists) | Container.Content(actors)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-person.png</value>
+		<value condition="[Container.Content(albums) | Container.Content(songs)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-music.png</value>
+		<value>views/fallback/landscape.png</value>
+	</variable>
+
 
 
 <!--info dialog-->

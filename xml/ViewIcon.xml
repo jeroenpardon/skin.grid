@@ -56,6 +56,7 @@
 					<control type="group">
 						<width>$PARAM[ArtWidth]</width>
 						<height>$PARAM[ArtHeight]</height>
+						<!--
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
@@ -63,6 +64,15 @@
 							<aspectratio align="center" aligny="top">scale</aspectratio>
 							<bordersize>10</bordersize>
 							<visible>$PARAM[ShowFallback]</visible>
+						</control>
+						-->
+						<control type="image">
+							<width>$PARAM[ArtWidth]</width>
+							<height>$PARAM[ArtHeight]</height>
+							<texture colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+							<bordersize>10</bordersize>
+							<!--<visible>!String.Contains(ListItem.Icon,DefaultFolderBack) + [String.IsEmpty(ListItem.Art(thumb)) | String.StartsWith(ListItem.Label,* All)]</visible>-->
 						</control>
 						<control type="label">
 							<width>$PARAM[ArtWidth]</width>
@@ -98,9 +108,9 @@
 							<height>30%</height>
 							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<visible>!Container.Content(episodes)</visible>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
+						<!--
 						<control type="image">
 							<left>24</left>
 							<top>24</top>
@@ -111,6 +121,7 @@
 							<visible>Container.Content(episodes)</visible>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
+						-->
 					</control>
 					<!--info-->
 					<control type="group">
@@ -171,6 +182,7 @@
 					<control type="group">
 						<width>$PARAM[ArtWidth]</width>
 						<height>$PARAM[ArtHeight]</height>
+						<!--
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
@@ -179,6 +191,16 @@
 							<bordersize>10</bordersize>
 							<aspectratio align="center" aligny="top">scale</aspectratio>
 							<visible>$PARAM[ShowFallback]</visible>
+						</control>
+						-->
+						<control type="image">
+							<width>$PARAM[ArtWidth]</width>
+							<height>$PARAM[ArtHeight]</height>
+							<texture colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
+							<aspectratio align="center" aligny="center">scale</aspectratio>
+							<bordertexture border="10">$PARAM[Frame]</bordertexture>
+							<bordersize>10</bordersize>
+							<!--<visible>!String.Contains(ListItem.Icon,DefaultFolderBack) + [String.IsEmpty(ListItem.Art(thumb)) | String.StartsWith(ListItem.Label,* All)]</visible>-->
 						</control>
 						<control type="label">
 							<width>$PARAM[ArtWidth]</width>
@@ -213,9 +235,10 @@
 							<height>30%</height>
 							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<visible>!Container.Content(episodes)</visible>
+							<visible>!Container.Content(episodes) + String.Contains(Container.FolderPath,videodb://)</visible>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
+						<!--
 						<control type="image">
 							<left>24</left>
 							<top>24</top>
@@ -226,6 +249,7 @@
 							<visible>Container.Content(episodes)</visible>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
+						-->
 					</control>
 					<!--info-->
 					<control type="group">

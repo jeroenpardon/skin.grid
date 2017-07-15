@@ -22,7 +22,7 @@
 		<param name="Label" default="$VAR[media:Title]"/>
 		<param name="Label2" default="$VAR[media:Info]"/>
 		<param name="Description" default="$VAR[media:Description]"/>
-		<param name="Visible" default="Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(actors)"/>
+		<param name="Visible" default="Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets)"/>
 		<definition>
 			<control type="wraplist" id="$PARAM[ID]">
 				<viewtype label="Gallery">bigwrap</viewtype>
