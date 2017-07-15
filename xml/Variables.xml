@@ -679,7 +679,7 @@
 		<value condition="!String.IsEmpty(Container.Art(season.poster))">$INFO[Container.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="Container.Content(actors) + String.IsEmpty(ListItem.Art(thumb))">views/fallback/person.png</value>
+		<value condition="Container.Content(actors) + String.IsEmpty(ListItem.Art(thumb))">views/fallback/portrait-person.png</value>
 		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 
@@ -689,7 +689,7 @@
 	</variable>
 
 	<variable name="art:Fallback">
-		<value condition="[Container.Content(artists) | Container.Content(actors)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-person.png</value>
+		<value condition="[Container.Content(artists) | Container.Content(actors)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-portrait-person.png</value>
 		<value condition="[Container.Content(albums) | Container.Content(songs)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-music.png</value>
 		<value>views/fallback/landscape.png</value>
 	</variable>

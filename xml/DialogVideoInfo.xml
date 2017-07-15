@@ -221,7 +221,7 @@
 					<width>648</width>
 					<height>900</height>
 					<fadetime>fadetime_Thumb</fadetime>
-					<texture background="true" fallback="views/fallback/person.png">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
+					<texture background="true" fallback="views/fallback/portrait-person.png">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
 					<aspectratio align="left">scale</aspectratio>
 				</control>
 				<control type="image">
@@ -229,7 +229,7 @@
 					<width>648</width>
 					<height>900</height>
 					<fadetime>fadetime_Thumb</fadetime>
-					<texture flipy="true" fallback="views/fallback/person.png" diffuse="views/diffuse/portrait.png" background="true">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
+					<texture flipy="true" fallback="views/fallback/portrait-person.png" diffuse="views/diffuse/portrait.png" background="true">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
 					<aspectratio align="left">scale</aspectratio>
 				</control>
 			</control>
