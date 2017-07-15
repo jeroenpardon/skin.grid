@@ -689,7 +689,7 @@
 	</variable>
 
 	<variable name="art:Fallback">
-		<value condition="[Container.Content(artists) | Container.Content(actors)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-portrait-person.png</value>
+		<value condition="[Container.Content(artists) | Container.Content(actors)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-person.png</value>
 		<value condition="[Container.Content(albums) | Container.Content(songs)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-music.png</value>
 		<value>views/fallback/landscape.png</value>
 	</variable>
