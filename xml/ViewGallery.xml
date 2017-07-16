@@ -96,37 +96,6 @@
 				</control>
 				<control type="group">
 					<left>128</left>
-					<visible>VideoPlayer.Content(livetv)</visible>
-					<control type="image">
-						<bottom>137</bottom>
-						<width>82</width>
-						<height>82</height>
-						<texture>$INFO[VideoPlayer.Cover]</texture>
-					</control>
-					<control type="label">
-						<left>112</left>
-						<bottom>180</bottom>
-						<label>$VAR[media:Title]</label>
-						<width>1552</width>
-						<height>28</height>
-						<font>Black-64</font>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
-					<control type="label">
-						<left>112</left>
-						<bottom>146</bottom>
-						<height>0</height>
-						<width>1552</width>
-						<label>$VAR[media:Info]</label>
-						<font>Black-26</font>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:Text.2]</textcolor>
-					</control>
-				</control>
-				<control type="group">
-					<left>128</left>
-					<visible>!VideoPlayer.Content(livetv)</visible>
 					<control type="label">
 						<bottom>180</bottom>
 						<label>$VAR[media:Title]</label>
