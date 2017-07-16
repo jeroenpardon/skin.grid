@@ -311,14 +311,14 @@
 	<variable name="media:Title">
 		<value condition="Window.IsActive(videoplaylist) + !String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Title]</value>
 		<value condition="Window.IsActive(videoplaylist) + String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Label]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow) + String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=nextairedtvshows)">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Label]</value>
+		<value condition="Container.Content(tvshows) + String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=nextairedtvshows)">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Label]</value>
 <!--
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + Container.Content(episodes) + Skin.HasSetting(logos.enable) + [String.Contains(Container.FolderName,$LOCALIZE[20387]) | String.Contains(Container.FolderPath,special://skin/playlists/) | String.Contains(Container.FolderPath,special://profile/playlists/) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://service.library.data.provider?type=recommendedepisodes)]">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Label]</value>
 -->	
-		<value condition="String.IsEqual(ListItem.DBTYPE,episode)+ [String.Contains(Container.FolderName,$LOCALIZE[20387]) | String.Contains(Container.FolderPath,special://skin/playlists/) | String.Contains(Container.FolderPath,special://profile/playlists/) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://service.library.data.provider?type=recommendedepisodes)]">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Title,: ]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,episode) + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
+		<value condition="Container.Content(episodes) + [String.Contains(Container.FolderName,$LOCALIZE[20387]) | String.Contains(Container.FolderPath,special://skin/playlists/) | String.Contains(Container.FolderPath,special://profile/playlists/) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://service.library.data.provider?type=recommendedepisodes)]">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Title,: ]</value>
+		<value condition="Container.Content(episodes) + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
 		<value condition="Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)">[B]$INFO[ListItem.ChannelNumber,,  ][/B]$INFO[ListItem.Label]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,musicvideo) + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
+		<value condition="Container.Content(musicvideos) + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
 		<value condition="[String.Contains(Container.FolderPath,musicdb://singles/) | String.Contains(Container.FolderPath,musicdb://top100/songs/)] + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
 		<value condition="Container.Content(songs) + !ListItem.IsParentFolder">$INFO[ListItem.Tracknumber,,. ]$INFO[ListItem.Title]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/tv/) + !ListItem.IsParentFolder">$INFO[ListItem.ChannelNumber]$INFO[ListItem.Title,. ]</value>
@@ -672,7 +672,7 @@
 	</variable>
 	
 	<variable name="art:Portrait">
-		<!--<value condition="[Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedposter))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedposter)]</value>-->
+		<value condition="[Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedposter))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="Container.Content(tvshows) + ListItem.IsParentFolder">$INFO[Container().ListItem(2).Art(tvshow.poster)]</value>
 		<value condition="Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366])">$INFO[Container().ListItem(2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
