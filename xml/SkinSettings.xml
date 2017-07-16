@@ -766,14 +766,14 @@
 					<content>
 						<item>
 							<label>Grid UI Sounds</label>
-							<label2>$INFO[System.AddonVersion(resource.uisounds.grid),, &#8226; $LOCALIZE[31070]]$VAR[skin:AddonStatus]</label2>
+							<label2>$INFO[System.AddonVersion(resource.uisounds.grid),, &#8226; $LOCALIZE[31070]]</label2>
 							<icon>$INFO[System.AddonIcon(resource.uisounds.grid)]</icon>
 							<onclick condition="System.HasAddon(resource.uisounds.grid)">Addon.OpenSettings(resource.uisounds.grid)</onclick>
 							<onclick condition="!System.HasAddon(resource.uisounds.grid)">InstallAddon(resource.uisounds.grid)</onclick>
 						</item>
 						<item>
 							<label>Fanart Grabber</label>
-							<label2>$INFO[System.AddonVersion(script.grab.fanart),, &#8226; $LOCALIZE[31070]]$VAR[skin:AddonStatus]</label2>
+							<label2>$INFO[System.AddonVersion(script.grab.fanart),, &#8226; $LOCALIZE[31070]]</label2>
 							<icon>$INFO[System.AddonIcon(script.grab.fanart)]</icon>
 							<onclick condition="System.HasAddon(script.grab.fanart)">Addon.OpenSettings(script.grab.fanart)</onclick>
 							<onclick condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onclick>
