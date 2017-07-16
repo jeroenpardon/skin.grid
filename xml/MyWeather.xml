@@ -120,7 +120,7 @@
 					<width>1664</width>
 					<height>54</height>
 					<textcolor>$VAR[color:Text.2]</textcolor>
-					<label>$LOCALIZE[31600]</label>
+					<label>$LOCALIZE[31850]</label>
 					<include>global_Header</include>
 				</control>
 				<control type="list" id="50">

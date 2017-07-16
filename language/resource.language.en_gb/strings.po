@@ -969,87 +969,93 @@ msgid "Unwatched movies"
 msgstr ""
 
 
-#: other
 
-#. example usage: the weather forecast is thunderstorms and lightning very very frightening
-msgctxt "#31600"
-msgid "Forecast"
-msgstr ""
 
-#. example usage: currently the weather conditions are sunny
-msgctxt "#31601"
-msgid "Currently"
-msgstr ""
 
-msgctxt "#31602"
-msgid "YouTube: Popular"
-msgstr ""
-
-msgctxt "#31603"
-msgid "YouTube: Live"
-msgstr ""
 
 
 #: colours
 
-msgctxt "#31700"
+msgctxt "#31800"
 msgid "Manage colour themes"
 msgstr ""
 
-msgctxt "#31701"
+msgctxt "#31801"
 msgid "Reset all colours to skin defaults"
 msgstr ""
 
 
-msgctxt "#31710"
+msgctxt "#31810"
 msgid "Background & focused text"
 msgstr ""
 
-msgctxt "#31711"
+msgctxt "#31811"
 msgid "Accent & unfocused text"
 msgstr ""
 
-msgctxt "#31712"
+msgctxt "#31812"
 msgid "Secondary unfocused text"
 msgstr ""
 
-msgctxt "#31713"
+msgctxt "#31813"
 msgid "Alternative text"
 msgstr ""
 
-msgctxt "#31714"
+msgctxt "#31814"
 msgid "Disabled text"
 msgstr ""
 
 
 
+#: other
+
+#. example usage: the weather forecast is thunderstorms and lightning very very frightening
+msgctxt "#31850"
+msgid "Forecast"
+msgstr ""
+
+#. example usage: currently the weather conditions are sunny
+msgctxt "#31851"
+msgid "Currently"
+msgstr ""
+
+msgctxt "#31852"
+msgid "YouTube: Popular"
+msgstr ""
+
+msgctxt "#31853"
+msgid "YouTube: Live"
+msgstr ""
+
+
+
 #: about
-msgctxt "#31800"
+msgctxt "#31980"
 msgid "Design & development"
 msgstr ""
 
-msgctxt "#31801"
+msgctxt "#31981"
 msgid "Special thanks"
 msgstr ""
 
-msgctxt "#31802"
+msgctxt "#31982"
 msgid "Team-Kodi, the Kodi community and YOU for using Grid"
 msgstr ""
 
-msgctxt "#31803"
+msgctxt "#31983"
 msgid "License"
 msgstr ""
 
 #. Don't translate this.
-msgctxt "#31804"
+msgctxt "#31984"
 msgid "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported - Distributing (derivatives of) this software (Grid) as part of a commercial product without my explicit prior written consent is strictly prohibited."
 msgstr ""
 
-msgctxt "#31805"
+msgctxt "#31990"
 msgid "Final note"
 msgstr ""
 
-msgctxt "#31806"
+msgctxt "#31991"
 msgid "If you enjoy my work and feel like contributing towards development, it is appreciated greatly - [B]www.paypal.me/jeroenpardon[/B]"
 msgstr ""
 

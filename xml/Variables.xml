@@ -808,7 +808,7 @@
 		<value condition="String.IsEqual(ListItem.DBTYPE,album)">$LOCALIZE[562]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,artist)">$LOCALIZE[21898]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,song)">$LOCALIZE[554]</value>
-		<value condition="Window.IsActive(weather)">$LOCALIZE[31601]</value>
+		<value condition="Window.IsActive(weather)">$LOCALIZE[31851]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[467]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[19081]</value>
 	</variable>
