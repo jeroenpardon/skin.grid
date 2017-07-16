@@ -290,7 +290,7 @@
 		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled) + Skin.HasSetting(ratings.pg.enable)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$VAR[info:Rating,&#32;&#32;|&#32;&#32;]$INFO[ListItem.MPAA,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$VAR[info:Rating,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="Container.Content(tvshows) + [Control.IsVisible(50) | Control.IsVisible(51)]">$INFO[ListItem.Property(UnWatchedEpisodes)] $VAR[count:UnwatchedEpisodes]$INFO[ListItem.Studio,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="Container.Content(tvshows) + [Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53)]">$INFO[ListItem.Property(UnWatchedEpisodes)] $VAR[count:UnwatchedEpisodes]$INFO[ListItem.Studio,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(tvshows)">$VAR[info:ShowStatus]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Studio,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</value>

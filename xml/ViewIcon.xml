@@ -108,6 +108,7 @@
 							<height>30%</height>
 							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
+							<!--<visible>!Container.Content(episodes) + String.Contains(Container.FolderPath,videodb://)</visible>-->
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
 						<!--
