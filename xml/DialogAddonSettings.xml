@@ -11,6 +11,7 @@
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
 				<param name="Label">$VAR[window:Title.Media]</param>
+				<param name="ShowItemCount">false</param>
 			</include>
 		</control>
 
