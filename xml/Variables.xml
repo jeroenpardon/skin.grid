@@ -316,7 +316,7 @@
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.clearlogo)) + Container.Content(episodes) + Skin.HasSetting(logos.enable) + [String.Contains(Container.FolderName,$LOCALIZE[20387]) | String.Contains(Container.FolderPath,special://skin/playlists/) | String.Contains(Container.FolderPath,special://profile/playlists/) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://service.library.data.provider?type=recommendedepisodes)]">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Label]</value>
 -->	
 		<value condition="Container.Content(episodes) + [String.Contains(Container.FolderName,$LOCALIZE[20387]) | String.Contains(Container.FolderPath,special://skin/playlists/) | String.Contains(Container.FolderPath,special://profile/playlists/) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://service.library.data.provider?type=recommendedepisodes)]">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Title,: ]</value>
-		<value condition="Container.Content(episodes) + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
+		<value condition="Container.Content(episodes) + !ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)">[B]$INFO[ListItem.ChannelNumber,,  ][/B]$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(musicvideos) + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
 		<value condition="[String.Contains(Container.FolderPath,musicdb://singles/) | String.Contains(Container.FolderPath,musicdb://top100/songs/)] + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
@@ -650,7 +650,7 @@
 	</variable>
 
 	<variable name="art:Landscape">
-		<value condition="Container.Content(images) + !ListItem.IsFolder">$INFO[ListItem.Icon]</value>
+		<value condition="[Container.Content(images) + !ListItem.IsFolder] | [String.IsEmpty(Container.Content) + !ListItem.IsFolder]">$INFO[ListItem.Icon]</value>
 		<value condition="Container.Content(images) + ListItem.IsFolder">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="[Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedfanart))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
@@ -1423,7 +1423,7 @@
 		<!-- Info dialogs -->
 		<value condition="Window.IsActive(movieinformation) + String.IsEqual(ListItem.DBTYPE,movie)">&#57402;</value>
 		<value condition="Window.IsActive(movieinformation) + [String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)]">&#57361;</value>
-		<value condition="Window.IsActive(movieinformation) + String.IsEqual(ListItem.DBTYPE,musicvideo)">&#57352;</value>
+		<value condition="Window.IsActive(movieinformation) + [String.IsEqual(ListItem.DBTYPE,musicvideo) | String.IsEmpty(Container.Content)]">&#57352;</value>
 		<value condition="Window.IsActive(DialogMusicInfo.xml)">&#57483;</value>
 		<value condition="Window.IsActive(pictureinfo) | Window.IsActive(addoninformation) | Window.IsActive(pvrguideinfo) | Window.IsActive(pvrrecordinginfo)">&#57483;</value>
 		<!-- Add-ons -->
