@@ -201,6 +201,8 @@
 			<!--artwork-->
 			<control type="group">
 				<visible>!Control.IsVisible(50)</visible>
+				<visible>!String.IsEmpty(Container.Content)</visible>
+
 				<control type="image">
 					<width>648</width>
 					<height>900</height>
@@ -215,8 +217,11 @@
 					<aspectratio align="left">scale</aspectratio>
 				</control>
 			</control>
+			
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
+				<visible>!String.IsEmpty(Container.Content)</visible>
+
 				<control type="image">
 					<width>648</width>
 					<height>900</height>
@@ -231,6 +236,18 @@
 					<fadetime>fadetime_Thumb</fadetime>
 					<texture flipy="true" fallback="views/fallback/portrait-person.png" diffuse="views/diffuse/portrait.png" background="true">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
 					<aspectratio align="left">scale</aspectratio>
+				</control>
+			</control>
+
+			<control type="group">
+				<top>90</top>
+				<left>128</left>
+				<visible>String.IsEmpty(Container.Content)</visible>
+				<control type="image">
+					<width>520</width>
+					<height>900</height>
+					<texture background="true">$VAR[art:Landscape]</texture>
+					<aspectratio align="left" aligny="top">keep</aspectratio>
 				</control>
 			</control>
 
