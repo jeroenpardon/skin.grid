@@ -318,7 +318,7 @@
 		<value condition="Container.Content(episodes) + [String.Contains(Container.FolderName,$LOCALIZE[20387]) | String.Contains(Container.FolderPath,special://skin/playlists/) | String.Contains(Container.FolderPath,special://profile/playlists/) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://service.library.data.provider?type=recommendedepisodes)]">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Title,: ]</value>
 		<value condition="Container.Content(episodes) + !ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)">[B]$INFO[ListItem.ChannelNumber,,  ][/B]$INFO[ListItem.Label]</value>
-		<value condition="Container.Content(musicvideos) + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
+		<value condition="Container.Content(musicvideos) + !ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
 		<value condition="[String.Contains(Container.FolderPath,musicdb://singles/) | String.Contains(Container.FolderPath,musicdb://top100/songs/)] + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value>
 		<value condition="Container.Content(songs) + !ListItem.IsParentFolder">$INFO[ListItem.Tracknumber,,. ]$INFO[ListItem.Title]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/tv/) + !ListItem.IsParentFolder">$INFO[ListItem.ChannelNumber]$INFO[ListItem.Title,. ]</value>
