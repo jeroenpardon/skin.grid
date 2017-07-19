@@ -145,7 +145,7 @@
 					<font>$PARAM[SymbolFont]</font>
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
-					<visible>!Window.IsVisible(busydialog) + !Window.IsVisible(pictureinfo)</visible>
+					<visible>!Window.IsVisible(busydialog)</visible>
 					<visible>$PARAM[ShowSymbol]</visible>
 				</control>
 				<include content="global_Busy">
