@@ -1609,7 +1609,7 @@
 				<width>384</width>
 				<height>108</height>
 				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-				<visible>Control.HasFocus(28)</visible>
+				<visible>Control.HasFocus(128)</visible>
 			</control>
 			<control type="button" id="128">
 				<top>12</top>
