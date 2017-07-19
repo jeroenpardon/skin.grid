@@ -182,9 +182,9 @@
 					<width>1664</width>
 					<height>108</height>
 					<info>Player.Progress</info>
-					<texturebg colordiffuse="$VAR[color:Accent]">colorize/0.png</texturebg>
+					<texturebg colordiffuse="$VAR[color:Accent]">progress/player/0.png</texturebg>
 					<lefttexture></lefttexture>
-					<midtexture colordiffuse="$VAR[color:Accent]">colorize/50.png</midtexture>
+					<midtexture colordiffuse="$VAR[color:Accent]">progress/player/50.png</midtexture>
 					<righttexture></righttexture>
 					<visible>Window.IsVisible(seekbar) + !Window.IsActive(volumebar)</visible>
 					<include>transition_Chrome</include>
