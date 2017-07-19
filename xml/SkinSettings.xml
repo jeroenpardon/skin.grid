@@ -437,7 +437,7 @@
 						<label2>$INFO[Skin.String(home.status.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.status,header=$LOCALIZE[31007])</onclick>
 						<include>install_HelperService</include>
-						<include>radio_Settings</include>
+						<include>button_Settings</include>
 						<enable>!String.IsEqual(Skin.String(homemenu.type),stream)</enable>
 					</control>
 
