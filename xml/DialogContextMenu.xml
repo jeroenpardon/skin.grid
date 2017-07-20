@@ -56,7 +56,7 @@
 					<onclick condition="String.IsEqual(ListItem.DBTYPE,director)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Listitem.Director],header=YouTube)</onclick>
 					<onclick condition="String.IsEqual(ListItem.DBTYPE,actor)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Listitem.Actor],header=YouTube)</onclick>
 					<onclick condition="Container.Content(files)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[Listitem.Label],header=YouTube)</onclick>
-					<visible>Skin.HasSetting(context.youtube)</visible>
+					<visible>Skin.HasSetting(context.youtube) + !String.IsEmpty(Container.Content)</visible>
 				</control>
 				
 				<!-- Trailer -->
@@ -64,7 +64,7 @@
 					<width>837</width>
 					<label>$LOCALIZE[20410]</label>
 					<onclick>PlayMedia($ESCINFO[ListItem.Trailer])</onclick>
-					<visible>Container.Content(movies) + !String.IsEmpty(ListItem.Trailer)</visible>
+					<visible>!String.IsEmpty(ListItem.Trailer)</visible>
 					<visible>Skin.HasSetting(context.trailer)</visible>
 				</control>
 
