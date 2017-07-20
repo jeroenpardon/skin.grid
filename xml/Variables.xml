@@ -330,13 +330,13 @@
 	<variable name="menu:GetAddons">
 		<value condition="String.Contains(Container.FolderPath,addons://sources/video)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.video)</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/audio)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.audio)</value>
-		<value condition="String.Contains(Container.FolderPath,addons://sources/images)">ActivateWindow(addonbrowser,addons://all/xbmx.addon.image)</value>
+		<value condition="String.Contains(Container.FolderPath,addons://sources/image)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.image)</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/executable)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.executable)</value>
 	</variable>
 	<variable name="menu:GetAddonsLabel">
 		<value condition="String.Contains(Container.FolderPath,addons://sources/video)">$LOCALIZE[1037]</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/audio)">$LOCALIZE[1038]</value>
-		<value condition="String.Contains(Container.FolderPath,addons://sources/images)">$LOCALIZE[1039]</value>
+		<value condition="String.Contains(Container.FolderPath,addons://sources/image)">$LOCALIZE[1039]</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/executable)">$LOCALIZE[1043]</value>
 	</variable>
 
