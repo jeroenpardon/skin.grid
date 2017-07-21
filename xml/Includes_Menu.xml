@@ -104,42 +104,46 @@
 	</include>
 
 	<include name="menu_Views">
-		<!--change viewtype-->
-		<control type="group" id="7001">
-			<height>108</height>
-			<control type="image">
-				<width>384</width>
+		<param name="OnUp" default="300"/>
+		<param name="OnDown" default="7003"/>
+		<definition>
+			<!--change viewtype-->
+			<control type="group" id="7001">
 				<height>108</height>
-				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-				<visible>Control.HasFocus(7002)</visible>
-			</control>
-			<control type="button" id="7002">
-				<top>12</top>
-				<label>$LOCALIZE[31120]</label>
-				<onup>300</onup>
-				<ondown>7003</ondown>
-				<onleft>7100</onleft>
-				<onright>50</onright>
-				<include>menu_Button</include>
-				<onclick>Container.NextViewMode</onclick>
-			</control>
-			<control type="group">
-				<top>54</top>
-				<left>32</left>
-				<control type="label">
-					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$INFO[Container.ViewMode]</label>
-					<include>menu_Label</include>
-					<visible>!Control.HasFocus(7002)</visible>
-				</control>
-				<control type="label">
+				<control type="image">
 					<width>384</width>
-					<label>$INFO[Container.ViewMode]</label>
-					<include>menu_Label</include>
+					<height>108</height>
+					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 					<visible>Control.HasFocus(7002)</visible>
 				</control>
+				<control type="button" id="7002">
+					<top>12</top>
+					<label>$LOCALIZE[31120]</label>
+					<onup>$PARAM[OnUp]</onup>
+					<ondown>$PARAM[OnDown]</ondown>
+					<onleft>7100</onleft>
+					<onright>50</onright>
+					<include>menu_Button</include>
+					<onclick>Container.NextViewMode</onclick>
+				</control>
+				<control type="group">
+					<top>54</top>
+					<left>32</left>
+					<control type="label">
+						<textcolor>$VAR[color:Main]</textcolor>
+						<label>$INFO[Container.ViewMode]</label>
+						<include>menu_Label</include>
+						<visible>!Control.HasFocus(7002)</visible>
+					</control>
+					<control type="label">
+						<width>384</width>
+						<label>$INFO[Container.ViewMode]</label>
+						<include>menu_Label</include>
+						<visible>Control.HasFocus(7002)</visible>
+					</control>
+				</control>
 			</control>
-		</control>
+		</definition>
 	</include>
 
 	<include name="menu_Commons">
@@ -1422,7 +1426,7 @@
 			<control type="button" id="101">
 				<top>12</top>
 				<label>$LOCALIZE[19019]</label>
-				<onup>7059</onup>
+				<onup>31	</onup>
 				<ondown>102</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
@@ -1605,6 +1609,7 @@
 		<!-- Channel groups -->
 		<control type="group" id="7056">
 			<height>108</height>
+			<visible>!Window.IsActive(tvrecordings) + !Window.IsActive(radiorecordings)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -1614,7 +1619,7 @@
 			<control type="button" id="128">
 				<top>12</top>
 				<onup>106</onup>
-				<ondown>33</ondown>
+				<ondown>7002</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<label>$LOCALIZE[19141]</label>
@@ -1625,20 +1630,32 @@
 			<control type="group">
 				<top>54</top>
 				<left>32</left>
-				<control type="label" id="28">
+				<control type="label" id="29">
 					<textcolor>$VAR[color:Main]</textcolor>
 					<label></label>
 					<include>menu_Label</include>
+					<visible>false</visible>
+				</control>
+				<control type="label" id="129">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$INFO[Control.GetLabel(29)]</label>
+					<include>menu_Label</include>
 					<visible>!Control.HasFocus(128)</visible>
 				</control>
-				<control type="label" id="28">
+				<control type="label" id="129">
 					<width>384</width>
-					<label></label>
+					<label>$INFO[Control.GetLabel(29)]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(128)</visible>
 				</control>
 			</control>
 		</control>
+
+		<include content="menu_Views">
+			<param name="OnUp">128</param>
+			<param name="OnDown">33</param>
+		</include>
+
 		<!--sort method-->
 		<control type="group" id="7057">
 			<height>108</height>
@@ -1651,7 +1668,7 @@
 			<control type="button" id="33">
 				<top>12</top>
 				<label>$LOCALIZE[581]</label>
-				<onup>128</onup>
+				<onup>7002</onup>
 				<ondown>44</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
