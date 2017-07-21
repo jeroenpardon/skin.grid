@@ -110,6 +110,7 @@
 			<!--change viewtype-->
 			<control type="group" id="7001">
 				<height>108</height>
+				<visible>Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)</visible>
 				<control type="image">
 					<width>384</width>
 					<height>108</height>
