@@ -161,7 +161,7 @@
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Art" default="$VAR[art:Portrait]"/>
 		<param name="Fallback" default="views/fallback/portrait.png"/>
-		<param name="Visible" default="Container.Content(episodes) | Container.Content(musicvideos)"/>
+		<param name="Visible" default="Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)"/>
 		<definition>
 			<control type="fixedlist" id="$PARAM[ID]">
 				<viewtype label="31122">bigwrap</viewtype>
@@ -186,8 +186,8 @@
 						<width>$PARAM[ArtWidth]</width>
 						<height>$PARAM[ArtHeight]</height>
 						<aspectratio align="center">scale</aspectratio>
-						<texture colordiffuse="$VAR[color:Text.2]">views/fallback/portrait.png</texture>
-						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+						<texture colordiffuse="$VAR[color:Text.2]">views/fallback/landscape.png</texture>
+						<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
 					</control>
 					<control type="image">
 						<left>128</left>
@@ -205,7 +205,7 @@
 						<aligny>center</aligny>
 						<font>Symbols-64</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
-						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+						<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
 					</control>
 					<!--clearlogo-->
 					<control type="image">
@@ -230,8 +230,8 @@
 						<width>$PARAM[ArtWidth]</width>
 						<height>$PARAM[ArtHeight]</height>
 						<aspectratio align="center">scale</aspectratio>
-						<texture colordiffuse="$VAR[color:Text.2]">views/fallback/portrait.png</texture>
-						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+						<texture colordiffuse="$VAR[color:Text.2]">views/fallback/landscape.png</texture>
+						<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
 					</control>
 					<control type="label">
 						<left>128</left>
@@ -242,7 +242,7 @@
 						<aligny>center</aligny>
 						<font>Symbols-64</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
-						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+						<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
 					</control>
 					<control type="image">
 						<left>128</left>

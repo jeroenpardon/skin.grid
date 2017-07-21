@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol>50</defaultcontrol>
 	<menucontrol>7000</menucontrol>
-	<views>50</views>
+	<views>50,51,521</views>
 	<onload>ClearProperty(MenuOpen,Home)</onload>
 	<controls>
 
@@ -37,12 +37,32 @@
 				</include>
 			</control>
 
+			<!-- List -->
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
 				<include content="info_List">
 					<param name="Visible">true</param>
 					<param name="ProviderLogo">$INFO[ListItem.Icon]</param>
 					<param name="ShowProviderLogo">true</param>
+				</include>
+			</control>
+
+			<!-- Big List -->
+			<control type="group">
+				<visible>Control.IsVisible(51)</visible>
+				<include>transition_ViewChange</include>
+				<include content="view_BigList">
+
+				</include>
+			</control>
+
+
+			<control type="group">
+				<visible>Control.IsVisible(521)</visible>
+				<include>transition_ViewChange</include>
+				<include content="view_SlideThumb">
+					<param name="ViewTypeLabel">$LOCALIZE[31100]</param>
+					<param name="Art">$VAR[art:Landscape]</param>
 				</include>
 			</control>
 

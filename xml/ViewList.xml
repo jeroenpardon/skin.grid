@@ -723,6 +723,7 @@
 				<pagecontrol>6500</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<include>global_ListScroll</include>
+				<visible>Container.HasFiles</visible>
 				<itemlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
 					<control type="group">
 						<left>128</left>
