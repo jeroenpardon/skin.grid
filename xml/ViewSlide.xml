@@ -160,6 +160,7 @@
 		<param name="Logo" default="$VAR[art:Logo]"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Art" default="$VAR[art:Portrait]"/>
+		<param name="Label2" default="$VAR[media:Info]"/>
 		<param name="Fallback" default="views/fallback/portrait.png"/>
 		<param name="Visible" default="Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)"/>
 		<definition>
@@ -296,7 +297,7 @@
 				<control type="label">
 					<height>55</height>
 					<width>1664</width>
-					<label>$VAR[media:Info]</label>
+					<label>$PARAM[Label2]</label>
 					<font>Regular-22</font>
 					<textcolor>$VAR[color:Text.2]</textcolor>
 					<aligny>top</aligny>

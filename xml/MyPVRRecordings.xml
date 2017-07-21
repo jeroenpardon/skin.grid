@@ -56,13 +56,14 @@
 				</include>
 			</control>
 
-
+			<!-- Slide -->
 			<control type="group">
 				<visible>Control.IsVisible(521)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_SlideThumb">
 					<param name="ViewTypeLabel">$LOCALIZE[31100]</param>
 					<param name="Art">$VAR[art:Landscape]</param>
+					<param name="Label2">$INFO[ListItem.Date]$INFO[ListItem.ChannelName, - ]</param>
 				</include>
 			</control>
 
