@@ -33,7 +33,7 @@
 						<width>448</width>
 						<textoffsetx>140</textoffsetx>
 						<textwidth>448</textwidth>
-						<label>$LOCALIZE[31330]</label>
+						<label>$LOCALIZE[31566]</label>
 						<font>Black-22</font>
 						<onup>Control.SetFocus(150,10)</onup>
 						<ondown>Control.SetFocus(150,0)</ondown>

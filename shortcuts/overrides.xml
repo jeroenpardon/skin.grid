@@ -25,7 +25,7 @@
 		<item control="304">$ADDON[script.skinshortcuts 32003]</item><!--move down-->
 		<item control="307">$ADDON[script.skinshortcuts 32027]</item><!--change action-->
 		<item control="305">$ADDON[script.skinshortcuts 32025]</item><!--set label-->
-		<item control="501" condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31223]</item><!--select icon-->
+		<item control="501" condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31323]</item><!--select icon-->
 		<item control="313">$ADDON[script.skinshortcuts 32117]</item><!--disable-->
 		<item control="302">$ADDON[script.skinshortcuts 32001]</item><!--delete-->
 	</contextmenu>
@@ -107,9 +107,9 @@
 				<shortcut label="$LOCALIZE[3]" type="31066">ActivateWindow(Videos,files)</shortcut>
 				<shortcut label="$LOCALIZE[24001]" type="10040">ActivateWindow(1110)</shortcut>
 				<shortcut label="$LOCALIZE[13000]" type="5">ActivateWindow(Settings)</shortcut>
-				<shortcut label="$LOCALIZE[13012]" type="31202">ActivateWindow(shutdownmenu)</shortcut>
-				<shortcut label="$LOCALIZE[31211]" type="20077">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</shortcut>
-				<shortcut label="$LOCALIZE[31210]" type="20077">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=optionsmenu)</shortcut>
+				<shortcut label="$LOCALIZE[13012]" type="31302">ActivateWindow(shutdownmenu)</shortcut>
+				<shortcut label="$LOCALIZE[31311]" type="20077">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</shortcut>
+				<shortcut label="$LOCALIZE[31310]" type="20077">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=optionsmenu)</shortcut>
 			</node>
 		</node>
 
@@ -298,7 +298,7 @@
 	<propertydefault defaultID="32023" property="homeSymbol">&#57389;</propertydefault>
 
 <!--user selectable symbols-->
-	<propertySettings property="homeSymbol" buttonID="501" title="$LOCALIZE[31223]" showNone="False"/>
+	<propertySettings property="homeSymbol" buttonID="501" title="$LOCALIZE[31323]" showNone="False"/>
 	<propertyfallback property="homeSymbol">&#57425;</propertyfallback>
 	<property property="homeSymbol">&#57344;</property>
 	<property property="homeSymbol">&#57345;</property>

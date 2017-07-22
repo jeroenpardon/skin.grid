@@ -39,9 +39,7 @@
 			<align>$PARAM[Align]</align>
 			<aligny>$PARAM[AlignY]</aligny>
 			<onback>ClearProperty(MenuOpen,Home)</onback>
-
 			<onclick>SetProperty(MenuOpen,false,Home)</onclick>
-
 			<onright>50</onright>
 			<textcolor>$PARAM[TextColor]</textcolor>
 			<focusedcolor>$PARAM[FocusedColor]</focusedcolor>
@@ -418,13 +416,13 @@
 				<left>32</left>
 				<control type="label">
 					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$INFO[Container().NumItems,, $LOCALIZE[31143]]</label>
+					<label>$INFO[Container().NumItems,, $LOCALIZE[31252]]</label>
 					<include>menu_Label</include>
 					<visible>!Control.HasFocus(10)</visible>
 				</control>
 				<control type="label">
 					<width>384</width>
-					<label>$INFO[Container().NumItems,, $LOCALIZE[31143]]</label>
+					<label>$INFO[Container().NumItems,, $LOCALIZE[31252]]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(10)</visible>
 				</control>
@@ -666,13 +664,13 @@
 				<left>32</left>
 				<control type="label">
 					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31143]</label>
+					<label>$INFO[Container.NumItems] $LOCALIZE[31252]</label>
 					<include>menu_Label</include>
 					<visible>!Control.HasFocus(7)</visible>
 				</control>
 				<control type="label">
 					<width>384</width>
-					<label>$INFO[Container.NumItems] $LOCALIZE[31143]</label>
+					<label>$INFO[Container.NumItems] $LOCALIZE[31252]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(7)</visible>
 				</control>
@@ -1129,7 +1127,7 @@
 			</control>
 			<control type="button" id="101">
 				<top>12</top>
-				<label>$LOCALIZE[31205]</label>
+				<label>$LOCALIZE[31305]</label>
 				<onup>7004</onup>
 				<ondown>7011</ondown>
 				<onleft>7100</onleft>
@@ -1346,7 +1344,7 @@
 			</control>
 			<control type="radiobutton" id="30">
 				<top>12</top>
-				<label>$LOCALIZE[31236]</label>
+				<label>$LOCALIZE[31336]</label>
 				<onup>7011</onup>
 				<ondown>7017</ondown>
 				<onleft>7100</onleft>
@@ -1383,9 +1381,9 @@
 			</control>
 			<control type="radiobutton" id="31">
 				<top>12</top>
-				<label>$LOCALIZE[31237]</label>
+				<label>$LOCALIZE[31337]</label>
 				<onup>7016</onup>
-				<ondown>7090</ondown>
+				<ondown>7018</ondown>
 				<onleft>7100</onleft>
 				<onright>9001</onright>
 				<include>menu_Button</include>
@@ -1405,6 +1403,44 @@
 					<label>$VAR[menu:DebugOverlay]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(31)</visible>
+				</control>
+			</control>
+		</control>
+
+		<!-- Reload skin -->
+		<control type="group" id="7018">
+			<height>108</height>
+			<visible>Window.IsActive(SkinSettings)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(32)</visible>
+			</control>
+			<control type="radiobutton" id="32">
+				<top>12</top>
+				<label>$LOCALIZE[31081]</label>
+				<onup>7017</onup>
+				<ondown>7090</ondown>
+				<onleft>7100</onleft>
+				<onright>9001</onright>
+				<include>menu_Button</include>
+				<onclick>ReloadSkin()</onclick>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$LOCALIZE[166]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(32)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$LOCALIZE[166]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(32)</visible>
 				</control>
 			</control>
 		</control>

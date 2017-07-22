@@ -297,7 +297,7 @@
 						</item>
 						<!-- Get Lyrics -->
 						<item id="8">
-							<label>$LOCALIZE[31322]</label>
+							<label>$LOCALIZE[31559]</label>
 							<label2>&#57475;</label2>
 							<onclick>Skin.Reset(OSD)</onclick>
 							<onclick>Dialog.Close(MusicOSD,true)</onclick>
@@ -374,7 +374,7 @@
 						</item>
 						<!--get subtitles-->
 						<item id="32">
-							<label>$LOCALIZE[31320]</label>
+							<label>$LOCALIZE[31557]</label>
 							<label2>&#57475;</label2>
 							<onclick>Skin.Reset(OSD)</onclick>
 							<onclick>Dialog.Close(VideoOSD,true)</onclick>
@@ -423,7 +423,7 @@
 							<visible allowhiddenfocus="true">Skin.String(OSD,3D)</visible>
 						</item>
 						<item id="43">
-							<label>$LOCALIZE[31326]</label>
+							<label>$LOCALIZE[31562]</label>
 							<label2>&#57479;</label2>
 							<onclick>Dialog.Close(VideoOSD,true)</onclick>
 							<onclick>StereoMode</onclick>

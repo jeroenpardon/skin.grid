@@ -342,7 +342,7 @@
 
 	<variable name="menu:FilterCount">
 		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container().NumItems] $INFO[Container.Content]</value>
-		<value>$INFO[Container().NumItems,, $LOCALIZE[31143]]</value>
+		<value>$INFO[Container().NumItems,, $LOCALIZE[31252]]</value>
 	</variable>
 
 	<variable name="menu:HideBroken">
@@ -863,10 +863,10 @@
 		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.Episode]</value>
 	</variable>
 	<variable name="information:R3.Label">
-		<value condition="Container.Content(movies)">$LOCALIZE[31251]</value>
-		<value condition="Container.Content(tvshows)">$LOCALIZE[31251]</value>
-		<value condition="Container.Content(episodes)">$LOCALIZE[31251]</value>
-		<value condition="Container.Content(musicvideos)">$LOCALIZE[31251]</value>
+		<value condition="Container.Content(movies)">$LOCALIZE[31343]</value>
+		<value condition="Container.Content(tvshows)">$LOCALIZE[31343]</value>
+		<value condition="Container.Content(episodes)">$LOCALIZE[31343]</value>
+		<value condition="Container.Content(musicvideos)">$LOCALIZE[31343]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[21895]</value>
 		<value condition="Container.Content(artists)">$LOCALIZE[21892]</value>
 		<value condition="Container.Content(songs)">$LOCALIZE[29903]</value>
@@ -929,8 +929,8 @@
 	</variable>
 
 	<variable name="player:Decoder">
-		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[31303]</value>
-		<value>$LOCALIZE[31304]</value>
+		<value condition="Player.Process(videohwdecoder)">$LOCALIZE[31553]</value>
+		<value>$LOCALIZE[31554]</value>
 	</variable>
 
 	<variable name="player:Description">
@@ -950,7 +950,7 @@
 		<!--<value condition="Player.HasAudio">$VAR[player:Time]$VAR[player:Duration, / ]</value>-->
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ] ($INFO[VideoPlayer.Endtime])</value>
-		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Director,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.FinishTime,&#32;&#32;|&#32;&#32;$LOCALIZE[31310]&#32;]</value>
+		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Director,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.FinishTime,&#32;&#32;|&#32;&#32;$LOCALIZE[31556]&#32;]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TVShowTitle]&#32;&#32;|&#32;&#32;$INFO[VideoPlayer.Season,$LOCALIZE[20373] , - ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]&#32;&#32;|&#32;&#32;$INFO[VideoPlayer.Premiered]</value>
 		<value condition="VideoPlayer.Content(files)">$INFO[VideoPlayer.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.VideoResolution,,P]$VAR[player:AudioCodec,&#32;&#32;|&#32;&#32;]$VAR[player:AudioChannels,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.VideoResolution,&#32;&#32;|&#32;&#32;,P]</value>
@@ -1000,7 +1000,7 @@
 	</variable>
 
 	<variable name="player:Subtitles">
-		<value condition="VideoPlayer.SubtitlesEnabled + !String.IsEmpty(VideoPlayer.SubtitlesLanguage)">$LOCALIZE[31321] ($INFO[VideoPlayer.SubtitlesLanguage])</value>
+		<value condition="VideoPlayer.SubtitlesEnabled + !String.IsEmpty(VideoPlayer.SubtitlesLanguage)">$LOCALIZE[31558] ($INFO[VideoPlayer.SubtitlesLanguage])</value>
 		<value>$LOCALIZE[13397]</value>
 	</variable>
 
@@ -1022,8 +1022,8 @@
 	</variable>
 
 	<variable name="player:Toggle3D">
-		<value condition="String.IsEqual(System.StereoscopicMode,7)">$LOCALIZE[31325]</value>
-		<value>$LOCALIZE[31324]</value>
+		<value condition="String.IsEqual(System.StereoscopicMode,7)">$LOCALIZE[31561]</value>
+		<value>$LOCALIZE[31560]</value>
 	</variable>
 
 	<variable name="player:Toggle3D2">
@@ -1561,8 +1561,8 @@
 		<value condition="VideoPlayer.IsFullscreen + Window.IsVisible(osdaudiosettings)">$LOCALIZE[13396]</value>
 		<value condition="Player.Paused + !Player.Caching">$LOCALIZE[112]$INFO[Player.TimeRemaining, - ]</value>
 		<value condition="[Player.Paused + Player.Caching] + !Player.Seeking">$INFO[Player.ProgressCache]</value>
-		<value condition="Player.Rewinding">$LOCALIZE[31300] $VAR[player:Speed]$INFO[Player.TimeRemaining, - ]</value>
-		<value condition="Player.Forwarding">$LOCALIZE[31301] $VAR[player:Speed]$INFO[Player.TimeRemaining, - ]</value>
+		<value condition="Player.Rewinding">$LOCALIZE[31550] $VAR[player:Speed]$INFO[Player.TimeRemaining, - ]</value>
+		<value condition="Player.Forwarding">$LOCALIZE[31551] $VAR[player:Speed]$INFO[Player.TimeRemaining, - ]</value>
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
 		<value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$INFO[Player.TimeRemaining]</value>
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
@@ -1582,9 +1582,9 @@
 
 	<variable name="window:Title.System">
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
-		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31211]</value>
-		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),optionsmenu)">$LOCALIZE[31210]</value>
-		<value condition="Window.IsActive(script-skinshortcuts.xml)">$LOCALIZE[31212] $INFO[Window.Property(groupname)]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31311]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),optionsmenu)">$LOCALIZE[31310]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml)">$LOCALIZE[31312] $INFO[Window.Property(groupname)]</value>
 		<value condition="Window.IsActive(script-skin_helper_service-ColorPicker.xml)">$ADDON[script.skin.helper.colorpicker 32011]</value>
 		<value condition="Window.IsActive(InterfaceSettings)">$LOCALIZE[14207]</value>	
 		<value condition="Window.IsActive(PlayerSettings)">$LOCALIZE[14201]</value>

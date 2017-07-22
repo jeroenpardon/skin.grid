@@ -79,7 +79,7 @@
 					<include>global_Label</include>
 				</control>
 				<control type="label">
-					<label>$INFO[System.Memory(used.percent),$LOCALIZE[31302]: ]</label>
+					<label>$INFO[System.Memory(used.percent),$LOCALIZE[31552]: ]</label>
 					<height>45</height>
 					<include>global_Label</include>
 				</control>

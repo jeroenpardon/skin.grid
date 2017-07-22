@@ -23,7 +23,7 @@
 			</control>
 			<control type="button">
 				<left>108</left>
-				<label>$VAR[login:Hello]... $LOCALIZE[31203]</label>
+				<label>$VAR[login:Hello]... $LOCALIZE[31303]</label>
 				<width>852</width>
 				<height>108</height>
 				<textoffsetx>32</textoffsetx>
