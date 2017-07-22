@@ -119,13 +119,13 @@
 					<left>$PARAM[TextLeft]</left>
 					<width>1664</width>
 					<label>$VAR[media:Title]</label>
-					<height>45</height>
+					<height>40</height>
 					<font>Black-28</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
 				<control type="label">
-					<height>55</height>
+					<height>64</height>
 					<width>1664</width>
 					<label>$VAR[media:Info]</label>
 					<font>Regular-22</font>
@@ -289,13 +289,13 @@
 					<left>$PARAM[TextLeft]</left>
 					<width>1664</width>
 					<label>$VAR[media:Title]</label>
-					<height>45</height>
+					<height>40</height>
 					<font>Black-28</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
 				<control type="label">
-					<height>55</height>
+					<height>64</height>
 					<width>1664</width>
 					<label>$PARAM[Label2]</label>
 					<font>Regular-22</font>

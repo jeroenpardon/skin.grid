@@ -1407,7 +1407,9 @@
 	<variable name="window:Grid">
 		<value condition="Control.IsVisible(51)">overlays/270.png</value>
 		<!--<value condition="Control.IsVisible(56) + [Window.IsActive(AddonBrowser) | Window.IsActive(programs) | Container.Content(addons)]">overlays/384.png</value>-->
-		<value condition="Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(521)">overlays/108.png</value>
+		<value condition="Control.IsVisible(50)">overlays/108.png</value>
+		<value condition="Control.IsVisible(52)">overlays/648-108.png</value>
+		<value condition="Control.IsVisible(521)">overlays/216-432-108.png</value>
 		<value condition="Control.IsVisible(54)">overlays/410.png</value>
 		<value condition="Control.IsVisible(55)">overlays/321.png</value>
 		<value condition="Control.IsVisible(57)">overlays/180.png</value>
