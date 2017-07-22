@@ -188,7 +188,7 @@
 						<height>$PARAM[ArtHeight]</height>
 						<aspectratio align="center">scale</aspectratio>
 						<texture colordiffuse="$VAR[color:Text.2]">views/fallback/landscape.png</texture>
-						<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
+						<visible>ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
 						<left>128</left>
@@ -206,7 +206,7 @@
 						<aligny>center</aligny>
 						<font>Symbols-64</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
-						<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
+						<visible>ListItem.IsParentFolder</visible>
 					</control>
 					<!--clearlogo-->
 					<control type="image">
@@ -232,7 +232,7 @@
 						<height>$PARAM[ArtHeight]</height>
 						<aspectratio align="center">scale</aspectratio>
 						<texture colordiffuse="$VAR[color:Text.2]">views/fallback/landscape.png</texture>
-						<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
+						<visible>ListItem.IsParentFolder</visible>
 					</control>
 					<control type="label">
 						<left>128</left>
@@ -243,7 +243,7 @@
 						<aligny>center</aligny>
 						<font>Symbols-64</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
-						<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
+						<visible>ListItem.IsParentFolder</visible>
 					</control>
 					<control type="image">
 						<left>128</left>
