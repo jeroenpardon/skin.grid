@@ -376,13 +376,13 @@
 				<left>32</left>
 				<control type="label">
 					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$LOCALIZE[31531]</label>
+					<label>$LOCALIZE[31711]</label>
 					<include>menu_Label</include>
 					<visible>!Control.HasFocus(400)</visible>
 				</control>
 				<control type="label">
 					<width>384</width>
-					<label>$LOCALIZE[31531]</label>
+					<label>$LOCALIZE[31711]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(400)</visible>
 				</control>
@@ -863,7 +863,7 @@
 			</control>
 			<control type="radiobutton" id="91">
 				<top>12</top>
-				<label>$LOCALIZE[31517]</label>
+				<label>$LOCALIZE[31666]</label>
 				<onup>7011</onup>
 				<ondown>7013</ondown>
 				<onleft>7100</onleft>
@@ -901,7 +901,7 @@
 			</control>
 			<control type="radiobutton" id="92">
 				<top>12</top>
-				<label>$LOCALIZE[31518]</label>
+				<label>$LOCALIZE[31667]</label>
 				<onup>7012</onup>
 				<ondown>7092</ondown>
 				<onleft>7100</onleft>
@@ -1595,13 +1595,13 @@
 				<left>32</left>
 				<control type="label">
 					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$LOCALIZE[31410]</label>
+					<label>$LOCALIZE[31610]</label>
 					<include>menu_Label</include>
 					<visible>!Control.HasFocus(106)</visible>
 				</control>
 				<control type="label">
 					<width>384</width>
-					<label>$LOCALIZE[31410]</label>
+					<label>$LOCALIZE[31610]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(106)</visible>
 				</control>

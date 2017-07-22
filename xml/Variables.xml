@@ -138,8 +138,8 @@
 	</variable>
 
 	<variable name="count:UnwatchedEpisodes">
-		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),1) | String.IsEqual(ListItem.Property(UnWatchedEpisodes),0)">$LOCALIZE[31529]</value>
-		<value condition="String.IsEqual(ListItem.Property(UnWatchedEpisodes),1)">$LOCALIZE[31528]</value>
+		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),1) | String.IsEqual(ListItem.Property(UnWatchedEpisodes),0)">$LOCALIZE[31709]</value>
+		<value condition="String.IsEqual(ListItem.Property(UnWatchedEpisodes),1)">$LOCALIZE[31708]</value>
 	</variable>
 
 
@@ -163,12 +163,12 @@
 	</variable>
 	
 	<variable name="info:Airdate.Label">
-		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Continuing)">$LOCALIZE[31502]</value>
-		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Ended)">$LOCALIZE[31501]</value>
+		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Continuing)">$LOCALIZE[31651]</value>
+		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Ended)">$LOCALIZE[31650]</value>
 	</variable>
 
 	<variable name="info:AirsToday">
-		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])">$LOCALIZE[31538]</value>
+		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])">$LOCALIZE[31718]</value>
 		<value></value>
 	</variable>
 
@@ -221,9 +221,9 @@
 	</variable>
 
 	<variable name="info:ShowStatus">
-		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Continuing) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Airdate))">$LOCALIZE[31525]</value>
-		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Ended)">$LOCALIZE[31526]</value>
-		<value condition="!ListItem.IsFolder">$LOCALIZE[31527]</value>
+		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Continuing) | !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Airdate))">$LOCALIZE[31705]</value>
+		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Ended)">$LOCALIZE[31706]</value>
+		<value condition="!ListItem.IsFolder">$LOCALIZE[31707]</value>
 	</variable>
 
 	<variable name="info:SongCount">
@@ -652,12 +652,12 @@
 	<variable name="art:Landscape">
 		<value condition="[Container.Content(images) + !ListItem.IsFolder] | [String.IsEmpty(Container.Content) + !ListItem.IsFolder]">$INFO[ListItem.Icon]</value>
 		<value condition="Container.Content(images) + ListItem.IsFolder">$INFO[ListItem.Art(thumb)]</value>
-		<value condition="[Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedfanart))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) | Window.IsVisible(DialogPVRInfo.xml)">$INFO[ListItem.Icon]</value>
+		<value condition="Container.Content(movies) + [Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedfanart))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(files) | Container.Content(videos) | Container.Content(actors)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(episodes) + ListItem.IsParentFolder">$INFO[Container.Art(tvshow.fanart)]</value>
 		<value condition="String.IsEqual(Skin.String(views.landscape.art),landscape) + !String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
@@ -792,7 +792,7 @@
 		<value condition="Container.Content(episodes)">$LOCALIZE[157]</value>
 		<value condition="Container.Content(musicvideos)">$LOCALIZE[157]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[180]</value>
-		<value condition="Container.Content(artists)">$LOCALIZE[31522]</value>
+		<value condition="Container.Content(artists)">$LOCALIZE[31701]</value>
 		<value condition="Container.Content(songs)">$LOCALIZE[38039]</value>
 	</variable>
 	<variable name="information:R1">
@@ -890,16 +890,16 @@
 		<value condition="Container.Content(episodes)">$LOCALIZE[292]</value>
 		<value condition="Container.Content(musicvideos)">$LOCALIZE[292]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[182]</value>
-		<value condition="Container.Content(artists)">$LOCALIZE[31523]</value>
+		<value condition="Container.Content(artists)">$LOCALIZE[31703]</value>
 		<value condition="Container.Content(songs)">$LOCALIZE[38035]</value>
 	</variable>
 
 	<variable name="information:YouTubeQuery">
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Title,$LOCALIZE[31507]: ]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle,$LOCALIZE[31507]: ]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$LOCALIZE[31507]: $INFO[ListItem.TVShowTitle] $INFO[ListItem.Title]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[31507]: $INFO[ListItem.TVShowTitle] $INFO[ListItem.Season,$LOCALIZE[20373] ]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,musicvideo)">$INFO[ListItem.Artist,$LOCALIZE[31507]: ]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Title,$LOCALIZE[31656]: ]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle,$LOCALIZE[31656]: ]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$LOCALIZE[31656]: $INFO[ListItem.TVShowTitle] $INFO[ListItem.Title]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[31656]: $INFO[ListItem.TVShowTitle] $INFO[ListItem.Season,$LOCALIZE[20373] ]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,musicvideo)">$INFO[ListItem.Artist,$LOCALIZE[31656]: ]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
@@ -1545,8 +1545,8 @@
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 		<value condition="Window.IsActive(1110)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsActive(MyPlaylist.xml)">$LOCALIZE[13350]</value>
-		<value condition="String.StartsWith(Container.FolderPath,plugin://script.watchlist) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=recommendedmovies) | String.StartsWith(Container.FolderPath,plugin://service.library.data.provider?type=recommended)">$LOCALIZE[31532]</value>
-		<value condition="String.IsEqual(Container.FolderPath,sources://video/)">$LOCALIZE[31512]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.watchlist) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=recommendedmovies) | String.StartsWith(Container.FolderPath,plugin://service.library.data.provider?type=recommended)">$LOCALIZE[31712]</value>
+		<value condition="String.IsEqual(Container.FolderPath,sources://video/)">$LOCALIZE[31661]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
 		<value condition="String.IsEqual(Container.FolderName,$LOCALIZE[369])">$INFO[Container.Content]</value>
 		<value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
@@ -1615,8 +1615,8 @@
 
 <!-- Other -->
 	<variable name="tmdb:Path">
-		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31509]</value>
-		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31509]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31658]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31658]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=airingtodaytvshows)">$ADDON[script.extendedinfo 32038]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=onairtvshows)">$ADDON[script.extendedinfo 32039]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=populartvshows)">$ADDON[script.extendedinfo 32041]</value>
@@ -1637,9 +1637,9 @@
 	</variable>
 
 	<variable name="more:Similar">
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[31509]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[31510]</value>
-		<value>$LOCALIZE[31508]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[31658]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[31659]</value>
+		<value>$LOCALIZE[31657]</value>
 	</variable>
 
 	<variable name="manage:SetArt">

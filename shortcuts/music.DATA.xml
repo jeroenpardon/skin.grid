@@ -8,8 +8,8 @@
 		<action>ActivateWindow(music,library://music/artists.xml/,return)</action>
 	</shortcut>
 	<shortcut>
-		<defaultID>31516</defaultID>
-		<label>$SKIN[31516|skin.grid|Recently Added]</label>
+		<defaultID>31665</defaultID>
+		<label>$SKIN[31665|skin.grid|Recently Added]</label>
 		<label2>Library node</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />

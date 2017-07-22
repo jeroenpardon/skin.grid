@@ -30,7 +30,7 @@
 				<!--header-->
 				<control type="label">
 					<width>806</width>
-					<label>$LOCALIZE[31521]</label>
+					<label>$LOCALIZE[31700]</label>
 					<include>global_Header</include>
 				</control>
 				<!--set playlist type-->

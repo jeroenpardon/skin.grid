@@ -127,7 +127,7 @@
 				<control type="label" id="1">
 					<width>634</width>
 					<height>90</height>
-					<label>$LOCALIZE[31408]</label>
+					<label>$LOCALIZE[31608]</label>
 					<include>global_Header</include>
 				</control>
 				<control type="togglebutton" id="34">
@@ -141,7 +141,7 @@
 				<control type="label" id="2">
 					<width>634</width>
 					<height>90</height>
-					<label>$LOCALIZE[31409]</label>
+					<label>$LOCALIZE[31609]</label>
 					<include>global_Header</include>
 				</control>
 				<!--active-->

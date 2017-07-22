@@ -163,7 +163,7 @@
 					<visible>!String.IsEmpty(LIstItem.Director)</visible>
 					<control type="button" id="541">
 						<width>1466</width>
-						<label>$INFO[ListItem.Director,$LOCALIZE[31506] ]</label>
+						<label>$INFO[ListItem.Director,$LOCALIZE[31655] ]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>530</onup>
@@ -190,7 +190,7 @@
 					<visible>!String.IsEmpty(LIstItem.Writer)</visible>
 					<control type="button" id="551">
 						<width>1466</width>
-						<label>$INFO[ListItem.Writer,$LOCALIZE[31505] ]</label>
+						<label>$INFO[ListItem.Writer,$LOCALIZE[31654] ]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>540</onup>
@@ -219,7 +219,7 @@
 					<visible>!String.IsEmpty(LIstItem.Studio) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
 					<control type="button" id="561">
 						<width>1466</width>
-						<label>$INFO[ListItem.Studio,$LOCALIZE[31511] ]</label>
+						<label>$INFO[ListItem.Studio,$LOCALIZE[31660] ]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>550</onup>

@@ -28,7 +28,7 @@
 				<control type="label" id="1">
 					<width>364</width>
 					<height>90</height>
-					<label>$LOCALIZE[31400]</label>
+					<label>$LOCALIZE[31600]</label>
 					<include>global_Header</include>
 				</control>
 				<include content="dialog_List">
@@ -53,7 +53,7 @@
 				<control type="label" id="1">
 					<width>365</width>
 					<height>90</height>
-					<label>$LOCALIZE[31406]</label>
+					<label>$LOCALIZE[31606]</label>
 					<include>global_Header</include>
 				</control>
 				<include content="dialog_List">
@@ -81,7 +81,7 @@
 				<control type="label" id="1">
 					<width>365</width>
 					<height>90</height>
-					<label>$LOCALIZE[31405]</label>
+					<label>$LOCALIZE[31605]</label>
 					<include>global_Header</include>
 				</control>
 				<include content="dialog_List">
@@ -115,22 +115,22 @@
 				<!--add group-->
 				<control type="button" id="26">
 					<width>300</width>
-					<label>$LOCALIZE[31401]</label>
+					<label>$LOCALIZE[31601]</label>
 				</control>
 				<!--rename group-->
 				<control type="button" id="27">
 					<width>300</width>
-					<label>$LOCALIZE[31402]</label>
+					<label>$LOCALIZE[31602]</label>
 				</control>
 				<!--hide group-->
 				<control type="radiobutton" id="25">
 					<width>300</width>
-					<label>$LOCALIZE[31403]</label>
+					<label>$LOCALIZE[31603]</label>
 				</control>
 				<!--delete group-->
 				<control type="button" id="28">
 					<width>300</width>
-					<label>$LOCALIZE[31404]</label>
+					<label>$LOCALIZE[31604]</label>
 				</control>
 				<!--ok-->
 				<control type="button" id="29">

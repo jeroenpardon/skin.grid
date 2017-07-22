@@ -1,15 +1,15 @@
 <shortcuts>
 	<shortcut>
-		<defaultID>31532</defaultID>
-		<label>$SKIN[31532|skin.grid|Watchlist]</label>
+		<defaultID>31712</defaultID>
+		<label>$SKIN[31712|skin.grid|Watchlist]</label>
 		<label2>Add-on</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(Videos,plugin://script.watchlist?type=episodes,return)</action>
 	</shortcut>
 	<shortcut>
-		<defaultID>31516</defaultID>
-		<label>$SKIN[31516|skin.grid|Recently Added]</label>
+		<defaultID>31665</defaultID>
+		<label>$SKIN[31665|skin.grid|Recently Added]</label>
 		<label2>Library node</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />

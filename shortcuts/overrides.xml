@@ -70,24 +70,24 @@
 		<node label="Grid">
 			<!-- Movies -->
 			<node label="20342">
-				<shortcut label="$LOCALIZE[31532]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=movies,return)</shortcut>
-				<shortcut label="$LOCALIZE[31516]" type="31066">ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</shortcut>
+				<shortcut label="$LOCALIZE[31712]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=movies,return)</shortcut>
+				<shortcut label="$LOCALIZE[31665]" type="31066">ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</shortcut>
 				<shortcut label="$LOCALIZE[16101]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/movies/unwatched.xsp,return)</shortcut>
 			</node>
 			<!-- TV Shows -->
 			<node label="20343">
-				<shortcut label="$LOCALIZE[31532]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=episodes,return)</shortcut>
-				<shortcut label="$LOCALIZE[31516]" type="31066">ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</shortcut>
+				<shortcut label="$LOCALIZE[31712]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=episodes,return)</shortcut>
+				<shortcut label="$LOCALIZE[31665]" type="31066">ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</shortcut>
 				<shortcut label="$LOCALIZE[16101]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/episodes/unwatched.xsp,return)</shortcut>
 				<shortcut label="$LOCALIZE[575]" type="31066">ActivateWindow(Videos,videodb://inprogresstvshows/,return)</shortcut>			
 			</node>
 			<!-- Music -->
 			<node label="2">		
-				<shortcut label="$LOCALIZE[31516]" type="31066">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
-				<shortcut label="$LOCALIZE[31534]" type="31066">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
-				<shortcut label="$LOCALIZE[31535]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/albums/recommended.xsp,return)</shortcut>
-				<shortcut label="$LOCALIZE[31513]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/albums/random.xsp,return)</shortcut>
-				<shortcut label="$LOCALIZE[31514]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/songs/random.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31665]" type="31066">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
+				<shortcut label="$LOCALIZE[31714]" type="31066">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
+				<shortcut label="$LOCALIZE[31715]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/albums/recommended.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31662]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/albums/random.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31663]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/songs/random.xsp,return)</shortcut>
 			</node>
 			<!-- TMDb -->
 			<node label="themoviedb">
@@ -103,7 +103,7 @@
 			</node>
 			<!-- Other -->
 			<node label="31062">
-				<shortcut label="$LOCALIZE[31539]" type="31066">ActivateWindow(Videos,plugin://service.library.data.provider?type=randommovies,return)</shortcut>
+				<shortcut label="$LOCALIZE[31719]" type="31066">ActivateWindow(Videos,plugin://service.library.data.provider?type=randommovies,return)</shortcut>
 				<shortcut label="$LOCALIZE[3]" type="31066">ActivateWindow(Videos,files)</shortcut>
 				<shortcut label="$LOCALIZE[24001]" type="10040">ActivateWindow(1110)</shortcut>
 				<shortcut label="$LOCALIZE[13000]" type="5">ActivateWindow(Settings)</shortcut>
@@ -208,11 +208,11 @@
 
 
 	<!-- Widgets -->
-	<widget label="31536" name="31536" type="movies" condition="Library.HasContent(movies)" path="plugin://script.watchlist/?type=movies" target="video">MoviesWatchlist</widget>
-	<widget label="31540" name="31540" type="movies" condition="Library.HasContent(movies)" path="special://skin/extras/playlists/movies/unwatched.xsp" target="video">UnwatchedMovies</widget>
+	<widget label="31716" name="31716" type="movies" condition="Library.HasContent(movies)" path="plugin://script.watchlist/?type=movies" target="video">MoviesWatchlist</widget>
+	<widget label="31720" name="31720" type="movies" condition="Library.HasContent(movies)" path="special://skin/extras/playlists/movies/unwatched.xsp" target="video">UnwatchedMovies</widget>
 	<widget label="20386" name="20386" type="movies" condition="Library.HasContent(movies)" path="videodb://recentlyaddedmovies/" target="video">RecentlyAddedMovies</widget>
-	<widget label="31537" name="31537" type="episodes" condition="Library.HasContent(tvshows)" path="plugin://script.watchlist/?type=episodes" target="video">EpisodesWatchlist</widget>
-	<widget label="31529" name="31529" type="episodes" condition="Library.HasContent(tvshows)" path="special://skin/extras/playlists/episodes/unwatched.xsp" target="video">UnwatchedEpisodes</widget>
+	<widget label="31717" name="31717" type="episodes" condition="Library.HasContent(tvshows)" path="plugin://script.watchlist/?type=episodes" target="video">EpisodesWatchlist</widget>
+	<widget label="31709" name="31709" type="episodes" condition="Library.HasContent(tvshows)" path="special://skin/extras/playlists/episodes/unwatched.xsp" target="video">UnwatchedEpisodes</widget>
 	<widget label="20387" name="20387" type="episodes" condition="Library.HasContent(tvshows)" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widget>
 	<widget label="626" name="626" type="tvshows" condition="Library.HasContent(tvshows)" path="videodb://inprogresstvshows/" target="video">InProgressShows</widget>
 	<widget label="20390" name="20390" type="musicvideos" condition="Library.HasContent(musicvideos)" path="videodb://recentlyaddedmusicvideos/" target="video">RecentlyAddedMusicVideos</widget>
@@ -220,7 +220,7 @@
 	<widget label="1038" name="1038" type="addons" path="addons://sources/audio/" target="video">MusicAddons</widget>
 	<widget label="1039" name="1039" type="addons" path="addons://sources/image/" target="video">PictureAddons</widget>
 	<widget label="1043" name="1043" type="addons" path="addons://sources/executable/" target="video">ProgramAddons</widget>
-	<widget label="31407" name="31407" type="tvshows" path="pvr://channels/tv/*?view=lastplayed" target="video">PVRLastPlayedTV</widget>
+	<widget label="31607" name="31607" type="tvshows" path="pvr://channels/tv/*?view=lastplayed" target="video">PVRLastPlayedTV</widget>
 	<widget label="31852" name="31852" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/popular_right_now/" target="video">YouTubePopular</widget>
 	<widget label="31853" name="31853" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/live/" target="video">YouTubeLive</widget>
 	<widget label="$ADDON[script.extendedinfo 32042]" name="$ADDON[script.extendedinfo 32042]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=incinemas" target="video">ExtendedInfoCinemas</widget>
@@ -240,8 +240,8 @@
 	<propertydefault defaultID="24001" property="homeSymbol">&#57389;</propertydefault>
 	<propertydefault defaultID="744" property="homeSymbol">&#57477;</propertydefault>
 	<propertydefault defaultID="1037" property="homeSymbol">&#57389;</propertydefault>
-	<propertydefault defaultID="31516" property="homeSymbol">&#59179;</propertydefault>
-	<propertydefault defaultID="31532" property="homeSymbol">&#59055;</propertydefault>
+	<propertydefault defaultID="31665" property="homeSymbol">&#59179;</propertydefault>
+	<propertydefault defaultID="31712" property="homeSymbol">&#59055;</propertydefault>
 	<propertydefault defaultID="musicvideos" property="homeSymbol">&#57352;</propertydefault>
 	<propertydefault defaultID="movies" property="homeSymbol">&#57402;</propertydefault>
 	<propertydefault defaultID="videos" property="homeSymbol">&#57352;</propertydefault>

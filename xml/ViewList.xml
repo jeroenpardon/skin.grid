@@ -629,7 +629,7 @@
 						<label>$VAR[info:AirsToday]</label>
 						<height>54</height>
 						<onclick>noop</onclick>
-						<textcolor>$LOCALIZE[31538]</textcolor>
+						<textcolor>$LOCALIZE[31718]</textcolor>
 						<texturenofocus colordiffuse="eeE65100">colorize/95.png</texturenofocus>
 						<texturefocus colordiffuse="eeE65100">colorize/95.png</texturefocus>
 						<visible>String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])</visible>
@@ -724,6 +724,7 @@
 				<pagecontrol>6500</pagecontrol>
 				<preloaditems>2</preloaditems>
 				<include>global_ListScroll</include>
+				<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | String.StartsWith(Container.FolderPath,pvr://recordings)</visible>
 				<itemlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
 					<control type="group">
 						<left>128</left>
