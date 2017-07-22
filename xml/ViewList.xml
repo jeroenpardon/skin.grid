@@ -707,6 +707,7 @@
 		<param name="Logo" default="$VAR[art:Logo]"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
+		<param name="Label2" default="$VAR[media:Info]"/>
 		<param name="PageControl" default="6500"/>
 		<definition>
 			<control type="list" id="51">
@@ -772,7 +773,7 @@
 						<control type="label">
 							<top>58</top>
 							<width>1088</width>
-							<label>$VAR[media:Info]</label>
+							<label>$PARAM[Label2]</label>
 							<height>45</height>
 							<font>Regular-20</font>
 							<aligny>center</aligny>
@@ -848,7 +849,7 @@
 						<control type="label">
 							<top>58</top>
 							<width>1088</width>
-							<label>$VAR[media:Info]</label>
+							<label>$PARAM[Label2]</label>
 							<height>45</height>
 							<font>Regular-20</font>
 							<aligny>center</aligny>
