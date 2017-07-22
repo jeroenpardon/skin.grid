@@ -26,6 +26,8 @@
 				</include>
 			</control>
 
+			<include>transition_Content</include>
+
 			<!-- Content -->		
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
