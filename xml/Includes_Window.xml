@@ -240,7 +240,7 @@
 						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Text.3]</textcolor>
-						<texturenofocus colordiffuse="ff000000">colorize/5.png</texturenofocus>
+						<texturenofocus></texturenofocus>
 						<visible>$EXP[!Window.HasOverlay]</visible>
 						<visible>!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia + [Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),home)]] | [!Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),nohome)]]</visible>
 						<animation effect="slide" end="128" time="0" condition="!Skin.HasSetting(home.clock) + Window.IsActive(home)">Conditional</animation>

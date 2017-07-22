@@ -1523,6 +1523,7 @@
 		<value condition="Window.Is(osdaudiosettings)">$LOCALIZE[13396]</value>
 		<value condition="Window.Is(osdvideosettings)">$LOCALIZE[13395]</value>
 		<value condition="Window.IsVisible(mediasource)">$LOCALIZE[10129]</value>
+		<value condition="Window.IsActive(textviewer)">$INFO[ListItem.Label]</value>
 		<value condition="!String.IsEmpty(Control.GetLabel(1))">$INFO[Control.GetLabel(1)]</value>
 		<value>$INFO[System.CurrentWindow]</value>
 	</variable>
