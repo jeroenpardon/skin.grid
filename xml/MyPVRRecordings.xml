@@ -14,7 +14,7 @@
 
 		<!-- Chrome -->
 		<include content="global_Background">
-			<param name="GridTexture">overlays/108.png</param>
+			<param name="GridTexture">$VAR[window:Grid]</param>
 		</include>
 
 		<control type="group">
