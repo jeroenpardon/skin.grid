@@ -99,12 +99,20 @@
 						<onright>9000</onright>
 						<onup>510</onup>
 						<ondown>530</ondown>
-						<onclick>Dialog.Close(all)</onclick>			
+						<onclick>Dialog.Close(all)</onclick>	
+						<!--
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,movie)">ActivateWindow(Videos,plugin://script.extendedinfo?info=youtubesearchvideos&amp;&amp;id=$INFO[ListItem.Title])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow)">ActivateWindow(Videos,plugin://script.extendedinfo?info=youtubesearchvideos&amp;&amp;id=$INFO[ListItem.TVShowTitle])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,episode)">ActivateWindow(Videos,plugin://script.extendedinfo?info=youtubesearchvideos&amp;&amp;id=$INFO[ListItem.Title] $INFO[ListItem.TVShowTitle])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,season)">ActivateWindow(Videos,plugin://script.extendedinfo?info=youtubesearchvideos&amp;&amp;id=$INFO[ListItem.TVShowTitle] $LOCALIZE[20373] $INFO[ListItem.Season])</onclick>
 						<onclick condition="String.IsEqual(ListItem.DBTYPE,musicvideo)">ActivateWindow(Videos,plugin://script.extendedinfo?info=youtubesearchvideos&amp;&amp;id=$INFO[ListItem.Artist] $INFO[ListItem.Title])</onclick>
+						-->
+						<onclick condition="System.HasAddon(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,movie)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Title],header=YouTube: $INFO[ListItem.Title])</onclick>
+						<onclick condition="System.HasAddon(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,tvshow)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.TVShowTitle],header=YouTube: $INFO[ListItem.TVShowTitle])</onclick>
+						<onclick condition="System.HasAddon(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,episode)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Title] $INFO[ListItem.TVShowTitle],header=YouTube: $INFO[ListItem.Title] $INFO[ListItem.TVShowTitle])</onclick>
+						<onclick condition="System.HasAddon(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,season)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.TVShowTitle] $LOCALIZE[20373] $INFO[ListItem.Season],header=YouTube: $INFO[ListItem.TVShowTitle] $LOCALIZE[20373] $INFO[ListItem.Season])</onclick>
+						<onclick condition="System.HasAddon(plugin.video.youtube) + String.IsEqual(ListItem.DBTYPE,musicvideo)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Artist],header=YouTube: $INFO[ListItem.Artist])</onclick>
+						<onclick condition="!System.HasAddon(plugin.video.youtube)">ActivateWindow(Videos,plugin://plugin.video.youtube)</onclick>
 						<include>button_Settings</include>
 					</control>
 					<control type="label">

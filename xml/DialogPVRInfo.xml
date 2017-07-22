@@ -121,6 +121,7 @@
 						<font>Black-20</font>
 						<label>$LOCALIZE[19061]</label>
 						<texturenofocus></texturenofocus>
+						<visible>!String.StartsWith(Container.FolderPath,pvr://recordings)</visible>
 					</control>
 					<!-- Find similar -->
 					<control type="togglebutton" id="4">
@@ -130,6 +131,7 @@
 						<font>Black-20</font>
 						<label>$LOCALIZE[19003]</label>
 						<texturenofocus></texturenofocus>
+						<visible>!String.StartsWith(Container.FolderPath,pvr://recordings)</visible>
 					</control>
 					<!-- Switch to channel -->
 					<control type="togglebutton" id="5">
@@ -139,6 +141,7 @@
 						<font>Black-20</font>
 						<label>$LOCALIZE[19165]</label>
 						<texturenofocus></texturenofocus>
+						<visible>!String.StartsWith(Container.FolderPath,pvr://recordings)</visible>
 					</control>
 					<!-- Play recording -->
 					<control type="togglebutton" id="8">
@@ -157,6 +160,19 @@
 						<font>Black-20</font>
 						<label></label>
 						<visible>Window.IsActive(PVRGuideInfo)</visible>
+						<texturenofocus></texturenofocus>
+						<visible>!String.StartsWith(Container.FolderPath,pvr://recordings)</visible>
+					</control>
+					<!-- YouTube -->
+					<control type="togglebutton" id="3">
+						<width>300</width>
+						<height>90</height>
+						<align>center</align>
+						<font>Black-20</font>
+						<label>YouTube</label>
+						<onclick>Dialog.Close(all)</onclick>
+						<onclick condition="System.HasAddon(plugin.video.youtube)">RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Label] Trailer,header=YouTube: $INFO[ListItem.Label])</onclick>
+						<onclick condition="!System.HasAddon(plugin.video.youtube)">ActivateWindow(Videos,plugin://plugin.video.youtube)</onclick>
 						<texturenofocus></texturenofocus>
 					</control>
 					<!-- Ok -->

@@ -707,6 +707,7 @@
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Day0.Outlook)]</value>
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.Property(Addon.ID)]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.StartTime] - $INFO[ListItem.StartDate]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.StartDate]</value>
 		<value>$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[ListItem.VideoResolution,,P]</value>
 	</variable>
 	<variable name="information:L1.Label">
@@ -720,6 +721,7 @@
 		<value condition="Window.IsActive(weather)">$LOCALIZE[33030]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[560]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[335]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$LOCALIZE[552]</value>
 		<value>$LOCALIZE[157]</value>
 	</variable>
 	<variable name="information:L2">
@@ -733,6 +735,7 @@
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</value>
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.AddonVersion]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Genre]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.ChannelName]</value>
 	</variable>
 	<variable name="information:L2.Label">
 		<value condition="Container.Content(movies)">$LOCALIZE[345]</value>
@@ -746,6 +749,7 @@
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[467]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[19114]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[515]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$LOCALIZE[19029]</value>
 	</variable>
 	<variable name="information:L3">
 		<value condition="Container.Content(movies)">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</value>
@@ -758,6 +762,7 @@
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Current.Humidity)]</value>
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.Property(Addon.Status)]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Director]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.Season]</value>
 	</variable>
 	<variable name="information:L3.Label">
 		<value condition="Container.Content(movies)">$LOCALIZE[180]</value>
@@ -769,7 +774,8 @@
 		<value condition="Container.Content(songs)">$LOCALIZE[175]</value>
 		<value condition="Window.IsActive(weather)">$LOCALIZE[406]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[126]</value>
-		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[20339]</value>	
+		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[20339]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$LOCALIZE[20373]</value>
 	</variable>
 	<variable name="information:L4">
 		<value condition="Container.Content(movies)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[ListItem.VideoResolution,,P]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
@@ -800,6 +806,7 @@
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Current.Temperature)]$INFO[System.TemperatureUnits,, ]$INFO[Window.Property(Current.FeelsLike),($LOCALIZE[402]: ]$INFO[System.TemperatureUnits])$INFO[Window.Property(Current.Condition),$COMMA ]</value>
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.AddonType]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.EndTime] - $INFO[ListItem.EndDate]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.StartTime]</value>
 		<value>$VAR[info:AudioCodec]$VAR[info:AudioChannels,&#32;&#32;|&#32;&#32;]$INFO[ListItem.AudioLanguage,&#32;&#32;|&#32;&#32;]$INFO[ListItem.SubtitleLanguage, (, $LOCALIZE[287])]</value>
 	</variable>
 	<variable name="information:R1.Label">
@@ -813,6 +820,7 @@
 		<value condition="Window.IsActive(weather)">$LOCALIZE[31851]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[467]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[19081]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$LOCALIZE[555]</value>
 		<value>$LOCALIZE[292]</value>
 	</variable>
 	<variable name="information:R2">
@@ -826,6 +834,7 @@
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</value>
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.AddonCreator]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.ChannelName]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="information:R2.Label">
 		<value condition="Container.Content(movies)">$LOCALIZE[572]</value>
@@ -838,6 +847,7 @@
 		<value condition="Window.IsActive(weather)">$LOCALIZE[391]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[21863]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[19029]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$LOCALIZE[515]</value>
 	</variable>
 	<variable name="information:R3">
 		<value condition="Container.Content(movies)">$INFO[ListItem.MPAA]</value>
@@ -850,6 +860,7 @@
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Current.Wind)]</value>
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.AddonName]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Writer]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.Episode]</value>
 	</variable>
 	<variable name="information:R3.Label">
 		<value condition="Container.Content(movies)">$LOCALIZE[31251]</value>
@@ -862,6 +873,7 @@
 		<value condition="Window.IsActive(weather)">$LOCALIZE[383]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[551]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[20417]</value>
+		<value condition="Window.IsActive(pvrrecordinginfo)">$LOCALIZE[20452]</value>
 	</variable>
 	<variable name="information:R4">
 		<value condition="Container.Content(movies)">$VAR[info:AudioCodec]$VAR[info:AudioChannels,&#32;&#32;|&#32;&#32;]$INFO[ListItem.AudioLanguage,&#32;&#32;|&#32;&#32;]$INFO[ListItem.SubtitleLanguage, (, $LOCALIZE[287])]</value>
