@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
 		<defaultID>133</defaultID>
@@ -14,5 +15,13 @@
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>musicvideos</defaultID>
+		<label>20389</label>
+		<label2>Common menu item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
 	</shortcut>
 </shortcuts>

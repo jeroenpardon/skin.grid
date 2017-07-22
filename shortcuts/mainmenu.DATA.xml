@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
-		<defaultID>31711</defaultID>
+		<defaultID>31531</defaultID>
 		<label>$INFO[Player.Title]</label>
 		<label2>Action</label2>
 		<icon>DefaultShortcut.png</icon>

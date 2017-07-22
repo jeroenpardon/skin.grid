@@ -1,1 +1,11 @@
-<shortcuts />
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>136</defaultID>
+		<label>136</label>
+		<label2>item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Videos,special://videoplaylists/,return)</action>
+	</shortcut>
+</shortcuts>

@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
 		<defaultID>31712</defaultID>
@@ -21,6 +22,6 @@
 		<label2>Smart playlist</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
-		<action>ActivateWindow(Videos,special://skin/extras/playlists/episodes/unwatched.xsp,return)</action>
+		<action>ActivateWindow(Videos,/Users/Jeroen/Library/Application Support/Kodi/addons/skin.grid/extras/playlists/episodes/unwatched.xsp,return)</action>
 	</shortcut>
 </shortcuts>
