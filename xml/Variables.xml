@@ -1408,14 +1408,12 @@
 		<value condition="Control.IsVisible(51)">overlays/270.png</value>
 		<!--<value condition="Control.IsVisible(56) + [Window.IsActive(AddonBrowser) | Window.IsActive(programs) | Container.Content(addons)]">overlays/384.png</value>-->
 		<value condition="Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(521)">overlays/108.png</value>
+		<value condition="Control.IsVisible(54)">overlays/410.png</value>
 		<value>overlays/90.png</value>
 	</variable>
 
 	<variable name="window:Symbol">
-
 		<value condition="Window.IsActive(pictureinfo)">&#57483;</value>
-
-
 		<value condition="Window.IsVisible(DialogVolumeBar.xml) + IntegerGreaterThan(Player.Volume,50)">&#57504;</value>
 		<value condition="Window.IsVisible(DialogVolumeBar.xml) + IntegerGreaterThan(Player.Volume,0)">&#57503;</value>
 		<value condition="Player.Muted">&#57505;</value>
