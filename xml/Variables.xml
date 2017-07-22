@@ -1409,6 +1409,7 @@
 		<!--<value condition="Control.IsVisible(56) + [Window.IsActive(AddonBrowser) | Window.IsActive(programs) | Container.Content(addons)]">overlays/384.png</value>-->
 		<value condition="Control.IsVisible(50) | Control.IsVisible(52) | Control.IsVisible(521)">overlays/108.png</value>
 		<value condition="Control.IsVisible(54)">overlays/410.png</value>
+		<value condition="Control.IsVisible(55)">overlays/321.png</value>
 		<value>overlays/90.png</value>
 	</variable>
 
