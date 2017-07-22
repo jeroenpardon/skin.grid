@@ -91,10 +91,10 @@
 				<!--YouTube-->
 				<control type="group" id="520">
 					<height>90</height>
-					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)</visible>
+					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,musicvideo) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song)</visible>
 					<control type="button" id="521">
 						<width>1466</width>
-						<label>$INFO[ListItem.Label,$LOCALIZE[31507]: ]</label>
+						<label>$VAR[information:YouTubeQuery]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>510</onup>

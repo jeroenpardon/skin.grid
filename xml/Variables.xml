@@ -894,6 +894,15 @@
 		<value condition="Container.Content(songs)">$LOCALIZE[38035]</value>
 	</variable>
 
+	<variable name="information:YouTubeQuery">
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Title,$LOCALIZE[31507]: ]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle,$LOCALIZE[31507]: ]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$LOCALIZE[31507]: $INFO[ListItem.TVShowTitle] $INFO[ListItem.Title]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[31507]: $INFO[ListItem.TVShowTitle] $INFO[ListItem.Season,$LOCALIZE[20373] ]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,musicvideo)">$INFO[ListItem.Artist,$LOCALIZE[31507]: ]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
 
 <!-- Player -->
 	<variable name="player:Art">
