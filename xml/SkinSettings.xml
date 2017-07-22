@@ -109,13 +109,13 @@
 
 					<!-- Startup playlist-->
 					<control type="radiobutton" id="105">
-						<label>$LOCALIZE[31208]</label>
+						<label>$LOCALIZE[31275]</label>
 						<onclick>Skin.ToggleSetting(startup.playlist)</onclick>
 						<selected>Skin.HasSetting(startup.playlist)</selected>
 						<include>radio_Settings</include>
 					</control>
 					<control type="button" id="106">
-						<label>$LOCALIZE[573]</label>
+						<label>- $LOCALIZE[31276]</label>
 						<label2>$INFO[Skin.String(startup.playlist)]</label2>
 						<onclick>Skin.SetFile(startup.playlist.path,,special://musicplaylists)</onclick>
 						<visible>Skin.HasSetting(startup.playlist)</visible>
@@ -124,7 +124,7 @@
 					</control>
 
 					<!-- Background video -->
-					<control type="radiobutton" id="124">
+					<control type="radiobutton" id="110">
 						<label>$LOCALIZE[31215]</label>
 						<onclick>Skin.ToggleSetting(global.backgroundvideo)</onclick>
 						<selected>Skin.HasSetting(global.backgroundvideo)</selected>
@@ -132,12 +132,12 @@
 					</control>
 
 					<!-- Input -->
-					<control type="label" id="110">
+					<control type="label" id="111">
 						<label>$LOCALIZE[14125]</label>
 						<include>global_Header</include>
 					</control>
 					<!--scrolling type-->
-					<control type="button" id="111">
+					<control type="button" id="112">
 						<label>$LOCALIZE[31207]</label>
 						<label2>$INFO[Skin.String(global.scrolltype.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=global.scrolltype,header=$LOCALIZE[31207])</onclick>
@@ -145,14 +145,14 @@
 						<include>radio_Settings</include>
 					</control>
 					<!-- Sortletter -->
-					<control type="radiobutton" id="112">
+					<control type="radiobutton" id="113">
 						<label>$LOCALIZE[31252]</label>
 						<onclick>Skin.ToggleSetting(global.sortletter)</onclick>
 						<selected>Skin.HasSetting(global.sortletter)</selected>
 						<include>radio_Settings</include>
 					</control>
 					<!-- Text input -->
-					<control type="button" id="113">
+					<control type="button" id="114">
 						<label>$LOCALIZE[31263]</label>
 						<label2>$INFO[Skin.String(input.text.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=input.text,header=$LOCALIZE[31263])</onclick>
@@ -160,7 +160,7 @@
 						<include>button_Settings</include>
 					</control>
 					<!--Guide scrolling speed-->
-					<control type="button" id="114">
+					<control type="button" id="115">
 						<label>$LOCALIZE[31238]</label>
 						<label2>$INFO[Skin.String(epg.scrollspeed.label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=epg.scrollspeed,header=$LOCALIZE[31238])</onclick>
@@ -186,6 +186,12 @@
 						<include>button_Settings</include>
 					</control>
 					<control type="button" id="123">
+						<label>$LOCALIZE[31080]</label>
+						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
+						<include>install_HelperBackup</include>
+						<include>button_Settings</include>
+					</control>
+					<control type="button" id="124">
 						<label>[COLOR=Warning]$LOCALIZE[31233][/COLOR]</label>
 						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[10035],message=$LOCALIZE[31234][CR]$LOCALIZE[750],yesaction=Skin.ResetSettings|SetProperty(skinshortcuts-reloadmainmenu,True,Home)|ActivateWindow(startup)|SetFocus(9001),noaction=Close)</onclick>
 						<include>install_HelperBackup</include>
@@ -212,9 +218,9 @@
 					</control>
 					<!--background type-->
 					<control type="button" id="205">
-						<label>$LOCALIZE[31060]</label>
+						<label>$LOCALIZE[31277]</label>
 						<label2>$INFO[Skin.String(background.type.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.type,header=$LOCALIZE[31060])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.type,header=$LOCALIZE[31277])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -231,9 +237,9 @@
 					</control>
 					<!-- Visualization -->
 					<control type="button" id="207">
-						<label>$LOCALIZE[31531]</label>
+						<label>$LOCALIZE[31711]</label>
 						<label2>$INFO[Skin.String(viz.mode.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=viz.mode,header=$LOCALIZE[31531])</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=viz.mode,header=$LOCALIZE[31711])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -448,6 +454,27 @@
 						<selected>Skin.HasSetting(home.fanartlogo)</selected>
 						<include>radio_Settings</include>
 					</control>
+
+
+
+
+					<!-- Home -->
+					<control type="label" id="412">
+						<label>epg</label>
+						<include>global_Header</include>
+					</control>
+
+					<!-- Playing item on home -->
+					<control type="button" id="413">
+						<label>channel layout</label>
+						<label2>$INFO[Skin.String(epg.channellayout.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=epg.channellayout,header=$LOCALIZE[31007])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+
+
+
 
 					<!-- Colours -->
 					<control type="label" id="415">
@@ -680,7 +707,7 @@
 					</control>
 					<!-- YouTube search-->
 					<control type="radiobutton" id="341">
-						<label>$LOCALIZE[31507]</label>
+						<label>$LOCALIZE[31656]</label>
 						<onclick>Skin.ToggleSetting(context.youtube)</onclick>
 						<selected>Skin.HasSetting(context.youtube)</selected>
 						<include>radio_Settings</include>
