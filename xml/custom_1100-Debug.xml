@@ -41,7 +41,7 @@
 					<include>debug_Label</include>
 				</control>
 				<control type="button" id="11">
-					<label>Container.ViewMode: $VAR[window:Debug]$INFO[Container.Viewmode, - ]</label>
+					<label>Container.ViewMode: $INFO[Container.Viewmode, - ]</label>
 					<include>debug_Label</include>
 				</control>
 				<control type="button" id="12">
