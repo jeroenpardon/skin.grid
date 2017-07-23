@@ -49,7 +49,7 @@
 
 	<variable name="color:Accent">
 		<value condition="!String.IsEmpty(Skin.String(setcolor.accent))">$INFO[Skin.String(setcolor.accent)]</value>
-		<value>ffffffff</value>
+		<value>ffffffff</value>∏∏
 	</variable>
 
 	<variable name="color:Text.2">
@@ -1613,6 +1613,11 @@
 	<variable name="manage:DownloadArt">
 		<value condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[31111]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,musicvideo)">$LOCALIZE[31110]</value>
+	</variable>
+
+	<variable name="skin:AddonStatus">
+		<value condition="!String.IsEmpty(ListItem.Label2)">&#57472;</value>
+		<value>&#57474;</value>
 	</variable>
 
 	<variable name="view:TextColor_Selected">
