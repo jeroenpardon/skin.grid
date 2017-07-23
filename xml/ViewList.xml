@@ -900,7 +900,7 @@
 		<param name="Font" default="Black-22"/>
 		<param name="AnimationCondition"/>
 		<param name="SymbolFont" default="Symbols-26"/>
-		<param name="Label" default="$INFO[ListItem.Label]"/>
+		<param name="Label" default="$VAR[media:Title]"/>
 		<param name="Label2" default="$INFO[ListItem.Label2]"/>
 		<param name="Label2Empty" default="String.IsEmpty(ListItem.Label2)"/>
 		<param name="!Label2Empty" default="!String.IsEmpty(ListItem.Label2)"/>
