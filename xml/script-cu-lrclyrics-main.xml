@@ -112,7 +112,6 @@
 						<left>10</left>
 						<width>530</width>
 						<height>40</height>
-						<font>regular</font>
 						<aligny>center</aligny>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
@@ -128,7 +127,6 @@
 					<control type="label">
 						<width>530</width>
 						<height>40</height>
-						<font>regular</font>
 						<selectedcolor>selected</selectedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
@@ -137,7 +135,6 @@
 			<!--next page-->
 			<control type="spincontrol" id="121">
 				<subtype>page</subtype>
-				<font>regular</font>
 				<onleft>120</onleft>
 				<onright>120</onright>
 				<ondown>120</ondown>
