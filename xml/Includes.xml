@@ -71,15 +71,6 @@
 		<autoscroll delay="8000" time="1500" repeat="10000">!String.IsEqual(Skin.String(autoscroll.speed),none)</autoscroll>
 	</include>
 
-	<include name="autoscroll_Line">
-		<scroll>true</scroll>
-		<scrollspeed>autoscroll_Speed</scrollspeed>
-	</include>
-
-	<include name="autoscroll_Description">
-		<autoscroll delay="2500" time="autoscroll_Time" repeat="5000">true</autoscroll>
-	</include>
-
 	<include name="screen_Dimensions">
 		<width>screen_Width</width>
 		<height>screen_Height</height>
@@ -686,9 +677,6 @@
 	<include name="install_Info">
 		<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 	</include>
-	<include name="install_GrabFanart">
-		<onclick condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onclick>
-	</include>
 
 <!--pvr-->
 	<include name="epgscroll_Instant">
@@ -703,28 +691,7 @@
 	</include>
 
 
-
 <!-- Home -->
-
-	<include name="home_Status.Item">
-		<param name="Width" default="1664"/>
-		<param name="Visible"/>
-		<definition>
-			<control type="label">
-				<bottom>0</bottom>
-				<left>128</left>
-				<width>$PARAM[Width]</width>
-				<height>100</height>
-				<font>Regular-20</font>
-				<label>$VAR[home:Status]</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<textcolor>$VAR[color:Text.3]</textcolor>
-				<include>fadeinout</include>
-			</control>		
-		</definition>
-	</include>
-	
 	<include name="home_Status">
 		<param name="Left" default="128"/>
 		<param name="Width" default="1664"/>
