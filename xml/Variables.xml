@@ -1295,8 +1295,7 @@
 	<variable name="widget:Label2">
 		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="!String.IsEmpty(ListItem.Artist)">$INFO[ListItem.Artist]</value>
-		<value>$INFO[ListItem.Label]</value>
+		<value>$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
 	</variable>
 
 	<variable name="widget:Landscape">
