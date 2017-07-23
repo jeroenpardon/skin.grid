@@ -20,15 +20,17 @@
 				<top>0</top>
 				<height>screen_Height</height>
 				<itemgap>0</itemgap>
-				<control type="button" id="0">
+				
+				<!-- Window -->
+				<control type="button">
 					<label>[B]Window[/B]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="1">
+				<control type="button">
 					<label>System.Window: $INFO[System.CurrentWindow]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="2">
+				<control type="button">
 					<label>System.CurrentControl: $INFO[System.CurrentControl] $INFO[System.CurrentControlID, (ID=,)]</label>
 					<include>debug_Label</include>
 				</control>
@@ -36,31 +38,41 @@
 					<label></label>
 					<height>24</height>
 				</control>
-				<control type="button" id="10">
+
+
+				<!-- Content -->
+				<control type="button">
 					<label>[B]Content[/B]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="11">
+				<control type="button">
 					<label>Container.ViewMode: $INFO[Container.Viewmode, - ]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="12">
+				<control type="button">
 					<label>Container.Content: $INFO[Container.Content]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="13">
+				<control type="button">
 					<label>Container.FolderName: $INFO[Container.FolderName]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="14">
+
+
+				<!-- Path -->
+				<control type="button">
+					<label>[B]Path[/B]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
 					<label>Container.FolderPath: $INFO[Container.FolderPath]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="15">
+				<control type="button">
 					<label>ListItem.FileNameAndPath: $INFO[ListItem.FileNameAndPath]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="16">
+				<control type="button">
 					<label>ListItem.FolderPath: $INFO[ListItem.FolderPath]</label>
 					<include>debug_Label</include>
 				</control>
@@ -68,19 +80,21 @@
 					<label></label>
 					<height>24</height>
 				</control>
-				<control type="button" id="20">
+
+				<!-- Labels -->
+				<control type="button">
 					<label>[B]Labels[/B]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="21">
+				<control type="button">
 					<label>ListItem.Label: $INFO[ListItem.Label]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="22">
+				<control type="button">
 					<label>ListItem.Label2: $INFO[ListItem.Label2]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="23">
+				<control type="button">
 					<label>ListItem.DBID: $INFO[ListItem.DBID]</label>
 					<include>debug_Label</include>
 				</control>
@@ -88,16 +102,25 @@
 					<label></label>
 					<height>24</height>
 				</control>
-				<control type="button" id="49">
+
+				<!-- Artwork -->
+				<control type="button">
 					<label>[B]Artwork[/B]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="50">
-					<label>ListItem.ActualIcon: $INFO[ListItem.ActualIcon]</label>
+
+				<control type="button" id="70">
+					<label>Container.Art(season.poster): $INFO[Container.Art(season.poster)]</label>
 					<include>debug_Label</include>
 				</control>
+				<control type="button" id="90">
+					<label>Container.Art(tvshow.fanart): $INFO[Container.Art(tvshow.fanart)]</label>
+					<include>debug_Label</include>
+				</control>
+
+
 				<control type="button" id="55">
-					<label>ListItem.Icon: $INFO[ListItem.Icon]</label>
+					<label>ListItem.Icon: $INFO[ListItem.Icon] ($INFO[ListItem.ActualIcon])</label>
 					<include>debug_Label</include>
 				</control>
 				<control type="button" id="60">
@@ -108,14 +131,6 @@
 					<label>ListItem.Art(poster): $INFO[ListItem.Art(poster)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="70">
-					<label>Container.Art(season.poster): $INFO[Container.Art(season.poster)]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button" id="75">
-					<label>Fanart.Image: $INFO[Fanart.Image]</label>
-					<include>debug_Label</include>
-				</control>
 				<control type="button" id="80">
 					<label>ListItem.Art(fanart): $INFO[ListItem.Art(fanart)]</label>
 					<include>debug_Label</include>
@@ -124,24 +139,12 @@
 					<label>ListItem.Art(set.fanart): $INFO[ListItem.Art(set.fanart)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="90">
-					<label>Container.Art(tvshow.fanart): $INFO[Container.Art(tvshow.fanart)]</label>
-					<include>debug_Label</include>
-				</control>
 				<control type="button" id="95">
 					<label>ListItem.Art(clearart): $INFO[ListItem.Art(clearart)]</label>
 					<include>debug_Label</include>
 				</control>
 				<control type="button" id="100">
 					<label>ListItem.Art(tvshow.clearlogo): $INFO[ListItem.Art(tvshow.clearlogo)]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button" id="105">
-					<label>Container.Art(artist.thumb): $INFO[Container.Art(artist.thumb)]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button" id="110">
-					<label>Container.Art(artist.fanart): $INFO[Container.Art(artist.fanart)]</label>
 					<include>debug_Label</include>
 				</control>
 				<control type="button">
@@ -156,6 +159,8 @@
 					<label></label>
 					<height>24</height>
 				</control>
+
+				<!-- System -->
 				<control type="button" id="200">
 					<label>[B]System[/B]</label>
 					<include>debug_Label</include>
@@ -175,20 +180,6 @@
 				<control type="button">
 					<label></label>
 					<height>24</height>
-				</control>
-				<control type="button" id="200">
-					<label>[B]Properties[/B]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label>views.landscape.art: $INFO[Skin.String(views.landscape.art)]</label>
-					<height>24</height>
-					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label>ratings.overlay.enable: $INFO[Skin.String(ratings.overlay.enable)]</label>
-					<height>24</height>
-					<include>debug_Label</include>
 				</control>
 			</control>
 		</control>
