@@ -1414,6 +1414,8 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=topratedmovies)">$ADDON[script.extendedinfo 32046]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=ratedmovies)">$ADDON[script.extendedinfo 32135]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=ratedtvshows)">$ADDON[script.extendedinfo 32145]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=personmovies)">$INFO[Window(Home).Property(ExtString)]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=studio)">$INFO[Window(Home).Property(ExtString)]</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/)">Extended Info</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb)">The Movie Database</value>
 	</variable>

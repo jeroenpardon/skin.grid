@@ -194,6 +194,7 @@
 						<onright>9000</onright>
 						<onup>540</onup>
 						<ondown>560</ondown>
+						<onclick>SetProperty(ExtString,$INFO[ListItem.Writer],Home)</onclick>
 						<onclick condition="System.HasAddon(script.extendedinfo)">Dialog.Close(all)</onclick>
 						<onclick condition="System.HasAddon(script.extendedinfo)">ActivateWindow(Videos,plugin://script.extendedinfo?info=personmovies&amp;&amp;person=$INFO[ListItem.Writer])</onclick>
 						<include>install_Info</include>
@@ -223,6 +224,7 @@
 						<onright>9000</onright>
 						<onup>550</onup>
 						<ondown>600</ondown>
+						<onclick>SetProperty(ExtString,$INFO[ListItem.Studio],Home)</onclick>
 						<onclick condition="System.HasAddon(script.extendedinfo)">Dialog.Close(all)</onclick>
 						<onclick condition="System.HasAddon(script.extendedinfo)">ActivateWindow(Videos,plugin://script.extendedinfo?info=studio&amp;&amp;studio=$INFO[ListItem.Studio])</onclick>
 						<include>install_Info</include>
