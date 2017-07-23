@@ -53,6 +53,7 @@
 						<param name="Height">810</param>
 						<param name="ItemHeight">90</param>
 						<param name="ItemWidth">1024</param>
+						<param name="TextWidth">429</param>
 						<param name="ShowArt">true</param>
 						<param name="OnUp">451</param>
 						<param name="OnDown">451</param>
