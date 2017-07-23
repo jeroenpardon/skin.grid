@@ -80,7 +80,7 @@
 				<control type="image">
 					<left>128</left>
 					<aspectratio>stretch</aspectratio>
-					<include>screen_Width</include>
+					<width>screen_Width</width>
 					<texture colordiffuse="ff000000">colorize/20.png</texture>
 				</control>
 			</control>
