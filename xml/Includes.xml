@@ -298,7 +298,7 @@
 				<top>$PARAM[Top]</top>
 				<width>54</width>
 				<height>54</height>
-				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(Container.FolderPath,pvr://recordings)]] + [Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
+				<visible>[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(Container.FolderPath,pvr://recordings)] + [Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0) | String.IsEqual(ListItem.Overlay,OverlayUnwatched.png)]</visible>
 				<control type="image">
 					<width>54</width>
 					<height>54</height>
@@ -721,7 +721,6 @@
 					<textcolor>$VAR[color:Text.3]</textcolor>
 					<titlecolor>$VAR[color:Text.2]</titlecolor>
 					<headlinecolor>$VAR[color:Text.3]</headlinecolor>
-					<highlightcolor>orange</highlightcolor>
 					<include>fadeinout</include>
 					<visible>String.IsEqual(Skin.String(home.status),rss)</visible>
 				</control>

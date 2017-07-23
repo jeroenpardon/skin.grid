@@ -78,12 +78,6 @@
 		</animation>
 	</include>
 
-	<include name="transition_Menu">
-		<animation type="WindowClose">
-			<effect type="slide" time="transition_Close" start="0"  end="-384" tween="Sine" easing="Out" center="auto" />
-		</animation>
-	</include>
-
 	<include name="transition_Chrome">
 		<animation type="WindowOpen">
 			<effect type="Fade" time="transition_Open" start="0" end="100" tween="Sine" easing="InOut"/>
@@ -100,54 +94,19 @@
 	</include>
 
 	<include name="transition_HomeMenu">
-		<animation type="WindowClose" condition="![Skin.HasSetting(global.backgroundvideo) + Player.HasVideo]">
-			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
-		</animation>
-		<animation type="WindowOpen" condition="![Skin.HasSetting(global.backgroundvideo) + Player.HasVideo]">
-			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
-		</animation>
-		<animation type="Hidden" condition="![Skin.HasSetting(global.backgroundvideo) + Player.HasVideo]">
-			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
-		</animation>
-		<animation type="Visible" condition="![Skin.HasSetting(global.backgroundvideo) + Player.HasVideo]">
-			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
-		</animation>
-	</include>
-
-	<include name="transition_Info">
-		<animation type="WindowOpen">
-			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Open" start="0,108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
-		</animation>			
 		<animation type="WindowClose">
 			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Close" start="0,0"  end="0,108" tween="cubic" easing="InOut" center="auto" />
+		</animation>
+		<animation type="WindowOpen">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
+		</animation>
+		<animation type="Hidden">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
 		</animation>
 		<animation type="Visible">
 			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Open" start="0,108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
-		</animation>			
-		<animation type="Hidden">
-			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Close" start="0,0"  end="0,108" tween="cubic" easing="InOut" center="auto" />
 		</animation>
 	</include>
-
-	<include name="transition_Seekbar">
-		<animation type="WindowOpen">
-			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Open" start="0,-108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
-		</animation>
-		<animation type="WindowClose">
-			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Close" start="0,0"  end="0,-108" tween="cubic" easing="InOut" center="auto" />
-		</animation>
-		<animation type="VisibleChange">
-			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Open" start="0,-108"  end="0,0" tween="cubic" easing="InOut" center="auto" />
-		</animation>
-	</include>
-
 
 <!--toggles-->
 	<include name="toggle_Menu">
@@ -157,10 +116,6 @@
 		<animation type="Conditional" condition="!ControlGroup(4998).HasFocus()">
 			<effect type="slide" end="0" tween="Sine" easing="Out" time="transition_Close"/>
 		</animation>
-	</include>
-
-	<include name="toggle_Stream">
-		<animation effect="slide" start="0" end="-128" time="250" tween="Quadratic" easing="Out" condition="String.IsEqual(Skin.String(homemenu.type),stream) + ControlGroup(9100).HasFocus()">Conditional</animation>
 	</include>
 
 	<include name="toggle_Focus">
