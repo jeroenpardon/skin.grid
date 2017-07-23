@@ -173,11 +173,11 @@ msgid "Images slideshow"
 msgstr ""
 
 msgctxt "#31057"
-msgid "Restore"
+msgid "Restore skin settings"
 msgstr ""
 
 msgctxt "#31058"
-msgid "Backup"
+msgid "Backup skin settings"
 msgstr ""
 
 msgctxt "#31059"
@@ -270,6 +270,14 @@ msgid "Descriptions"
 msgstr ""
 
 msgctxt "#31080"
+msgid "Change backup and restore location"
+msgstr ""
+
+msgctxt "#31081"
+msgid "Reload"
+msgstr ""
+
+msgctxt "#31082"
 msgid "Press back to clear message."
 msgstr ""
 
@@ -418,337 +426,347 @@ msgstr ""
 
 
 #: options menu
-msgctxt "#31140"
+msgctxt "#31250"
 msgid "Sorting"
 msgstr ""
 
-msgctxt "#31142"
+msgctxt "#31251"
 msgid "Disable custom shortcuts tab"
 msgstr ""
 
-msgctxt "#31143"
+msgctxt "#31252"
 msgid "Items"
 msgstr ""
 
 
 
 #: settings
-msgctxt "#31200"
+msgctxt "#31300"
 msgid "Homescreen"
 msgstr ""
 
-msgctxt "#31201"
+msgctxt "#31301"
 msgid "Artwork"
 msgstr ""
 
-msgctxt "#31202"
+msgctxt "#31302"
 msgid "Shutdown menu"
 msgstr ""
 
-msgctxt "#31203"
+msgctxt "#31303"
 msgid "Please log in"
 msgstr ""
 
-msgctxt "#31204"
+msgctxt "#31304"
 msgid "About"
 msgstr ""
 
-msgctxt "#31205"
+msgctxt "#31305"
 msgid "Settings level"
 msgstr ""
 
-msgctxt "#31206"
+msgctxt "#31306"
 msgid "Menus"
 msgstr ""
 
-msgctxt "#31207"
-msgid "Scrollbar type"
+msgctxt "#31307"
+msgid "Scrollbar visibility"
 msgstr ""
 
-msgctxt "#31208"
+msgctxt "#31308"
 msgid "Startup playlist"
 msgstr ""
 
-msgctxt "#31209"
+msgctxt "#31309"
 msgid "Customize this menu"
 msgstr ""
 
-msgctxt "#31210"
+msgctxt "#31310"
 msgid "Customize options menu"
 msgstr ""
 
-msgctxt "#31211"
+msgctxt "#31311"
 msgid "Customize home menu and widgets"
 msgstr ""
 
-msgctxt "#31212"
+msgctxt "#31312"
 msgid "Customize"
 msgstr ""
 
-msgctxt "#31213"
+msgctxt "#31313"
 msgid "TV Show Library"
 msgstr ""
 
-msgctxt "#31214"
+msgctxt "#31314"
 msgid "Library views"
 msgstr ""
 
-msgctxt "#31215"
-msgid "Show playing video in background"
+msgctxt "#31315"
+msgid "Show now playing video in background"
 msgstr ""
 
-msgctxt "#31216"
+msgctxt "#31316"
 msgid "Show currently playing media on homescreen"
 msgstr ""
 
-msgctxt "#31217"
+msgctxt "#31317"
 msgid "Animate backgrounds"
 msgstr ""
 
-msgctxt "#31218"
+msgctxt "#31318"
 msgid "Display fanart in now playing screen"
 msgstr ""
 
-msgctxt "#31219"
-msgid "Blend the visualisation and fanart"
+msgctxt "#31319"
+msgid "Blend visualisation and fanart"
 msgstr ""
 
-msgctxt "#31220"
+msgctxt "#31320"
 msgid "Always show"
 msgstr ""
 
-msgctxt "#31221"
+msgctxt "#31321"
 msgid "Show only when focused"
 msgstr ""
 
-msgctxt "#31222"
+msgctxt "#31322"
 msgid "Show clock"
 msgstr ""
 
-msgctxt "#31223"
+msgctxt "#31323"
 msgid "Select icon"
 msgstr ""
 
-msgctxt "#31224"
+msgctxt "#31324"
 msgid "Show current date"
 msgstr ""
 
-msgctxt "#31225"
+msgctxt "#31325"
 msgid "Autoscrolling speed"
 msgstr ""
 
-msgctxt "#31226"
+msgctxt "#31326"
 msgid "resource intensive"
 msgstr ""
 
-msgctxt "#31227"
+msgctxt "#31327"
 msgid "Normal"
 msgstr ""
 
-msgctxt "#31228"
+msgctxt "#31328"
 msgid "Fast"
 msgstr ""
 
-msgctxt "#31229"
+msgctxt "#31329"
 msgid "Instant"
 msgstr ""
 
-msgctxt "#31230"
+msgctxt "#31330"
 msgid "Slow"
 msgstr ""
 
-msgctxt "#31231"
+msgctxt "#31331"
 msgid "Use weather fanart"
 msgstr ""
 
-msgctxt "#31232"
+msgctxt "#31332"
 msgid "Select a weather fanart package"
 msgstr ""
 
-msgctxt "#31233"
-msgid "Reset all skin settings"
+msgctxt "#31333"
+msgid "Reset skin settings"
 msgstr ""
 
-msgctxt "#31234"
+msgctxt "#31334"
 msgid "This will reset all skin settings and Grid will be restarted."
 msgstr ""
 
-msgctxt "#31235"
+msgctxt "#31335"
 msgid "Supported add-ons"
 msgstr ""
 
-msgctxt "#31236"
+msgctxt "#31336"
 msgid "Debug grid"
 msgstr ""
 
-msgctxt "#31237"
+msgctxt "#31337"
 msgid "Debug info"
 msgstr ""
 
-msgctxt "#31238"
+msgctxt "#31338"
 msgid "TV Guide scrolling speed"
 msgstr ""
 
-msgctxt "#31239"
+msgctxt "#31339"
 msgid "Options menu"
 msgstr ""
 
 #. Example usage: allows the user to configure what source is used for media ratings
-msgctxt "#31240"
+msgctxt "#31340"
 msgid "Select ratings source"
 msgstr ""
 
 #. Example usage: shows the imdb rating, as a percentage of 100
-msgctxt "#31241"
+msgctxt "#31341"
 msgid "percentage"
 msgstr ""
 
-msgctxt "#31242"
+msgctxt "#31342"
 msgid "Show parental guidance ratings for movies and tv shows"
 msgstr ""
 
-msgctxt "#31251"
+msgctxt "#31343"
 msgid "Parental guidance"
 msgstr ""
 
-msgctxt "#31252"
+msgctxt "#31344"
 msgid "Highlight first letter when scrolling"
 msgstr ""
 
-msgctxt "#31253"
+msgctxt "#31345"
 msgid "Ratings"
 msgstr ""
 
-msgctxt "#31263"
-msgid "Text input"
+msgctxt "#31346"
+msgid "Select text input mode"
 msgstr ""
 
-msgctxt "#31264"
+msgctxt "#31347"
 msgid "Press up in information screens for popup"
 msgstr ""
 
-msgctxt "#31265"
+msgctxt "#31348"
 msgid "Show video rating overlays"
 msgstr ""
 
-msgctxt "#31266"
+msgctxt "#31349"
 msgid "Menu playback controls"
 msgstr ""
 
-msgctxt "#31267"
+msgctxt "#31350"
 msgid "fullscreen / playlist button"
 msgstr ""
 
-msgctxt "#31268"
+msgctxt "#31351"
 msgid "Player controls"
 msgstr ""
 
-msgctxt "#31269"
+msgctxt "#31352"
 msgid "All windows"
 msgstr ""
 
-msgctxt "#31270"
+msgctxt "#31353"
 msgid "Except homescreen"
 msgstr ""
 
-msgctxt "#31271"
+msgctxt "#31354"
 msgid "Homescreen only"
 msgstr ""
 
-msgctxt "#31272"
+msgctxt "#31355"
 msgid "Full keyboard"
 msgstr ""
 
-msgctxt "#31273"
+msgctxt "#31356"
 msgid "Input field only"
 msgstr ""
 
-msgctxt "#31274"
+msgctxt "#31357"
 msgid "Grid needs to be reloaded for this. Is that ok?"
 msgstr ""
 
+msgctxt "#31358"
+msgid "Start video or music playlist on startup"
+msgstr ""
+
+msgctxt "#31359"
+msgid "Select playlist"
+msgstr ""
+
+msgctxt "#31360"
+msgid "Select global background artwork"
+msgstr ""
+
+
 
 #: osd / player
-msgctxt "#31300"
+msgctxt "#31550"
 msgid "Rwd"
 msgstr ""
 
-msgctxt "#31301"
+msgctxt "#31551"
 msgid "Fwd"
 msgstr ""
 
-msgctxt "#31302"
+msgctxt "#31552"
 msgid "Memory usage"
 msgstr ""
 
-msgctxt "#31303"
+msgctxt "#31553"
 msgid "Hardware decoding"
 msgstr ""
 
-msgctxt "#31304"
+msgctxt "#31554"
 msgid "Software decoding"
 msgstr ""
 
-msgctxt "#31305"
+msgctxt "#31555"
 msgid "Player processing info"
 msgstr ""
 
-
 #. example usage: the movie will finish playing at 22:00
-msgctxt "#31310"
+msgctxt "#31556"
 msgid "Finishes at"
 msgstr ""
 
-
-msgctxt "#31320"
+msgctxt "#31557"
 msgid "Get subtitles"
 msgstr ""
 
-msgctxt "#31321"
+msgctxt "#31558"
 msgid "Disable subtitles"
 msgstr ""
 
-msgctxt "#31322"
+msgctxt "#31559"
 msgid "Get lyrics"
 msgstr ""
 
-
-msgctxt "#31324"
+msgctxt "#31560"
 msgid "Watch in 2D"
 msgstr ""
 
-msgctxt "#31325"
+msgctxt "#31561"
 msgid "Watch in 3D"
 msgstr ""
 
-msgctxt "#31326"
+msgctxt "#31562"
 msgid "Select 3D mode"
 msgstr ""
 
-msgctxt "#31327"
+msgctxt "#31563"
 msgid "Next subtitles"
 msgstr ""
 
-msgctxt "#31328"
+msgctxt "#31564"
 msgid "Playlist"
 msgstr ""
 
-msgctxt "#31329"
+msgctxt "#31565"
 msgid "Subtitle settings"
 msgstr ""
 
 #. example usage: starting a manual search for subtitles
-msgctxt "#31330"
+msgctxt "#31566"
 msgid "Manual search"
 msgstr ""
 
 #. example usage: create a bookmark
-msgctxt "#31331"
+msgctxt "#31567"
 msgid "Create"
 msgstr ""
 
 #. example usage: set an episode bookmark
-msgctxt "#31332"
+msgctxt "#31568"
 msgid "Set episode"
 msgstr ""
 
