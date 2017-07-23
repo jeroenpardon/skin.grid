@@ -42,6 +42,8 @@
 				<onleft>7000</onleft>
 				<onright></onright>
 				<pagecontrol>10</pagecontrol>
+				<include condition="String.IsEqual(Skin.String(epg.scrollspeed),instant)">epgscroll_Instant</include>
+				<include condition="String.IsEqual(Skin.String(epg.scrollspeed),fast)">epgscroll_Fast</include>
 				<rulerlayout width="256" height="90">
 					<control type="label">
 						<width>256</width>
