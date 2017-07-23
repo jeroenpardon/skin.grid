@@ -7,6 +7,13 @@
 			<size>11</size>
 		</font>
 
+		<!-- Weather -->
+ 		<font>
+ 			<name>Weather-32</name>
+ 			<filename>Default/Weather.ttf</filename>
+ 			<size>54</size>
+ 		</font>
+
 		<font>
 			<name>Special</name>
 			<filename>Default/SemiBold.ttf</filename>
