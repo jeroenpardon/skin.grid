@@ -2,7 +2,7 @@
 <window>
 	<controls>
 		<control type="group">
-			<visible>!Window.IsActive(home)</visible>
+			<visible>!Window.IsActive(home) + !Window.IsVisible(notification)</visible>
 			<include content="global_Notification" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
 				<param name="Left">1036</param>
 				<param name="Height">108</param>
@@ -28,7 +28,7 @@
 		</control>
 		<control type="group">
 			<visible>Window.IsActive(home)</visible>
-			<include content="global_Notification" condition="!String.IsEqual(Skin.String(view.list.art.Label),posters)">
+			<include content="global_Notification">
 				<param name="Left">1036</param>
 				<param name="Height">98</param>
 				<param name="Width">756</param>
