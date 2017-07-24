@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addon id="skin.grid" version="0.9.7.3" name="Grid" provider-name="Jeroen">
+<addon id="skin.grid" version="0.9.8" name="Grid" provider-name="Jeroen">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0"/>
 		<import addon="script.grab.fanart" version="0.14.1"/>
@@ -25,6 +25,7 @@
 		</assets>
 		<summary lang="en">Clean, bold, focused. No gimmicks.</summary>
 		<description lang="en">The goal for Grid is to provide an elegant and intuitive way of enjoying all the wonderful features that Kodi provides. The design and development focuses on feature quality rather than quantity with a lot of attention spent on the little details that matter.</description>
+		<description lang="pl">Celem skóry Grid jest dostarczenie eleganckiego i intuicyjnego odbioru wszystkich dostępnych funkcji Kodi. Projekt i rozwój skupia się na jakości, a nie ilości, z naciskiem na małe detale, które mają znaczenie.</description>
 		<disclaimer lang="de">Die Nutzung von Maus und Touchscreen wird nicht unterstützt.</disclaimer>
 		<disclaimer lang="en">Mouse and touchscreen use not supported</disclaimer>
 		<disclaimer lang="es">Uso de ratón y pantalla táctil no compatible</disclaimer>
@@ -33,7 +34,7 @@
 		<disclaimer lang="lt">Pelė ir liečiamasis ekranas nepalaikomi</disclaimer>
 		<disclaimer lang="nl">Muis of touchscreen gebruik niet ondersteund</disclaimer>
 		<disclaimer lang="no">Bruk av mus og touch-skjerm er ikke støttet</disclaimer>
-		<disclaimer lang="pl">Myszka i ekran dotykowy nie są wspierane</disclaimer>
+		<disclaimer lang="pl">Mysz i ekran dotykowy nie są wspierane</disclaimer>
 		<disclaimer lang="ro">Nu există suport pentru touchscreen şi mouse</disclaimer>
 		<disclaimer lang="sv">Mus och pekskärm stöds inte</disclaimer>
 		<platform>all</platform>
@@ -43,3 +44,5 @@
 		<website>http://jeroenpardon.github.io/</website>
 	</extension>
 </addon>
+
+
