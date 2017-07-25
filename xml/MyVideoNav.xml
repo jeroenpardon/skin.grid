@@ -118,9 +118,9 @@
 					<param name="Width">1664</param>
 					<param name="Height">972</param>
 					<param name="ArtWidth">277.3</param>
-					<param name="ArtHeight">410</param>
+					<param name="ArtHeight">416</param>
 					<param name="ItemWidth">277.3</param>
-					<param name="ItemHeight">408</param>
+					<param name="ItemHeight">416</param>
 					<param name="ShowLogo">false</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="Visible">Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</param>
