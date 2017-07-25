@@ -76,7 +76,8 @@
 		<property name="biginfo">false</property>
 
 		<!-- Other -->
-		<property name="header" tag="property">$INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.TVShowTitle,,: ]$INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.Title]</property>
+		<property name="header" tag="property">[B]$SKINSHORTCUTS[name][/B]</property>
+		<property name="header2" tag="property"> - $INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.TVShowTitle,,: ]$INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.Title]</property>
 
 		<property name="logo" propertyValue="true">
 			<match>all</match>
@@ -126,10 +127,11 @@
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="banner">960</property>
 		<controls>
 			<include content="widget_Header">
+				<param name="ID" value="1000$SKINSHORTCUTS[id]"/>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
-				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
-				<param name="HeaderLabel2">992$SKINSHORTCUTS[id]</param>	
+				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
+				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
 				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 			</include>
@@ -182,8 +184,8 @@
 			<include content="widget_Header">
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
-				<param name="HeaderLabel2">992$SKINSHORTCUTS[id]</param>
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
+				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
 				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 			</include>
@@ -236,8 +238,8 @@
 			<include content="widget_Header">
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
-				<param name="HeaderLabel2">992$SKINSHORTCUTS[id]</param>
 				<param name="WidgetHeader">[B]$SKINSHORTCUTS[name][/B] - $SKINSHORTCUTS[header]</param>
+				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
 				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 			</include>

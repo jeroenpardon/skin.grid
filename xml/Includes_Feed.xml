@@ -70,28 +70,35 @@
 	<include name="widget_Header">
 		<param name="Visible"/>
 		<definition>
-			<control type="group" id="$PARAM[HeaderID]">
+			<control type="grouplist" id="$PARAM[HeaderID]">
 				<width>1920</width>
 				<height>54</height>
+				<orientation>horizontal</orientation>
 				<visible>$PARAM[Visible]</visible>
 				<visible>Skin.HasSetting(widget.name)</visible>
 				<control type="label" id="$PARAM[HeaderLabel]">
-					<width>1920</width>
-					<textoffsetx>24</textoffsetx>
+					<width>64</width>
+					<label>&#58979;</label>
+					<align>center</align>
+					<font>Symbols-22</font>
+					<height>54</height>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label" id="$PARAM[HeaderLabel]">
+					<width>auto</width>
 					<label>$PARAM[WidgetHeader]</label>
-					<font>Regular-18</font>
+					<font>Regular-20</font>
 					<height>54</height>
 					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
 				<control type="label" id="$PARAM[HeaderLabel2]">
-					<right>0</right>
-					<width>1920</width>
-					<textoffsetx>24</textoffsetx>
-					<label>$PARAM[WidgetName]</label>
-					<font>Regular-18</font>
+					<width>auto</width>
+					<label>$PARAM[WidgetHeader2]</label>
+					<font>Regular-20</font>
 					<height>54</height>
-					<align>right</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
+					<include>fadeinout</include>
+					<visible>Control.HasFocus($PARAM[ID])</visible>
 				</control>
 			</control>
 		</definition>
@@ -289,6 +296,7 @@
 					<width>$PARAM[ItemWidth]</width>
 					<height>$PARAM[Height]</height>
 					<visible>$PARAM[BigInfo]</visible>
+					<animation effect="fade" end="25" time="200">Unfocus</animation>
 					<control type="label">
 						<bottom>180</bottom>
 						<label>$VAR[widget:Label]</label>
@@ -316,6 +324,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<font>Slab-24</font>
 					<textcolor>$VAR[color:Accent]</textcolor>
+					<animation effect="fade" end="25" time="200">Unfocus</animation>
 					<visible>$PARAM[BigInfo]</visible>
 				</control>
 			</focusedlayout>

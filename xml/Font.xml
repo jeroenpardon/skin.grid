@@ -23,6 +23,11 @@
 
 		<!-- Symbols -->
 		<font>
+			<name>Symbols-22</name>
+			<filename>Default/Symbols.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
 			<name>Symbols-24</name>
 			<filename>Default/Symbols.ttf</filename>
 			<size>24</size>
