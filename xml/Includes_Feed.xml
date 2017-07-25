@@ -295,8 +295,8 @@
 					<left>64</left>
 					<width>$PARAM[ItemWidth]</width>
 					<height>$PARAM[Height]</height>
+					<animation effect="fade" end="40" time="200">Unfocus</animation>
 					<visible>$PARAM[BigInfo]</visible>
-		
 					<control type="label">
 						<bottom>180</bottom>
 						<label>$VAR[widget:Label]</label>
@@ -304,7 +304,7 @@
 						<height>28</height>
 						<font>$PARAM[BigInfoFont]</font>
 						<aligny>center</aligny>
-						<textcolor>$VAR[color:Accent]</textcolor>
+						<textcolor>$VAR[color:Accent]</textcolor>				
 					</control>
 					<control type="label">
 						<bottom>140</bottom>
@@ -315,17 +315,15 @@
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Text.2]</textcolor>
 					</control>
-				</control>
-				<control type="textbox">
-					<left>64</left>
-					<bottom>48</bottom>
-					<width>90%</width>
-					<height>74</height>
-					<label>$INFO[ListItem.Plot]</label>
-					<font>Slab-24</font>
-					<textcolor>$VAR[color:Accent]</textcolor>
-	
-					<visible>$PARAM[BigInfo]</visible>
+					<control type="textbox">
+						<bottom>48</bottom>
+						<width>90%</width>
+						<height>74</height>
+						<label>$INFO[ListItem.Plot]</label>
+						<font>Slab-24</font>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>$PARAM[BigInfo]</visible>
+					</control>
 				</control>
 			</focusedlayout>
 		</definition>
