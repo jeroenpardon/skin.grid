@@ -2,20 +2,20 @@
 <includes>
 	<include name="view_Slide">
 		<param name="ID" default="52"/>
-		<param name="Top" default="108"/>
-		<param name="InfoTop" default="776"/>
-		<param name="Left" default="0"/>
-		<param name="Width" default="2920"/>
-		<param name="Height" default="648"/>
-		<param name="ArtWidth" default="432"/>
-		<param name="ArtHeight" default="648"/>
-		<param name="ItemWidth" default="432"/>
-		<param name="ItemHeight" default="648"/>
-		<param name="PageControl" default="6500"/>
-		<param name="Symbol" default="Symbols-32"/>
-		<param name="Icon" default="$VAR[symbol:Global]"/>
 		<param name="Art" default="$VAR[art:Portrait]"/>
 		<param name="ArtFallback" default="views/fallback/portrait.png"/>
+		<param name="ArtHeight" default="648"/>
+		<param name="ArtWidth" default="432"/>
+		<param name="Height" default="648"/>
+		<param name="Icon" default="$VAR[symbol:Global]"/>
+		<param name="InfoTop" default="776"/>
+		<param name="ItemHeight" default="648"/>
+		<param name="ItemWidth" default="432"/>
+		<param name="Left" default="0"/>
+		<param name="PageControl" default="6500"/>
+		<param name="Symbol" default="Symbols-32"/>
+		<param name="Top" default="108"/>
+		<param name="Width" default="2920"/>
 		<param name="Visible" default="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(actors) | Container.Content(albums)"/>
 		<definition>
 			<control type="fixedlist" id="$PARAM[ID]">
@@ -145,23 +145,23 @@
 
 	<include name="view_SlideThumb">
 		<param name="ID" default="521"/>
-		<param name="Top" default="216"/>
-		<param name="InfoTop" default="668"/>
-		<param name="Left" default="0"/>
-		<param name="Width" default="2920"/>
-		<param name="Height" default="648"/>
-		<param name="ArtWidth" default="747"/>
-		<param name="ArtHeight" default="432"/>
-		<param name="ItemWidth" default="747"/>
-		<param name="ItemHeight" default="432"/>
-		<param name="PageControl" default="6500"/>
-		<param name="Symbol" default="Symbols-32"/>
-		<param name="Icon" default="$VAR[symbol:Global]"/>
-		<param name="Logo" default="$VAR[art:Logo]"/>
-		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Art" default="$VAR[art:Portrait]"/>
-		<param name="Label2" default="$VAR[media:Info]"/>
+		<param name="ArtHeight" default="432"/>
+		<param name="ArtWidth" default="747"/>
 		<param name="Fallback" default="views/fallback/portrait.png"/>
+		<param name="Height" default="648"/>
+		<param name="Icon" default="$VAR[symbol:Global]"/>
+		<param name="InfoTop" default="668"/>
+		<param name="ItemHeight" default="432"/>
+		<param name="ItemWidth" default="747"/>
+		<param name="Label2" default="$VAR[media:Info]"/>
+		<param name="Left" default="0"/>
+		<param name="Logo" default="$VAR[art:Logo]"/>
+		<param name="PageControl" default="6500"/>
+		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
+		<param name="Symbol" default="Symbols-32"/>
+		<param name="Top" default="216"/>
+		<param name="Width" default="2920"/>
 		<param name="Visible" default="Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)"/>
 		<definition>
 			<control type="fixedlist" id="$PARAM[ID]">
