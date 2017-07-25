@@ -202,16 +202,15 @@
 			<control type="group">
 				<visible>!Control.IsVisible(50)</visible>
 				<visible>!String.IsEmpty(Container.Content)</visible>
-
 				<control type="image">
-					<width>648</width>
+					<width>600</width>
 					<height>900</height>
 					<texture background="true">$VAR[art:Portrait]</texture>
 					<aspectratio align="left">scale</aspectratio>
 				</control>
 				<control type="image">
 					<top>900</top>
-					<width>648</width>
+					<width>600</width>
 					<height>900</height>
 					<texture flipy="true" diffuse="views/diffuse/portrait.png" background="true">$VAR[art:Portrait]</texture>
 					<aspectratio align="left">scale</aspectratio>
@@ -221,9 +220,8 @@
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
 				<visible>!String.IsEmpty(Container.Content)</visible>
-
 				<control type="image">
-					<width>648</width>
+					<width>600</width>
 					<height>900</height>
 					<fadetime>fadetime_Thumb</fadetime>
 					<texture background="true" fallback="views/fallback/portrait-person.png">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
@@ -231,7 +229,7 @@
 				</control>
 				<control type="image">
 					<top>900</top>
-					<width>648</width>
+					<width>600</width>
 					<height>900</height>
 					<fadetime>fadetime_Thumb</fadetime>
 					<texture flipy="true" fallback="views/fallback/portrait-person.png" diffuse="views/diffuse/portrait.png" background="true">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>

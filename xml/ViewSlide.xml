@@ -7,9 +7,9 @@
 		<param name="Left" default="0"/>
 		<param name="Width" default="2920"/>
 		<param name="Height" default="648"/>
-		<param name="ArtWidth" default="466"/>
+		<param name="ArtWidth" default="432"/>
 		<param name="ArtHeight" default="648"/>
-		<param name="ItemWidth" default="466"/>
+		<param name="ItemWidth" default="432"/>
 		<param name="ItemHeight" default="648"/>
 		<param name="PageControl" default="6500"/>
 		<param name="Symbol" default="Symbols-32"/>
