@@ -296,7 +296,7 @@
 					<width>$PARAM[ItemWidth]</width>
 					<height>$PARAM[Height]</height>
 					<visible>$PARAM[BigInfo]</visible>
-					<animation effect="fade" end="25" time="200">Unfocus</animation>
+		
 					<control type="label">
 						<bottom>180</bottom>
 						<label>$VAR[widget:Label]</label>
@@ -324,7 +324,7 @@
 					<label>$INFO[ListItem.Plot]</label>
 					<font>Slab-24</font>
 					<textcolor>$VAR[color:Accent]</textcolor>
-					<animation effect="fade" end="25" time="200">Unfocus</animation>
+	
 					<visible>$PARAM[BigInfo]</visible>
 				</control>
 			</focusedlayout>
