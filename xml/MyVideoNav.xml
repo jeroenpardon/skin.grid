@@ -66,7 +66,7 @@
 				<!--portrait-->
 				<include content="info_List">
 					<param name="Visible">$EXP[Art.IsPortrait]</param>
-					<param name="Width">668</param>
+					<param name="Width">648</param>
 					<param name="ArtHeight">972</param>
 					<param name="AspectRatio">scale</param>
 					<param name="ShowDescription">false</param>

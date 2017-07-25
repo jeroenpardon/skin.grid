@@ -254,7 +254,7 @@
 		<param name="TextColor2" default="Color2"/>
 		<param name="HasInfo" default="false"/>
 		<param name="TextLeft" default="152"/>
-		<param name="ListWidth" default="1124"/><!--1036-->
+		<param name="ListWidth" default="1144"/><!--1036-->
 		<param name="TextWidth" default="832"/>
 		<definition>
 			<control type="list" id="$PARAM[ID]">
