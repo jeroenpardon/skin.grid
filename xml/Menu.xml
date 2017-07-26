@@ -114,7 +114,7 @@
 					<include condition="Window.IsActive(Videos)">menu_Video</include>
 					<include condition="Window.IsActive(Pictures)">menu_Pictures</include>
 					<include condition="Window.IsActive(Music)">menu_Music</include>
-					<include condition="Window.IsActive(AddonBrowser) | Window.IsActive(Programs) | Window.IsActive(1110)">menu_Addons</include>
+					<include condition="Window.IsActive(AddonBrowser) | Window.IsActive(Programs) | Window.IsActive(Games) | Window.IsActive(1110)">menu_Addons</include>
 					<include condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(SkinSettings) | Window.IsActive(eventlog)">menu_System</include>
 					<include condition="Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRSearch.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRTimers.xml)">menu_PVR</include>
 					<include condition="Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)">menu_Playlist</include>
