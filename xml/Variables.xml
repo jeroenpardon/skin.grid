@@ -1262,6 +1262,7 @@
 		<value condition="Window.IsActive(SkinSettings)">&#58910;</value>
 		<value condition="Window.IsActive(SystemSettings)">&#59039;</value>
 		<value condition="Window.IsActive(PVRSettings)">&#58944;</value>
+		<value condition="Window.IsActive(GameSettings)">&#57371;</value>
 		<value condition="Window.IsActive(Profiles)">&#57345;</value>
 		<!-- Playlists -->
 		<value condition="Window.IsActive(smartplaylisteditor) | Window.IsActive(smartplaylistrule) | Window.IsActive(musicplaylisteditor)">&#57392;</value>
@@ -1382,6 +1383,7 @@
 		<value condition="Window.IsActive(SkinSettings)">$LOCALIZE[20077]</value>
 		<value condition="Window.IsActive(SystemSettings)">$LOCALIZE[14209]</value>
 		<value condition="Window.IsActive(PVRSettings)">$LOCALIZE[14205]</value>
+		<value condition="Window.IsActive(GameSettings)">$LOCALIZE[15016] $LOCALIZE[21417]</value>
 		<value condition="Window.IsActive(profiles)">$LOCALIZE[14210]</value>
 		<value condition="Window.IsActive(systeminfo)">$LOCALIZE[13000]</value>
 		<value condition="Window.IsActive(filemanager)">$LOCALIZE[7]</value>
