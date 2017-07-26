@@ -117,10 +117,10 @@
 						</item>
 						<!--systeminfo-->
 						<item id="9">
-							<label>$LOCALIZE[130]</label>
-							<label2>$LOCALIZE[154] &#8226; $LOCALIZE[705] &#8226; $LOCALIZE[13280] &#8226; $LOCALIZE[13281] &#8226; $LOCALIZE[19191] &#8226; Kodi &#8226; $LOCALIZE[12389]</label2>
-							<property name="Icon">&#59159;</property>
-							<onclick>ActivateWindow(systeminfo)</onclick>
+							<label>$LOCALIZE[15016]</label>
+							<label2>$LOCALIZE[35201] &#8226; $LOCALIZE[35150] &#8226; $LOCALIZE[35151]</label2>
+							<property name="Icon">&#57371;</property>
+							<onclick>ActivateWindow(GameSettings)</onclick>
 						</item>
 					</content>
 				</control>
