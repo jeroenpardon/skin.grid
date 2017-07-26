@@ -1569,6 +1569,7 @@
 		<!--recordings-->
 		<control type="group" id="7052">
 			<height>108</height>
+			<visible>!String.StartsWith(Container.FolderPath,pvr://recordings/)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
