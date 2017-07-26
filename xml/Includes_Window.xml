@@ -34,7 +34,9 @@
 					<include>Burns</include>
 					<fadetime>500</fadetime>
 					<aspectratio>scale</aspectratio>
+					<include>fadeinout</include>
 					<texture background="true">$VAR[background:Path]</texture>
+					<visible>![Container.Scrolling + Skin.HasSetting(fanart.scrolling)]</visible>
 					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
 					<visible>String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)</visible>
 				</control>
@@ -365,14 +367,12 @@
 		<param name="TextWidth" default="600"/>
 		<param name="Label"/>
 		<param name="Label2"/>
-
 		<param name="ID1"/>
 		<param name="ID2"/>
 		<param name="Label1"/>
 		<param name="Label2"/>
 		<param name="ProgressID"/>
 		<param name="ProgressInfo"/>
-
 		<param name="Symbol" default="&#57483;"/>
 		<param name="ShowProgress" default="true"/>
 		<param name="ShowFrame" default="true"/>

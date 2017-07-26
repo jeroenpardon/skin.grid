@@ -250,6 +250,13 @@
 						<selected>Skin.HasSetting(burns.enable)</selected>
 						<include>radio_Settings</include>
 					</control>
+					<!-- Hide fanart while scrolling -->
+					<control type="radiobutton" id="211">
+						<label>$LOCALIZE[31361]</label>
+						<onclick>Skin.ToggleSetting(fanart.scrolling)</onclick>
+						<selected>Skin.HasSetting(fanart.scrolling)</selected>
+						<include>radio_Settings</include>
+					</control>
 					<!--library views-->
 					<control type="label" id="220">
 						<label>$LOCALIZE[31314]</label>
