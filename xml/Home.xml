@@ -13,6 +13,7 @@
 
 	<!-- Collapse menu on return -->
 	<onload condition="Skin.HasSetting(homemenu.collapse)">RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onload>
+	<onunload condition="Skin.HasSetting(homemenu.collapse)">RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onunload>
 
 	<controls>
 
