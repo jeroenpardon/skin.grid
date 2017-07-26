@@ -9,10 +9,8 @@
 	<!-- Chrome -->
 		<control type="group">
 			<include>transition_Chrome</include>
-
 			<include content="global_WindowChrome">
-				<param name="ID">2</param>
-				<param name="Label">$VAR[window:Title.Dialog]</param>
+				<param name="Title">$VAR[window:Title.Dialog,, - $LOCALIZE[5]]</param>
 				<param name="ShowItemCount">false</param>
 			</include>
 		</control>

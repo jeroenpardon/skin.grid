@@ -1304,7 +1304,7 @@
 		<value condition="Window.IsActive(pictureinfo)">$LOCALIZE[13406]</value>
 		<value condition="Window.IsActive(pvrchannelmanager)">$LOCALIZE[19199]</value>
 		<value condition="Window.IsActive(pvrgroupmanager)">$LOCALIZE[19143]</value>
-		<value condition="Window.IsActive(addonsettings)">$LOCALIZE[19143]</value>
+		<value condition="Window.IsActive(addonsettings)">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(pvrguidesearch)">$LOCALIZE[19133]</value>
 		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]</value>
 		<value condition="Window.Is(mediafilter)">$LOCALIZE[587]</value>
