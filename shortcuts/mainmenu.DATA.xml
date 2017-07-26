@@ -51,6 +51,14 @@
 		<action>ActivateWindow(TVGuide)</action>
 	</shortcut>
 	<shortcut>
+		<defaultID>videos</defaultID>
+		<label>Games</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Games)</action>
+	</shortcut>
+	<shortcut>
 		<defaultID>music</defaultID>
 		<label>10005</label>
 		<label2>Common Shortcut</label2>
