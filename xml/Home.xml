@@ -12,7 +12,6 @@
 	<onload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 
 	<!-- Collapse menu on return -->
-	<onload condition="Skin.HasSetting(homemenu.collapse)">RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onload>
 	<onunload condition="Skin.HasSetting(homemenu.collapse)">RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onunload>
 
 	<controls>
