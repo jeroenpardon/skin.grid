@@ -309,11 +309,9 @@
 							<content>
 								<item>
 									<label>&#32;</label>
-									<onclick>noop</onclick>
 								</item>
 								<item>
 									<label>&#58;</label>
-									<onclick>noop</onclick>
 								</item>
 							</content>
 						</control>

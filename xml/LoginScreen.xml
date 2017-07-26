@@ -31,7 +31,6 @@
 				<font>Black-32</font>
 				<textcolor>$VAR[color:Accent]</textcolor>
 				<texturenofocus colordiffuse="$VAR[color:Main]">colorize/100.png</texturenofocus>
-				<onclick>noop</onclick>
 			</control>
 			<include content="dialog_List">
 				<param name="ID">52</param>

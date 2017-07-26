@@ -46,7 +46,6 @@
 		<height>1</height>
 		<texturenofocus></texturenofocus>
 		<texturefocus>-</texturefocus>
-		<onclick>noop</onclick>
 		<visible allowhiddenfocus="true">false</visible>
 	</include>
 

@@ -628,7 +628,6 @@
 						<top>54</top>
 						<label>$VAR[info:AirsToday]</label>
 						<height>54</height>
-						<onclick>noop</onclick>
 						<textcolor>$LOCALIZE[31718]</textcolor>
 						<texturenofocus colordiffuse="eeE65100">colorize/95.png</texturenofocus>
 						<texturefocus colordiffuse="eeE65100">colorize/95.png</texturefocus>
