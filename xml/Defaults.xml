@@ -20,7 +20,7 @@
 		<align>left</align>
 		<aligny>center</aligny>
 		<textoffsetx>32</textoffsetx>
-		<hinttext>-</hinttext>
+		<hinttext></hinttext>
 		<textcolor>$VAR[color:Accent]</textcolor>
 		<focusedcolor>$VAR[color:Main]</focusedcolor>
 		<disabledcolor>$VAR[color:Disabled]</disabledcolor>
