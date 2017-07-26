@@ -31,9 +31,20 @@
 	</contextmenu>
 
 	<!-- Widget defaults-->
-	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
-	<widgetdefaultnode defaultID="movies" group="mainmenu" label="20386" type="movies" path="videodb://recentlyaddedmovies/" target="video">RecentlyAddedMovies</widgetdefaultnode>
-	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
+	<widgetdefaultnode defaultID="videos" label="20386" type="movies" path="videodb://recentlyaddedmovies/" target="video" condition="Library.HasContent(movies)">RecentlyAddedMovies</widgetdefaultnode>
+	<propertydefault defaultID="videos" property="widgetLayout">wide</propertydefault>
+
+	<widgetdefaultnode defaultID="movies" label="$ADDON[script.extendedinfo 32042]" type="movies" path="plugin://script.extendedinfo?info=incinemamovies" target="video" condition="System.HasAddon(script.extendedinfo)">ExtendedInfoCinemas</widgetdefaultnode>
+	<propertydefault defaultID="movies" property="widgetLayout">portrait</propertydefault>
+
+	<widgetdefaultnode defaultID="tvshows" label="20387" type="episodes" path="videodb://recentlyaddedepisodes/" target="video" condition="Library.HasContent(tvshows)">RecentlyAddedEpisodes</widgetdefaultnode>
+	<propertydefault defaultID="tvshows" property="widgetLayout">landscape</propertydefault>
+
+	<widgetdefaultnode defaultID="livetv" label="$ADDON[script.extendedinfo 32039]" type="tvshows" path="plugin://script.extendedinfo?info=onairtvshows2" target="video" condition="System.HasAddon(script.extendedinfo)">ExtendedInfoOnAirShows</widgetdefaultnode>
+	<propertydefault defaultID="livetv" property="widgetLayout">portrait</propertydefault>
+
+	<widgetdefaultnode defaultID="music" label="359" type="music" path="musicdb://recentlyaddedalbums/" target="music" condition="Library.HasContent(music)">RecentlyAddedAlbums</widgetdefaultnode>
+	<propertydefault defaultID="music" property="widgetLayout">square</propertydefault>
 
 	<!-- Widget layout -->
 	<propertySettings property="widgetLayout" buttonID="601" title="$LOCALIZE[31032]" showNone="False"/>
@@ -223,15 +234,6 @@
 	<widget label="31607" name="31607" type="tvshows" path="pvr://channels/tv/*?view=lastplayed" target="video">PVRLastPlayedTV</widget>
 	<widget label="31852" name="31852" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/popular_right_now/" target="video">YouTubePopular</widget>
 	<widget label="31853" name="31853" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/live/" target="video">YouTubeLive</widget>
-	<widget label="$ADDON[script.extendedinfo 32042]" name="$ADDON[script.extendedinfo 32042]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=incinemas" target="video">ExtendedInfoCinemas</widget>
-	<widget label="$ADDON[script.extendedinfo 32043]" name="$ADDON[script.extendedinfo 32043]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=upcoming" target="video">ExtendedInfoUpcoming</widget>
-	<widget label="$ADDON[script.extendedinfo 32044]" name="$ADDON[script.extendedinfo 32044]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=upcoming" target="video">ExtendedInfoPopular</widget>
-	<widget label="$ADDON[script.extendedinfo 32046]" name="$ADDON[script.extendedinfo 32046]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=topratedmovies" target="video">ExtendedInfoTopRated</widget>
-	<widget label="$ADDON[script.extendedinfo 32041]" name="$ADDON[script.extendedinfo 32041]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=populartvshows" target="video">ExtendedInfoPopularShows</widget>
-	<widget label="$ADDON[script.extendedinfo 32040]" name="$ADDON[script.extendedinfo 32040]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=topratedtvshows" target="video">ExtendedInfoTopRatedShows</widget>
-	<widget label="$ADDON[script.extendedinfo 32039]" name="$ADDON[script.extendedinfo 32039]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=onairtvshows" target="video">ExtendedInfoOnAirShows</widget>
-	<widget label="$ADDON[script.extendedinfo 32038]" name="$ADDON[script.extendedinfo 32038]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=airingtodaytvshows" target="video">ExtendedInfoAiringTodayShows</widget>
-
 
 <!--home menu properties-->
 	<propertyfallback property="homeSymbol">&#57424;</propertyfallback>
