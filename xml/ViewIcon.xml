@@ -2,37 +2,37 @@
 <includes>
 	<include name="view_Thumbnails">
 		<param name="ID" default="55"/>
-		<param name="ViewTypeLabel" default="$LOCALIZE[31102]"/>
-		<param name="Left" default="128"/>
-		<param name="Top" default="108"/>
-		<param name="Width" default="1664"/>
-		<param name="Height" default="972"/>
-		<param name="OnRight" default="6500"/>
-		<param name="Orientation" default="vertical"/>
-		<param name="PageControl" default="6500"/>
-		<param name="ArtWidth" default="554.6"/>
-		<param name="ArtHeight" default="321"/>
-		<param name="ItemWidth" default="554.6"/>
-		<param name="ItemHeight" default="321"/>
-		<param name="Frame" default="views/frame/square.png"/>
-		<param name="TextLeft" default="32"/>
-		<param name="TextWidth" default="490"/><!--ArtWidth - 48-->
-		<param name="TextHeight" default="228"/><!--Artheight - 84-->
-		<param name="Label" default="$VAR[media:Title]"/>
-		<param name="Label2" default="$VAR[media:Info]"/>
-		<param name="ShowInfo" default="true"/>
 		<param name="Art" default="$VAR[art:Landscape]"/>
+		<param name="ArtHeight" default="321"/>
+		<param name="ArtWidth" default="554.6"/>
 		<param name="AspectRatio" default="scale"/>
 		<param name="AspectRatioAlign" default="center"/>
 		<param name="AspectRatioAlignY" default="top"/>
 		<param name="Fallback" default="views/fallback/landscape.png"/>
-		<param name="ShowFallback" default="ListItem.IsParentFolder | [String.IsEmpty(ListItem.Art(fanart)) + !Container.Content(images)]"/>
+		<param name="Frame" default="views/frame/square.png"/>
+		<param name="Height" default="972"/>
+		<param name="ItemHeight" default="321"/>
+		<param name="ItemWidth" default="554.6"/>
+		<param name="Label" default="$VAR[media:Title]"/>
+		<param name="Label2" default="$VAR[media:Info]"/>
+		<param name="Left" default="128"/>
 		<param name="Logo" default="$VAR[art:Logo]"/>
+		<param name="OnRight" default="6500"/>
+		<param name="Orientation" default="vertical"/>
+		<param name="PageControl" default="6500"/>
+		<param name="ShowFallback" default="ListItem.IsParentFolder | [String.IsEmpty(ListItem.Art(fanart)) + !Container.Content(images)]"/>
+		<param name="ShowIconLabel" default="false"/>
+		<param name="ShowInfo" default="true"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
+		<param name="ShowOverlay" default="true"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
 		<param name="SymbolFont" default="Symbols-64"/>
-		<param name="ShowOverlay" default="true"/>
-		<param name="ShowIconLabel" default="false"/>
+		<param name="TextHeight" default="228"/><!--Artheight - 84-->
+		<param name="TextLeft" default="32"/>
+		<param name="TextWidth" default="490"/><!--ArtWidth - 48-->
+		<param name="Top" default="108"/>
+		<param name="ViewTypeLabel" default="$LOCALIZE[31102]"/>
+		<param name="Width" default="1664"/>
 		<param name="Visible"/>
 		<definition>
 			<control type="panel" id="$PARAM[ID]">
@@ -56,23 +56,12 @@
 					<control type="group">
 						<width>$PARAM[ArtWidth]</width>
 						<height>$PARAM[ArtHeight]</height>
-						<!--
-						<control type="image">
-							<width>$PARAM[ArtWidth]</width>
-							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="$VAR[color:Text.2]">$PARAM[Fallback]</texture>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
-							<bordersize>10</bordersize>
-							<visible>$PARAM[ShowFallback]</visible>
-						</control>
-						-->
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
 							<texture colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 							<bordersize>10</bordersize>
-							<!--<visible>!String.Contains(ListItem.Icon,DefaultFolderBack) + [String.IsEmpty(ListItem.Art(thumb)) | String.StartsWith(ListItem.Label,* All)]</visible>-->
 						</control>
 						<control type="label">
 							<width>$PARAM[ArtWidth]</width>
@@ -108,21 +97,8 @@
 							<height>30%</height>
 							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<!--<visible>!Container.Content(episodes) + String.Contains(Container.FolderPath,videodb://)</visible>-->
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
-						<!--
-						<control type="image">
-							<left>24</left>
-							<top>24</top>
-							<width>100%</width>
-							<height>30%</height>
-							<texture>$PARAM[Logo]</texture>
-							<aspectratio align="left" aligny="bottom">keep</aspectratio>
-							<visible>Container.Content(episodes)</visible>
-							<visible>$PARAM[ShowLogo]</visible>
-						</control>
-						-->
 					</control>
 					<!--info-->
 					<control type="group">
@@ -183,17 +159,6 @@
 					<control type="group">
 						<width>$PARAM[ArtWidth]</width>
 						<height>$PARAM[ArtHeight]</height>
-						<!--
-						<control type="image">
-							<width>$PARAM[ArtWidth]</width>
-							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="$VAR[color:Text.2]">$PARAM[Fallback]</texture>
-							<bordertexture border="10">$PARAM[Frame]</bordertexture>
-							<bordersize>10</bordersize>
-							<aspectratio align="center" aligny="top">scale</aspectratio>
-							<visible>$PARAM[ShowFallback]</visible>
-						</control>
-						-->
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
@@ -201,7 +166,6 @@
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 							<bordertexture border="10">$PARAM[Frame]</bordertexture>
 							<bordersize>10</bordersize>
-							<!--<visible>!String.Contains(ListItem.Icon,DefaultFolderBack) + [String.IsEmpty(ListItem.Art(thumb)) | String.StartsWith(ListItem.Label,* All)]</visible>-->
 						</control>
 						<control type="label">
 							<width>$PARAM[ArtWidth]</width>
@@ -239,18 +203,6 @@
 							<visible>!Container.Content(episodes) + String.Contains(Container.FolderPath,videodb://)</visible>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
-						<!--
-						<control type="image">
-							<left>24</left>
-							<top>24</top>
-							<width>100%</width>
-							<height>30%</height>
-							<texture>$PARAM[Logo]</texture>
-							<aspectratio align="left" aligny="bottom">keep</aspectratio>
-							<visible>Container.Content(episodes)</visible>
-							<visible>$PARAM[ShowLogo]</visible>
-						</control>
-						-->
 					</control>
 					<!--info-->
 					<control type="group">
