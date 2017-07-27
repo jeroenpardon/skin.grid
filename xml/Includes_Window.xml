@@ -494,13 +494,13 @@
 				<right>$PARAM[Right]</right>
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
-				<onleft condition="!Control.IsVisible(52) + !Control.IsVisible(53)">$PARAM[OnLeft]</onleft>
-				<onup condition="Control.IsVisible(52) | Control.IsVisible(53)">50</onup>
+				<onleft condition="!Control.IsVisible(52) + !Control.IsVisible(521) + !Control.IsVisible(53)">$PARAM[OnLeft]</onleft>
+				<onup condition="Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)">50</onup>
 				<include>fadeinout</include>
 				<include>toggle_Menu</include>
 				<orientation>$PARAM[Orientation]</orientation>
-				<animation effect="slide" end="8" time="150" condition="!Control.IsVisible(52) + !Control.IsVisible(53) + String.IsEqual(Skin.String(global.scrolltype),passive) + !Control.HasFocus(6500)">Conditional</animation>
-				<animation effect="slide" end="0,8" time="150" condition="[Control.IsVisible(52) | Control.IsVisible(53)] + String.IsEqual(Skin.String(global.scrolltype),passive) + !Control.HasFocus(6500)">Conditional</animation>
+				<animation effect="slide" end="8" time="150" condition="!Control.IsVisible(52) + !Control.IsVisible(521) + !Control.IsVisible(53) + String.IsEqual(Skin.String(global.scrolltype),passive) + !Control.HasFocus(6500)">Conditional</animation>
+				<animation effect="slide" end="0,8" time="150" condition="[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)] + String.IsEqual(Skin.String(global.scrolltype),passive) + !Control.HasFocus(6500)">Conditional</animation>
 			</control>
 		</definition>
 	</include>

@@ -89,8 +89,6 @@
 		</definition>
 	</include>
 
-	
-
 <!-- Settings -->
 	<include name="global_Header">
 		<height>90</height>
