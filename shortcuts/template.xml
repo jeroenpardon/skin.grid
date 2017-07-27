@@ -32,7 +32,7 @@
 		</property>
 
 		<!-- Fanart matching -->
-		<property name="art" propertyValue="$INFO[ListItem.Art(fanart)]">
+		<property name="art" propertyValue="$VAR[widget:Fanart]">
 			<rule tag="property" attribute="name|widgetLayout" value="wide" />
 			<rule tag="property" attribute="name|widgetLayout" value="fullscreen" />
 		</property>

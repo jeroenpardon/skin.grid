@@ -1086,7 +1086,7 @@
 
 
 <!-- Widgets -->
-	<variable name="widget:Art">
+	<variable name="widget:Art.Label">
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetArt),fanart)">$LOCALIZE[20445]</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetArt),landscape)">$LOCALIZE[31102]</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetArt),thumbnail)">$LOCALIZE[31103]</value>
@@ -1103,6 +1103,12 @@
 		<value condition="!String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
 		<value>$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
+	</variable>
+
+	<variable name="widget:Fanart">
+		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(thumb)]</value>
+		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 
 	<variable name="widget:Landscape">
@@ -1177,11 +1183,9 @@
 
 <!-- Window -->
 	<variable name="window:Background">
-
 		<value condition="Window.IsActive(home) + String.IsEqual(Skin.String(home.fanart),global)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
 		<value condition="Window.IsActive(home) + String.IsEqual(Skin.String(home.fanart),video)">$INFO[Window(Home).Property(script.grab.fanart.Video.FanArt)]</value>
 		<value condition="Window.IsActive(home) + String.IsEqual(Skin.String(home.fanart),pictures)">$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]</value>
-
 		<value condition="Window.IsActive(home)"></value>
 		<value condition="Window.IsVisible(fullscreenvideo)">$INFO[Player.Art(fanart)]</value>
 		<value condition="Window.IsActive(weather) + !String.IsEmpty(Skin.String(weather.background))">$INFO[Skin.String(weather.background)]$INFO[Window(Weather).Property(Daily.1.FanartCode)].jpg</value>

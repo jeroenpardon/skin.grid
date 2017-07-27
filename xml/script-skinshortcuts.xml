@@ -249,7 +249,7 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widgetLayout),landscape)</visible>
 					<control type="button" id="602">
 						<width>100%</width>
-						<label>$VAR[widget:Art]</label>
+						<label>$VAR[widget:Art.Label]</label>
 						<textoffsetx>114</textoffsetx>
 						<onleft>8998</onleft>
 						<onup>501</onup>
