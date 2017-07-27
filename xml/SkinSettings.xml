@@ -919,7 +919,7 @@
 					<control type="textbox" id="1001">
 						<height>800</height>
 						<width>1220</width>
-						<label>[B]$LOCALIZE[31980][/B][CR][COLOR=$VAR[color:Text.3]]Jeroen Pardon[/COLOR][CR][CR][B]$LOCALIZE[31981][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31982][/COLOR][CR][CR][B]$LOCALIZE[31983][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31984][CR][CR][/COLOR][B]$LOCALIZE[31990][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31991][/COLOR]</label>
+						<label>[B]$LOCALIZE[31980][/B][CR][COLOR=$VAR[color:Text.3]]Jeroen Pardon[/COLOR][CR][CR][B]$LOCALIZE[31985][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31986][/COLOR][CR][CR][B]$LOCALIZE[31981][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31982][/COLOR][CR][CR][B]$LOCALIZE[31983][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31984][CR][CR][/COLOR][B]$LOCALIZE[31990][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31991][/COLOR]</label>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<font>Slab-22</font>
 					</control>
