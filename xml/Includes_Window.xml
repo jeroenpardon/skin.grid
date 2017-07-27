@@ -41,7 +41,7 @@
 					<visible>String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)</visible>
 				</control>
 				<control type="image">
-					<right>48</right>
+					<right>64</right>
 					<bottom>90</bottom>
 					<width>330</width>
 					<height>128</height>
