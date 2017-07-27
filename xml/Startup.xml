@@ -9,10 +9,7 @@
 	<onload condition="!String.IsEqual(Skin.String(background.type),fanart) + !String.IsEqual(Skin.String(background.type),videofanart)">Skin.SetString(HomeLoaded,True)</onload>
 	<onload condition="Skin.HasSetting(startup.playlist)">PlayMedia($INFO[Skin.String(startup.playlist.path)])</onload>
 	<onload condition="System.HasAddon(script.artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
-
 	<onload condition="String.IsEmpty(Skin.String(date.enabled))">Skin.SetString(date.enabled,none)</onload>
-
-	
 	<onload condition="String.IsEmpty(Skin.String(date.enabled))">Skin.SetString(date.enabled,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(autoscroll.speed))">Skin.SetString(autoscroll.speed,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(background.type))">Skin.SetString(background.type,custom)</onload>

@@ -684,11 +684,15 @@ msgid "Select playlist"
 msgstr ""
 
 msgctxt "#31360"
-msgid "Select global background artwork"
+msgid "Global background artwork type"
 msgstr ""
 
 msgctxt "#31361"
 msgid "Hide background fanart while scrolling"
+msgstr ""
+
+msgctxt "#31362"
+msgid "Slideshow contents"
 msgstr ""
 
 

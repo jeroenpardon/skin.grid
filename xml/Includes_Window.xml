@@ -40,7 +40,17 @@
 					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
 					<visible>String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)</visible>
 				</control>
-
+				<control type="image">
+					<right>48</right>
+					<bottom>90</bottom>
+					<width>330</width>
+					<height>128</height>
+					<texture>$VAR[home:SlideShowLogo]</texture>
+					<aspectratio>keep</aspectratio>
+					<include>transition_HomeMenu</include>
+					<fadetime>300</fadetime>
+					<visible>Window.IsActive(Home) + Skin.HasSetting(home.fanartlogo) + [String.IsEqual(Skin.String(home.fanart),global) | String.IsEqual(Skin.String(home.fanart),video)]</visible>
+				</control>
 				<!--playing video background-->
 				<control type="group">
 					<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + ![String.IsEqual(Skin.String(homemenu.type),stream) + Window.IsActive(home)]</visible>

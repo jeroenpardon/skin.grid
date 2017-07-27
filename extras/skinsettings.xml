@@ -26,14 +26,19 @@
 	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31270]"/>
 
 	<!-- Global background type -->
-	<setting id="background.type" value="none" label="$LOCALIZE[36502]"/>
-	<setting id="background.type" value="fanart" label="$LOCALIZE[31118]">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
-	<setting id="background.type" value="videofanart" label="$LOCALIZE[31128]">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
 	<setting id="background.type" value="custom" label="$LOCALIZE[636]" default="true"/>
+	<setting id="background.type" value="none" label="$LOCALIZE[36502]"/>
+	<setting id="background.type" value="fanart" label="$LOCALIZE[31118]"/>
+
+	<!-- Home slideshow source -->
+	<setting id="home.fanart" value="global" label="$LOCALIZE[31118]" default="true">
+		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
+	</setting>
+	<setting id="home.fanart" value="video" label="$LOCALIZE[31128]">
+		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
+	</setting>
+	<setting id="home.fanart" value="pictures" label="$LOCALIZE[1]"/>
+	<setting id="home.fanart" value="none" label="$LOCALIZE[13113]"/>
 
 	<!-- Global scrolling type -->
 	<setting id="global.scrolltype" value="active" label="$LOCALIZE[31220]"/>
