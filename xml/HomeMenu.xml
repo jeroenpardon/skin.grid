@@ -385,7 +385,7 @@
 								<textcolor>$VAR[color:Text.2]</textcolor>
 							</control>
 							<control type="label">
-								<left>108</left>
+								<left>128</left>
 								<width>465</width>
 								<height>98</height>
 								<label>$INFO[ListItem.Label]</label>
@@ -400,7 +400,7 @@
 							<width>576</width>
 							<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 							<control type="label">
-								<left>0</left>
+								<left>128</left>
 								<width>108</width>
 								<height>98</height>
 								<font>Symbols-32</font>
@@ -410,7 +410,7 @@
 								<textcolor>$VAR[color:Text.2]</textcolor>
 							</control>
 							<control type="label">
-								<left>108</left>
+								<left>128</left>
 								<width>465</width>
 								<height>90</height>
 								<label>$INFO[ListItem.Label]</label>
@@ -442,7 +442,7 @@
 									<textcolor>$VAR[color:Text.2]</textcolor>
 								</control>
 								<control type="label">
-									<left>108</left>
+									<left>128</left>
 									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
@@ -467,7 +467,7 @@
 									<textcolor>$VAR[color:Text.2]</textcolor>
 								</control>
 								<control type="label">
-									<left>108</left>
+									<left>128</left>
 									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
@@ -498,7 +498,7 @@
 									<textcolor>$VAR[color:Text.2]</textcolor>
 								</control>
 								<control type="label">
-									<left>108</left>
+									<left>128</left>
 									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
@@ -523,7 +523,7 @@
 									<textcolor>$VAR[color:Text.2]</textcolor>
 								</control>
 								<control type="label">
-									<left>108</left>
+									<left>128</left>
 									<width>465</width>
 									<height>90</height>
 									<label>$INFO[ListItem.Label]</label>
