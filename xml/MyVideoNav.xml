@@ -54,26 +54,27 @@
 					</include>
 					<!--square, keep-->
 					<include content="info_List">
-						<param name="Visible">$EXP[Art.IsThumb]</param>
-						<param name="Width">756</param>
 						<param name="ArtWidth">756</param>
 						<param name="AspectRatio">keep</param>
 						<param name="AspectRatioAlign">center</param>
 						<param name="AspectRatioAlignY">top</param>
+						<param name="Fallback">$VAR[art:Fallback]</param>
 						<param name="ShowDescription">false</param>
+						<param name="Width">756</param>
+						<param name="Visible">$EXP[Art.IsThumb]</param>
 					</include>
 				</control>
 				<!--portrait-->
 				<include content="info_List">
-					<param name="Visible">$EXP[Art.IsPortrait]</param>
-					<param name="Width">648</param>
+					<param name="Art">$VAR[art:Portrait]</param>
 					<param name="ArtHeight">972</param>
 					<param name="AspectRatio">scale</param>
+					<param name="Fallback">$VAR[art:Fallback.Portrait]</param>
 					<param name="ShowDescription">false</param>
 					<param name="ShowInfo">false</param>
 					<param name="ShowLogo">false</param>
-					<param name="Art">$VAR[art:Portrait]</param>
-					<param name="Fallback">views/fallback/portrait.png</param>
+					<param name="Width">648</param>
+					<param name="Visible">$EXP[Art.IsPortrait]</param>
 				</include>
 			</control>
 
@@ -110,23 +111,22 @@
 				<include content="view_Thumbnails" condition="!Container.Content(addons)">
 					<param name="ID">54</param>
 					<param name="ViewTypeLabel">$LOCALIZE[31100]</param>
-					<param name="Label2">$VAR[media:Info]</param>
 					<param name="Art">$VAR[art:Portrait]</param>
-					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
+					<param name="ArtHeight">400</param>
+					<param name="ArtWidth">277.3</param>
 					<param name="Fallback">views/fallback/portrait.png</param>
 					<param name="Frame">views/frame/p_fo.png</param>
-					<param name="Width">1664</param>
 					<param name="Height">972</param>
-					<param name="ArtWidth">277.3</param>
-					<param name="ArtHeight">400</param>
-					<param name="ItemWidth">277.3</param>
 					<param name="ItemHeight">400</param>
-					<param name="ShowLogo">false</param>
+					<param name="ItemWidth">277.3</param>
+					<param name="Label2">$VAR[media:Info]</param>
+					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
-					<param name="Visible">Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</param>
-					<param name="TextWidth">229</param>
+					<param name="ShowLogo">false</param>
 					<param name="ShowOverlay">false</param>
-					<!--<param name="Visible" value="[Container.Content(files) + !Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
+					<param name="TextWidth">229</param>
+					<param name="Width">1664</param>
+					<param name="Visible">Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</param>
 				</include>
 			</control>
 
@@ -136,15 +136,14 @@
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails" condition="!Container.Content(addons)">
 					<param name="ID">55</param>
-					<param name="Label2">$VAR[media:Info]</param>
-					<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
 					<param name="AspectRatioAlignY">center</param>
 					<param name="Fallback">views/fallback/landscape.png</param>
+					<param name="Label2">$VAR[media:Info]</param>
 					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
+					<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
-					<param name="Visible">!Container.Content(addons)</param>
 					<param name="ShowOverlay">$EXP[Thumbview.ShowInfo]</param>
-					<!--<param name="Visible">Container.Content(files) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(videos) | String.StartsWith(Container.FolderPath,plugin://plugin.video)"/>-->
+					<param name="Visible">!Container.Content(addons)</param>
 				</include>
 			</control>
 
@@ -154,18 +153,18 @@
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails">
 					<param name="ID">56</param>
-					<param name="ViewTypeLabel">$LOCALIZE[536]</param>
-					<param name="ShowInfo">false</param>
 					<param name="Art">$VAR[art:Square]</param>
-					<param name="ArtWidth">332.8</param>
 					<param name="ArtHeight">332.8</param>
-					<param name="ItemWidth">332.8</param>
-					<param name="ItemHeight">384</param>
-					<param name="TextWidth">284.8</param>
+					<param name="ArtWidth">332.8</param>
 					<param name="Fallback">views/fallback/square.png</param>
-					<param name="ShowOverlay">!String.IsEmpty(ListItem.Art(icon))</param>
+					<param name="ItemHeight">384</param>
+					<param name="ItemWidth">332.8</param>
 					<param name="ShowFallback">ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(icon))</param>
 					<param name="ShowIconLabel">true</param>
+					<param name="ShowInfo">false</param>
+					<param name="ShowOverlay">!String.IsEmpty(ListItem.Art(icon))</param>
+					<param name="TextWidth">284.8</param>
+					<param name="ViewTypeLabel">$LOCALIZE[536]</param>
 					<param name="Visible">Container.Content(addons)</param>
 				</include>
 			</control>
@@ -176,25 +175,25 @@
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails">
 					<param name="ID">57</param>
-					<param name="ViewTypeLabel">$LOCALIZE[20020]</param>
-					<param name="Width">1664</param>
-					<param name="Height">972</param>
+					<param name="Art">$INFO[ListItem.Art(banner)]</param>
+					<param name="ArtHeight">170</param>
 					<param name="ArtLeft">10</param>
 					<param name="ArtWidth">832</param>
-					<param name="ArtHeight">170</param>
-					<param name="ItemWidth">832</param>
-					<param name="ItemHeight">180</param>
-					<param name="Fallback">views/fallback/banner.png</param>
+					<param name="AspectRatio">stretch</param>
 					<param name="AspectRatioAlign">center</param>
 					<param name="AspectRatioAlignY">top</param>
-					<param name="AspectRatio">stretch</param>
+					<param name="Fallback">views/fallback/banner.png</param>
+					<param name="Height">972</param>
+					<param name="ItemHeight">180</param>
+					<param name="ItemWidth">832</param>
 					<param name="Label2">$VAR[media:Info]</param>
-					<param name="Visible">Container.Content(tvshows)</param>
-					<param name="Art">$INFO[ListItem.Art(banner)]</param>
 					<param name="ShowInfo">false</param>
 					<param name="ShowLogo">false</param>
-					<param name="SymbolFont">Symbols-46</param>
 					<param name="ShowOverlay">false</param>
+					<param name="SymbolFont">Symbols-46</param>
+					<param name="ViewTypeLabel">$LOCALIZE[20020]</param>
+					<param name="Width">1664</param>
+					<param name="Visible">Container.Content(tvshows)</param>
 				</include>
 			</control>
 		</control>

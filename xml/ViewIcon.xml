@@ -17,7 +17,9 @@
 		<param name="Label2" default="$VAR[media:Info]"/>
 		<param name="Left" default="128"/>
 		<param name="Logo" default="$VAR[art:Logo]"/>
-		<param name="OnRight" default="6500"/>
+		<param name="LogoSize" default="30%"/>
+		<param name="LogoPosY" default="30%"/>
+		<param name="OnRight" default="24"/>
 		<param name="Orientation" default="vertical"/>
 		<param name="PageControl" default="6500"/>
 		<param name="ShowFallback" default="ListItem.IsParentFolder | [String.IsEmpty(ListItem.Art(fanart)) + !Container.Content(images)]"/>
@@ -92,11 +94,23 @@
 							<visible>$PARAM[ShowOverlay]</visible>
 						</control>
 						<control type="image">
-							<bottom>24</bottom>
+							<left>32</left>
+							<bottom>90</bottom>
 							<width>100%</width>
 							<height>30%</height>
 							<texture>$PARAM[Logo]</texture>
+							<aspectratio align="left" aligny="bottom">keep</aspectratio>
+							<visible>Container.Content(episodes)</visible>
+							<visible>$PARAM[ShowLogo]</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<bottom>24</bottom>
+							<width>100%</width>
+							<height>35%</height>
+							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
+							<visible>!Container.Content(episodes)</visible>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
 					</control>
@@ -186,21 +200,23 @@
 							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[AspectRatio]</aspectratio>
 						</control>
 						<control type="image">
-							<width>$PARAM[ArtWidth]</width>
-							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
-							<bordersize>10</bordersize>
-							<aspectratio>stretch</aspectratio>
-							<visible>!ListItem.IsParentFolder + ![String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(thumb))]</visible>
-							<visible>$PARAM[ShowOverlay]</visible>
-						</control>
-						<control type="image">
-							<bottom>24</bottom>
+							<left>32</left>
+							<bottom>90</bottom>
 							<width>100%</width>
 							<height>30%</height>
 							<texture>$PARAM[Logo]</texture>
+							<aspectratio align="left" aligny="bottom">keep</aspectratio>
+							<visible>Container.Content(episodes)</visible>
+							<visible>$PARAM[ShowLogo]</visible>
+						</control>
+						<control type="image">
+							<left>0</left>
+							<bottom>24</bottom>
+							<width>100%</width>
+							<height>35%</height>
+							<texture>$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
-							<visible>!Container.Content(episodes) + String.Contains(Container.FolderPath,videodb://)</visible>
+							<visible>!Container.Content(episodes)</visible>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
 					</control>

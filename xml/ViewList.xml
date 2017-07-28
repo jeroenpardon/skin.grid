@@ -554,6 +554,7 @@
 		<param name="Art" default="$VAR[art:Landscape]"/>
 		<param name="Art2" default="$VAR[art:Square]"/>
 		<param name="Logo" default="$VAR[art:Logo]"/>
+		<param name="Fallback" default="$VAR[art:Fallback]"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="ShowInfo" default="true"/>
 		<param name="DiffuseTexture" default="views/diffuse/kodi_landscape.png"/>
@@ -566,7 +567,7 @@
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
 				<visible>$PARAM[Visible]</visible>
-				<!--fallback-->
+				<!--fallback
 				<control type="image">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
@@ -575,6 +576,17 @@
 					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
 					<visible>$PARAM[ShowInfo]</visible>
 				</control>
+				-->
+
+				<control type="image">
+					<width>$PARAM[Width]</width>
+					<height>$PARAM[ArtHeight]</height>
+					<texture colordiffuse="$VAR[color:Text.2]">$PARAM[Fallback]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
+				</control>
+
+
 				<!--landscape art-->
 				<control type="group">
 					<width>$PARAM[Width]</width>
@@ -882,6 +894,7 @@
 		<param name="Height"/>
 		<param name="ItemWidth" default="1358"/>
 		<param name="ItemHeight"/>
+		<param name="OnBack"/>
 		<param name="OnLeft"/>
 		<param name="OnRight"/>
 		<param name="OnUp" default="$PARAM[ID]"/>
@@ -912,6 +925,7 @@
 				<left>$PARAM[Left]</left>
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
+				<onback>5000</onback>
 				<onup>$PARAM[OnUp]</onup>
 				<ondown>$PARAM[OnDown]</ondown>
 				<onleft>$PARAM[OnLeft]</onleft>
