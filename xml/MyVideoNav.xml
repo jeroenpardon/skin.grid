@@ -123,7 +123,7 @@
 					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="ShowLogo">false</param>
-					<param name="ShowOverlay">false</param>
+					<param name="ShowOverlay">Container.Content(seasons)</param>
 					<param name="TextWidth">229</param>
 					<param name="Width">1664</param>
 					<param name="Visible">Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</param>
