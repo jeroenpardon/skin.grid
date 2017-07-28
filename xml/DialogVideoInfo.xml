@@ -197,7 +197,7 @@
 				</control>				
 			</control>
 
-			<!--artwork-->
+			<!-- Artwork -->
 			<control type="group">
 				<visible>!Control.IsVisible(50)</visible>
 				<visible>!String.IsEmpty(Container.Content)</visible>
@@ -221,7 +221,7 @@
 				</control>
 			</control>
 
-			<!--actor list-->
+			<!-- Cast list -->
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
 				<include>fadeinout</include>

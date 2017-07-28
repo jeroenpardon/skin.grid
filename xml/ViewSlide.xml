@@ -2,7 +2,6 @@
 <includes>
 	<include name="view_Slide">
 		<param name="ID" default="52"/>
-		<param name="Type" default="fixedlist"/>
 		<param name="Art" default="$VAR[art:Portrait]"/>
 		<param name="ArtFallback" default="$VAR[art:Fallback.Portrait]"/>
 		<param name="ArtHeight" default="648"/>
@@ -13,12 +12,14 @@
 		<param name="ItemHeight" default="648"/>
 		<param name="ItemWidth" default="432"/>
 		<param name="Left" default="0"/>
+		<param name="OnBack"/>
 		<param name="PageControl" default="6500"/>
 		<param name="ShowInfo" default="true"/>
 		<param name="ShowOverlay" default="false"/>
 		<param name="Symbol" default="Symbols-32"/>
 		<param name="TextWidth" default="400"/>
 		<param name="Top" default="108"/>
+		<param name="Type" default="fixedlist"/>
 		<param name="Width" default="2920"/>
 		<param name="Visible" default="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(actors) | Container.Content(albums)"/>
 		<definition>
@@ -29,6 +30,7 @@
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
 				<onup>7000</onup>
+				<onback>$PARAM[OnBack]</onback>
 				<onup>SetProperty(MenuOpen,true,Home)</onup>
 				<ondown condition="Window.IsActive(movieinformation)">5000</ondown>
 				<ondown condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</ondown>
