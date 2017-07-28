@@ -3,6 +3,8 @@
 
 <!-- Backgrounds -->
 	<variable name="background:Path">
+		<value condition="Window.IsActive(movieinformation) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="Window.IsActive(movieinformation) + String.IsEmpty(ListItem.Art(fanart))">views/fallback/fanart.jpg</value>
 		<value condition="Window.IsActive(weather) + String.IsEmpty(Skin.String(weather.background))">special://skin/backgrounds/03.jpg</value>
 		<value condition="Player.HasAudio + [Skin.HasSetting(home.nowplaying) + Window.IsActive(Home)] + System.HasAddon(script.artistslideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
 		<value condition="Player.HasAudio + [Skin.HasSetting(home.nowplaying) + Window.IsActive(Home)]">$VAR[player:Art]</value>

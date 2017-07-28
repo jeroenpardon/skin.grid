@@ -31,19 +31,19 @@
 	</contextmenu>
 
 	<!-- Widget defaults-->
-	<widgetdefaultnode defaultID="videos" label="20386" type="movies" path="videodb://recentlyaddedmovies/" target="video" condition="Library.HasContent(movies)">RecentlyAddedMovies</widgetdefaultnode>
+	<widgetdefaultnode defaultID="videos" label="$LOCALIZE[20386]" type="movies" path="videodb://recentlyaddedmovies/" target="video" condition="Library.HasContent(movies)">RecentlyAddedMovies</widgetdefaultnode>
 	<propertydefault defaultID="videos" property="widgetLayout">wide</propertydefault>
 
 	<widgetdefaultnode defaultID="movies" label="$ADDON[script.extendedinfo 32042]" type="movies" path="plugin://script.extendedinfo?info=incinemamovies" target="video" condition="System.HasAddon(script.extendedinfo)">ExtendedInfoCinemas</widgetdefaultnode>
 	<propertydefault defaultID="movies" property="widgetLayout">portrait</propertydefault>
 
-	<widgetdefaultnode defaultID="tvshows" label="20387" type="episodes" path="videodb://recentlyaddedepisodes/" target="video" condition="Library.HasContent(tvshows)">RecentlyAddedEpisodes</widgetdefaultnode>
+	<widgetdefaultnode defaultID="tvshows" label="$LOCALIZE[20387]" type="episodes" path="videodb://recentlyaddedepisodes/" target="video" condition="Library.HasContent(tvshows)">RecentlyAddedEpisodes</widgetdefaultnode>
 	<propertydefault defaultID="tvshows" property="widgetLayout">landscape</propertydefault>
 
-	<widgetdefaultnode defaultID="livetv" label="$ADDON[script.extendedinfo 32039]" type="tvshows" path="plugin://script.extendedinfo?info=onairtvshows2" target="video" condition="System.HasAddon(script.extendedinfo)">ExtendedInfoOnAirShows</widgetdefaultnode>
+	<widgetdefaultnode defaultID="livetv" label="$ADDON[script.extendedinfo 32039]" type="tvshows" path="plugin://script.extendedinfo?info=onairtvshows" target="video" condition="System.HasAddon(script.extendedinfo)">ExtendedInfoOnAirShows</widgetdefaultnode>
 	<propertydefault defaultID="livetv" property="widgetLayout">portrait</propertydefault>
 
-	<widgetdefaultnode defaultID="music" label="359" type="music" path="musicdb://recentlyaddedalbums/" target="music" condition="Library.HasContent(music)">RecentlyAddedAlbums</widgetdefaultnode>
+	<widgetdefaultnode defaultID="music" label="$LOCALIZE[359]" type="music" path="musicdb://recentlyaddedalbums/" target="music" condition="Library.HasContent(music)">RecentlyAddedAlbums</widgetdefaultnode>
 	<propertydefault defaultID="music" property="widgetLayout">square</propertydefault>
 
 	<!-- Widget layout -->
@@ -76,7 +76,6 @@
 	<propertydefault labelID="widget" property="widgetFallbackArt">Art(thumb)</propertydefault>
 
 	<!-- Shortcut grouping -->
-
 	<groupings>
 		<node label="Grid">
 			<!-- Movies -->

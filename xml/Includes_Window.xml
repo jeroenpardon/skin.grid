@@ -49,7 +49,7 @@
 					<aspectratio>keep</aspectratio>
 					<include>transition_HomeMenu</include>
 					<fadetime>300</fadetime>
-					<visible>Window.IsActive(Home) + Skin.HasSetting(home.fanartlogo) + [String.IsEqual(Skin.String(home.fanart),global) | String.IsEqual(Skin.String(home.fanart),video)]</visible>
+					<visible>Window.IsActive(Home) + !Window.IsActive(movieinformation) + Skin.HasSetting(home.fanartlogo) + [String.IsEqual(Skin.String(home.fanart),global) | String.IsEqual(Skin.String(home.fanart),video)]</visible>
 				</control>
 				<!--playing video background-->
 				<control type="group">
@@ -265,7 +265,7 @@
 					<left>$PARAM[TimeLeft]</left>
 					<width>128</width>
 					<height>$PARAM[Height]</height>
-					<visible>![Window.IsActive(home) + !Skin.HasSetting(home.clock)] | Window.IsActive(home) + Window.IsVisible(volumebar) + !Player.Muted</visible>
+					<visible>![Window.IsActive(home) + !Skin.HasSetting(home.clock) + !Window.IsActive(movieinformation)] | Window.IsActive(home) + Window.IsVisible(volumebar) + !Player.Muted</visible>
 					<control type="image">
 						<width>100%</width>
 						<height>$PARAM[Height]</height>
