@@ -200,6 +200,15 @@
 							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[AspectRatio]</aspectratio>
 						</control>
 						<control type="image">
+							<width>$PARAM[ArtWidth]</width>
+							<height>$PARAM[ArtHeight]</height>
+							<texture colordiffuse="ff000000">views/overlay/landscape-fo.png</texture>
+							<bordersize>10</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<visible>!ListItem.IsParentFolder + ![String.IsEmpty(ListItem.Art(fanart)) + String.IsEmpty(ListItem.Art(thumb))]</visible>
+							<visible>$PARAM[ShowOverlay]</visible>
+						</control>
+						<control type="image">
 							<left>32</left>
 							<bottom>90</bottom>
 							<width>100%</width>
