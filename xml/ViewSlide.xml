@@ -51,6 +51,17 @@
 						<texture colordiffuse="$VAR[color:Text.2]">$PARAM[ArtFallback]</texture>
 						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366]) | String.IsEmpty(ListItem.Art(thumb))</visible>
 					</control>
+					<control type="label">
+						<left>128</left>
+						<width>$PARAM[ArtWidth]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<label>$VAR[symbol:Global]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<font>Symbols-64</font>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>ListItem.IsParentFolder | String.IsEqual(ListItem.Label,$LOCALIZE[20366])</visible>
+					</control>
 					<control type="image">
 						<left>128</left>
 						<width>$PARAM[ArtWidth]</width>
