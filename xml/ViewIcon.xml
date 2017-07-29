@@ -116,20 +116,20 @@
 					</control>
 					<!--info-->
 					<control type="group">
-						<bottom>48</bottom>
+						<bottom>28</bottom>
 						<left>$PARAM[TextLeft]</left>
 						<width>$PARAM[TextWidth]</width>
 						<height>24</height>
 						<visible>$PARAM[ShowInfo]</visible>
-						<control type="textbox">
+						<control type="label">
 							<width>$PARAM[TextWidth]</width>
 							<label>$PARAM[Label]</label>
-							<height>60</height>
+							<height>24</height>
 							<font>Black-24</font>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+							<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
 						<control type="label">
 							<width>$PARAM[TextWidth]</width>
@@ -231,20 +231,20 @@
 					</control>
 					<!--info-->
 					<control type="group">
-						<bottom>48</bottom>
+						<bottom>28</bottom>
 						<left>$PARAM[TextLeft]</left>
 						<width>$PARAM[TextWidth]</width>
 						<height>24</height>
 						<visible>$PARAM[ShowInfo]</visible>
-						<control type="textbox">
+						<control type="label">
 							<width>$PARAM[TextWidth]</width>
 							<label>$PARAM[Label]</label>
-							<height>60</height>
+							<height>24</height>
 							<font>Black-24</font>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
-							<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+							<visible>[Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
 						<control type="label">
 							<width>$PARAM[TextWidth]</width>
