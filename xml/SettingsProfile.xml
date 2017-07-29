@@ -45,9 +45,9 @@
 
 		<!--settings-->
 			<control type="group">
-				<left>474</left>
+				<left>448</left>
 				<control type="grouplist" id="100">
-					<width>1190</width>
+					<width>1215</width>
 					<height>810</height>
 					<onleft>9001</onleft>
 					<onright>6500</onright>
@@ -72,7 +72,7 @@
 				<include content="dialog_List">
 					<param name="ID">2</param>
 					<param name="Top">0</param>
-					<param name="Width">1190</param>
+					<param name="Width">1215</param>
 					<param name="Height">810</param>
 					<param name="ItemHeight">90</param>
 					<param name="Font">Regular-22-L</param>
