@@ -18,27 +18,27 @@
 	<include file="script-skinshortcuts-includes.xml" />
 
 <!-- Constants -->
-	<constant name="screen_Width">1920</constant>
-	<constant name="screen_Height">1080</constant>
+	<constant name="autoscroll_Delay">10000</constant>
+	<constant name="autoscroll_Repeat">10000</constant>
+	<constant name="autoscroll_Speed">40</constant>
+	<constant name="autoscroll_Time">3000</constant>
 	<constant name="content_Height">900</constant>
 	<constant name="content_Width">1664</constant>
+	<constant name="fadetime_Slideshow">900</constant>
+	<constant name="fadetime_Thumb">250</constant>
 	<constant name="screen_Center">960,540</constant>
 	<constant name="screen_Centerx">960</constant>
 	<constant name="screen_Centery">540</constant>
-	<constant name="fadetime_Thumb">250</constant>
-	<constant name="fadetime_Slideshow">900</constant>
-	<constant name="transition_Open">250</constant>
+	<constant name="screen_Height">1080</constant>
+	<constant name="screen_Width">1920</constant>
+	<constant name="slideshow_Timer">20000</constant>
 	<constant name="transition_Close">250</constant>
-	<constant name="transition_Visible">300</constant>
+	<constant name="transition_DialogClose">200</constant>
+	<constant name="transition_DialogOpen">200</constant>
 	<constant name="transition_Hidden">200</constant>
 	<constant name="transition_Opacity">95</constant>
-	<constant name="transition_DialogOpen">200</constant>
-	<constant name="transition_DialogClose">200</constant>
-	<constant name="slideshow_Timer">20000</constant>
-	<constant name="autoscroll_Delay">10000</constant>
-	<constant name="autoscroll_Time">3000</constant>
-	<constant name="autoscroll_Repeat">10000</constant>
-	<constant name="autoscroll_Speed">40</constant>
+	<constant name="transition_Open">250</constant>
+	<constant name="transition_Visible">300</constant>
 
 <!-- Global -->
 	<include name="TriggerButton">
