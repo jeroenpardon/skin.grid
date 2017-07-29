@@ -885,40 +885,40 @@
 
 	<include name="dialog_List">
 		<param name="ID"/>
-		<param name="ListType" default="list"/>
-		<param name="Top"/>
-		<param name="Left"/>
-		<param name="TextLeft" default="140"/>
-		<param name="TextWidth" default="1058"/>
-		<param name="Width"/>
-		<param name="Height"/>
-		<param name="ItemWidth" default="1358"/>
-		<param name="ItemHeight"/>
-		<param name="OnBack"/>
-		<param name="OnLeft"/>
-		<param name="OnRight"/>
-		<param name="OnUp" default="$PARAM[ID]"/>
-		<param name="OnDown" default="$PARAM[ID]"/>
-		<param name="PageControl" default="6500"/>
-		<param name="Symbol" default="$VAR[symbol:Global]"/>
-		<param name="SymbolSize" default="108"/>
-		<param name="ShowSymbol" default="true"/>
-		<param name="IconSize" default="64"/>
-		<param name="Icon" default="$INFO[ListItem.Icon]"/>
-		<param name="ShowIcon" default="false"/>
-		<param name="IconLeft" default="22"/>
-		<param name="IconTop" default="13"/>
-		<param name="Visible"/>
-		<param name="Orientation" default="vertical"/>
-		<param name="Font" default="Black-22"/>
+		<param name="!Label2Empty" default="!String.IsEmpty(ListItem.Label2)"/>
 		<param name="AnimationCondition"/>
-		<param name="SymbolFont" default="Symbols-26"/>
+		<param name="Font" default="Black-22"/>
+		<param name="Height"/>
+		<param name="Icon" default="$INFO[ListItem.Icon]"/>
+		<param name="IconLeft" default="22"/>
+		<param name="IconSize" default="64"/>
+		<param name="IconTop" default="13"/>
+		<param name="ItemHeight"/>
+		<param name="ItemWidth" default="1358"/>
 		<param name="Label" default="$VAR[media:Title]"/>
 		<param name="Label2" default="$INFO[ListItem.Label2]"/>
 		<param name="Label2Empty" default="String.IsEmpty(ListItem.Label2)"/>
-		<param name="!Label2Empty" default="!String.IsEmpty(ListItem.Label2)"/>
+		<param name="Left"/>
+		<param name="ListType" default="list"/>
+		<param name="OnBack"/>
+		<param name="OnDown" default="$PARAM[ID]"/>
 		<param name="OnFocus"/>
+		<param name="OnLeft"/>
+		<param name="OnRight"/>
 		<param name="OnUnFocus"/>
+		<param name="OnUp" default="$PARAM[ID]"/>
+		<param name="Orientation" default="vertical"/>
+		<param name="PageControl" default="6500"/>
+		<param name="ShowIcon" default="false"/>
+		<param name="ShowSymbol" default="true"/>
+		<param name="Symbol" default="$VAR[symbol:Global]"/>
+		<param name="SymbolFont" default="Symbols-26"/>
+		<param name="SymbolSize" default="108"/>
+		<param name="TextLeft" default="140"/>
+		<param name="TextWidth" default="1058"/>
+		<param name="Top"/>
+		<param name="Visible"/>
+		<param name="Width"/>
 		<definition>
 			<control type="$PARAM[ListType]" id="$PARAM[ID]">
 				<top>$PARAM[Top]</top>
