@@ -25,7 +25,6 @@
 		<item control="304">$ADDON[script.skinshortcuts 32003]</item><!--move down-->
 		<item control="307">$ADDON[script.skinshortcuts 32027]</item><!--change action-->
 		<item control="305">$ADDON[script.skinshortcuts 32025]</item><!--set label-->
-		<item control="501" condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31323]</item><!--select icon-->
 		<item control="313">$ADDON[script.skinshortcuts 32117]</item><!--disable-->
 		<item control="302">$ADDON[script.skinshortcuts 32001]</item><!--delete-->
 	</contextmenu>
@@ -216,7 +215,6 @@
 		</node>
 	</groupings>
 
-
 	<!-- Widgets -->
 	<widget label="31716" name="31716" type="movies" condition="Library.HasContent(movies)" path="plugin://script.watchlist/?type=movies" target="video">MoviesWatchlist</widget>
 	<widget label="31720" name="31720" type="movies" condition="Library.HasContent(movies)" path="special://skin/extras/playlists/movies/unwatched.xsp" target="video">UnwatchedMovies</widget>
@@ -299,7 +297,7 @@
 	<propertydefault defaultID="32023" property="homeSymbol">&#57389;</propertydefault>
 
 <!--user selectable symbols-->
-	<propertySettings property="homeSymbol" buttonID="501" title="$LOCALIZE[31323]" showNone="False"/>
+	<propertySettings property="homeSymbol" buttonID="8997" title="$LOCALIZE[31323]" showNone="False"/>
 	<propertyfallback property="homeSymbol">&#57425;</propertyfallback>
 	<property property="homeSymbol">&#57344;</property>
 	<property property="homeSymbol">&#57345;</property>

@@ -676,7 +676,7 @@
 		<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 	</include>
 
-<!--pvr-->
+<!-- PVR -->
 	<include name="epgscroll_Instant">
 		<definition>
 			<scrolltime>0</scrolltime>	
@@ -688,6 +688,17 @@
 		</definition>
 	</include>
 
+<!-- Skin Shortcuts -->
+	<include name="shortcuts_ScrollingControls">
+		<animation effect="slide" end="0,90" time="0" condition="Container(211).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,180" time="0" condition="Container(211).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,270" time="0" condition="Container(211).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,360" time="0" condition="Container(211).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,450" time="0" condition="Container(211).Row(5)">Conditional</animation>
+		<animation effect="slide" end="0,540" time="0" condition="Container(211).Row(6)">Conditional</animation>
+		<animation effect="slide" end="0,630" time="0" condition="Container(211).Row(7)">Conditional</animation>
+		<animation effect="slide" end="0,720" time="0" condition="Container(211).Row(8)">Conditional</animation>
+	</include>
 
 <!-- Home -->
 	<include name="home_Status">
