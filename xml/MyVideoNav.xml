@@ -179,7 +179,7 @@
 					<param name="ArtHeight">170</param>
 					<param name="ArtLeft">10</param>
 					<param name="ArtWidth">832</param>
-					<param name="AspectRatio">stretch</param>
+					<param name="AspectRatio">scale</param>
 					<param name="AspectRatioAlign">center</param>
 					<param name="AspectRatioAlignY">top</param>
 					<param name="Fallback">views/fallback/banner.png</param>
@@ -190,10 +190,9 @@
 					<param name="ShowInfo">false</param>
 					<param name="ShowLogo">false</param>
 					<param name="ShowOverlay">false</param>
-					<param name="SymbolFont">Symbols-46</param>
 					<param name="ViewTypeLabel">$LOCALIZE[20020]</param>
 					<param name="Width">1664</param>
-					<param name="Visible">Container.Content(tvshows)</param>
+					<param name="Visible">Container.Content(movies) | Container.Content(tvshows)</param>
 				</include>
 			</control>
 		</control>
