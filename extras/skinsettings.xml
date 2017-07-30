@@ -17,7 +17,6 @@
 	<setting id="home.status" value="pvr" label="$LOCALIZE[19053]"/>
 	<setting id="home.status" value="rss" label="$LOCALIZE[20304]"/>
 	<setting id="home.status" value="system" label="$LOCALIZE[10511]"/>
-	<!--<setting id="home.status" value="feed" label="$LOCALIZE[31020]"/>-->
 
 	<!-- Date -->
 	<setting id="date.enabled" value="none" label="$LOCALIZE[13113]" default="true"/>
