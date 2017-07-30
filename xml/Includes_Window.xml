@@ -396,8 +396,8 @@
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
 				<include>transition_Chrome</include>
-				
 				<visible>!Window.IsActive(startup)</visible>
+
 				<!-- Use the current control ID as for some reason the animation is not executed when based on the widgets' control group ID -->
 				<animation effect="slide" end="-10,10" time="150" tween="Quadratic" easing="In" delay="250" condition="Window.IsActive(Home) + String.Contains(System.CurrentControlID,100) + !Skin.HasSetting(home.clock)">Conditional</animation>
 				<animation effect="slide" end="118,10" time="150" tween="Quadratic" easing="In" delay="250" condition="Window.IsActive(Home) + String.Contains(System.CurrentControlID,100) + Skin.HasSetting(home.clock)">Conditional</animation>

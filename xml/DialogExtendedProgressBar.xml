@@ -7,6 +7,7 @@
 				<param name="Left">1036</param>
 				<param name="Height">108</param>
 				<param name="Width">756</param>
+				<param name="TextWidth">648</param>
 				<param name="Symbol">&#57483;</param>
 				<param name="ID1">30</param>
 				<param name="ID2">31</param>
@@ -14,10 +15,11 @@
 				<param name="ProgressInfo"></param>
 				<param name="TextColor">$VAR[color:Main]</param>
 			</include>
-			<include content="global_Notification" condition="String.IsEqual(Skin.String(view.list.art.Label),posters)">
-				<param name="Left">1124</param>
+			<include content="global_Notification" condition="String.IsEqual(Skin.String(view.list.art.Label),posters) + Control.IsVisible(50) + [String.StartsWith(Container.FolderPath,videodb://) | String.StartsWith(Container.FolderPath,musicdb://)]">
+				<param name="Left">1144</param>
 				<param name="Height">108</param>
-				<param name="Width">668</param>
+				<param name="Width">648</param>
+				<param name="TextWidth">540</param>
 				<param name="Symbol">&#57483;</param>
 				<param name="ID1">30</param>
 				<param name="ID2">31</param>
@@ -32,6 +34,7 @@
 				<param name="Left">1036</param>
 				<param name="Height">98</param>
 				<param name="Width">756</param>
+				<param name="TextWidth">648</param>
 				<param name="Symbol">&#57483;</param>
 				<param name="InfoTop">9</param>
 				<param name="ID1">30</param>
