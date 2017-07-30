@@ -15,7 +15,7 @@
 				<param name="ProgressInfo"></param>
 				<param name="TextColor">$VAR[color:Main]</param>
 			</include>
-			<include content="global_Notification" condition="String.IsEqual(Skin.String(view.list.art.Label),posters) + Control.IsVisible(50) + [String.StartsWith(Container.FolderPath,videodb://) | String.StartsWith(Container.FolderPath,musicdb://)]">
+			<include content="global_Notification" condition="String.IsEqual(Skin.String(view.list.art.Label),posters) + Control.IsVisible(50)">
 				<param name="Left">1144</param>
 				<param name="Height">108</param>
 				<param name="Width">648</param>
