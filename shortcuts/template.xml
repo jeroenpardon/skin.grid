@@ -62,8 +62,11 @@
 		</property>
 		<property name="info">false</property>
 
+		<!--
 		<property name="shortinfo" tag="property" attribute="name|widgetType" value="movies">false</property>
+		<property name="shortinfo" tag="property" attribute="name|widgetType" value="tvshows">false</property>
 		<property name="shortinfo" tag="property" attribute="name|widgetLayout" value="portrait">true</property>
+		-->
 		<property name="shortinfo" propertyValue="true">
 			<match>all</match>
 			<rule tag="property" attribute="name|widgetLayout" value="landscape" />
@@ -133,6 +136,7 @@
 				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
 				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
+				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1920</width>
@@ -143,6 +147,7 @@
 				<preloaditems>2</preloaditems>
 				<include>global_Scrolltime</include>
 				<include>fadeinout</include>
+				<visible>Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</visible>
 				<include content="widget_Layout">
 					<param name="ID" value="1000$SKINSHORTCUTS[id]"/>
 					<param name="Height" value="$SKINSHORTCUTS[height]"/>
@@ -187,6 +192,7 @@
 				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
 				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
+				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1792</width>
@@ -197,6 +203,7 @@
 				<preloaditems>2</preloaditems>
 				<include>global_Scrolltime</include>
 				<include>fadeinout</include>
+				<visible>Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating | String.IsEmpty(Window(Home).Property(WidgetIsLoading))</visible>
 				<include content="widget_Layout">
 					<param name="ID" value="1000$SKINSHORTCUTS[id]"/>
 					<param name="Height" value="$SKINSHORTCUTS[height]"/>
@@ -241,6 +248,7 @@
 				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
 				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
+				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1920</width>
@@ -251,6 +259,7 @@
 				<preloaditems>2</preloaditems>
 				<include>global_Scrolltime</include>
 				<include>fadeinout</include>
+				<visible>Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating | String.IsEmpty(Window(Home).Property(WidgetIsLoading))</visible>
 				<include content="widget_Layout">
 					<param name="ID" value="1000$SKINSHORTCUTS[id]"/>
 					<param name="Height" value="$SKINSHORTCUTS[height]"/>
