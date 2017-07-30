@@ -413,7 +413,8 @@
 					<!-- Ratings overlay on artwork -->
 					<control type="button" id="313">
 						<label>$LOCALIZE[31348]</label>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.overlay.enable,header=$LOCALIZE[31348])</onclick>
+						<label2>$INFO[Skin.String(ratings.overlay.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.overlay,header=$LOCALIZE[31348])</onclick>
 						<enable>String.IsEqual(Skin.String(ratings.video),default) | String.IsEqual(Skin.String(ratings.video),user)</enable>
 						<include>radio_Settings</include>
 					</control>

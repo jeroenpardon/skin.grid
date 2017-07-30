@@ -64,16 +64,16 @@
 	<setting id="ratings.video" value="default" label="Kodi $LOCALIZE[571]"/>
 	<setting id="ratings.video" value="user" label="$LOCALIZE[38018]"/>
 	<setting id="ratings.video" value="imdb" label="IMDB"/>
-	<setting id="ratings.video" value="imdbpercent" label="IMDB ($LOCALIZE[31241])"/>
+	<setting id="ratings.video" value="imdbpercent" label="IMDB ($LOCALIZE[31341])"/>
 	<setting id="ratings.video" value="mc" label="Metacritic"/>
 	<setting id="ratings.video" value="rt" label="Rotten Tomatoes"/>
 	<setting id="ratings.video" value="tmdb" label="TMDB"/>
 
 	<!-- Rating overlay toggle -->
-	<setting id="ratings.overlay.enable" value="disabled" label="$LOCALIZE[36502]" default="true"/>
-	<setting id="ratings.overlay.enable" value="both" label="$LOCALIZE[342] &#38; $LOCALIZE[20343]"/>
-	<setting id="ratings.overlay.enable" value="movies" label="$LOCALIZE[342]"/>
-	<setting id="ratings.overlay.enable" value="tvshows" label="$LOCALIZE[20343]"/>
+	<setting id="ratings.overlay" value="disabled" label="$LOCALIZE[36502]" default="true"/>
+	<setting id="ratings.overlay" value="both" label="$LOCALIZE[342] &#38; $LOCALIZE[20343]"/>
+	<setting id="ratings.overlay" value="movies" label="$LOCALIZE[342]"/>
+	<setting id="ratings.overlay" value="tvshows" label="$LOCALIZE[20343]"/>
 
 	<setting id="ratings.music" value="disabled" label="$LOCALIZE[36502]" default="true"/>
 	<!--<setting id="ratings.music" value="default" label="Kodi $LOCALIZE[571]"/>-->
