@@ -28,7 +28,7 @@
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="ShowOverlay" default="true"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
-		<param name="SymbolFont" default="Symbols-64"/>
+		<param name="SymbolFont" default="Symbols-38"/>
 		<param name="TextHeight" default="228"/><!--Artheight - 84-->
 		<param name="TextLeft" default="32"/>
 		<param name="TextWidth" default="490"/><!--ArtWidth - 48-->
