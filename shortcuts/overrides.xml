@@ -404,4 +404,8 @@
 
 	<property property="homeSymbol">&#59221;</property>
 	<property property="homeSymbol">&#59227;</property>
+
+	<property property="homeSymbol">&#59229;</property>
+	<property property="homeSymbol">&#59230;</property>
+	<property property="homeSymbol">&#59231;</property>
 </overrides>
