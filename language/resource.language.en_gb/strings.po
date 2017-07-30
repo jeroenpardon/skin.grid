@@ -1031,7 +1031,6 @@ msgstr ""
 
 
 #: other
-
 #. example usage: the weather forecast is thunderstorms and lightning very very frightening
 msgctxt "#31850"
 msgid "Forecast"
@@ -1048,6 +1047,14 @@ msgstr ""
 
 msgctxt "#31853"
 msgid "YouTube: Live"
+msgstr ""
+
+msgctxt "#31854"
+msgid "Goodbye"
+msgstr ""
+
+msgctxt "#31855"
+msgid "See you later"
 msgstr ""
 
 
