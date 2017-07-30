@@ -168,7 +168,6 @@
 	</include>
 
 <!--keyboard-->
-
 	<include name="row_Keyboard">
 		<param name="Height" default="92"/>
 		<definition>

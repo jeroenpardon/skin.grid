@@ -91,7 +91,6 @@
 			<rule tag="property" attribute="name|widgetLayout" value="wide" />
 			<rule tag="property" attribute="name|widgetLayout" value="thumbnail" />
 		</property>
-
 		<property name="overlay">false</property>
 
 		<property name="showheader" tag="property" attribute="name|widgetLayout" value="fullscreen">false</property>
