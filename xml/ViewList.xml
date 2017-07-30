@@ -365,7 +365,10 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
+						<visible>$EXP[Art.IsLandscape]</visible>
+						<!--
 						<visible>[Container.Content(files) + Container.HasFiles] | $EXP[Content.IsPVR] | [Container.Content(files) + Container.HasFiles] | Container.Content(videos) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | Container.Content(episodes) | Container.Content(images) | Container.Content(musicvideos) | Container.Content(songs) | String.StartsWith(Container.FolderPath,pvr://) | String.StartsWith(Container.FolderPath,plugin://plugin.video) | [!String.IsEqual(Skin.String(view.list.art),posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+						-->
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>
@@ -567,17 +570,6 @@
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
 				<visible>$PARAM[Visible]</visible>
-				<!--fallback
-				<control type="image">
-					<width>$PARAM[Width]</width>
-					<height>$PARAM[ArtHeight]</height>
-					<texture diffuse="$PARAM[DiffuseTexture]" colordiffuse="aa000000">colorize/95.png</texture>
-					<fadetime>fadetime_Thumb</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-					<visible>$PARAM[ShowInfo]</visible>
-				</control>
-				-->
-
 				<control type="image">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
@@ -585,8 +577,6 @@
 					<aspectratio align="center" aligny="center">scale</aspectratio>
 					<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
 				</control>
-
-
 				<!--landscape art-->
 				<control type="group">
 					<width>$PARAM[Width]</width>
