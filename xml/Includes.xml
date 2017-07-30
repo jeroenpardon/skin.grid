@@ -763,7 +763,6 @@
 		</definition>
 	</include>
 
-
 	<!-- Debug -->
 	<include name="debug_Label">
 		<font>Debug</font>
