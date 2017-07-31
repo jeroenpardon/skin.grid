@@ -117,12 +117,13 @@
 					</control>
 					<!--info-->
 					<control type="group">
-						<bottom>28</bottom>
+						<bottom>50</bottom>
 						<left>$PARAM[TextLeft]</left>
 						<width>$PARAM[TextWidth]</width>
 						<height>24</height>
 						<visible>$PARAM[ShowInfo]</visible>
 						<control type="label">
+							<top>24</top>
 							<width>$PARAM[TextWidth]</width>
 							<label>$PARAM[Label]</label>
 							<height>24</height>
@@ -233,12 +234,13 @@
 					</control>
 					<!--info-->
 					<control type="group">
-						<bottom>28</bottom>
+						<bottom>50</bottom>
 						<left>$PARAM[TextLeft]</left>
 						<width>$PARAM[TextWidth]</width>
 						<height>24</height>
 						<visible>$PARAM[ShowInfo]</visible>
 						<control type="label">
+							<top>24</top>
 							<width>$PARAM[TextWidth]</width>
 							<label>$PARAM[Label]</label>
 							<height>24</height>
