@@ -8,7 +8,7 @@
 		<param name="AspectRatio" default="scale"/>
 		<param name="AspectRatioAlign" default="center"/>
 		<param name="AspectRatioAlignY" default="top"/>
-		<param name="Fallback" default="views/fallback/landscape.png"/>
+		<param name="Fallback" default="$VAR[art:Fallback]"/>
 		<param name="Frame" default="views/frame/square.png"/>
 		<param name="Height" default="972"/>
 		<param name="ItemHeight" default="321"/>
@@ -61,9 +61,10 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
+							<texture colordiffuse="$VAR[color:Text.2]">$PARAM[Fallback]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 							<bordersize>10</bordersize>
+							<visible>String.IsEmpty(Listitem.Art(thumb))</visible>
 						</control>
 						<control type="label">
 							<width>$PARAM[ArtWidth]</width>
@@ -176,10 +177,11 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
+							<texture colordiffuse="$VAR[color:Text.2]">$PARAM[Fallback]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 							<bordertexture border="10">$PARAM[Frame]</bordertexture>
 							<bordersize>10</bordersize>
+							<visible>String.IsEmpty(Listitem.Art(thumb))</visible>
 						</control>
 						<control type="label">
 							<width>$PARAM[ArtWidth]</width>

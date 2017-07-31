@@ -114,7 +114,7 @@
 					<param name="Art">$VAR[art:Portrait]</param>
 					<param name="ArtHeight">400</param>
 					<param name="ArtWidth">277.3</param>
-					<param name="Fallback">views/fallback/portrait.png</param>
+					<param name="Fallback">$VAR[art:Fallback.Portrait]</param>
 					<param name="Frame">views/frame/p_fo.png</param>
 					<param name="Height">972</param>
 					<param name="ItemHeight">400</param>

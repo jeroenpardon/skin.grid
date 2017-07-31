@@ -605,12 +605,14 @@
 	<variable name="art:Fallback">
 		<value condition="[Container.Content(artists) | Container.Content(actors)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-person.png</value>
 		<value condition="[Container.Content(albums) | Container.Content(songs)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-music.png</value>
+		<value condition="[Container.Content(movies) | Container.Content(tvshows)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/landscape-video.png</value>
 		<value>views/fallback/landscape.png</value>
 	</variable>
 
 	<variable name="art:Fallback.Portrait">
 		<value condition="[Container.Content(artists) | Container.Content(actors) | [Window.IsActive(movieinformation)]] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/portrait-person.png</value>
 		<value condition="[Container.Content(albums) | Container.Content(songs)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/portrait-music.png</value>
+		<value condition="[Container.Content(movies) | Container.Content(tvshows)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/portrait-video.png</value>
 		<value>views/fallback/portrait.png</value>
 	</variable>
 
