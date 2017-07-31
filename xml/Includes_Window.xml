@@ -49,6 +49,7 @@
 					<aspectratio>keep</aspectratio>
 					<include>transition_HomeMenu</include>
 					<fadetime>300</fadetime>
+					<visible>String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)</visible>
 					<visible>Window.IsActive(Home) + !Window.IsActive(movieinformation) + Skin.HasSetting(home.fanartlogo) + [String.IsEqual(Skin.String(home.fanart),global) | String.IsEqual(Skin.String(home.fanart),video)]</visible>
 				</control>
 				<!--playing video background-->
