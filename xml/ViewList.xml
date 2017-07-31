@@ -543,26 +543,28 @@
 	</include>
 
 	<include name="info_List">
-		<param name="Visible" default="false"/>
-		<param name="Width" default="756"/>
-		<param name="Height" default="972"/>
+		<param name="Art" default="$VAR[art:Landscape]"/>
+		<param name="Art2" default="$VAR[art:Square]"/>
 		<param name="ArtHeight" default="432"/>
 		<param name="ArtWidth" default="756"/>
-		<param name="TextWidth" default="705"/>
-		<param name="TextHeight" default="365"/>
 		<param name="Aspect" default="scale"/>
 		<param name="AspectRatioAlign" default="right"/>
 		<param name="AspectRatioAlignY" default="top"/>
-		<param name="ShowDescription" default="true"/>
-		<param name="Art" default="$VAR[art:Landscape]"/>
-		<param name="Art2" default="$VAR[art:Square]"/>
-		<param name="Logo" default="$VAR[art:Logo]"/>
-		<param name="Fallback" default="$VAR[art:Fallback]"/>
-		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
-		<param name="ShowInfo" default="true"/>
 		<param name="DiffuseTexture" default="views/diffuse/kodi_landscape.png"/>
+		<param name="Fallback" default="$VAR[art:Fallback]"/>
+		<param name="Height" default="972"/>
+		<param name="Logo" default="$VAR[art:Logo]"/>
 		<param name="ProviderLogo" default="logos/tmdb.png"/>
+		<param name="ShowDescription" default="true"/>
+		<param name="ShowInfo" default="true"/>
+		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="ShowProviderLogo" default="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb) | String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies) | String.Contains(ListItem.FilenameAndPath,tmdb) | [String.StartsWith(Container.FolderPath,plugin://) + String.StartsWith(ListItem.Icon,http://image.tmdb.org/)]"/>
+		<param name="Symbol" default="$VAR[symbol:Global]"/>
+		<param name="SymbolFont" default="Symbols-38"/>
+		<param name="TextHeight" default="365"/>
+		<param name="TextWidth" default="705"/>
+		<param name="Width" default="756"/>
+		<param name="Visible" default="false"/>
 		<definition>
 			<control type="group">
 				<top>108</top>
@@ -577,7 +579,18 @@
 					<aspectratio align="center" aligny="center">scale</aspectratio>
 					<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
 				</control>
-				<!--landscape art-->
+				<!-- Symbol -->
+				<control type="label">
+					<width>$PARAM[Width]</width>
+					<height>$PARAM[ArtHeight]</height>
+					<label>$PARAM[Symbol]</label>
+					<font>$PARAM[SymbolFont]</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
+				</control>
+				<!-- Landscape art -->
 				<control type="group">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
@@ -588,7 +601,7 @@
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
 					</control>
-					<!--clearlogo-->
+					<!-- Clearlogo -->
 					<control type="image">
 						<bottom>24</bottom>
 						<width>100%</width>
@@ -598,7 +611,7 @@
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<visible>$PARAM[ShowLogo]</visible>
 					</control>
-					<!--provider logo-->
+					<!-- Provider logo -->
 					<control type="image">
 						<left>24</left>
 						<bottom>24</bottom>
@@ -610,7 +623,7 @@
 						<visible>!ListItem.IsParentFolder</visible>
 						<visible>$PARAM[ShowProviderLogo]</visible>
 					</control>
-					<!--videowindow-->
+					<!-- Videowindow -->
 					<control type="group">
 						<visible>VideoPLayer.Content(livetv) + [Window.IsActive(tvchannels) | Window.IsActive(radiochannels)]</visible>
 						<control type="image">
@@ -624,7 +637,7 @@
 							<height>$PARAM[ArtHeight]</height>
 						</control>
 					</control>
-					<!--airs today-->
+					<!-- Airs today -->
 					<control type="button">
 						<width min="90">auto</width>
 						<top>54</top>
@@ -637,7 +650,7 @@
 						<visible>String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])</visible>
 					</control>
 				</control>
-				<!--media info-->
+				<!-- Media info -->
 				<control type="group">
 					<top>$PARAM[ArtHeight]</top>
 					<visible>$PARAM[ShowInfo]</visible>
