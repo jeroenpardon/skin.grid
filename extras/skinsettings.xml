@@ -20,9 +20,9 @@
 
 	<!-- Date -->
 	<setting id="date.enabled" value="none" label="$LOCALIZE[13113]" default="true"/>
-	<setting id="date.enabled" value="home" label="$LOCALIZE[31271]"/>
-	<setting id="date.enabled" value="global" label="$LOCALIZE[31269]"/>
-	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31270]"/>
+	<setting id="date.enabled" value="home" label="$LOCALIZE[31354]"/>
+	<setting id="date.enabled" value="global" label="$LOCALIZE[31352]"/>
+	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31353]"/>
 
 	<!-- Global background type -->
 	<setting id="background.type" value="custom" label="$LOCALIZE[636]" default="true"/>
@@ -40,18 +40,18 @@
 	<setting id="home.fanart" value="none" label="$LOCALIZE[13113]"/>
 
 	<!-- Global scrolling type -->
-	<setting id="global.scrolltype" value="active" label="$LOCALIZE[31220]"/>
-	<setting id="global.scrolltype" value="passive" label="$LOCALIZE[31221]" default="true"/>
+	<setting id="global.scrolltype" value="active" label="$LOCALIZE[31320]"/>
+	<setting id="global.scrolltype" value="passive" label="$LOCALIZE[31321]" default="true"/>
 
 	<!-- Text input -->
-	<setting id="input.text" value="keyboard" label="$LOCALIZE[31272]"/>
-	<setting id="input.text" value="nokeyboard" label="$LOCALIZE[31273]" default="true"/>
+	<setting id="input.text" value="keyboard" label="$LOCALIZE[31355]"/>
+	<setting id="input.text" value="nokeyboard" label="$LOCALIZE[31356]" default="true"/>
 
 	<!-- Autoscroll speed -->
 	<setting id="autoscroll.speed" value="none" label="$LOCALIZE[13113]" default="true"/>
-	<setting id="autoscroll.speed" value="normal" label="$LOCALIZE[31227]"/>
-	<setting id="autoscroll.speed" value="slow" label="$LOCALIZE[31230]"/>
-	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31228]"/>
+	<setting id="autoscroll.speed" value="normal" label="$LOCALIZE[31327]"/>
+	<setting id="autoscroll.speed" value="slow" label="$LOCALIZE[31330]"/>
+	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31328]"/>
 
 	<!-- Visualisation mode -->
 	<setting id="viz.mode" value="fanart" label="$LOCALIZE[31124]" default="true"/>
@@ -80,13 +80,13 @@
 
 	<!-- Options menu player controls type -->
 	<setting id="menu.controls" value="none" label="$LOCALIZE[36502]"/>
-	<setting id="menu.controls" value="player" label="$LOCALIZE[31268]" default="true"/>
-	<setting id="menu.controls" value="fullscreen" label="$LOCALIZE[31267]"/>
+	<setting id="menu.controls" value="player" label="$LOCALIZE[31351]" default="true"/>
+	<setting id="menu.controls" value="fullscreen" label="$LOCALIZE[31350]"/>
 
 	<!-- EPG timeline scrolling speed -->
-	<setting id="epg.scrollspeed" value="normal" label="$LOCALIZE[31227]" default="true"/>
-	<setting id="epg.scrollspeed" value="fast" label="$LOCALIZE[31228]"/>
-	<setting id="epg.scrollspeed" value="instant" label="$LOCALIZE[31229]"/>
+	<setting id="epg.scrollspeed" value="normal" label="$LOCALIZE[31327]" default="true"/>
+	<setting id="epg.scrollspeed" value="fast" label="$LOCALIZE[31328]"/>
+	<setting id="epg.scrollspeed" value="instant" label="$LOCALIZE[31329]"/>
 
 	<!-- List view artwork type -->
 	<setting id="view.list.art" value="posters" label="$LOCALIZE[31100]"/>
