@@ -272,15 +272,7 @@
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<!-- Select source -->
-					<control type="button" id="212">
-						<label>- $LOCALIZE[31135]</label>
-						<label2>$INFO[Skin.String(global.source.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=global.source,header=$LOCALIZE[31360])</onclick>
-						<include>install_HelperService</include>
-						<include>button_Settings</include>
-						<visible>String.IsEqual(Skin.String(background.global),fanart)</visible>
-					</control>
+
 					<!-- Select image(s) -->
 					<control type="button" id="213">
 						<label>- $LOCALIZE[31132]</label>
