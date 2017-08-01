@@ -92,7 +92,7 @@
 					<include>screen_Dimensions</include>
 					<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
+					<visible>String.IsEqual(Skin.String(background.global),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
 				</control>
 				
 				<control type="multiimage">
@@ -119,7 +119,7 @@
 					<texture background="true">$VAR[background:Path]</texture>
 					<visible>![Container.Scrolling + Skin.HasSetting(fanart.scrolling)]</visible>
 					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
-					<visible>String.IsEqual(Skin.String(background.home),fanart) | String.IsEqual(Skin.String(background.home),videofanart)</visible>
+					<visible>String.IsEqual(Skin.String(background.global),fanart) | String.IsEqual(Skin.String(background.global),videofanart)</visible>
 				</control>
 				
 				<!-- Background video -->
