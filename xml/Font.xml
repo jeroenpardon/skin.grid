@@ -53,6 +53,11 @@
 			<size>38</size>
 		</font>
 		<font>
+			<name>Symbols-46</name>
+			<filename>Default/Symbols.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
 			<name>Symbols-64</name>
 			<filename>Default/Symbols.ttf</filename>
 			<size>64</size>

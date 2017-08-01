@@ -4,7 +4,7 @@
 	<controls>
 
 	<!--background-->
-		<include content="global_Background">
+		<include content="background_Global">
 			<param name="GridTexture">overlays/90.png</param>
 		</include>
 

@@ -5,10 +5,10 @@
 		<param name="Height" default="screen_Height"/>
 		<definition>
 			<control type="group">
-				<include>transition_HomeMenu</include>
+				<include>transition_Background</include>
 
 				<!-- Background -->
-				<include content="global_Background">
+				<include content="background_Global">
 					<param name="GridTexture">overlays/108.png</param>
 				</include>
 
@@ -89,7 +89,7 @@
 
 
 	<include name="home_Menu-vertical">
-		<include content="global_Background">
+		<include content="background_Home">
 			<param name="GridTexture">overlays/home.png</param>
 			<param name="DiffuseColor">ff000000</param>
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
@@ -101,7 +101,7 @@
 		</include>
 
 		<control type="group">
-			<include>transition_HomeMenu</include>
+			<include>transition_Background</include>
 
 			<!-- Scroll indicators -->
 			<control type="label">
@@ -310,10 +310,10 @@
 	<include name="home_Menu-vertical2">
 		<definition>
 			<control type="group">
-				<include>transition_HomeMenu</include>
+				<include>transition_Background</include>
 
 				<!--background-->
-				<include content="global_Background">
+				<include content="background_Global">
 					<param name="GridTexture">overlays/98.png</param>
 				</include>
 

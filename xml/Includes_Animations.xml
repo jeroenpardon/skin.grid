@@ -93,7 +93,7 @@
 		</animation>
 	</include>
 
-	<include name="transition_HomeMenu">
+	<include name="transition_Background">
 		<animation type="WindowClose">
 			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
 		</animation>

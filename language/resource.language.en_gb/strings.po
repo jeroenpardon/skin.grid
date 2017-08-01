@@ -409,7 +409,7 @@ msgid "Prefer Fanart"
 msgstr ""
 
 msgctxt "#31131"
-msgid "Show the logo for the currently displayed fanart"
+msgid "Show logo for currently displayed fanart"
 msgstr ""
 
 
@@ -422,6 +422,27 @@ msgstr ""
 msgctxt "#31133"
 msgid "Animated backgrounds"
 msgstr ""
+
+msgctxt "#31134"
+msgid "Fanart slideshow"
+msgstr ""
+
+msgctxt "#31135"
+msgid "Select fanart source"
+msgstr ""
+
+msgctxt "#31136"
+msgid "All fanart"
+msgstr ""
+
+msgctxt "#31137"
+msgid "Movie Library"
+msgstr ""
+
+msgctxt "#31138"
+msgid "TV Show Library"
+msgstr ""
+
 
 
 
@@ -506,7 +527,7 @@ msgid "Show now playing video in background"
 msgstr ""
 
 msgctxt "#31316"
-msgid "Show currently playing media on homescreen"
+msgid "Show fanart for currently playing artist"
 msgstr ""
 
 msgctxt "#31317"
@@ -546,7 +567,7 @@ msgid "Autoscrolling speed"
 msgstr ""
 
 msgctxt "#31326"
-msgid "resource intensive"
+msgid "affects performance"
 msgstr ""
 
 msgctxt "#31327"
@@ -684,7 +705,7 @@ msgid "Select playlist"
 msgstr ""
 
 msgctxt "#31360"
-msgid "Global background artwork type"
+msgid "Background image type"
 msgstr ""
 
 msgctxt "#31361"

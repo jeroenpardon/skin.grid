@@ -3,7 +3,7 @@
 	<defaultcontrol always="true">703</defaultcontrol>
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow, daemon=True)</onload>
 	<controls>
-		<include>player_Background</include>
+		<include>background_Player</include>
 		<control type="group">
 			<include>fadeinout</include>
 			<visible>Player.ShowInfo + ![Window.IsActive(MusicOSD) | Window.IsVisible(okdialog) | Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>

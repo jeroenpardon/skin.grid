@@ -5,7 +5,7 @@
 	<controls>
 
 	<!--background-->
-		<include>global_Background</include>
+		<include>background_Global</include>
 
 	<!--chrome-->
 		<control type="group">

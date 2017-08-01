@@ -6,7 +6,7 @@
 	<controls>
 
 	<!--background-->
-		<include>global_Background</include>
+		<include>background_Global</include>
 
 	<!--global includes-->
 		<control type="group">

@@ -160,6 +160,33 @@
 					<height>24</height>
 				</control>
 
+				<control type="button">
+					<label>background.home: $INFO[Skin.String(background.home)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>fanart.home: $INFO[Skin.String(fanart.home)]</label>
+					<include>debug_Label</include>
+				</control>
+
+				<control type="button">
+					<label>background.global: $INFO[Skin.String(background.global)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>fanart.global: $INFO[Skin.String(fanart.global)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>custom.home: $INFO[Skin.String(custom.home)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>global.source: $INFO[Skin.String(global.source)]</label>
+					<include>debug_Label</include>
+				</control>
+
+
 				<!-- System -->
 				<control type="button" id="200">
 					<label>[B]System[/B]</label>

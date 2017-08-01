@@ -1,19 +1,24 @@
 <includes>
 
-	<include name="global_Background">
+	<include name="background_Home">
 		<param name="DiffuseTexture"/>
 		<param name="GridTexture" default="overlays/90.png"/>
 		<param name="DiffuseColor"/>
 		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)]"/>
 		<definition>
+
+			<!-- No Background -->
+			<control type="image">
+				<include>screen_Dimensions</include>
+				<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
+			</control>
+
 			<control type="group">
-				<include>transition_HomeMenu</include>
-				<control type="image">
-					<include>screen_Dimensions</include>
-					<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<visible>String.IsEqual(Skin.String(background.type),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
-				</control>
+				<include>transition_Background</include>
+
+				<!-- Slideshow -->
 				<control type="multiimage">
 					<timeperimage>30000</timeperimage>
 					<fadetime>300</fadetime>
@@ -22,13 +27,89 @@
 					<include>screen_Dimensions</include>
 					<include>Burns</include>
 					<aspectratio>scale</aspectratio>
-					<imagepath background="true">$VAR[background:Path]</imagepath>
+					<imagepath background="true">$VAR[background:Home]</imagepath>
 					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
 						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
 					</animation>
-					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
-					<visible>String.IsEqual(Skin.String(background.type),custom)</visible>
+					<visible>!String.IsEqual(Skin.String(background.home),none) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
+
+				<!-- Background video -->
+				<include>background_Video</include>
+
+				<!-- Now playing -->
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture>$VAR[player:Art]</texture>
+					<fadetime>fadetime_Thumb</fadetime>
+					<include>fadeinout</include>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<visible>Player.HasAudio + Skin.HasSetting(home.nowplaying)</visible>
+				</control>
+
+				<!-- Overlay -->
+				<control type="group">
+					<control type="image">
+						<include>screen_Dimensions</include>
+						<texture background="true" diffuse="$PARAM[DiffuseTexture]">overlays/background.png</texture>
+						<colordiffuse>$VAR[color:Main]</colordiffuse> 
+						<fadetime>fadetime_Thumb</fadetime>
+					</control>
+					<control type="image">
+						<colordiffuse>$VAR[color:Accent]</colordiffuse>
+						<include>screen_Dimensions</include>
+						<texture background="true" diffuse="$PARAM[DiffuseTexture]" colordiffuse="$PARAM[DiffuseColor]">$PARAM[GridTexture]</texture>
+					</control>
+				</control>
+
+				<!-- Logos -->
+				<control type="image">
+					<right>64</right>
+					<bottom>90</bottom>
+					<width>330</width>
+					<height>128</height>
+					<texture>$VAR[home:SlideShowLogo]</texture>
+					<aspectratio>keep</aspectratio>
+					<fadetime>300</fadetime>
+					<visible>String.IsEqual(Skin.String(background.home),fanart) | String.IsEqual(Skin.String(background.home),videofanart)</visible>
+					<visible>![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)] + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
+					<visible>!Window.IsActive(movieinformation) + Skin.HasSetting(fanart.sourcelogo) + [String.IsEqual(Skin.String(fanart.source),global) | String.IsEqual(Skin.String(fanart.source),video)]</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="background_Global">
+		<param name="DiffuseTexture"/>
+		<param name="GridTexture" default="overlays/90.png"/>
+		<param name="DiffuseColor"/>
+		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)]"/>
+		<definition>
+			<control type="group">
+				<include>transition_Background</include>
+				<!-- No Background -->
+				<control type="image">
+					<include>screen_Dimensions</include>
+					<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
+				</control>
+				
+				<control type="multiimage">
+					<timeperimage>30000</timeperimage>
+					<fadetime>300</fadetime>
+					<pauseatend>10000</pauseatend>
+					<randomize>true</randomize>
+					<include>screen_Dimensions</include>
+					<include>Burns</include>
+					<aspectratio>scale</aspectratio>
+					<imagepath background="true">$VAR[background:Global]</imagepath>
+					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
+						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
+					</animation>
+					<visible>!String.IsEqual(Skin.String(background.global),none)</visible>
+				</control>
+
 				<control type="image">
 					<include>screen_Dimensions</include>
 					<include>Burns</include>
@@ -38,32 +119,12 @@
 					<texture background="true">$VAR[background:Path]</texture>
 					<visible>![Container.Scrolling + Skin.HasSetting(fanart.scrolling)]</visible>
 					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
-					<visible>String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)</visible>
+					<visible>String.IsEqual(Skin.String(background.home),fanart) | String.IsEqual(Skin.String(background.home),videofanart)</visible>
 				</control>
-				<control type="image">
-					<right>64</right>
-					<bottom>90</bottom>
-					<width>330</width>
-					<height>128</height>
-					<texture>$VAR[home:SlideShowLogo]</texture>
-					<aspectratio>keep</aspectratio>
-					<include>transition_HomeMenu</include>
-					<fadetime>300</fadetime>
-					<visible>String.IsEqual(Skin.String(background.type),fanart) | String.IsEqual(Skin.String(background.type),videofanart)</visible>
-					<visible>Window.IsActive(Home) + !Window.IsActive(movieinformation) + Skin.HasSetting(home.fanartlogo) + [String.IsEqual(Skin.String(home.fanart),global) | String.IsEqual(Skin.String(home.fanart),video)]</visible>
-				</control>
-				<!--playing video background-->
-				<control type="group">
-					<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + ![String.IsEqual(Skin.String(homemenu.type),stream) + Window.IsActive(home)]</visible>
-					<control type="image">
-						<aspectratio>stretch</aspectratio>
-						<include>screen_Dimensions</include>
-						<texture colordiffuse="ff000000">colorize/white.png</texture>
-					</control>
-					<control type="videowindow">
-						<include>screen_Dimensions</include>
-					</control>
-				</control>
+				
+				<!-- Background video -->
+				<include>background_Video</include>
+
 				<!--overlay-->
 				<control type="group">
 					<control type="image">
@@ -82,7 +143,21 @@
 		</definition>
 	</include>
 
-	<include name="player_Background">
+	<include name="background_Video">
+		<control type="group">
+			<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + ![String.IsEqual(Skin.String(homemenu.type),stream) + Window.IsActive(home)]</visible>
+			<control type="image">
+				<aspectratio>stretch</aspectratio>
+				<include>screen_Dimensions</include>
+				<texture colordiffuse="ff000000">colorize/white.png</texture>
+			</control>
+			<control type="videowindow">
+				<include>screen_Dimensions</include>
+			</control>
+		</control>
+	</include>
+
+	<include name="background_Player">
 		<control type="group">
 			<animation type="conditional" condition="Skin.HasSetting(burns.enable)" loop="true">
 				<effect type="Fade" start="0" end="100" time="2000"/>

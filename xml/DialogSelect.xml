@@ -6,7 +6,7 @@
 	<controls>
 
 	<!-- Global includes -->
-		<include>global_Background</include>
+		<include>background_Global</include>
 
 	<!-- Window chrome -->		
 		<control type="group">

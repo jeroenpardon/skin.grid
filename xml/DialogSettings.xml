@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol>5</defaultcontrol>
 	<controls>
-		<include condition="!VideoPlayer.IsFullscreen | Window.IsActive(osdaudiodspsettings)">global_Background</include>
+		<include condition="!VideoPlayer.IsFullscreen | Window.IsActive(osdaudiodspsettings)">background_Global</include>
 
 		<!-- Window chrome -->		
 		<control type="group">
