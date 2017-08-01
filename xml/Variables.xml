@@ -9,11 +9,13 @@
 		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying)">$VAR[player:Art]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),custom) + !String.IsEmpty(Skin.String(custom.home))">$INFO[Skin.String(custom.home)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),custom)">views/fallback/fanart.jpg</value>
+		<value condition="String.IsEqual(Skin.String(background.home),pictures)">$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),fanart) + String.IsEqual(Skin.String(fanart.source),global)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),fanart) + String.IsEqual(Skin.String(fanart.source),video)">$INFO[Window(Home).Property(script.grab.fanart.Video.FanArt)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),fanart) + String.IsEqual(Skin.String(fanart.source),movies)">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),fanart) + String.IsEqual(Skin.String(fanart.source),tvshows)">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),fanart) + String.IsEqual(Skin.String(fanart.source),music)">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</value>
+
 	</variable>
 
 	<variable name="background:Global">
@@ -28,7 +30,6 @@
 		<value condition="String.IsEqual(Skin.String(background.global),fanart) + !String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
 		<value>views/fallback/fanart.jpg</value>
 	</variable>
-
 
 <!-- Home -->
 	<variable name="shortcut:Symbol">

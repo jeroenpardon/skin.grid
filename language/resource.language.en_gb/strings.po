@@ -162,7 +162,7 @@ msgid "Single image"
 msgstr ""
 
 msgctxt "#31056"
-msgid "Images slideshow"
+msgid "Pictures slideshow"
 msgstr ""
 
 

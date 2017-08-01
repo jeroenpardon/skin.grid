@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol></defaultcontrol>
 
-	<onload>Skin.SetString(SkinHelper.RandomFanartDelay, 30)</onload>
+	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,30)</onload>
 
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<onload>RunScript(script.grab.fanart,mode=random,refresh=20)</onload>

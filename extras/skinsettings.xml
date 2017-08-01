@@ -28,6 +28,7 @@
 	<setting id="background.home" value="none" label="$LOCALIZE[36502]"/>
 	<setting id="background.home" value="custom" label="$LOCALIZE[636]" default="true"/>
 	<setting id="background.home" value="fanart" label="$LOCALIZE[31366]"/>
+	<setting id="background.home" value="pictures" label="$LOCALIZE[31056]"/>
 
 	<!-- Global background type -->
 	<setting id="background.global" value="none" label="$LOCALIZE[36502]"/>

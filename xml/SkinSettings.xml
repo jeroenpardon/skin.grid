@@ -248,8 +248,7 @@
 						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(fanart.sourcelogo),noaction=Close)</onclick>
 						<selected>Skin.HasSetting(fanart.sourcelogo)</selected>
 						<include>radio_Settings</include>
-						<enable>String.IsEqual(Skin.String(background.home),fanart)</enable>
-						<visible>String.IsEqual(Skin.String(fanart.source),global) | String.IsEqual(Skin.String(fanart.source),video)</visible>
+						<visible>String.IsEqual(Skin.String(background.home),fanart)</visible>
 					</control>
 					<!-- Playing item on home -->
 					<control type="radiobutton" id="209">
