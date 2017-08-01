@@ -27,24 +27,24 @@
 	<!-- Home background type -->
 	<setting id="background.home" value="none" label="$LOCALIZE[36502]"/>
 	<setting id="background.home" value="custom" label="$LOCALIZE[636]" default="true"/>
-	<setting id="background.home" value="fanart" label="$LOCALIZE[31134]"/>
+	<setting id="background.home" value="fanart" label="$LOCALIZE[31366]"/>
 
 	<!-- Global background type -->
 	<setting id="background.global" value="none" label="$LOCALIZE[36502]"/>
 	<setting id="background.global" value="custom" label="$LOCALIZE[636]" default="true"/>
-	<setting id="background.global" value="fanart" label="$LOCALIZE[31118]"/>
+	<setting id="background.global" value="fanart" label="$LOCALIZE[31218]"/>
 
 	<!-- Home slideshow source -->
-	<setting id="fanart.source" value="global" label="$LOCALIZE[31136]" default="true">
+	<setting id="fanart.source" value="global" label="$LOCALIZE[31368]" default="true">
 		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
 	</setting>
 	<setting id="fanart.source" value="video" label="$LOCALIZE[14236]">
 		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
 	</setting>
-	<setting id="fanart.source" value="movies" label="$LOCALIZE[31137]">
+	<setting id="fanart.source" value="movies" label="$LOCALIZE[31369]">
 		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
 	</setting>
-	<setting id="fanart.source" value="tvshows" label="$LOCALIZE[31138]">
+	<setting id="fanart.source" value="tvshows" label="$LOCALIZE[31370]">
 		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
 	</setting>
 	<setting id="fanart.source" value="music" label="$LOCALIZE[14237]">
@@ -52,10 +52,10 @@
 	</setting>
 
 	<!-- Global backgrounds -->
-	<setting id="global.source" value="global" label="$LOCALIZE[31136]" default="true">
+	<setting id="global.source" value="global" label="$LOCALIZE[31368]" default="true">
 		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
 	</setting>
-	<setting id="global.source" value="video" label="$LOCALIZE[31137]">
+	<setting id="global.source" value="video" label="$LOCALIZE[31369]">
 		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
 	</setting>
 
@@ -74,7 +74,7 @@
 	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31328]"/>
 
 	<!-- Visualisation mode -->
-	<setting id="viz.mode" value="fanart" label="$LOCALIZE[31124]" default="true"/>
+	<setting id="viz.mode" value="fanart" label="$LOCALIZE[31224]" default="true"/>
 	<setting id="viz.mode" value="viz" label="$LOCALIZE[250]"/>
 	<setting id="viz.mode" value="blend" label="$LOCALIZE[20131]"/>
 
@@ -109,12 +109,12 @@
 	<setting id="epg.scrollspeed" value="instant" label="$LOCALIZE[31329]"/>
 
 	<!-- List view artwork type -->
-	<setting id="view.list.art" value="posters" label="$LOCALIZE[31100]"/>
-	<setting id="view.list.art" value="fanart" label="$LOCALIZE[31118]" default="true"/>
-	<setting id="view.list.art" value="landscape" label="$LOCALIZE[31102]"/>
+	<setting id="view.list.art" value="posters" label="$LOCALIZE[31200]"/>
+	<setting id="view.list.art" value="fanart" label="$LOCALIZE[31218]" default="true"/>
+	<setting id="view.list.art" value="landscape" label="$LOCALIZE[31202]"/>
 
 	<!-- Global landscape artwork type -->
-	<setting id="views.landscape.art" value="fanart" label="$LOCALIZE[31130]" default="true"/>
-	<setting id="views.landscape.art" value="landscape" label="$LOCALIZE[31129]"/>
+	<setting id="views.landscape.art" value="fanart" label="$LOCALIZE[31230]" default="true"/>
+	<setting id="views.landscape.art" value="landscape" label="$LOCALIZE[31229]"/>
 
 </settings>

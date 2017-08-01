@@ -32,7 +32,7 @@
 					<height>90</height>
 					<control type="button" id="511">
 						<width>1466</width>
-						<label>$LOCALIZE[31123]</label>
+						<label>$LOCALIZE[31223]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>600</onup>
@@ -59,7 +59,7 @@
 					<height>90</height>
 					<control type="button" id="521">
 						<width>1466</width>
-						<label>$LOCALIZE[31113]</label>
+						<label>$LOCALIZE[31213]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>510</onup>
@@ -86,7 +86,7 @@
 					<height>90</height>
 					<control type="button" id="531">
 						<width>1466</width>
-						<label>$LOCALIZE[31119]</label>
+						<label>$LOCALIZE[31219]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>520</onup>
@@ -113,7 +113,7 @@
 					<height>90</height>
 					<control type="button" id="541">
 						<width>1466</width>
-						<label>$LOCALIZE[31109]</label>
+						<label>$LOCALIZE[31209]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>530</onup>
@@ -140,7 +140,7 @@
 					<height>90</height>
 					<control type="button" id="561">
 						<width>1466</width>
-						<label>$LOCALIZE[31112]</label>
+						<label>$LOCALIZE[31212]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>540</onup>

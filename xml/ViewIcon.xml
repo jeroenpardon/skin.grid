@@ -33,7 +33,7 @@
 		<param name="TextLeft" default="32"/>
 		<param name="TextWidth" default="490"/><!--ArtWidth - 48-->
 		<param name="Top" default="108"/>
-		<param name="ViewTypeLabel" default="$LOCALIZE[31102]"/>
+		<param name="ViewTypeLabel" default="$LOCALIZE[31202]"/>
 		<param name="Width" default="1664"/>
 		<param name="Visible"/>
 		<definition>

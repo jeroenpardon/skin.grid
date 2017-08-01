@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kodi Translation Team\n"
+"Last-Translator: Jeroen Pardon\n"
 "Language-Team: English (United Kingdom) (http://www.transifex.com/projects/p/kodi-skins/language/en_GB/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -133,13 +133,6 @@ msgctxt "#31044"
 msgid "Wide"
 msgstr ""
 
-msgctxt "#31045"
-msgid "Your widgets are here, ready whenever you need them. Access them by pressing right."
-msgstr ""
-
-msgctxt "#31046"
-msgid "Press down to configure widgets."
-msgstr ""
 
 
 #: general
@@ -172,13 +165,6 @@ msgctxt "#31056"
 msgid "Images slideshow"
 msgstr ""
 
-msgctxt "#31057"
-msgid "Restore skin settings"
-msgstr ""
-
-msgctxt "#31058"
-msgid "Backup skin settings"
-msgstr ""
 
 msgctxt "#31059"
 msgid "Developer"
@@ -261,202 +247,154 @@ msgctxt "#31077"
 msgid "Never played"
 msgstr ""
 
-msgctxt "#31078"
-msgid "Backup & Restore"
-msgstr ""
 
 msgctxt "#31079"
 msgid "Descriptions"
 msgstr ""
 
-msgctxt "#31080"
-msgid "Change backup and restore location"
-msgstr ""
 
 msgctxt "#31081"
 msgid "Reload"
 msgstr ""
 
-msgctxt "#31082"
-msgid "Press back to clear message."
+
+msgctxt "#31083"
+msgid "Sorting"
+msgstr ""
+
+msgctxt "#31084"
+msgid "Items"
 msgstr ""
 
 
 
 #: artwork
-msgctxt "#31100"
+msgctxt "#31200"
 msgid "Posters"
 msgstr ""
 
-msgctxt "#31101"
+msgctxt "#31201"
 msgid "Portrait"
 msgstr ""
 
-msgctxt "#31102"
+msgctxt "#31202"
 msgid "Landscape"
 msgstr ""
 
-msgctxt "#31103"
+msgctxt "#31203"
 msgid "Thumbnails"
 msgstr ""
 
-msgctxt "#31104"
+msgctxt "#31204"
 msgid "Logos"
 msgstr ""
 
-msgctxt "#31105"
+msgctxt "#31205"
 msgid "Clearart"
 msgstr ""
 
-msgctxt "#31106"
+msgctxt "#31206"
 msgid "Download artwork"
 msgstr ""
 
-msgctxt "#31107"
+msgctxt "#31207"
 msgid "Extended artwork"
 msgstr ""
 
-msgctxt "#31108"
+msgctxt "#31208"
 msgid "Enable logos"
 msgstr ""
 
-msgctxt "#31109"
+msgctxt "#31209"
 msgid "Download logos"
 msgstr ""
 
-msgctxt "#31110"
+msgctxt "#31210"
 msgid "Download thumbnail"
 msgstr ""
 
-msgctxt "#31111"
+msgctxt "#31211"
 msgid "Download poster"
 msgstr ""
 
-msgctxt "#31112"
+msgctxt "#31212"
 msgid "Download extrafanart"
 msgstr ""
 
-msgctxt "#31113"
+msgctxt "#31213"
 msgid "Download fanart"
 msgstr ""
 
-msgctxt "#31114"
+msgctxt "#31214"
 msgid "Get all artwork"
 msgstr ""
 
-msgctxt "#31115"
+msgctxt "#31215"
 msgid "Landscape art type"
 msgstr ""
 
-msgctxt "#31116"
+msgctxt "#31216"
 msgid "List view artwork type"
 msgstr ""
 
-msgctxt "#31117"
+msgctxt "#31217"
 msgid "No images available. Would you like to download some?"
 msgstr ""
 
-msgctxt "#31118"
+msgctxt "#31218"
 msgid "Fanart"
 msgstr ""
 
-msgctxt "#31119"
+msgctxt "#31219"
 msgid "Download landscape"
 msgstr ""
 
-msgctxt "#31120"
+msgctxt "#31220"
 msgid "Viewtype"
 msgstr ""
 
-msgctxt "#31121"
+msgctxt "#31221"
 msgid "Gallery"
 msgstr ""
 
-msgctxt "#31122"
+msgctxt "#31222"
 msgid "Slide"
 msgstr ""
 
-msgctxt "#31123"
+msgctxt "#31223"
 msgid "Download posters"
 msgstr ""
 
-msgctxt "#31124"
+msgctxt "#31224"
 msgid "Video fanart"
 msgstr ""
 
-msgctxt "#31125"
+msgctxt "#31225"
 msgid "Square"
 msgstr ""
 
-msgctxt "#31126"
+msgctxt "#31226"
 msgid "Enable animated artwork"
 msgstr ""
 
-msgctxt "#31127"
+msgctxt "#31227"
 msgid "Only in movie information screen"
 msgstr ""
 
-msgctxt "#31128"
+msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
 msgstr ""
 
-msgctxt "#31129"
+msgctxt "#31229"
 msgid "Prefer Landscape thumbnails"
 msgstr ""
 
-msgctxt "#31130"
+msgctxt "#31230"
 msgid "Prefer Fanart"
 msgstr ""
 
-msgctxt "#31131"
+msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
-msgstr ""
-
-
-
-#: backgrounds
-msgctxt "#31132"
-msgid "Select image(s)"
-msgstr ""
-
-msgctxt "#31133"
-msgid "Animated backgrounds"
-msgstr ""
-
-msgctxt "#31134"
-msgid "Fanart slideshow"
-msgstr ""
-
-msgctxt "#31135"
-msgid "Select fanart source"
-msgstr ""
-
-msgctxt "#31136"
-msgid "All fanart"
-msgstr ""
-
-msgctxt "#31137"
-msgid "Movie Library"
-msgstr ""
-
-msgctxt "#31138"
-msgid "TV Show Library"
-msgstr ""
-
-
-
-
-#: options menu
-msgctxt "#31250"
-msgid "Sorting"
-msgstr ""
-
-msgctxt "#31251"
-msgid "Disable custom shortcuts tab"
-msgstr ""
-
-msgctxt "#31252"
-msgid "Items"
 msgstr ""
 
 
@@ -714,6 +652,54 @@ msgstr ""
 
 msgctxt "#31362"
 msgid "Slideshow contents"
+msgstr ""
+
+msgctxt "#31363"
+msgid "Disable custom shortcuts tab"
+msgstr ""
+
+msgctxt "#31364"
+msgid "Select image(s)"
+msgstr ""
+
+msgctxt "#31365"
+msgid "Animated backgrounds"
+msgstr ""
+
+msgctxt "#31366"
+msgid "Fanart slideshow"
+msgstr ""
+
+msgctxt "#31367"
+msgid "Select fanart source"
+msgstr ""
+
+msgctxt "#31368"
+msgid "All fanart"
+msgstr ""
+
+msgctxt "#31369"
+msgid "Movie Library"
+msgstr ""
+
+msgctxt "#31370"
+msgid "TV Show Library"
+msgstr ""
+
+msgctxt "#31371"
+msgid "Restore skin settings"
+msgstr ""
+
+msgctxt "#31372"
+msgid "Backup skin settings"
+msgstr ""
+
+msgctxt "#31373"
+msgid "Backup & Restore"
+msgstr ""
+
+msgctxt "#31374"
+msgid "Change backup and restore location"
 msgstr ""
 
 
@@ -1019,7 +1005,6 @@ msgstr ""
 
 
 #: colours
-
 msgctxt "#31800"
 msgid "Manage colour themes"
 msgstr ""

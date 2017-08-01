@@ -296,7 +296,7 @@
 
 	<variable name="menu:FilterCount">
 		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container().NumItems] $INFO[Container.Content]</value>
-		<value>$INFO[Container().NumItems,, $LOCALIZE[31252]]</value>
+		<value>$INFO[Container().NumItems,, $LOCALIZE[31084]]</value>
 	</variable>
 
 	<variable name="menu:HideBroken">
@@ -1113,8 +1113,8 @@
 <!-- Widgets -->
 	<variable name="widget:Art.Label">
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetArt),fanart)">$LOCALIZE[20445]</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetArt),landscape)">$LOCALIZE[31102]</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetArt),thumbnail)">$LOCALIZE[31103]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetArt),landscape)">$LOCALIZE[31202]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetArt),thumbnail)">$LOCALIZE[31203]</value>
 		<value>$LOCALIZE[31032]</value>
 	</variable>
 
@@ -1154,9 +1154,9 @@
 	<variable name="widget:Layout.Symbol">
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31044])">&#59136;</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31072])">&#59133;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31102])">&#59141;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31101])">&#59154;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31125])">&#59112;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31202])">&#59141;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31201])">&#59154;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31225])">&#59112;</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[21371])">&#59141;</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[20020])">&#59137;</value>
 	</variable>
@@ -1308,7 +1308,7 @@
 
 	<variable name="window:Title.Custom">
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
-		<value condition="Window.IsActive(1103)">$LOCALIZE[31106]</value>
+		<value condition="Window.IsActive(1103)">$LOCALIZE[31206]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$INFO[ListItem.Season,$LOCALIZE[20373] ]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,artist)">$INFO[ListItem.Artist]</value>
@@ -1404,7 +1404,7 @@
 		<value condition="Window.IsActive(filemanager)">$LOCALIZE[7]</value>
 		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]</value>
 		<value condition="Window.IsActive(settings)">$LOCALIZE[10004]</value>
-		<value condition="Window.IsActive(1103)">$LOCALIZE[31106]</value>
+		<value condition="Window.IsActive(1103)">$LOCALIZE[31206]</value>
 	</variable>
 
 	<variable name="window:Grid.Debug">

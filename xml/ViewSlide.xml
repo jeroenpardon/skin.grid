@@ -24,7 +24,7 @@
 		<param name="Visible" default="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(actors) | Container.Content(albums)"/>
 		<definition>
 			<control type="$PARAM[Type]" id="$PARAM[ID]">
-				<viewtype label="31122">wrap</viewtype>
+				<viewtype label="31222">wrap</viewtype>
 				<left>$PARAM[Left]</left>
 				<top>$PARAM[Top]</top>
 				<width>$PARAM[Width]</width>
@@ -256,7 +256,7 @@
 		<param name="Visible" default="Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)"/>
 		<definition>
 			<control type="fixedlist" id="$PARAM[ID]">
-				<viewtype label="31122">bigwrap</viewtype>
+				<viewtype label="31222">bigwrap</viewtype>
 				<left>$PARAM[Left]</left>
 				<top>$PARAM[Top]</top>
 				<width>$PARAM[Width]</width>

@@ -166,7 +166,7 @@
 				</control>
 
 				<control type="label" id="539">
-					<label>$LOCALIZE[31107]</label>
+					<label>$LOCALIZE[31207]</label>
 					<include>global_Header</include>
 					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 				</control>
@@ -177,7 +177,7 @@
 					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 					<control type="button" id="541">
 						<width>832</width>
-						<label>$LOCALIZE[31114]</label>
+						<label>$LOCALIZE[31214]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>536</onup>
@@ -208,7 +208,7 @@
 					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)</visible>
 					<control type="button" id="551">
 						<width>832</width>
-						<label>$LOCALIZE[31119]</label>
+						<label>$LOCALIZE[31219]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>541</onup>
@@ -238,7 +238,7 @@
 					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 					<control type="button" id="561">
 						<width>832</width>
-						<label>$LOCALIZE[31109]</label>
+						<label>$LOCALIZE[31209]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>551</onup>
@@ -269,7 +269,7 @@
 					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
 					<control type="button" id="571">
 						<width>832</width>
-						<label>$LOCALIZE[31112]</label>
+						<label>$LOCALIZE[31212]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>561</onup>

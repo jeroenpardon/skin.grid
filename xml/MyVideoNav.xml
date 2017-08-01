@@ -92,14 +92,14 @@
 				<visible>Control.IsVisible(52)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_Slide">
-					<param name="ViewTypeLabel" value="$LOCALIZE[31100]"/>
+					<param name="ViewTypeLabel" value="$LOCALIZE[31200]"/>
 				</include>
 			</control>
 			<control type="group">
 				<visible>Control.IsVisible(521)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_SlideThumb">
-					<param name="ViewTypeLabel">$LOCALIZE[31100]</param>
+					<param name="ViewTypeLabel">$LOCALIZE[31200]</param>
 					<param name="Art">$VAR[art:Landscape]</param>
 				</include>
 			</control>
@@ -110,7 +110,7 @@
 				<include>transition_ViewChange</include>
 				<include content="view_Thumbnails" condition="!Container.Content(addons)">
 					<param name="ID">54</param>
-					<param name="ViewTypeLabel">$LOCALIZE[31100]</param>
+					<param name="ViewTypeLabel">$LOCALIZE[31200]</param>
 					<param name="Art">$VAR[art:Portrait]</param>
 					<param name="ArtHeight">400</param>
 					<param name="ArtWidth">277.3</param>

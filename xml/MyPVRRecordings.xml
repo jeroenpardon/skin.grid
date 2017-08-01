@@ -63,7 +63,7 @@
 				<visible>Control.IsVisible(521)</visible>
 				<include>transition_ViewChange</include>
 				<include content="view_SlideThumb">
-					<param name="ViewTypeLabel">$LOCALIZE[31100]</param>
+					<param name="ViewTypeLabel">$LOCALIZE[31200]</param>
 					<param name="Art">$VAR[art:Landscape]</param>
 					<param name="Label2">$INFO[ListItem.Date]$INFO[ListItem.ChannelName, | ]$INFO[ListItem.Duration, | , $LOCALIZE[31075]]</param>
 				</include>

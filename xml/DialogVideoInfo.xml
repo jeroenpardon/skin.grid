@@ -166,8 +166,8 @@
 						<width min="256">auto</width>
 						<font>Black-20</font>
 						<align>center</align>
-						<label>$LOCALIZE[31121]</label>
-						<onclick condition="!Integer.IsGreater(Container(9999).NumItems,0)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[416],message=$LOCALIZE[31117],yesaction=SetFocus(90),noaction=Close)</onclick>
+						<label>$LOCALIZE[31221]</label>
+						<onclick condition="!Integer.IsGreater(Container(9999).NumItems,0)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[416],message=$LOCALIZE[31217],yesaction=SetFocus(90),noaction=Close)</onclick>
 						<onclick>SetFocus(9999)</onclick>
 						<texturenofocus></texturenofocus>
 						<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)</visible>
