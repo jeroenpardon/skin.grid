@@ -2,6 +2,7 @@
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
 	<!--<onload condition="!Skin.HasSetting(FirstRunWidgets)">ActivateWindow(1106)</onload>-->
+	<onload>AlarmClock(LoadHome,SetProperty(HomeInit,true),0:03,silent)</onload>
 
 	<!-- Skin Shortcuts -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
@@ -40,7 +41,7 @@
 		<!-- Post startup -->
 		<control type="group">
 			<include>screen_Dimensions</include>
-			<animation type="Conditional" condition="!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready)) | !System.HasAddon(script.grab.fanart)">
+			<animation type="Conditional" condition="String.IsEqual(Window(Home).Property(HomeInit),true)">
 				<effect type="fade" start="0" end="100" time="0" delay="0"/>
 				<effect type="slide" start="0,0" end="0,1080" time="500" easing="InOut" tween="cubic" delay="2000"/>
 			</animation>
@@ -64,13 +65,14 @@
 					<texture>logos/startup_02.png</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<colordiffuse>$VAR[color:Accent]</colordiffuse>
-					<visible>!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready)) | !System.HasAddon(script.grab.fanart)</visible>
-					<animation type="Conditional" condition="!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready)) | !System.HasAddon(script.grab.fanart)">
+					<visible>String.IsEqual(Window(Home).Property(HomeInit),true)</visible>
+					<animation type="Conditional" condition="String.IsEqual(Window(Home).Property(HomeInit),true)">
 						<effect type="fade" start="0" end="100" time="250" delay="500"/>
 						<effect type="slide" start="0,0" end="0,-84" time="500" easing="Out" tween="bounce" delay="500"/>
 					</animation>
 				</control>
 			</control>
+			<!--
 			<control type="group">
 				<left>924</left>
 				<bottom>108</bottom>
@@ -79,6 +81,7 @@
 				<include>global_Busy</include>
 				<visible>String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))</visible>
 			</control>
+			-->
 		</control>
 	</controls>
 </window>

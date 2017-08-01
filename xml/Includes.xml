@@ -671,6 +671,9 @@
 	<include name="install_HelperBackup">
 		<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
 	</include>
+	<include name="install_HelperBackgrounds">
+		<onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
+	</include>
 	<include name="install_ColorPicker">
 		<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
 	</include>

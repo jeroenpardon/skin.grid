@@ -217,7 +217,7 @@
 						<include>global_Header</include>
 					</control>
 					<!--background type-->
-					<control type="button" id="205">
+					<control type="button" id="202">
 						<label>$LOCALIZE[31360]</label>
 						<label2>$INFO[Skin.String(background.home.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.home,header=$LOCALIZE[31360])</onclick>
@@ -225,7 +225,7 @@
 						<include>button_Settings</include>
 					</control>
 					<!-- Select source -->
-					<control type="button" id="206">
+					<control type="button" id="203">
 						<label>- $LOCALIZE[31367]</label>
 						<label2>$INFO[Skin.String(fanart.source.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=fanart.source,header=$LOCALIZE[31367])</onclick>

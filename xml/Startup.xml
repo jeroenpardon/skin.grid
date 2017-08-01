@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
-
-	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,30)</onload>
-
+	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,30)</onload>˚∫
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<onload>RunScript(script.grab.fanart,mode=random,refresh=20)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
