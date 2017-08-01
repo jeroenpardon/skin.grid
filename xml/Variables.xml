@@ -21,10 +21,11 @@
 		<value condition="Window.IsActive(weather) + String.IsEmpty(Skin.String(weather.background))">special://skin/backgrounds/03.jpg</value>
 		<value condition="Window.IsActive(weather) + !String.IsEmpty(Skin.String(weather.background))">$INFO[Skin.String(weather.background)]$INFO[Window(Weather).Property(Daily.1.FanartCode)].jpg</value>
 		<value condition="Window.IsActive(weather)">views/fallback/weather-fanart.jpg</value>
-		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(set.fanart))">$INFO[ListItem.Art(set.fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(artist.fanart))">$INFO[ListItem.Art(artist.fanart)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
+		<value condition="String.IsEqual(Skin.String(background.global),custom)">$INFO[Skin.String(custom.global)]</value>
+		<value condition="String.IsEqual(Skin.String(background.global),fanart) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="String.IsEqual(Skin.String(background.global),fanart) + !String.IsEmpty(ListItem.Art(set.fanart))">$INFO[ListItem.Art(set.fanart)]</value>
+		<value condition="String.IsEqual(Skin.String(background.global),fanart) + !String.IsEmpty(ListItem.Art(artist.fanart))">$INFO[ListItem.Art(artist.fanart)]</value>
+		<value condition="String.IsEqual(Skin.String(background.global),fanart) + !String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
 		<value>views/fallback/fanart.jpg</value>
 	</variable>
 
