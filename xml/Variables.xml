@@ -61,7 +61,7 @@
 <!-- Colors -->
 	<variable name="color:Main">
 		<value condition="!String.IsEmpty(Skin.String(setcolor.main))">$INFO[Skin.String(setcolor.main)]</value>
-		<value>ee263238</value>
+		<value>dd263238</value>
 	</variable>
 
 	<variable name="color:Disabled">
