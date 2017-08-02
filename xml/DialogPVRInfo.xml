@@ -115,7 +115,7 @@
 					<orientation>horizontal</orientation>
 					<!-- Timer -->
 					<control type="togglebutton" id="9">
-						<width>300</width>
+						<width>256</width>
 						<height>90</height>
 						<align>center</align>
 						<font>Black-20</font>
@@ -125,7 +125,7 @@
 					</control>
 					<!-- Find similar -->
 					<control type="togglebutton" id="4">
-						<width>300</width>
+						<width>256</width>
 						<height>90</height>
 						<align>center</align>
 						<font>Black-20</font>
@@ -135,7 +135,7 @@
 					</control>
 					<!-- Switch to channel -->
 					<control type="togglebutton" id="5">
-						<width>300</width>
+						<width>256</width>
 						<height>90</height>
 						<align>center</align>
 						<font>Black-20</font>
@@ -145,7 +145,7 @@
 					</control>
 					<!-- Play recording -->
 					<control type="togglebutton" id="8">
-						<width>300</width>
+						<width>256</width>
 						<height>90</height>
 						<align>center</align>
 						<font>Black-20</font>
@@ -154,7 +154,7 @@
 					</control>
 					<!-- Record -->
 					<control type="togglebutton" id="6">
-						<width>300</width>
+						<width>256</width>
 						<height>90</height>
 						<align>center</align>
 						<font>Black-20</font>
@@ -165,7 +165,7 @@
 					</control>
 					<!-- YouTube -->
 					<control type="togglebutton" id="3">
-						<width>300</width>
+						<width>256</width>
 						<height>90</height>
 						<align>center</align>
 						<font>Black-20</font>
@@ -177,7 +177,7 @@
 					</control>
 					<!-- Ok -->
 					<control type="togglebutton" id="7">
-						<width>300</width>
+						<width>256</width>
 						<height>90</height>
 						<align>center</align>
 						<font>Black-20</font>
