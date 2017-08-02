@@ -61,7 +61,7 @@
 <!-- Colors -->
 	<variable name="color:Main">
 		<value condition="!String.IsEmpty(Skin.String(setcolor.main))">$INFO[Skin.String(setcolor.main)]</value>
-		<value>cc263238</value>
+		<value>ee263238</value>
 	</variable>
 
 	<variable name="color:Disabled">
@@ -71,7 +71,7 @@
 
 	<variable name="color:Accent">
 		<value condition="!String.IsEmpty(Skin.String(setcolor.accent))">$INFO[Skin.String(setcolor.accent)]</value>
-		<value>ffffffff</value>∏∏
+		<value>ffffffff</value>
 	</variable>
 
 	<variable name="color:Text.2">
