@@ -12,7 +12,7 @@
 	</coordinates>
 	<controls>
 
-	<include>player_OSD</include>
+	<include>osd_PlayControls</include>
 		
 	</controls>
 </window>

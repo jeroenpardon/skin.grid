@@ -13,8 +13,8 @@
 			</include>
 			<control type="group">
 				<visible>Player.ShowInfo</visible>
-				<include condition="!VideoPlayer.Content(livetv)">player_Info</include>
-				<include condition="VideoPlayer.Content(livetv)" content="player_Info">
+				<include condition="!VideoPlayer.Content(livetv)">osd_Info</include>
+				<include condition="VideoPlayer.Content(livetv)" content="osd_Info">
 					<param name="InfoWidth">1490</param>
 					<param name="TextWidth">1464</param>
 					<param name="ArtWidth">112</param>

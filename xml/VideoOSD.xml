@@ -11,7 +11,7 @@
 		<top>198</top>
 	</coordinates>
 	<controls>
-		<include content="player_OSD">
+		<include content="osd_PlayControls">
 			<param name="Visible" value="![Window.IsVisible(PVROSDChannels) | Window.IsVisible(PVROSDGuide) | Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]"/>
 		</include>
 	</controls>
