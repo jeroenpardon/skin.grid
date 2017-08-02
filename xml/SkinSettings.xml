@@ -224,7 +224,7 @@
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<!-- Select source -->
+					<!-- Select fanart source -->
 					<control type="button" id="203">
 						<label>- $LOCALIZE[31367]</label>
 						<label2>$INFO[Skin.String(fanart.source.Label)]</label2>

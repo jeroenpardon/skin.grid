@@ -30,6 +30,7 @@
 		<value>views/fallback/fanart.jpg</value>
 	</variable>
 
+
 <!-- Home -->
 	<variable name="shortcut:Symbol">
 		<value condition="String.IsEqual(Window.Property(groupname),mainmenu)">$INFO[ListItem.Property(homeSymbol)]</value>

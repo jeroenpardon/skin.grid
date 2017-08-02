@@ -174,6 +174,10 @@
 					<include>debug_Label</include>
 				</control>
 				<control type="button">
+					<label>background.home: $INFO[Skin.String(background.home)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
 					<label>fanart.global: $INFO[Skin.String(fanart.global)]</label>
 					<include>debug_Label</include>
 				</control>
