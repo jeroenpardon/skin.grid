@@ -76,7 +76,8 @@
 						<label>$LOCALIZE[31375]</label>
 						<font>Black-22</font>
 						<onclick>Close</onclick>
-						<onclick>ActivateWindow(playersettings,language)</onclick>
+						<onclick condition="VideoPlayer.Content(episodes)">ActivateWindowAndFocus(playersettings,-96,0,-60,0)</onclick>
+						<onclick condition="VideoPlayer.Content(movies)">ActivateWindowAndFocus(playersettings,-96,0,-59,0)</onclick>
 						<onup>160</onup>
 						<ondown condition="Integer.IsGreater(Container(150).NumItems(0))">Control.SetFocus(150,0)</ondown>
 						<ondown condition="!Integer.IsGreater(Container(150).NumItems(0))">160</ondown>
