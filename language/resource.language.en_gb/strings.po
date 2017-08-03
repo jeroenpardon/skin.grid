@@ -702,6 +702,10 @@ msgctxt "#31374"
 msgid "Change backup and restore location"
 msgstr ""
 
+msgctxt "#31375"
+msgid "Subtitle settings"
+msgstr ""
+
 
 
 #: osd / player
