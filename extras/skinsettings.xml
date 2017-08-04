@@ -1,5 +1,11 @@
 <settings>
 
+	<!-- Autoscroll speed -->
+	<setting id="autoscroll.speed" value="none" label="$LOCALIZE[13113]" default="true"/>
+	<setting id="autoscroll.speed" value="normal" label="$LOCALIZE[31327]"/>
+	<setting id="autoscroll.speed" value="slow" label="$LOCALIZE[31330]"/>
+	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31328]"/>
+
 	<!-- Home menu layout -->
 	<setting id="homemenu.type" value="vertical" label="$LOCALIZE[31023]" default="true">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
@@ -17,6 +23,7 @@
 	<setting id="home.status" value="pvr" label="$LOCALIZE[19053]"/>
 	<setting id="home.status" value="rss" label="$LOCALIZE[20304]"/>
 	<setting id="home.status" value="system" label="$LOCALIZE[10511]"/>
+	<setting id="home.status" value="weather" label="$LOCALIZE[8]"/>
 
 	<!-- Date -->
 	<setting id="date.enabled" value="none" label="$LOCALIZE[13113]" default="true"/>
@@ -65,14 +72,10 @@
 	<setting id="global.scrolltype" value="passive" label="$LOCALIZE[31321]" default="true"/>
 
 	<!-- Text input -->
-	<setting id="input.text" value="keyboard" label="$LOCALIZE[31355]"/>
-	<setting id="input.text" value="nokeyboard" label="$LOCALIZE[31356]" default="true"/>
+	<setting id="input.text" value="keyboard" label="$LOCALIZE[31355]" default="true"/>
+	<setting id="input.text" value="nokeyboard" label="$LOCALIZE[31356]"/>
 
-	<!-- Autoscroll speed -->
-	<setting id="autoscroll.speed" value="none" label="$LOCALIZE[13113]" default="true"/>
-	<setting id="autoscroll.speed" value="normal" label="$LOCALIZE[31327]"/>
-	<setting id="autoscroll.speed" value="slow" label="$LOCALIZE[31330]"/>
-	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31328]"/>
+
 
 	<!-- Visualisation mode -->
 	<setting id="viz.mode" value="fanart" label="$LOCALIZE[31224]" default="true"/>
