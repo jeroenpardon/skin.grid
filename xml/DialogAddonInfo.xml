@@ -79,7 +79,7 @@
 				<control type="textbox" id="401">
 					<width>1056</width>
 					<height>380</height>
-					<label>$VAR[media:Description]</label>
+					<label>$INFO[ListItem.AddonSummary,,[CR][CR]]$INFO[ListItem.AddonDisclaimer,[B]$LOCALIZE[24052]: [/B],[CR][CR]]$INFO[ListItem.AddonNews,[B]$LOCALIZE[24036]: [/B],[CR][CR]]$INFO[ListItem.AddonBroken,[B]$LOCALIZE[126]: [/B],[CR][CR]]</label>
 					<font>Slab-24</font>
 					<textcolor>$VAR[color:Text.3]</textcolor>
 				</control>

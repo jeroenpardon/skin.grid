@@ -57,6 +57,11 @@
 		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.HasTVTimer | Pvr.HasRadioTimer">$INFO[Pvr.NextRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.NextRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),library)">$VAR[stats:MovieCount]$VAR[stats:ShowCount]$VAR[stats:EpisodeCount]$VAR[stats:MusicVideoCount]$VAR[stats:SongCount]$VAR[stats:AlbumCount]$VAR[stats:ArtistCount]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),system)">$INFO[System.ProfileName]$INFO[System.FriendlyName, | ]$INFO[Network.IPAddress, | ]$INFO[System.InternetState, | ]$INFO[System.Uptime(dd:mm), | ]</value>
+
+
+		<value condition="String.IsEqual(Skin.String(home.status),weather) + Pvr.IsRecordingTV">[B]$INFO[Weather.Location,, - ][/B]$INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature)]$INFO[Window.Property(Current.WindSpeed)]</value>
+
+
 	</variable>
 
 <!-- Colors -->
@@ -222,8 +227,8 @@
 	<variable name="media:Description">
 		<value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Plot)]</value>
 		<value condition="Container.Content(images)">$INFO[ListItem.PictureCamMake] $INFO[ListItem.PictureCamModel]</value>
-		<value condition="Container.Content(addons) + !String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]$INFO[ListItem.AddonDisclaimer,[CR]]</value>
-		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]$INFO[ListItem.AddonDisclaimer,[CR][CR]]$INFO[ListItem.AddonBroken,[CR]]</value>
+		<value condition="Container.Content(addons) + String.IsEmpty(ListItem.AddonSummary)">$INFO[ListItem.AddonDescription,,[CR][CR]]$INFO[ListItem.AddonDisclaimer,[B]$LOCALIZE[24052]: [/B],[CR][CR]]$INFO[ListItem.AddonBroken,[B]$LOCALIZE[126]: [/B],[CR][CR]]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary,,[CR][CR]]$INFO[ListItem.AddonDisclaimer,[B]$LOCALIZE[24052]: [/B],[CR][CR]]$INFO[ListItem.AddonBroken,[B]$LOCALIZE[126]: [/B],[CR][CR]]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="[Control.IsVisible(51) | Control.IsVisible(52)] + Container.Content(albums)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Comment]</value>
