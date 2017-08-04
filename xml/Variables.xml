@@ -690,7 +690,6 @@
 		<value condition="Container.Content(artists)">$LOCALIZE[515]</value>
 		<value condition="Container.Content(songs)">$LOCALIZE[515]</value>
 		<value condition="Window.IsActive(weather)">$LOCALIZE[393]</value>
-		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[467]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[19114]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$LOCALIZE[515]</value>
 		<value condition="Window.IsActive(pvrrecordinginfo)">$LOCALIZE[19029]</value>
