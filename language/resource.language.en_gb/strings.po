@@ -31,10 +31,6 @@ msgid "Home menu type"
 msgstr ""
 
 
-msgctxt "#31004"
-msgid "Stream"
-msgstr ""
-
 msgctxt "#31005"
 msgid "Layout"
 msgstr ""
@@ -51,13 +47,6 @@ msgctxt "#31018"
 msgid "You're about to delete settings. You will no longer be able to change any system settings unless you have provided a different method. Are you sure?"
 msgstr ""
 
-msgctxt "#31019"
-msgid "Automatically collapse submenus"
-msgstr ""
-
-msgctxt "#31020"
-msgid "Widgets feed"
-msgstr ""
 
 msgctxt "#31021"
 msgid "Add shortcut"
@@ -220,9 +209,6 @@ msgctxt "#31071"
 msgid "Optional"
 msgstr ""
 
-msgctxt "#31072"
-msgid "Fullscreen"
-msgstr ""
 
 #. example usage: this addon is installed
 msgctxt "#31073"
