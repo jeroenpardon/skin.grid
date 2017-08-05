@@ -1162,7 +1162,7 @@
 
 	<variable name="widget:Layout.Symbol">
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31044])">&#59136;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31072])">&#59133;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31053])">&#59133;</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31202])">&#59141;</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31201])">&#59154;</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31225])">&#59112;</value>
