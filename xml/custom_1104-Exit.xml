@@ -4,53 +4,42 @@
 	<visible>String.IsEqual(Window(Home).Property(IsExiting),true)</visible>
 	<controls>
 		
-		
-		<!-- Exit -->
-			<control type="group" id="7777">
-				<top>1080</top>
-
-				
-				<animation type="WindowOpen">
-					<effect type="fade" start="0" end="100" time="0" delay="0"/>
-					<effect type="slide" start="0,0" end="0,-1080" time="500" easing="InOut" tween="cubic" delay="0"/>
-				</animation>
-		
-
-				<control type="image">
-					<texture colordiffuse="ff000000">colorize/100.png</texture>
-					<include>screen_Dimensions</include>
-					<aspectratio>stretch</aspectratio>
-				</control>
-
-
-
-				<control type="group">
-					<!--<animation effect="fade" start="100" end="0" delay="2000" time="500" condition="String.IsEqual(Window(Home).Property(IsExiting),true)">Conditional</animation>-->
-					<include>startup_Background</include>
-					<control type="grouplist">
-						<width max="1920">auto</width>
-						<height max="1080">auto</height>
+	<!-- Exit -->
+		<control type="group" id="7777">
+			<top>1080</top>
+			<animation type="WindowOpen">
+				<effect type="fade" start="0" end="100" time="0" delay="0"/>
+				<effect type="slide" start="0,0" end="0,-1080" time="500" easing="InOut" tween="cubic" delay="0"/>
+			</animation>
+			<control type="image">
+				<texture colordiffuse="ff000000">colorize/100.png</texture>
+				<include>screen_Dimensions</include>
+				<aspectratio>stretch</aspectratio>
+			</control>
+			<control type="group">
+				<!--<animation effect="fade" start="100" end="0" delay="2000" time="500" condition="String.IsEqual(Window(Home).Property(IsExiting),true)">Conditional</animation>-->
+				<include>startup_Background</include>
+				<control type="grouplist">
+					<width max="1920">auto</width>
+					<height max="1080">auto</height>
+					<align>center</align>
+					<orientation>vertical</orientation>
+					<control type="label">
+						<label>$LOCALIZE[31854]</label>
+						<font>Black-52</font>
+						<height>48</height>
 						<align>center</align>
-						<orientation>vertical</orientation>
-						<control type="label">
-							<label>$LOCALIZE[31854]</label>
-							<font>Black-52</font>
-							<height>48</height>
-							<align>center</align>
-							<textcolor>$VAR[color:Accent]</textcolor>
-						</control>
-						<control type="label">
-							<label>$LOCALIZE[31855]</label>
-							<font>Regular-22</font>
-							<height>48</height>
-							<align>center</align>
-							<textcolor>$VAR[color:Text.2]</textcolor>
-						</control>
+						<textcolor>$VAR[color:Accent]</textcolor>
+					</control>
+					<control type="label">
+						<label>$LOCALIZE[31855]</label>
+						<font>Regular-22</font>
+						<height>48</height>
+						<align>center</align>
+						<textcolor>$VAR[color:Text.2]</textcolor>
 					</control>
 				</control>
 			</control>
-
-
-
+		</control>
 	</controls>
 </window>
