@@ -249,7 +249,7 @@
 	<variable name="media:Info">
 		<value condition="Container.Content(addons) + String.StartsWith(ListItem.FolderPath,addons://user/)">$INFO[ListItem.AddonVersion,$LOCALIZE[19114] ]$INFO[ListItem.Property(Addon.Status),&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
-		<value condition="Container.Content(videos)">$INFO[ListItem.Label2]</value>
+		<value condition="Container.Content(videos) | String.IsEmpty(Container.Content) + String.StartsWith(Container.FolderPath,plugin://plugin.)">$INFO[ListItem.Label2]</value>
 		<value condition="Container.Content(sets)">$INFO[ListItem.Year]</value>
 		<value condition="Container.Content(files)">$INFO[ListItem.Date]$INFO[ListItem.Size,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(movies) + Control.IsVisible(50)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
@@ -601,6 +601,10 @@
 		<value condition="Container.Content(movies) + [Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedfanart))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedfanart)]</value>
 		<value condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(files) | Container.Content(videos) | Container.Content(actors)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="Container.Content(episodes) + ListItem.IsParentFolder">$INFO[Container.Art(tvshow.fanart)]</value>
+
+		<!-- Workaround for plugins still setting content types to movies -->
+		<value condition="Container.Content(movies) + String.StartsWith(Container.FolderPath,plugin://plugin)">$INFO[ListItem.Icon]</value>
+
 		<value condition="String.IsEqual(Skin.String(views.landscape.art),landscape) + !String.IsEmpty(ListItem.Art(landscape))">$INFO[ListItem.Art(landscape)]</value>
 		<value condition="[String.IsEqual(Skin.String(views.landscape.art),fanart) + !String.IsEmpty(ListItem.Art(fanart))] | [String.IsEqual(Skin.String(views.landscape.art),landscape) + String.IsEmpty(ListItem.Art(landscape))]">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>

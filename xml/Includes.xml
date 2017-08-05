@@ -578,7 +578,16 @@
 				<visible>$EXP[!ListItem.IsParent]</visible>
 				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | Container.Content(albums)</visible>
 			</control>
-
+			<!-- Studio (for plugins like youtube) -->
+			<control type="label">
+				<width min="50">auto</width>
+				<height>$PARAM[Height]</height>
+				<label>$INFO[ListItem.Studio]</label>
+				<textcolor>$VAR[color:Text.2]</textcolor>
+				<font>Regular-20</font>
+				<visible>String.StartsWith(Container.FolderPath,plugin://plugin.)</visible>
+			</control>
+			<!-- Artists -->
 			<control type="label">
 				<width min="50">auto</width>
 				<height>$PARAM[Height]</height>
@@ -588,8 +597,6 @@
 				<visible>$EXP[!ListItem.IsParent]</visible>
 				<visible>Container.Content(artists)</visible>
 			</control>
-
-
 			<!-- Playcount -->
 			<control type="label">
 				<width min="0">auto</width>
