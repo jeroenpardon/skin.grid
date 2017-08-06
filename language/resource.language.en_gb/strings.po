@@ -823,10 +823,13 @@ msgctxt "#31610"
 msgid "Programmes"
 msgstr ""
 
+msgctxt "#31611"
+msgid "Recently played channels"
+msgstr ""
+
 
 
 #: media
-
 msgctxt "#31650"
 msgid "Last episode"
 msgstr ""
@@ -907,7 +910,6 @@ msgid "TV Shows"
 msgstr ""
 
 
-
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"
 msgid "Name & Type"
@@ -940,9 +942,6 @@ msgctxt "#31707"
 msgid "Status unknown"
 msgstr ""
 
-msgctxt "#31708"
-msgid "Unwatched episode"
-msgstr ""
 
 msgctxt "#31709"
 msgid "Unwatched episodes"
@@ -1072,7 +1071,7 @@ msgctxt "#31983"
 msgid "License"
 msgstr ""
 
-#. Don't translate this.
+#. Only translate text after the "-".
 msgctxt "#31984"
 msgid "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported - Distributing (derivatives of) this software (Grid) as part of a commercial product without my explicit prior written consent is strictly prohibited."
 msgstr ""

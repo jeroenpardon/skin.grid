@@ -501,7 +501,6 @@
 		<value condition="Container.Content(songs) | Window.IsActive(musicplaylisteditor)">&#57441;</value>
 		<value condition="Container.Content(events)">&#57439;</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://plugin.video)">&#57352;</value>
-
 		<!--default icons-->
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultActor.png) | String.IsEqual(ListItem.ActualIcon,DefaultArtist.png) | String.IsEqual(ListItem.ActualIcon,DefaultMusicRoles.png) | String.IsEqual(ListItem.ActualIcon,DefaultUser.png)">&#57389;</value>
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultAddSource.png)">&#58906;</value>
@@ -555,7 +554,7 @@
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultRecentlyAddedEpisodes.png) | String.IsEqual(ListItem.ActualIcon,DefaultTVShows.png)">&#57361;</value>
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultRemovableDisk.png)"></value>
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultSets.png)">&#57408;</value>
-		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultShortcut.png)">&#57425;</value>
+		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultShortcut.png) + !Window.IsActive(script-skinshortcuts.xml)">&#57425;</value>
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultStudios.png)">&#59087;</value>
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultTags.png)">&#57429;</value>
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultVideo.png) + Container.Content(movies)">&#57402;</value>
@@ -1435,9 +1434,10 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=airingtodaytvshows)">$ADDON[script.extendedinfo 32038]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=onairtvshows)">$ADDON[script.extendedinfo 32039]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=populartvshows)">$ADDON[script.extendedinfo 32041]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=popularmovies)">$ADDON[script.extendedinfo 32044]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies)">$ADDON[script.extendedinfo 32042]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=upcomingmovies)">$ADDON[script.extendedinfo 32043]</value>
-		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=topratedtvshows)">$ADDON[script.extendedinfo 32044]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=topratedtvshows)">$ADDON[script.extendedinfo 32040]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=topratedmovies)">$ADDON[script.extendedinfo 32046]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=ratedmovies)">$ADDON[script.extendedinfo 32135]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=ratedtvshows)">$ADDON[script.extendedinfo 32145]</value>

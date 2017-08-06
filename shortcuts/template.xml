@@ -19,7 +19,7 @@
 			<rule tag="property" attribute="name|widgetType" value="movies" />
 		</property>
 
-		<property name="art" propertyValue="$INFO[ListItem.Art(poster)]">
+		<property name="art" propertyValue="$INFO[ListItem.Art(tvshow.poster)]">
 			<match>all</match>
 			<rule tag="property" attribute="name|widgetLayout" value="portrait" />
 			<rule tag="property" attribute="name|widgetType" value="tvshows" />
@@ -62,11 +62,6 @@
 		</property>
 		<property name="info">false</property>
 
-		<!--
-		<property name="shortinfo" tag="property" attribute="name|widgetType" value="movies">false</property>
-		<property name="shortinfo" tag="property" attribute="name|widgetType" value="tvshows">false</property>
-		<property name="shortinfo" tag="property" attribute="name|widgetLayout" value="portrait">true</property>
-		-->
 		<property name="shortinfo" propertyValue="true">
 			<match>all</match>
 			<rule tag="property" attribute="name|widgetLayout" value="landscape" />
@@ -79,13 +74,21 @@
 		<property name="biginfo">false</property>
 
 		<!-- Other -->
-		<property name="header" tag="property">[B]$SKINSHORTCUTS[name][/B]</property>
+		<property name="header" tag="property">$SKINSHORTCUTS[name]</property>
+		<property name="header2" tag="property" attribute="name|widgetType" value="addons"> - $INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.Label]</property>
 		<property name="header2" tag="property"> - $INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.TVShowTitle,,: ]$INFO[Container(1000$SKINSHORTCUTS[id]).ListItem.Title]</property>
 
+		<!-- Logo matching -->
 		<property name="logo" propertyValue="true">
 			<match>all</match>
 			<rule tag="property" attribute="name|widgetLayout" value="landscape" />
 			<rule tag="property" attribute="name|widgetArt" value="thumbnail" />
+		</property>
+		<property name="logo" propertyValue="true">
+			<match>all</match>
+			<rule tag="property" attribute="name|widgetLayout" value="landscape" />
+			<rule tag="property" attribute="name|widgetArt" value="fanart" />
+			<rule tag="property" attribute="name|widgetType" value="tvshows" />
 		</property>
 		<property name="logo">false</property>
 
