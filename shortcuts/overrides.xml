@@ -25,37 +25,56 @@
 		<item control="304">$ADDON[script.skinshortcuts 32003]</item><!--move down-->
 		<item control="307">$ADDON[script.skinshortcuts 32027]</item><!--change action-->
 		<item control="305">$ADDON[script.skinshortcuts 32025]</item><!--set label-->
-		<item control="501" condition="String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31323]</item><!--select icon-->
 		<item control="313">$ADDON[script.skinshortcuts 32117]</item><!--disable-->
 		<item control="302">$ADDON[script.skinshortcuts 32001]</item><!--delete-->
 	</contextmenu>
 
 	<!-- Widget defaults-->
-	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
-	<widgetdefaultnode defaultID="movies" group="mainmenu" label="20386" type="movies" path="videodb://recentlyaddedmovies/" target="video">RecentlyAddedMovies</widgetdefaultnode>
-	<widgetdefaultnode defaultID="tvshows" group="mainmenu" label="626" type="tvshows" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widgetdefaultnode>
+	<widgetdefaultnode defaultID="videos" label="$LOCALIZE[20386]" type="movies" path="videodb://recentlyaddedmovies/" target="video" condition="Library.HasContent(movies)">RecentlyAddedMovies</widgetdefaultnode>
+	<propertydefault defaultID="videos" property="widgetLayout">fullscreen</propertydefault>
+	<propertydefault defaultID="videos" property="widgetSortMethod">lastused</propertydefault>
+
+	<widgetdefaultnode defaultID="movies" label="$ADDON[script.extendedinfo 32041]" type="tvshows" path="plugin://script.extendedinfo?info=populartvshows" target="video" condition="System.HasAddon(script.extendedinfo)">ExtendedInfoPopularShows</widgetdefaultnode>
+	<propertydefault defaultID="movies" property="widgetLayout">wide</propertydefault>
+	<propertydefault defaultID="movies" property="widgetSortMethod">lastused</propertydefault>
+
+	<widgetdefaultnode defaultID="tvshows" label="$LOCALIZE[20387]" type="episodes" path="videodb://recentlyaddedepisodes/" target="video" condition="Library.HasContent(tvshows)">RecentlyAddedEpisodes</widgetdefaultnode>
+	<propertydefault defaultID="tvshows" property="widgetLayout">landscape</propertydefault>
+	<propertydefault defaultID="tvshows" property="widgetArt">thumbnail</propertydefault>
+	<propertydefault defaultID="tvshows" property="widgetSortMethod">lastused</propertydefault>
+
+	<widgetdefaultnode defaultID="music" label="$ADDON[script.extendedinfo 32042]" type="movies" path="plugin://script.extendedinfo?info=incinemamovies" target="video" condition="System.HasAddon(script.extendedinfo)">ExtendedInfoCinemas</widgetdefaultnode>
+	<propertydefault defaultID="music" property="widgetLayout">portrait</propertydefault>
+	<propertydefault defaultID="music" property="widgetSortMethod">lastused</propertydefault>
+
+	<widgetdefaultnode defaultID="pictures" label="$LOCALIZE[359]" type="music" path="musicdb://recentlyaddedalbums/" target="music" condition="Library.HasContent(music)">RecentlyAddedAlbums</widgetdefaultnode>
+	<propertydefault defaultID="pictures" property="widgetLayout">square</propertydefault>
+	<propertydefault defaultID="pictures" property="widgetSortMethod">lastplayed</propertydefault>
+
 
 	<!-- Widget layout -->
 	<propertySettings property="widgetLayout" buttonID="601" title="$LOCALIZE[31032]" showNone="False"/>
 	<propertyfallback property="widgetLayout" label="$LOCALIZE[31035]">wide</propertyfallback>
 	<property property="widgetLayout" label="$LOCALIZE[31034]">fullscreen</property>
-	<property property="widgetLayout" label="$LOCALIZE[31035]">wide</property>
+	<property property="widgetLayout" label="$LOCALIZE[31035]" condition="!String.IsEqual(Container(211).ListItem.Property(widgetType),addons)">wide</property>
 	<property property="widgetLayout" label="$LOCALIZE[31036]">landscape</property>
-	<property property="widgetLayout" label="$LOCALIZE[31037]">portrait</property>
+	<property property="widgetLayout" label="$LOCALIZE[31037]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows)">portrait</property>
 	<property property="widgetLayout" label="$LOCALIZE[31038]">square</property>
 
 	<!-- Widget art -->
 	<propertySettings property="widgetArt" buttonID="602" title="$LOCALIZE[31041]" showNone="False"/>
 	<propertyfallback property="widgetArt" label="fanart">fanart</propertyfallback>	
 	<property property="widgetArt" label="$LOCALIZE[20445]" condition="!IsEmpty(Container(8000).ListItem.Art(fanart))">fanart</property>
-	<property property="widgetArt" label="$LOCALIZE[31102]">landscape</property>
+	<property property="widgetArt" label="$LOCALIZE[31202]">landscape</property>
 	<property property="widgetArt" label="$LOCALIZE[21371]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType),videos)">thumbnail</property>
 
 	<!-- Widget sorting method -->
 	<propertySettings property="widgetSortMethod" buttonID="603" title="$LOCALIZE[39010]" showNone="True" />
-	<property property="widgetSortMethod" label="$LOCALIZE[551]">sorttitle</property>
-	<property property="widgetSortMethod" label="$LOCALIZE[563]">rating</property>
-	<property property="widgetSortMethod" label="$LOCALIZE[562]">year</property>
+    <property property="widgetSortMethod" label="$LOCALIZE[568]">lastplayed</property>
+    <property property="widgetSortMethod" label="$LOCALIZE[12012]">lastused</property>
+    <property property="widgetSortMethod" label="$LOCALIZE[551]">sorttitle</property>
+    <property property="widgetSortMethod" label="$LOCALIZE[563]">rating</property>
+    <property property="widgetSortMethod" label="$LOCALIZE[562]">year</property>
 
 	<!-- Widget sorting direction -->
 	<propertySettings property="widgetSortDirection" buttonID="604" title="$LOCALIZE[31033]" showNone="True" />
@@ -65,7 +84,6 @@
 	<propertydefault labelID="widget" property="widgetFallbackArt">Art(thumb)</propertydefault>
 
 	<!-- Shortcut grouping -->
-
 	<groupings>
 		<node label="Grid">
 			<!-- Movies -->
@@ -207,10 +225,100 @@
 	</groupings>
 
 
-	<!-- Widgets -->
-	<widget label="31716" name="31716" type="movies" condition="Library.HasContent(movies)" path="plugin://script.watchlist/?type=movies" target="video">MoviesWatchlist</widget>
-	<widget label="31720" name="31720" type="movies" condition="Library.HasContent(movies)" path="special://skin/extras/playlists/movies/unwatched.xsp" target="video">UnwatchedMovies</widget>
-	<widget label="20386" name="20386" type="movies" condition="Library.HasContent(movies)" path="videodb://recentlyaddedmovies/" target="video">RecentlyAddedMovies</widget>
+
+	<!-- Widget groupings -->
+	<widget-groupings>
+		<content>widgets</content>
+
+		<node label="3">
+			<shortcut label="$ADDON[service.library.data.provider 32019]" type="videos" widgetType="videos" condition="System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentvideos&amp;reload=$INFO[Window.Property(recentvideos)]</shortcut>
+			<shortcut label="$LOCALIZE[1037]" type="videos" widgetType="addons">addons://sources/video/</shortcut>
+		</node>
+
+		<node label="342">  
+			<shortcut label="$ADDON[script.watchlist 32001]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">plugin://script.watchlist/?type=movies</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32029]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">plugin://script.skin.helper.widgets/?action=INPROGRESSANDRECOMMENDED&amp;mediatype=MOVIES&amp;reload=$INFO[Window(Home).Property(widgetreload)]</shortcut>
+			<shortcut label="$LOCALIZE[31720]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">special://skin/extras/playlists/movies/unwatched.xsp</shortcut>
+			<shortcut label="$LOCALIZE[20386]" type="movies" widgetType="movies" condition="Library.HasContent(movies) + System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</shortcut>
+		</node>
+
+		<node label="20343">
+			<shortcut label="$ADDON[script.watchlist 32002]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows)">plugin://script.watchlist/?type=episodes</shortcut>
+			<shortcut label="$LOCALIZE[31709]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows)">special://skin/extras/playlists/episodes/unwatched.xsp</shortcut>
+			<shortcut label="$ADDON[service.library.data.provider 32008]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows) + System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</shortcut>
+			<shortcut label="$LOCALIZE[626]" type="tvshows" widgetType="tvshows" condition="Library.HasContent(tvshows)">videodb://inprogresstvshows/</shortcut>
+		</node>
+
+		<node label="2">
+			<shortcut label="$ADDON[359]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$LOCALIZE[517]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32012]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32013]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32015]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32016]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32040]" type="music" widgetType="videos" condition="Library.HasContent(musicvideos)">videodb://recentlyaddedmusicvideos</shortcut>
+			<shortcut label="$LOCALIZE[1038]" widget="$LOCALIZE[24001]" type="music" widgetType="addons">addons://sources/audio/</shortcut>
+		</node>
+
+		<node label="14204">  
+			<shortcut label="$LOCALIZE[31611]" type="pvr" widgetType="addon">pvr://channels/tv/*?view=lastplayed</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32020]" type="pvr" widgetType="addons">plugin://script.skin.helper.widgets/?action=channels&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32018]" type="pvr" widgetType="videos">plugin://script.skin.helper.widgets/?action=recordings&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut>
+		</node>
+
+		<node label="31062">
+			<node label="32030">
+				<content>video</content>
+				<node label="32040">
+					<content>playlist-video</content>
+				</node>
+				<node label="32010">
+					<content>addon-video</content>
+				</node>
+				<node label="32075">
+					<content>videosources</content>
+				</node>
+			</node>
+			<node label="32031">
+				<content>music</content>
+				<node label="32040">
+					<content>playlist-audio</content>
+				</node>
+				<node label="32011">
+					<content>addon-audio</content>
+				</node>
+				<node label="32075">
+					<content>musicsources</content>
+				</node>
+			</node>
+			<node label="32020">
+				<content>picturesources</content>
+			</node>
+			<node label="32007">
+				<node label="32010">
+					<content>addon-video</content>
+				</node>
+				<node label="32011">
+					<content>addon-audio</content>
+				</node>
+				<node label="32012">
+					<content>addon-image</content>
+				</node>
+				<node label="32009">
+					<content>addon-program-plugin</content>
+				</node>
+				<shortcut label="10001" type="32021" widget="32020" widgetType="program" widgetTarget="programs">addons://sources/executable</shortcut>
+				<shortcut label="1037" type="32014" widget="32020" widgetType="video" widgetTarget="video">addons://sources/video</shortcut>
+				<shortcut label="1038" type="32019" widget="32020" widgetType="music" widgetTarget="music">addons://sources/audio</shortcut>
+				<shortcut label="1039" type="32020" widget="32020" widgetType="picture" widgetTarget="pictures">addons://sources/image</shortcut>
+			</node>
+		</node>
+	</widget-groupings>
+
+
+
+	<!-- Widgets 
+	
 	<widget label="31717" name="31717" type="episodes" condition="Library.HasContent(tvshows)" path="plugin://script.watchlist/?type=episodes" target="video">EpisodesWatchlist</widget>
 	<widget label="31709" name="31709" type="episodes" condition="Library.HasContent(tvshows)" path="special://skin/extras/playlists/episodes/unwatched.xsp" target="video">UnwatchedEpisodes</widget>
 	<widget label="20387" name="20387" type="episodes" condition="Library.HasContent(tvshows)" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widget>
@@ -220,18 +328,15 @@
 	<widget label="1038" name="1038" type="addons" path="addons://sources/audio/" target="video">MusicAddons</widget>
 	<widget label="1039" name="1039" type="addons" path="addons://sources/image/" target="video">PictureAddons</widget>
 	<widget label="1043" name="1043" type="addons" path="addons://sources/executable/" target="video">ProgramAddons</widget>
-	<widget label="31607" name="31607" type="tvshows" path="pvr://channels/tv/*?view=lastplayed" target="video">PVRLastPlayedTV</widget>
+	<widget label="31607" name="31607" type="tvshows" path="pvr://channels/tv/*?view=lastplayed" target="pvr">PVRLastPlayedTV</widget>
+
+	<widget label="19017" name="19017" type="tvshows" path="plugin://script.skin.helper.widgets/?action=recordings&amp;mediatype=pvr&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]" target="pvr">PVRRecordings</widget>
+
+
 	<widget label="31852" name="31852" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/popular_right_now/" target="video">YouTubePopular</widget>
 	<widget label="31853" name="31853" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/live/" target="video">YouTubeLive</widget>
-	<widget label="$ADDON[script.extendedinfo 32042]" name="$ADDON[script.extendedinfo 32042]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=incinemas" target="video">ExtendedInfoCinemas</widget>
-	<widget label="$ADDON[script.extendedinfo 32043]" name="$ADDON[script.extendedinfo 32043]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=upcoming" target="video">ExtendedInfoUpcoming</widget>
-	<widget label="$ADDON[script.extendedinfo 32044]" name="$ADDON[script.extendedinfo 32044]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=upcoming" target="video">ExtendedInfoPopular</widget>
-	<widget label="$ADDON[script.extendedinfo 32046]" name="$ADDON[script.extendedinfo 32046]" type="movies" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=topratedmovies" target="video">ExtendedInfoTopRated</widget>
-	<widget label="$ADDON[script.extendedinfo 32041]" name="$ADDON[script.extendedinfo 32041]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=populartvshows" target="video">ExtendedInfoPopularShows</widget>
-	<widget label="$ADDON[script.extendedinfo 32040]" name="$ADDON[script.extendedinfo 32040]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=topratedtvshows" target="video">ExtendedInfoTopRatedShows</widget>
-	<widget label="$ADDON[script.extendedinfo 32039]" name="$ADDON[script.extendedinfo 32039]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=onairtvshows" target="video">ExtendedInfoOnAirShows</widget>
-	<widget label="$ADDON[script.extendedinfo 32038]" name="$ADDON[script.extendedinfo 32038]" type="tvshows" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=airingtodaytvshows" target="video">ExtendedInfoAiringTodayShows</widget>
 
+-->
 
 <!--home menu properties-->
 	<propertyfallback property="homeSymbol">&#57424;</propertyfallback>
@@ -298,7 +403,7 @@
 	<propertydefault defaultID="32023" property="homeSymbol">&#57389;</propertydefault>
 
 <!--user selectable symbols-->
-	<propertySettings property="homeSymbol" buttonID="501" title="$LOCALIZE[31323]" showNone="False"/>
+	<propertySettings property="homeSymbol" buttonID="8997" title="$LOCALIZE[31323]" showNone="False"/>
 	<propertyfallback property="homeSymbol">&#57425;</propertyfallback>
 	<property property="homeSymbol">&#57344;</property>
 	<property property="homeSymbol">&#57345;</property>
@@ -393,16 +498,14 @@
 	<property property="homeSymbol">&#59205;</property>
 	<property property="homeSymbol">&#59206;</property>
 	<property property="homeSymbol">&#59207;</property>
-
 	<property property="homeSymbol">&#59208;</property>
 	<property property="homeSymbol">&#59209;</property>
-
 	<property property="homeSymbol">&#59210;</property>
 	<property property="homeSymbol">&#59211;</property>
-
 	<property property="homeSymbol">&#59212;</property>
-
-
 	<property property="homeSymbol">&#59221;</property>
 	<property property="homeSymbol">&#59227;</property>
+	<property property="homeSymbol">&#59229;</property>
+	<property property="homeSymbol">&#59230;</property>
+	<property property="homeSymbol">&#59231;</property>
 </overrides>

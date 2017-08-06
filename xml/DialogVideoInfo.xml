@@ -4,7 +4,7 @@
 	<controls>
 
 	<!-- Background -->
-		<include>global_Background</include>
+		<include>background_Global</include>
 
 	<!-- Chrome -->
 		<control type="group">
@@ -20,14 +20,14 @@
 
 			<!--info-->
 			<control type="grouplist">
-				<left>712</left>
+				<left>604</left>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
 				<visible>!Control.IsVisible(50)</visible>
 
 				<!--tagline-->
 				<control type="label">
-					<width>1208</width>
+					<width>1188</width>
 					<height>90</height>
 					<label>$VAR[information:Heading]</label>
 					<aligny>center</aligny>
@@ -37,12 +37,12 @@
 
 				<!--info columns-->
 				<control type="group">
-					<width>1208</width>
+					<width>1188</width>
 					<height>384</height>
 					
 					<!--left info column-->
 					<control type="grouplist">
-						<width>500</width>
+						<width>570</width>
 						<height>360</height>
 						<orientation>vertical</orientation>
 						<itemgap>0</itemgap>
@@ -70,8 +70,8 @@
 					
 					<!--right info column-->
 					<control type="grouplist">
-						<left>550</left>
-						<width>500</width>
+						<left>594</left>
+						<width>570</width>
 						<height>360</height>
 						<orientation>vertical</orientation>
 						<itemgap>0</itemgap>
@@ -98,7 +98,7 @@
 					</control>
 				</control>
 				<control type="textbox" id="401">
-					<width>1102</width>
+					<width>1188</width>
 					<height>295</height>
 					<label>$INFO[ListItem.Genre,, - ]$INFO[ListItem.Plot][CR]$VAR[info:Extended]</label>
 					<font>Slab-24</font>
@@ -108,13 +108,13 @@
 
 			<!--path-->
 			<control type="label">
-				<left>712</left>
+				<left>128</left>
 				<bottom>0</bottom>
 				<height>72</height>
-				<width>1102</width>
+				<width>1664</width>
 				<label>$INFO[ListItem.FileNameAndPath]</label>
 				<font>Regular-18</font>
-				<align>left</align>
+				<align>center</align>
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<textcolor>$VAR[color:Text.3]</textcolor>
@@ -133,17 +133,17 @@
 					<aspectratio>stretch</aspectratio>
 				</control>
 				<control type="grouplist" id="5000">
-					<left>712</left>
-					<width>100%</width>
+					<left>128</left>
+					<width>1664</width>
 					<height>90</height>
 					<itemgap>0</itemgap>
 					<onup condition="Control.IsVisible(50)">50</onup>
 					<onup condition="!Control.IsVisible(50) + Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=$INFO[ListItem.Title],message='"$VAR[media:Description]"')</onup>
 					<orientation>horizontal</orientation>
-					<align>left</align>
+					<align>center</align>
 					<!--play / browse-->
 					<control type="togglebutton" id="8">
-						<width min="220.4">auto</width>
+						<width min="256">auto</width>
 						<font>Black-20</font>
 						<align>center</align>
 						<label>$LOCALIZE[208]</label>
@@ -155,27 +155,26 @@
 					</control>
 					<!--cast / plot-->
 					<control type="button" id="5">
-						<width min="220.4">auto</width>
+						<width min="256">auto</width>
 						<font>Black-20</font>
 						<align>center</align>
 						<label>$LOCALIZE[206]</label>
-						<onclick>SetFocus(50)</onclick>
 						<texturenofocus></texturenofocus>
 					</control>
 					<!--gallery-->
 					<control type="button" id="55">
-						<width min="220.4">auto</width>
+						<width min="256">auto</width>
 						<font>Black-20</font>
 						<align>center</align>
-						<label>$LOCALIZE[31121]</label>
-						<onclick condition="!Integer.IsGreater(Container(9999).NumItems,0)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[416],message=$LOCALIZE[31117],yesaction=SetFocus(90),noaction=Close)</onclick>
+						<label>$LOCALIZE[31221]</label>
+						<onclick condition="!Integer.IsGreater(Container(9999).NumItems,0)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[416],message=$LOCALIZE[31217],yesaction=SetFocus(90),noaction=Close)</onclick>
 						<onclick>SetFocus(9999)</onclick>
 						<texturenofocus></texturenofocus>
 						<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)</visible>
 					</control>
 					<!--more-->
 					<control type="button" id="33">
-						<width min="220.4">auto</width>
+						<width min="256">auto</width>
 						<font>Black-20</font>
 						<align>center</align>
 						<label>$LOCALIZE[22082]</label>
@@ -187,7 +186,7 @@
 					</control>
 					<!--manage-->
 					<control type="button" id="5005">
-						<width min="220.4">auto</width>
+						<width min="256">auto</width>
 						<font>Black-20</font>
 						<align>center</align>
 						<label>$LOCALIZE[16106]</label>
@@ -198,45 +197,19 @@
 				</control>				
 			</control>
 
-			<!--artwork-->
+			<!-- Artwork -->
 			<control type="group">
 				<visible>!Control.IsVisible(50)</visible>
-				<visible>!String.IsEmpty(Container.Content)</visible>
+				<!--<visible>!String.IsEmpty(Container.Content)</visible>-->
 				<control type="image">
-					<width>600</width>
-					<height>900</height>
+					<width>540</width>
+					<height>810</height>
 					<texture background="true">$VAR[art:Portrait]</texture>
-					<aspectratio align="left">scale</aspectratio>
-				</control>
-				<control type="image">
-					<top>900</top>
-					<width>600</width>
-					<height>900</height>
-					<texture flipy="true" diffuse="views/diffuse/portrait.png" background="true">$VAR[art:Portrait]</texture>
-					<aspectratio align="left">scale</aspectratio>
-				</control>
-			</control>
-			
-			<control type="group">
-				<visible>Control.IsVisible(50)</visible>
-				<visible>!String.IsEmpty(Container.Content)</visible>
-				<control type="image">
-					<width>600</width>
-					<height>900</height>
-					<fadetime>fadetime_Thumb</fadetime>
-					<texture background="true" fallback="views/fallback/portrait-person.png">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
-					<aspectratio align="left">scale</aspectratio>
-				</control>
-				<control type="image">
-					<top>900</top>
-					<width>600</width>
-					<height>900</height>
-					<fadetime>fadetime_Thumb</fadetime>
-					<texture flipy="true" fallback="views/fallback/portrait-person.png" diffuse="views/diffuse/portrait.png" background="true">$INFO[Container(50).ListItem(0).Art(thumb)]</texture>
 					<aspectratio align="left">scale</aspectratio>
 				</control>
 			</control>
 
+			<!--
 			<control type="group">
 				<top>90</top>
 				<left>128</left>
@@ -248,29 +221,30 @@
 					<aspectratio align="left" aligny="top">keep</aspectratio>
 				</control>
 			</control>
+		-->
 
-			<!--actor list-->
-			<include content="dialog_List">
-				<param name="ID">50</param>
-				<param name="Left">648</param>
-				<param name="Width">1144</param>
-				<param name="Height">810</param>
-				<param name="ItemHeight">90</param>
-				<param name="TextLeft">132</param>
-				<param name="OnLeft">5000</param>
-				<param name="OnRight">5000</param>
-				<param name="OnUp">50</param>
-				<param name="OnDown">50</param>
-				<param name="Symbol">&#57349;</param>
-			</include>
-		</control>
-
-		<control type="button" id="90">
-			<onfocus condition="String.IsEqual(ListItem.DBTYPE,movie)">RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], extrafanart)</onfocus>
-			<onfocus condition="String.IsEqual(ListItem.DBTYPE,tvshow)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], extrafanart)</onfocus>
-			<onfocus condition="String.IsEqual(ListItem.DBTYPE,episode)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], extrafanart)</onfocus>
-			<onfocus>ReloadSkin()</onfocus>
-			<visible allowhiddenfocus="true">false</visible>
+			<!-- Cast list -->
+			<control type="group">
+				<visible>Control.IsVisible(50)</visible>
+				<include>fadeinout</include>
+				<include content="view_Slide">
+					<param name="ID" value="50"/>
+					<param name="Type" value="list"/>
+					<param name="Top" value="0"/>
+					<param name="Left" value="-128"/>
+					<param name="Width" value="2048"/>
+					<param name="ArtHeight" value="810"/>
+					<param name="ArtWidth" value="597"/>
+					<param name="ItemHeight" value="810"/>
+					<param name="ItemWidth" value="597"/>
+					<param name="OnDown" value="5000"/>
+					<param name="OnBack" value="5000"/>
+					<param name="Height" value="810"/>
+					<param name="ShowOverlay" value="true"/>
+					<param name="ShowInfo" value="false"/>
+					<param name="TextWidth" value="536"/>
+				</include>
+			</control>
 		</control>
 
 		<!--gallery-->

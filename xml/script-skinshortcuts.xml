@@ -10,9 +10,9 @@
 
 	<controls>
 
-		<include>global_Background</include>
+		<include>background_Global</include>
 
-		<!-- Chrome -->		
+	<!-- Chrome -->		
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
@@ -21,50 +21,160 @@
 			</include>
 		</control>
 
-		<!-- Content-->
+	<!-- Content-->
 		<control type="group">
 			<top>198</top>
 			<left>128</left>
 			<include>transition_Content</include>
 
-			<control type="grouplist">
+			<control type="list" id="211">
+				<width>640</width>
+				<height>810</height>
+				<onup>211</onup>
+				<ondown>211</ondown>
+				<onleft>8997</onleft>
+				<onright>8998</onright>
+				<onup>8998</onup>
 				<orientation>vertical</orientation>
-				<include content="dialog_List">
-					<param name="ID">211</param>
-					<param name="Left">0</param>
-					<param name="TextWidth">572</param>
-					<param name="Width">640</param>
-					<param name="Height">810</param>
-					<param name="ItemHeight">90</param>
-					<param name="OnUp">211</param>
-					<param name="OnDown">211</param>
-					<param name="OnLeft">8999</param>
-					<param name="OnRight">8998</param>
-					<param name="Label">$INFO[ListItem.Label]</param>
-					<param name="Label2">$INFO[ListItem.Label2]</param>
-					<param name="Symbol">$VAR[shortcut:Symbol]</param>
-					<!--<param name="Visible">String.IsEqual(Window.Property(groupname),mainmenu)</param>-->
-				</include>
+				<animation effect="fade" start="100" end="60" time="200" condition="$PARAM[AnimationCondition]">Conditional</animation>
+				<itemlayout width="640" height="90">
+					<control type="image">
+						<width>108</width>
+						<height>90</height>
+						<texture colordiffuse="ff000000">colorize/10.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="label">
+						<width>108</width>
+						<height>90</height>
+						<font>Symbols-26</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Property(homeSymbol)]</label>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+					</control>
+					<control type="group">
+						<left>140</left>
+						<control type="label">
+							<top>15</top>
+							<width>572</width>
+							<height>45</height>
+							<aligny>bottom</aligny>
+							<font>Black-22</font>
+							<label>$INFO[ListItem.Label]</label>
+							<textcolor>$VAR[color:Accent]</textcolor>
+							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						</control>
+						<control type="label">
+							<top>40</top>
+							<width>572</width>
+							<height>45</height>
+							<aligny>top</aligny>
+							<font>Regular-20</font>
+							<label>$INFO[ListItem.Label2]</label>
+							<textcolor>$VAR[color:Text.2]</textcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="640" height="90">
+					<control type="group">
+						<visible>!Control.HasFocus(211)</visible>
+						<control type="group">
+							<left>108</left>
+							<control type="image">
+								<width>640</width>
+								<height>90</height>
+								<texture colordiffuse="ff000000">colorize/10.png</texture>
+								<aspectratio>stretch</aspectratio>
+							</control>
+							<control type="group">
+								<left>32</left>
+								<control type="label">
+									<top>15</top>
+									<width>572</width>
+									<height>45</height>
+									<aligny>bottom</aligny>
+									<font>Black-22</font>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>$VAR[color:Accent]</textcolor>
+								</control>
+								<control type="label">
+									<top>40</top>
+									<width>572</width>
+									<height>45</height>
+									<aligny>top</aligny>
+									<font>Regular-20</font>
+									<label>$INFO[ListItem.Label2]</label>
+									<textcolor>$VAR[color:Text.2]</textcolor>
+								</control>
+							</control>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Control.HasFocus(211)</visible>
+						<control type="group">
+							<left>108</left>
+							<control type="image">
+								<width>640</width>
+								<height>90</height>
+								<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+								<aspectratio>stretch</aspectratio>
+								<include>fadeinout</include>
+								<visible>Control.HasFocus(211)</visible>
+							</control>
+							<control type="group">
+								<left>32</left>
+								<control type="label">
+									<top>15</top>
+									<width>572</width>
+									<height>45</height>
+									<aligny>bottom</aligny>
+									<font>Black-22</font>
+									<label>$INFO[ListItem.Label]</label>
+									<textcolor>$VAR[color:Main]</textcolor>
+								</control>
+								<control type="label">
+									<top>40</top>
+									<width>572</width>
+									<height>45</height>
+									<aligny>top</aligny>
+									<font>Regular-20</font>
+									<label>$INFO[ListItem.Label2]</label>
+									<textcolor>$VAR[color:Main]</textcolor>
+								</control>
+							</control>
+						</control>
+					</control>
+				</focusedlayout>
 			</control>
 
-			<!--context controls-->
+		<!-- Context controls -->
+			<control type="button" id="8997">
+				<label>$INFO[Container(211).ListItem.Property(homeSymbol)]</label>
+				<include content="button_Dialog">
+					<param name="Font">Symbols-26</param>
+				</include>
+				<onclick>SetProperty(SelectDialog,icon,home)</onclick>
+				<onup>Control.Move(211,-1)</onup>
+				<ondown>Control.Move(211,1)</ondown>
+				<onright>211</onright>
+				<include>shortcuts_ScrollingControls</include>
+			</control>
 			<control type="grouplist" id="8998">
 				<left>640</left>
 				<orientation>horizontal</orientation>
 				<itemgap>0</itemgap>
 				<height>108</height>
-				<width>216</width>
+				<width>640</width>
 				<onleft>211</onleft>
 				<onright>9000</onright>
-				<animation effect="slide" end="0,90" time="0" condition="Container(211).Row(1)">Conditional</animation>
-				<animation effect="slide" end="0,180" time="0" condition="Container(211).Row(2)">Conditional</animation>
-				<animation effect="slide" end="0,270" time="0" condition="Container(211).Row(3)">Conditional</animation>
-				<animation effect="slide" end="0,360" time="0" condition="Container(211).Row(4)">Conditional</animation>
-				<animation effect="slide" end="0,450" time="0" condition="Container(211).Row(5)">Conditional</animation>
-				<animation effect="slide" end="0,540" time="0" condition="Container(211).Row(6)">Conditional</animation>
-				<animation effect="slide" end="0,630" time="0" condition="Container(211).Row(7)">Conditional</animation>
-				<animation effect="slide" end="0,720" time="0" condition="Container(211).Row(8)">Conditional</animation>
+				<include>shortcuts_ScrollingControls</include>	
+
+				<!-- Select shortcut -->
 				<control type="button" id="401">
+					<left>640</left>
 					<label>&#57502;</label>
 					<include content="button_Dialog">
 						<param name="Font">Symbols-24</param>
@@ -72,20 +182,19 @@
 					<onup>Control.Move(211,-1)</onup>
 					<ondown>Control.Move(211,1)</ondown>
 				</control>
+				<!-- Overflow menu -->
 				<control type="button" id="606">
 					<label>&#58882;</label>
 					<include content="button_Dialog">
 						<param name="Font">Symbols-24</param>
 					</include>
-					<onfocus>SetProperty(SelectDialog,icon,home)</onfocus>
-					<onunfocus>SetProperty(SelectDialog,regular,home)</onunfocus>
 					<onclick>Action(contextmenu)</onclick>
 					<onup>Control.Move(211,-1)</onup>
 					<ondown>Control.Move(211,1)</ondown>
 				</control>
 			</control>
 
-			<!-- Right grouplist -->
+		<!-- Right grouplist -->
 			<control type="grouplist" id="9000">
 				<left>920</left>
 				<width>744</width>
@@ -114,7 +223,7 @@
 					</control>
 					<control type="label">
 						<label>&#58906;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<textcolor>$VAR[color:Main]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(301)</visible>
 					</control>
@@ -141,7 +250,7 @@
 					</control>
 					<control type="label">
 						<label>&#57447;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<textcolor>$VAR[color:Main]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(405)</visible>
 					</control>
@@ -167,7 +276,7 @@
 					</control>
 					<control type="label">
 						<label>&#57497;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<textcolor>$VAR[color:Main]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(308)</visible>
 					</control>
@@ -203,7 +312,7 @@
 					</control>
 					<control type="label">
 						<label>$VAR[widget:Symbol]</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<textcolor>$VAR[color:Main]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(312)</visible>
 					</control>
@@ -230,7 +339,7 @@
 					</control>
 					<control type="label">
 						<label>$VAR[widget:Layout.Symbol]</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<textcolor>$VAR[color:Main]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(601)</visible>
 					</control>
@@ -249,7 +358,7 @@
 					<visible>String.IsEqual(Container(211).ListItem.Property(widgetLayout),landscape)</visible>
 					<control type="button" id="602">
 						<width>100%</width>
-						<label>$VAR[widget:Art]</label>
+						<label>$VAR[widget:Art.Label]</label>
 						<textoffsetx>114</textoffsetx>
 						<onleft>8998</onleft>
 						<onup>501</onup>
@@ -258,7 +367,7 @@
 					</control>
 					<control type="label">
 						<label>$VAR[widget:Layout.Symbol]</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<textcolor>$VAR[color:Main]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(602)</visible>
 					</control>
@@ -285,7 +394,7 @@
 					</control>
 					<control type="label">
 						<label>$VAR[widget:SortMethod.Symbol]</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<textcolor>$VAR[color:Main]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(603)</visible>
 					</control>
@@ -312,7 +421,7 @@
 					</control>
 					<control type="label">
 						<label>$VAR[widget:SortDirection.Symbol]</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
+						<textcolor>$VAR[color:Main]</textcolor>
 						<include>global_Symbol</include>
 						<visible>Control.HasFocus(604)</visible>
 					</control>

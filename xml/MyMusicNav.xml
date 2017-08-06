@@ -12,7 +12,7 @@
 		</control>
 
 	<!-- Background -->
-		<include content="global_Background">
+		<include content="background_Global">
 			<param name="GridTexture">$VAR[window:Grid]</param>
 		</include>
 

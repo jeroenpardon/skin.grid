@@ -1,5 +1,5 @@
 <includes>
-	<include name="player_Control">
+	<include name="osd_PlayerButton">
 		<font>Symbols-26</font>
 		<width>90</width>
 		<align>center</align>
@@ -10,27 +10,15 @@
 	</include>
 
 <!--player controls-->
-	<include name="osd_menu">
+	<include name="osd_MenuLayout">
 		<param name="ID"/>
 		<definition>
 			<itemlayout width="540" height="90">
-				<control type="image">
-					<aspectratio>stretch</aspectratio>
-					<width>540</width>
-					<height>90</height>
-					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-				</control>
-				<control type="image">
-					<aspectratio>stretch</aspectratio>
-					<width>90</width>
-					<height>90</height>
-					<texture colordiffuse="ff000000">colorize/15.png</texture>
-				</control>
 				<control type="label">
 					<width>90</width>
 					<height>90</height>
 					<label>$INFO[ListItem.Label2]</label>
-					<font>Symbols-32</font>
+					<font>Symbols-26</font>
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Accent]</textcolor>
@@ -49,23 +37,11 @@
 			<focusedlayout width="540" height="90">
 				<control type="group">
 					<visible>!Control.HasFocus($PARAM[ID])</visible>
-					<control type="image">
-						<aspectratio>stretch</aspectratio>
-						<width>540</width>
-						<height>90</height>
-						<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-					</control>
-					<control type="image">
-						<aspectratio>stretch</aspectratio>
-						<width>90</width>
-						<height>90</height>
-						<texture colordiffuse="ff000000">colorize/15.png</texture>
-					</control>
 					<control type="label">
 						<width>90</width>
 						<height>90</height>
 						<label>$INFO[ListItem.Label2]</label>
-						<font>Symbols-32</font>
+						<font>Symbols-26</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Accent]</textcolor>
@@ -93,7 +69,7 @@
 						<width>90</width>
 						<height>90</height>
 						<label>$INFO[ListItem.Label2]</label>
-						<font>Symbols-32</font>
+						<font>Symbols-26</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Main]</textcolor>
@@ -113,7 +89,7 @@
 		</definition>
 	</include>
 
-	<include name="player_OSD">
+	<include name="osd_PlayControls">
 		<param name="Visible"/>
 		<definition>
 			<control type="group">
@@ -121,6 +97,14 @@
 				<height>630</height>
 				<include>fadeinout</include>
 				<visible>$PARAM[Visible]</visible>
+
+				<control type="image">
+					<width>540</width>
+					<height>90</height>
+					<texture colordiffuse="ff000000">colorize/100.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				
 				<control type="grouplist" id="700">
 					<onup>630</onup>
 					<ondown>601</ondown>
@@ -133,28 +117,28 @@
 					<!--channel down-->
 					<control type="button" id="701">
 						<label>&#58955;</label>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>ChannelDown</onclick>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
 					</control>
 					<!--channel up-->
 					<control type="button" id="702">
 						<label>&#58952;</label>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>ChannelUp</onclick>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
 					</control>
 					<!--previous-->
 					<control type="button" id="703">
 						<label>&#59171;</label>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>PlayerControl(Previous)</onclick>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
 					<!--rewind-->
 					<control type="button" id="704">
 						<label>&#59056;</label>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>PlayerControl(Rewind)</onclick>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 						<enable>Player.SeekEnabled</enable>
@@ -164,19 +148,19 @@
 						<label>&#59054;</label>
 						<altlabel>&#59053;</altlabel>
 						<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>PlayerControl(Play)</onclick>
 					</control>
 					<!--stop-->
 					<control type="button" id="706">
 						<label>&#59051;</label>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>PlayerControl(Stop)</onclick>
 					</control>
 					<!--forward-->
 					<control type="button" id="707">
 						<label>&#59055;</label>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>PlayerControl(Forward)</onclick>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 						<enable>Player.SeekEnabled</enable>
@@ -184,7 +168,7 @@
 					<!--next-->
 					<control type="button" id="708">
 						<label>&#59170;</label>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>PlayerControl(Next)</onclick>
 						<visible>!VideoPlayer.Content(LiveTV)</visible>
 					</control>
@@ -194,24 +178,41 @@
 						<textcolor>Attention</textcolor>
 						<focusedcolor>Attention</focusedcolor>
 						<onclick>PlayerControl(Record)</onclick>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
 					</control>
 					<control type="button" id="710">
 						<label>&#59172;</label>
 						<onclick>PlayerControl(Record)</onclick>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<visible>VideoPlayer.Content(LiveTV) + !Player.Recording</visible>
 					</control>
 					<!-- Teletext -->
 					<control type="button" id="712">
 						<label>&#58986;</label>
 						<onclick>Dialog.Close(VideoOSD,true)</onclick>
-						<include>player_Control</include>
+						<include>osd_PlayerButton</include>
 						<onclick>ActivateWindow(teletext)</onclick>
 						<visible>VideoPlayer.Content(LiveTV)</visible>
 					</control>
 				</control>
+
+
+				<control type="group">
+					<top>90</top>
+					<control type="image">
+						<width>540</width>
+						<height>540</height>
+						<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+					</control>
+					<control type="image">
+						<width>540</width>
+						<height>540</height>
+						<texture colordiffuse="ff000000" flipy="true">grid/osd/90.png</texture>
+						<aspectratio>scale</aspectratio>
+					</control>
+				</control>
+
 				<control type="list" id="800">
 					<top>90</top>
 					<width>540</width>
@@ -221,7 +222,7 @@
 					<onup>700</onup>
 					<ondown>700</ondown>
 					<orientation>vertical</orientation>
-					<include content="osd_menu">
+					<include content="osd_MenuLayout">
 						<param name="ID">800</param>
 					</include>
 					<content>
@@ -475,7 +476,7 @@
 	</include>
 
 	<!--fullscreen info-->
-	<include name="player_Info">
+	<include name="osd_Info">
 		<definition>
 			<control type="group">
 				<include>transition_Content</include>
@@ -483,7 +484,9 @@
 					<width>screen_Width</width>
 					<height>screen_Height</height>
 					<texture colordiffuse="ff000000">views/diffuse/fullscreeninfo.png</texture>
+					<animation effect="fade" end="60" time="0" condition="Window.IsActive(visualisation)">Conditional</animation>
 				</control>
+
 				<control type="group">
 					<top>750</top>
 					<width>1920</width>

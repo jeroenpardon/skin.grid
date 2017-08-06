@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog">
+	<defaultcontrol>160</defaultcontrol>
 	<controls>
 
 	<!--global includes-->
-		<include>global_Background</include>
+		<include>background_Global</include>
 
 	<!--window chrome-->		
 		<control type="group">
@@ -29,14 +30,15 @@
 			<!--manual search-->
 				<control type="group">
 					<top>90</top>
-					<control type="button" id="5160">
+					<control type="button" id="160">
 						<width>448</width>
 						<textoffsetx>140</textoffsetx>
 						<textwidth>448</textwidth>
 						<label>$LOCALIZE[31566]</label>
 						<font>Black-22</font>
-						<onup>Control.SetFocus(150,10)</onup>
-						<ondown>Control.SetFocus(150,0)</ondown>
+						<onup condition="Integer.IsGreater(Container(150).NumItems(0))">Control.SetFocus(150,9)</onup>
+						<onup condition="!Integer.IsGreater(Container(150).NumItems(0))">170</onup>
+						<ondown>170</ondown>
 						<onright>120</onright>
 						<texturenofocus></texturenofocus>
 					</control>
@@ -60,17 +62,67 @@
 						<width>108</width>
 						<align>center</align>
 						<aligny>center</aligny>
-						<visible>Control.HasFocus(5160)</visible>
+						<visible>Control.HasFocus(160)</visible>
+					</control>
+				</control>
+
+			<!-- Subtitle settings -->
+				<control type="group">
+					<top>180</top>
+					<control type="button" id="170">
+						<width>448</width>
+						<textoffsetx>140</textoffsetx>
+						<textwidth>448</textwidth>
+						<label>$LOCALIZE[31375]</label>
+						<font>Black-22</font>
+						<onclick>Close</onclick>
+						<onclick condition="VideoPlayer.Content(episodes)">ActivateWindowAndFocus(playersettings,-96,0,-60,0)</onclick>
+						<onclick condition="VideoPlayer.Content(movies)">ActivateWindowAndFocus(playersettings,-96,0,-59,0)</onclick>
+						<onup>160</onup>
+						<ondown condition="Integer.IsGreater(Container(150).NumItems(0))">Control.SetFocus(150,0)</ondown>
+						<ondown condition="!Integer.IsGreater(Container(150).NumItems(0))">160</ondown>
+						<onright>120</onright>
+						<texturenofocus></texturenofocus>
+					</control>
+					<control type="image">
+						<width>108</width>
+						<height>90</height>
+						<texture colordiffuse="ff000000">colorize/10.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
+					<control type="label">
+						<label>&#59014;</label>
+						<font>Symbols-26</font>
+						<width>108</width>
+						<align>center</align>
+						<aligny>center</aligny>
+					</control>
+					<control type="label">
+						<label>&#59014;</label>
+						<textcolor>$VAR[color:Main]</textcolor>
+						<font>Symbols-26</font>
+						<width>108</width>
+						<align>center</align>
+						<aligny>center</aligny>
+						<visible>Control.HasFocus(170)</visible>
 					</control>
 				</control>
 
 			<!--services-->
+				<control type="label">
+					<top>270</top>
+					<width>448</width>
+					<height>90</height>
+					<include>global_Header</include>
+					<label>$LOCALIZE[24018]</label>
+				</control>
+			
 				<control type="list" id="150">
-					<top>180</top>
-					<height>720</height>
+					<top>360</top>
+					<height>540</height>
 					<onright>120</onright>
-					<onup>5160</onup>
-					<ondown>5160</ondown>
+					<onup>170</onup>
+					<ondown>160</ondown>
 					<include>view_List-Commons</include>
 					<itemlayout width="448" height="90">
 						<control type="image">
@@ -105,7 +157,7 @@
 							<height>90</height>
 							<texture colordiffuse="$VAR[color:Accent]">colorize/20.png</texture>
 							<aspectratio>stretch</aspectratio>
-							<visible>!Control.HasFocus(150) + !Control.HasFocus(5160)</visible>
+							<visible>!Control.HasFocus(150) + !Control.HasFocus(160) + !Control.HasFocus(170)</visible>
 						</control>
 						<control type="image">
 							<width>448</width>

@@ -18,27 +18,27 @@
 	<include file="script-skinshortcuts-includes.xml" />
 
 <!-- Constants -->
-	<constant name="screen_Width">1920</constant>
-	<constant name="screen_Height">1080</constant>
+	<constant name="autoscroll_Delay">10000</constant>
+	<constant name="autoscroll_Repeat">10000</constant>
+	<constant name="autoscroll_Speed">40</constant>
+	<constant name="autoscroll_Time">3000</constant>
 	<constant name="content_Height">900</constant>
 	<constant name="content_Width">1664</constant>
+	<constant name="fadetime_Slideshow">900</constant>
+	<constant name="fadetime_Thumb">250</constant>
 	<constant name="screen_Center">960,540</constant>
 	<constant name="screen_Centerx">960</constant>
 	<constant name="screen_Centery">540</constant>
-	<constant name="fadetime_Thumb">250</constant>
-	<constant name="fadetime_Slideshow">900</constant>
-	<constant name="transition_Open">250</constant>
+	<constant name="screen_Height">1080</constant>
+	<constant name="screen_Width">1920</constant>
+	<constant name="slideshow_Timer">20000</constant>
 	<constant name="transition_Close">250</constant>
-	<constant name="transition_Visible">300</constant>
+	<constant name="transition_DialogClose">200</constant>
+	<constant name="transition_DialogOpen">200</constant>
 	<constant name="transition_Hidden">200</constant>
 	<constant name="transition_Opacity">95</constant>
-	<constant name="transition_DialogOpen">200</constant>
-	<constant name="transition_DialogClose">200</constant>
-	<constant name="slideshow_Timer">20000</constant>
-	<constant name="autoscroll_Delay">10000</constant>
-	<constant name="autoscroll_Time">3000</constant>
-	<constant name="autoscroll_Repeat">10000</constant>
-	<constant name="autoscroll_Speed">40</constant>
+	<constant name="transition_Open">250</constant>
+	<constant name="transition_Visible">300</constant>
 
 <!-- Global -->
 	<include name="TriggerButton">
@@ -87,8 +87,6 @@
 			<font>$PARAM[Font]</font>
 		</definition>
 	</include>
-
-	
 
 <!-- Settings -->
 	<include name="global_Header">
@@ -169,7 +167,6 @@
 	</include>
 
 <!--keyboard-->
-
 	<include name="row_Keyboard">
 		<param name="Height" default="92"/>
 		<definition>
@@ -332,8 +329,8 @@
 				<width>54</width>
 				<height>54</height>
 				<visible>$EXP[HasRatingOverlay]</visible>
-				<visible>String.IsEqual(Skin.String(ratings.overlay.enable),both) | [Container.Content(movies) + String.IsEqual(Skin.String(ratings.overlay.enable),movies)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + String.IsEqual(Skin.String(ratings.overlay.enable),tvshows)]</visible>
-				<visible>Skin.HasSetting(ratings.overlay) + [String.IsEqual(Skin.String(ratings.video),default) | String.IsEqual(Skin.String(ratings.video),user)]</visible>
+				<visible>String.IsEqual(Skin.String(ratings.overlay),both) | [Container.Content(movies) + String.IsEqual(Skin.String(ratings.overlay),movies)] | [[Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)] + String.IsEqual(Skin.String(ratings.overlay),tvshows)]</visible>
+				<visible>String.IsEqual(Skin.String(ratings.video),default) | String.IsEqual(Skin.String(ratings.video),user)</visible>
 				<visible>Container.Content(tvshows) | Container.Content(movies) + !Listitem.IsParentFolder</visible>
 				<animation effect="slide" end="-54" time="0" condition="[ListItem.IsResumable + !String.IsEqual(ListItem.Overlay,OverlayWatched.png)] | !String.IsEqual(ListItem.Overlay,OverlayWatched.png)">Conditional</animation>
 				<control type="image">
@@ -475,6 +472,15 @@
 				<font>Regular-20</font>
 				<visible>!String.IsEmpty(ListItem.Size) + Container.Content(files)</visible>
 			</control>
+			<!-- Files folder -->
+			<control type="label">
+				<width min="50" max="200">auto</width>
+				<height>$PARAM[Height]</height>
+				<label>$INFO[ListItem.Date]</label>
+				<textcolor>$VAR[color:Text.2]</textcolor>
+				<font>Regular-20</font>
+				<visible>ListItem.IsFolder + Container.Content(files)</visible>
+			</control>
 			<!--programme-->
 			<control type="label">
 				<width min="50" max="705">auto</width>
@@ -571,7 +577,16 @@
 				<visible>$EXP[!ListItem.IsParent]</visible>
 				<visible>String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | Container.Content(albums)</visible>
 			</control>
-
+			<!-- Studio (for plugins like youtube) -->
+			<control type="label">
+				<width min="50">auto</width>
+				<height>$PARAM[Height]</height>
+				<label>$INFO[ListItem.Studio]</label>
+				<textcolor>$VAR[color:Text.2]</textcolor>
+				<font>Regular-20</font>
+				<visible>String.StartsWith(Container.FolderPath,plugin://plugin.)</visible>
+			</control>
+			<!-- Artists -->
 			<control type="label">
 				<width min="50">auto</width>
 				<height>$PARAM[Height]</height>
@@ -581,8 +596,6 @@
 				<visible>$EXP[!ListItem.IsParent]</visible>
 				<visible>Container.Content(artists)</visible>
 			</control>
-
-
 			<!-- Playcount -->
 			<control type="label">
 				<width min="0">auto</width>
@@ -664,6 +677,9 @@
 	<include name="install_HelperBackup">
 		<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
 	</include>
+	<include name="install_HelperBackgrounds">
+		<onclick condition="!System.HasAddon(script.skin.helper.backgrounds)">InstallAddon(script.skin.helper.backgrounds)</onclick>
+	</include>
 	<include name="install_ColorPicker">
 		<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
 	</include>
@@ -677,7 +693,7 @@
 		<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 	</include>
 
-<!--pvr-->
+<!-- PVR -->
 	<include name="epgscroll_Instant">
 		<definition>
 			<scrolltime>0</scrolltime>	
@@ -689,6 +705,17 @@
 		</definition>
 	</include>
 
+<!-- Skin Shortcuts -->
+	<include name="shortcuts_ScrollingControls">
+		<animation effect="slide" end="0,90" time="0" condition="Container(211).Row(1)">Conditional</animation>
+		<animation effect="slide" end="0,180" time="0" condition="Container(211).Row(2)">Conditional</animation>
+		<animation effect="slide" end="0,270" time="0" condition="Container(211).Row(3)">Conditional</animation>
+		<animation effect="slide" end="0,360" time="0" condition="Container(211).Row(4)">Conditional</animation>
+		<animation effect="slide" end="0,450" time="0" condition="Container(211).Row(5)">Conditional</animation>
+		<animation effect="slide" end="0,540" time="0" condition="Container(211).Row(6)">Conditional</animation>
+		<animation effect="slide" end="0,630" time="0" condition="Container(211).Row(7)">Conditional</animation>
+		<animation effect="slide" end="0,720" time="0" condition="Container(211).Row(8)">Conditional</animation>
+	</include>
 
 <!-- Home -->
 	<include name="home_Status">
@@ -754,7 +781,6 @@
 		</definition>
 	</include>
 
-
 	<!-- Debug -->
 	<include name="debug_Label">
 		<font>Debug</font>
@@ -765,4 +791,4 @@
 		<aligny>center</aligny>
 		<textcolor>white</textcolor>
 	</include>
-</includes>
+</includes> 

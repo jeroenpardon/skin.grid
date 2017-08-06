@@ -13,7 +13,7 @@
 		</control>
 
 		<!-- Global Includes -->
-		<include content="global_Background">
+		<include content="background_Global">
 			<param name="GridTexture">overlays/90.png</param>
 		</include>
 
@@ -170,23 +170,23 @@
 
 					<!-- Backup & Restore -->
 					<control type="label" id="120">
-						<label>$LOCALIZE[31078]</label>
+						<label>$LOCALIZE[31373]</label>
 						<include>global_Header</include>
 					</control>
 					<control type="button" id="121">
-						<label>$LOCALIZE[31058]</label>
+						<label>$LOCALIZE[31372]</label>
 						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=backup,promptfilename=true)</onclick>
 						<include>install_HelperBackup</include>
 						<include>button_Settings</include>
 					</control>
 					<control type="button" id="122">
-						<label>$LOCALIZE[31057]</label>
+						<label>$LOCALIZE[31371]</label>
 						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=restore)</onclick>
 						<include>install_HelperBackup</include>
 						<include>button_Settings</include>
 					</control>
 					<control type="button" id="123">
-						<label>$LOCALIZE[31080]</label>
+						<label>$LOCALIZE[31374]</label>
 						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
 						<include>install_HelperBackup</include>
 						<include>button_Settings</include>
@@ -199,7 +199,7 @@
 					</control>
 				</control>
 
-				<!--  Artwork -->
+				<!-- Artwork -->
 				<control type="grouplist" id="200">
 					<width>1216</width>
 					<height>810</height>
@@ -211,105 +211,146 @@
 					<onright>6500</onright>
 					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,artwork)</visible>
-					<!-- Backgrounds -->
+					<!-- Homescreen -->
 					<control type="label" id="201">
-						<label>$LOCALIZE[33069]</label>
+						<label>$LOCALIZE[31300]</label>
 						<include>global_Header</include>
 					</control>
 					<!--background type-->
-					<control type="button" id="205">
+					<control type="button" id="202">
 						<label>$LOCALIZE[31360]</label>
-						<label2>$INFO[Skin.String(background.type.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.type,header=$LOCALIZE[31360])</onclick>
+						<label2>$INFO[Skin.String(background.home.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.home,header=$LOCALIZE[31360])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<!-- Custom -->
-					<control type="button" id="206">
-						<label>$LOCALIZE[31132]</label>
-						<label2>$INFO[Skin.String(background.path.Label)]</label2>
-						<!-- Use a property to force the select dialog to use the layout we want -->
-						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=background.path,header=$LOCALIZE[31132],allowmulti=true,resourceaddon=resource.images.skinbackgrounds)</onclick>
+					<!-- Select fanart source -->
+					<control type="button" id="203">
+						<label>- $LOCALIZE[31367]</label>
+						<label2>$INFO[Skin.String(fanart.source.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=fanart.source,header=$LOCALIZE[31367])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
-						<visible>String.IsEqual(Skin.String(background.type),custom)</visible>
-						<enable>String.IsEqual(Skin.String(background.type),custom)</enable>
+						<visible>String.IsEqual(Skin.String(background.home),fanart)</visible>
 					</control>
-					<!-- Visualization -->
+					<!-- Select image(s) -->
 					<control type="button" id="207">
-						<label>$LOCALIZE[31711]</label>
-						<label2>$INFO[Skin.String(viz.mode.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=viz.mode,header=$LOCALIZE[31711])</onclick>
+						<label>- $LOCALIZE[31364]</label>
+						<label2>$INFO[Skin.String(custom.home.Label)]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=custom.home,header=$LOCALIZE[31364],allowmulti=true,resourceaddon=resource.images.skinbackgrounds)</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+						<visible>String.IsEqual(Skin.String(background.home),custom)</visible>
+					</control>
+					<!-- Fanart logo -->
+					<control type="radiobutton" id="208">
+						<label>$LOCALIZE[31231]</label>
+						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(fanart.sourcelogo),noaction=Close)</onclick>
+						<selected>Skin.HasSetting(fanart.sourcelogo)</selected>
+						<include>radio_Settings</include>
+						<visible>String.IsEqual(Skin.String(background.home),fanart)</visible>
+					</control>
+					<!-- Playing item on home -->
+					<control type="radiobutton" id="209">
+						<label>$LOCALIZE[31316]</label>
+						<onclick>Skin.ToggleSetting(home.nowplaying)</onclick>
+						<selected>Skin.HasSetting(home.nowplaying)</selected>
+						<include>radio_Settings</include>
+					</control>
+
+					<!-- Global -->
+					<control type="label" id="210">
+						<label>$LOCALIZE[31060]</label>
+						<include>global_Header</include>
+					</control>
+					<!-- Background type -->
+					<control type="button" id="211">
+						<label>$LOCALIZE[31360]</label>
+						<label2>$INFO[Skin.String(background.global.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.global,header=$LOCALIZE[31360])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<!--animated backgrounds-->
-					<control type="radiobutton" id="210">
-						<label>$LOCALIZE[31133] ($LOCALIZE[31326])</label>
+
+					<!-- Select image(s) -->
+					<control type="button" id="213">
+						<label>- $LOCALIZE[31364]</label>
+						<label2>$INFO[Skin.String(custom.global.Label)]</label2>
+						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=custom.global,header=$LOCALIZE[31364],allowmulti=true,resourceaddon=resource.images.skinbackgrounds)</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+						<visible>String.IsEqual(Skin.String(background.global),custom)</visible>
+					</control>
+					<!-- Animated backgrounds -->
+					<control type="radiobutton" id="214">
+						<label>$LOCALIZE[31365] ($LOCALIZE[31326])</label>
 						<onclick>Skin.ToggleSetting(burns.enable)</onclick>
 						<selected>Skin.HasSetting(burns.enable)</selected>
 						<include>radio_Settings</include>
 					</control>
-					<!-- Hide fanart while scrolling -->
-					<control type="radiobutton" id="211">
-						<label>$LOCALIZE[31361]</label>
-						<onclick>Skin.ToggleSetting(fanart.scrolling)</onclick>
-						<selected>Skin.HasSetting(fanart.scrolling)</selected>
-						<include>radio_Settings</include>
-					</control>
-					<!--library views-->
-					<control type="label" id="220">
-						<label>$LOCALIZE[31314]</label>
-						<include>global_Header</include>
-					</control>
-					<control type="button" id="221">
-						<label>$LOCALIZE[31116]</label>
-						<label2>$INFO[Skin.String(view.list.art.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=view.list.art,header=$LOCALIZE[31116])</onclick>
-						<include>install_HelperService</include>
-						<include>button_Settings</include>
-					</control>
-					<control type="button" id="222">
-						<label>$LOCALIZE[31115]</label>
-						<label2>$INFO[Skin.String(views.landscape.art.label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=views.landscape.art,header=$LOCALIZE[31115])</onclick>
-						<include>install_HelperService</include>
-						<include>button_Settings</include>
-					</control>
-					<!--extended artwork-->
-					<control type="label" id="230">
-						<label>$LOCALIZE[31107]</label>
-						<include>global_Header</include>
-					</control>
-					<!--enable logo-->
-					<control type="radiobutton" id="231">
-						<label>$LOCALIZE[31108]</label>
+					<!-- Enable logo -->
+					<control type="radiobutton" id="215">
+						<label>$LOCALIZE[31208]</label>
 						<onclick>Skin.ToggleSetting(logos.enable)</onclick>
 						<selected>Skin.HasSetting(logos.enable)</selected>
 						<include>radio_Settings</include>
 					</control>
-					<!--download artwork-->
-					<control type="button" id="232">
-						<label>$LOCALIZE[31106]</label>
-						<onclick condition="System.HasAddon(script.artwork.downloader)">ActivateWindow(1103)</onclick>
-						<include>install_Downloader</include>
-						<include>button_Settings</include>
-					</control>
-					<!--animated artwork-->
-					<control type="radiobutton" id="240">
-						<label>$LOCALIZE[31126] ($LOCALIZE[31326])</label>
+					<!-- Animated artwork -->
+					<control type="radiobutton" id="216">
+						<label>$LOCALIZE[31226] ($LOCALIZE[31326])</label>
 						<onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
 						<selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
 						<include>radio_Settings</include>
 					</control>
-					<control type="radiobutton" id="241">
-						<label>- $LOCALIZE[31127]</label>
+					<control type="radiobutton" id="217">
+						<label>- $LOCALIZE[31227]</label>
 						<onclick>Skin.ToggleSetting(art.animated.info)</onclick>
 						<selected>Skin.HasSetting(art.animated.info)</selected>
 						<include>radio_Settings</include>
 						<visible>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</visible>
 					</control>
-					<!--weather-->
+
+					<!-- Library views -->
+					<control type="label" id="220">
+						<label>$LOCALIZE[31314]</label>
+						<include>global_Header</include>
+					</control>
+					<control type="button" id="221">
+						<label>$LOCALIZE[31216]</label>
+						<label2>$INFO[Skin.String(view.list.art.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=view.list.art,header=$LOCALIZE[31216])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+					<control type="button" id="222">
+						<label>$LOCALIZE[31215]</label>
+						<label2>$INFO[Skin.String(views.landscape.art.label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=views.landscape.art,header=$LOCALIZE[31215])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+					<!-- Hide fanart while scrolling -->
+					<control type="radiobutton" id="223">
+						<label>$LOCALIZE[31361]</label>
+						<onclick>Skin.ToggleSetting(fanart.scrolling)</onclick>
+						<selected>Skin.HasSetting(fanart.scrolling)</selected>
+						<include>radio_Settings</include>
+					</control>
+
+					<!-- Now playing -->
+					<control type="label" id="230">
+						<label>$LOCALIZE[31711]</label>
+						<include>global_Header</include>
+					</control>
+					<control type="button" id="231">
+						<label>$LOCALIZE[31360]</label>
+						<label2>$INFO[Skin.String(viz.mode.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=viz.mode,header=$LOCALIZE[31711])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+
+					<!-- Weather -->
 					<control type="label" id="260">
 						<label>$LOCALIZE[8]</label>
 						<include>global_Header</include>
@@ -388,7 +429,8 @@
 					<!-- Ratings overlay on artwork -->
 					<control type="button" id="313">
 						<label>$LOCALIZE[31348]</label>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.overlay.enable,header=$LOCALIZE[31348])</onclick>
+						<label2>$INFO[Skin.String(ratings.overlay.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.overlay,header=$LOCALIZE[31348])</onclick>
 						<enable>String.IsEqual(Skin.String(ratings.video),default) | String.IsEqual(Skin.String(ratings.video),user)</enable>
 						<include>radio_Settings</include>
 					</control>
@@ -429,13 +471,6 @@
 						<include>global_Header</include>
 					</control>
 
-					<!-- Playing item on home -->
-					<control type="radiobutton" id="406">
-						<label>$LOCALIZE[31316]</label>
-						<onclick>Skin.ToggleSetting(home.nowplaying)</onclick>
-						<selected>Skin.HasSetting(home.nowplaying)</selected>
-						<include>radio_Settings</include>
-					</control>
 					<!-- Clock -->
 					<control type="radiobutton" id="407">
 						<label>$LOCALIZE[31322]</label>
@@ -454,35 +489,6 @@
 						<enable>!String.IsEqual(Skin.String(homemenu.type),stream)</enable>
 					</control>
 
-					<!-- Fanart logo -->
-					<control type="radiobutton" id="411">
-						<label>$LOCALIZE[31131]</label>
-						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(home.fanartlogo),noaction=Close)</onclick>
-						<selected>Skin.HasSetting(home.fanartlogo)</selected>
-						<include>radio_Settings</include>
-					</control>
-
-
-
-
-					<!-- Home -->
-					<control type="label" id="412">
-						<label>epg</label>
-						<include>global_Header</include>
-					</control>
-
-					<!-- Playing item on home -->
-					<control type="button" id="413">
-						<label>channel layout</label>
-						<label2>$INFO[Skin.String(epg.channellayout.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=epg.channellayout,header=$LOCALIZE[31007])</onclick>
-						<include>install_HelperService</include>
-						<include>button_Settings</include>
-					</control>
-
-
-
-
 					<!-- Colours -->
 					<control type="label" id="415">
 						<label>$LOCALIZE[14078]</label>
@@ -497,7 +503,7 @@
 							<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.main)</onclick>
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
-							<onup>411</onup>
+							<onup>410</onup>
 							<ondown>430</ondown>
 						</control>
 						<control type="image">
@@ -694,7 +700,7 @@
 						<include>button_Settings</include>
 					</control>
 					<control type="radiobutton" id="320">
-						<label>$LOCALIZE[31251]</label>
+						<label>$LOCALIZE[31363]</label>
 						<onclick>Skin.ToggleSetting(shortcutsmenu.disable)</onclick>
 						<selected>Skin.HasSetting(shortcutsmenu.disable)</selected>
 						<include>radio_Settings</include>
@@ -923,7 +929,7 @@
 					<control type="textbox" id="1001">
 						<height>800</height>
 						<width>1220</width>
-						<label>[B]$LOCALIZE[31980][/B][CR][COLOR=$VAR[color:Text.3]]Jeroen Pardon[/COLOR][CR][CR][B]$LOCALIZE[31981][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31982][/COLOR][CR][CR][B]$LOCALIZE[31983][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31984][CR][CR][/COLOR][B]$LOCALIZE[31990][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31991][/COLOR]</label>
+						<label>[B]$LOCALIZE[31980][/B][CR][COLOR=$VAR[color:Text.3]]Jeroen Pardon[/COLOR][CR][CR][B]$LOCALIZE[31985][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31986][/COLOR][CR][CR][B]$LOCALIZE[31981][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31982][/COLOR][CR][CR][B]$LOCALIZE[31983][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31984][CR][CR][/COLOR][B]$LOCALIZE[31990][/B][CR][COLOR=$VAR[color:Text.3]]$LOCALIZE[31991][/COLOR]</label>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<font>Slab-22</font>
 					</control>

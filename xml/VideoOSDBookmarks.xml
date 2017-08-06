@@ -7,7 +7,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
-				<param name="Title">$VAR[window:Title.System]</param>
+				<param name="Title">$VAR[window:Title.Player]</param>
 			</include>
 		</control>
 

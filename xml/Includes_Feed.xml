@@ -69,12 +69,14 @@
 
 	<include name="widget_Header">
 		<param name="Visible"/>
+		<param name="HasItems"/>
 		<definition>
 			<control type="grouplist" id="$PARAM[HeaderID]">
 				<width>1920</width>
 				<height>54</height>
 				<orientation>horizontal</orientation>
 				<visible>$PARAM[Visible]</visible>
+				<visible>$PARAM[HasItems]</visible>
 				<visible>Skin.HasSetting(widget.name)</visible>
 				<control type="label" id="$PARAM[HeaderLabel]">
 					<width>64</width>

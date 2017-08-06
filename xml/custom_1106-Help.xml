@@ -82,7 +82,7 @@
 					<font>Regular-18</font>
 					<align>left</align>
 					<textoffsetx>0</textoffsetx>
-					<label>$LOCALIZE[31080]</label>
+					<label>$LOCALIZE[31374]</label>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<texturenofocus colordiffuse="$VAR[color:Main]">colorize/80.png</texturenofocus>
 				</control>

@@ -5,10 +5,10 @@
 		<param name="Height" default="screen_Height"/>
 		<definition>
 			<control type="group">
-				<include>transition_HomeMenu</include>
+				<include>transition_Background</include>
 
 				<!-- Background -->
-				<include content="global_Background">
+				<include content="background_Global">
 					<param name="GridTexture">overlays/108.png</param>
 				</include>
 
@@ -89,7 +89,7 @@
 
 
 	<include name="home_Menu-vertical">
-		<include content="global_Background">
+		<include content="background_Home">
 			<param name="GridTexture">overlays/home.png</param>
 			<param name="DiffuseColor">ff000000</param>
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
@@ -101,7 +101,7 @@
 		</include>
 
 		<control type="group">
-			<include>transition_HomeMenu</include>
+			<include>transition_Background</include>
 
 			<!-- Scroll indicators -->
 			<control type="label">
@@ -147,11 +147,11 @@
 				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.type),vertical)">
 					<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="none"/>
 				</animation>
-
 				<animation effect="slide" end="0,98" time="0" condition="String.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
 				<animation effect="slide" end="0,196" time="0" condition="String.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
 				<animation effect="slide" end="0,294" time="0" condition="String.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
 				<animation effect="slide" end="0,392" time="0" condition="String.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
+
 				<itemlayout width="1920" height="98">
 					<!--main-->
 					<control type="group">
@@ -247,7 +247,6 @@
 							</control>
 						</control>
 					</control>
-
 					<control type="group">
 						<visible>!Control.HasFocus(9000)</visible>
 						<!--main-->
@@ -307,14 +306,14 @@
 		</include>
 	</include>
 
-	
+
 	<include name="home_Menu-vertical2">
 		<definition>
 			<control type="group">
-				<include>transition_HomeMenu</include>
+				<include>transition_Background</include>
 
 				<!--background-->
-				<include content="global_Background">
+				<include content="background_Global">
 					<param name="GridTexture">overlays/98.png</param>
 				</include>
 
@@ -385,7 +384,7 @@
 								<textcolor>$VAR[color:Text.2]</textcolor>
 							</control>
 							<control type="label">
-								<left>108</left>
+								<left>128</left>
 								<width>465</width>
 								<height>98</height>
 								<label>$INFO[ListItem.Label]</label>
@@ -400,7 +399,7 @@
 							<width>576</width>
 							<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 							<control type="label">
-								<left>0</left>
+								<left>128</left>
 								<width>108</width>
 								<height>98</height>
 								<font>Symbols-32</font>
@@ -410,7 +409,7 @@
 								<textcolor>$VAR[color:Text.2]</textcolor>
 							</control>
 							<control type="label">
-								<left>108</left>
+								<left>128</left>
 								<width>465</width>
 								<height>90</height>
 								<label>$INFO[ListItem.Label]</label>
@@ -442,7 +441,7 @@
 									<textcolor>$VAR[color:Text.2]</textcolor>
 								</control>
 								<control type="label">
-									<left>108</left>
+									<left>128</left>
 									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
@@ -467,7 +466,7 @@
 									<textcolor>$VAR[color:Text.2]</textcolor>
 								</control>
 								<control type="label">
-									<left>108</left>
+									<left>128</left>
 									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
@@ -498,7 +497,7 @@
 									<textcolor>$VAR[color:Text.2]</textcolor>
 								</control>
 								<control type="label">
-									<left>108</left>
+									<left>128</left>
 									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
@@ -523,7 +522,7 @@
 									<textcolor>$VAR[color:Text.2]</textcolor>
 								</control>
 								<control type="label">
-									<left>108</left>
+									<left>128</left>
 									<width>465</width>
 									<height>90</height>
 									<label>$INFO[ListItem.Label]</label>

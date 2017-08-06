@@ -358,14 +358,17 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | [Container.Content(files) + !Container.HasFiles] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(tags) | Container.Content(years) | Container.Content(events)</visible>
+						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | [Container.Content(files) + !Container.HasFiles + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(tags) | Container.Content(years) | Container.Content(events)</visible>
 					</control>
 					<control type="image">
 						<width>1036</width>
 						<height>$PARAM[ItemHeight]</height>
 						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
+						<visible>$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(Container.FolderPath,pvr://channels/)</visible>
+						<!--
 						<visible>[Container.Content(files) + Container.HasFiles] | $EXP[Content.IsPVR] | [Container.Content(files) + Container.HasFiles] | Container.Content(videos) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | Container.Content(episodes) | Container.Content(images) | Container.Content(musicvideos) | Container.Content(songs) | String.StartsWith(Container.FolderPath,pvr://) | String.StartsWith(Container.FolderPath,plugin://plugin.video) | [!String.IsEqual(Skin.String(view.list.art),posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
+						-->
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>
@@ -540,25 +543,28 @@
 	</include>
 
 	<include name="info_List">
-		<param name="Visible" default="false"/>
-		<param name="Width" default="756"/>
-		<param name="Height" default="972"/>
+		<param name="Art" default="$VAR[art:Landscape]"/>
+		<param name="Art2" default="$VAR[art:Square]"/>
 		<param name="ArtHeight" default="432"/>
 		<param name="ArtWidth" default="756"/>
-		<param name="TextWidth" default="705"/>
-		<param name="TextHeight" default="365"/>
 		<param name="Aspect" default="scale"/>
 		<param name="AspectRatioAlign" default="right"/>
 		<param name="AspectRatioAlignY" default="top"/>
-		<param name="ShowDescription" default="true"/>
-		<param name="Art" default="$VAR[art:Landscape]"/>
-		<param name="Art2" default="$VAR[art:Square]"/>
-		<param name="Logo" default="$VAR[art:Logo]"/>
-		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
-		<param name="ShowInfo" default="true"/>
 		<param name="DiffuseTexture" default="views/diffuse/kodi_landscape.png"/>
+		<param name="Fallback" default="$VAR[art:Fallback]"/>
+		<param name="Height" default="972"/>
+		<param name="Logo" default="$VAR[art:Logo]"/>
 		<param name="ProviderLogo" default="logos/tmdb.png"/>
+		<param name="ShowDescription" default="true"/>
+		<param name="ShowInfo" default="true"/>
+		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="ShowProviderLogo" default="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb) | String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies) | String.Contains(ListItem.FilenameAndPath,tmdb) | [String.StartsWith(Container.FolderPath,plugin://) + String.StartsWith(ListItem.Icon,http://image.tmdb.org/)]"/>
+		<param name="Symbol" default="$VAR[symbol:Global]"/>
+		<param name="SymbolFont" default="Symbols-46"/>
+		<param name="TextHeight" default="365"/>
+		<param name="TextWidth" default="705"/>
+		<param name="Width" default="756"/>
+		<param name="Visible" default="false"/>
 		<definition>
 			<control type="group">
 				<top>108</top>
@@ -566,16 +572,25 @@
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
 				<visible>$PARAM[Visible]</visible>
-				<!--fallback-->
 				<control type="image">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
-					<texture diffuse="$PARAM[DiffuseTexture]" colordiffuse="aa000000">colorize/95.png</texture>
-					<fadetime>fadetime_Thumb</fadetime>
-					<aspectratio align="center" aligny="center" scalediffuse="false">stretch</aspectratio>
-					<visible>$PARAM[ShowInfo]</visible>
+					<texture colordiffuse="$VAR[color:Text.2]">$PARAM[Fallback]</texture>
+					<aspectratio align="center" aligny="center">scale</aspectratio>
+					<visible>String.IsEmpty(ListItem.Art(thumb))</visible>
 				</control>
-				<!--landscape art-->
+				<!-- Symbol -->
+				<control type="label">
+					<width>$PARAM[Width]</width>
+					<height>$PARAM[ArtHeight]</height>
+					<label>$PARAM[Symbol]</label>
+					<font>$PARAM[SymbolFont]</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
+				</control>
+				<!-- Landscape art -->
 				<control type="group">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
@@ -586,7 +601,7 @@
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
 					</control>
-					<!--clearlogo-->
+					<!-- Clearlogo -->
 					<control type="image">
 						<bottom>24</bottom>
 						<width>100%</width>
@@ -596,7 +611,7 @@
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<visible>$PARAM[ShowLogo]</visible>
 					</control>
-					<!--provider logo-->
+					<!-- Provider logo -->
 					<control type="image">
 						<left>24</left>
 						<bottom>24</bottom>
@@ -608,9 +623,9 @@
 						<visible>!ListItem.IsParentFolder</visible>
 						<visible>$PARAM[ShowProviderLogo]</visible>
 					</control>
-					<!--videowindow-->
+					<!-- Videowindow -->
 					<control type="group">
-						<visible>VideoPLayer.Content(livetv) + [Window.IsActive(tvchannels) | Window.IsActive(radiochannels)]</visible>
+						<visible>!System.Platform.Android + [VideoPLayer.Content(livetv) + [Window.IsActive(tvchannels) | Window.IsActive(radiochannels)]</visible>
 						<control type="image">
 							<width>$PARAM[Width]</width>
 							<height>$PARAM[ArtHeight]</height>
@@ -622,7 +637,7 @@
 							<height>$PARAM[ArtHeight]</height>
 						</control>
 					</control>
-					<!--airs today-->
+					<!-- Airs today -->
 					<control type="button">
 						<width min="90">auto</width>
 						<top>54</top>
@@ -634,7 +649,7 @@
 						<visible>String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])</visible>
 					</control>
 				</control>
-				<!--media info-->
+				<!-- Media info -->
 				<control type="group">
 					<top>$PARAM[ArtHeight]</top>
 					<visible>$PARAM[ShowInfo]</visible>
@@ -872,45 +887,47 @@
 
 	<include name="dialog_List">
 		<param name="ID"/>
-		<param name="ListType" default="list"/>
-		<param name="Top"/>
-		<param name="Left"/>
-		<param name="TextLeft" default="140"/>
-		<param name="TextWidth" default="1058"/>
-		<param name="Width"/>
-		<param name="Height"/>
-		<param name="ItemWidth" default="1358"/>
-		<param name="ItemHeight"/>
-		<param name="OnLeft"/>
-		<param name="OnRight"/>
-		<param name="OnUp" default="$PARAM[ID]"/>
-		<param name="OnDown" default="$PARAM[ID]"/>
-		<param name="PageControl" default="6500"/>
-		<param name="Symbol" default="$VAR[symbol:Global]"/>
-		<param name="SymbolSize" default="108"/>
-		<param name="ShowSymbol" default="true"/>
-		<param name="IconSize" default="64"/>
-		<param name="Icon" default="$INFO[ListItem.Icon]"/>
-		<param name="ShowIcon" default="false"/>
-		<param name="IconLeft" default="22"/>
-		<param name="IconTop" default="13"/>
-		<param name="Visible"/>
-		<param name="Orientation" default="vertical"/>
-		<param name="Font" default="Black-22"/>
+		<param name="!Label2Empty" default="!String.IsEmpty(ListItem.Label2)"/>
 		<param name="AnimationCondition"/>
-		<param name="SymbolFont" default="Symbols-26"/>
+		<param name="Font" default="Black-22"/>
+		<param name="Height"/>
+		<param name="Icon" default="$INFO[ListItem.Icon]"/>
+		<param name="IconLeft" default="22"/>
+		<param name="IconSize" default="64"/>
+		<param name="IconTop" default="13"/>
+		<param name="ItemHeight"/>
+		<param name="ItemWidth" default="1358"/>
 		<param name="Label" default="$VAR[media:Title]"/>
 		<param name="Label2" default="$INFO[ListItem.Label2]"/>
 		<param name="Label2Empty" default="String.IsEmpty(ListItem.Label2)"/>
-		<param name="!Label2Empty" default="!String.IsEmpty(ListItem.Label2)"/>
+		<param name="Left"/>
+		<param name="ListType" default="list"/>
+		<param name="OnBack"/>
+		<param name="OnDown" default="$PARAM[ID]"/>
 		<param name="OnFocus"/>
+		<param name="OnLeft"/>
+		<param name="OnRight"/>
 		<param name="OnUnFocus"/>
+		<param name="OnUp" default="$PARAM[ID]"/>
+		<param name="Orientation" default="vertical"/>
+		<param name="PageControl" default="6500"/>
+		<param name="ShowIcon" default="false"/>
+		<param name="ShowSymbol" default="true"/>
+		<param name="Symbol" default="$VAR[symbol:Global]"/>
+		<param name="SymbolFont" default="Symbols-26"/>
+		<param name="SymbolSize" default="108"/>
+		<param name="TextLeft" default="140"/>
+		<param name="TextWidth" default="1058"/>
+		<param name="Top"/>
+		<param name="Visible"/>
+		<param name="Width"/>
 		<definition>
 			<control type="$PARAM[ListType]" id="$PARAM[ID]">
 				<top>$PARAM[Top]</top>
 				<left>$PARAM[Left]</left>
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
+				<onback>5000</onback>
 				<onup>$PARAM[OnUp]</onup>
 				<ondown>$PARAM[OnDown]</ondown>
 				<onleft>$PARAM[OnLeft]</onleft>

@@ -4,7 +4,7 @@
 	<controls>
 
 	<!--background-->
-		<include content="global_Background">
+		<include content="background_Global">
 			<param name="GridTexture">overlays/90.png</param>
 		</include>
 
@@ -30,14 +30,18 @@
 				<control type="button" id="501">
 					<width>1664</width>
 					<label>$LOCALIZE[13012]</label>
-					<onclick>Quit()</onclick>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>SetProperty(IsExiting,true,Home)</onclick>
+					<onclick>AlarmClock(ExitTimer,Quit(),0:03,silent)</onclick>
 					<visible>System.ShowExitButton</visible>
 				</control>
 				<!--shutdown-->
 				<control type="button" id="502">
 					<width>1664</width>
 					<label>$LOCALIZE[13016]</label>
-					<onclick>Powerdown()</onclick>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>SetProperty(IsExiting,true,Home)</onclick>
+					<onclick>AlarmClock(ExitTimer,Powerdown(),0:03,silent)</onclick>
 					<visible>System.CanPowerDown</visible>
 				</control>
 				<!--shutdown timer-->
@@ -73,28 +77,31 @@
 				<control type="button" id="507">
 					<width>1664</width>
 					<label>$LOCALIZE[13011]</label>
-					<onclick>Suspend()</onclick>
+					<onclick>AlarmClock(ExitTimer,Suspend(),0:03,silent)</onclick>
 					<visible>System.CanSuspend</visible>
 				</control>
 				<!--hibernate-->
 				<control type="button" id="508">
 					<width>1664</width>
 					<label>$LOCALIZE[13010]</label>
-					<onclick>Hibernate()</onclick>
+					<onclick>AlarmClock(ExitTimer,Hibernate(),0:03,silent)</onclick>
 					<visible>System.CanHibernate</visible>
 				</control>
 				<!--reboot-->
 				<control type="button" id="509">
 					<width>1664</width>
 					<label>$LOCALIZE[13013]</label>
-					<onclick>Reset()</onclick>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>SetProperty(IsExiting,true,Home)</onclick>
+					<onclick>AlarmClock(ExitTimer,Reset(),0:03,silent)</onclick>
 				</control>
 				<!--logoff-->		
 				<control type="button" id="510">
 					<width>1664</width>
 					<label>$LOCALIZE[20126] $INFO[System.Profilename]</label>
 					<onclick>Dialog.Close(all,true)</onclick>
-					<onclick>System.LogOff</onclick>
+					<onclick>SetProperty(IsExiting,true,Home)</onclick>
+					<onclick>AlarmClock(ExitTimer,System.LogOff,0:03,silent)</onclick>
 					<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 					<visible>System.Loggedon</visible>
 				</control>

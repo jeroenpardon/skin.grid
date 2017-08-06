@@ -53,6 +53,11 @@
 			<size>38</size>
 		</font>
 		<font>
+			<name>Symbols-46</name>
+			<filename>Default/Symbols.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
 			<name>Symbols-64</name>
 			<filename>Default/Symbols.ttf</filename>
 			<size>64</size>
@@ -99,6 +104,12 @@
 			<name>Black-32</name>
 			<filename>Default/Black.ttf</filename>
 			<size>32</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-42</name>
+			<filename>Default/Black.ttf</filename>
+			<size>42</size>
 			<style>uppercase</style>
 		</font>
 		<font>

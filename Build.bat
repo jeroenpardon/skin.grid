@@ -7,7 +7,6 @@ md BUILD
 ECHO ------------------------------
 ECHO Building Skin Directory...
 xcopy "xml" "BUILD\skin.grid\xml" /E /Q /I /Y
-xcopy "backgrounds" "BUILD\skin.grid\backgrounds" /E /Q /I /Y
 xcopy "colors" "BUILD\skin.grid\colors" /E /Q /I /Y
 xcopy "resources" "BUILD\skin.grid\resources" /E /Q /I /Y
 xcopy "fonts" "BUILD\skin.grid\fonts" /E /Q /I /Y

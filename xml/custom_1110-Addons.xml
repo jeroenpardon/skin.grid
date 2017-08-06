@@ -12,7 +12,7 @@
 		</control>
 
 	<!--background-->
-		<include content="global_Background">
+		<include content="background_Global">
 			<param name="GridTexture">overlays/108.png</param>
 		</include>
 

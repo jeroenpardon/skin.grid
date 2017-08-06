@@ -10,7 +10,7 @@
 		</control>
 
 	<!-- Background -->
-		<include>global_Background</include>
+		<include>background_Global</include>
 
 	<!-- Chrome -->
 		<control type="group">
