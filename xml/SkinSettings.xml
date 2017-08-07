@@ -211,13 +211,23 @@
 					<onright>6500</onright>
 					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,artwork)</visible>
+
+					<!--download artwork-->
+					<control type="button" id="202">
+						<label>$LOCALIZE[31206]</label>
+						<onclick condition="System.HasAddon(script.artwork.downloader)">ActivateWindow(1103)</onclick>
+						<include>install_Downloader</include>
+						<include>button_Settings</include>
+					</control>
+
+
 					<!-- Homescreen -->
-					<control type="label" id="201">
+					<control type="label" id="204">
 						<label>$LOCALIZE[31300]</label>
 						<include>global_Header</include>
 					</control>
 					<!--background type-->
-					<control type="button" id="202">
+					<control type="button" id="205">
 						<label>$LOCALIZE[31360]</label>
 						<label2>$INFO[Skin.String(background.home.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.home,header=$LOCALIZE[31360])</onclick>
@@ -225,7 +235,7 @@
 						<include>button_Settings</include>
 					</control>
 					<!-- Select fanart source -->
-					<control type="button" id="203">
+					<control type="button" id="206">
 						<label>- $LOCALIZE[31367]</label>
 						<label2>$INFO[Skin.String(fanart.source.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=fanart.source,header=$LOCALIZE[31367])</onclick>
