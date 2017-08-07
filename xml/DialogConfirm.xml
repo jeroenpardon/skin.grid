@@ -27,13 +27,14 @@
 				<width>100%</width>
 				<height>302</height>
 				<control type="textbox" id="9">
-					<top>24</top>
+					<top>0</top>
 					<left>256</left>
 					<width>1152</width>
-					<height>270</height>
+					<height>432</height>
 					<font>Slab-24</font>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<align>center</align>
+					<aligny>center</aligny>
 					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 				</control>
 				<control type="progress" id="20">
@@ -42,6 +43,7 @@
 					<width>1152</width>
 					<height>16</height>
 					<info>Player.Progressbar</info>
+					<visible>false</visible>
 				</control>
 			</control>
 
