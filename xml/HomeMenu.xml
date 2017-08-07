@@ -151,9 +151,8 @@
 				<animation effect="slide" end="0,196" time="0" condition="String.IsEqual(Container(9000).NumItems,5)">Conditional</animation>
 				<animation effect="slide" end="0,294" time="0" condition="String.IsEqual(Container(9000).NumItems,3)">Conditional</animation>
 				<animation effect="slide" end="0,392" time="0" condition="String.IsEqual(Container(9000).NumItems,1)">Conditional</animation>
-
 				<itemlayout width="1920" height="98">
-					<!--main-->
+					<!-- Main -->
 					<control type="group">
 						<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 						<animation effect="fade" start="100" end="25" time="150" condition="!String.IsEmpty(Container(9000).ListItem.Property(isSubmenu))" reversible="true">Conditional</animation>
@@ -176,7 +175,7 @@
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
 					</control>
-					<!--sub-->
+					<!-- Sub -->
 					<control type="group">
 						<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 						<control type="label">
@@ -202,7 +201,7 @@
 				<focusedlayout width="1920" height="98">
 					<control type="group">
 						<visible>Control.HasFocus(9000)</visible>
-						<!--main-->
+						<!-- Main -->
 						<control type="group">
 							<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 							<control type="label">
@@ -224,7 +223,7 @@
 								<textcolor>$VAR[color:Accent]</textcolor>
 							</control>
 						</control>
-						<!--sub-->
+						<!-- Sub -->
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 							<control type="label">
@@ -249,7 +248,7 @@
 					</control>
 					<control type="group">
 						<visible>!Control.HasFocus(9000)</visible>
-						<!--main-->
+						<!-- Main -->
 						<control type="group">
 							<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 							<control type="label">
@@ -271,7 +270,7 @@
 								<textcolor>$VAR[color:Accent]</textcolor>
 							</control>
 						</control>
-						<!--sub-->
+						<!-- Sub -->
 						<control type="group">
 							<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
 							<control type="label">
@@ -312,7 +311,7 @@
 			<control type="group">
 				<include>transition_Background</include>
 
-				<!--background-->
+				<!-- Background -->
 				<include content="background_Global">
 					<param name="GridTexture">overlays/98.png</param>
 				</include>
@@ -368,7 +367,7 @@
 					<onleft>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onleft>
 					<onback>RunScript(script.skinshortcuts,type=hidesubmenu&amp;mainmenuID=9000)</onback>
 					<itemlayout width="576" height="98">
-						<!--main-->
+					<!-- Main -->
 						<control type="group">
 							<width>576</width>
 							<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
@@ -388,13 +387,13 @@
 								<width>465</width>
 								<height>98</height>
 								<label>$INFO[ListItem.Label]</label>
-								<font>Thin-42</font>
+								<font>Thin-36</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>$VAR[color:Accent]</textcolor>
 							</control>
 						</control>
-						<!--sub-->
+					<!-- Sub -->
 						<control type="group">
 							<width>576</width>
 							<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
@@ -411,9 +410,9 @@
 							<control type="label">
 								<left>128</left>
 								<width>465</width>
-								<height>90</height>
+								<height>98</height>
 								<label>$INFO[ListItem.Label]</label>
-								<font>Thin-42</font>
+								<font>Thin-36</font>
 								<align>left</align>
 								<aligny>center</aligny>
 								<textcolor>$VAR[color:Accent]</textcolor>
@@ -421,11 +420,9 @@
 						</control>
 					</itemlayout>
 					<focusedlayout width="576" height="98">
-
 						<control type="group">
 							<visible>Control.HasFocus(9000)</visible>
-
-							<!--main-->
+						<!-- Main -->
 							<control type="group">
 								<width>576</width>
 								<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
@@ -451,7 +448,7 @@
 									<textcolor>$VAR[color:Accent]</textcolor>
 								</control>
 							</control>
-							<!--sub-->
+						<!-- Sub -->
 							<control type="group">
 								<width>576</width>
 								<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
@@ -470,7 +467,7 @@
 									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
-									<font>Special</font>
+									<font>Black-40</font>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>$VAR[color:Accent]</textcolor>
@@ -480,8 +477,7 @@
 
 						<control type="group">
 							<visible>!Control.HasFocus(9000)</visible>
-
-							<!--main-->
+						<!-- Main -->
 							<control type="group">
 								<width>576</width>
 								<visible>String.IsEmpty(ListItem.Property(isSubmenu))</visible>
@@ -490,7 +486,7 @@
 									<left>0</left>
 									<width>108</width>
 									<height>98</height>
-									<font>Symbols-26</font>
+									<font>Symbols-32</font>
 									<label>$VAR[home:Symbol]</label>
 									<align>center</align>
 									<aligny>center</aligny>
@@ -501,13 +497,13 @@
 									<width>465</width>
 									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
-									<font>Thin-42</font>
+									<font>Thin-36</font>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>$VAR[color:Accent]</textcolor>
 								</control>
 							</control>
-							<!--sub-->
+						<!-- Sub -->
 							<control type="group">
 								<width>576</width>
 								<visible>!String.IsEmpty(ListItem.Property(isSubmenu))</visible>
@@ -524,16 +520,15 @@
 								<control type="label">
 									<left>128</left>
 									<width>465</width>
-									<height>90</height>
+									<height>98</height>
 									<label>$INFO[ListItem.Label]</label>
-									<font>Thin-42</font>
+									<font>Thin-36</font>
 									<align>left</align>
 									<aligny>center</aligny>
 									<textcolor>$VAR[color:Accent]</textcolor>
 								</control>
 							</control>
 						</control>
-
 					</focusedlayout>
 					<content>
 						 <include>skinshortcuts-allmenus</include>
