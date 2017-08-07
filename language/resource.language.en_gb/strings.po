@@ -418,9 +418,6 @@ msgctxt "#31307"
 msgid "Scrollbar visibility"
 msgstr ""
 
-msgctxt "#31308"
-msgid "Startup playlist"
-msgstr ""
 
 msgctxt "#31309"
 msgid "Customize this menu"
@@ -715,9 +712,6 @@ msgctxt "#31554"
 msgid "Software decoding"
 msgstr ""
 
-msgctxt "#31555"
-msgid "Player processing info"
-msgstr ""
 
 #. example usage: the movie will finish playing at 22:00
 msgctxt "#31556"
