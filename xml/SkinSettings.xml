@@ -495,7 +495,7 @@
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.status,header=$LOCALIZE[31007])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
-						<enable>!String.IsEqual(Skin.String(homemenu.type),stream)</enable>
+						<visible>String.IsEqual(Skin.String(homemenu.type),vertical)</visible>
 					</control>
 
 					<!-- Colours -->

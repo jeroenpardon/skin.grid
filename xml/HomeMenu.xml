@@ -233,6 +233,7 @@
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Home.1]</textcolor>
+							<animation effect="fade" end="35" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
