@@ -47,7 +47,7 @@
 		</include>
 
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical)">home_Vertical</include>
-		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">home_Feed</include>
+		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">home_Horizontal</include>
 
 		<!-- Post startup -->
 		<control type="group">
