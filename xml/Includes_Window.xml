@@ -31,7 +31,7 @@
 					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
 						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
 					</animation>
-					<visible>!String.IsEqual(Skin.String(background.home),none) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
+					<visible>!String.IsEqual(Skin.String(background.home),none) + !String.IsEqual(Skin.String(homemenu.type),stream) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
 
 				<control type="image">
@@ -41,6 +41,7 @@
 					<fadetime>300</fadetime>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 					<include>fadeinout</include>
+					<visible>!String.IsEqual(Skin.String(homemenu.type),stream)</visible>
 					<visible>!Control.HasFocus(9000)</visible>
 					<visible>System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)]</visible>
 				</control>

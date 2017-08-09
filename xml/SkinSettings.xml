@@ -689,7 +689,7 @@
 						<onclick condition="System.HasAddon(script.colorbox)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.fx,header=$LOCALIZE[31376])</onclick>
 						<include>install_Colorbox</include>
 						<include>button_Settings</include>
-						<visible>String.IsEqual(Skin.String(homemenu.type),vertical2)</visible>
+						<visible>String.IsEqual(Skin.String(homemenu.type),horizontal)</visible>
 					</control>
 					
 					<!-- Toggle widget names -->

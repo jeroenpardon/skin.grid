@@ -19,7 +19,7 @@
 	</include>
 
 	<include name="slide_Clock">
-		<animation effect="slide" end="0,-108" time="300" tween="Sine" easing="In" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),vertical2) + !Control.HasFocus(9000)">Conditional</animation>
+		<animation effect="slide" end="0,-108" time="300" tween="Sine" easing="In" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.type),horizontal) + !Control.HasFocus(9000)">Conditional</animation>
 	</include>
 
 <!--global-->

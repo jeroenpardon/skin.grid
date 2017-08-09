@@ -55,7 +55,7 @@
 				<param name="ProgressInfo"></param>
 				<param name="TextColor">$VAR[color:Main]</param>
 			</include>
-			<include content="global_Notification" condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">
+			<include content="global_Notification" condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">
 				<param name="Left">1036</param>
 				<param name="Height">108</param>
 				<param name="Width">756</param>

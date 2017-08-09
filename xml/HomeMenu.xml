@@ -189,7 +189,7 @@
 				<pagecontrol>80</pagecontrol>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
-				<visible>String.IsEqual(Skin.String(homemenu.type),vertical2)</visible>
+				<visible>String.IsEqual(Skin.String(homemenu.type),horizontal)</visible>
 				<itemlayout width="640" height="1080">
 					<control type="image">
 						<bottom>0</bottom>
@@ -266,35 +266,32 @@
 	</include>
 
 	<include name="home_Menu-stream">
-		<param name="Top" default="0"/>
-		<param name="Height" default="screen_Height"/>
 		<definition>
-			<control type="group">
-				<include>transition_Background</include>
-
-				<!-- Background -->
-				<include content="background_Global">
-					<param name="GridTexture">overlays/108.png</param>
-				</include>
-
-				<include content="home_Horizontal" condition="String.IsEqual(Skin.String(homemenu.type),stream)">
-					<param name="Width">1792</param>
-					<param name="Left">128</param>
-				</include>
-
-				<control type="list" id="9000">
-					<top>$PARAM[Top]</top>
-					<left>0</left>
-					<width>128</width>
-					<height>$PARAM[Height]</height>
-					<onup>9000</onup>
-					<onleft>8000</onleft>
-					<onright>9100</onright>
-					<ondown>9000</ondown>
-					<pagecontrol>80</pagecontrol>
-					<include>global_ListScroll</include>
-					<orientation>vertical</orientation>
-					<itemlayout width="128" height="108">
+			<control type="list" id="9000">
+				<top>0</top>
+				<left>0</left>
+				<width>128</width>
+				<height>1080</height>
+				<onup>9000</onup>
+				<onleft>8000</onleft>
+				<onright>9100</onright>
+				<ondown>9000</ondown>
+				<pagecontrol>80</pagecontrol>
+				<include>global_ListScroll</include>
+				<orientation>vertical</orientation>
+				<itemlayout width="128" height="108">
+					<control type="label">
+						<width>128</width>
+						<height>108</height>
+						<font>Symbols-32</font>
+						<label>$INFO[ListItem.Property(homeSymbol)]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.2]</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="128" height="108">
+					<control type="group">
 						<control type="label">
 							<width>128</width>
 							<height>108</height>
@@ -302,52 +299,33 @@
 							<label>$INFO[ListItem.Property(homeSymbol)]</label>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[color:Text.2]</textcolor>
+							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
-					</itemlayout>
-					<focusedlayout width="128" height="108">
+					</control>
+					<control type="group">
+						<visible>Control.HasFocus(9000)</visible>
 						<control type="group">
-							<control type="label">
+							<control type="image">
+								<aspectratio>stretch</aspectratio>
 								<width>128</width>
 								<height>108</height>
-								<font>Symbols-32</font>
-								<label>$INFO[ListItem.Property(homeSymbol)]</label>
-								<align>center</align>
-								<aligny>center</aligny>
-								<textcolor>$VAR[color:Accent]</textcolor>
+								<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 							</control>
 						</control>
-						<control type="group">
-							<visible>Control.HasFocus(9000)</visible>
-							<control type="group">
-								<control type="image">
-									<aspectratio>stretch</aspectratio>
-									<width>128</width>
-									<height>108</height>
-									<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
-								</control>
-							</control>
-							<control type="label">
-								<width>128</width>
-								<height>108</height>
-								<font>Symbols-32</font>
-								<label>$INFO[ListItem.Property(homeSymbol)]</label>
-								<align>center</align>
-								<aligny>center</aligny>
-								<textcolor>$VAR[color:Main]</textcolor>
-							</control>
-						</control>	
-					</focusedlayout>
-					<content>
-						 <include>skinshortcuts-mainmenu</include>
-					</content>
-				</control>
-				<control type="image">
-					<left>128</left>
-					<aspectratio>stretch</aspectratio>
-					<width>screen_Width</width>
-					<texture colordiffuse="ff000000">colorize/20.png</texture>
-				</control>
+						<control type="label">
+							<width>128</width>
+							<height>108</height>
+							<font>Symbols-32</font>
+							<label>$INFO[ListItem.Property(homeSymbol)]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Main]</textcolor>
+						</control>
+					</control>	
+				</focusedlayout>
+				<content>
+					 <include>skinshortcuts-mainmenu</include>
+				</content>
 			</control>
 		</definition> 
 	</include>
