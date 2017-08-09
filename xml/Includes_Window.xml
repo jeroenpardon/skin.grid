@@ -18,7 +18,7 @@
 			<control type="group">
 				<include>transition_Background</include>
 
-				<!-- Slideshow -->
+				<!-- Background Slideshow -->
 				<control type="multiimage">
 					<timeperimage>30000</timeperimage>
 					<fadetime>300</fadetime>
@@ -32,6 +32,17 @@
 						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
 					</animation>
 					<visible>!String.IsEqual(Skin.String(background.home),none) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
+				</control>
+
+				<control type="image">
+					<top>0</top>
+					<include>screen_Dimensions</include>
+					<texture>$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+					<fadetime>300</fadetime>
+					<aspectratio align="center" aligny="bottom">scale</aspectratio>
+					<include>fadeinout</include>
+					<visible>!Control.HasFocus(9000)</visible>
+					<visible>System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)]</visible>
 				</control>
 
 				<!-- Background video -->
@@ -334,6 +345,7 @@
 					<right>128</right>
 					<orientation>horizontal</orientation>
 					<align>right</align>
+					<include>slide_Clock</include>
 					<control type="button">
 						<width>auto</width>
 						<height>$PARAM[Height]</height>
@@ -355,6 +367,7 @@
 					<left>$PARAM[TimeLeft]</left>
 					<width>128</width>
 					<height>$PARAM[Height]</height>
+					<include>slide_Clock</include>
 					<visible>![Window.IsActive(home) + !Skin.HasSetting(home.clock) + !Window.IsActive(movieinformation)] | Window.IsActive(home) + Window.IsVisible(volumebar) + !Player.Muted</visible>
 					<control type="image">
 						<width>100%</width>

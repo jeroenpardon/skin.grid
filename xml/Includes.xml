@@ -693,6 +693,9 @@
 	<include name="install_Info">
 		<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 	</include>
+	<include name="install_Colorbox">
+		<onclick condition="!System.HasAddon(script.colorbox)">InstallAddon(script.colorbox)</onclick>
+	</include>
 
 <!-- PVR -->
 	<include name="epgscroll_Instant">

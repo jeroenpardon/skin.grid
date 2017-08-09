@@ -25,9 +25,16 @@
 		</control>
 
 		<!-- Main menu layouts -->
+		<!--
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Menu-vertical</include>
-		
-		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">home_Menu-vertical2</include>
+		-->
+
+		<!--
+		<include content="home_Feed" condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">
+			<param name="Width">1920</param>
+			<param name="Left">0</param>
+		</include>
+		-->
 		
 		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + Skin.HasSetting(home.clock)">
 			<param name="Top">108</param>
@@ -38,6 +45,9 @@
 			<param name="Top">0</param>
 			<param name="Height">screen_Height</param>
 		</include>
+
+		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical)">home_Vertical</include>
+		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">home_Feed</include>
 
 		<!-- Post startup -->
 		<control type="group">
@@ -51,7 +61,7 @@
 				<centerleft>50%</centerleft>
 				<top>498</top>
 				<width>200</width>
-				<height>168</height>
+				<height>168</height> 
 				<control type="image">
 					<width>200</width>
 					<height>84</height>
@@ -82,7 +92,12 @@
 				<visible>String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))</visible>
 			</control>
 		</control>
-	</controls>
 
-	
+		<!-- Colorbox multiimage -->
+		<control type="multiimage" id="7975">
+		    <left>-2160</left>
+		    <imagepath background="true">$VAR[background:Home]</imagepath>
+		</control>
+
+	</controls>
 </window>

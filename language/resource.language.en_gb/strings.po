@@ -275,6 +275,7 @@ msgctxt "#31204"
 msgid "Logos"
 msgstr ""
 
+#. example usage: type of artwork, translation might not be needed / suited
 msgctxt "#31205"
 msgid "Clearart"
 msgstr ""
@@ -343,6 +344,7 @@ msgctxt "#31221"
 msgid "Gallery"
 msgstr ""
 
+#. Viewtype name. Translation might not be needed / suitable.
 msgctxt "#31222"
 msgid "Slide"
 msgstr ""
@@ -520,7 +522,7 @@ msgid "Reset skin settings"
 msgstr ""
 
 msgctxt "#31334"
-msgid "This will reset all skin settings and Grid will be restarted."
+msgid "This will reset all skin settings."
 msgstr ""
 
 msgctxt "#31335"
@@ -614,7 +616,7 @@ msgid "Input field only"
 msgstr ""
 
 msgctxt "#31357"
-msgid "Grid needs to be reloaded for this. Is that ok?"
+msgid "The skin will need to be restarted."
 msgstr ""
 
 msgctxt "#31358"
@@ -687,6 +689,18 @@ msgstr ""
 
 msgctxt "#31375"
 msgid "Subtitle settings"
+msgstr ""
+
+msgctxt "#31376"
+msgid "Set special effects"
+msgstr ""
+
+msgctxt "#31377"
+msgid "Blur effect"
+msgstr ""
+
+msgctxt "#31378"
+msgid "Blur effect and adapting colours"
 msgstr ""
 
 

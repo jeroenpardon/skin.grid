@@ -4,10 +4,9 @@
 
 	<controls>
 
-	<!--global includes-->
 		<include>background_Global</include>
 
-	<!--window chrome-->		
+	<!-- Window chrome -->		
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
@@ -16,41 +15,31 @@
 			</include>
 		</control>
 
-	<!--content-->
+	<!-- Content -->
 		<control type="group">
 			<left>128</left>
-			<top>198</top>
+			<top>378</top>
 			<width>1664</width>
 			<include>transition_Content</include>
-			<control type="group">
-				<top>90</top>
-				<width>100%</width>
-				<height>302</height>
-				<control type="textbox" id="9">
-					<top>0</top>
-					<left>256</left>
-					<width>1152</width>
-					<height>432</height>
-					<font>Slab-24</font>
-					<textcolor>$VAR[color:Accent]</textcolor>
-					<align>center</align>
-					<aligny>center</aligny>
-					<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
-				</control>
-				<control type="progress" id="20">
-					<left>256</left>
-					<top>168</top>
-					<width>1152</width>
-					<height>16</height>
-					<info>Player.Progressbar</info>
-					<visible>false</visible>
-				</control>
+			<control type="textbox" id="9">
+				<top>24</top>
+				<left>256</left>
+				<width>1152</width>
+				<height>432</height>
+				<font>Slab-24-S</font>
+				<textcolor>$VAR[color:Accent]</textcolor>
+				<align>center</align>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="progress" id="20">
+				<info>Player.Progressbar</info>
+				<visible>false</visible>
 			</control>
 
-		<!--dialog buttons-->
+		<!-- Dialog buttons -->
 			<control type="grouplist" id="9000">
 				<centerleft>50%</centerleft>
-				<top>540</top>
+				<top>360</top>
 				<width>1664</width>
 				<height>90</height>
 				<onup>50</onup>
@@ -59,14 +48,14 @@
 				<align>center</align>
 				<itemgap>0</itemgap>
 				<orientation>horizontal</orientation>
-				<!--ok-->
+				<!-- Ok -->
 				<control type="button" id="11">
 					<label>$LOCALIZE[107]</label>
 					<width>256</width>
 					<font>Black-24</font>
 					<include>button_Dialog</include>
 				</control>
-				<!--cancel-->
+				<!-- Cancel -->
 				<control type="button" id="10">
 					<label>$LOCALIZE[106]</label>
 					<width>256</width>

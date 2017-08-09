@@ -31,6 +31,16 @@
 	<setting id="date.enabled" value="global" label="$LOCALIZE[31352]"/>
 	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31353]"/>
 
+	<!-- Home blur effects -->
+	<setting id="home.fx" value="none" label="$LOCALIZE[13113]" default="true"/>
+	<setting id="home.fx" value="blur" label="$LOCALIZE[31377]">
+		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=ActivateWindow(startup),noaction=Close)</onselect>
+	</setting>
+	<setting id="home.fx" value="color" label="$LOCALIZE[31378]">
+		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=|ActivateWindow(startup),noaction=Close)</onselect>
+	</setting>
+
+
 	<!-- Home background type -->
 	<setting id="background.home" value="none" label="$LOCALIZE[36502]"/>
 	<setting id="background.home" value="fanart" label="$LOCALIZE[31366]"/>

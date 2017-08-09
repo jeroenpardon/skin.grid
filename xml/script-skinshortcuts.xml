@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">8998</defaultcontrol>
 	<onunload condition="!Window.IsVisible(skinsettings) + String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
-	<onunload condition="!Window.IsVisible(skinsettings) + String.IsEqual(Skin.String(homemenu.type),vertical2)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
+	<onunload condition="!Window.IsVisible(skinsettings) + String.IsEqual(Skin.String(homemenu.type),horizontal)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
 	<onunload condition="!Window.IsVisible(skinsettings) + String.IsEqual(Skin.String(homemenu.type),stream)">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
 	<onunload>SetProperty(SelectDialog,regular,home)</onunload>
 	<onload>SetProperty(SelectDialog,regular,home)</onload>

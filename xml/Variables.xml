@@ -56,9 +56,10 @@
 		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.HasTVTimer | Pvr.HasRadioTimer">$INFO[Pvr.NextRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.NextRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),library)">$VAR[stats:MovieCount]$VAR[stats:ShowCount]$VAR[stats:EpisodeCount]$VAR[stats:MusicVideoCount]$VAR[stats:SongCount]$VAR[stats:AlbumCount]$VAR[stats:ArtistCount]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),system)">$INFO[System.ProfileName]$INFO[System.FriendlyName, | ]$INFO[Network.IPAddress, | ]$INFO[System.InternetState, | ]$INFO[System.Uptime(dd:mm), | ]</value>
-		<value condition="String.IsEqual(Skin.String(home.status),weather)">[B]$INFO[Weather.Location,, - ][/B]$INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits,, ]$INFO[Window(weather).Property(Current.FeelsLike),($LOCALIZE[402]: ]$INFO[System.TemperatureUnits])$INFO[Window(weather).Property(Current.Condition),$COMMA ]</value>
+		<value condition="String.IsEqual(Skin.String(home.status),weather) + Weather.IsFetched">[B]$INFO[Weather.Location,, - ][/B]$INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits,, ]$INFO[Window(weather).Property(Current.FeelsLike),($LOCALIZE[402]: ]$INFO[System.TemperatureUnits])$INFO[Window(weather).Property(Current.Condition),$COMMA ]</value>
 	</variable>
 
+	
 <!-- Colors -->
 	<variable name="color:Main">
 		<value condition="!String.IsEmpty(Skin.String(setcolor.main))">$INFO[Skin.String(setcolor.main)]</value>
@@ -83,6 +84,23 @@
 	<variable name="color:Text.3">
 		<value condition="!String.IsEmpty(Skin.String(setcolor.text.3))">$INFO[Skin.String(setcolor.text.3)]</value>
 		<value>Text.3</value>
+	</variable>
+
+	<variable name="color:Home.1">
+		<value condition="String.IsEqual(Skin.String(home.fx),color)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value>$VAR[color:Accent]</value>
+	</variable>
+
+	<variable name="color:Home.2">
+		<value condition="String.IsEqual(Skin.String(home.fx),color)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value>$VAR[color:Accent]</value>
+	</variable>
+
+
+
+	<variable name="color:Home.Opacity">
+		<value condition="Container(9000).HasFocus() + String.IsEqual(Skin.String(home.fx),color)">30</value>
+		<value condition="String.IsEqual(Skin.String(home.fx,color))">30</value>
 	</variable>
 
 

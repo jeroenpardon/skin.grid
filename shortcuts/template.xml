@@ -229,15 +229,15 @@
 	<other include="widget_Mixed">
 		<condition tag="property" attribute="name|widgetPath"></condition>
 		<propertyGroup>widget_Commons</propertyGroup>
-		<property name="height" tag="property" attribute="name|widgetLayout" value="fullscreen">1080</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="fullscreen">972</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="wide">810</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="landscape">389</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="thumbnail">389</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="portrait">496</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="square">336</property>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="banner">190</property>
-		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="fullscreen">1344</property>
-		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="wide">1344</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="fullscreen">1920</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="wide">1920</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="landscape">672</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="thumbnail">672</property>
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="portrait">336</property>
