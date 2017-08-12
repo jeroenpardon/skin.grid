@@ -2,12 +2,15 @@
 <window>
 	<defaultcontrol></defaultcontrol>
 
-	<onload>RunScript(script.grab.fanart,mode=random,refresh=20)</onload>
+	<onload>RunScript(script.grab.fanart,mode=random,refresh=30)</onload>
 
-	<onload condition="System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)]">RunScript(script.colorbox,daemon=True)</onload>
+	<onload condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">SetProperty(SubMenuIsOpen,false,Home)</onload>
+
+	<onload condition="System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)]">RunScript(script.colorbox,daemon=True)</onload>
 
 	<onload>SetProperty(FIVE_daemon_set,blur,home)</onload>
 	<onload>SetProperty(NINE_manual_set,"var=quality,set=8|var=blursize,set=8|var=bitsize,set=1|var=pixelsize,set=10|var=black,set=000000|var=white,set=ffffff",home)</onload>
+
 
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,20)</onload>
 

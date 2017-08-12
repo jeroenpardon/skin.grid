@@ -4,7 +4,7 @@
 	<include file="Expressions.xml" />
 	<include file="HomeMenu.xml" />
 	<include file="Includes_Animations.xml" />
-	<include file="Includes_Feed.xml" />
+	<include file="Includes_Home.xml" />
 	<include file="Includes_Menu.xml" />
 	<include file="Includes_OSD.xml" />
 	<include file="Includes_Window.xml" />

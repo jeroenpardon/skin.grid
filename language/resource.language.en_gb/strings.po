@@ -57,19 +57,10 @@ msgid "Reset all menu items to defaults"
 msgstr ""
 
 #. example usage: name of a home menu layout option
-msgctxt "#31023"
-msgid "Vertical - Minimal"
-msgstr ""
-
-#. example usage: name of a home menu layout option
-msgctxt "#31024"
-msgid "Vertical - Stream"
-msgstr ""
-
-#. example usage: name of a home menu layout option
 msgctxt "#31025"
-msgid "Stream"
+msgid "Compact"
 msgstr ""
+
 
 
 #: widgets
@@ -154,6 +145,13 @@ msgctxt "#31056"
 msgid "Pictures slideshow"
 msgstr ""
 
+msgctxt "#31057"
+msgid "Horizontal"
+msgstr ""
+
+msgctxt "#31058"
+msgid "Vertical"
+msgstr ""
 
 msgctxt "#31059"
 msgid "Developer"

@@ -1,45 +1,5 @@
 <includes>
 
-	<include name="home_Feed">
-		<definition>
-			<param name="Left" default="0"/>
-			<param name="OnLeft" default="noop"/>
-			<param name="OnRight" default="noop"/>
-			<param name="OnUp" default="noop"/>
-			<param name="OnDown" default="noop"/>
-
-			<control type="image">
-				<left>128</left>
-				<width>1792</width>
-				<include>screen_Height</include>
-				<texture colordiffuse="ff000000">colorize/white.png</texture>
-				<aspectratio>stretch</aspectratio>
-				<visible>String.IsEqual(Skin.String(homemenu.type),stream)</visible>
-			</control>
-
-			<control type="grouplist" id="9100">
-				<left>$PARAM[Left]</left>
-				<itemgap>0</itemgap>
-				<orientation>vertical</orientation>
-				<width>1920</width>
-				<height>100%</height>
-				<onup>$PARAM[OnUp]</onup>
-				<ondown>$PARAM[OnDown]</ondown>
-				<onleft>$PARAM[OnLeft]</onleft>
-				<onright>$PARAM[OnRight]</onright>
-				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">home_Menu-Horizontal</include>
-				<include condition="String.IsEqual(Skin.String(homemenu.type),vertical)">skinshortcuts-template-widget_Regular</include>
-				<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">skinshortcuts-template-widget_Mixed</include>
-				<include condition="String.IsEqual(Skin.String(homemenu.type),stream)">skinshortcuts-template-widget_Stream</include>
-				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.type),vertical)">
-					<effect type="slide" time="500" start="0"  end="-1920" tween="cubic" easing="InOut" center="auto" />
-					<effect type="Fade" time="500" start="0" end="100" tween="cubic" easing="InOut"/>
-				</animation>
-			</control>
-		</definition>
-	</include>
-
 	<include name="home_Vertical">
 		<include content="background_Home">
 			<param name="GridTexture">overlays/home.png</param>
@@ -47,21 +7,26 @@
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
 		</include>
 		<include>home_Menu-vertical</include>
-		
-		<!-- Feed container-->
 		<include content="home_Feed">
 			<param name="Left">1920</param>
 			<param name="OnLeft">9000</param>
 		</include>
 	</include>
 
+	<include name="home_Stream">
+		<include content="background_Global">
+			<param name="GridTexture">overlays/108.png</param>
+		</include>
+		<include>home_Menu-stream</include>		
+		<include content="home_Feed">
+			<param name="Left">128</param>
+			<param name="OnLeft">9000</param>
+		</include>
+	</include>
+
 	<include name="home_Horizontal">
-		<param name="Top" default="0"/>
-		<param name="Left" default="0"/>
 		<definition>
 			<control type="group">
-				<top>$PARAM[Top]</top>
-				<left>$PARAM[Left]</left>
 				<width>1920</width>
 
 				<!-- Background_Slideshow-->
@@ -84,7 +49,7 @@
 					<texture>$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
 					<fadetime>300</fadetime>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
-					<visible>System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)]</visible>
+					<visible>!String.IsEqual(Skin.String(home.fx),coloronly)</visible>
 				</control>
 				<control type="image">
 					<include>screen_Dimensions</include>
@@ -92,8 +57,18 @@
 					<fadetime>300</fadetime>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
 					<include>fadeinout</include>
-					<visible>!Control.HasFocus(9000) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)]</visible>
+					<visible>!Control.HasFocus(9000) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)]</visible>
 				</control>
+
+				<control type="image">
+					<bottom>0</bottom>
+					<width>1920</width>
+					<height>540</height>
+					<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">overlays/home_horizontal.png</texture>
+					<aspectratio align="center" aligny="bottom">scale</aspectratio>
+				</control>
+
+
 				<control type="image">
 					<width>1920</width>
 					<height>1080</height>
@@ -110,15 +85,17 @@
 					<texture colordiffuse="ff000000">colorize/25.png</texture>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 				</control>
+
 				<!-- Horizontal home window chrome -->
 				<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">global_WindowChrome</include>
 
 				<!-- Feed container-->
 				<include content="home_Feed">
 					<param name="Left">0</param>
+					<param name="OnUp">SetFocus(9050)</param>
 				</include>
 
-				<!-- Widget scroll indicators -->
+				<!-- Widget scroll indicators 
 				<control type="label">
 					<right>10</right>
 					<top>10</top>
@@ -147,27 +124,80 @@
 					<visible>!String.IsEqual(Skin.String(homemenu.type),horizontal)</visible>
 					<visible>Container(9100).HasNext + IntegerGreaterThan(Container(9100).NumItems,1)</visible>
 				</control>
+				-->
 			</control>
+			
+			<!-- Horizontal home, vertical submenu -->
+			<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">home_SubMenu-Vertical</include>
+
 		</definition>
 	</include>
 
 	<include name="home_Compact">
 		<definition>
-
-			<!-- Background -->
 			<include content="background_Home">
 				<param name="GridTexture">overlays/108.png</param>
 			</include>
-
 			<include>home_Menu-stream</include>
-
-			<!-- Feed container-->
+			
 			<include content="home_Feed">
 				<param name="Left">128</param>
 				<param name="Width">1792</param>
 				<param name="OnLeft">9000</param>
 			</include>
+			<control type="label">
+				<left>0</left>
+				<top>0</top>
+				<width>128</width>
+				<height>108</height>
+				<label>ddddd$INFO[System.Time(hh)]</label>
+				<font>Black-28</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<textcolor>red</textcolor>
+			</control>
+		</definition>
+	</include>
 
+
+	<include name="home_Feed">
+		<definition>
+			<param name="Left" default="0"/>
+			<param name="OnLeft" default="noop"/>
+			<param name="OnRight" default="noop"/>
+			<param name="OnUp" default="noop"/>
+			<param name="OnDown" default="noop"/>
+
+			<control type="image">
+				<left>128</left>
+				<width>1792</width>
+				<include>screen_Height</include>
+				<texture colordiffuse="ff000000">colorize/white.png</texture>
+				<aspectratio>stretch</aspectratio>
+				<visible>String.IsEqual(Skin.String(homemenu.type),compact)</visible>
+			</control>
+
+			<!--Horizontal home, horizontal submenu -->
+			<control type="grouplist" id="9100">
+				<left>$PARAM[Left]</left>
+				<itemgap>0</itemgap>
+				<orientation>vertical</orientation>
+				<width>1920</width>
+				<onup condition="!String.IsEqual(Skin.String(homemenu.type),horizontal)">noop</onup>
+				<onup condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">9050</onup>
+				<ondown>noop</ondown>
+				<onleft>$PARAM[OnLeft]</onleft>
+				<onright>$PARAM[OnRight]</onright>
+				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">home_Menu-Horizontal</include>
+				<include condition="String.IsEqual(Skin.String(homemenu.type),vertical)">skinshortcuts-template-widget_Regular</include>
+				<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">skinshortcuts-template-widget_Mixed</include>
+				<include condition="String.IsEqual(Skin.String(homemenu.type),compact)">skinshortcuts-template-widget_Stream</include>
+				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.type),vertical)">
+					<effect type="slide" time="500" start="0"  end="-1920" tween="cubic" easing="InOut" center="auto" />
+					<effect type="Fade" time="500" start="0" end="100" tween="cubic" easing="InOut"/>
+				</animation>
+			</control>
 		</definition>
 	</include>
 

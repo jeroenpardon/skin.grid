@@ -7,13 +7,13 @@
 	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31328]"/>
 
 	<!-- Home menu layout -->
-	<setting id="homemenu.type" value="vertical" label="$LOCALIZE[31023]" default="true">
+	<setting id="homemenu.type" value="vertical" label="$LOCALIZE[31058]" default="true">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
-	<setting id="homemenu.type" value="horizontal" label="$LOCALIZE[31024]">
+	<setting id="homemenu.type" value="horizontal" label="$LOCALIZE[31057]">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
-	<setting id="homemenu.type" value="stream" label="$LOCALIZE[31025]">
+	<setting id="homemenu.type" value="compact" label="$LOCALIZE[31025]">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
 
@@ -32,14 +32,22 @@
 	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31353]"/>
 
 	<!-- Home blur effects -->
-	<setting id="home.fx" value="none" label="$LOCALIZE[13113]" default="true"/>
+	<setting id="home.fx" value="none" label="$LOCALIZE[13113]" default="true">
+		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=ActivateWindow(startup),noaction=Close)</onselect>
+	</setting>
 	<setting id="home.fx" value="blur" label="$LOCALIZE[31377]">
 		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=ActivateWindow(startup),noaction=Close)</onselect>
 	</setting>
 	<setting id="home.fx" value="color" label="$LOCALIZE[31378]">
 		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=|ActivateWindow(startup),noaction=Close)</onselect>
 	</setting>
+	<setting id="home.fx" value="coloronly" label="color only">
+		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=|ActivateWindow(startup),noaction=Close)</onselect>
+	</setting>
 
+	<!-- Horizontal home submenu orientation-->
+	<setting id="submenu.type" value="horizontal" label="horizontal" default="true"/>
+	<setting id="submenu.type" value="vertical" label="$LOCALIZE[31058]"/>
 
 	<!-- Home background type -->
 	<setting id="background.home" value="none" label="$LOCALIZE[36502]"/>

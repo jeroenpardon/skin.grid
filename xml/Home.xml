@@ -5,6 +5,8 @@
 	<!--<onload condition="!Skin.HasSetting(FirstRunWidgets)">ActivateWindow(1106)</onload>-->
 	<onload>AlarmClock(LoadHome,SetProperty(HomeInit,true),0:03,silent)</onload>
 
+	<onload>SetProperty(SubMenuIsOpen,false,Home)</onload>
+
 	<!-- Skin Shortcuts -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
 	
@@ -23,10 +25,21 @@
 			<font></font>
 			<label>$INFO[Weather.Conditions]</label>
 		</control>
+
+		<!-- Main menu layouts -->
+		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Vertical</include>
 		
-		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical)">home_Vertical</include>
 		<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">home_Horizontal</include>
-		<include condition="String.IsEqual(Skin.String(homemenu.type),stream)">home_Compact</include>
+		
+		<include content="home_Stream" condition="String.IsEqual(Skin.String(homemenu.type),compact) + Skin.HasSetting(home.clock)">
+			<param name="Top">108</param>
+			<param name="Height">972</param>
+		</include>
+		
+		<include content="home_Stream" condition="String.IsEqual(Skin.String(homemenu.type),compact) + !Skin.HasSetting(home.clock)">
+			<param name="Top">0</param>
+			<param name="Height">screen_Height</param>
+		</include>
 
 		<!-- Post startup -->
 		<control type="group">
@@ -77,6 +90,6 @@
 			<left>-2160</left>
 			<imagepath background="true">$VAR[background:Home]</imagepath>
 		</control>
-
+		
 	</controls>
 </window>
