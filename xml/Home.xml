@@ -30,16 +30,8 @@
 		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Vertical</include>
 		
 		<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">home_Horizontal</include>
-		
-		<include content="home_Compact" condition="String.IsEqual(Skin.String(homemenu.type),compact) + Skin.HasSetting(home.clock)">
-			<param name="Top">108</param>
-			<param name="Height">972</param>
-		</include>
-		
-		<include content="home_Compact" condition="String.IsEqual(Skin.String(homemenu.type),compact) + !Skin.HasSetting(home.clock)">
-			<param name="Top">0</param>
-			<param name="Height">screen_Height</param>
-		</include>
+
+		<include condition="String.IsEqual(Skin.String(homemenu.type),compact)">home_Compact</include>
 
 		<!-- Post startup -->
 		<control type="group">
