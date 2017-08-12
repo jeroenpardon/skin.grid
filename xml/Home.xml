@@ -31,12 +31,12 @@
 		
 		<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">home_Horizontal</include>
 		
-		<include content="home_Stream" condition="String.IsEqual(Skin.String(homemenu.type),compact) + Skin.HasSetting(home.clock)">
+		<include content="home_Compact" condition="String.IsEqual(Skin.String(homemenu.type),compact) + Skin.HasSetting(home.clock)">
 			<param name="Top">108</param>
 			<param name="Height">972</param>
 		</include>
 		
-		<include content="home_Stream" condition="String.IsEqual(Skin.String(homemenu.type),compact) + !Skin.HasSetting(home.clock)">
+		<include content="home_Compact" condition="String.IsEqual(Skin.String(homemenu.type),compact) + !Skin.HasSetting(home.clock)">
 			<param name="Top">0</param>
 			<param name="Height">screen_Height</param>
 		</include>
@@ -90,6 +90,6 @@
 			<left>-2160</left>
 			<imagepath background="true">$VAR[background:Home]</imagepath>
 		</control>
-		
+
 	</controls>
 </window>

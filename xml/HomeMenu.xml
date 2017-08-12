@@ -387,7 +387,7 @@
 		</definition>
 	</include>
 
-	<include name="home_Menu-stream">
+	<include name="home_Menu-compact">
 		<param name="ID" default="9000"/>
 		<definition>
 			<control type="list" id="9000">
@@ -401,6 +401,7 @@
 				<ondown>9000</ondown>
 				<include>global_ListScroll</include>
 				<orientation>vertical</orientation>
+				<!--
 				<animation effect="slide" end="0,756" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,1)">Conditional</animation>
 				<animation effect="slide" end="0,648" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,2)">Conditional</animation>
 				<animation effect="slide" end="0,540" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,3)">Conditional</animation>
@@ -409,6 +410,7 @@
 				<animation effect="slide" end="0,216" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,6)">Conditional</animation>
 				<animation effect="slide" end="0,108" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,7)">Conditional</animation>
 				<animation effect="slide" end="0,0" time="0" condition="Integer.IsGreaterOrEqual(Container($PARAM[ID]).NumItems,8)">Conditional</animation>
+				-->
 				<itemlayout width="128" height="108">
 					<control type="label">
 						<width>128</width>
