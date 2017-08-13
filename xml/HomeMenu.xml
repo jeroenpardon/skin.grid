@@ -11,8 +11,9 @@
 			<onright condition="Integer.IsGreater(ControlGroup(9100).NumItems(0))">SetFocus(9100)</onright>
 			<ondown>9000</ondown>
 			<orientation>vertical</orientation>
+			<include>transition_Background</include>
 			<include>global_ListScroll</include>
-			<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.type),vertical)">
+			<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.layout),vertical)">
 				<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="none"/>
 			</animation>
 			<animation effect="slide" end="0,98" time="0" condition="String.IsEqual(Container(9000).NumItems,7)">Conditional</animation>
@@ -166,7 +167,6 @@
 				 <include>skinshortcuts-allmenus</include>
 			</content>
 		</control>
-
 		<include content="home_Status">
 			<param name="Left">128"</param>
 			<param name="Width">1772"</param>
@@ -179,11 +179,12 @@
 				<left>0</left>
 				<width>1920</width>
 				<height>1080</height>
-				<onup>noop</onup>
+				<onup>9000</onup>
 				<onleft>9050</onleft>
 				<onright>9100</onright>
 				<ondown>9000</ondown>
 				<focusposition>1</focusposition>
+				<include>transition_Home</include>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>				
 				<itemlayout width="640" height="1080">
@@ -204,7 +205,7 @@
 						<textoffsetx>24</textoffsetx>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>$VAR[color:Home.1]</textcolor>
+						<textcolor>$VAR[color:HomeText.1]</textcolor>
 						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 				</itemlayout>
@@ -227,7 +228,7 @@
 							<textoffsetx>24</textoffsetx>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[color:Home.1]</textcolor>
+							<textcolor>$VAR[color:HomeText.1]</textcolor>
 							<animation effect="fade" end="35" condition="true">Conditional</animation>
 						</control>
 					</control>
@@ -249,7 +250,7 @@
 							<textoffsetx>24</textoffsetx>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[color:Home.1]</textcolor>
+							<textcolor>$VAR[color:HomeText.1]</textcolor>
 						</control>
 					</control>
 				</focusedlayout>
@@ -333,7 +334,7 @@
 						<font>Black-32</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>$VAR[color:Home.1]</textcolor>
+						<textcolor>$VAR[color:HomeText.1]</textcolor>
 						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 				</itemlayout>
@@ -355,7 +356,7 @@
 							<font>Black-32</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[color:Home.1]</textcolor>
+							<textcolor>$VAR[color:HomeText.1]</textcolor>
 							<animation effect="fade" end="35" condition="true">Conditional</animation>
 						</control>
 					</control>
@@ -376,7 +377,7 @@
 							<font>Black-32</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[color:Home.1]</textcolor>
+							<textcolor>$VAR[color:HomeText.1]</textcolor>
 						</control>
 					</control>
 				</focusedlayout>

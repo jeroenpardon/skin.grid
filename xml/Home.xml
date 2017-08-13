@@ -27,11 +27,9 @@
 		</control>
 
 		<!-- Main menu layouts -->
-		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Vertical</include>
-		
-		<include condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">home_Horizontal</include>
-
-		<include condition="String.IsEqual(Skin.String(homemenu.type),compact)">home_Compact</include>
+		<include condition="String.IsEqual(Skin.String(homemenu.layout),vertical) | String.IsEmpty(Skin.String(homemenu.layout))">home_Vertical</include>
+		<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">home_Horizontal</include>
+		<include condition="String.IsEqual(Skin.String(homemenu.layout),compact)">home_Compact</include>
 
 		<!-- Post startup -->
 		<control type="group">

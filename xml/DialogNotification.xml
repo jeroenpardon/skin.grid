@@ -29,7 +29,7 @@
 		<control type="group">
 			<visible>Window.IsActive(home)</visible>
 			<!--
-			<include content="global_Notification" condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">
+			<include content="global_Notification" condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">
 				<param name="Left">0</param>
 				<param name="Height">98</param>
 				<param name="Width">566</param>
@@ -43,7 +43,7 @@
 				<param name="TextColor">$VAR[color:Main]</param>
 			</include>
 			-->
-			<include content="global_Notification" condition="String.IsEqual(Skin.String(homemenu.type),vertical)">
+			<include content="global_Notification" condition="String.IsEqual(Skin.String(homemenu.layout),vertical)">
 				<param name="Left">1036</param>
 				<param name="Height">98</param>
 				<param name="Width">756</param>
@@ -55,7 +55,7 @@
 				<param name="ProgressInfo"></param>
 				<param name="TextColor">$VAR[color:Main]</param>
 			</include>
-			<include content="global_Notification" condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">
+			<include content="global_Notification" condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">
 				<param name="Left">1036</param>
 				<param name="Height">108</param>
 				<param name="Width">756</param>

@@ -12,7 +12,7 @@
 				<include>screen_Dimensions</include>
 				<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),compact)</visible>
+				<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 			</control>
 
 			<control type="group">
@@ -31,7 +31,7 @@
 					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
 						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
 					</animation>
-					<visible>!String.IsEqual(Skin.String(background.home),none) + !String.IsEqual(Skin.String(homemenu.type),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
+					<visible>!String.IsEqual(Skin.String(background.home),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
 
 				<control type="image">
@@ -41,7 +41,7 @@
 					<fadetime>300</fadetime>
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 					<include>fadeinout</include>
-					<visible>!String.IsEqual(Skin.String(homemenu.type),compact)</visible>
+					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 					<visible>!Control.HasFocus(9000)</visible>
 					<visible>System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)]</visible>
 				</control>
@@ -61,7 +61,7 @@
 
 				<!-- Overlay -->
 				<control type="group">
-					<visible>String.IsEqual(Skin.String(homemenu.type),vertical)</visible>
+					<visible>String.IsEqual(Skin.String(homemenu.layout),vertical)</visible>
 					<control type="image">
 						<include>screen_Dimensions</include>
 						<texture background="true" diffuse="$PARAM[DiffuseTexture]">overlays/background.png</texture>
@@ -105,7 +105,7 @@
 					<include>screen_Dimensions</include>
 					<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<visible>String.IsEqual(Skin.String(background.global),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),compact)</visible>
+					<visible>String.IsEqual(Skin.String(background.global),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
 				
 				<control type="multiimage">
@@ -131,7 +131,7 @@
 					<include>fadeinout</include>
 					<texture background="true">$VAR[background:Path]</texture>
 					<visible>![Container.Scrolling + Skin.HasSetting(fanart.scrolling)]</visible>
-					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
+					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.layout),vertical)]</visible>
 					<visible>String.IsEqual(Skin.String(background.global),fanart) | String.IsEqual(Skin.String(background.global),videofanart)</visible>
 				</control>
 				
@@ -158,7 +158,7 @@
 
 	<include name="background_Video">
 		<control type="group">
-			<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + ![String.IsEqual(Skin.String(homemenu.type),compact) + Window.IsActive(home)]</visible>
+			<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + ![String.IsEqual(Skin.String(homemenu.layout),compact) + Window.IsActive(home)]</visible>
 			<control type="image">
 				<aspectratio>stretch</aspectratio>
 				<include>screen_Dimensions</include>
@@ -355,9 +355,9 @@
 						<font>Regular-22-L</font>
 						<align>right</align>
 						<aligny>center</aligny>
-						<textcolor>$VAR[color:Text.3]</textcolor>
+						<textcolor>$VAR[color:Home.3]</textcolor>
 						<texturenofocus></texturenofocus>
-						<visible>!String.IsEqual(Skin.String(homemenu.type),compact)</visible>
+						<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 						<visible>$EXP[!Window.HasOverlay]</visible>
 						<visible>!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia + [Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),home)]] | [!Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),nohome)]]</visible>
 						<animation effect="slide" end="128" time="0" condition="!Skin.HasSetting(home.clock) + Window.IsActive(home)">Conditional</animation>

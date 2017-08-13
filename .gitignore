@@ -8,3 +8,4 @@ build/skin.grid/
 fonts/.DS_Store
 .DS_Store
 .tx/config
+*.vfb

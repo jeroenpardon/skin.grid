@@ -4,7 +4,7 @@
 
 	<onload>RunScript(script.grab.fanart,mode=random,refresh=30)</onload>
 
-	<onload condition="String.IsEqual(Skin.String(homemenu.type),horizontal)">SetProperty(SubMenuIsOpen,false,Home)</onload>
+	<onload condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">SetProperty(SubMenuIsOpen,false,Home)</onload>
 
 	<onload condition="System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)]">RunScript(script.colorbox,daemon=True)</onload>
 
@@ -26,7 +26,7 @@
 	<onload condition="String.IsEmpty(Skin.String(epg.scrollspeed))">Skin.SetString(epg.scrollspeed,normal)</onload>
 	<onload condition="String.IsEmpty(Skin.String(global.scrolltype))">Skin.SetString(global.scrolltype,active)</onload>
 	<onload condition="String.IsEmpty(Skin.String(home.status))">Skin.SetString(home.status,none)</onload>
-	<onload condition="String.IsEmpty(Skin.String(homemenu.type))">Skin.SetString(homemenu.type,vertical)</onload>
+	<onload condition="String.IsEmpty(Skin.String(homemenu.layout))">Skin.SetString(homemenu.layout,vertical)</onload>
 
 	<onload condition="String.IsEmpty(Skin.String(ratings.music))">Skin.SetString(ratings.music,disabled)</onload>
 	<onload condition="String.IsEmpty(Skin.String(ratings.overlay))">Skin.SetString(ratings.overlay,disabled)</onload>

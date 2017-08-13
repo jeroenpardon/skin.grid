@@ -113,7 +113,7 @@
 	</propertyGroup>
 
 
-	<other include="widget_Regular">
+	<other include="widget_Vertical">
 		<condition tag="property" attribute="name|widgetPath"></condition>
 		<propertyGroup>widget_Commons</propertyGroup>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="fullscreen">1080</property>
@@ -170,7 +170,7 @@
 		</controls>
 	</other>
 
-	<other include="widget_Stream">
+	<other include="widget_Compact">
 		<condition tag="property" attribute="name|widgetPath"></condition>
 		<propertyGroup>widget_Commons</propertyGroup>
 		<property name="height" tag="property" attribute="name|widgetLayout" value="fullscreen">1080</property>
@@ -215,6 +215,64 @@
 					<param name="FrameHeight" value="$SKINSHORTCUTS[frameheight]"/>
 					<param name="Art" value="$SKINSHORTCUTS[art]"/>
 					<param name="Info" value="$SKINSHORTCUTS[info]"/>
+					<param name="TextWidth" value="$PYTHON[int(itemwidth) - 64]"/>
+					<param name="BigInfo" value="$SKINSHORTCUTS[biginfo]"/>
+					<param name="ShortInfo" value="$SKINSHORTCUTS[shortinfo]"/>
+					<param name="Overlay" value="$SKINSHORTCUTS[overlay]"/>
+					<param name="Logo" value="$SKINSHORTCUTS[logo]"/>
+				</include>
+				<content target="$SKINSHORTCUTS[target]" sortby="$SKINSHORTCUTS[sortmethod]" sortorder="$SKINSHORTCUTS[sortdirection]">$SKINSHORTCUTS[path]</content>
+			</control>
+		</controls>
+	</other>
+
+	<other include="widget_Horizontal">
+		<condition tag="property" attribute="name|widgetPath"></condition>
+		<propertyGroup>widget_Commons</propertyGroup>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="fullscreen">1080</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="wide">810</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="landscape">389</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="thumbnail">389</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="portrait">496</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="square">336</property>
+		<property name="height" tag="property" attribute="name|widgetLayout" value="banner">190</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="fullscreen">1920</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="wide">1920</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="landscape">672</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="thumbnail">672</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="portrait">336</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="square">336</property>
+		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="banner">960</property>
+		<controls>
+			<include content="widget_Header">
+				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
+				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
+				<param name="WidgetHeader">[B]$SKINSHORTCUTS[name][/B] - $SKINSHORTCUTS[header]</param>
+				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
+				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
+				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
+				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
+			</include>
+			<control type="list" id="1000$SKINSHORTCUTS[id]">
+				<width>1920</width>
+				<height>$SKINSHORTCUTS[height]</height>
+				<onleft>9000</onleft>
+				<onback>9000</onback>
+				<orientation>horizontal</orientation>
+				<preloaditems>2</preloaditems>
+				<include>global_Scrolltime</include>
+				<include>fadeinout</include>
+				<visible>Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating | String.IsEmpty(Window(Home).Property(WidgetIsLoading))</visible>
+				<include content="widget_Layout">
+					<param name="ID" value="1000$SKINSHORTCUTS[id]"/>
+					<param name="Height" value="$SKINSHORTCUTS[height]"/>
+					<param name="ItemWidth" value="$SKINSHORTCUTS[itemwidth]"/>
+					<param name="FrameWidth" value="$PYTHON[int(itemwidth) - 20]"/>
+					<param name="FrameHeight" value="$SKINSHORTCUTS[frameheight]"/>
+					<param name="Art" value="$SKINSHORTCUTS[art]"/>
+					<param name="Info" value="$SKINSHORTCUTS[info]"/>
+					<param name="BigInfoFont" value="Black-42"/>
+					<param name="BigInfoFont2" value="Black-24"/>
 					<param name="TextWidth" value="$PYTHON[int(itemwidth) - 64]"/>
 					<param name="BigInfo" value="$SKINSHORTCUTS[biginfo]"/>
 					<param name="ShortInfo" value="$SKINSHORTCUTS[shortinfo]"/>

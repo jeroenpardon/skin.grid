@@ -86,7 +86,19 @@
 		<value>Text.3</value>
 	</variable>
 
+
+	<variable name="color:Home.0">
+		<value condition="String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value>dd000000</value>
+	</variable>
+
 	<variable name="color:Home.1">
+		<value condition="String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value>dd000000</value>
+	</variable>
+
+
+	<variable name="color:HomeText.1">
 		<value condition="String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
 		<value>$VAR[color:Accent]</value>
 	</variable>
@@ -94,6 +106,11 @@
 	<variable name="color:Home.2">
 		<value condition="String.IsEqual(Skin.String(home.fx),color)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
 		<value>$VAR[color:Accent]</value>
+	</variable>
+
+	<variable name="color:Home.3">
+		<value condition="Window.IsActive(Home) + [String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)]">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value>$VAR[color:Text.2]</value>
 	</variable>
 
 

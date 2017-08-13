@@ -7,13 +7,13 @@
 	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31328]"/>
 
 	<!-- Home menu layout -->
-	<setting id="homemenu.type" value="vertical" label="$LOCALIZE[31058]" default="true">
+	<setting id="homemenu.layout" value="vertical" label="$LOCALIZE[31058]" default="true">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
-	<setting id="homemenu.type" value="horizontal" label="$LOCALIZE[31057]">
+	<setting id="homemenu.layout" value="horizontal" label="$LOCALIZE[31057]">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
-	<setting id="homemenu.type" value="compact" label="$LOCALIZE[31025]">
+	<setting id="homemenu.layout" value="compact" label="$LOCALIZE[31025]">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
 
