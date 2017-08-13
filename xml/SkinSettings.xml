@@ -48,7 +48,7 @@
 					<include>settings_Menu</include>
 					<label>$LOCALIZE[128]</label>
 					<onfocus>Skin.SetString(category,general)</onfocus>
-					<onright>9100</onright>
+					<onright>9105</onright>
 				</control>
 
 				<!--Menus-->
@@ -112,7 +112,7 @@
 				<left>448</left>
 
 				<!-- General -->                    
-				<control type="grouplist" id="9100">
+				<control type="grouplist" id="9105">
 					<width>1216</width>
 					<height>810</height>
 					<onleft>9001</onleft>
@@ -125,7 +125,7 @@
 
 					<!-- Playback -->
 					<control type="label" id="9110">
-						<label>$LOCALIZE[14125]</label>
+						<label>$LOCALIZE[14086]</label>
 						<include>global_Header</include>
 					</control>
 					<!-- Startup playlist-->
@@ -356,15 +356,6 @@
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<!-- Fanart source -->
-					<control type="button" id="9322">
-						<label>- $LOCALIZE[31367]</label>
-						<label2>$INFO[Skin.String(fanart.source.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=fanart.source,header=$LOCALIZE[31367])</onclick>
-						<include>install_HelperService</include>
-						<include>button_Settings</include>
-						<visible>String.IsEqual(Skin.String(background.home),fanart)</visible>
-					</control>
 					<!-- Custom image(s) select -->
 					<control type="button" id="9323">
 						<label>- $LOCALIZE[31364]</label>
@@ -377,10 +368,10 @@
 					<!-- Fanart logo -->
 					<control type="radiobutton" id="9324">
 						<label>$LOCALIZE[31231]</label>
-						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(fanart.sourcelogo),noaction=Close)</onclick>
-						<selected>Skin.HasSetting(fanart.sourcelogo)</selected>
+						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(home.logo),noaction=Close)</onclick>
+						<selected>Skin.HasSetting(home.logo)</selected>
 						<include>radio_Settings</include>
-						<visible>String.IsEqual(Skin.String(background.home),fanart)</visible>
+						<visible>String.StartsWith(Skin.String(background.home),fanart-)</visible>
 					</control>
 					<!-- Playing item on home -->
 					<control type="radiobutton" id="9325">
@@ -766,6 +757,26 @@
 					</control>
 
 					<!-- Blur effects -->
+					<control type="radiobutton" id="9630">
+						<label>$LOCALIZE[31379]</label>
+						<label2>$INFO[Skin.String(global.fx.enable)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(global.fx.enable)</onclick>
+						<selected>Skin.HasSetting(global.fx.enable)</selected>
+						<include>install_Colorbox</include>
+						<include>radio_Settings</include>
+					</control>
+					<control type="radiobutton" id="9631">
+						<label>- $LOCALIZE[31227]</label>
+						<label2>$INFO[Skin.String(global.fx.enable)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(global.fx.restrict)</onclick>
+						<selected>Skin.HasSetting(global.fx.restrict)</selected>
+						<include>install_Colorbox</include>
+						<include>radio_Settings</include>
+						<visible>Skin.HasSetting(global.fx.enable)</visible>
+					</control>
+
+
+					<!-- Blur effects -->
 					<control type="button" id="9611">
 						<label>$LOCALIZE[31376]</label>
 						<label2>$INFO[Skin.String(home.fx.Label)]</label2>
@@ -782,7 +793,7 @@
 					</control>
 
 					<!-- Animated backgrounds -->
-					<control type="radiobutton" id="9630">
+					<control type="radiobutton" id="9640">
 						<label>$LOCALIZE[31365] ($LOCALIZE[31326])</label>
 						<onclick>Skin.ToggleSetting(burns.enable)</onclick>
 						<selected>Skin.HasSetting(burns.enable)</selected>
@@ -790,13 +801,13 @@
 					</control>
 
 					<!-- Animated artwork -->
-					<control type="radiobutton" id="9640">
+					<control type="radiobutton" id="9650">
 						<label>$LOCALIZE[31226] ($LOCALIZE[31326])</label>
 						<onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
 						<selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
 						<include>radio_Settings</include>
 					</control>
-					<control type="radiobutton" id="9641">
+					<control type="radiobutton" id="9651">
 						<label>- $LOCALIZE[31227]</label>
 						<onclick>Skin.ToggleSetting(art.animated.info)</onclick>
 						<selected>Skin.HasSetting(art.animated.info)</selected>
@@ -804,24 +815,7 @@
 						<visible>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</visible>
 					</control>
 
-					<!-- Blur effects -->
-					<control type="radiobutton" id="9650">
-						<label>$LOCALIZE[31379]</label>
-						<label2>$INFO[Skin.String(blur.enable)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(blur.enable)</onclick>
-						<selected>Skin.HasSetting(blur.enable)</selected>
-						<include>install_Colorbox</include>
-						<include>radio_Settings</include>
-					</control>
-					<control type="radiobutton" id="9651">
-						<label>- $LOCALIZE[31227]</label>
-						<label2>$INFO[Skin.String(blur.enable)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(blur.enable)</onclick>
-						<selected>Skin.HasSetting(blur.enable.info)</selected>
-						<include>install_Colorbox</include>
-						<include>radio_Settings</include>
-						<visible>Skin.HasSetting(blur.enable)</visible>
-					</control>
+					
 				</control>
 
 

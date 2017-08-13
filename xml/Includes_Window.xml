@@ -96,8 +96,22 @@
 		<param name="DiffuseTexture"/>
 		<param name="GridTexture" default="overlays/90.png"/>
 		<param name="DiffuseColor"/>
+		<param name="RestrictFX" default="false"/>
 		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)]"/>
 		<definition>
+
+			<!-- Colorbox image -->
+
+			<control type="multiimage" id="7975">
+				<left>-2160</left>
+				<width>1</width>
+				<height>1</height>
+				<timeperimage>10000</timeperimage>
+				<randomize>true</randomize>
+				<fadetime>600</fadetime>
+				<imagepath background="true">$VAR[background:Global]</imagepath>
+			</control>
+
 			<control type="group">
 				<include>transition_Background</include>
 				<!-- No Background -->
@@ -108,9 +122,10 @@
 					<visible>String.IsEqual(Skin.String(background.global),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
 				
+				<!-- Custom slideshow -->
 				<control type="multiimage">
 					<timeperimage>30000</timeperimage>
-					<fadetime>300</fadetime>
+					<fadetime>600</fadetime>
 					<pauseatend>10000</pauseatend>
 					<randomize>true</randomize>
 					<include>screen_Dimensions</include>
@@ -123,10 +138,11 @@
 					<visible>!String.IsEqual(Skin.String(background.global),none)</visible>
 				</control>
 
+				<!-- Fanart background -->
 				<control type="image">
 					<include>screen_Dimensions</include>
 					<include>Burns</include>
-					<fadetime>500</fadetime>
+					<fadetime>600</fadetime>
 					<aspectratio>scale</aspectratio>
 					<include>fadeinout</include>
 					<texture background="true">$VAR[background:Path]</texture>
@@ -138,7 +154,7 @@
 				<!-- Background video -->
 				<include>background_Video</include>
 
-				<!--overlay-->
+				<!-- Overlay -->
 				<control type="group">
 					<control type="image">
 						<include>screen_Dimensions</include>

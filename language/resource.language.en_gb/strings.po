@@ -364,7 +364,7 @@ msgid "Enable animated artwork"
 msgstr ""
 
 msgctxt "#31227"
-msgid "Only in movie information screen"
+msgid "Limit to movie information screen"
 msgstr ""
 
 msgctxt "#31228"
@@ -693,12 +693,23 @@ msgctxt "#31376"
 msgid "Set special effects"
 msgstr ""
 
+#. skin setting that enables a blur effect to the home menu background
 msgctxt "#31377"
 msgid "Blur effect"
 msgstr ""
 
+#. skin setting that enables a blur effect to the home menu background, and changes colours of text and textures to match the fanart image
 msgctxt "#31378"
-msgid "Blur effect and adapting colours"
+msgid "Blur effect and fanart colours"
+msgstr ""
+
+#. skin setting that changes colours of text and textures to match the fanart image
+msgctxt "#31378"
+msgid "Fanart colours only"
+msgstr ""
+
+msgctxt "#31379"
+msgid "Apply blur effect to fanart"
 msgstr ""
 
 

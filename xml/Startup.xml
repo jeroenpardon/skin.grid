@@ -9,17 +9,19 @@
 	<onload condition="System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)]">RunScript(script.colorbox,daemon=True)</onload>
 
 	<onload>SetProperty(FIVE_daemon_set,blur,home)</onload>
+
+	<onload>SetProperty(EIGHT_daemon_set,pixelate,home)</onload>
+
 	<onload>SetProperty(NINE_manual_set,"var=quality,set=8|var=blursize,set=8|var=bitsize,set=1|var=pixelsize,set=10|var=black,set=000000|var=white,set=ffffff",home)</onload>
 
 
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,20)</onload>
 
-	<onload condition="!String.IsEqual(Skin.String(background.home),fanart) + !String.IsEqual(Skin.String(background.home),videofanart)">Skin.SetString(HomeLoaded,True)</onload>
+	<onload condition="!String.IsEqual(Skin.String(home.background),fanart) + !String.IsEqual(Skin.String(home.background),videofanart)">Skin.SetString(HomeLoaded,True)</onload>
 	<onload condition="Skin.HasSetting(startup.playlist)">PlayMedia($INFO[Skin.String(startup.playlist.path)])</onload>
 	<onload condition="String.IsEmpty(Skin.String(autoscroll.speed))">Skin.SetString(autoscroll.speed,none)</onload>
-	<onload condition="String.IsEmpty(Skin.String(background.home)) + [Library.HasContent(movies) | Library.HasContent(tvshows)]">Skin.SetString(background.home,fanart)</onload>
-	<onload condition="String.IsEmpty(Skin.String(background.home)) + [Library.HasContent(movies) | Library.HasContent(tvshows)]">Skin.SetString(fanart.source,video)</onload>
-	<onload condition="String.IsEmpty(Skin.String(background.home)) + !Library.HasContent(movies) + !Library.HasContent(tvshows)">Skin.SetString(background.home,custom)</onload>
+	<onload condition="String.IsEmpty(Skin.String(home.background)) + [Library.HasContent(movies) | Library.HasContent(tvshows)]">Skin.SetString(home.background,fanart-video)</onload>
+	<onload condition="String.IsEmpty(Skin.String(home.background)) + !Library.HasContent(movies) + !Library.HasContent(tvshows)">Skin.SetString(home.background,custom)</onload>
 	<onload condition="String.IsEmpty(Skin.String(background.global)) + [Library.HasContent(movies) | Library.HasContent(tvshows)]">Skin.SetString(background.global,fanart)</onload>
 	<onload condition="String.IsEmpty(Skin.String(date.enabled))">Skin.SetString(date.enabled,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(date.enabled))">Skin.SetString(date.enabled,none)</onload>
