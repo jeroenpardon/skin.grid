@@ -854,7 +854,7 @@
 					</itemlayout>
 					<focusedlayout width="1216" height="90">
 						<control type="group">
-							<visible>Control.HasFocus(600)</visible>
+							<visible>Control.HasFocus(9700)</visible>
 							<include content="view_List-Layout">
 								<param name="DiffuseLevel">75</param>
 								<param name="DiffuseColor">$VAR[color:Accent]</param>
@@ -876,7 +876,7 @@
 						</control>
 						<control type="group">
 							<width>1216</width>
-							<visible>!Control.HasFocus(600)</visible>
+							<visible>!Control.HasFocus(9700)</visible>
 							<include content="view_List-Layout">
 								<param name="ShowArt">true</param>
 								<param name="ShowSymbol">String.IsEmpty(ListItem.Icon)</param>
