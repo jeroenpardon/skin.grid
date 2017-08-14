@@ -11,6 +11,10 @@
 			<param name="Left">1920</param>
 			<param name="OnLeft">9000</param>
 		</include>
+		<include content="global_WindowChrome">
+			<param name="Height">98</param>
+
+		</include>
 	</include>
 
 	<include name="home_Horizontal">
@@ -52,7 +56,6 @@
 						<visible>!Control.HasFocus(9000)</visible>
 					</control>
 				</control>
-
 
 				<control type="image">
 					<bottom>0</bottom>

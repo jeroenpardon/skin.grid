@@ -22,7 +22,7 @@
 	<onload condition="String.IsEmpty(Skin.String(autoscroll.speed))">Skin.SetString(autoscroll.speed,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(home.background)) + [Library.HasContent(movies) | Library.HasContent(tvshows)]">Skin.SetString(home.background,fanart-video)</onload>
 	<onload condition="String.IsEmpty(Skin.String(home.background)) + !Library.HasContent(movies) + !Library.HasContent(tvshows)">Skin.SetString(home.background,custom)</onload>
-	<onload condition="String.IsEmpty(Skin.String(background.global)) + [Library.HasContent(movies) | Library.HasContent(tvshows)]">Skin.SetString(background.global,fanart)</onload>
+	<onload condition="String.IsEmpty(Skin.String(global.background)) + [Library.HasContent(movies) | Library.HasContent(tvshows)]">Skin.SetString(global.background,fanart)</onload>
 	<onload condition="String.IsEmpty(Skin.String(date.enabled))">Skin.SetString(date.enabled,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(date.enabled))">Skin.SetString(date.enabled,none)</onload>
 	<onload condition="String.IsEmpty(Skin.String(epg.scrollspeed))">Skin.SetString(epg.scrollspeed,normal)</onload>

@@ -84,9 +84,9 @@
 
 
 	<!-- Global background type -->
-	<setting id="background.global" value="none" label="$LOCALIZE[36502]"/>
-	<setting id="background.global" value="custom" label="$LOCALIZE[636]" default="true"/>
-	<setting id="background.global" value="fanart" label="$LOCALIZE[31218]"/>
+	<setting id="global.background" value="none" label="$LOCALIZE[36502]"/>
+	<setting id="global.background" value="custom" label="$LOCALIZE[636]" default="true"/>
+	<setting id="global.background" value="fanart" label="$LOCALIZE[31218]"/>
 
 	
 

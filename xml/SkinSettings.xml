@@ -259,6 +259,7 @@
 						<onclick>Skin.ToggleSetting(homemenu.collapse)</onclick>
 						<selected>Skin.HasSetting(homemenu.collapse)</selected>
 						<include>radio_Settings</include>
+						<visible>String.IsEqual(Skin.String(homemenu.layout),vertical)</visible>
 					</control>
 					<!-- Toggle widget names -->
 					<control type="radiobutton" id="9240">
@@ -351,8 +352,8 @@
 					<!-- Background type -->
 					<control type="button" id="9321">
 						<label>$LOCALIZE[31360]</label>
-						<label2>$INFO[Skin.String(background.home.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.home,header=$LOCALIZE[31360])</onclick>
+						<label2>$INFO[Skin.String(home.background.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.background,header=$LOCALIZE[31360])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -363,7 +364,7 @@
 						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=custom.home,header=$LOCALIZE[31364],allowmulti=true,resourceaddon=resource.images.skinbackgrounds)</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
-						<visible>String.IsEqual(Skin.String(background.home),custom)</visible>
+						<visible>String.IsEqual(Skin.String(home.background),custom)</visible>
 					</control>
 					<!-- Fanart logo -->
 					<control type="radiobutton" id="9324">
@@ -371,7 +372,7 @@
 						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(home.logo),noaction=Close)</onclick>
 						<selected>Skin.HasSetting(home.logo)</selected>
 						<include>radio_Settings</include>
-						<visible>String.StartsWith(Skin.String(background.home),fanart-)</visible>
+						<visible>String.StartsWith(Skin.String(home.background),fanart-)</visible>
 					</control>
 					<!-- Playing item on home -->
 					<control type="radiobutton" id="9325">
@@ -389,8 +390,8 @@
 					<!-- Background type -->
 					<control type="button" id="9331">
 						<label>$LOCALIZE[31360]</label>
-						<label2>$INFO[Skin.String(background.global.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=background.global,header=$LOCALIZE[31360])</onclick>
+						<label2>$INFO[Skin.String(global.background.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=global.background,header=$LOCALIZE[31360])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
@@ -401,7 +402,7 @@
 						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=custom.global,header=$LOCALIZE[31364],allowmulti=true,resourceaddon=resource.images.skinbackgrounds)</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
-						<visible>String.IsEqual(Skin.String(background.global),custom)</visible>
+						<visible>String.IsEqual(Skin.String(global.background),custom)</visible>
 					</control>
 					<!-- Enable logo -->
 					<control type="radiobutton" id="9333">

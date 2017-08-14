@@ -12,7 +12,7 @@
 				<include>screen_Dimensions</include>
 				<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
+				<visible>String.IsEqual(Skin.String(home.background),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 			</control>
 
 			<control type="group">
@@ -28,10 +28,7 @@
 					<include>Burns</include>
 					<aspectratio>scale</aspectratio>
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
-						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
-					</animation>
-					<visible>!String.IsEqual(Skin.String(background.home),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
+					<visible>!String.IsEqual(Skin.String(home.background),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
 
 				<control type="image">
@@ -42,8 +39,8 @@
 					<aspectratio align="center" aligny="bottom">scale</aspectratio>
 					<include>fadeinout</include>
 					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
-					<visible>!Control.HasFocus(9000)</visible>
-					<visible>System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)]</visible>
+				
+					<visible>String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)</visible>
 				</control>
 
 				<!-- Background video -->
@@ -84,7 +81,7 @@
 					<texture>$VAR[home:SlideShowLogo]</texture>
 					<aspectratio>keep</aspectratio>
 					<fadetime>300</fadetime>
-					<visible>String.IsEqual(Skin.String(background.home),fanart) | String.IsEqual(Skin.String(background.home),videofanart)</visible>
+					<visible>String.IsEqual(Skin.String(home.background),fanart) | String.IsEqual(Skin.String(home.background),videofanart)</visible>
 					<visible>![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)] + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 					<visible>!Window.IsActive(movieinformation) + Skin.HasSetting(fanart.sourcelogo) + [String.IsEqual(Skin.String(fanart.source),global) | String.IsEqual(Skin.String(fanart.source),video)]</visible>
 				</control>
@@ -119,7 +116,7 @@
 					<include>screen_Dimensions</include>
 					<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<visible>String.IsEqual(Skin.String(background.global),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
+					<visible>String.IsEqual(Skin.String(global.background),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
 				
 				<!-- Custom slideshow -->
@@ -135,7 +132,7 @@
 					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
 						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
 					</animation>
-					<visible>!String.IsEqual(Skin.String(background.global),none)</visible>
+					<visible>!String.IsEqual(Skin.String(global.background),none)</visible>
 				</control>
 
 				<!-- Fanart background -->
@@ -148,7 +145,7 @@
 					<texture background="true">$VAR[background:Path]</texture>
 					<visible>![Container.Scrolling + Skin.HasSetting(fanart.scrolling)]</visible>
 					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.layout),vertical)]</visible>
-					<visible>String.IsEqual(Skin.String(background.global),fanart) | String.IsEqual(Skin.String(background.global),videofanart)</visible>
+					<visible>String.IsEqual(Skin.String(global.background),fanart) | String.IsEqual(Skin.String(global.background),videofanart)</visible>
 				</control>
 				
 				<!-- Background video -->
