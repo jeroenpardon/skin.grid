@@ -700,16 +700,7 @@ msgstr ""
 
 #. skin setting that enables a blur effect to the home menu background, and changes colours of text and textures to match the fanart image
 msgctxt "#31378"
-msgid "Blur effect and fanart colours"
-msgstr ""
-
-#. skin setting that changes colours of text and textures to match the fanart image
-msgctxt "#31378"
-msgid "Fanart colours only"
-msgstr ""
-
-msgctxt "#31379"
-msgid "Apply blur effect to fanart"
+msgid "Fanart colours"
 msgstr ""
 
 
