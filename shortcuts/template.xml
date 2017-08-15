@@ -256,7 +256,6 @@
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1920</width>
 				<height>$SKINSHORTCUTS[height]</height>
-				<onleft>9000</onleft>
 				<onback>9000</onback>
 				<onfocus>SetProperty(HomeFocusedItem,widgets,Home)</onfocus>
 				<orientation>horizontal</orientation>

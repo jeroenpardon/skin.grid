@@ -31,7 +31,6 @@
 		</include>
 		<include content="global_WindowChrome">
 			<param name="Height">98</param>
-
 		</include>
 	</include>
 
@@ -85,39 +84,11 @@
 					</control>
 				</control>
 
-
-
-
-				<!-- Fullscreen overlay blur 
-				<control type="image">
-					<include>home_Image</include>
-					<texture diffuse="colorize/50.png">$VAR[home:FX.Texture]</texture>
-					<animation effect="fade" start="0" end="50" time="150">Visible</animation>
-					<animation effect="fade" start="50" end="0" time="150">Hidden</animation>
-					<visible>Skin.HasSetting(home.blurfx) | Skin.HasSetting(home.colorfx)</visible>
-					<visible>String.IsEqual(Window(Home).Property(HomeFocusedItem),submenu) | String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
-				</control>
-				<control type="image">
-					<include>home_Image</include>
-					<texture diffuse="colorize/100.png">$VAR[home:FX.Texture]</texture>
-					<animation effect="fade" start="50" end="100" time="150">Visible</animation>
-					<animation effect="fade" start="50" end="0" time="150">Hidden</animation>
-					<visible>Skin.HasSetting(home.blurfx) | Skin.HasSetting(home.colorfx)</visible>
-					<visible>String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
-				</control>-->
-
 				<!-- Menu area background gradient-->
 				<control type="image">
 					<include>home_Image</include>
 					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="overlays/home_horizontal.png">$VAR[home:FX.Texture]</texture>
 				</control>
-
-				
-
-
-
-
-
 		
 				<!-- Horizontal home window chrome -->
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">global_WindowChrome</include>
@@ -125,14 +96,12 @@
 				<!-- Feed container-->
 				<include content="home_Feed">
 					<param name="Left">0</param>
+					<param name="OnLeft">noop</param>
+					<param name="OnRight">noop</param>
 					<param name="OnUp">SetFocus(9050)</param>
 				</include>
 
 			</control>
-			
-			<!-- Submenu -->
-			<!--<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">home_SubMenu-Vertical</include>-->
-
 		</definition>
 	</include>
 
@@ -157,7 +126,6 @@
 			<param name="OnRight" default="noop"/>
 			<param name="OnUp" default="noop"/>
 			<param name="OnDown" default="noop"/>
-
 			<control type="image">
 				<left>128</left>
 				<width>1792</width>
@@ -165,9 +133,7 @@
 				<texture colordiffuse="ff000000">colorize/white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
-			</control>
-
-			<!--Horizontal home, horizontal submenu -->
+			</control>	
 			<control type="grouplist" id="9100">
 				<left>$PARAM[Left]</left>
 				<itemgap>0</itemgap>
@@ -181,12 +147,8 @@
 				<onleft>$PARAM[OnLeft]</onleft>
 				<onright>$PARAM[OnRight]</onright>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
-
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">home_Menu-Horizontal</include>
-
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">home_SubMenu-Horizontal</include>
-
-
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),vertical)">skinshortcuts-template-widget_Vertical</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">skinshortcuts-template-widget_Horizontal</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),compact)">skinshortcuts-template-widget_Compact</include>
@@ -243,6 +205,12 @@
 		<param name="BigInfoFont2" default="Black-26"/>
 		<definition>
 			<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
+				<control type="image">
+					<width>$PARAM[ItemWidth]</width>
+					<include>$PARAM[Height]</include>
+					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
 				<control type="image">
 					<width>$PARAM[ItemWidth]</width>
 					<height>$PARAM[Height]</height>
@@ -325,6 +293,12 @@
 			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
 				<control type="group">
 					<visible>!Control.HasFocus($PARAM[ID])</visible>
+					<control type="image">
+						<width>$PARAM[ItemWidth]</width>
+						<include>$PARAM[Height]</include>
+						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
+						<aspectratio>stretch</aspectratio>
+					</control>
 					<control type="image">
 						<width>$PARAM[ItemWidth]</width>
 						<height>$PARAM[Height]</height>
