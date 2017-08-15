@@ -89,6 +89,17 @@
 					<include>home_Image</include>
 					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="overlays/home_horizontal.png">$VAR[home:FX.Texture]</texture>
 				</control>
+
+				<control type="image">
+					<height>118</height>
+					<width>1920</width>
+					<bottom>0</bottom>
+					<aspectratio align="center" aligny="bottom">scale</aspectratio>
+					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/white.png">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+				</control>
+
+				<!-- Background video -->
+				<include>background_Video</include>
 		
 				<!-- Horizontal home window chrome -->
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">global_WindowChrome</include>
@@ -210,6 +221,7 @@
 					<include>$PARAM[Height]</include>
 					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
 					<aspectratio>stretch</aspectratio>
+					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
 				<control type="image">
 					<width>$PARAM[ItemWidth]</width>
@@ -298,6 +310,7 @@
 						<include>$PARAM[Height]</include>
 						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
 						<aspectratio>stretch</aspectratio>
+						<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ItemWidth]</width>

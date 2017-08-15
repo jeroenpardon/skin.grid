@@ -162,7 +162,7 @@
 
 	<include name="background_Video">
 		<control type="group">
-			<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + ![String.IsEqual(Skin.String(homemenu.layout),compact) + Window.IsActive(home)]</visible>
+			<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + !Window.IsActive(home)</visible>
 			<control type="image">
 				<aspectratio>stretch</aspectratio>
 				<include>screen_Dimensions</include>
@@ -170,6 +170,22 @@
 			</control>
 			<control type="videowindow">
 				<include>screen_Dimensions</include>
+			</control>
+		</control>
+
+		<control type="group">
+			<top>108</top>
+			<left>128</left>
+			<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + Window.IsActive(home)</visible>
+			<control type="image">
+				<aspectratio>stretch</aspectratio>
+				<width>640</width>
+				<height>360</height>
+				<texture colordiffuse="ff000000">colorize/white.png</texture>
+			</control>
+			<control type="videowindow">
+				<width>640</width>
+				<height>360</height>
 			</control>
 		</control>
 	</include>

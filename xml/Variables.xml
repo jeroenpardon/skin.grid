@@ -109,7 +109,7 @@
 
 	<variable name="home:FX.Texture">
 		<value condition="Skin.HasSetting(home.blurfx)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
-		<value>overlays/home_horizontal.png</value>
+		<value>colorize/80.png</value>
 	</variable>
 
 	<variable name="color:FX.Text1">
