@@ -258,6 +258,7 @@
 				<height>$SKINSHORTCUTS[height]</height>
 				<onleft>9000</onleft>
 				<onback>9000</onback>
+				<onfocus>SetProperty(HomeFocusedItem,widgets,Home)</onfocus>
 				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
 				<include>global_Scrolltime</include>

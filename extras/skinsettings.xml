@@ -31,19 +31,28 @@
 	<setting id="date.enabled" value="global" label="$LOCALIZE[31352]"/>
 	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31353]"/>
 
-	<!-- Home blur effects -->
-	<setting id="home.fx" value="none" label="$LOCALIZE[13113]" default="true">
+	<!-- Home blur effects 
+	<setting id="home.blur" value="none" label="$LOCALIZE[13113]" default="true">
 		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=ActivateWindow(startup),noaction=Close)</onselect>
 	</setting>
-	<setting id="home.fx" value="blur" label="$LOCALIZE[31377]">
+	<setting id="home.blur" value="blur" label="$LOCALIZE[31377]">
 		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=ActivateWindow(startup),noaction=Close)</onselect>
 	</setting>
-	<setting id="home.fx" value="color" label="$LOCALIZE[31378]">
+	<setting id="home.blur" value="color" label="$LOCALIZE[31378]">
 		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=|ActivateWindow(startup),noaction=Close)</onselect>
 	</setting>
-	<setting id="home.fx" value="coloronly" label="color only">
+	<setting id="home.blur" value="coloronly" label="color only">
 		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=|ActivateWindow(startup),noaction=Close)</onselect>
 	</setting>
+-->
+
+
+
+
+
+
+
+
 
 	<!-- Horizontal home submenu orientation-->
 	<setting id="submenu.type" value="horizontal" label="horizontal" default="true"/>
@@ -59,36 +68,10 @@
 	<setting id="home.background" value="pictures" label="$LOCALIZE[31056]"/>
 	<setting id="home.background" value="custom" label="$LOCALIZE[636]" default="true"/>
 
-
-
-
-	<!-- Home slideshow source -->
-	<setting id="fanart.source" value="global" label="$LOCALIZE[31368]" default="true">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
-	<setting id="fanart.source" value="video" label="$LOCALIZE[14236]">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
-	<setting id="fanart.source" value="movies" label="$LOCALIZE[31369]">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
-	<setting id="fanart.source" value="tvshows" label="$LOCALIZE[31370]">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
-	<setting id="fanart.source" value="music" label="$LOCALIZE[14237]">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
-
-
-
-
-
 	<!-- Global background type -->
 	<setting id="global.background" value="none" label="$LOCALIZE[36502]"/>
 	<setting id="global.background" value="custom" label="$LOCALIZE[636]" default="true"/>
 	<setting id="global.background" value="fanart" label="$LOCALIZE[31218]"/>
-
-	
 
 	<!-- Global backgrounds -->
 	<setting id="global.source" value="global" label="$LOCALIZE[31368]" default="true">
@@ -105,8 +88,6 @@
 	<!-- Text input -->
 	<setting id="input.text" value="keyboard" label="$LOCALIZE[31355]" default="true"/>
 	<setting id="input.text" value="nokeyboard" label="$LOCALIZE[31356]"/>
-
-
 
 	<!-- Visualisation mode -->
 	<setting id="viz.mode" value="fanart" label="$LOCALIZE[31224]" default="true"/>

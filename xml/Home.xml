@@ -78,6 +78,7 @@
 		<!-- Colorbox multiimage -->
 		<control type="multiimage" id="7975">
 			<left>-2160</left>
+			<include>home_MultiImage</include>
 			<imagepath background="true">$VAR[background:Home]</imagepath>
 		</control>
 

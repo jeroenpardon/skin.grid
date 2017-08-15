@@ -87,38 +87,51 @@
 	</variable>
 
 
-	<variable name="color:Home.0">
-		<value condition="String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
-		<value>dd000000</value>
+
+
+
+
+
+	<variable name="home:FX.Color1">
+		<value condition="Skin.HasSetting(home.colorfx)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value condition="!Skin.HasSetting(home.colorfx)">$VAR[color:Main]</value>
 	</variable>
 
-	<variable name="color:Home.1">
-		<value condition="String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
-		<value>dd000000</value>
+	<variable name="home:FX.Color2">
+		<value condition="Skin.HasSetting(home.colorfx)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="!Skin.HasSetting(home.colorfx)">$VAR[color:Accent]</value>
 	</variable>
 
+	<variable name="home:FX.Diffuse">
+		<value condition="Skin.HasSetting(home.blurfx)">overlays/home_horizontal.png</value>
+		<value></value>
+	</variable>
 
-	<variable name="color:HomeText.1">
-		<value condition="String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+	<variable name="home:FX.Texture">
+		<value condition="Skin.HasSetting(home.blurfx)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value>overlays/home_horizontal.png</value>
+	</variable>
+
+	<variable name="color:FX.Text1">
+		<value condition="Skin.HasSetting(home.colorfx)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
 		<value>$VAR[color:Accent]</value>
 	</variable>
 
-	<variable name="color:Home.2">
-		<value condition="String.IsEqual(Skin.String(home.fx),color)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+	<variable name="color:FX.Text2">
+		<value condition="Skin.HasSetting(home.colorfx)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
 		<value>$VAR[color:Accent]</value>
 	</variable>
 
-	<variable name="color:Home.3">
-		<value condition="Window.IsActive(Home) + [String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)]">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
-		<value>$VAR[color:Text.2]</value>
-	</variable>
 
 
 
-	<variable name="color:Home.Opacity">
-		<value condition="Container(9000).HasFocus() + String.IsEqual(Skin.String(home.fx),color)">30</value>
-		<value condition="String.IsEqual(Skin.String(home.fx,color))">30</value>
-	</variable>
+
+
+
+
+
+
+
 
 
 <!-- Count -->

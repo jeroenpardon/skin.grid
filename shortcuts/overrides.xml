@@ -231,39 +231,39 @@
 		<content>widgets</content>
 
 		<node label="3">
-			<shortcut label="$ADDON[service.library.data.provider 32019]" type="videos" widgetType="videos" condition="System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentvideos&amp;reload=$INFO[Window.Property(recentvideos)]</shortcut>
-			<shortcut label="$LOCALIZE[1037]" type="videos" widgetType="addons">addons://sources/video/</shortcut>
+			<shortcut label="$ADDON[service.library.data.provider 32019]" widget="$ADDON[service.library.data.provider 32019]" type="movies" widgetType="movies" condition="System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentmovies+recentepisodes&amp;reload=$INFO[Window.Property(recentmovies)]$INFO[Window.Property(recentepisodes)]</shortcut>
+			<shortcut label="$LOCALIZE[1037]" widget="$LOCALIZE[1037]" type="videos" widgetType="addons">addons://sources/video/</shortcut>
 		</node>
 
 		<node label="342">  
-			<shortcut label="$ADDON[script.watchlist 32001]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">plugin://script.watchlist/?type=movies</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32029]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">plugin://script.skin.helper.widgets/?action=INPROGRESSANDRECOMMENDED&amp;mediatype=MOVIES&amp;reload=$INFO[Window(Home).Property(widgetreload)]</shortcut>
-			<shortcut label="$LOCALIZE[31720]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">special://skin/extras/playlists/movies/unwatched.xsp</shortcut>
-			<shortcut label="$LOCALIZE[20386]" type="movies" widgetType="movies" condition="Library.HasContent(movies) + System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</shortcut>
+			<shortcut label="$ADDON[script.watchlist 32001]" widget="$ADDON[script.watchlist 32001]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">plugin://script.watchlist/?type=movies</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32029]" widget="$ADDON[script.watchlist 32029]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">plugin://script.skin.helper.widgets/?action=INPROGRESSANDRECOMMENDED&amp;mediatype=MOVIES&amp;reload=$INFO[Window(Home).Property(widgetreload)]</shortcut>
+			<shortcut label="$LOCALIZE[31720]" widget="$LOCALIZE[31720]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">special://skin/extras/playlists/movies/unwatched.xsp</shortcut>
+			<shortcut label="$LOCALIZE[20386]" widget="$LOCALIZE[31720]" type="movies" widgetType="movies" condition="Library.HasContent(movies) + System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentmovies&amp;reload=$INFO[Window.Property(recentmovies)]</shortcut>
 		</node>
 
 		<node label="20343">
-			<shortcut label="$ADDON[script.watchlist 32002]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows)">plugin://script.watchlist/?type=episodes</shortcut>
-			<shortcut label="$LOCALIZE[31709]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows)">special://skin/extras/playlists/episodes/unwatched.xsp</shortcut>
-			<shortcut label="$ADDON[service.library.data.provider 32008]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows) + System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</shortcut>
-			<shortcut label="$LOCALIZE[626]" type="tvshows" widgetType="tvshows" condition="Library.HasContent(tvshows)">videodb://inprogresstvshows/</shortcut>
+			<shortcut label="$ADDON[script.watchlist 32002]" widget="$ADDON[script.watchlist 32002]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows)">plugin://script.watchlist/?type=episodes</shortcut>
+			<shortcut label="$LOCALIZE[31709]" widget="$LOCALIZE[31709]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows)">special://skin/extras/playlists/episodes/unwatched.xsp</shortcut>
+			<shortcut label="$ADDON[service.library.data.provider 32008]" widget="$ADDON[service.library.data.provider 32008]" type="episodes" widgetType="episodes" condition="Library.HasContent(tvshows) + System.HasAddon(service.library.data.provider)">plugin://service.library.data.provider?type=recentepisodes&amp;reload=$INFO[Window.Property(recentepisodes)]</shortcut>
+			<shortcut label="$LOCALIZE[626]" widget="$LOCALIZE[626]" type="tvshows" widgetType="tvshows" condition="Library.HasContent(tvshows)">videodb://inprogresstvshows/</shortcut>
 		</node>
 
 		<node label="2">
-			<shortcut label="$ADDON[359]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
-			<shortcut label="$LOCALIZE[517]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32012]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32013]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32015]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32016]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32040]" type="music" widgetType="videos" condition="Library.HasContent(musicvideos)">videodb://recentlyaddedmusicvideos</shortcut>
-			<shortcut label="$LOCALIZE[1038]" widget="$LOCALIZE[24001]" type="music" widgetType="addons">addons://sources/audio/</shortcut>
+			<shortcut label="$ADDON[359]" widget="$ADDON[359]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$LOCALIZE[517]" widget="$LOCALIZE[517]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32012]" widget="$ADDON[script.skin.helper.widgets 32012]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32013]" widget="$ADDON[script.skin.helper.widgets 32013]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32015]" widget="$ADDON[script.skin.helper.widgets 32015]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32016]" widget="$ADDON[script.skin.helper.widgets 32016]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32040]" widget="$ADDON[script.skin.helper.widgets 32040]" type="music" widgetType="videos" condition="Library.HasContent(musicvideos)">videodb://recentlyaddedmusicvideos</shortcut>
+			<shortcut label="$LOCALIZE[1038]" name="$LOCALIZE[1038]" widget="$LOCALIZE[24001]" type="music" widgetType="addons">addons://sources/audio/</shortcut>
 		</node>
 
 		<node label="14204">  
-			<shortcut label="$LOCALIZE[31611]" type="pvr" widgetType="addon">pvr://channels/tv/*?view=lastplayed</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32020]" type="pvr" widgetType="addons">plugin://script.skin.helper.widgets/?action=channels&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32018]" type="pvr" widgetType="videos">plugin://script.skin.helper.widgets/?action=recordings&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut>
+			<shortcut label="$LOCALIZE[31611]" widget="$LOCALIZE[31611]" type="pvr" widgetType="addon">pvr://channels/tv/*?view=lastplayed</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32020]" widget="$ADDON[script.skin.helper.widgets 32020]" type="pvr" widgetType="addons">plugin://script.skin.helper.widgets/?action=channels&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut>
+			<shortcut label="$ADDON[script.skin.helper.widgets 32018]" widget="$ADDON[script.skin.helper.widgets 32018]" type="pvr" widgetType="videos">plugin://script.skin.helper.widgets/?action=recordings&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut>
 		</node>
 
 		<node label="31062">

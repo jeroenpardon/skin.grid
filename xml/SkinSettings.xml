@@ -759,29 +759,29 @@
 
 					<!-- Blur effects -->
 					<control type="radiobutton" id="9630">
-						<label>$LOCALIZE[31379]</label>
-						<label2>$INFO[Skin.String(global.fx.enable)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(global.fx.enable)</onclick>
-						<selected>Skin.HasSetting(global.fx.enable)</selected>
+						<label>blur fx</label>
+						<label2>$INFO[Skin.String(home.blurfx)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.blurfx)</onclick>
+						<selected>Skin.HasSetting(home.blurfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 					</control>
-					<control type="radiobutton" id="9631">
-						<label>- $LOCALIZE[31227]</label>
-						<label2>$INFO[Skin.String(global.fx.enable)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(global.fx.restrict)</onclick>
-						<selected>Skin.HasSetting(global.fx.restrict)</selected>
+
+					<control type="radiobutton" id="9640">
+						<label>color fx</label>
+						<label2>$INFO[Skin.String(home.colorfx)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.colorfx)</onclick>
+						<selected>Skin.HasSetting(home.colorfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
-						<visible>Skin.HasSetting(global.fx.enable)</visible>
 					</control>
 
 
 					<!-- Blur effects -->
 					<control type="button" id="9611">
 						<label>$LOCALIZE[31376]</label>
-						<label2>$INFO[Skin.String(home.fx.Label)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.fx,header=$LOCALIZE[31376])</onclick>
+						<label2>$INFO[Skin.String(home.blur.Label)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.blur,header=$LOCALIZE[31376])</onclick>
 						<include>install_Colorbox</include>
 						<include>button_Settings</include>
 						<visible>String.IsEqual(Skin.String(homemenu.layout),horizontal)</visible>

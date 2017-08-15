@@ -28,19 +28,10 @@
 					<include>Burns</include>
 					<aspectratio>scale</aspectratio>
 					<imagepath background="true">$VAR[background:Home]</imagepath>
+					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
+						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
+					</animation>
 					<visible>!String.IsEqual(Skin.String(home.background),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
-				</control>
-
-				<control type="image">
-					<top>0</top>
-					<include>screen_Dimensions</include>
-					<texture>$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
-					<fadetime>300</fadetime>
-					<aspectratio align="center" aligny="bottom">scale</aspectratio>
-					<include>fadeinout</include>
-					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
-				
-					<visible>String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color)</visible>
 				</control>
 
 				<!-- Background video -->

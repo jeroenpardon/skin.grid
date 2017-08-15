@@ -173,84 +173,63 @@
 		</include>
 	</include>
 
+
+
+
 	<include name="home_Menu-Horizontal">
 		<definition>
 			<control type="wraplist" id="9000">		
-				<left>0</left>
+				<bottom>0</bottom>
 				<width>1920</width>
 				<height>1080</height>
 				<onup>9000</onup>
 				<onleft>9050</onleft>
 				<onright>9100</onright>
 				<ondown>9000</ondown>
+				<onfocus>SetProperty(HomeFocusedItem,mainmenu,Home)</onfocus>
 				<focusposition>1</focusposition>
 				<include>transition_Home</include>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>				
 				<itemlayout width="640" height="1080">
-					<control type="image">
-						<bottom>0</bottom>
-						<width>640</width>
-						<height>108</height>
-						<include>screen_Dimensions</include>
-						<texture colordiffuse="$VAR[color:Home.Main]">$VAR[color:Home.Opacity]</texture>
-						<aspectratio align="center" aligny="top">stretch</aspectratio>
-					</control>
 					<control type="label">
 						<bottom>0</bottom>
 						<width>640</width>
 						<height>108</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Black-60</font>
-						<textoffsetx>24</textoffsetx>
+						<font>Thin-48</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>$VAR[color:HomeText.1]</textcolor>
+						<textcolor>$VAR[home:FX.Color2]</textcolor>
 						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout width="640" height="1080">
 					<control type="group">
 						<visible>!Control.HasFocus(9000)</visible>
-						<control type="image">
-							<bottom>0</bottom>
-							<width>640</width>
-							<height>108</height>
-							<texture colordiffuse="$VAR[color:Home.Main]">$VAR[color:Home.Opacity]</texture>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>
-						</control>
 						<control type="label">
 							<bottom>0</bottom>
 							<width>640</width>
 							<height>108</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Black-60</font>
-							<textoffsetx>24</textoffsetx>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[color:HomeText.1]</textcolor>
+							<textcolor>$VAR[home:FX.Color2]</textcolor>
 							<animation effect="fade" end="35" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
 						<visible>Control.HasFocus(9000)</visible>
-						<control type="image">
-							<bottom>0</bottom>
-							<width>640</width>
-							<height>108</height>
-							<texture colordiffuse="$VAR[color:Home.Main]">$VAR[color:Home.Opacity]</texture>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>
-						</control>
 						<control type="label">
 							<bottom>0</bottom>
 							<width>640</width>
 							<height>108</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Black-60</font>
-							<textoffsetx>24</textoffsetx>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[color:HomeText.1]</textcolor>
+							<textcolor>$VAR[home:FX.Color2]</textcolor>
 						</control>
 					</control>
 				</focusedlayout>
@@ -317,67 +296,54 @@
 			<control type="wraplist" id="9050">		
 				<left>0</left>
 				<width>1920</width>
-				<height>1080</height>
+				<height>64</height>
 				<onleft>9050</onleft>
 				<onright>9050</onright>
 				<ondown>9000</ondown>
 				<onback>9000</onback>
+				<onfocus>SetProperty(HomeFocusedItem,submenu,Home)</onfocus>
 				<focusposition>1</focusposition>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
-				<itemlayout width="640" height="1080">
+				<visible>String.Contains(Container(9000).ListItem(0).Property(hasSubmenu),True)</visible>
+
+
+				<itemlayout width="640" height="64">
 					<control type="label">
-						<bottom>0</bottom>
 						<width>640</width>
-						<height>1080</height>
+						<height>64</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Black-32</font>
 						<align>center</align>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:HomeText.1]</textcolor>
+						<aligny>top</aligny>
+						<textcolor>$VAR[home:FX.Color2]</textcolor>
 						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 				</itemlayout>
-				<focusedlayout width="640" height="1080">
+				<focusedlayout width="640" height="64">
 					<control type="group">
 						<visible>!Control.HasFocus(9050)</visible>
-						<control type="image">
-							<bottom>0</bottom>
-							<width>640</width>
-							<height>1080</height>
-							<texture colordiffuse="$VAR[color:Home.Main]">$VAR[color:Home.Opacity]</texture>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>
-						</control>
 						<control type="label">
-							<bottom>0</bottom>
 							<width>640</width>
-							<height>1080</height>
+							<height>64</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Black-32</font>
 							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>$VAR[color:HomeText.1]</textcolor>
+							<aligny>top</aligny>
+							<textcolor>$VAR[home:FX.Color2]</textcolor>
 							<animation effect="fade" end="35" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
 						<visible>Control.HasFocus(9050)</visible>
-						<control type="image">
-							<bottom>0</bottom>
-							<width>640</width>
-							<height>1080</height>
-							<texture colordiffuse="$VAR[color:Home.Main]">$VAR[color:Home.Opacity]</texture>
-							<aspectratio align="center" aligny="top">stretch</aspectratio>
-						</control>
 						<control type="label">
-							<bottom>0</bottom>
 							<width>640</width>
-							<height>1080</height>
+							<height>64</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Black-32</font>
 							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>$VAR[color:HomeText.1]</textcolor>
+							<aligny>top</aligny>
+							<textcolor>$VAR[home:FX.Color2]</textcolor>
 						</control>
 					</control>
 				</focusedlayout>
