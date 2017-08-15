@@ -603,8 +603,8 @@
 							<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.main)</onclick>
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
-							<onup>410</onup>
-							<ondown>430</ondown>
+							<onup>9540</onup>
+							<ondown>9560</ondown>
 						</control>
 						<control type="image">
 							<right>0</right>
@@ -625,8 +625,8 @@
 							<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.accent)</onclick>
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
-							<onup>420</onup>
-							<ondown>440</ondown>
+							<onup>9551</onup>
+							<ondown>9570</ondown>
 						</control>
 						<control type="image">
 							<right>0</right>
@@ -647,8 +647,8 @@
 							<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.text.2)</onclick>
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
-							<onup>430</onup>
-							<ondown>450</ondown>
+							<onup>9560</onup>
+							<ondown>9580</ondown>
 						</control>
 						<control type="image">
 							<right>0</right>
@@ -668,8 +668,8 @@
 							<onleft>9001</onleft>
 							<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.text.3)</onclick>
 							<include>radio_Settings</include>
-							<onup>440</onup>
-							<ondown>460</ondown>
+							<onup>9570</onup>
+							<ondown>9590</ondown>
 						</control>
 						<control type="image">
 							<right>0</right>
@@ -690,8 +690,8 @@
 							<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.disabled)</onclick>
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
-							<onup>450</onup>
-							<ondown>470</ondown>
+							<onup>9580</onup>
+							<ondown>9595</ondown>
 						</control>
 						<control type="image">
 							<right>0</right>
@@ -717,7 +717,7 @@
 							<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=colorthemes)</onclick>
 							<include>install_HelperService</include>
 							<include>radio_Settings</include>
-							<onup>9591</onup>
+							<onup>9590</onup>
 							<ondown>9596</ondown>
 						</control>
 					</control>
@@ -750,73 +750,55 @@
 					<ondown>9600</ondown>
 					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,visualfx)</visible>
-
 					<!-- Homescreen -->
 					<control type="label" id="9610">
 						<label>$LOCALIZE[31300]</label>
 						<include>global_Header</include>
 					</control>
-
-					<!-- Blur effects -->
+					<!-- Blur -->
 					<control type="radiobutton" id="9630">
-						<label>blur fx</label>
+						<label>$LOCALIZE[31377]</label>
 						<label2>$INFO[Skin.String(home.blurfx)]</label2>
 						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.blurfx)</onclick>
 						<selected>Skin.HasSetting(home.blurfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 					</control>
-
+					<!-- Fanart colours -->
 					<control type="radiobutton" id="9640">
-						<label>color fx</label>
+						<label>$LOCALIZE[31378]</label>
 						<label2>$INFO[Skin.String(home.colorfx)]</label2>
 						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.colorfx)</onclick>
 						<selected>Skin.HasSetting(home.colorfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 					</control>
-
-
-					<!-- Blur effects -->
-					<control type="button" id="9611">
-						<label>$LOCALIZE[31376]</label>
-						<label2>$INFO[Skin.String(home.blur.Label)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">RunScript(script.skin.helper.service,action=setskinsetting,setting=home.blur,header=$LOCALIZE[31376])</onclick>
-						<include>install_Colorbox</include>
-						<include>button_Settings</include>
-						<visible>String.IsEqual(Skin.String(homemenu.layout),horizontal)</visible>
-					</control>
-
 					<!-- Global -->
-					<control type="label" id="9620">
+					<control type="label" id="9650">
 						<label>$LOCALIZE[31060]</label>
 						<include>global_Header</include>
 					</control>
-
 					<!-- Animated backgrounds -->
-					<control type="radiobutton" id="9640">
+					<control type="radiobutton" id="9660">
 						<label>$LOCALIZE[31365] ($LOCALIZE[31326])</label>
 						<onclick>Skin.ToggleSetting(burns.enable)</onclick>
 						<selected>Skin.HasSetting(burns.enable)</selected>
 						<include>radio_Settings</include>
 					</control>
-
 					<!-- Animated artwork -->
-					<control type="radiobutton" id="9650">
+					<control type="radiobutton" id="9670">
 						<label>$LOCALIZE[31226] ($LOCALIZE[31326])</label>
 						<onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
 						<selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
 						<include>radio_Settings</include>
 					</control>
-					<control type="radiobutton" id="9651">
+					<control type="radiobutton" id="9671">
 						<label>- $LOCALIZE[31227]</label>
 						<onclick>Skin.ToggleSetting(art.animated.info)</onclick>
 						<selected>Skin.HasSetting(art.animated.info)</selected>
 						<include>radio_Settings</include>
 						<visible>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</visible>
-					</control>
-
-					
+					</control>				
 				</control>
 
 
