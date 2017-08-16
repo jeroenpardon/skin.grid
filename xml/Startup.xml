@@ -3,25 +3,11 @@
 	<defaultcontrol></defaultcontrol>
 
 	<onload>RunScript(script.grab.fanart,mode=random,refresh=30)</onload>
-
-	<onload condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">SetProperty(SubMenuIsOpen,false,Home)</onload>
-
-	<onload condition="System.HasAddon(script.colorbox) + [String.IsEqual(Skin.String(home.fx),blur) | String.IsEqual(Skin.String(home.fx),color) | String.IsEqual(Skin.String(home.fx),coloronly)]">RunScript(script.colorbox,daemon=True)</onload>
-
-	<onload>SetProperty(FIVE_daemon_set,blur,home)</onload>
-
-
-	<!--<onload>SetProperty(NINE_manual_set,"var=quality,set=8|var=blursize,set=8|var=bitsize,set=1|var=pixelsize,set=10|var=black,set=000000|var=white,set=ffffff",home)</onload>-->
-	
-	<!--
-	<onload>SetProperty(NINE_manual_set,"var=comp,set=hue|var=bump,set=16|var=hsv,set=0;-0.2;0.2|var=quality,set=8|var=blursize,set=10|var=bitsize,set=1|var=pixelsize,set=12|var=black,set=000000|var=white,set=ffffff")</onload>-->
-
-
-	<onload>SetProperty(NINE_manual_set,"var=comp,set=hue|var=bump,set=16|var=hsv,set=0;-0.2;0.2|var=quality,set=8|var=blursize,set=10|var=bitsize,set=1|var=pixelsize,set=12|var=black,set=000000|var=white,set=ffffff",home))</onload> 
-
-
-
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,20)</onload>
+
+	<onload condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True)</onload>
+	<onload>SetProperty(FIVE_daemon_set,blur,home)</onload>
+	<onload condition="System.HasAddon(script.colorbox)">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=comp,set=hue|var=bump,set=16|var=hsv,set=0;-0.2;0.2|var=quality,set=8|var=blursize,set=10|var=bitsize,set=1|var=pixelsize,set=12|var=black,set=000000|var=white,set=ffffff",home),00:05,true)</onload>
 
 	<onload condition="!String.IsEqual(Skin.String(home.background),fanart) + !String.IsEqual(Skin.String(home.background),videofanart)">Skin.SetString(HomeLoaded,True)</onload>
 	<onload condition="Skin.HasSetting(startup.playlist)">PlayMedia($INFO[Skin.String(startup.playlist.path)])</onload>
