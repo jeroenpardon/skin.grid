@@ -3,67 +3,66 @@
 # Addon id: skin.grid
 # Addon Provider: Jeroen
 # Translators:
-# Jeroen <jeroenpardon@gmail.com>, 2017
+# Arvid Sollenby <arvid.sollenby@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Jeroen <jeroenpardon@gmail.com>, 2017\n"
-"Language-Team: Dutch (https://www.transifex.com/grid/teams/75010/nl/)\n"
+"Last-Translator: Arvid Sollenby <arvid.sollenby@gmail.com>, 2017\n"
+"Language-Team: Swedish (Sweden) (https://www.transifex.com/grid/teams/75010/sv_SE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
+"Language: sv_SE\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: home
 msgctxt "#31000"
 msgid "Home Menu"
-msgstr "Startmenu"
+msgstr "Hemmeny"
 
 msgctxt "#31001"
 msgid "Home menu layout"
-msgstr "Indeling van het startmenu"
+msgstr "Hemmenyutseende"
 
 msgctxt "#31002"
 msgid "Home menu type"
-msgstr "Startmenu type"
+msgstr "Hemmenytyp"
 
 msgctxt "#31005"
 msgid "Layout"
-msgstr "Indeling"
+msgstr "Layout"
 
 msgctxt "#31006"
 msgid "Automatically collapse submenus"
-msgstr "Klap submenus automatisch in"
+msgstr "Stäng undermenyer automatiskt"
 
 msgctxt "#31007"
 msgid "Statusbar information"
-msgstr "Statusbalk informatie"
+msgstr "Statusfältsinformation"
 
 msgctxt "#31018"
 msgid ""
 "You're about to delete settings. You will no longer be able to change any "
 "system settings unless you have provided a different method. Are you sure?"
 msgstr ""
-"Je gaat de instellingen knop verwijderen. Je zal geen systeem instellingen "
-"meer kunnen veranderen tenzij je een andere route hiervoor hebt. Weet je het"
-" zeker?"
+"Du är på väg att ta bort inställningar. Du kommer inte att kunna ändra "
+"systeminställningar om du inte angett en alternativ metod. Är du säker?"
 
 msgctxt "#31021"
 msgid "Add shortcut"
-msgstr "Snelkoppeling toevoegen"
+msgstr "Lägg till genväg"
 
 msgctxt "#31022"
 msgid "Reset all menu items to defaults"
-msgstr "Herstel standaardwaarden voor alle menu onderdelen in"
+msgstr "Återställ alla menyval till standard"
 
 #. example usage: name of a home menu layout option
 msgctxt "#31025"
 msgid "Compact"
-msgstr ""
+msgstr "Kompakt"
 
 #: widgets
 msgctxt "#31030"
@@ -72,149 +71,149 @@ msgstr "Widget"
 
 msgctxt "#31031"
 msgid "Widgets"
-msgstr ""
+msgstr "Widgets"
 
 msgctxt "#31032"
 msgid "Select widget layout"
-msgstr "Selecteer widget indeling"
+msgstr "Välj widgetlayout"
 
 msgctxt "#31033"
 msgid "Select sort direction"
-msgstr "Selecteer sorteer volgorde"
+msgstr "Välj sorteringsriktning"
 
 msgctxt "#31034"
 msgid "Fullscreen (16:9)"
-msgstr "Volledig scherm (16:9)"
+msgstr "Fullskärm (16:9)"
 
 msgctxt "#31035"
 msgid "Wide (21:9)"
-msgstr "Breed (21:9)"
+msgstr "Bred (21:9)"
 
 msgctxt "#31036"
 msgid "Landscape (16:9)"
-msgstr "Landschap (16:9)"
+msgstr "Landskapsläge (16:9)"
 
 msgctxt "#31037"
 msgid "Portrait (2:3)"
-msgstr "Portret (2:3)"
+msgstr "Porträttläge (2:3)"
 
 msgctxt "#31038"
 msgid "Square (1:1)"
-msgstr "Vierkant (1:1)"
+msgstr "Kvadratisk (1:1)"
 
 msgctxt "#31040"
 msgid "Show widget names"
-msgstr "Toon widget namen"
+msgstr "Visa widgetnamn"
 
 msgctxt "#31041"
 msgid "Select widget artwork"
-msgstr ""
+msgstr "Välj widgetikon"
 
 msgctxt "#31044"
 msgid "Wide"
-msgstr ""
+msgstr "Bred"
 
 #: general
 msgctxt "#31050"
 msgid "Apply"
-msgstr "Toepassen"
+msgstr "Tillämpa"
 
 #. example usage: "20 recordings available"
 msgctxt "#31051"
 msgid "available"
-msgstr "beschikbaar"
+msgstr "tillgänglig"
 
 msgctxt "#31052"
 msgid "Warning"
-msgstr "Waarschuwing"
+msgstr "Varning"
 
 msgctxt "#31053"
 msgid "Fullscreen"
-msgstr "Volledig scherm"
+msgstr "Fullskärm"
 
 msgctxt "#31054"
 msgid "Unknown"
-msgstr "Onbekend"
+msgstr "Okänd"
 
 msgctxt "#31055"
 msgid "Single image"
-msgstr "Afbeelding"
+msgstr "Enskild bild"
 
 msgctxt "#31056"
 msgid "Pictures slideshow"
-msgstr "Dia voorstelling"
+msgstr "Bildspel"
 
 msgctxt "#31057"
 msgid "Horizontal"
-msgstr ""
+msgstr "Horisontell"
 
 msgctxt "#31058"
 msgid "Vertical"
-msgstr ""
+msgstr "Vertikal"
 
 msgctxt "#31059"
 msgid "Developer"
-msgstr "Ontwikkelaar"
+msgstr "Utvecklare"
 
 msgctxt "#31060"
 msgid "Global"
-msgstr "Algemeen"
+msgstr "Global"
 
 msgctxt "#31061"
 msgid "Context menu"
-msgstr "Context menu"
+msgstr "Innehållsmeny"
 
 msgctxt "#31062"
 msgid "Other"
-msgstr "Anders"
+msgstr "Annat"
 
 msgctxt "#31063"
 msgid "None selected"
-msgstr "Niets geselecteerd"
+msgstr "Ingen vald"
 
 msgctxt "#31064"
 msgid "Smart playlists"
-msgstr ""
+msgstr "Smarta spellistor"
 
 msgctxt "#31065"
 msgid "Smart playlist"
-msgstr ""
+msgstr "Smarta spellistor"
 
 msgctxt "#31066"
 msgid "Library node"
-msgstr ""
+msgstr "Biblioteksnod"
 
 msgctxt "#31067"
 msgid "Library statistics"
-msgstr "Mediabibliotheek statistieken"
+msgstr "Biblioteksstatistik"
 
 msgctxt "#31068"
 msgid "Content"
-msgstr "Inhoud"
+msgstr "Innehåll"
 
 msgctxt "#31069"
 msgid "Select content"
-msgstr "Selecteer inhoud"
+msgstr "Välj innehåll"
 
 #. example usage: this is a required add-on
 msgctxt "#31070"
 msgid "Required"
-msgstr "Vereist"
+msgstr "Obligatorisk"
 
 #. example usage: this is an optional add-on
 msgctxt "#31071"
 msgid "Optional"
-msgstr "Optioneel"
+msgstr "Valfri"
 
 #. example usage: this addon is installed
 msgctxt "#31073"
 msgid "Installed"
-msgstr "Geïnstalleerd"
+msgstr "Installerad"
 
 #. example usage: episode first aired on
 msgctxt "#31074"
 msgid "On"
-msgstr "op"
+msgstr "På"
 
 #. example usage: shorthand for minutes
 msgctxt "#31075"
@@ -223,93 +222,93 @@ msgstr "Min"
 
 msgctxt "#31076"
 msgid "Playcount"
-msgstr "Keren afgespeeld"
+msgstr "Antal spelningar"
 
 msgctxt "#31077"
 msgid "Never played"
-msgstr "Nooit afgespeeld"
+msgstr "Aldrig spelad"
 
 msgctxt "#31079"
 msgid "Descriptions"
-msgstr "Omschrijvingen"
+msgstr "Beskrivning"
 
 msgctxt "#31081"
 msgid "Reload"
-msgstr "Herladen"
+msgstr "Ladda om"
 
 msgctxt "#31083"
 msgid "Sorting"
-msgstr "Sorteren"
+msgstr "Sortera"
 
 msgctxt "#31084"
 msgid "Items"
-msgstr "stuks"
+msgstr "Objekt"
 
 #: artwork
 msgctxt "#31200"
 msgid "Posters"
-msgstr "Posters"
+msgstr "Affisch"
 
 msgctxt "#31201"
 msgid "Portrait"
-msgstr "Verticaal"
+msgstr "Porträtt"
 
 msgctxt "#31202"
 msgid "Landscape"
-msgstr "Horizontaal"
+msgstr "Landskap"
 
 msgctxt "#31203"
 msgid "Thumbnails"
-msgstr "Afbeeldingen"
+msgstr "Tumnagel"
 
 msgctxt "#31204"
 msgid "Logos"
-msgstr "Logo's"
+msgstr "Logotyper"
 
 #. example usage: type of artwork, translation might not be needed / suited
 msgctxt "#31205"
 msgid "Clearart"
-msgstr "Clearart"
+msgstr "Bakgrund utan text"
 
 msgctxt "#31206"
 msgid "Download artwork"
-msgstr "Afbeeldingen downloaden"
+msgstr "Ladda ner bakgrund"
 
 msgctxt "#31207"
 msgid "Extended artwork"
-msgstr ""
+msgstr "Utökad bakgrund"
 
 msgctxt "#31208"
 msgid "Enable logos"
-msgstr "Gebruik logo's"
+msgstr "Aktivera logotyper"
 
 msgctxt "#31209"
 msgid "Download logos"
-msgstr "Download logo's"
+msgstr "Ladda ner logotyper"
 
 msgctxt "#31210"
 msgid "Download thumbnail"
-msgstr "Download miniatuur afbeeldingen"
+msgstr "Ladda ner tumnaglar"
 
 msgctxt "#31211"
 msgid "Download poster"
-msgstr "Download poster"
+msgstr "Ladda ner affisch"
 
 msgctxt "#31212"
 msgid "Download extrafanart"
-msgstr "Download extrafanart"
+msgstr "Ladda ner extrabakgrunder"
 
 msgctxt "#31213"
 msgid "Download fanart"
-msgstr "Download fanart"
+msgstr "Ladda ner fankonst"
 
 msgctxt "#31214"
 msgid "Get all artwork"
-msgstr "Download alle afbeeldingtypes"
+msgstr "Ladda ner all grafik"
 
 msgctxt "#31215"
 msgid "Landscape art type"
-msgstr "Horizontaal afbeeldingstype"
+msgstr ""
 
 msgctxt "#31216"
 msgid "List view artwork type"
@@ -317,7 +316,7 @@ msgstr ""
 
 msgctxt "#31217"
 msgid "No images available. Would you like to download some?"
-msgstr "Geen afbeeldingen beschikbaar? Wil je ze downloaden?"
+msgstr "Inga bilder tillgängliga. Vill du ladda ner några?"
 
 msgctxt "#31218"
 msgid "Fanart"
@@ -325,24 +324,24 @@ msgstr "Fanart"
 
 msgctxt "#31219"
 msgid "Download landscape"
-msgstr ""
+msgstr "Ladda ner landskap"
 
 msgctxt "#31220"
 msgid "Viewtype"
-msgstr "Layout"
+msgstr "Vytyp"
 
 msgctxt "#31221"
 msgid "Gallery"
-msgstr "Gallery"
+msgstr "Galleri"
 
 #. Viewtype name. Translation might not be needed / suitable.
 msgctxt "#31222"
 msgid "Slide"
-msgstr "Slide"
+msgstr ""
 
 msgctxt "#31223"
 msgid "Download posters"
-msgstr "Download posters"
+msgstr "Ladda ner affischer"
 
 msgctxt "#31224"
 msgid "Video fanart"
@@ -350,11 +349,11 @@ msgstr "Video fanart"
 
 msgctxt "#31225"
 msgid "Square"
-msgstr "Vierkant"
+msgstr "Fyrkant"
 
 msgctxt "#31226"
 msgid "Enable animated artwork"
-msgstr "Schakel geanimeerde afbeeldingen in"
+msgstr "Aktivera animerade bakgrunder"
 
 msgctxt "#31227"
 msgid "Only in movie information screen"
@@ -362,7 +361,7 @@ msgstr ""
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
-msgstr "Fanart (alleen films en tv series)"
+msgstr ""
 
 msgctxt "#31229"
 msgid "Prefer Landscape thumbnails"
@@ -379,7 +378,7 @@ msgstr ""
 #: settings
 msgctxt "#31300"
 msgid "Homescreen"
-msgstr "Beginscherm"
+msgstr ""
 
 msgctxt "#31301"
 msgid "Artwork"
@@ -391,11 +390,11 @@ msgstr ""
 
 msgctxt "#31303"
 msgid "Please log in"
-msgstr "Log in alsjeblieft"
+msgstr ""
 
 msgctxt "#31304"
 msgid "About"
-msgstr "Over"
+msgstr ""
 
 msgctxt "#31305"
 msgid "Settings level"

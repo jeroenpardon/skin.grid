@@ -60,19 +60,9 @@ msgid "Reset all menu items to defaults"
 msgstr "Ресетуј све на фабричка подешавања"
 
 #. example usage: name of a home menu layout option
-msgctxt "#31023"
-msgid "Vertical - Minimal"
-msgstr "Вертикално - Минимално"
-
-#. example usage: name of a home menu layout option
-msgctxt "#31024"
-msgid "Vertical - Stream"
-msgstr "Вертикално - Низ"
-
-#. example usage: name of a home menu layout option
 msgctxt "#31025"
-msgid "Stream"
-msgstr "Низ"
+msgid "Compact"
+msgstr "Кимпактно"
 
 #: widgets
 msgctxt "#31030"
@@ -152,6 +142,14 @@ msgstr "Слика"
 msgctxt "#31056"
 msgid "Pictures slideshow"
 msgstr "СлајдШоу"
+
+msgctxt "#31057"
+msgid "Horizontal"
+msgstr "Хоризонтални"
+
+msgctxt "#31058"
+msgid "Vertical"
+msgstr "Вертикални"
 
 msgctxt "#31059"
 msgid "Developer"
@@ -267,6 +265,7 @@ msgctxt "#31204"
 msgid "Logos"
 msgstr "Логои"
 
+#. example usage: type of artwork, translation might not be needed / suited
 msgctxt "#31205"
 msgid "Clearart"
 msgstr "Клеарарт"
@@ -335,6 +334,7 @@ msgctxt "#31221"
 msgid "Gallery"
 msgstr "Галерија"
 
+#. Viewtype name. Translation might not be needed / suitable.
 msgctxt "#31222"
 msgid "Slide"
 msgstr "Слајд"
@@ -509,8 +509,8 @@ msgid "Reset skin settings"
 msgstr "Ресетуј подешавања маске"
 
 msgctxt "#31334"
-msgid "This will reset all skin settings and Grid will be restarted."
-msgstr "Ово ће ресетовати подешавања Grid - а и маска ће се ресетовати."
+msgid "This will reset all skin settings."
+msgstr "Са овим ће те ресетовати подешавања маске"
 
 msgctxt "#31335"
 msgid "Supported add-ons"
@@ -605,8 +605,8 @@ msgid "Input field only"
 msgstr "Само у пољу"
 
 msgctxt "#31357"
-msgid "Grid needs to be reloaded for this. Is that ok?"
-msgstr "Grid се мора поново покренути,јел то ОК?"
+msgid "The skin will need to be restarted."
+msgstr "Потребно је ресетовати оодешавања маске"
 
 msgctxt "#31358"
 msgid "Start video or music playlist on startup"
@@ -679,6 +679,27 @@ msgstr "Промени локацију за бекап и поновно учи
 msgctxt "#31375"
 msgid "Subtitle settings"
 msgstr "Подешавање превода"
+
+msgctxt "#31376"
+msgid "Set special effects"
+msgstr "Подесите спеијалне ефекте"
+
+#. skin setting that enables a blur effect to the home menu background
+msgctxt "#31377"
+msgid "Blur effect"
+msgstr "Ефекат \"мутно\""
+
+#. skin setting that enables a blur effect to the home menu background, and
+#. changes colours of text and textures to match the fanart image
+msgctxt "#31378"
+msgid "Blur effect and fanart colours"
+msgstr "Ефекат \"Мутно\" и боје позадинске слике"
+
+#. skin setting that changes colours of text and textures to match the fanart
+#. image
+msgctxt "#31378"
+msgid "Fanart colours only"
+msgstr "Боје позадинске слике"
 
 #: osd / player
 msgctxt "#31550"
@@ -805,7 +826,7 @@ msgstr "Програми"
 
 msgctxt "#31611"
 msgid "Recently played channels"
-msgstr ""
+msgstr "Недавно гледани Канали"
 
 #: media
 msgctxt "#31650"

@@ -60,19 +60,9 @@ msgid "Reset all menu items to defaults"
 msgstr "Palauta kaikki valikot oletusarvoihinsa"
 
 #. example usage: name of a home menu layout option
-msgctxt "#31023"
-msgid "Vertical - Minimal"
-msgstr "Pysty - Minimaalinen"
-
-#. example usage: name of a home menu layout option
-msgctxt "#31024"
-msgid "Vertical - Stream"
-msgstr "Pysty - Stream"
-
-#. example usage: name of a home menu layout option
 msgctxt "#31025"
-msgid "Stream"
-msgstr "Stream"
+msgid "Compact"
+msgstr "Tiivis"
 
 #: widgets
 msgctxt "#31030"
@@ -152,6 +142,14 @@ msgstr "Kuva"
 msgctxt "#31056"
 msgid "Pictures slideshow"
 msgstr "Kuvaesitys"
+
+msgctxt "#31057"
+msgid "Horizontal"
+msgstr "Vaakasuuntainen"
+
+msgctxt "#31058"
+msgid "Vertical"
+msgstr "Pystysuuntainen"
 
 msgctxt "#31059"
 msgid "Developer"
@@ -267,6 +265,7 @@ msgctxt "#31204"
 msgid "Logos"
 msgstr "Logot"
 
+#. example usage: type of artwork, translation might not be needed / suited
 msgctxt "#31205"
 msgid "Clearart"
 msgstr "Clearart"
@@ -335,6 +334,7 @@ msgctxt "#31221"
 msgid "Gallery"
 msgstr "Galleria"
 
+#. Viewtype name. Translation might not be needed / suitable.
 msgctxt "#31222"
 msgid "Slide"
 msgstr "Liuku"
@@ -509,10 +509,8 @@ msgid "Reset skin settings"
 msgstr "Palauta ulkoasun asetukset"
 
 msgctxt "#31334"
-msgid "This will reset all skin settings and Grid will be restarted."
-msgstr ""
-"Tämä palauttaa kaikki Grid-ulkoasun oletusasetukset ja käynnistää sen "
-"uudelleen."
+msgid "This will reset all skin settings."
+msgstr "Tämä palauttaa ulkoasun oletusasetukset."
 
 msgctxt "#31335"
 msgid "Supported add-ons"
@@ -606,8 +604,8 @@ msgid "Input field only"
 msgstr "Vain syöttökenttä"
 
 msgctxt "#31357"
-msgid "Grid needs to be reloaded for this. Is that ok?"
-msgstr "Grid pitää käynnistää uudelleen. Sopiiko se?"
+msgid "The skin will need to be restarted."
+msgstr "Ulkoasu on käynnistettävä uudelleen."
 
 msgctxt "#31358"
 msgid "Start video or music playlist on startup"
@@ -680,6 +678,27 @@ msgstr "Vaihda varmuuskopionnin ja palautuksen sijaintia"
 msgctxt "#31375"
 msgid "Subtitle settings"
 msgstr "Tekstitysasetukset"
+
+msgctxt "#31376"
+msgid "Set special effects"
+msgstr "Aseta erikoistehosteet"
+
+#. skin setting that enables a blur effect to the home menu background
+msgctxt "#31377"
+msgid "Blur effect"
+msgstr "Sumennus"
+
+#. skin setting that enables a blur effect to the home menu background, and
+#. changes colours of text and textures to match the fanart image
+msgctxt "#31378"
+msgid "Blur effect and fanart colours"
+msgstr "Sumennus ja fanitaiteen värit"
+
+#. skin setting that changes colours of text and textures to match the fanart
+#. image
+msgctxt "#31378"
+msgid "Fanart colours only"
+msgstr "Vain fanitaiteen värit"
 
 #: osd / player
 msgctxt "#31550"
@@ -806,7 +825,7 @@ msgstr "Ohjelmat"
 
 msgctxt "#31611"
 msgid "Recently played channels"
-msgstr ""
+msgstr "Viimeksi katsotut kanavat"
 
 #: media
 msgctxt "#31650"

@@ -3,62 +3,61 @@
 # Addon id: skin.grid
 # Addon Provider: Jeroen
 # Translators:
-# Jeroen <jeroenpardon@gmail.com>, 2017
+# Bartolome Soriano <bsoriano@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Jeroen <jeroenpardon@gmail.com>, 2017\n"
-"Language-Team: Dutch (https://www.transifex.com/grid/teams/75010/nl/)\n"
+"Last-Translator: Bartolome Soriano <bsoriano@gmail.com>, 2017\n"
+"Language-Team: Spanish (Spain) (https://www.transifex.com/grid/teams/75010/es_ES/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: nl\n"
+"Language: es_ES\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: home
 msgctxt "#31000"
 msgid "Home Menu"
-msgstr "Startmenu"
+msgstr "Menú Principal"
 
 msgctxt "#31001"
 msgid "Home menu layout"
-msgstr "Indeling van het startmenu"
+msgstr "Diseño de Menú Principal"
 
 msgctxt "#31002"
 msgid "Home menu type"
-msgstr "Startmenu type"
+msgstr "Tipo de Menú Principal"
 
 msgctxt "#31005"
 msgid "Layout"
-msgstr "Indeling"
+msgstr "Diseño"
 
 msgctxt "#31006"
 msgid "Automatically collapse submenus"
-msgstr "Klap submenus automatisch in"
+msgstr "Colapsar submenús automáticamente"
 
 msgctxt "#31007"
 msgid "Statusbar information"
-msgstr "Statusbalk informatie"
+msgstr "Información de barra de estado"
 
 msgctxt "#31018"
 msgid ""
 "You're about to delete settings. You will no longer be able to change any "
 "system settings unless you have provided a different method. Are you sure?"
 msgstr ""
-"Je gaat de instellingen knop verwijderen. Je zal geen systeem instellingen "
-"meer kunnen veranderen tenzij je een andere route hiervoor hebt. Weet je het"
-" zeker?"
+"Está a punto de eliminar ajustes.  No podrá luego cambiar ningún ajuste de "
+"sistema, a menos que haya provisto un método diferente.  ¿Está seguro?"
 
 msgctxt "#31021"
 msgid "Add shortcut"
-msgstr "Snelkoppeling toevoegen"
+msgstr "Adicionar acceso rápido"
 
 msgctxt "#31022"
 msgid "Reset all menu items to defaults"
-msgstr "Herstel standaardwaarden voor alle menu onderdelen in"
+msgstr "Resteblecer todos los ítems de menú"
 
 #. example usage: name of a home menu layout option
 msgctxt "#31025"
@@ -72,77 +71,77 @@ msgstr "Widget"
 
 msgctxt "#31031"
 msgid "Widgets"
-msgstr ""
+msgstr "Widgets"
 
 msgctxt "#31032"
 msgid "Select widget layout"
-msgstr "Selecteer widget indeling"
+msgstr "Seleccione el diseño de widget"
 
 msgctxt "#31033"
 msgid "Select sort direction"
-msgstr "Selecteer sorteer volgorde"
+msgstr "Seleccione la dirección de ordenamiento"
 
 msgctxt "#31034"
 msgid "Fullscreen (16:9)"
-msgstr "Volledig scherm (16:9)"
+msgstr "Fullscreen (16:9)"
 
 msgctxt "#31035"
 msgid "Wide (21:9)"
-msgstr "Breed (21:9)"
+msgstr "Wide (21:9)"
 
 msgctxt "#31036"
 msgid "Landscape (16:9)"
-msgstr "Landschap (16:9)"
+msgstr "Landscape (16:9)"
 
 msgctxt "#31037"
 msgid "Portrait (2:3)"
-msgstr "Portret (2:3)"
+msgstr "Portrait (2:3)"
 
 msgctxt "#31038"
 msgid "Square (1:1)"
-msgstr "Vierkant (1:1)"
+msgstr "Square (1:1)"
 
 msgctxt "#31040"
 msgid "Show widget names"
-msgstr "Toon widget namen"
+msgstr "Mostrar nombres de widgets"
 
 msgctxt "#31041"
 msgid "Select widget artwork"
-msgstr ""
+msgstr "Seleccione arte de widget"
 
 msgctxt "#31044"
 msgid "Wide"
-msgstr ""
+msgstr "Ancho"
 
 #: general
 msgctxt "#31050"
 msgid "Apply"
-msgstr "Toepassen"
+msgstr "Aplicar"
 
 #. example usage: "20 recordings available"
 msgctxt "#31051"
 msgid "available"
-msgstr "beschikbaar"
+msgstr "disponible"
 
 msgctxt "#31052"
 msgid "Warning"
-msgstr "Waarschuwing"
+msgstr "Advertencia"
 
 msgctxt "#31053"
 msgid "Fullscreen"
-msgstr "Volledig scherm"
+msgstr "Fullscreen"
 
 msgctxt "#31054"
 msgid "Unknown"
-msgstr "Onbekend"
+msgstr "Desconocido"
 
 msgctxt "#31055"
 msgid "Single image"
-msgstr "Afbeelding"
+msgstr "Única Imagen"
 
 msgctxt "#31056"
 msgid "Pictures slideshow"
-msgstr "Dia voorstelling"
+msgstr "Presentación de Fotos"
 
 msgctxt "#31057"
 msgid "Horizontal"
@@ -154,96 +153,96 @@ msgstr ""
 
 msgctxt "#31059"
 msgid "Developer"
-msgstr "Ontwikkelaar"
+msgstr "Desarrollador"
 
 msgctxt "#31060"
 msgid "Global"
-msgstr "Algemeen"
+msgstr "Global"
 
 msgctxt "#31061"
 msgid "Context menu"
-msgstr "Context menu"
+msgstr "Menú de contexto"
 
 msgctxt "#31062"
 msgid "Other"
-msgstr "Anders"
+msgstr "Otro"
 
 msgctxt "#31063"
 msgid "None selected"
-msgstr "Niets geselecteerd"
+msgstr "Ninguno"
 
 msgctxt "#31064"
 msgid "Smart playlists"
-msgstr ""
+msgstr "Listas de reproducción Inteligentes"
 
 msgctxt "#31065"
 msgid "Smart playlist"
-msgstr ""
+msgstr "Lista de reproducción Inteligente"
 
 msgctxt "#31066"
 msgid "Library node"
-msgstr ""
+msgstr "Nodo de Colección"
 
 msgctxt "#31067"
 msgid "Library statistics"
-msgstr "Mediabibliotheek statistieken"
+msgstr "Estadísticas de Colección"
 
 msgctxt "#31068"
 msgid "Content"
-msgstr "Inhoud"
+msgstr "Contenido"
 
 msgctxt "#31069"
 msgid "Select content"
-msgstr "Selecteer inhoud"
+msgstr "Establecer contenido"
 
 #. example usage: this is a required add-on
 msgctxt "#31070"
 msgid "Required"
-msgstr "Vereist"
+msgstr "Requerido"
 
 #. example usage: this is an optional add-on
 msgctxt "#31071"
 msgid "Optional"
-msgstr "Optioneel"
+msgstr "Opcional"
 
 #. example usage: this addon is installed
 msgctxt "#31073"
 msgid "Installed"
-msgstr "Geïnstalleerd"
+msgstr "Instalado"
 
 #. example usage: episode first aired on
 msgctxt "#31074"
 msgid "On"
-msgstr "op"
+msgstr "En"
 
 #. example usage: shorthand for minutes
 msgctxt "#31075"
 msgid "Min"
-msgstr "Min"
+msgstr "Mín."
 
 msgctxt "#31076"
 msgid "Playcount"
-msgstr "Keren afgespeeld"
+msgstr "Cantidad de reproducciones"
 
 msgctxt "#31077"
 msgid "Never played"
-msgstr "Nooit afgespeeld"
+msgstr "Nunca se ha reproducido"
 
 msgctxt "#31079"
 msgid "Descriptions"
-msgstr "Omschrijvingen"
+msgstr "Descripciones"
 
 msgctxt "#31081"
 msgid "Reload"
-msgstr "Herladen"
+msgstr "Recargar"
 
 msgctxt "#31083"
 msgid "Sorting"
-msgstr "Sorteren"
+msgstr "Clasificación"
 
 msgctxt "#31084"
 msgid "Items"
-msgstr "stuks"
+msgstr "Ítems"
 
 #: artwork
 msgctxt "#31200"
@@ -252,19 +251,19 @@ msgstr "Posters"
 
 msgctxt "#31201"
 msgid "Portrait"
-msgstr "Verticaal"
+msgstr "Portrait"
 
 msgctxt "#31202"
 msgid "Landscape"
-msgstr "Horizontaal"
+msgstr "Landscape"
 
 msgctxt "#31203"
 msgid "Thumbnails"
-msgstr "Afbeeldingen"
+msgstr "Miniaturas"
 
 msgctxt "#31204"
 msgid "Logos"
-msgstr "Logo's"
+msgstr "Logos"
 
 #. example usage: type of artwork, translation might not be needed / suited
 msgctxt "#31205"
@@ -273,51 +272,51 @@ msgstr "Clearart"
 
 msgctxt "#31206"
 msgid "Download artwork"
-msgstr "Afbeeldingen downloaden"
+msgstr "Descargar arte"
 
 msgctxt "#31207"
 msgid "Extended artwork"
-msgstr ""
+msgstr "Arte Extendida"
 
 msgctxt "#31208"
 msgid "Enable logos"
-msgstr "Gebruik logo's"
+msgstr "Activar logos"
 
 msgctxt "#31209"
 msgid "Download logos"
-msgstr "Download logo's"
+msgstr "Descargar logos"
 
 msgctxt "#31210"
 msgid "Download thumbnail"
-msgstr "Download miniatuur afbeeldingen"
+msgstr "Descargar miniatura"
 
 msgctxt "#31211"
 msgid "Download poster"
-msgstr "Download poster"
+msgstr "Descargar poster"
 
 msgctxt "#31212"
 msgid "Download extrafanart"
-msgstr "Download extrafanart"
+msgstr "Descargar extrafanart"
 
 msgctxt "#31213"
 msgid "Download fanart"
-msgstr "Download fanart"
+msgstr "Descargar fanart"
 
 msgctxt "#31214"
 msgid "Get all artwork"
-msgstr "Download alle afbeeldingtypes"
+msgstr "Obtener todo el arte"
 
 msgctxt "#31215"
 msgid "Landscape art type"
-msgstr "Horizontaal afbeeldingstype"
+msgstr "Tipo de arte Landscape"
 
 msgctxt "#31216"
 msgid "List view artwork type"
-msgstr ""
+msgstr "Tipo de arte vista de Lista"
 
 msgctxt "#31217"
 msgid "No images available. Would you like to download some?"
-msgstr "Geen afbeeldingen beschikbaar? Wil je ze downloaden?"
+msgstr "No hay imágenes disponibles. ¿Le gustaría descargar algunas?"
 
 msgctxt "#31218"
 msgid "Fanart"
@@ -325,189 +324,189 @@ msgstr "Fanart"
 
 msgctxt "#31219"
 msgid "Download landscape"
-msgstr ""
+msgstr "Descargar landscape"
 
 msgctxt "#31220"
 msgid "Viewtype"
-msgstr "Layout"
+msgstr "Tipo de Vista"
 
 msgctxt "#31221"
 msgid "Gallery"
-msgstr "Gallery"
+msgstr "Galería"
 
 #. Viewtype name. Translation might not be needed / suitable.
 msgctxt "#31222"
 msgid "Slide"
-msgstr "Slide"
+msgstr "Desplazamiento"
 
 msgctxt "#31223"
 msgid "Download posters"
-msgstr "Download posters"
+msgstr "Descargar posters"
 
 msgctxt "#31224"
 msgid "Video fanart"
-msgstr "Video fanart"
+msgstr "Fanart de vídeo"
 
 msgctxt "#31225"
 msgid "Square"
-msgstr "Vierkant"
+msgstr "Square"
 
 msgctxt "#31226"
 msgid "Enable animated artwork"
-msgstr "Schakel geanimeerde afbeeldingen in"
+msgstr "Activar arte animado"
 
 msgctxt "#31227"
 msgid "Only in movie information screen"
-msgstr ""
+msgstr "Sólo en pantalla de información de película"
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
-msgstr "Fanart (alleen films en tv series)"
+msgstr "Fanart (sólo películas y series)"
 
 msgctxt "#31229"
 msgid "Prefer Landscape thumbnails"
-msgstr ""
+msgstr "Preferir miniaturas Landscape"
 
 msgctxt "#31230"
 msgid "Prefer Fanart"
-msgstr ""
+msgstr "Preferir Fanart"
 
 msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
-msgstr ""
+msgstr "Mostrar logo para fanart en pantalla ahora"
 
 #: settings
 msgctxt "#31300"
 msgid "Homescreen"
-msgstr "Beginscherm"
+msgstr "Pantalla principal"
 
 msgctxt "#31301"
 msgid "Artwork"
-msgstr ""
+msgstr "Arte"
 
 msgctxt "#31302"
 msgid "Shutdown menu"
-msgstr ""
+msgstr "Menú de Apagado"
 
 msgctxt "#31303"
 msgid "Please log in"
-msgstr "Log in alsjeblieft"
+msgstr "Por favor iniciar sesión"
 
 msgctxt "#31304"
 msgid "About"
-msgstr "Over"
+msgstr "Acerca de"
 
 msgctxt "#31305"
 msgid "Settings level"
-msgstr ""
+msgstr "Nivel de Ajustes"
 
 msgctxt "#31306"
 msgid "Menus"
-msgstr ""
+msgstr "Menús"
 
 msgctxt "#31307"
 msgid "Scrollbar visibility"
-msgstr ""
+msgstr "Visibilidad de barra de desplazamiento"
 
 msgctxt "#31309"
 msgid "Customize this menu"
-msgstr ""
+msgstr "Personalizar este menú"
 
 msgctxt "#31310"
 msgid "Customize options menu"
-msgstr ""
+msgstr "Personalizar menú de opciones"
 
 msgctxt "#31311"
 msgid "Customize home menu and widgets"
-msgstr ""
+msgstr "Personalizar menú principal y widgets"
 
 msgctxt "#31312"
 msgid "Customize"
-msgstr ""
+msgstr "Personalizar"
 
 msgctxt "#31313"
 msgid "TV Show Library"
-msgstr ""
+msgstr "Colección de Series de TV"
 
 msgctxt "#31314"
 msgid "Library views"
-msgstr ""
+msgstr "Vistas de Colección"
 
 msgctxt "#31315"
 msgid "Show now playing video in background"
-msgstr ""
+msgstr "Mostrar vídeo en reproducción en el fondo"
 
 msgctxt "#31316"
 msgid "Show fanart for currently playing artist"
-msgstr ""
+msgstr "Mostrar fanart para artista en reproducción"
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
-msgstr ""
+msgstr "Animar fondos"
 
 msgctxt "#31318"
 msgid "Display fanart in now playing screen"
-msgstr ""
+msgstr "Mostrar fanart en pantalla de reproduciéndose ahora"
 
 msgctxt "#31319"
 msgid "Blend visualisation and fanart"
-msgstr ""
+msgstr "Mezclar visualización y fanart"
 
 msgctxt "#31320"
 msgid "Always show"
-msgstr ""
+msgstr "Mostrar siempre"
 
 msgctxt "#31321"
 msgid "Show only when focused"
-msgstr ""
+msgstr "Mostrar sólo cuando esté enfocado"
 
 msgctxt "#31322"
 msgid "Show clock"
-msgstr ""
+msgstr "Mostrar reloj"
 
 msgctxt "#31323"
 msgid "Select icon"
-msgstr ""
+msgstr "Seleccionar ícono"
 
 msgctxt "#31324"
 msgid "Show current date"
-msgstr ""
+msgstr "Mostrar fecha actual"
 
 msgctxt "#31325"
 msgid "Autoscrolling speed"
-msgstr ""
+msgstr "Velocidad de auto-desplazamiento"
 
 msgctxt "#31326"
 msgid "affects performance"
-msgstr ""
+msgstr "Afecta el rendimiento"
 
 msgctxt "#31327"
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 msgctxt "#31328"
 msgid "Fast"
-msgstr ""
+msgstr "Rápido"
 
 msgctxt "#31329"
 msgid "Instant"
-msgstr ""
+msgstr "Instantáneo"
 
 msgctxt "#31330"
 msgid "Slow"
-msgstr ""
+msgstr "Lento"
 
 msgctxt "#31331"
 msgid "Use weather fanart"
-msgstr ""
+msgstr "Utilizar fanart de clima"
 
 msgctxt "#31332"
 msgid "Select a weather fanart package"
-msgstr ""
+msgstr "Seleccionar un paquete de fanart de clima"
 
 msgctxt "#31333"
 msgid "Reset skin settings"
-msgstr ""
+msgstr "Restablecer ajustes del skin"
 
 msgctxt "#31334"
 msgid "This will reset all skin settings."
@@ -515,94 +514,94 @@ msgstr ""
 
 msgctxt "#31335"
 msgid "Supported add-ons"
-msgstr ""
+msgstr "Complementos soportados"
 
 msgctxt "#31336"
 msgid "Debug grid"
-msgstr ""
+msgstr "Grilla de depuración"
 
 msgctxt "#31337"
 msgid "Debug info"
-msgstr ""
+msgstr "Información de depuración"
 
 msgctxt "#31338"
 msgid "TV Guide scrolling speed"
-msgstr ""
+msgstr "Velocidad de desplazamiento de Guía de TV"
 
 msgctxt "#31339"
 msgid "Options menu"
-msgstr ""
+msgstr "Menú de Opciones"
 
 #. Example usage: allows the user to configure what source is used for media
 #. ratings
 msgctxt "#31340"
 msgid "Select ratings source"
-msgstr ""
+msgstr "Seleccionar fuente de valoraciones"
 
 #. Example usage: shows the imdb rating, as a percentage of 100
 msgctxt "#31341"
 msgid "percentage"
-msgstr ""
+msgstr "porcentaje"
 
 msgctxt "#31342"
 msgid "Show parental guidance ratings for movies and tv shows"
-msgstr ""
+msgstr "Mostrar valoración con guía parental para películas y series"
 
 msgctxt "#31343"
 msgid "Parental guidance"
-msgstr ""
+msgstr "Guía Parental"
 
 msgctxt "#31344"
 msgid "Highlight first letter when scrolling"
-msgstr ""
+msgstr "Resaltar primera letra al desplazarse"
 
 msgctxt "#31345"
 msgid "Ratings"
-msgstr ""
+msgstr "Valoraciones"
 
 msgctxt "#31346"
 msgid "Select text input mode"
-msgstr ""
+msgstr "Seleccionar modo de entrada de texto"
 
 msgctxt "#31347"
 msgid "Press up in information screens for popup"
-msgstr ""
+msgstr "Presione arriba en pantallas de información para popup"
 
 msgctxt "#31348"
 msgid "Show video rating overlays"
-msgstr ""
+msgstr "Mostrar overlays de valoración de vídeo"
 
 msgctxt "#31349"
 msgid "Menu playback controls"
-msgstr ""
+msgstr "Controles de Reproducción del Menú"
 
 msgctxt "#31350"
 msgid "fullscreen / playlist button"
-msgstr ""
+msgstr "Botón de fullscreen / lista de reproducción"
 
 msgctxt "#31351"
 msgid "Player controls"
-msgstr ""
+msgstr "Controles del Reproductor"
 
 msgctxt "#31352"
 msgid "All windows"
-msgstr ""
+msgstr "Todas las ventanas"
 
 msgctxt "#31353"
 msgid "Except homescreen"
-msgstr ""
+msgstr "Exceptuando la Pantalla Principal"
 
 msgctxt "#31354"
 msgid "Homescreen only"
-msgstr ""
+msgstr "Sólo Pantalla Principal"
 
 msgctxt "#31355"
 msgid "Full keyboard"
-msgstr ""
+msgstr "Teclado completo"
 
 msgctxt "#31356"
 msgid "Input field only"
-msgstr ""
+msgstr "Campo de entrada solamente"
 
 msgctxt "#31357"
 msgid "The skin will need to be restarted."
@@ -610,75 +609,75 @@ msgstr ""
 
 msgctxt "#31358"
 msgid "Start video or music playlist on startup"
-msgstr ""
+msgstr "Activar lista de reproducción de vídeo o música al inicio"
 
 msgctxt "#31359"
 msgid "Select playlist"
-msgstr ""
+msgstr "Seleccione lista de reproducción"
 
 msgctxt "#31360"
 msgid "Background image type"
-msgstr ""
+msgstr "Tipo de imagen de fondo"
 
 msgctxt "#31361"
 msgid "Hide background fanart while scrolling"
-msgstr ""
+msgstr "Esconder fanart de fondo al desplazarse"
 
 msgctxt "#31362"
 msgid "Slideshow contents"
-msgstr ""
+msgstr "Contenido de Presentación"
 
 msgctxt "#31363"
 msgid "Disable custom shortcuts tab"
-msgstr ""
+msgstr "Desactivar tab de accesos rápidos personalizados"
 
 msgctxt "#31364"
 msgid "Select image(s)"
-msgstr ""
+msgstr "Seleccionar imágen(es)"
 
 msgctxt "#31365"
 msgid "Animated backgrounds"
-msgstr ""
+msgstr "Fondos Animados"
 
 msgctxt "#31366"
 msgid "Fanart slideshow"
-msgstr ""
+msgstr "Presentación de Fanart"
 
 msgctxt "#31367"
 msgid "Select fanart source"
-msgstr ""
+msgstr "Seleccionar fuente de fanart"
 
 msgctxt "#31368"
 msgid "All fanart"
-msgstr ""
+msgstr "Todos los fanarts"
 
 msgctxt "#31369"
 msgid "Movie Library"
-msgstr ""
+msgstr "Colección de Películas"
 
 msgctxt "#31370"
 msgid "TV Show Library"
-msgstr ""
+msgstr "Colección de Series de TV"
 
 msgctxt "#31371"
 msgid "Restore skin settings"
-msgstr ""
+msgstr "Restaurar ajustes de skin"
 
 msgctxt "#31372"
 msgid "Backup skin settings"
-msgstr ""
+msgstr "Respaldar ajustes de skin"
 
 msgctxt "#31373"
 msgid "Backup & Restore"
-msgstr ""
+msgstr "Respaldar & Restaurar"
 
 msgctxt "#31374"
 msgid "Change backup and restore location"
-msgstr ""
+msgstr "Cambiar localización de respaldo y restauro"
 
 msgctxt "#31375"
 msgid "Subtitle settings"
-msgstr ""
+msgstr "Ajustes de Subtítulos"
 
 msgctxt "#31376"
 msgid "Set special effects"
@@ -704,363 +703,363 @@ msgstr ""
 #: osd / player
 msgctxt "#31550"
 msgid "Rwd"
-msgstr ""
+msgstr "Rwd"
 
 msgctxt "#31551"
 msgid "Fwd"
-msgstr ""
+msgstr "Fwd"
 
 msgctxt "#31552"
 msgid "Memory usage"
-msgstr ""
+msgstr "Uso de Memoria"
 
 msgctxt "#31553"
 msgid "Hardware decoding"
-msgstr ""
+msgstr "Decodificación por Hardware"
 
 msgctxt "#31554"
 msgid "Software decoding"
-msgstr ""
+msgstr "Decodificación por Software"
 
 #. example usage: the movie will finish playing at 22:00
 msgctxt "#31556"
 msgid "Finishes at"
-msgstr ""
+msgstr "Termina a las"
 
 msgctxt "#31557"
 msgid "Get subtitles"
-msgstr ""
+msgstr "Obtener subtítulos"
 
 msgctxt "#31558"
 msgid "Disable subtitles"
-msgstr ""
+msgstr "Desactivar subtítulos"
 
 msgctxt "#31559"
 msgid "Get lyrics"
-msgstr ""
+msgstr "Obtener letras"
 
 msgctxt "#31560"
 msgid "Watch in 2D"
-msgstr ""
+msgstr "Ver en 2D"
 
 msgctxt "#31561"
 msgid "Watch in 3D"
-msgstr ""
+msgstr "Ver en 3D"
 
 msgctxt "#31562"
 msgid "Select 3D mode"
-msgstr ""
+msgstr "Seleccionar modo de 3D"
 
 msgctxt "#31563"
 msgid "Next subtitles"
-msgstr ""
+msgstr "Próximo subtítulo"
 
 msgctxt "#31564"
 msgid "Playlist"
-msgstr ""
+msgstr "Lista de reproducción"
 
 msgctxt "#31565"
 msgid "Subtitle settings"
-msgstr ""
+msgstr "Ajustes de Subtítulos"
 
 #. example usage: starting a manual search for subtitles
 msgctxt "#31566"
 msgid "Manual search"
-msgstr ""
+msgstr "Búsqueda Manual"
 
 #. example usage: create a bookmark
 msgctxt "#31567"
 msgid "Create"
-msgstr ""
+msgstr "Crear"
 
 #. example usage: set an episode bookmark
 msgctxt "#31568"
 msgid "Set episode"
-msgstr ""
+msgstr "Establecer episodio"
 
 #: pvr
 msgctxt "#31600"
 msgid "Available groups"
-msgstr ""
+msgstr "Grupos disponibles"
 
 msgctxt "#31601"
 msgid "Add group"
-msgstr ""
+msgstr "Adicionar grupo"
 
 msgctxt "#31602"
 msgid "Rename group"
-msgstr ""
+msgstr "Renombrar grupo"
 
 msgctxt "#31603"
 msgid "Hide group"
-msgstr ""
+msgstr "Esconder grupo"
 
 msgctxt "#31604"
 msgid "Delete group"
-msgstr ""
+msgstr "Eliminar grupo"
 
 msgctxt "#31605"
 msgid "Visible channels"
-msgstr ""
+msgstr "Canales Visibles"
 
 msgctxt "#31606"
 msgid "Hidden channels"
-msgstr ""
+msgstr "Canales Escondidos"
 
 #. example usage: Used as name of PVR last played widget
 msgctxt "#31607"
 msgid "Recent TV Channels"
-msgstr ""
+msgstr "Canales Recientes"
 
 msgctxt "#31608"
 msgid "Channel type"
-msgstr ""
+msgstr "Tipo de Canal"
 
 msgctxt "#31609"
 msgid "Channel options"
-msgstr ""
+msgstr "Opciones de Canal"
 
 msgctxt "#31610"
 msgid "Programmes"
-msgstr ""
+msgstr "Programas"
 
 msgctxt "#31611"
 msgid "Recently played channels"
-msgstr ""
+msgstr "Canales reproducidos recientemente"
 
 #: media
 msgctxt "#31650"
 msgid "Last episode"
-msgstr ""
+msgstr "Último episodio"
 
 msgctxt "#31651"
 msgid "Next episode"
-msgstr ""
+msgstr "Próximo episodio"
 
 msgctxt "#31652"
 msgid "Status"
-msgstr ""
+msgstr "Estado"
 
 msgctxt "#31653"
 msgid "Airs today"
-msgstr ""
+msgstr "Se emite hoy"
 
 #. Example usage: More by writer Stephen King
 msgctxt "#31654"
 msgid "More by writer"
-msgstr ""
+msgstr "Más del mismo escritor"
 
 #. Example usage: More by director Steven Spielberg
 msgctxt "#31655"
 msgid "More by director"
-msgstr ""
+msgstr "Más del mismo director"
 
 msgctxt "#31656"
 msgid "Youtube Search"
-msgstr ""
+msgstr "Búsqueda en YouTube"
 
 msgctxt "#31657"
 msgid "Similar"
-msgstr ""
+msgstr "Similar"
 
 msgctxt "#31658"
 msgid "Similar movies"
-msgstr ""
+msgstr "Películas similares"
 
 msgctxt "#31659"
 msgid "Similar shows"
-msgstr ""
+msgstr "Series similares"
 
 #. Example usage: More from 20th Century Fox
 msgctxt "#31660"
 msgid "More from"
-msgstr ""
+msgstr "Más de"
 
 msgctxt "#31661"
 msgid "Video files"
-msgstr ""
+msgstr "Archivos de vídeo"
 
 msgctxt "#31662"
 msgid "Random albums"
-msgstr ""
+msgstr "Álbumes al azar"
 
 msgctxt "#31663"
 msgid "Random songs"
-msgstr ""
+msgstr "Pistas al azar"
 
 msgctxt "#31664"
 msgid "Last played on"
-msgstr ""
+msgstr "Fecha de última reproducción"
 
 msgctxt "#31665"
 msgid "Recently Added"
-msgstr ""
+msgstr "Añadido Recientemente"
 
 msgctxt "#31666"
 msgid "Repositories"
-msgstr ""
+msgstr "Repositorios"
 
 msgctxt "#31667"
 msgid "Local add-ons"
-msgstr ""
+msgstr "Complementos locales"
 
 msgctxt "#31668"
 msgid "TV Shows"
-msgstr ""
+msgstr "Series"
 
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"
 msgid "Name & Type"
-msgstr ""
+msgstr "Nombre & Tipo"
 
 msgctxt "#31701"
 msgid "Album count"
-msgstr ""
+msgstr "Cantidad de Álbumes"
 
 msgctxt "#31703"
 msgid "Song count"
-msgstr ""
+msgstr "Cantidad de Pistas"
 
 msgctxt "#31704"
 msgid "Unwatched show"
-msgstr ""
+msgstr "Serie no encontrada"
 
 #. Example usage: continuing tv show
 msgctxt "#31705"
 msgid "Continuing series"
-msgstr ""
+msgstr "Series que Continúan"
 
 #. Example usage: ended tv show
 msgctxt "#31706"
 msgid "Ended series"
-msgstr ""
+msgstr "Series Finalizadas"
 
 #. Example usage: tv show status unknown
 msgctxt "#31707"
 msgid "Status unknown"
-msgstr ""
+msgstr "Estado desconocido"
 
 msgctxt "#31709"
 msgid "Unwatched episodes"
-msgstr ""
+msgstr "Episodios No Vistos"
 
 msgctxt "#31710"
 msgid "Playing"
-msgstr ""
+msgstr "Reproduciendo"
 
 msgctxt "#31711"
 msgid "Now playing"
-msgstr ""
+msgstr "Reproduciéndose Ahora"
 
 msgctxt "#31712"
 msgid "Watchlist"
-msgstr ""
+msgstr "Lista a Ver"
 
 msgctxt "#31713"
 msgid "Live TV"
-msgstr ""
+msgstr "TV En Vivo"
 
 msgctxt "#31714"
 msgid "Recently Played"
-msgstr ""
+msgstr "Reproducido Recientemente"
 
 msgctxt "#31715"
 msgid "Recommended"
-msgstr ""
+msgstr "Recomendado"
 
 msgctxt "#31716"
 msgid "Movies Watchlist"
-msgstr ""
+msgstr "Lista de Películas a Ver"
 
 msgctxt "#31717"
 msgid "Episodes Watchlist"
-msgstr ""
+msgstr "Lista de Episodios a Ver"
 
 msgctxt "#31718"
 msgid "Airing today"
-msgstr ""
+msgstr "Emitiéndose hoy"
 
 msgctxt "#31719"
 msgid "Recently added video"
-msgstr ""
+msgstr "Vídeo añadido recientemente"
 
 msgctxt "#31720"
 msgid "Unwatched movies"
-msgstr ""
+msgstr "Películas no vistas"
 
 #: colours
 msgctxt "#31800"
 msgid "Manage colour themes"
-msgstr ""
+msgstr "Gestionar temas de colores"
 
 msgctxt "#31801"
 msgid "Reset all colours to skin defaults"
-msgstr ""
+msgstr "Restablecer todos los colores a valores predeterminados"
 
 msgctxt "#31810"
 msgid "Background & focused text"
-msgstr ""
+msgstr "Fondo & texto en foco"
 
 msgctxt "#31811"
 msgid "Accent & unfocused text"
-msgstr ""
+msgstr "Resalte & texto no enfocado"
 
 msgctxt "#31812"
 msgid "Secondary unfocused text"
-msgstr ""
+msgstr "Texto no enfocado Secundario"
 
 msgctxt "#31813"
 msgid "Alternative text"
-msgstr ""
+msgstr "Texto alternativo"
 
 msgctxt "#31814"
 msgid "Disabled text"
-msgstr ""
+msgstr "Texto desactivado"
 
 #. example usage: the weather forecast is thunderstorms and lightning very
 #. very frightening
 #: other
 msgctxt "#31850"
 msgid "Forecast"
-msgstr ""
+msgstr "Pronóstico"
 
 #. example usage: currently the weather conditions are sunny
 msgctxt "#31851"
 msgid "Currently"
-msgstr ""
+msgstr "Actualmente"
 
 msgctxt "#31852"
 msgid "YouTube: Popular"
-msgstr ""
+msgstr "YouTube: Popular"
 
 msgctxt "#31853"
 msgid "YouTube: Live"
-msgstr ""
+msgstr "YouTube: En Vivo"
 
 msgctxt "#31854"
 msgid "Goodbye"
-msgstr ""
+msgstr "Adiós"
 
 msgctxt "#31855"
 msgid "See you later"
-msgstr ""
+msgstr "Hasta luego"
 
 #: about
 msgctxt "#31980"
 msgid "Design & development"
-msgstr ""
+msgstr "Diseño & desarrollo"
 
 msgctxt "#31981"
 msgid "Special thanks"
-msgstr ""
+msgstr "Agradecimientos especiales a"
 
 msgctxt "#31982"
 msgid "Team-Kodi, the Kodi community and YOU for using Grid"
-msgstr ""
+msgstr "Team-Kodi, a la comunidad Kodi y a USTED por usar Grid"
 
 msgctxt "#31983"
 msgid "License"
-msgstr ""
+msgstr "Licencia"
 
 #. Only translate text after the "-".
 msgctxt "#31984"
@@ -1069,10 +1068,14 @@ msgid ""
 "Distributing (derivatives of) this software (Grid) as part of a commercial "
 "product without my explicit prior written consent is strictly prohibited."
 msgstr ""
+"Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported - La "
+"distribución de este software (Grid) o derivados del mismo, como parte de un"
+" producto comercial, sin mi consentimiento expreso por escrito, está "
+"estrictamente prohibida."
 
 msgctxt "#31985"
 msgid "Beta testing"
-msgstr ""
+msgstr "Pruebas Beta"
 
 #. Don't translate this.
 msgctxt "#31986"
@@ -1080,23 +1083,27 @@ msgid ""
 "BigDaddyRal, Donderstraal, KOKONUTCREME, Loggio, monkeyboyohyeah, Rafał "
 "Wójcik, Reynald Frisson, Slurrrp"
 msgstr ""
+"BigDaddyRal, Donderstraal, KOKONUTCREME, Loggio, monkeyboyohyeah, Rafał "
+"Wójcik, Reynald Frisson, Slurrrp"
 
 msgctxt "#31990"
 msgid "Final note"
-msgstr ""
+msgstr "Nota final"
 
 msgctxt "#31991"
 msgid ""
 "If you enjoy my work and feel like contributing towards development, it is "
 "appreciated greatly - [B]www.paypal.me/jeroenpardon[/B]"
 msgstr ""
+"Si disfruta mi trabajo y quisiera contribuir con el desarrollo, sería muy "
+"apreciado - [B]www.paypal.me/jeroenpardon[/B]"
 
 #. Shown when browsing through the available skins in the add-on browser, not
 #. in the skin itself. Will be manually added to the skin's addon.xml.
 #: addon.xml
 msgctxt "#31997"
 msgid "Grid by Jeroen"
-msgstr ""
+msgstr "Grid por Jeroen"
 
 #. Skin Description. Shown when browsing through the available skins in the
 #. add-on browser, not in the skin itself. Will be manually added to the
@@ -1108,10 +1115,15 @@ msgid ""
 "focuses on feature quality rather than quantity with a lot of attention "
 "spent on the little details that matter."
 msgstr ""
+"El objetivo de Grid es proveer una manera elegante e intuitiva de disfrutar "
+"todas las funcionalidades maravillosas que provee Kodi.  El diseño y "
+"desarrollo se enfoca en la calidad de la funcionalidad, en vez de la "
+"cantidad, con mucha atención invertida en los pequeños detalles que hacen la"
+" diferencia."
 
 #. Skin Disclaimer. Shown when browsing through the available skins in the
 #. add-on browser, not in the skin itself. Will be manually added to the
 #. skin's addon.xml.
 msgctxt "#31999"
 msgid "Mouse and touchscreen use not supported"
-msgstr ""
+msgstr "El uso de ratón y/o pantalla táctil no está soportado"

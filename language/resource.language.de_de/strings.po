@@ -3,14 +3,14 @@
 # Addon id: skin.grid
 # Addon Provider: Jeroen
 # Translators:
-# Lenn <lenn.barkey@googlemail.com>, 2017
+# Lenn Barkey <lenn.barkey@googlemail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Lenn <lenn.barkey@googlemail.com>, 2017\n"
+"Last-Translator: Lenn Barkey <lenn.barkey@googlemail.com>, 2017\n"
 "Language-Team: German (Germany) (https://www.transifex.com/grid/teams/75010/de_DE/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -60,19 +60,9 @@ msgid "Reset all menu items to defaults"
 msgstr "Alle Menü-Einträge zurücksetzen"
 
 #. example usage: name of a home menu layout option
-msgctxt "#31023"
-msgid "Vertical - Minimal"
-msgstr "Vertikal - Minimal"
-
-#. example usage: name of a home menu layout option
-msgctxt "#31024"
-msgid "Vertical - Stream"
-msgstr "Vertikal - Fluß"
-
-#. example usage: name of a home menu layout option
 msgctxt "#31025"
-msgid "Stream"
-msgstr "Fluß"
+msgid "Compact"
+msgstr "Kompakt"
 
 #: widgets
 msgctxt "#31030"
@@ -152,6 +142,14 @@ msgstr "Einzelbild"
 msgctxt "#31056"
 msgid "Pictures slideshow"
 msgstr "Foto Diashow"
+
+msgctxt "#31057"
+msgid "Horizontal"
+msgstr "Horizontal"
+
+msgctxt "#31058"
+msgid "Vertical"
+msgstr "Vertikal"
 
 msgctxt "#31059"
 msgid "Developer"
@@ -267,6 +265,7 @@ msgctxt "#31204"
 msgid "Logos"
 msgstr "Logos"
 
+#. example usage: type of artwork, translation might not be needed / suited
 msgctxt "#31205"
 msgid "Clearart"
 msgstr "Clearart"
@@ -325,7 +324,7 @@ msgstr "Fanart"
 
 msgctxt "#31219"
 msgid "Download landscape"
-msgstr ""
+msgstr "Horizontales Artwork herunterladen"
 
 msgctxt "#31220"
 msgid "Viewtype"
@@ -335,9 +334,10 @@ msgctxt "#31221"
 msgid "Gallery"
 msgstr "Galerie"
 
+#. Viewtype name. Translation might not be needed / suitable.
 msgctxt "#31222"
 msgid "Slide"
-msgstr ""
+msgstr "Horizontale Galerie"
 
 msgctxt "#31223"
 msgid "Download posters"
@@ -509,9 +509,8 @@ msgid "Reset skin settings"
 msgstr "Skin-Einstellungen zurücksetzen"
 
 msgctxt "#31334"
-msgid "This will reset all skin settings and Grid will be restarted."
-msgstr ""
-"Es werden alle Skin-Einstellungen zurückgesetzt und Grid wird neugestartet."
+msgid "This will reset all skin settings."
+msgstr "Diese Aktion wird alle Skin-Einstellungen zurücksetzen."
 
 msgctxt "#31335"
 msgid "Supported add-ons"
@@ -605,8 +604,8 @@ msgid "Input field only"
 msgstr "Nur Eingabefeld"
 
 msgctxt "#31357"
-msgid "Grid needs to be reloaded for this. Is that ok?"
-msgstr "Grid muss hierfür neugestartet werden. Ist das okay?"
+msgid "The skin will need to be restarted."
+msgstr "Nach dieser Aktion muss der Skin neugestartet werden."
 
 msgctxt "#31358"
 msgid "Start video or music playlist on startup"
@@ -679,6 +678,27 @@ msgstr "Sichern- & Wiederherstellen-Pfad ändern"
 msgctxt "#31375"
 msgid "Subtitle settings"
 msgstr "Untertitel-Einstellungen"
+
+msgctxt "#31376"
+msgid "Set special effects"
+msgstr "Effekte aktivieren"
+
+#. skin setting that enables a blur effect to the home menu background
+msgctxt "#31377"
+msgid "Blur effect"
+msgstr "Unschärfe-Effekt"
+
+#. skin setting that enables a blur effect to the home menu background, and
+#. changes colours of text and textures to match the fanart image
+msgctxt "#31378"
+msgid "Blur effect and fanart colours"
+msgstr "Unschärfe-Effekt und Fanart-Farben"
+
+#. skin setting that changes colours of text and textures to match the fanart
+#. image
+msgctxt "#31378"
+msgid "Fanart colours only"
+msgstr "Nur Fanart-Farben"
 
 #: osd / player
 msgctxt "#31550"
@@ -805,7 +825,7 @@ msgstr "Programm"
 
 msgctxt "#31611"
 msgid "Recently played channels"
-msgstr ""
+msgstr "Kürzlich angesehene Sender"
 
 #: media
 msgctxt "#31650"
