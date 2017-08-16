@@ -176,19 +176,18 @@
 	<include name="home_Menu-Horizontal">
 		<definition>
 			<control type="wraplist" id="9000">		
-				<bottom>0</bottom>
+				<bottom>64</bottom>
 				<width>1920</width>
-				<height>1080</height>
-				<onup>9000</onup>
-				<onleft>9050</onleft>
-				<onright>9100</onright>
-				<ondown>9000</ondown>
-				<onfocus>SetProperty(HomeFocusedItem,mainmenu,Home)</onfocus>
+				<height>1016</height>
+				<onup>noop</onup>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<ondown>9050</ondown>
+				<onfocus>SetProperty(BlurIsActive,false,Home)</onfocus>
 				<focusposition>1</focusposition>
-				<include>transition_Home</include>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>	
-				<itemlayout width="640" height="1080">
+				<itemlayout width="640" height="1016">
 					<control type="group">
 						<visible>!Control.HasFocus(9000)</visible>
 						<control type="image">
@@ -196,7 +195,7 @@
 							<width>640</width>
 							<bottom>0</bottom>
 							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/80.png</texture>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/60.png</texture>
 						</control>
 						<control type="label">
 							<bottom>0</bottom>
@@ -216,7 +215,7 @@
 							<width>640</width>
 							<bottom>0</bottom>
 							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/90.png</texture>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/60.png</texture>
 						</control>
 						<control type="label">
 							<bottom>0</bottom>
@@ -230,7 +229,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="640" height="1080">
+				<focusedlayout width="640" height="1016">
 					<control type="group">
 						<visible>!Control.HasFocus(9000)</visible>
 						<control type="image">
@@ -238,27 +237,7 @@
 							<width>640</width>
 							<bottom>0</bottom>
 							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/80.png</texture>
-						</control>
-						<control type="label">
-							<bottom>0</bottom>
-							<width>640</width>
-							<height>108</height>
-							<label>$INFO[ListItem.Label]</label>
-							<font>Light-48</font>
-							<align>center</align>
-							<aligny>center</aligny>
-							<textcolor>$VAR[home:FX.Color2]</textcolor>
-						</control>
-					</control>
-					<control type="group">
-						<visible>Control.HasFocus(9000)</visible>
-						<control type="image">
-							<height>108</height>
-							<width>640</width>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/90.png</texture>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/60.png</texture>
 						</control>
 						<control type="label">
 							<bottom>0</bottom>
@@ -271,62 +250,116 @@
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
 						</control>
 					</control>
+					<control type="group">
+						<visible>Control.HasFocus(9000)</visible>
+						<control type="image">
+							<height>108</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/60.png</texture>
+						</control>
+						<control type="label">
+							<bottom>0</bottom>
+							<width>640</width>
+							<height>108</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Black-60</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+					</control>
 				</focusedlayout>
 				<content>
 					<include>skinshortcuts-mainmenu</include>
 				</content>
 			</control>
-		</definition>
-	</include>
 
-	<include name="home_SubMenu-Vertical">
-		<control type="list" id="9050">
-			<width>1920</width>
-			<height>972</height>
-			<onback>9000</onback>
-			<onup>SetProperty(SubMenuIsOpen,false,Home)</onup>
-			<ondown>SetProperty(SubMenuIsOpen,false,Home)</ondown>
-			<ondown>9000</ondown>
-			<orientation>vertical</orientation>
-			<include>fadeinout</include>
-			<include>global_ListScroll</include>
-			<onfocus>Control.Move(9050,-1)</onfocus>
-			<animation effect="slide" end="0,586" time="0" condition="Integer.IsEqual(Container(9050).NumItems,1)">Conditional</animation>
-			<animation effect="slide" end="0,432" time="0" condition="Integer.IsEqual(Container(9050).NumItems,2)">Conditional</animation>
-			<animation effect="slide" end="0,378" time="0" condition="Integer.IsEqual(Container(9050).NumItems,3)">Conditional</animation>
-			<animation effect="slide" end="0,324" time="0" condition="Integer.IsEqual(Container(9050).NumItems,4)">Conditional</animation>
-			<animation effect="slide" end="0,270" time="0" condition="Integer.IsEqual(Container(9050).NumItems,5)">Conditional</animation>
-			<animation effect="slide" end="0,216" time="0" condition="Integer.IsEqual(Container(9050).NumItems,6)">Conditional</animation>
-			<animation effect="slide" end="0,162" time="0" condition="Integer.IsEqual(Container(9050).NumItems,7)">Conditional</animation>
-			<animation effect="slide" end="0,108" time="0" condition="Integer.IsEqual(Container(9050).NumItems,8)">Conditional</animation>
-			<animation effect="slide" end="0,54" time="0" condition="Integer.IsEqual(Container(9050).NumItems,9)">Conditional</animation>
-			<visible allowhiddenfocus="true">Control.HasFocus(9050)</visible>
-			<itemlayout width="1920" height="108">
-				<control type="label">
-					<width>1920</width>
-					<height>108</height>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Thin-46</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>$VAR[color:Accent]</textcolor>
-				</control>
-			</itemlayout>
-			<focusedlayout width="1920" height="108">
-				<control type="label">
-					<width>1920</width>
-					<height>108</height>
-					<label>$INFO[ListItem.Label]</label>
-					<font>Black-60</font>
-					<align>center</align>
-					<aligny>center</aligny>
-					<textcolor>$VAR[color:Accent]</textcolor>
-				</control>
-			</focusedlayout>
-			<content>
-				 <include>skinshortcuts-submenu</include>
-			</content>
-		</control>
+			<control type="wraplist" id="9050">		
+				<left>0</left>
+				<width>1920</width>
+				<height>64</height>
+				<onleft>9050</onleft>
+				<onright>9050</onright>
+				<ondown>SetProperty(BlurIsActive,true,Home)</ondown>
+				<onback>9000</onback>
+				<focusposition>1</focusposition>
+				<include>global_ListScroll</include>
+				<orientation>horizontal</orientation>
+				<visible>String.Contains(Container(9000).ListItem(0).Property(hasSubmenu),True)</visible>
+				<itemlayout width="640" height="64">
+					<control type="image">
+						<height>64</height>
+						<width>640</width>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/70.png</texture>
+						<visible>Control.HasFocus(9050)</visible>
+					</control>
+					<control type="image">
+						<height>64</height>
+						<width>640</width>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/70.png</texture>
+						<visible>!Control.HasFocus(9050)</visible>
+					</control>
+					<control type="label">
+						<width>640</width>
+						<height>64</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Light-32</font>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[home:FX.Color2]</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="640" height="64">
+					<control type="group">
+						<visible>!Control.HasFocus(9050)</visible>
+						<control type="image">
+							<height>64</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/70.png</texture>
+						</control>
+						<control type="label">
+							<width>640</width>
+							<height>64</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Light-32</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[home:FX.Color2]</textcolor>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Control.HasFocus(9050)</visible>
+						<control type="image">
+							<height>64</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/70.png</texture>
+						</control>
+						<control type="label">
+							<width>640</width>
+							<height>64</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Black-32</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+					</control>
+				</focusedlayout>
+				<content>
+					 <include>skinshortcuts-submenu</include>
+				</content>
+			</control>
+		</definition>
 	</include>
 
 	<include name="home_SubMenu-Horizontal">
@@ -407,7 +440,7 @@
 							<font>Black-32</font>
 							<align>center</align>
 							<aligny>center</aligny>
-							<textcolor>$VAR[home:FX.Color2]</textcolor>
+							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
 					</control>
 				</focusedlayout>
@@ -416,6 +449,56 @@
 				</content>
 			</control>
 		</definition>
+	</include>
+
+	<include name="home_SubMenu-Vertical">
+		<control type="list" id="9050">
+			<width>1920</width>
+			<height>972</height>
+			<onback>9000</onback>
+			<onup>SetProperty(SubMenuIsOpen,false,Home)</onup>
+			<ondown>SetProperty(SubMenuIsOpen,false,Home)</ondown>
+			<ondown>9000</ondown>
+			<orientation>vertical</orientation>
+			<include>fadeinout</include>
+			<include>global_ListScroll</include>
+			<onfocus>Control.Move(9050,-1)</onfocus>
+			<animation effect="slide" end="0,586" time="0" condition="Integer.IsEqual(Container(9050).NumItems,1)">Conditional</animation>
+			<animation effect="slide" end="0,432" time="0" condition="Integer.IsEqual(Container(9050).NumItems,2)">Conditional</animation>
+			<animation effect="slide" end="0,378" time="0" condition="Integer.IsEqual(Container(9050).NumItems,3)">Conditional</animation>
+			<animation effect="slide" end="0,324" time="0" condition="Integer.IsEqual(Container(9050).NumItems,4)">Conditional</animation>
+			<animation effect="slide" end="0,270" time="0" condition="Integer.IsEqual(Container(9050).NumItems,5)">Conditional</animation>
+			<animation effect="slide" end="0,216" time="0" condition="Integer.IsEqual(Container(9050).NumItems,6)">Conditional</animation>
+			<animation effect="slide" end="0,162" time="0" condition="Integer.IsEqual(Container(9050).NumItems,7)">Conditional</animation>
+			<animation effect="slide" end="0,108" time="0" condition="Integer.IsEqual(Container(9050).NumItems,8)">Conditional</animation>
+			<animation effect="slide" end="0,54" time="0" condition="Integer.IsEqual(Container(9050).NumItems,9)">Conditional</animation>
+			<visible allowhiddenfocus="true">Control.HasFocus(9050)</visible>
+			<itemlayout width="1920" height="108">
+				<control type="label">
+					<width>1920</width>
+					<height>108</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Thin-46</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+			</itemlayout>
+			<focusedlayout width="1920" height="108">
+				<control type="label">
+					<width>1920</width>
+					<height>108</height>
+					<label>$INFO[ListItem.Label]</label>
+					<font>Black-60</font>
+					<align>center</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+			</focusedlayout>
+			<content>
+				 <include>skinshortcuts-submenu</include>
+			</content>
+		</control>
 	</include>
 
 	<include name="home_Menu-compact">

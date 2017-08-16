@@ -25,7 +25,7 @@
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
 		</include>
 		<include>home_Menu-vertical</include>
-		<include content="home_Feed">
+		<include content="home_Widgets">
 			<param name="Left">1920</param>
 			<param name="OnLeft">9000</param>
 		</include>
@@ -68,19 +68,13 @@
 
 				<control type="group">
 					<visible>Skin.HasSetting(home.blurfx) | Skin.HasSetting(home.colorfx)</visible>
+
 					<control type="image">
 						<include>home_Image</include>
-						<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/50.png">$VAR[home:FX.Texture]</texture>
+						<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/100.png">$VAR[home:FX.Texture]</texture>
 						<animation effect="fade" start="0" end="100" time="150">Visible</animation>
 						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
-						<visible>String.IsEqual(Window(Home).Property(HomeFocusedItem),submenu) | String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
-					</control>
-					<control type="image">
-						<include>home_Image</include>
-						<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/75.png">$VAR[home:FX.Texture]</texture>
-						<animation effect="fade" start="0" end="100" time="150">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
-						<visible>String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
+						<visible>String.IsEqual(Window(Home).Property(BlurIsActive),true)</visible>
 					</control>
 				</control>
 
@@ -88,9 +82,11 @@
 				<control type="image">
 					<bottom>0</bottom>
 					<width>1920</width>
-					<height>1080</height>
+					<height>172</height>
 					<aspectratio aligny="bottom">scale</aspectratio>
-					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/75.png">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+					<texture colordiffuse="$VAR[home:FX.Color1]">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+					<include>fadeinout</include>
+					<visible>Control.HasFocus(9000) | Control.HasFocus(9050)</visible>
 				</control>
 
 				<!-- Background video -->
@@ -100,7 +96,7 @@
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">global_WindowChrome</include>
 
 				<!-- Feed container-->
-				<include content="home_Feed">
+				<include content="home_Widgets">
 					<param name="Left">0</param>
 					<param name="OnLeft">noop</param>
 					<param name="OnRight">noop</param>
@@ -116,7 +112,7 @@
 			<param name="GridTexture">overlays/108.png</param>
 		</include>
 		<include>home_Menu-compact</include>		
-		<include content="home_Feed">
+		<include content="home_Widgets">
 			<param name="Left">128</param>
 			<param name="OnLeft">9000</param>
 		</include>
@@ -125,7 +121,7 @@
 		</include>
 	</include>
 
-	<include name="home_Feed">
+	<include name="home_Widgets">
 		<definition>
 			<param name="Left" default="0"/>
 			<param name="OnLeft" default="noop"/>
@@ -147,6 +143,8 @@
 				<width>1920</width>
 				<height>1080</height>
 				<onfocus>SetProperty(HomeFocusedItem,feed,Home)</onfocus>
+
+
 				<onup condition="!String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</onup>
 				<onup condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</onup>
 				<ondown>noop</ondown>
@@ -154,7 +152,6 @@
 				<onright>$PARAM[OnRight]</onright>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">home_Menu-Horizontal</include>
-				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">home_SubMenu-Horizontal</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),vertical)">skinshortcuts-template-widget_Vertical</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">skinshortcuts-template-widget_Horizontal</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),compact)">skinshortcuts-template-widget_Compact</include>
