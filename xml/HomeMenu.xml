@@ -183,10 +183,11 @@
 				<onleft>9000</onleft>
 				<onright>9000</onright>
 				<ondown>9050</ondown>
+				<onfocus>SetProperty(HomeFocusedItem,mainmenu,Home)</onfocus>
 				<onfocus>SetProperty(BlurIsActive,false,Home)</onfocus>
 				<focusposition>1</focusposition>
 				<include>global_ListScroll</include>
-				<orientation>horizontal</orientation>	
+				<orientation>horizontal</orientation>
 				<itemlayout width="640" height="1016">
 					<control type="group">
 						<visible>!Control.HasFocus(9000)</visible>
@@ -195,7 +196,7 @@
 							<width>640</width>
 							<bottom>0</bottom>
 							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/60.png</texture>
+							<texture colordiffuse="$VAR[home:FX.Color1]">colorize/60.png</texture>
 						</control>
 						<control type="label">
 							<bottom>0</bottom>
@@ -215,7 +216,7 @@
 							<width>640</width>
 							<bottom>0</bottom>
 							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/60.png</texture>
+							<texture colordiffuse="$VAR[home:FX.Color1]">colorize/60.png</texture>
 						</control>
 						<control type="label">
 							<bottom>0</bottom>
@@ -230,35 +231,29 @@
 					</control>
 				</itemlayout>
 				<focusedlayout width="640" height="1016">
+					<control type="image">
+						<height>108</height>
+						<width>640</width>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/60.png</texture>
+					</control>
 					<control type="group">
-						<visible>!Control.HasFocus(9000)</visible>
-						<control type="image">
-							<height>108</height>
-							<width>640</width>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/60.png</texture>
-						</control>
+						<visible>!String.IsEqual(Window(Home).Property(HomeFocusedItem),mainmenu)</visible>
 						<control type="label">
 							<bottom>0</bottom>
 							<width>640</width>
 							<height>108</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Black-60</font>
+							<font>Light-48</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
 						</control>
 					</control>
+
 					<control type="group">
 						<visible>Control.HasFocus(9000)</visible>
-						<control type="image">
-							<height>108</height>
-							<width>640</width>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/60.png</texture>
-						</control>
 						<control type="label">
 							<bottom>0</bottom>
 							<width>640</width>
@@ -282,19 +277,21 @@
 				<height>64</height>
 				<onleft>9050</onleft>
 				<onright>9050</onright>
+				<onfocus>SetProperty(HomeFocusedItem,submenu,Home)</onfocus>
 				<ondown>SetProperty(BlurIsActive,true,Home)</ondown>
 				<onback>9000</onback>
 				<focusposition>1</focusposition>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
-				<visible>String.Contains(Container(9000).ListItem(0).Property(hasSubmenu),True)</visible>
+				<include>fadeinout</include>
+				<!--<visible>String.Contains(Container(9000).ListItem(0).Property(hasSubmenu),True)</visible>-->
 				<itemlayout width="640" height="64">
 					<control type="image">
 						<height>64</height>
 						<width>640</width>
 						<bottom>0</bottom>
 						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/70.png</texture>
+						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/70.png</texture>
 						<visible>Control.HasFocus(9050)</visible>
 					</control>
 					<control type="image">
@@ -302,7 +299,7 @@
 						<width>640</width>
 						<bottom>0</bottom>
 						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/70.png</texture>
+						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/70.png</texture>
 						<visible>!Control.HasFocus(9050)</visible>
 					</control>
 					<control type="label">
@@ -323,7 +320,7 @@
 							<width>640</width>
 							<bottom>0</bottom>
 							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/70.png</texture>
+							<texture colordiffuse="$VAR[home:FX.Color1]">colorize/70.png</texture>
 						</control>
 						<control type="label">
 							<width>640</width>
@@ -342,7 +339,7 @@
 							<width>640</width>
 							<bottom>0</bottom>
 							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/70.png</texture>
+							<texture colordiffuse="$VAR[home:FX.Color1]">colorize/70.png</texture>
 						</control>
 						<control type="label">
 							<width>640</width>
