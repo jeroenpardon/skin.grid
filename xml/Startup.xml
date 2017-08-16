@@ -17,7 +17,7 @@
 	<onload>SetProperty(NINE_manual_set,"var=comp,set=hue|var=bump,set=16|var=hsv,set=0;-0.2;0.2|var=quality,set=8|var=blursize,set=10|var=bitsize,set=1|var=pixelsize,set=12|var=black,set=000000|var=white,set=ffffff")</onload>-->
 
 
-	<onload>SetProperty(NINE_manual_set,"var=comp,set=fixboth|var=bump,set=16|var=hsv,set=0;-0.2;0.2|var=quality,set=8|var=blursize,set=10|var=bitsize,set=1|var=pixelsize,set=12|var=black,set=000000|var=white,set=ffffff",home))</onload> 
+	<onload>SetProperty(NINE_manual_set,"var=comp,set=hue|var=bump,set=16|var=hsv,set=0;-0.2;0.2|var=quality,set=8|var=blursize,set=10|var=bitsize,set=1|var=pixelsize,set=12|var=black,set=000000|var=white,set=ffffff",home))</onload> 
 
 
 

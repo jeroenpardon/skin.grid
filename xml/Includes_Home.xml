@@ -86,16 +86,11 @@
 
 				<!-- Menu area background gradient-->
 				<control type="image">
-					<include>home_Image</include>
-					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="overlays/home_horizontal.png">$VAR[home:FX.Texture]</texture>
-				</control>
-
-				<control type="image">
-					<height>118</height>
-					<width>1920</width>
 					<bottom>0</bottom>
-					<aspectratio align="center" aligny="bottom">scale</aspectratio>
-					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/white.png">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+					<width>1920</width>
+					<height>1080</height>
+					<aspectratio aligny="bottom">scale</aspectratio>
+					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/75.png">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
 				</control>
 
 				<!-- Background video -->
@@ -294,9 +289,9 @@
 
 				<!-- Logo -->
 				<control type="image">
-					<bottom>20</bottom>
+					<bottom>32</bottom>
 					<width>100%</width>
-					<height>40%</height>
+					<height>30%</height>
 					<texture>$VAR[art:Logo]</texture>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<visible>$PARAM[Logo]</visible>
@@ -376,9 +371,9 @@
 
 				<!--  Logo -->
 				<control type="image">
-					<bottom>20</bottom>
+					<bottom>32</bottom>
 					<width>100%</width>
-					<height>40%</height>
+					<height>30%</height>
 					<texture>$VAR[art:Logo]</texture>
 					<aspectratio align="center" aligny="bottom">keep</aspectratio>
 					<visible>$PARAM[Logo]</visible>

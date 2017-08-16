@@ -173,9 +173,6 @@
 		</include>
 	</include>
 
-
-
-
 	<include name="home_Menu-Horizontal">
 		<definition>
 			<control type="wraplist" id="9000">		
@@ -190,37 +187,79 @@
 				<focusposition>1</focusposition>
 				<include>transition_Home</include>
 				<include>global_ListScroll</include>
-				<orientation>horizontal</orientation>				
+				<orientation>horizontal</orientation>	
 				<itemlayout width="640" height="1080">
-					<control type="label">
-						<bottom>0</bottom>
-						<width>640</width>
-						<height>108</height>
-						<label>$INFO[ListItem.Label]</label>
-						<font>Thin-48</font>
-						<align>center</align>
-						<aligny>center</aligny>
-						<textcolor>$VAR[home:FX.Color2]</textcolor>
-						<animation effect="fade" end="35" condition="true">Conditional</animation>
-					</control>
-				</itemlayout>
-				<focusedlayout width="640" height="1080">
 					<control type="group">
 						<visible>!Control.HasFocus(9000)</visible>
+						<control type="image">
+							<height>108</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/80.png</texture>
+						</control>
 						<control type="label">
 							<bottom>0</bottom>
 							<width>640</width>
 							<height>108</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Black-60</font>
+							<font>Light-48</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
-							<animation effect="fade" end="35" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
 						<visible>Control.HasFocus(9000)</visible>
+						<control type="image">
+							<height>108</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/90.png</texture>
+						</control>
+						<control type="label">
+							<bottom>0</bottom>
+							<width>640</width>
+							<height>108</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Light-48</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[home:FX.Color2]</textcolor>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="640" height="1080">
+					<control type="group">
+						<visible>!Control.HasFocus(9000)</visible>
+						<control type="image">
+							<height>108</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/80.png</texture>
+						</control>
+						<control type="label">
+							<bottom>0</bottom>
+							<width>640</width>
+							<height>108</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Light-48</font>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[home:FX.Color2]</textcolor>
+						</control>
+					</control>
+					<control type="group">
+						<visible>Control.HasFocus(9000)</visible>
+						<control type="image">
+							<height>108</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/90.png</texture>
+						</control>
 						<control type="label">
 							<bottom>0</bottom>
 							<width>640</width>
@@ -263,7 +302,6 @@
 			<animation effect="slide" end="0,54" time="0" condition="Integer.IsEqual(Container(9050).NumItems,9)">Conditional</animation>
 			<visible allowhiddenfocus="true">Control.HasFocus(9050)</visible>
 			<itemlayout width="1920" height="108">
-				<!--sub-->
 				<control type="label">
 					<width>1920</width>
 					<height>108</height>
@@ -306,43 +344,69 @@
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
 				<visible>String.Contains(Container(9000).ListItem(0).Property(hasSubmenu),True)</visible>
-
-
 				<itemlayout width="640" height="64">
+					<control type="image">
+						<height>64</height>
+						<width>640</width>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/90.png</texture>
+						<visible>Control.HasFocus(9050)</visible>
+					</control>
+					<control type="image">
+						<height>64</height>
+						<width>640</width>
+						<bottom>0</bottom>
+						<aspectratio>stretch</aspectratio>
+						<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/80.png</texture>
+						<visible>!Control.HasFocus(9050)</visible>
+					</control>
 					<control type="label">
 						<width>640</width>
 						<height>64</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Black-32</font>
+						<font>Light-32</font>
 						<align>center</align>
-						<aligny>top</aligny>
+						<aligny>center</aligny>
 						<textcolor>$VAR[home:FX.Color2]</textcolor>
-						<animation effect="fade" end="35" condition="true">Conditional</animation>
 					</control>
 				</itemlayout>
 				<focusedlayout width="640" height="64">
 					<control type="group">
 						<visible>!Control.HasFocus(9050)</visible>
+						<control type="image">
+							<height>64</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/80.png</texture>
+						</control>
 						<control type="label">
 							<width>640</width>
 							<height>64</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Black-32</font>
+							<font>Light-32</font>
 							<align>center</align>
-							<aligny>top</aligny>
+							<aligny>center</aligny>
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
-							<animation effect="fade" end="35" condition="true">Conditional</animation>
 						</control>
 					</control>
 					<control type="group">
 						<visible>Control.HasFocus(9050)</visible>
+						<control type="image">
+							<height>64</height>
+							<width>640</width>
+							<bottom>0</bottom>
+							<aspectratio>stretch</aspectratio>
+							<texture colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/90.png</texture>
+						</control>
 						<control type="label">
 							<width>640</width>
 							<height>64</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>Black-32</font>
 							<align>center</align>
-							<aligny>top</aligny>
+							<aligny>center</aligny>
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
 						</control>
 					</control>

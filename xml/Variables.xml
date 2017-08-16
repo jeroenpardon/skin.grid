@@ -103,13 +103,13 @@
 	</variable>
 
 	<variable name="home:FX.Diffuse">
-		<value condition="Skin.HasSetting(home.blurfx)">overlays/home_horizontal.png</value>
+		<value condition="Skin.HasSetting(home.blurfx)">overlays/home_horizontal2.png</value>
 		<value></value>
 	</variable>
 
 	<variable name="home:FX.Texture">
 		<value condition="Skin.HasSetting(home.blurfx)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
-		<value>colorize/80.png</value>
+		<value>overlays/home_horizontal.png</value>
 	</variable>
 
 	<variable name="color:FX.Text1">

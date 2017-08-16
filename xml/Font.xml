@@ -148,6 +148,21 @@
 			<style>uppercase</style>
 		</font>
 
+		<!-- Light -->
+		<font>
+			<name>Light-32</name>
+			<filename>Default/Light.ttf</filename>
+			<size>32</size>
+			<style>uppercase</style>
+		</font>
+
+		<font>
+			<name>Light-48</name>
+			<filename>Default/Light.ttf</filename>
+			<size>48</size>
+			<style>uppercase</style>
+		</font>
+
 		<!-- Thin -->
 		<font>
 			<name>Thin-36</name>
