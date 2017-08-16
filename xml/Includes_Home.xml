@@ -166,6 +166,7 @@
 	<include name="widget_Header">
 		<param name="Visible"/>
 		<param name="HasItems"/>
+		<param name="ID"/>
 		<definition>
 			<control type="grouplist" id="$PARAM[HeaderID]">
 				<width>1920</width>
@@ -188,6 +189,7 @@
 					<font>Regular-20</font>
 					<height>54</height>
 					<textcolor>$VAR[color:Accent]</textcolor>
+					<visible>!Control.HasFocus($PARAM[HeaderID])</visible>
 				</control>
 				<control type="label" id="$PARAM[HeaderLabel2]">
 					<width>auto</width>

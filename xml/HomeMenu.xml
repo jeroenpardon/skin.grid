@@ -513,16 +513,14 @@
 				<ondown>9000</ondown>
 				<include>global_ListScroll</include>
 				<orientation>vertical</orientation>
-				<!--
-				<animation effect="slide" end="0,756" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,1)">Conditional</animation>
-				<animation effect="slide" end="0,648" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,2)">Conditional</animation>
-				<animation effect="slide" end="0,540" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,3)">Conditional</animation>
-				<animation effect="slide" end="0,432" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,4)">Conditional</animation>
-				<animation effect="slide" end="0,324" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,5)">Conditional</animation>
-				<animation effect="slide" end="0,216" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,6)">Conditional</animation>
-				<animation effect="slide" end="0,108" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,7)">Conditional</animation>
-				<animation effect="slide" end="0,0" time="0" condition="Integer.IsGreaterOrEqual(Container($PARAM[ID]).NumItems,8)">Conditional</animation>
-				-->
+				<include>transition_Content</include>
+				<animation effect="slide" end="0,648" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,1)">Conditional</animation>
+				<animation effect="slide" end="0,540" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,2)">Conditional</animation>
+				<animation effect="slide" end="0,432" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,3)">Conditional</animation>
+				<animation effect="slide" end="0,324" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,4)">Conditional</animation>
+				<animation effect="slide" end="0,216" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,5)">Conditional</animation>
+				<animation effect="slide" end="0,108" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,6)">Conditional</animation>
+				<animation effect="slide" end="0,0" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsGreaterOrEqual(Container($PARAM[ID]).NumItems,7)">Conditional</animation>
 				<itemlayout width="128" height="108">
 					<control type="label">
 						<width>128</width>

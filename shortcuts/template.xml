@@ -92,12 +92,12 @@
 		</property>
 		<property name="logo">false</property>
 
-		<property name="overlay" propertyValue="true">
-			<rule tag="property" attribute="name|widgetLayout" value="fullscreen" />
-			<rule tag="property" attribute="name|widgetLayout" value="wide" />
-			<rule tag="property" attribute="name|widgetLayout" value="thumbnail" />
+		<property name="overlay" propertyValue="false">
+			<rule tag="property" attribute="name|widgetLayout" value="portrait" />
+			<rule tag="property" attribute="name|widgetLayout" value="square" />
+			<rule tag="property" attribute="name|widgetArt" value="landscape" />
 		</property>
-		<property name="overlay">false</property>
+		<property name="overlay">true</property>
 
 		<property name="showheader" tag="property" attribute="name|widgetLayout" value="fullscreen">false</property>
 		<property name="showheader">true</property>
@@ -132,7 +132,7 @@
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="banner">960</property>
 		<controls>
 			<include content="widget_Header">
-				<param name="ID" value="1000$SKINSHORTCUTS[id]"/>
+				<param name="ID">1000$SKINSHORTCUTS[id]</param>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
@@ -189,8 +189,9 @@
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="banner">896</property>
 		<controls>
 			<include content="widget_Header">
+				<param name="ID">1000$SKINSHORTCUTS[id]</param>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
-				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
+				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
 				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
@@ -245,9 +246,10 @@
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="banner">960</property>
 		<controls>
 			<include content="widget_Header">
+				<param name="ID">1000$SKINSHORTCUTS[id]</param>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
-				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>
-				<param name="WidgetHeader">[B]$SKINSHORTCUTS[name][/B] - $SKINSHORTCUTS[header]</param>
+				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
+				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
 				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
 				<param name="Visible">$SKINSHORTCUTS[showheader]</param>

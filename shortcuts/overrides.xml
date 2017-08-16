@@ -65,7 +65,7 @@
 	<propertySettings property="widgetArt" buttonID="602" title="$LOCALIZE[31041]" showNone="False"/>
 	<propertyfallback property="widgetArt" label="fanart">fanart</propertyfallback>	
 	<property property="widgetArt" label="$LOCALIZE[20445]" condition="!IsEmpty(Container(8000).ListItem.Art(fanart))">fanart</property>
-	<property property="widgetArt" label="$LOCALIZE[31202]">landscape</property>
+	<property property="widgetArt" label="$LOCALIZE[31202]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType),episodes)">landscape</property>
 	<property property="widgetArt" label="$LOCALIZE[21371]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),episodes) | String.IsEqual(Container(211).ListItem.Property(widgetType),videos)">thumbnail</property>
 
 	<!-- Widget sorting method -->
