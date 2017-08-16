@@ -7,11 +7,6 @@
 
 	<onload>SetProperty(SubMenuIsOpen,false,Home)</onload>
 
-	<!-- Colorbox -->
-	<onload condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True)</onload>
-	<onload condition="String.IsEmpty(Window(Home).Property(FIVE_daemon_set))">SetProperty(FIVE_daemon_set,blur,home)</onload>
-	<onload condition="String.IsEmpty(Window(Home).Property(NINE_manual_set))">SetProperty(NINE_manual_set,"var=comp,set=hue|var=bump,set=16|var=hsv,set=0;-0.2;0.2|var=quality,set=8|var=blursize,set=10|var=bitsize,set=1|var=pixelsize,set=12|var=black,set=000000|var=white,set=ffffff",home)</onload>
-
 	<!-- Skin Shortcuts -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
 	
