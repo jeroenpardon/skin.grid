@@ -188,6 +188,7 @@
 				<focusposition>1</focusposition>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
+				<include>transition_HomeAlt</include>
 				<itemlayout width="640" height="1016">
 					<control type="group">
 						<visible>!Control.HasFocus(9000)</visible>
@@ -283,7 +284,7 @@
 				<focusposition>1</focusposition>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
-				<include>fadeinout</include>
+				<include>transition_HomeAlt</include>
 				<!--<visible>String.Contains(Container(9000).ListItem(0).Property(hasSubmenu),True)</visible>-->
 				<itemlayout width="640" height="64">
 					<control type="image">

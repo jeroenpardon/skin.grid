@@ -85,6 +85,7 @@
 					<aspectratio aligny="bottom">scale</aspectratio>
 					<texture colordiffuse="$VAR[home:FX.Color1]">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
 					<include>fadeinout</include>
+					<include>transition_HomeAlt</include>
 					<visible>Control.HasFocus(9000) | Control.HasFocus(9050)</visible>
 				</control>
 

@@ -4,7 +4,7 @@
 
 	<!--<onload condition="!Skin.HasSetting(FirstRunWidgets)">ActivateWindow(1106)</onload>-->
 	<onload>AlarmClock(LoadHome,SetProperty(HomeInit,true),0:03,silent)</onload>
-
+	
 	<onload>SetProperty(SubMenuIsOpen,false,Home)</onload>
 
 	<!-- Skin Shortcuts -->
