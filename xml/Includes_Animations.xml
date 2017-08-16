@@ -2,7 +2,7 @@
 <includes>
 
 	 <include name="Burns">
-		<animation type="Conditional" condition="Skin.HasSetting(burns.enable) + ![Skin.HasSetting(home.blurfx) + Window.IsActive(Home)]" loop="true">
+		<animation type="Conditional" condition="Skin.HasSetting(burns.enable) + ![Skin.HasSetting(home.blurfx.disable) + Window.IsActive(Home)]" loop="true">
 			<effect type="fade" start="0" end="100" time="2000" tween="Cubic" easing="InOut"/>
 			<effect type="zoom" center="auto" start="130" end="100" time="15000" tween="Cubic" easing="InOut"/>
 			<effect type="fade" start="100" end="0" time="1000" delay="14000" tween="Cubic" easing="InOut"/>

@@ -49,7 +49,7 @@
 				</control>
 
 				<control type="group">
-					<visible>!Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx)</visible>
+					<visible>Skin.HasSetting(home.blurfx.disable) + Skin.HasSetting(home.colorfx.disable)</visible>
 					<control type="image">
 						<include>home_Image</include>
 						<texture colordiffuse="ff000000">colorize/50.png</texture>
@@ -67,7 +67,7 @@
 				</control>
 
 				<control type="group">
-					<visible>Skin.HasSetting(home.blurfx) | Skin.HasSetting(home.colorfx)</visible>
+					<visible>!Skin.HasSetting(home.blurfx.disable) | !Skin.HasSetting(home.colorfx.disable)</visible>
 					<control type="image">
 						<include>home_Image</include>
 						<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/100.png">$VAR[home:FX.Texture]</texture>
