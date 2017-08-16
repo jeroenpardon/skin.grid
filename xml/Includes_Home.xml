@@ -1,21 +1,11 @@
 <includes>
 
-	<include name="home_MultiImage">
-		<aspectratio>scale</aspectratio>
-		<fadetime>fadetime_Slideshow</fadetime>
-		<include>Burns</include>
-		<include>screen_Dimensions</include>
-		<pauseatend>10000</pauseatend>
-		<randomize>true</randomize>
-		<timeperimage>30000</timeperimage>
-	</include>
 	<include name="home_Image">
 		<bottom>0</bottom>
 		<include>screen_Dimensions</include>
 		<aspectratio>scale</aspectratio>
 		<fadetime>fadetime_Slideshow</fadetime>
 		<aspectratio align="center" aligny="bottom">scale</aspectratio>
-
 	</include>
 
 	<include name="home_Vertical">
@@ -43,7 +33,6 @@
 
 				<!-- Background_Slideshow-->
 				<control type="multiimage">
-					<include>home_MultiImage</include>
 					<imagepath background="true">$VAR[background:Home]</imagepath>
 					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>

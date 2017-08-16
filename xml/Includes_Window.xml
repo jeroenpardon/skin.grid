@@ -20,15 +20,7 @@
 
 				<!-- Background Slideshow -->
 				<control type="multiimage">
-					<timeperimage>30000</timeperimage>
-					<fadetime>300</fadetime>
-					<pauseatend>10000</pauseatend>
-					<randomize>true</randomize>
-					<include>screen_Dimensions</include>
-					<include>Burns</include>
-					<aspectratio>scale</aspectratio>
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-
 					<visible>!String.IsEqual(Skin.String(home.background),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
 
@@ -110,19 +102,10 @@
 					<visible>String.IsEqual(Skin.String(global.background),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
 				
-				<!-- Custom slideshow -->
+				<!-- Custom background -->
 				<control type="multiimage">
-					<timeperimage>30000</timeperimage>
-					<fadetime>600</fadetime>
-					<pauseatend>10000</pauseatend>
-					<randomize>true</randomize>
-					<include>screen_Dimensions</include>
-					<include>Burns</include>
-					<aspectratio>scale</aspectratio>
 					<imagepath background="true">$VAR[background:Global]</imagepath>
-					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
-						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
-					</animation>
+					<include>fadeinout</include>
 					<visible>!String.IsEqual(Skin.String(global.background),none)</visible>
 				</control>
 
