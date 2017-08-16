@@ -110,8 +110,8 @@
 					<height>810</height>
 					<onleft>9001</onleft>
 					<onright>6500</onright>
-					<onup>9100</onup>
-					<ondown>9100</ondown>
+					<onup>9105</onup>
+					<ondown>9105</ondown>
 					<onright>6500</onright>
 					<pagecontrol>6500</pagecontrol>
 					<visible>Skin.String(category,general)</visible>
