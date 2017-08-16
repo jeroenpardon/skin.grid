@@ -206,7 +206,7 @@
 					</control>
 					<control type="button" id="9134">
 						<label>[COLOR=Warning]$LOCALIZE[31333][/COLOR]</label>
-						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31334] $LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=Skin.ResetSettings|SetProperty(skinshortcuts-reloadmainmenu,True,Home)|ActivateWindow(startup)|SetFocus(9001),noaction=Close)</onclick>
+						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31334] $LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=Skin.ResetSettings|SetProperty(skinshortcuts-reloadmainmenu,True,Home)|ActivateWindow(startup)|ActivateWindowAndFocus(SkinSettings),noaction=Close)</onclick>
 						<include>install_HelperBackup</include>
 						<include>button_Settings</include>
 					</control>
@@ -753,7 +753,7 @@
 						<label>$LOCALIZE[31377]</label>
 						<label2>$INFO[Skin.String(home.blurfx)]</label2>
 						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.blurfx)</onclick>
-						<selected>Skin.HasSetting(home.blurfx)</selected>
+						<selected>!Skin.HasSetting(home.blurfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 					</control>
@@ -762,7 +762,7 @@
 						<label>$LOCALIZE[31378]</label>
 						<label2>$INFO[Skin.String(home.colorfx)]</label2>
 						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.colorfx)</onclick>
-						<selected>Skin.HasSetting(home.colorfx)</selected>
+						<selected>!Skin.HasSetting(home.colorfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 					</control>
