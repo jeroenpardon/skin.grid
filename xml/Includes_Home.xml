@@ -201,13 +201,6 @@
 			<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
 				<control type="image">
 					<width>$PARAM[ItemWidth]</width>
-					<include>$PARAM[Height]</include>
-					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
-				</control>
-				<control type="image">
-					<width>$PARAM[ItemWidth]</width>
 					<height>$PARAM[Height]</height>
 					<texture>$PARAM[Art]</texture>
 					<aspectratio align="center" aligny="top">scale</aspectratio>
@@ -288,13 +281,6 @@
 			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
 				<control type="group">
 					<visible>!Control.HasFocus($PARAM[ID])</visible>
-					<control type="image">
-						<width>$PARAM[ItemWidth]</width>
-						<include>$PARAM[Height]</include>
-						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
-						<aspectratio>stretch</aspectratio>
-						<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
-					</control>
 					<control type="image">
 						<width>$PARAM[ItemWidth]</width>
 						<height>$PARAM[Height]</height>
