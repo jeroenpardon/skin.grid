@@ -59,11 +59,31 @@
 		<value condition="String.IsEqual(Skin.String(home.status),weather) + Weather.IsFetched">[B]$INFO[Weather.Location,, - ][/B]$INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits,, ]$INFO[Window(weather).Property(Current.FeelsLike),($LOCALIZE[402]: ]$INFO[System.TemperatureUnits])$INFO[Window(weather).Property(Current.Condition),$COMMA ]</value>
 	</variable>
 
+	<variable name="home:FX.Color1">
+		<value condition="!Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value condition="Skin.HasSetting(home.colorfx.disable)">$VAR[color:Main]</value>
+	</variable>
+
+	<variable name="home:FX.Color2">
+		<value condition="!Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="Skin.HasSetting(home.colorfx.disable)">$VAR[color:Accent]</value>
+	</variable>
+
+	<variable name="home:FX.Diffuse">
+		<value condition="!Skin.HasSetting(home.blurfx.disable)">overlays/home_horizontal2.png</value>
+		<value></value>
+	</variable>
+
+	<variable name="home:FX.Texture">
+		<value condition="!Skin.HasSetting(home.blurfx.disable)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value>overlays/home_horizontal.png</value>
+	</variable>
+
 	
 <!-- Colors -->
 	<variable name="color:Main">
 		<value condition="!String.IsEmpty(Skin.String(setcolor.main))">$INFO[Skin.String(setcolor.main)]</value>
-		<value>dd263238</value>
+		<value>ed263238</value>
 	</variable>
 
 	<variable name="color:Disabled">
@@ -85,53 +105,6 @@
 		<value condition="!String.IsEmpty(Skin.String(setcolor.text.3))">$INFO[Skin.String(setcolor.text.3)]</value>
 		<value>Text.3</value>
 	</variable>
-
-
-
-
-
-
-
-	<variable name="home:FX.Color1">
-		<value condition="!Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
-		<value condition="Skin.HasSetting(home.colorfx.disable)">$VAR[color:Main]</value>
-	</variable>
-
-	<variable name="home:FX.Color2">
-		<value condition="!Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
-		<value condition="Skin.HasSetting(home.colorfx.disable)">$VAR[color:Accent]</value>
-	</variable>
-
-	<variable name="home:FX.Diffuse">
-		<value condition="!Skin.HasSetting(home.blurfx.disable)">overlays/home_horizontal2.png</value>
-		<value></value>
-	</variable>
-
-	<variable name="home:FX.Texture">
-		<value condition="!Skin.HasSetting(home.blurfx.disable)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
-		<value>overlays/home_horizontal.png</value>
-	</variable>
-
-	<variable name="color:FX.Text1">
-		<value condition="!Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
-		<value>$VAR[color:Accent]</value>
-	</variable>
-
-	<variable name="color:FX.Text2">
-		<value condition="!Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
-		<value>$VAR[color:Accent]</value>
-	</variable>
-
-
-
-
-
-
-
-
-
-
-
 
 
 <!-- Count -->
