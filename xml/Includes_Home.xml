@@ -16,7 +16,7 @@
 		</include>
 		<include>home_Menu-vertical</include>
 		<include content="home_Widgets">
-			<param name="Left">1920</param>
+			<param name="Left">screen_Width</param>
 			<param name="OnLeft">9000</param>
 		</include>
 		<include content="global_WindowChrome">
@@ -69,7 +69,7 @@
 				<!-- Menu area background gradient-->
 				<control type="image">
 					<bottom>0</bottom>
-					<width>1920</width>
+					<width>screen_Width</width>
 					<height>172</height>
 					<aspectratio aligny="bottom">scale</aspectratio>
 					<texture colordiffuse="$VAR[home:FX.Color1]">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
@@ -129,7 +129,7 @@
 				<left>$PARAM[Left]</left>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
-				<width>1920</width>
+				<width>screen_Width</width>
 				<height>1080</height>
 				<onfocus>SetProperty(HomeFocusedItem,feed,Home)</onfocus>
 
@@ -145,7 +145,7 @@
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">skinshortcuts-template-widget_Horizontal</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),compact)">skinshortcuts-template-widget_Compact</include>
 				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.layout),vertical)">
-					<effect type="slide" time="500" start="0"  end="-1920" tween="cubic" easing="InOut" center="auto" />
+					<effect type="slide" time="500" start="0"  end="-screen_Width" tween="cubic" easing="InOut" center="auto" />
 					<effect type="Fade" time="500" start="0" end="100" tween="cubic" easing="InOut"/>
 				</animation>
 			</control>
@@ -157,37 +157,48 @@
 		<param name="HasItems"/>
 		<param name="ID"/>
 		<definition>
-			<control type="grouplist" id="$PARAM[HeaderID]">
-				<width>1920</width>
+			<control type="group" id="$PARAM[HeaderID]">
+				<width>screen_Width</width>
 				<height>54</height>
-				<orientation>horizontal</orientation>
-				<visible>$PARAM[Visible]</visible>
-				<visible>$PARAM[HasItems]</visible>
-				<visible>Skin.HasSetting(widget.name)</visible>
-				<control type="label" id="$PARAM[HeaderLabel]">
-					<width>64</width>
-					<label>&#58979;</label>
-					<align>center</align>
-					<font>Symbols-22</font>
-					<height>54</height>
-					<textcolor>$VAR[color:Accent]</textcolor>
+				<control type="image">
+					<width>1000%</width>
+					<height>100%</height>
+					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/80.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
-				<control type="label" id="$PARAM[HeaderLabel]">
-					<width>auto</width>
-					<label>$PARAM[WidgetHeader]</label>
-					<font>Regular-20</font>
+				<control type="grouplist" id="1$PARAM[HeaderID]">
+					<width>screen_Width</width>
 					<height>54</height>
-					<textcolor>$VAR[color:Accent]</textcolor>
-					<visible>!Control.HasFocus($PARAM[HeaderID])</visible>
-				</control>
-				<control type="label" id="$PARAM[HeaderLabel2]">
-					<width>auto</width>
-					<label>$PARAM[WidgetHeader2]</label>
-					<font>Regular-20</font>
-					<height>54</height>
-					<textcolor>$VAR[color:Accent]</textcolor>
-					<include>fadeinout</include>
-					<visible>Control.HasFocus($PARAM[ID])</visible>
+					<orientation>horizontal</orientation>
+					<visible>$PARAM[Visible]</visible>
+					<visible>$PARAM[HasItems]</visible>
+					<visible>Skin.HasSetting(widget.name)</visible>
+					<control type="label" id="$PARAM[HeaderLabel]">
+						<width>64</width>
+						<label>&#58979;</label>
+						<align>center</align>
+						<font>Symbols-22</font>
+						<height>54</height>
+						<textcolor>$VAR[color:Accent]</textcolor>
+					</control>
+					<control type="label" id="$PARAM[HeaderLabel]">
+						<width>auto</width>
+						<label>$PARAM[WidgetHeader]</label>
+						<font>Regular-20</font>
+						<height>54</height>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>!Control.HasFocus($PARAM[HeaderID])</visible>
+					</control>
+					<control type="label" id="$PARAM[HeaderLabel2]">
+						<width>auto</width>
+						<label>$PARAM[WidgetHeader2]</label>
+						<font>Regular-20</font>
+						<height>54</height>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<include>fadeinout</include>
+						<visible>Control.HasFocus($PARAM[ID])</visible>
+					</control>
 				</control>
 			</control>
 		</definition>
@@ -199,6 +210,15 @@
 		<param name="BigInfoFont2" default="Black-26"/>
 		<definition>
 			<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
+				
+				<control type="image">
+					<width>$PARAM[ItemWidth]</width>
+					<include>$PARAM[Height]</include>
+					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
+				</control>
+
 				<control type="image">
 					<width>$PARAM[ItemWidth]</width>
 					<height>$PARAM[Height]</height>
@@ -279,6 +299,15 @@
 				</control>
 			</itemlayout>
 			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
+
+				<control type="image">
+					<width>$PARAM[ItemWidth]</width>
+					<include>$PARAM[Height]</include>
+					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
+					<aspectratio>stretch</aspectratio>
+					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
+				</control>
+
 				<control type="group">
 					<visible>!Control.HasFocus($PARAM[ID])</visible>
 					<control type="image">
