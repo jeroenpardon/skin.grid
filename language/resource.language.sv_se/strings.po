@@ -27,9 +27,18 @@ msgctxt "#31001"
 msgid "Home menu layout"
 msgstr "Hemmenyutseende"
 
+#. Skin setting that allows the user to choose from several home menu layouts
+#. e.g. vertical and horizontal
 msgctxt "#31002"
 msgid "Home menu type"
 msgstr "Hemmenytyp"
+
+#. example usage: enabling this skin setting will show 5 items on screen at
+#. once instead of 3 by using a condensed font. Only applies to horizontal
+#. home menu -->
+msgctxt "#31003"
+msgid "Enable condensed menu layout"
+msgstr ""
 
 msgctxt "#31005"
 msgid "Layout"
@@ -356,7 +365,7 @@ msgid "Enable animated artwork"
 msgstr "Aktivera animerade bakgrunder"
 
 msgctxt "#31227"
-msgid "Only in movie information screen"
+msgid "Limit to movie information screen"
 msgstr ""
 
 msgctxt "#31228"
@@ -691,13 +700,7 @@ msgstr ""
 #. skin setting that enables a blur effect to the home menu background, and
 #. changes colours of text and textures to match the fanart image
 msgctxt "#31378"
-msgid "Blur effect and fanart colours"
-msgstr ""
-
-#. skin setting that changes colours of text and textures to match the fanart
-#. image
-msgctxt "#31378"
-msgid "Fanart colours only"
+msgid "Fanart colours"
 msgstr ""
 
 #: osd / player

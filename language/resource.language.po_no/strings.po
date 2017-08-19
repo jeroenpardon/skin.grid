@@ -3,35 +3,35 @@
 # Addon id: skin.grid
 # Addon Provider: Jeroen
 # Translators:
-# Angelinas <angelinastan@gmail.com>, 2017
+# Andreas K. Auen <andreas.auen@gmail.com>, 2017
 msgid ""
 msgstr ""
 "Project-Id-Version: KODI Skins\n"
 "Report-Msgid-Bugs-To: http://trac.kodi.tv/\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Angelinas <angelinastan@gmail.com>, 2017\n"
-"Language-Team: Serbian (Serbia) (https://www.transifex.com/grid/teams/75010/sr_RS/)\n"
+"Last-Translator: Andreas K. Auen <andreas.auen@gmail.com>, 2017\n"
+"Language-Team: Norwegian (https://www.transifex.com/grid/teams/75010/no/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sr_RS\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Language: no\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: home
 msgctxt "#31000"
 msgid "Home Menu"
-msgstr "Главни Мени"
+msgstr "Hovedmeny"
 
 msgctxt "#31001"
 msgid "Home menu layout"
-msgstr "Главни Мени изглед"
+msgstr "Hovedmenyoppsett"
 
 #. Skin setting that allows the user to choose from several home menu layouts
 #. e.g. vertical and horizontal
 msgctxt "#31002"
 msgid "Home menu type"
-msgstr "Главни Мени тип"
+msgstr "Hovedmenytype"
 
 #. example usage: enabling this skin setting will show 5 items on screen at
 #. once instead of 3 by using a condensed font. Only applies to horizontal
@@ -42,327 +42,328 @@ msgstr ""
 
 msgctxt "#31005"
 msgid "Layout"
-msgstr "Приказ"
+msgstr "Oppsett"
 
 msgctxt "#31006"
 msgid "Automatically collapse submenus"
-msgstr "Аутомаски сакриј подмени"
+msgstr "Automatisk slå sammen undermenyer"
 
 msgctxt "#31007"
 msgid "Statusbar information"
-msgstr "Трака са информацијама"
+msgstr "Statuslinje-informasjon"
 
 msgctxt "#31018"
 msgid ""
 "You're about to delete settings. You will no longer be able to change any "
 "system settings unless you have provided a different method. Are you sure?"
 msgstr ""
-"Избрисаћете подешавања.Више нећете бити у могућности да мењате подешавање "
-"система, осим ако имате други начин. Да ли сте сигурни?"
+"Du er i ferd med å slette innstillinger. Du vil ikke lenger kunne endre "
+"systeminnstillinger om du ikke har en annen metode for å åpne dem. Er du "
+"sikker?"
 
 msgctxt "#31021"
 msgid "Add shortcut"
-msgstr "Додај пречицу"
+msgstr "Legg til snarvei"
 
 msgctxt "#31022"
 msgid "Reset all menu items to defaults"
-msgstr "Ресетуј све на фабричка подешавања"
+msgstr "Tilbakestill alle menyer til standardoppsett"
 
 #. example usage: name of a home menu layout option
 msgctxt "#31025"
 msgid "Compact"
-msgstr "Кимпактно"
+msgstr "Kompakt"
 
 #: widgets
 msgctxt "#31030"
 msgid "Widget"
-msgstr "Виџгет"
+msgstr "Widget"
 
 msgctxt "#31031"
 msgid "Widgets"
-msgstr "Виџгети"
+msgstr "Widgeter"
 
 msgctxt "#31032"
 msgid "Select widget layout"
-msgstr "Изабери изглед виџгета"
+msgstr "Velg widgetoppsett"
 
 msgctxt "#31033"
 msgid "Select sort direction"
-msgstr "Изабери смер сортирања"
+msgstr "Velg sorteringsrekkefølge"
 
 msgctxt "#31034"
 msgid "Fullscreen (16:9)"
-msgstr "ПунЕкран (16:9)"
+msgstr "Fullskjerm (16:9)"
 
 msgctxt "#31035"
 msgid "Wide (21:9)"
-msgstr "Проширено (21:9)"
+msgstr "Bredformat (21:9)"
 
 msgctxt "#31036"
 msgid "Landscape (16:9)"
-msgstr "Издужено (16:9)"
+msgstr "Landskapsformat (16:9)"
 
 msgctxt "#31037"
 msgid "Portrait (2:3)"
-msgstr "Портет (2:3)"
+msgstr "Portrettformat (2:3)"
 
 msgctxt "#31038"
 msgid "Square (1:1)"
-msgstr "Квадрат (1:1)"
+msgstr "Kvadrat (1:1)"
 
 msgctxt "#31040"
 msgid "Show widget names"
-msgstr "Прикаж име виџгета"
+msgstr "Vis navn på widgeter"
 
 msgctxt "#31041"
 msgid "Select widget artwork"
-msgstr "Изабери слике за виџгете"
+msgstr "Velg illustrasjon for tillegg"
 
 msgctxt "#31044"
 msgid "Wide"
-msgstr "Проширено"
+msgstr "Bred"
 
 #: general
 msgctxt "#31050"
 msgid "Apply"
-msgstr "Потврди"
+msgstr "Bruk"
 
 #. example usage: "20 recordings available"
 msgctxt "#31051"
 msgid "available"
-msgstr "омогућено"
+msgstr "tilgjengelig"
 
 msgctxt "#31052"
 msgid "Warning"
-msgstr "Упозорење"
+msgstr "Advarsel"
 
 msgctxt "#31053"
 msgid "Fullscreen"
-msgstr "Пун Екран"
+msgstr "Fullskjerm"
 
 msgctxt "#31054"
 msgid "Unknown"
-msgstr "Непознато"
+msgstr "Ukjent"
 
 msgctxt "#31055"
 msgid "Single image"
-msgstr "Слика"
+msgstr "Enkeltbilde"
 
 msgctxt "#31056"
 msgid "Pictures slideshow"
-msgstr "СлајдШоу"
+msgstr "BIldefremvisning"
 
 msgctxt "#31057"
 msgid "Horizontal"
-msgstr "Хоризонтални"
+msgstr "Horisontal"
 
 msgctxt "#31058"
 msgid "Vertical"
-msgstr "Вертикални"
+msgstr "Vertikal"
 
 msgctxt "#31059"
 msgid "Developer"
-msgstr "Аутор"
+msgstr "Utvikler"
 
 msgctxt "#31060"
 msgid "Global"
-msgstr "Глобално"
+msgstr "Global"
 
 msgctxt "#31061"
 msgid "Context menu"
-msgstr "Контекс мени"
+msgstr "Kontekstmeny"
 
 msgctxt "#31062"
 msgid "Other"
-msgstr "Друго"
+msgstr "Andre"
 
 msgctxt "#31063"
 msgid "None selected"
-msgstr "Није изабрано"
+msgstr "Ingen valgt"
 
 msgctxt "#31064"
 msgid "Smart playlists"
-msgstr "Паметне плејлисте"
+msgstr "Smartspillelister"
 
 msgctxt "#31065"
 msgid "Smart playlist"
-msgstr "Паметне плејлисте"
+msgstr "Smartspilleliste"
 
 msgctxt "#31066"
 msgid "Library node"
-msgstr "Нодови библиотеке"
+msgstr "Knutepunkt for bibliotek"
 
 msgctxt "#31067"
 msgid "Library statistics"
-msgstr "Статистика библиотеке"
+msgstr "Statistikk for bibliotek"
 
 msgctxt "#31068"
 msgid "Content"
-msgstr "Врста медија"
+msgstr "Innhold"
 
 msgctxt "#31069"
 msgid "Select content"
-msgstr "Изабери врсту медија"
+msgstr "Velg innhold"
 
 #. example usage: this is a required add-on
 msgctxt "#31070"
 msgid "Required"
-msgstr "Неопходно"
+msgstr "Nødvendig"
 
 #. example usage: this is an optional add-on
 msgctxt "#31071"
 msgid "Optional"
-msgstr "Опционо"
+msgstr "Valgfritt"
 
 #. example usage: this addon is installed
 msgctxt "#31073"
 msgid "Installed"
-msgstr "Инсталирано"
+msgstr "Innstallert"
 
 #. example usage: episode first aired on
 msgctxt "#31074"
 msgid "On"
-msgstr " се"
+msgstr "På"
 
 #. example usage: shorthand for minutes
 msgctxt "#31075"
 msgid "Min"
-msgstr "Мин"
+msgstr "Minimum"
 
 msgctxt "#31076"
 msgid "Playcount"
-msgstr "Репродуковано"
+msgstr "Avspillinger"
 
 msgctxt "#31077"
 msgid "Never played"
-msgstr "Никада репродуковано"
+msgstr "Aldri avspilt"
 
 msgctxt "#31079"
 msgid "Descriptions"
-msgstr "Опис"
+msgstr "Beskrivelser"
 
 msgctxt "#31081"
 msgid "Reload"
-msgstr "Поново Учитај"
+msgstr "Last inn på nytt"
 
 msgctxt "#31083"
 msgid "Sorting"
-msgstr "Сортирај"
+msgstr "Sortering"
 
 msgctxt "#31084"
 msgid "Items"
-msgstr "Називи"
+msgstr "Objekter"
 
 #: artwork
 msgctxt "#31200"
 msgid "Posters"
-msgstr "Постери"
+msgstr "Plakater"
 
 msgctxt "#31201"
 msgid "Portrait"
-msgstr "Портрети"
+msgstr "Portrett"
 
 msgctxt "#31202"
 msgid "Landscape"
-msgstr "Пејсаж"
+msgstr "Landskap"
 
 msgctxt "#31203"
 msgid "Thumbnails"
-msgstr "Иконе"
+msgstr "Miniatyrbilder"
 
 msgctxt "#31204"
 msgid "Logos"
-msgstr "Логои"
+msgstr "Logoer"
 
 #. example usage: type of artwork, translation might not be needed / suited
 msgctxt "#31205"
 msgid "Clearart"
-msgstr "Клеарарт"
+msgstr "Clearart"
 
 msgctxt "#31206"
 msgid "Download artwork"
-msgstr "Преузми слике"
+msgstr "Last ned illustrasjoner"
 
 msgctxt "#31207"
 msgid "Extended artwork"
-msgstr "екстра слике"
+msgstr "Flere typer illustrasjoner"
 
 msgctxt "#31208"
 msgid "Enable logos"
-msgstr "Омогући лого-е"
+msgstr "Bruk logoer"
 
 msgctxt "#31209"
 msgid "Download logos"
-msgstr "Преуз,и лого-е"
+msgstr "Last ned logoer"
 
 msgctxt "#31210"
 msgid "Download thumbnail"
-msgstr "Преузми икону"
+msgstr "Last ned miniatyrbilde"
 
 msgctxt "#31211"
 msgid "Download poster"
-msgstr "Преузми постер"
+msgstr "Last ned plakat"
 
 msgctxt "#31212"
 msgid "Download extrafanart"
-msgstr "Преузми екста слике"
+msgstr "Last ned ekstra illustrasjoner"
 
 msgctxt "#31213"
 msgid "Download fanart"
-msgstr "Преузми позадинску слику"
+msgstr "Last ned illustrasjoner"
 
 msgctxt "#31214"
 msgid "Get all artwork"
-msgstr "Преузми све слике"
+msgstr "Last ned alle illustrasjoner"
 
 msgctxt "#31215"
 msgid "Landscape art type"
-msgstr "Тип слике - Пејсаж"
+msgstr ""
 
 msgctxt "#31216"
 msgid "List view artwork type"
-msgstr "Приказ листе тип слика"
+msgstr ""
 
 msgctxt "#31217"
 msgid "No images available. Would you like to download some?"
-msgstr "Немате слике.Желите ли да их преузмете ?"
+msgstr "Ingen tilgjengelige bilder. Vil du last ned noen?"
 
 msgctxt "#31218"
 msgid "Fanart"
-msgstr "Позадинска слика"
+msgstr ""
 
 msgctxt "#31219"
 msgid "Download landscape"
-msgstr "Преузми пејсаж"
+msgstr "Last ned landskap"
 
 msgctxt "#31220"
 msgid "Viewtype"
-msgstr "Изглед"
+msgstr "Visningstype"
 
 msgctxt "#31221"
 msgid "Gallery"
-msgstr "Галерија"
+msgstr "Galleri"
 
 #. Viewtype name. Translation might not be needed / suitable.
 msgctxt "#31222"
 msgid "Slide"
-msgstr "Слајд"
+msgstr "Side"
 
 msgctxt "#31223"
 msgid "Download posters"
-msgstr "Преузми постере"
+msgstr "Last ned plakater"
 
 msgctxt "#31224"
 msgid "Video fanart"
-msgstr "Позадинска слика за видео"
+msgstr ""
 
 msgctxt "#31225"
 msgid "Square"
-msgstr "Квадрат"
+msgstr "Kvadrat"
 
 msgctxt "#31226"
 msgid "Enable animated artwork"
-msgstr "Омогући анимаране слике"
+msgstr "Slå på animerte illustrasjoner"
 
 msgctxt "#31227"
 msgid "Limit to movie information screen"
@@ -370,333 +371,332 @@ msgstr ""
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
-msgstr "Позадинска слика (само за филмове и серије)"
+msgstr ""
 
 msgctxt "#31229"
 msgid "Prefer Landscape thumbnails"
-msgstr "Префериране пејсаж слике"
+msgstr "Foretrekk miniatyrbilder i landskapsformat"
 
 msgctxt "#31230"
 msgid "Prefer Fanart"
-msgstr "Преферирана позадинска слика"
+msgstr ""
 
 msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
-msgstr "Прикажи лого за приказану позадинску слику"
+msgstr ""
 
 #: settings
 msgctxt "#31300"
 msgid "Homescreen"
-msgstr "Главни мени"
+msgstr "Hjem-skjerm"
 
 msgctxt "#31301"
 msgid "Artwork"
-msgstr "Уметност"
+msgstr "Illustrasjoner"
 
 msgctxt "#31302"
 msgid "Shutdown menu"
-msgstr "Мени искључења"
+msgstr "Avslutningsmeny"
 
 msgctxt "#31303"
 msgid "Please log in"
-msgstr "Молим вас пријавите се"
+msgstr "Vennligst logg inn"
 
 msgctxt "#31304"
 msgid "About"
-msgstr "О"
+msgstr "Om"
 
 msgctxt "#31305"
 msgid "Settings level"
-msgstr "Ниво подешавања"
+msgstr "Innstillings-nivå"
 
 msgctxt "#31306"
 msgid "Menus"
-msgstr "Менији"
+msgstr "Menyer"
 
 msgctxt "#31307"
 msgid "Scrollbar visibility"
-msgstr "Видљивост Клизача"
+msgstr ""
 
 msgctxt "#31309"
 msgid "Customize this menu"
-msgstr "Прилагоди овај мени"
+msgstr "Egendefiner denne menyen"
 
 msgctxt "#31310"
 msgid "Customize options menu"
-msgstr "Прилагоди могућности менија"
+msgstr "Egendefiner valgmenyen"
 
 msgctxt "#31311"
 msgid "Customize home menu and widgets"
-msgstr "Прилагоди главни мени и виџгете"
+msgstr "Egendefiner hjem-menyen og widgeter"
 
 msgctxt "#31312"
 msgid "Customize"
-msgstr "Прилагоди"
+msgstr "Egendefiner"
 
 msgctxt "#31313"
 msgid "TV Show Library"
-msgstr "Серије"
+msgstr "TV-seriebibliotek"
 
 msgctxt "#31314"
 msgid "Library views"
-msgstr "Серије приказ"
+msgstr "Bibliotekvisninger"
 
 msgctxt "#31315"
 msgid "Show now playing video in background"
-msgstr "Прикажи видео у позадини"
+msgstr "Vis video som avspilles i bakgrunn"
 
 msgctxt "#31316"
 msgid "Show fanart for currently playing artist"
-msgstr "Прикажи позадинску слику певача"
+msgstr ""
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
-msgstr "Анимирај позадинску слику"
+msgstr "Animer bakgrunner"
 
 msgctxt "#31318"
 msgid "Display fanart in now playing screen"
-msgstr "Прикажи слику у прозору за репродукцију"
+msgstr ""
 
 msgctxt "#31319"
 msgid "Blend visualisation and fanart"
-msgstr "Измешај визуализацију и позадинску слику"
+msgstr ""
 
 msgctxt "#31320"
 msgid "Always show"
-msgstr "Увек прикажи"
+msgstr "Vis alltid"
 
 msgctxt "#31321"
 msgid "Show only when focused"
-msgstr "Прикажи само кад је означена"
+msgstr "Vis kun når fokusert"
 
 msgctxt "#31322"
 msgid "Show clock"
-msgstr "Прикажи сат"
+msgstr "Vis klokke"
 
 msgctxt "#31323"
 msgid "Select icon"
-msgstr "Изабери икону"
+msgstr "Velg ikon"
 
 msgctxt "#31324"
 msgid "Show current date"
-msgstr "Прикажи датум"
+msgstr "Vis dagens dato"
 
 msgctxt "#31325"
 msgid "Autoscrolling speed"
-msgstr "Брзина померања"
+msgstr "Hastighet på autorulling i menyer"
 
 msgctxt "#31326"
 msgid "affects performance"
-msgstr "Перфомансе"
+msgstr "påvirker ytelsen"
 
 msgctxt "#31327"
 msgid "Normal"
-msgstr "Нормално"
+msgstr "Normal"
 
 msgctxt "#31328"
 msgid "Fast"
-msgstr "Брзо"
+msgstr "Rask"
 
 msgctxt "#31329"
 msgid "Instant"
-msgstr "Тренутно"
+msgstr "Umiddelbart"
 
 msgctxt "#31330"
 msgid "Slow"
-msgstr "Споро"
+msgstr "Treg"
 
 msgctxt "#31331"
 msgid "Use weather fanart"
-msgstr "Користи позадинске слике временске прогнозе"
+msgstr ""
 
 msgctxt "#31332"
 msgid "Select a weather fanart package"
-msgstr "Изабери позадинску слику за врем.прогнонозу из пакета"
+msgstr ""
 
 msgctxt "#31333"
 msgid "Reset skin settings"
-msgstr "Ресетуј подешавања маске"
+msgstr "Tilbakestill temainnstillinger"
 
 msgctxt "#31334"
 msgid "This will reset all skin settings."
-msgstr "Са овим ће те ресетовати подешавања маске"
+msgstr "Dette tilbakestiller alle innstillingene for temaet"
 
 msgctxt "#31335"
 msgid "Supported add-ons"
-msgstr "Подржани додатци"
+msgstr "Støttede tillegg"
 
 msgctxt "#31336"
 msgid "Debug grid"
-msgstr "Debug мрежа"
+msgstr "Feilsøking for grid"
 
 msgctxt "#31337"
 msgid "Debug info"
-msgstr "Debug информације"
+msgstr "Feilsøkings-info"
 
 msgctxt "#31338"
 msgid "TV Guide scrolling speed"
-msgstr "Брзина скроловања ТВ Водича"
+msgstr "TV-guide rullehastighet"
 
 msgctxt "#31339"
 msgid "Options menu"
-msgstr "Опције"
+msgstr "Vangmeny"
 
 #. Example usage: allows the user to configure what source is used for media
 #. ratings
 msgctxt "#31340"
 msgid "Select ratings source"
-msgstr "Изабери извор за рејтинг"
+msgstr "Velg kilde for rangering"
 
 #. Example usage: shows the imdb rating, as a percentage of 100
 msgctxt "#31341"
 msgid "percentage"
-msgstr "проценат"
+msgstr "prosentandel"
 
 msgctxt "#31342"
 msgid "Show parental guidance ratings for movies and tv shows"
-msgstr ""
-"Прикажи ознаку \"није препоручљиво за гледање испод\" за филмове и тв серије"
+msgstr "Vis foreldreveiledning for filmer og TV-serier"
 
 msgctxt "#31343"
 msgid "Parental guidance"
-msgstr "није препоручљиво за гледање испод"
+msgstr "Foreldreveiledning"
 
 msgctxt "#31344"
 msgid "Highlight first letter when scrolling"
-msgstr "Истакнуто Велико слово приликом клизања"
+msgstr "Fremhev forbokstav ved menyrulling"
 
 msgctxt "#31345"
 msgid "Ratings"
-msgstr "Рејтинг"
+msgstr "Rangering"
 
 msgctxt "#31346"
 msgid "Select text input mode"
-msgstr "Изабери текст за унос"
+msgstr "Velg tekstinnførings-metode"
 
 msgctxt "#31347"
 msgid "Press up in information screens for popup"
-msgstr "Притисни дугме за попап приказ информација"
+msgstr "Trykk opp i informasjonsskjermer for popup"
 
 msgctxt "#31348"
 msgid "Show video rating overlays"
-msgstr "Прикажи видео рејтинг"
+msgstr "Vis videorangerings-overlapp"
 
 msgctxt "#31349"
 msgid "Menu playback controls"
-msgstr "Контрола плејера"
+msgstr ""
 
 msgctxt "#31350"
 msgid "fullscreen / playlist button"
-msgstr "Пун екран / плејлист дугме"
+msgstr "fullskjerm / spilleliste-knapp"
 
 msgctxt "#31351"
 msgid "Player controls"
-msgstr "Контроле плејера"
+msgstr "Spillerkontroller"
 
 msgctxt "#31352"
 msgid "All windows"
-msgstr "Сви прозори"
+msgstr "Alle vinduer"
 
 msgctxt "#31353"
 msgid "Except homescreen"
-msgstr "Осим главног менија"
+msgstr "Utenom hjem-skjerm"
 
 msgctxt "#31354"
 msgid "Homescreen only"
-msgstr "Само главни мени"
+msgstr "Kun på hjem-skjerm"
 
 msgctxt "#31355"
 msgid "Full keyboard"
-msgstr "Тастатура"
+msgstr "Fullt tastatur"
 
 msgctxt "#31356"
 msgid "Input field only"
-msgstr "Само у пољу"
+msgstr "Kun innføringsfelt"
 
 msgctxt "#31357"
 msgid "The skin will need to be restarted."
-msgstr "Потребно је ресетовати оодешавања маске"
+msgstr "Temaet må startes på nytt"
 
 msgctxt "#31358"
 msgid "Start video or music playlist on startup"
-msgstr "Репродукуј видео или аудио плајлисту приликом покретања"
+msgstr "Start video- eller musikkspilleliste ved oppstart"
 
 msgctxt "#31359"
 msgid "Select playlist"
-msgstr "Изабери плејлисту"
+msgstr "Velg spilleliste"
 
 msgctxt "#31360"
 msgid "Background image type"
-msgstr "Тип позадинске слике"
+msgstr "Bakgrunnsbilde-type"
 
 msgctxt "#31361"
 msgid "Hide background fanart while scrolling"
-msgstr "Сакриј позадинску слику приликом померања"
+msgstr ""
 
 msgctxt "#31362"
 msgid "Slideshow contents"
-msgstr "Слајдшоу тип"
+msgstr "Fremvisningsinnhold"
 
 msgctxt "#31363"
 msgid "Disable custom shortcuts tab"
-msgstr "Онемогући дугме за пречице"
+msgstr "Slå av fane for egendefinerte snarveier"
 
 msgctxt "#31364"
 msgid "Select image(s)"
-msgstr "Изабери слику/слике"
+msgstr "Velg bilde(r)"
 
 msgctxt "#31365"
 msgid "Animated backgrounds"
-msgstr "Анимиране позадине"
+msgstr "Animerte bakgrunner"
 
 msgctxt "#31366"
 msgid "Fanart slideshow"
-msgstr "Слајдшоу позадинских слика"
+msgstr ""
 
 msgctxt "#31367"
 msgid "Select fanart source"
-msgstr "Изабери извор позадинских слика"
+msgstr ""
 
 msgctxt "#31368"
 msgid "All fanart"
-msgstr "Све позадинске слике"
+msgstr ""
 
 msgctxt "#31369"
 msgid "Movie Library"
-msgstr "Библиотека Филмова"
+msgstr "Filmbibliotek"
 
 msgctxt "#31370"
 msgid "TV Show Library"
-msgstr "Библиотека ТВ Серија"
+msgstr "TV-seriebibliotek"
 
 msgctxt "#31371"
 msgid "Restore skin settings"
-msgstr "Поновно учитавање подешавања маске"
+msgstr "Gjenopprett temainnstillinger"
 
 msgctxt "#31372"
 msgid "Backup skin settings"
-msgstr "Бекап подешавања маске"
+msgstr "Sikkerhetskopiér temainnstillinger"
 
 msgctxt "#31373"
 msgid "Backup & Restore"
-msgstr "Бекап и Поновно учитавање"
+msgstr "Sikkerhetskopiér og Gjenopprett"
 
 msgctxt "#31374"
 msgid "Change backup and restore location"
-msgstr "Промени локацију за бекап и поновно учитавање"
+msgstr "Endre sikkerhetskopi- og gjenopprettings-plassering"
 
 msgctxt "#31375"
 msgid "Subtitle settings"
-msgstr "Подешавање превода"
+msgstr "Undertekstinnstillinger"
 
 msgctxt "#31376"
 msgid "Set special effects"
-msgstr "Подесите спеијалне ефекте"
+msgstr "Velg spesialeffekter"
 
 #. skin setting that enables a blur effect to the home menu background
 msgctxt "#31377"
 msgid "Blur effect"
-msgstr "Ефекат \"мутно\""
+msgstr "Tåke-effekt"
 
 #. skin setting that enables a blur effect to the home menu background, and
 #. changes colours of text and textures to match the fanart image
@@ -707,363 +707,363 @@ msgstr ""
 #: osd / player
 msgctxt "#31550"
 msgid "Rwd"
-msgstr "Уназад"
+msgstr "Rwd"
 
 msgctxt "#31551"
 msgid "Fwd"
-msgstr "Унапред"
+msgstr "Fwd"
 
 msgctxt "#31552"
 msgid "Memory usage"
-msgstr "Коришћење меморије"
+msgstr "Minnebruk"
 
 msgctxt "#31553"
 msgid "Hardware decoding"
-msgstr "Хардверско декодирање"
+msgstr "Maskinvaredekoding"
 
 msgctxt "#31554"
 msgid "Software decoding"
-msgstr "Софтверско декодирање"
+msgstr "Programvaredekoding"
 
 #. example usage: the movie will finish playing at 22:00
 msgctxt "#31556"
 msgid "Finishes at"
-msgstr "Завршава се"
+msgstr "Ferdig klokken"
 
 msgctxt "#31557"
 msgid "Get subtitles"
-msgstr "Преузми превод"
+msgstr "Skaff undertekster"
 
 msgctxt "#31558"
 msgid "Disable subtitles"
-msgstr "Онемогући превод"
+msgstr "Slå av undertekster"
 
 msgctxt "#31559"
 msgid "Get lyrics"
-msgstr "Преузми лирикс"
+msgstr "Skaff sangtekst"
 
 msgctxt "#31560"
 msgid "Watch in 2D"
-msgstr "Гледај у 2D моду"
+msgstr "Se i 2D"
 
 msgctxt "#31561"
 msgid "Watch in 3D"
-msgstr "Гледај у 3D моду"
+msgstr "Se i 3D"
 
 msgctxt "#31562"
 msgid "Select 3D mode"
-msgstr "Изабери 3D мод"
+msgstr "Veld 3D-modus"
 
 msgctxt "#31563"
 msgid "Next subtitles"
-msgstr "Следећи превод"
+msgstr "Neste undertekst"
 
 msgctxt "#31564"
 msgid "Playlist"
-msgstr "Плејлиста"
+msgstr "Spilleliste"
 
 msgctxt "#31565"
 msgid "Subtitle settings"
-msgstr "Подешавање превода"
+msgstr "Undertekstinnstillinger"
 
 #. example usage: starting a manual search for subtitles
 msgctxt "#31566"
 msgid "Manual search"
-msgstr "Потражи ручно"
+msgstr "Manuelt søk"
 
 #. example usage: create a bookmark
 msgctxt "#31567"
 msgid "Create"
-msgstr "Креирај"
+msgstr "Lag"
 
 #. example usage: set an episode bookmark
 msgctxt "#31568"
 msgid "Set episode"
-msgstr "Колекција епизода"
+msgstr "Velg episode"
 
 #: pvr
 msgctxt "#31600"
 msgid "Available groups"
-msgstr "Омогућена група"
+msgstr "Tilgjengelige grupper"
 
 msgctxt "#31601"
 msgid "Add group"
-msgstr "Додај групу"
+msgstr "Legg til grupper"
 
 msgctxt "#31602"
 msgid "Rename group"
-msgstr "Преименуј групу"
+msgstr "Gi nytt navn til gruppe"
 
 msgctxt "#31603"
 msgid "Hide group"
-msgstr "Сакриј групу"
+msgstr "Skjul gruppe"
 
 msgctxt "#31604"
 msgid "Delete group"
-msgstr "Обриши групу"
+msgstr "Slett gruppe"
 
 msgctxt "#31605"
 msgid "Visible channels"
-msgstr "Видљиви канали"
+msgstr "Synlige kanaler"
 
 msgctxt "#31606"
 msgid "Hidden channels"
-msgstr "Скривени канали"
+msgstr "Skjulte kanaler"
 
 #. example usage: Used as name of PVR last played widget
 msgctxt "#31607"
 msgid "Recent TV Channels"
-msgstr "Недавно емитовани канали"
+msgstr "Nylige TV-kanaler"
 
 msgctxt "#31608"
 msgid "Channel type"
-msgstr "Тип канала"
+msgstr "Kanaltype"
 
 msgctxt "#31609"
 msgid "Channel options"
-msgstr "Опције канала"
+msgstr "Kanalvalg"
 
 msgctxt "#31610"
 msgid "Programmes"
-msgstr "Програми"
+msgstr "Program"
 
 msgctxt "#31611"
 msgid "Recently played channels"
-msgstr "Недавно гледани Канали"
+msgstr "Nylig avspilte kanaler"
 
 #: media
 msgctxt "#31650"
 msgid "Last episode"
-msgstr "Последња епизода"
+msgstr "Siste episode"
 
 msgctxt "#31651"
 msgid "Next episode"
-msgstr "Следећа епизода"
+msgstr "Neste episode"
 
 msgctxt "#31652"
 msgid "Status"
-msgstr "Статус"
+msgstr "Status"
 
 msgctxt "#31653"
 msgid "Airs today"
-msgstr "Емитује се данас"
+msgstr "Vises idag"
 
 #. Example usage: More by writer Stephen King
 msgctxt "#31654"
 msgid "More by writer"
-msgstr "Више од сценаристе"
+msgstr "Mer fra samme forfatter"
 
 #. Example usage: More by director Steven Spielberg
 msgctxt "#31655"
 msgid "More by director"
-msgstr "Више од режисера"
+msgstr "Mer fra samme regissør"
 
 msgctxt "#31656"
 msgid "Youtube Search"
-msgstr "Претражи Youtube"
+msgstr "YouTube-søk"
 
 msgctxt "#31657"
 msgid "Similar"
-msgstr "Слично"
+msgstr "Liknende"
 
 msgctxt "#31658"
 msgid "Similar movies"
-msgstr "Слични филмови"
+msgstr "Liknende filmer"
 
 msgctxt "#31659"
 msgid "Similar shows"
-msgstr "Сличне ТВ Серије"
+msgstr "Liknende serier"
 
 #. Example usage: More from 20th Century Fox
 msgctxt "#31660"
 msgid "More from"
-msgstr "Више"
+msgstr "Mer fra"
 
 msgctxt "#31661"
 msgid "Video files"
-msgstr "Видео"
+msgstr "Videofiler"
 
 msgctxt "#31662"
 msgid "Random albums"
-msgstr "Албуми без реда"
+msgstr "Tilfeldige album"
 
 msgctxt "#31663"
 msgid "Random songs"
-msgstr "Песме без реда"
+msgstr "Tilfeldige sanger"
 
 msgctxt "#31664"
 msgid "Last played on"
-msgstr "Последњи пут репродуковано"
+msgstr "Sist spilt"
 
 msgctxt "#31665"
 msgid "Recently Added"
-msgstr "Скоро додато"
+msgstr "Nylig lagt til"
 
 msgctxt "#31666"
 msgid "Repositories"
-msgstr "Repositories"
+msgstr ""
 
 msgctxt "#31667"
 msgid "Local add-ons"
-msgstr "Локални додатци"
+msgstr "Lokale tillegg"
 
 msgctxt "#31668"
 msgid "TV Shows"
-msgstr "ТВ Серије"
+msgstr "TV-serier"
 
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"
 msgid "Name & Type"
-msgstr "Име и Тип"
+msgstr "Navn og Type"
 
 msgctxt "#31701"
 msgid "Album count"
-msgstr "Број Албума"
+msgstr "Albumteller"
 
 msgctxt "#31703"
 msgid "Song count"
-msgstr "Број песама"
+msgstr "Sangteller"
 
 msgctxt "#31704"
 msgid "Unwatched show"
-msgstr "Неодгледана тв серија"
+msgstr "Usett serie"
 
 #. Example usage: continuing tv show
 msgctxt "#31705"
 msgid "Continuing series"
-msgstr "Серија се наставља"
+msgstr "Produseres fortsatt"
 
 #. Example usage: ended tv show
 msgctxt "#31706"
 msgid "Ended series"
-msgstr "Завршена серија"
+msgstr "Avsluttet serie"
 
 #. Example usage: tv show status unknown
 msgctxt "#31707"
 msgid "Status unknown"
-msgstr "Непознат статус"
+msgstr "Ukjent status"
 
 msgctxt "#31709"
 msgid "Unwatched episodes"
-msgstr "Неодгледане епизоде"
+msgstr "Usette episoder"
 
 msgctxt "#31710"
 msgid "Playing"
-msgstr "Изводи се"
+msgstr "Spiller"
 
 msgctxt "#31711"
 msgid "Now playing"
-msgstr "Репродукује се"
+msgstr "Spilles nå"
 
 msgctxt "#31712"
 msgid "Watchlist"
-msgstr "Листа"
+msgstr ""
 
 msgctxt "#31713"
 msgid "Live TV"
-msgstr "ТВ"
+msgstr "Live-TV"
 
 msgctxt "#31714"
 msgid "Recently Played"
-msgstr "Скоро репродуковано"
+msgstr "Nylig avspilt"
 
 msgctxt "#31715"
 msgid "Recommended"
-msgstr "Препоручено"
+msgstr "Anbefalt"
 
 msgctxt "#31716"
 msgid "Movies Watchlist"
-msgstr "Листа Филмова"
+msgstr ""
 
 msgctxt "#31717"
 msgid "Episodes Watchlist"
-msgstr "Листа епизода"
+msgstr ""
 
 msgctxt "#31718"
 msgid "Airing today"
-msgstr "Премијера данас"
+msgstr "Vises idag"
 
 msgctxt "#31719"
 msgid "Recently added video"
-msgstr "Скоро додан видео"
+msgstr "Nylig lagt til film"
 
 msgctxt "#31720"
 msgid "Unwatched movies"
-msgstr "Неодгледани филмови"
+msgstr "Usette filmer"
 
 #: colours
 msgctxt "#31800"
 msgid "Manage colour themes"
-msgstr "Изабери теме боја"
+msgstr "Administrer fargetema"
 
 msgctxt "#31801"
 msgid "Reset all colours to skin defaults"
-msgstr "Ресетуј све боје на фабричка подешења"
+msgstr "Tilbakestill alle farger til temastandard"
 
 msgctxt "#31810"
 msgid "Background & focused text"
-msgstr "Позадина и фокусиран текст"
+msgstr "Bakgrunn og fokusert tekst"
 
 msgctxt "#31811"
 msgid "Accent & unfocused text"
-msgstr "Наглашен нефокусиран текст"
+msgstr ""
 
 msgctxt "#31812"
 msgid "Secondary unfocused text"
-msgstr "Секундарни нефокусирани текст"
+msgstr ""
 
 msgctxt "#31813"
 msgid "Alternative text"
-msgstr "Алтернативни текст"
+msgstr "Alternativ tekst"
 
 msgctxt "#31814"
 msgid "Disabled text"
-msgstr "Онемогућен текст"
+msgstr "Avslått tekst"
 
 #. example usage: the weather forecast is thunderstorms and lightning very
 #. very frightening
 #: other
 msgctxt "#31850"
 msgid "Forecast"
-msgstr "Прогноза"
+msgstr "Værmelding"
 
 #. example usage: currently the weather conditions are sunny
 msgctxt "#31851"
 msgid "Currently"
-msgstr "Тренутно"
+msgstr "Nåværende"
 
 msgctxt "#31852"
 msgid "YouTube: Popular"
-msgstr "YouTube: Популарно"
+msgstr "YouTube: Populært"
 
 msgctxt "#31853"
 msgid "YouTube: Live"
-msgstr "YouTube: Уживо"
+msgstr "YouTube: Live"
 
 msgctxt "#31854"
 msgid "Goodbye"
-msgstr "До скорог виђења"
+msgstr "Farvel"
 
 msgctxt "#31855"
 msgid "See you later"
-msgstr "Видимо се касније"
+msgstr "Ser deg siden"
 
 #: about
 msgctxt "#31980"
 msgid "Design & development"
-msgstr "Дизајн и развој"
+msgstr "Design og utvikling"
 
 msgctxt "#31981"
 msgid "Special thanks"
-msgstr "Специјално Хвала"
+msgstr "Spesiell takk til"
 
 msgctxt "#31982"
 msgid "Team-Kodi, the Kodi community and YOU for using Grid"
-msgstr "Тим Кодија, заједница Коди и ТИ користи Grid"
+msgstr "Team-Kodi, Kodi-samfunnet og DEG for at du bruker Grid"
 
 msgctxt "#31983"
 msgid "License"
-msgstr "Дозвола"
+msgstr "Lisens"
 
 #. Only translate text after the "-".
 msgctxt "#31984"
@@ -1072,13 +1072,14 @@ msgid ""
 "Distributing (derivatives of) this software (Grid) as part of a commercial "
 "product without my explicit prior written consent is strictly prohibited."
 msgstr ""
-"Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported - "
-"Distributing (derivatives of) this software (Grid) as part of a commercial "
-"product without my explicit prior written consent is strictly prohibited."
+"Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported – Å "
+"distribuere (også modifiserte utgaver av) denne programvaren (Grid) som en "
+"del av et kommersielt produkt uten mitt eksplisitte skriftlige samtykke er "
+"strengt forbudt."
 
 msgctxt "#31985"
 msgid "Beta testing"
-msgstr "Бета тест"
+msgstr "Beta tester"
 
 #. Don't translate this.
 msgctxt "#31986"
@@ -1091,22 +1092,22 @@ msgstr ""
 
 msgctxt "#31990"
 msgid "Final note"
-msgstr "Крајња напомена"
+msgstr ""
 
 msgctxt "#31991"
 msgid ""
 "If you enjoy my work and feel like contributing towards development, it is "
 "appreciated greatly - [B]www.paypal.me/jeroenpardon[/B]"
 msgstr ""
-"If you enjoy my work and feel like contributing towards development, it is "
-"appreciated greatly - [B]www.paypal.me/jeroenpardon[/B]"
+"Om du liker mitt arbeid og ønsker å støtte min utvikling, settes jeg stor "
+"pris på dette – [B]www.paypal.me/jeroenpardon[/B]"
 
 #. Shown when browsing through the available skins in the add-on browser, not
 #. in the skin itself. Will be manually added to the skin's addon.xml.
 #: addon.xml
 msgctxt "#31997"
 msgid "Grid by Jeroen"
-msgstr "Grid by Jeroen"
+msgstr "Grid av Jeroen"
 
 #. Skin Description. Shown when browsing through the available skins in the
 #. add-on browser, not in the skin itself. Will be manually added to the
@@ -1118,13 +1119,14 @@ msgid ""
 "focuses on feature quality rather than quantity with a lot of attention "
 "spent on the little details that matter."
 msgstr ""
-"Маска \"Grid\" је створена за елегантан приказ свис ствари које Коди "
-"пружа.Дизајн и кодирање је фокусирано на квалитет а не на квантитет, много "
-"пажње је посвећено ситним детаљима који су важни."
+"Målet med Grid er å tilby en elegant og intuitiv måte å nyte alle de "
+"fantastiske funksjonene Kodi tilbyr. Designet og utviklingen fokuserer på "
+"kvalitet rundt funksjonene heller enn kvantitet med mye arbeid lagt ned i "
+"detaljene som betyr mest."
 
 #. Skin Disclaimer. Shown when browsing through the available skins in the
 #. add-on browser, not in the skin itself. Will be manually added to the
 #. skin's addon.xml.
 msgctxt "#31999"
 msgid "Mouse and touchscreen use not supported"
-msgstr "Миш и тачскрин нису подржани"
+msgstr "Mus og touch-skjerm er ikke støttet"

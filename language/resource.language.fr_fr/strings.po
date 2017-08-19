@@ -28,9 +28,18 @@ msgctxt "#31001"
 msgid "Home menu layout"
 msgstr "Disposition du Menu Accueil"
 
+#. Skin setting that allows the user to choose from several home menu layouts
+#. e.g. vertical and horizontal
 msgctxt "#31002"
 msgid "Home menu type"
 msgstr "Type du Menu Accueil"
+
+#. example usage: enabling this skin setting will show 5 items on screen at
+#. once instead of 3 by using a condensed font. Only applies to horizontal
+#. home menu -->
+msgctxt "#31003"
+msgid "Enable condensed menu layout"
+msgstr ""
 
 msgctxt "#31005"
 msgid "Layout"
@@ -358,8 +367,8 @@ msgid "Enable animated artwork"
 msgstr "Activer les illustrations animées"
 
 msgctxt "#31227"
-msgid "Only in movie information screen"
-msgstr "Page d'information en film uniquement"
+msgid "Limit to movie information screen"
+msgstr ""
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
@@ -693,14 +702,8 @@ msgstr "Effet de flou"
 #. skin setting that enables a blur effect to the home menu background, and
 #. changes colours of text and textures to match the fanart image
 msgctxt "#31378"
-msgid "Blur effect and fanart colours"
-msgstr "Effet de flou et couleur de l'illustration"
-
-#. skin setting that changes colours of text and textures to match the fanart
-#. image
-msgctxt "#31378"
-msgid "Fanart colours only"
-msgstr "Couleurs de l'illustration uniquement"
+msgid "Fanart colours"
+msgstr ""
 
 #: osd / player
 msgctxt "#31550"
