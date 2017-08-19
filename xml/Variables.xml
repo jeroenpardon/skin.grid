@@ -72,13 +72,18 @@
 	</variable>
 
 	<variable name="home:FX.Diffuse">
-		<value condition="!Skin.HasSetting(home.blurfx)">overlays/home_horizontal2.png</value>
-		<value></value>
+		<value condition="Skin.HasSetting(home.blurfx)">colorize/100.png</value>
+		<value>colorize/50.png</value>
 	</variable>
 
 	<variable name="home:FX.Texture">
-		<value condition="!Skin.HasSetting(home.blurfx.disable)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
-		<value>overlays/home_horizontal.png</value>
+		<value condition="Skin.HasSetting(home.blurfx)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value>colorize/50.png</value>
+	</variable>
+
+	<variable name="home:FX.Texture">
+		<value condition="Skin.HasSetting(home.blurfx)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value>colorize/50.png</value>
 	</variable>
 
 	
