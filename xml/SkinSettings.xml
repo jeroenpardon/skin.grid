@@ -239,7 +239,7 @@
 
 					<!-- Home menu layout -->
 					<control type="button" id="9220">
-						<label>$LOCALIZE[31002]</label>
+						<label>$LOCALIZE[31001]</label>
 						<label2>$INFO[Skin.String(homemenu.layout.Label)]</label2>
 						<onclick>SetProperty(skinshortcuts-reloadmainmenu,True,Home)</onclick>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=homemenu.layout,header=$LOCALIZE[31002])</onclick>
@@ -247,12 +247,20 @@
 						<include>button_Settings</include>
 					</control>
 					<!-- Auto collapse submenus -->
-					<control type="radiobutton" id="9230">
+					<control type="radiobutton" id="9221">
 						<label>$LOCALIZE[31006]</label>
 						<onclick>Skin.ToggleSetting(homemenu.collapse)</onclick>
 						<selected>Skin.HasSetting(homemenu.collapse)</selected>
 						<include>radio_Settings</include>
 						<visible>String.IsEqual(Skin.String(homemenu.layout),vertical)</visible>
+					</control>
+					<!-- Auto collapse submenus -->
+					<control type="radiobutton" id="9222">
+						<label>$LOCALIZE[31003]</label>
+						<onclick>Skin.ToggleSetting(homemenu.condensed)</onclick>
+						<selected>Skin.HasSetting(homemenu.condensed)</selected>
+						<include>radio_Settings</include>
+						<visible>String.IsEqual(Skin.String(homemenu.layout),horizontal)</visible>
 					</control>
 					<!-- Toggle widget names -->
 					<control type="radiobutton" id="9240">
@@ -751,16 +759,13 @@
 					<!-- Blur -->
 					<control type="radiobutton" id="9630">
 						<label>$LOCALIZE[31377]</label>
-						<label2>$INFO[Skin.String(home.blurfx.disable)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.blurfx.disable)</onclick>
-						<selected>!Skin.HasSetting(home.blurfx.disable)</selected>
+						<label2>$INFO[Skin.String(home.blurfx)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.blurfx)</onclick>
+						<selected>Skin.HasSetting(home.blurfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 						<enable>String.IsEqual(Skin.String(homemenu.layout),horizontal)</enable>
 					</control>
-
-
-
 
 					<!-- Fanart colours -->
 					<control type="radiobutton" id="9640">

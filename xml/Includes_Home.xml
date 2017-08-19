@@ -37,36 +37,19 @@
 					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
 
-				<control type="group">
-					<visible>Skin.HasSetting(home.blurfx.disable) + Skin.HasSetting(home.colorfx.disable)</visible>
-					<control type="image">
-						<include>home_Image</include>
-						<texture colordiffuse="ff000000">colorize/50.png</texture>
-						<animation effect="fade" start="0" end="100" time="150">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
-						<visible>String.IsEqual(Window(Home).Property(HomeFocusedItem),submenu) | String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
-					</control>
-					<control type="image">
-						<include>home_Image</include>
-						<texture colordiffuse="ff000000">colorize/75.png</texture>
-						<animation effect="fade" start="0" end="100" time="150">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
-						<visible>String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
-					</control>
+				<!-- Full blur overlay -->
+				<control type="image">
+					<bottom>0</bottom>
+					<width>screen_Width</width>
+					<height>screen_Height</height>
+					<aspectratio aligny="bottom">scale</aspectratio>
+					<texture>$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+					<include>fadeinout</include>
+					<include>transition_HomeAlt</include>
+					<visible>String.IsEqual(Window(Home).Property(BlurIsActive),true) | String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
 				</control>
 
-				<control type="group">
-					<visible>!Skin.HasSetting(home.blurfx.disable) | !Skin.HasSetting(home.colorfx.disable)</visible>
-					<control type="image">
-						<include>home_Image</include>
-						<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="colorize/100.png">$VAR[home:FX.Texture]</texture>
-						<animation effect="fade" start="0" end="100" time="150">Visible</animation>
-						<animation effect="fade" start="100" end="0" time="150">Hidden</animation>
-						<visible>String.IsEqual(Window(Home).Property(BlurIsActive),true)</visible>
-					</control>
-				</control>
-
-				<!-- Menu area background gradient-->
+				<!-- Menu area background gradient (blur) -->
 				<control type="image">
 					<bottom>0</bottom>
 					<width>screen_Width</width>
@@ -132,15 +115,20 @@
 				<width>screen_Width</width>
 				<height>1080</height>
 				<onfocus>SetProperty(HomeFocusedItem,feed,Home)</onfocus>
-
-
 				<onup condition="!String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</onup>
 				<onup condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</onup>
 				<ondown>noop</ondown>
 				<onleft>$PARAM[OnLeft]</onleft>
 				<onright>$PARAM[OnRight]</onright>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
-				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">home_Menu-Horizontal</include>
+				
+				<include content="home_Menu-Horizontal" condition="String.IsEqual(Skin.String(homemenu.layout),horizontal) + Skin.HasSetting(homemenu.condensed)">
+					<param name="FocusPosition">2</param>
+				</include>
+				<include content="home_Menu-Horizontal" condition="String.IsEqual(Skin.String(homemenu.layout),horizontal) + !Skin.HasSetting(homemenu.condensed)">
+					<param name="FocusPosition">1</param>
+				</include>
+
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),vertical)">skinshortcuts-template-widget_Vertical</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">skinshortcuts-template-widget_Horizontal</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),compact)">skinshortcuts-template-widget_Compact</include>
@@ -160,10 +148,11 @@
 			<control type="group" id="$PARAM[HeaderID]">
 				<width>screen_Width</width>
 				<height>54</height>
+				<visible>Skin.HasSetting(widget.name)</visible>
 				<control type="image">
 					<width>1000%</width>
 					<height>100%</height>
-					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/80.png</texture>
+					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
@@ -210,7 +199,6 @@
 		<param name="BigInfoFont2" default="Black-26"/>
 		<definition>
 			<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
-				
 				<control type="image">
 					<width>$PARAM[ItemWidth]</width>
 					<include>$PARAM[Height]</include>
@@ -218,7 +206,6 @@
 					<aspectratio>stretch</aspectratio>
 					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
-
 				<control type="image">
 					<width>$PARAM[ItemWidth]</width>
 					<height>$PARAM[Height]</height>
@@ -299,17 +286,15 @@
 				</control>
 			</itemlayout>
 			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[Height]">
-
-				<control type="image">
-					<width>$PARAM[ItemWidth]</width>
-					<include>$PARAM[Height]</include>
-					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
-					<aspectratio>stretch</aspectratio>
-					<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
-				</control>
-
 				<control type="group">
 					<visible>!Control.HasFocus($PARAM[ID])</visible>
+					<control type="image">
+						<width>$PARAM[ItemWidth]</width>
+						<include>$PARAM[Height]</include>
+						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
+						<aspectratio>stretch</aspectratio>
+						<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
+					</control>
 					<control type="image">
 						<width>$PARAM[ItemWidth]</width>
 						<height>$PARAM[Height]</height>

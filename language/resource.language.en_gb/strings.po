@@ -26,8 +26,14 @@ msgctxt "#31001"
 msgid "Home menu layout"
 msgstr ""
 
+#. Skin setting that allows the user to choose from several home menu layouts e.g. vertical and horizontal
 msgctxt "#31002"
 msgid "Home menu type"
+msgstr ""
+
+#. example usage: enabling this skin setting will show 5 items on screen at once instead of 3 by using a condensed font. Only applies to horizontal home menu -->
+msgctxt "#31003"
+msgid "Enable condensed menu layout"
 msgstr ""
 
 

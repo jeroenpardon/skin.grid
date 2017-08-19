@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
 	<fontset id="Default">
+
+		<!-- Condensed -->
+		<font>
+			<name>CondensedLight-32</name>
+			<filename>Default/CondensedLight.ttf</filename>
+			<size>32</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>CondensedLight-48</name>
+			<filename>Default/CondensedLight.ttf</filename>
+			<size>48</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>CondensedBold-36</name>
+			<filename>Default/CondensedBold.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>CondensedBold-52</name>
+			<filename>Default/CondensedBold.ttf</filename>
+			<size>60</size>
+			<style>uppercase</style>
+		</font>
+		
+		<!-- Debug -->
 		<font>
 			<name>Debug</name>
 			<filename>Default/Debug.ttf</filename>
