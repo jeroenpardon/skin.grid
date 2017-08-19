@@ -77,7 +77,7 @@
 	</variable>
 
 	<variable name="home:FX.Texture">
-		<value condition="!Skin.HasSetting(home.blurfx)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value condition="!Skin.HasSetting(home.blurfx.disable)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
 		<value>overlays/home_horizontal.png</value>
 	</variable>
 

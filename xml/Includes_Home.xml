@@ -55,7 +55,7 @@
 					<width>screen_Width</width>
 					<height>172</height>
 					<aspectratio aligny="bottom">scale</aspectratio>
-					<texture colordiffuse="$VAR[home:FX.Color1]">$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+					<texture colordiffuse="$VAR[home:FX.Color1]">$VAR[home:FX.Texture]</texture>
 					<include>fadeinout</include>
 					<include>transition_HomeAlt</include>
 					<visible>Control.HasFocus(9000) | Control.HasFocus(9050)</visible>
@@ -122,6 +122,7 @@
 				<onright>$PARAM[OnRight]</onright>
 				<scrolltime tween="cubic" easing="out">500</scrolltime>
 				
+				<!-- Insert horizontal menu, set focus position -->
 				<include content="home_Menu-Horizontal" condition="String.IsEqual(Skin.String(homemenu.layout),horizontal) + Skin.HasSetting(homemenu.condensed)">
 					<param name="FocusPosition">2</param>
 				</include>
@@ -129,6 +130,7 @@
 					<param name="FocusPosition">1</param>
 				</include>
 
+				<!-- Insert the widgets -->
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),vertical)">skinshortcuts-template-widget_Vertical</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">skinshortcuts-template-widget_Horizontal</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),compact)">skinshortcuts-template-widget_Compact</include>
