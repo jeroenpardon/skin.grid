@@ -346,7 +346,6 @@
 						</control>
 					</control>
 				</focusedlayout>
-				-->
 				<content>
 					<include>skinshortcuts-mainmenu</include>
 				</content>
@@ -366,6 +365,12 @@
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
 				<include>transition_HomeAlt</include>
+				<!--
+				<animation effect="slide" end="192" time="0" condition="Skin.HasSetting(homemenu.condensed) + String.IsEqual(Container(9050).NumItems,4)">Conditional</animation>
+				<animation effect="slide" end="384" time="0" condition="Skin.HasSetting(homemenu.condensed) + String.IsEqual(Container(9050).NumItems,3)">Conditional</animation>
+				<animation effect="slide" end="576" time="0" condition="Skin.HasSetting(homemenu.condensed) + String.IsEqual(Container(9050).NumItems,2)">Conditional</animation>
+				<animation effect="slide" end="768" time="0" condition="Skin.HasSetting(homemenu.condensed) + String.IsEqual(Container(9050).NumItems,1)">Conditional</animation>
+				-->
 				<itemlayout condition="!Skin.HasSetting(homemenu.condensed)" width="640" height="64">
 					<control type="image">
 						<height>64</height>

@@ -28,7 +28,7 @@
 		<definition>
 			<control type="group">
 				<top>0</top>
-				<height>100%</height>
+				
 				<include>transition_Background</include>
 
 				<!-- Background_Slideshow-->
@@ -43,11 +43,14 @@
 					<width>screen_Width</width>
 					<height>screen_Height</height>
 					<aspectratio aligny="bottom">scale</aspectratio>
-					<texture>$INFO[Window(home).Property(ImageFilterFIVE)]</texture>
+					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="$VAR[home:FX.Diffuse]">$VAR[home:FX.Texture]</texture>
 					<include>fadeinout</include>
 					<include>transition_HomeAlt</include>
 					<visible>String.IsEqual(Window(Home).Property(BlurIsActive),true) | String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
 				</control>
+
+				<!-- Background video -->
+				<include>background_Video</include>
 
 				<!-- Menu area background gradient (blur) -->
 				<control type="image">
@@ -55,14 +58,11 @@
 					<width>screen_Width</width>
 					<height>172</height>
 					<aspectratio aligny="bottom">scale</aspectratio>
-					<texture colordiffuse="$VAR[home:FX.Color1]">$VAR[home:FX.Texture]</texture>
-					<include>fadeinout</include>
-					<include>transition_HomeAlt</include>
-					<visible>Control.HasFocus(9000) | Control.HasFocus(9050)</visible>
+					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="$VAR[home:FX.Diffuse]">$VAR[home:FX.Texture]</texture>
+					<fadetime>fadetime_Slideshow</fadetime>
+					<animation effect="fade" start="100" end="0" time="400" reversible="true" tween="Quadratic" easing="Out">Hidden</animation>
+					<visible>!String.IsEqual(Window(Home).Property(BlurIsActive),true)</visible>
 				</control>
-
-				<!-- Background video -->
-				<include>background_Video</include>
 		
 				<!-- Horizontal home window chrome -->
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">global_WindowChrome</include>
@@ -120,7 +120,7 @@
 				<ondown>noop</ondown>
 				<onleft>$PARAM[OnLeft]</onleft>
 				<onright>$PARAM[OnRight]</onright>
-				<scrolltime tween="cubic" easing="out">500</scrolltime>
+				<include>global_Scrolltime</include>
 				
 				<!-- Insert horizontal menu, set focus position -->
 				<include content="home_Menu-Horizontal" condition="String.IsEqual(Skin.String(homemenu.layout),horizontal) + Skin.HasSetting(homemenu.condensed)">
