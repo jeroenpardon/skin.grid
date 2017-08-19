@@ -113,6 +113,12 @@
 		<value>Text.3</value>
 	</variable>
 
+	<variable name="color:Date">
+		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="Window.IsActive(Home)">$VAR[color:Accent]</value>
+		<value>$VAR[color:Text.3]</value>
+	</variable>
+
 
 <!-- Count -->
 	<variable name="count:Episodes">

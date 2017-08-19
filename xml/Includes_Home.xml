@@ -93,6 +93,10 @@
 		</include>
 		<include content="global_WindowChrome">
 			<param name="TimeLeft">0</param>
+			<param name="ProgressTop">10</param>
+			<param name="ProgressLeft">138</param>
+			<param name="ProgressHeight">98</param>
+			<param name="ProgressWidth">1772</param>
 		</include>
 	</include>
 
