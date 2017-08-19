@@ -510,5 +510,78 @@
 				</content>
 			</control>
 		</definition>
-	</include>	
+	</include>
+
+	<include name="home_Menu-compact">
+		<param name="ID" default="9000"/>
+		<definition>
+			<control type="list" id="9000">
+				<top>108</top>
+				<left>0</left>
+				<width>128</width>
+				<height>1080</height>
+				<onup>9000</onup>
+				<onleft>8000</onleft>
+				<onright>9100</onright>
+				<ondown>9000</ondown>
+				<include>global_ListScroll</include>
+				<orientation>vertical</orientation>
+				<include>transition_Content</include>
+				<!--
+				<animation effect="slide" end="0,756" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,1)">Conditional</animation>
+				<animation effect="slide" end="0,648" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,2)">Conditional</animation>
+				<animation effect="slide" end="0,540" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,3)">Conditional</animation>
+				<animation effect="slide" end="0,432" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,4)">Conditional</animation>
+				<animation effect="slide" end="0,324" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,5)">Conditional</animation>
+				<animation effect="slide" end="0,216" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,6)">Conditional</animation>
+				<animation effect="slide" end="0,108" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,7)">Conditional</animation>
+				<animation effect="slide" end="0,0" time="0" condition="Integer.IsGreaterOrEqual(Container($PARAM[ID]).NumItems,8)">Conditional</animation>
+				-->
+				<itemlayout width="128" height="108">
+					<control type="label">
+						<width>128</width>
+						<height>108</height>
+						<font>Symbols-32</font>
+						<label>$INFO[ListItem.Property(homeSymbol)]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.2]</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout width="128" height="108">
+					<control type="label">
+						<width>128</width>
+						<height>108</height>
+						<font>Symbols-32</font>
+						<label>$INFO[ListItem.Property(homeSymbol)]</label>
+						<align>center</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.2]</textcolor>
+						<visible>!Control.HasFocus(9000)</visible>
+					</control>
+					<control type="group">
+						<visible>Control.HasFocus(9000)</visible>
+						<control type="image">
+							<aspectratio>stretch</aspectratio>
+							<width>128</width>
+							<height>108</height>
+							<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						</control>
+						<control type="label">
+							<width>128</width>
+							<height>108</height>
+							<font>Symbols-32</font>
+							<label>$INFO[ListItem.Property(homeSymbol)]</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Main]</textcolor>
+						</control>
+					</control>	
+				</focusedlayout>
+				<content>
+					 <include>skinshortcuts-mainmenu</include>
+				</content>
+			</control>
+		</definition> 
+	</include>
 </includes>
