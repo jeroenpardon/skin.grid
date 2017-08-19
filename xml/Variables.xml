@@ -608,7 +608,7 @@
 	</variable>
 
 	<variable name="art:Landscape">
-		<value condition="[Container.Content(images) + !ListItem.IsFolder] | [String.IsEmpty(Container.Content) + !ListItem.IsFolder]">$INFO[ListItem.Icon]</value>
+		<value condition="[Container.Content(images) + !ListItem.IsFolder] | [String.IsEmpty(Container.Content) + !ListItem.IsFolder + !String.StartsWith(Container.FolderPath,pvr://recordings)]">$INFO[ListItem.Icon]</value>
 		<value condition="Container.Content(images) + ListItem.IsFolder">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
