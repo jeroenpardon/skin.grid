@@ -28,14 +28,7 @@
 				<include>background_Video</include>
 
 				<!-- Now playing -->
-				<control type="image">
-					<include>screen_Dimensions</include>
-					<texture>$VAR[player:Art]</texture>
-					<fadetime>fadetime_Thumb</fadetime>
-					<include>fadeinout</include>
-					<aspectratio align="center" aligny="center">scale</aspectratio>
-					<visible>Player.HasAudio + Skin.HasSetting(home.nowplaying)</visible>
-				</control>
+				<include>background_Player</include>
 
 				<!-- Overlay -->
 				<control type="group">

@@ -44,15 +44,7 @@
 	<setting id="home.blur" value="coloronly" label="color only">
 		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=|ActivateWindow(startup),noaction=Close)</onselect>
 	</setting>
--->
-
-
-
-
-
-
-
-
+	-->
 
 	<!-- Horizontal home submenu orientation-->
 	<setting id="submenu.type" value="horizontal" label="horizontal" default="true"/>
@@ -90,7 +82,7 @@
 	<setting id="input.text" value="nokeyboard" label="$LOCALIZE[31356]"/>
 
 	<!-- Visualisation mode -->
-	<setting id="viz.mode" value="fanart" label="$LOCALIZE[31224]" default="true"/>
+	<setting id="viz.mode" value="fanart" label="$LOCALIZE[31218]" default="true"/>
 	<setting id="viz.mode" value="viz" label="$LOCALIZE[250]"/>
 	<setting id="viz.mode" value="blend" label="$LOCALIZE[20131]"/>
 

@@ -52,6 +52,9 @@
 				<!-- Background video -->
 				<include>background_Video</include>
 
+				<!-- Now playing -->
+				<include>background_Player</include>
+
 				<!-- Menu area background gradient (blur) -->
 				<control type="image">
 					<bottom>0</bottom>
