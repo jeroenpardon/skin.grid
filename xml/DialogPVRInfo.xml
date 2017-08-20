@@ -195,7 +195,7 @@
 					<width>360</width>
 					<height>360</height>
 					<texture background="true">$VAR[art:Square]</texture>
-					<aspectratio align="left">scale</aspectratio>
+					<aspectratio align="center">keep</aspectratio>
 				</control>
 			</control>
 		</control>
