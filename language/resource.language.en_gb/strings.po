@@ -424,6 +424,9 @@ msgctxt "#31307"
 msgid "Scrollbar visibility"
 msgstr ""
 
+msgctxt "#31308"
+msgid "Visual effects"
+msgstr ""
 
 msgctxt "#31309"
 msgid "Customize this menu"
