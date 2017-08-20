@@ -358,7 +358,7 @@
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Date]</textcolor>
 						<texturenofocus></texturenofocus>
-						<visible>!String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
+						<visible>!String.IsEqual(Skin.String(homemenu.layout),compact) + !Skin.HasSetting(home.colorfx.disable)</visible>
 						<visible>$EXP[!Window.HasOverlay]</visible>
 						<visible>!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia + [Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),home)]] | [!Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),nohome)]]</visible>
 						<animation effect="slide" end="128" time="0" condition="!Skin.HasSetting(home.clock) + Window.IsActive(home)">Conditional</animation>
