@@ -625,7 +625,7 @@
 					</control>
 					<!-- Videowindow -->
 					<control type="group">
-						<visible>!System.Platform.Android + [VideoPLayer.Content(livetv) + [Window.IsActive(tvchannels) | Window.IsActive(radiochannels)]</visible>
+						<visible>!System.Platform.Android + [VideoPLayer.Content(livetv) + [Window.IsActive(tvchannels) | Window.IsActive(radiochannels)]]</visible>
 						<control type="image">
 							<width>$PARAM[Width]</width>
 							<height>$PARAM[ArtHeight]</height>
