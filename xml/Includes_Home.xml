@@ -114,7 +114,7 @@
 				<texture colordiffuse="ff000000">colorize/white.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
-			</control>	
+			</control>
 			<control type="grouplist" id="9100">
 				<left>$PARAM[Left]</left>
 				<itemgap>0</itemgap>
@@ -160,10 +160,11 @@
 		<param name="Visible"/>
 		<param name="HasItems"/>
 		<param name="ID"/>
+		<param name="Height"/>
 		<definition>
 			<control type="group" id="$PARAM[HeaderID]">
 				<width>screen_Width</width>
-				<height>54</height>
+				<height>$PARAM[Height]</height>
 				<visible>Skin.HasSetting(widget.name)</visible>
 				<control type="image">
 					<width>1000%</width>

@@ -102,6 +102,9 @@
 		<property name="showheader" tag="property" attribute="name|widgetLayout" value="fullscreen">false</property>
 		<property name="showheader">true</property>
 
+		<property name="headerheight" tag="property" attribute="name|widgetLayout" value="fullscreen">0</property>
+		<property name="headerheight">54</property>
+
 		<property name="plotheight" propertyValue="120">
 			<rule tag="property" attribute="name|widgetLayout" value="fullscreen" />
 			<rule tag="property" attribute="name|widgetLayout" value="wide" />
@@ -133,6 +136,7 @@
 		<controls>
 			<include content="widget_Header">
 				<param name="ID">1000$SKINSHORTCUTS[id]</param>
+				<param name="Height">$SKINSHORTCUTS[headerheight]</param>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
