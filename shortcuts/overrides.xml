@@ -341,7 +341,7 @@
 <!--home menu properties-->
 	<propertyfallback property="homeSymbol">&#57424;</propertyfallback>
 	<propertydefault defaultID="Settings" property="homeSymbol">&#59014;</propertydefault>
-	<propertydefault defaultID="13000" property="homeSymbol">&#59039;</propertydefault>
+	<propertydefault defaultID="13000" property="homeSymbol">&#59014;</propertydefault>
 	<propertydefault defaultID="24001" property="homeSymbol">&#57389;</propertydefault>
 	<propertydefault defaultID="744" property="homeSymbol">&#57477;</propertydefault>
 	<propertydefault defaultID="1037" property="homeSymbol">&#57389;</propertydefault>
