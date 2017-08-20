@@ -15,12 +15,12 @@
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
 		</include>
 		<include>home_Menu-vertical</include>
+		<include content="global_WindowChrome">
+			<param name="Height">98</param>
+		</include>
 		<include content="home_Widgets">
 			<param name="Left">screen_Width</param>
 			<param name="OnLeft">9000</param>
-		</include>
-		<include content="global_WindowChrome">
-			<param name="Height">98</param>
 		</include>
 	</include>
 
