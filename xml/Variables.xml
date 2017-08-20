@@ -60,22 +60,17 @@
 	</variable>
 
 	<variable name="home:FX.Color1">
-		<value condition="!Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
-		<value condition="Skin.HasSetting(home.colorfx.disable)">$VAR[color:Main]</value>
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value>$VAR[color:Main]</value>
 	</variable>
 
 	<variable name="home:FX.Color2">
-		<value condition="!Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
-		<value condition="Skin.HasSetting(home.colorfx.disable)">$VAR[color:Accent]</value>
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value>$VAR[color:Accent]</value>
 	</variable>
 
 	<variable name="home:FX.Diffuse">
 		<value condition="Skin.HasSetting(home.blurfx)">colorize/100.png</value>
-		<value>colorize/50.png</value>
-	</variable>
-
-	<variable name="home:FX.Texture">
-		<value condition="Skin.HasSetting(home.blurfx)">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
 		<value>colorize/50.png</value>
 	</variable>
 
