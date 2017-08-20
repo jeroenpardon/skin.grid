@@ -86,7 +86,17 @@
 		<include content="background_Global">
 			<param name="GridTexture">overlays/108.png</param>
 		</include>
-		<include>home_Menu-compact</include>		
+
+		<include content="home_Menu-compact" condition="Skin.HasSetting(home.clock)">
+			<param name="Top">108</param>
+			<param name="Height">972</param>
+		</include>
+
+		<include content="home_Menu-compact" condition="!Skin.HasSetting(home.clock)">
+			<param name="Top">0</param>
+			<param name="Height">1080</param>
+		</include>
+
 		<include content="home_Widgets">
 			<param name="Left">128</param>
 			<param name="OnLeft">9000</param>

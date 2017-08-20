@@ -515,12 +515,14 @@
 
 	<include name="home_Menu-compact">
 		<param name="ID" default="9000"/>
+		<param name="Top" default="108"/>
+		<param name="Height" default="1080"/>
 		<definition>
 			<control type="list" id="9000">
-				<top>108</top>
+				<top>$PARAM[Top]</top>
 				<left>0</left>
 				<width>128</width>
-				<height>1080</height>
+				<height>$PARAM[Height]</height>
 				<onup>9000</onup>
 				<onleft>8000</onleft>
 				<onright>9100</onright>
@@ -528,16 +530,14 @@
 				<include>global_ListScroll</include>
 				<orientation>vertical</orientation>
 				<include>transition_Content</include>
-				<!--
-				<animation effect="slide" end="0,756" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,1)">Conditional</animation>
-				<animation effect="slide" end="0,648" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,2)">Conditional</animation>
-				<animation effect="slide" end="0,540" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,3)">Conditional</animation>
-				<animation effect="slide" end="0,432" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,4)">Conditional</animation>
-				<animation effect="slide" end="0,324" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,5)">Conditional</animation>
-				<animation effect="slide" end="0,216" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,6)">Conditional</animation>
-				<animation effect="slide" end="0,108" time="0" condition="Integer.IsEqual(Container($PARAM[ID]).NumItems,7)">Conditional</animation>
-				<animation effect="slide" end="0,0" time="0" condition="Integer.IsGreaterOrEqual(Container($PARAM[ID]).NumItems,8)">Conditional</animation>
-				-->
+				<animation effect="slide" end="0,864" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,1)">Conditional</animation>
+				<animation effect="slide" end="0,756" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,2)">Conditional</animation>
+				<animation effect="slide" end="0,648" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,3)">Conditional</animation>
+				<animation effect="slide" end="0,540" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,4)">Conditional</animation>
+				<animation effect="slide" end="0,432" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,5)">Conditional</animation>
+				<animation effect="slide" end="0,324" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,6)">Conditional</animation>
+				<animation effect="slide" end="0,216" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,7)">Conditional</animation>
+				<animation effect="slide" end="0,108" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsGreaterOrEqual(Container($PARAM[ID]).NumItems,8)">Conditional</animation>
 				<itemlayout width="128" height="108">
 					<control type="label">
 						<width>128</width>
