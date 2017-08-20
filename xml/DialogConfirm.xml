@@ -32,6 +32,7 @@
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="progress" id="20">
+				<left>-1920</left>
 				<info>Player.Progressbar</info>
 				<visible>false</visible>
 			</control>
