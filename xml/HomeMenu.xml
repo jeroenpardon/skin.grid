@@ -192,6 +192,7 @@
 				<ondown>9050</ondown>
 				<onfocus>SetProperty(HomeFocusedItem,mainmenu,Home)</onfocus>
 				<onfocus>SetProperty(BlurIsActive,false,Home)</onfocus>
+				<onfocus>SetProperty(ShowClock,true,Home)</onfocus>
 				<focusposition>$PARAM[FocusPosition]</focusposition>
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
@@ -358,7 +359,7 @@
 				<height>64</height>
 				<onleft>9050</onleft>
 				<onright>9050</onright>
-				<onfocus>SetProperty(HomeFocusedItem,submenu,Home)</onfocus>
+
 				<ondown>SetProperty(BlurIsActive,true,Home)</ondown>
 				<onback>9000</onback>
 				<focusposition>$PARAM[FocusPosition]</focusposition>

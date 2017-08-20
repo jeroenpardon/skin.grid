@@ -6,6 +6,7 @@
 	<onload>AlarmClock(LoadHome,SetProperty(HomeInit,true),0:03,silent)</onload>
 	
 	<onload>SetProperty(SubMenuIsOpen,false,Home)</onload>
+	<onfocus>SetProperty(ShowClock,true,Home)</onfocus>
 
 	<!-- Skin Shortcuts -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>

@@ -74,7 +74,6 @@
 		<definition>
 
 			<!-- Colorbox image -->
-
 			<control type="multiimage" id="7975">
 				<left>-2160</left>
 				<width>1</width>
@@ -222,6 +221,7 @@
 				<height>108</height>
 				<width>screen_Width</width>
 				<include>transition_Chrome</include>
+				<include>slide_Clock</include>
 				<control type="image">
 					<width>128</width>
 					<height>$PARAM[Height]</height>
@@ -348,7 +348,6 @@
 					<right>128</right>
 					<orientation>horizontal</orientation>
 					<align>right</align>
-					<include>slide_Clock</include>
 					<control type="button">
 						<width>756</width>
 						<height>$PARAM[Height]</height>
@@ -371,7 +370,6 @@
 					<left>$PARAM[TimeLeft]</left>
 					<width>128</width>
 					<height>$PARAM[Height]</height>
-					<include>slide_Clock</include>
 					<visible>![Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact) + Window.IsVisible(volumebar)]</visible>
 					<visible>![Window.IsActive(home) + !Skin.HasSetting(home.clock) + !Window.IsActive(movieinformation)] | Window.IsActive(home) + Window.IsVisible(volumebar) + !Player.Muted</visible>
 					<control type="image">

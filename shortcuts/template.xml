@@ -259,6 +259,8 @@
 				<width>1920</width>
 				<height>$SKINSHORTCUTS[height]</height>
 				<onback>9000</onback>
+				<onup>SetProperty(ShowClock,false,Home)</onup>
+				<onfocus>SetProperty(ShowClock,false,Home)</onfocus>
 				<onfocus>SetProperty(BlurIsActive,true,Home)</onfocus>
 				<onfocus>SetProperty(HomeFocusedItem,widgets,Home)</onfocus>
 				<orientation>horizontal</orientation>
