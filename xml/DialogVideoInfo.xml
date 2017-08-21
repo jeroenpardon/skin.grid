@@ -200,7 +200,6 @@
 			<!-- Artwork -->
 			<control type="group">
 				<visible>!Control.IsVisible(50)</visible>
-				<!--<visible>!String.IsEmpty(Container.Content)</visible>-->
 				<control type="image">
 					<width>540</width>
 					<height>810</height>
@@ -208,20 +207,6 @@
 					<aspectratio align="left">scale</aspectratio>
 				</control>
 			</control>
-
-			<!--
-			<control type="group">
-				<top>90</top>
-				<left>128</left>
-				<visible>String.IsEmpty(Container.Content)</visible>
-				<control type="image">
-					<width>520</width>
-					<height>900</height>
-					<texture background="true">$VAR[art:Landscape]</texture>
-					<aspectratio align="left" aligny="top">keep</aspectratio>
-				</control>
-			</control>
-		-->
 
 			<!-- Cast list -->
 			<control type="group">
