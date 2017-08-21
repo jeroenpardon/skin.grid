@@ -10,7 +10,7 @@
 		<property name="layout" tag="property" attribute="name|widgetLayout" />
 
 		<!-- Square thumbnail matching -->
-		<property name="art" tag="property" attribute="name|widgetLayout" value="square">$INFO[ListItem.Art(thumb)]</property>		
+		<property name="art" tag="property" attribute="name|widgetLayout" value="square">$VAR[widget:Square]</property>		
 
 		<!-- Poster matching -->
 		<property name="art" propertyValue="$INFO[ListItem.Art(poster)]">

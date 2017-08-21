@@ -21,7 +21,7 @@
 		<include content="home_Widgets">
 			<param name="Left">screen_Width</param>
 			<param name="OnLeft">9000</param>
-		</include>
+		</include>		
 	</include>
 
 	<include name="home_Horizontal">

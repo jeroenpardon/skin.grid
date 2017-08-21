@@ -1235,6 +1235,11 @@
 		<value>&#58943;</value>
 	</variable>
 
+	<variable name="widget:Square">
+		<value condition="!String.IsEmpty(ListItem.Art(thumb))">$INFO[ListItem.Art(thumb)]</value>
+		<value>views/fallback/square.png</value>
+	</variable>
+
 	<variable name="widget:Symbol">
 		<value condition="String.IsEmpty(Container(211).ListItem.Property(widgetName))">&#57502;</value>
 		<value>&#57450;</value>
