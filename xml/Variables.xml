@@ -239,7 +239,7 @@
 	<variable name="information:Heading">
 		<value condition="Container.Content(tvshows)">$VAR[info:ShowStatus]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Tagline]</value>
-		<value condition="Container.Content(episodes)">[B]$INFO[ListItem.Title,,[/B] - ]$INFO[ListItem.Season,$LOCALIZE[20373] , $COMMA ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</value>
+		<value condition="Container.Content(episodes)">[B]$INFO[ListItem.Title,,[/B] - ]$INFO[ListItem.Season, $LOCALIZE[20373] ,$COMMA ]$INFO[ListItem.Episode,$LOCALIZE[20359] ]</value>
 		<value condition="Container.Content(albums) | Container.Content(musicvideos)">$INFO[ListItem.Artist]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Artist]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.EpisodeName,,$COMMA ]$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359]]</value>
