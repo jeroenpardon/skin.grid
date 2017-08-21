@@ -220,6 +220,7 @@
 	</variable>
 
 	<variable name="info:Source">
+		<value condition="[String.Contains(ListItem.FileNameAndPath,HDR) + !String.Contains(ListItem.FileNameAndPath,HDRip)] + [String.Contains(ListItem.FileNameAndPath,2160p) | String.Contains(ListItem.FileNameAndPath,UHD) | String.Contains(ListItem.FileNameAndPath,UltraHD) | String.Contains(ListItem.FileNameAndPath,Ultra-HD) | String.Contains(ListItem.FileNameAndPath,4K)]">HDR</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,blu-ray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50)">BluRay</value>
 		<value condition="[String.Contains(ListItem.FilenameAndPath,web.dl) | String.Contains(ListItem.FilenameAndPath,web-dl) | String.Contains(ListItem.FilenameAndPath,web-download) | String.Contains(ListItem.FilenameAndPath,webrip)] + ![String.Contains(ListItem.VideoCodec,vp8) | String.Contains(ListItem.VideoCodec,vp9)]">WEB-DL</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,hdrip)">HDTV</value>
@@ -294,6 +295,11 @@
 	<variable name="media:ParentItem">
 		<value condition="Container.Content(episodes) + !String.StartsWith(Container.FolderPath,plugin://)">$INFO[Container().ListItem(1).TVShowTitle]$INFO[Container().ListItem(1).Genre,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(episodes) + String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes)">TV Show Watchlist</value>
+	</variable>
+
+	<variable name="media:VideoResolution">
+		<value condition="String.IsEqual(ListItem.VideoResolution,4K)">$INFO[ListItem.VideoResolution]</value>
+		<value>$INFO[ListItem.VideoResolution,,P]</value>
 	</variable>
 
 	<variable name="media:Title">
@@ -683,7 +689,7 @@
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.Property(Addon.ID)]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.StartTime] - $INFO[ListItem.StartDate]</value>
 		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.StartDate]</value>
-		<value>$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[ListItem.VideoResolution,,P]</value>
+		<value>$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$VAR[media:VideoResolution]</value>
 	</variable>
 	<variable name="information:L1.Label">
 		<value condition="Container.Content(movies)">$LOCALIZE[20339]</value>
@@ -752,10 +758,10 @@
 		<value condition="Window.IsActive(pvrrecordinginfo)">$LOCALIZE[20373]</value>
 	</variable>
 	<variable name="information:L4">
-		<value condition="Container.Content(movies)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[ListItem.VideoResolution,,P]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="Container.Content(movies)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$VAR[media:VideoResolution]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(tvshows)">$VAR[info:Airdate]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[ListItem.VideoResolution,,P]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="Container.Content(musicvideos)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[ListItem.VideoResolution,,P]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$VAR[media:VideoResolution]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="Container.Content(musicvideos)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$VAR[media:VideoResolution]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(albums)">$INFO[Window(Home).Property(SkinHelper.ListItem.Duration)]</value>
 		<value condition="Container.Content(artists)">$INFO[Window(Home).Property(SkinHelper.ListItem.AlbumCount)]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Property(Role.Producer)]</value>
@@ -926,8 +932,8 @@
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ] ($INFO[VideoPlayer.Endtime])</value>
 		<value condition="VideoPlayer.Content(movies)">$INFO[VideoPlayer.Genre]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Director,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.FinishTime,&#32;&#32;|&#32;&#32;$LOCALIZE[31556]&#32;]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.TVShowTitle]&#32;&#32;|&#32;&#32;$INFO[VideoPlayer.Season,$LOCALIZE[20373] , - ]$INFO[VideoPlayer.Episode,$LOCALIZE[20359] ]&#32;&#32;|&#32;&#32;$INFO[VideoPlayer.Premiered]</value>
-		<value condition="VideoPlayer.Content(files)">$INFO[VideoPlayer.VideoCodec,,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.VideoResolution,,P]$VAR[player:AudioCodec,&#32;&#32;|&#32;&#32;]$VAR[player:AudioChannels,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.VideoResolution,&#32;&#32;|&#32;&#32;,P]</value>
+		<value condition="VideoPlayer.Content(files)">$INFO[VideoPlayer.VideoCodec,,&#32;&#32;|&#32;&#32;]$VAR[player:VideoResolution]$VAR[player:AudioCodec,&#32;&#32;|&#32;&#32;]$VAR[player:AudioChannels,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="VideoPlayer.Content(musicvideos)">$INFO[VideoPlayer.Artist]$INFO[VideoPlayer.Album,&#32;&#32;|&#32;&#32;]$INFO[VideoPlayer.Year,&#32;&#32;|&#32;&#32;]$VAR[player:VideoResolution,&#32;&#32;|&#32;&#32;]</value>
 	</variable>
 
 	<variable name="player:InfoToggle">
@@ -976,6 +982,11 @@
 	<variable name="player:Toggle3D2">
 		<value condition="String.IsEqual(System.StereoscopicMode,7)">&#57474;</value>
 		<value>&#57472;</value>
+	</variable>
+
+	<variable name="player:VideoResolution">
+		<value condition="String.IsEqual(VideoPlayer.VideoResolution,4K)">$INFO[VideoPlayer.VideoResolution]</value>
+		<value>$INFO[VideoPlayer.VideoResolution,,P]</value>
 	</variable>
 
 
