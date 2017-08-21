@@ -256,7 +256,7 @@
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>$VAR[home:FX.Color2]</textcolor>
-						<visible>!String.IsEqual(Window(Home).Property(HomeFocusedItem),mainmenu)</visible>
+						<visible>!String.IsEqual(Window(Home).Property(HomeFocusedItem),mainmenu) | String.IsEmpty(Window(Home).Property(HomeFocusedItem))</visible>
 					</control>
 					<control type="label">
 						<bottom>0</bottom>
@@ -359,7 +359,9 @@
 				<height>64</height>
 				<onleft>9050</onleft>
 				<onright>9050</onright>
-
+				<onup>SetProperty(ShowClock,true,Home)</onup>
+				<ondown>SetProperty(ShowClock,false,Home)</ondown>
+				<onfocus>SetProperty(HomeFocusedItem,submenu,Home)</onfocus>
 				<ondown>SetProperty(BlurIsActive,true,Home)</ondown>
 				<onback>9000</onback>
 				<focusposition>$PARAM[FocusPosition]</focusposition>
