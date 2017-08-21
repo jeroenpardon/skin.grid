@@ -476,6 +476,10 @@
 				<height>$PARAM[Height]</height>
 				<include>transition_Chrome</include>
 
+				<!-- Reposition for homescreen and clock -->
+				<animation effect="slide" start="0"  end="128" time="150" condition="Window.IsActive(Home) + !Skin.HasSetting(home.clock)">Conditional</animation>
+				<animation effect="slide" start="0,0"  end="-10,10" time="150" condition="Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)">Conditional</animation>
+				
 				<control type="image">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[Height]</height>
