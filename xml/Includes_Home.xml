@@ -18,6 +18,7 @@
 		<include content="global_WindowChrome">
 			<param name="Height">98</param>
 		</include>
+		<include>home_Logos</include>
 		<include content="home_Widgets">
 			<param name="Left">screen_Width</param>
 			<param name="OnLeft">9000</param>
@@ -70,6 +71,11 @@
 				<!-- Horizontal home window chrome -->
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">global_WindowChrome</include>
 
+				<!-- Logos -->
+				<include content="home_Logos">
+					<param name="Bottom">226</param>
+				</include>
+
 				<!-- Feed container-->
 				<include content="home_Widgets">
 					<param name="Left">0</param>
@@ -108,6 +114,24 @@
 			<param name="ProgressHeight">98</param>
 			<param name="ProgressWidth">1772</param>
 		</include>
+	</include>
+
+	<include name="home_Logos">
+		<param name="Right" default="64"/>
+		<param name="Bottom" default="90"/>
+		<definition>
+			<control type="image">
+				<right>$PARAM[Right]</right>
+				<bottom>$PARAM[Bottom]</bottom>
+				<width>330</width>
+				<height>128</height>
+				<texture>$VAR[home:SlideShowLogo]</texture>
+				<aspectratio>keep</aspectratio>
+				<fadetime>300</fadetime>
+				<visible>String.StartsWith(Skin.String(home.background),fanart-)</visible>
+				<visible>![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)] + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
+			</control>
+		</definition>
 	</include>
 
 	<include name="home_Widgets">
