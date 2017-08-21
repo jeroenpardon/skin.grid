@@ -47,20 +47,6 @@
 						<visible>!ControlGroup(9100).HasFocus()</visible>
 					</control>
 				</control>
-
-				<!-- Logos -->
-				<control type="image">
-					<right>64</right>
-					<bottom>90</bottom>
-					<width>330</width>
-					<height>128</height>
-					<texture>$VAR[home:SlideShowLogo]</texture>
-					<aspectratio>keep</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>String.IsEqual(Skin.String(home.background),fanart) | String.IsEqual(Skin.String(home.background),videofanart)</visible>
-					<visible>![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)] + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
-					<visible>!Window.IsActive(movieinformation) + Skin.HasSetting(fanart.sourcelogo) + [String.IsEqual(Skin.String(fanart.source),global) | String.IsEqual(Skin.String(fanart.source),video)]</visible>
-				</control>
 			</control>
 		</definition>
 	</include>
@@ -101,19 +87,6 @@
 					<visible>!String.IsEqual(Skin.String(global.background),none)</visible>
 				</control>
 
-				<!-- Fanart background -->
-				<control type="image">
-					<include>screen_Dimensions</include>
-					<include>Burns</include>
-					<fadetime>600</fadetime>
-					<aspectratio>scale</aspectratio>
-					<include>fadeinout</include>
-					<texture background="true">$VAR[background:Path]</texture>
-					<visible>![Container.Scrolling + Skin.HasSetting(fanart.scrolling)]</visible>
-					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.layout),vertical)]</visible>
-					<visible>String.IsEqual(Skin.String(global.background),fanart) | String.IsEqual(Skin.String(global.background),videofanart)</visible>
-				</control>
-				
 				<!-- Background video -->
 				<include>background_Video</include>
 
