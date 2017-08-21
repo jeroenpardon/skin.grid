@@ -844,6 +844,10 @@ msgctxt "#31611"
 msgid "Recently played channels"
 msgstr ""
 
+#. example usage: start as in the start date AND start time of a tv broadcast e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
+msgstr ""
 
 
 #: media
