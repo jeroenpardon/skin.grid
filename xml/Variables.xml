@@ -53,7 +53,7 @@
 	<variable name="home:Status">
 		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.IsRecordingTV">$INFO[Pvr.TVNowRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.TVNowRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.IsRecordingRadio">$INFO[Pvr.RadioNowRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.RadioNowRecordingChannel, - ]</value>
-		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.HasTVTimer | Pvr.HasRadioTimer">$INFO[Pvr.NextRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.NextRecordingChannel, - ]</value>
+		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.HasTVTimer | Pvr.HasRadioTimer">$INFO[Pvr.NextRecordingTitle,$LOCALIZE[16157]: ]$INFO[Pvr.NextRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),library)">$VAR[stats:MovieCount]$VAR[stats:ShowCount]$VAR[stats:EpisodeCount]$VAR[stats:MusicVideoCount]$VAR[stats:SongCount]$VAR[stats:AlbumCount]$VAR[stats:ArtistCount]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),system)">$INFO[System.ProfileName]$INFO[System.FriendlyName, | ]$INFO[Network.IPAddress, | ]$INFO[System.InternetState, | ]$INFO[System.Uptime(dd:mm), | ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),weather) + Weather.IsFetched">[B]$INFO[Weather.Location,, - ][/B]$INFO[Window(weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits,, ]$INFO[Window(weather).Property(Current.FeelsLike),($LOCALIZE[402]: ]$INFO[System.TemperatureUnits])$INFO[Window(weather).Property(Current.Condition),$COMMA ]</value>
