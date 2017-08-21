@@ -221,7 +221,7 @@
 				<height>108</height>
 				<width>screen_Width</width>
 				<include>transition_Chrome</include>
-				<include>slide_Clock</include>
+				<include condition="!Window.IsActive(movieinformation)">slide_Clock</include>
 				<control type="image">
 					<width>128</width>
 					<height>$PARAM[Height]</height>
