@@ -31,21 +31,6 @@
 	<setting id="date.enabled" value="global" label="$LOCALIZE[31352]"/>
 	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31353]"/>
 
-	<!-- Home blur effects 
-	<setting id="home.blur" value="none" label="$LOCALIZE[13113]" default="true">
-		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=ActivateWindow(startup),noaction=Close)</onselect>
-	</setting>
-	<setting id="home.blur" value="blur" label="$LOCALIZE[31377]">
-		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=ActivateWindow(startup),noaction=Close)</onselect>
-	</setting>
-	<setting id="home.blur" value="color" label="$LOCALIZE[31378]">
-		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=|ActivateWindow(startup),noaction=Close)</onselect>
-	</setting>
-	<setting id="home.blur" value="coloronly" label="color only">
-		<onselect condition="True">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[750],message=$LOCALIZE[31357][CR]$LOCALIZE[750],yesaction=|ActivateWindow(startup),noaction=Close)</onselect>
-	</setting>
-	-->
-
 	<!-- Horizontal home submenu orientation-->
 	<setting id="submenu.type" value="horizontal" label="horizontal" default="true"/>
 	<setting id="submenu.type" value="vertical" label="$LOCALIZE[31058]"/>
