@@ -1486,12 +1486,6 @@
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb)">The Movie Database</value>
 	</variable>
 
-	<variable name="login:Hello">
-		<value condition="System.Time(00:00,12:00)">$LOCALIZE[31718]</value>
-		<value condition="System.Time(12:00,18:00)">$LOCALIZE[31719]</value>
-		<value>$LOCALIZE[31720]</value>
-	</variable>
-
 	<variable name="more:Similar">
 		<value condition="String.IsEqual(Window(movieinformation).Property(InfoDbtype),movie)">$LOCALIZE[31658]</value>
 		<value condition="String.IsEqual(Window(movieinformation).Property(InfoDbtype),tvshow)">$LOCALIZE[31659]</value>
