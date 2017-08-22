@@ -237,6 +237,9 @@ msgctxt "#31077"
 msgid "Never played"
 msgstr ""
 
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr ""
 
 msgctxt "#31079"
 msgid "Descriptions"
@@ -254,6 +257,15 @@ msgstr ""
 
 msgctxt "#31084"
 msgid "Items"
+msgstr ""
+
+#. A message that notifies the user that the add-on they are about to install will not work on their operating system / platform. The name of the OS will be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
 msgstr ""
 
 

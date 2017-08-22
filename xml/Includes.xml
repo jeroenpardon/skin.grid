@@ -694,7 +694,8 @@
 		<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 	</include>
 	<include name="install_Colorbox">
-		<onclick condition="!System.HasAddon(script.colorbox)">InstallAddon(script.colorbox)</onclick>
+		<onclick condition="!System.HasAddon(script.colorbox) + System.Platform.Android">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[31078],message=$LOCALIZE[31085][CR]$LOCALIZE[31086],yesaction=InstallAddon(script.trakt),noaction=Close)</onclick>
+		<onclick condition="!System.HasAddon(script.colorbox) + !System.Platform.Android">InstallAddon(script.colorbox)</onclick>
 	</include>
 
 <!-- PVR -->

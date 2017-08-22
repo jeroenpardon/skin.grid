@@ -760,7 +760,7 @@
 					<control type="radiobutton" id="9630">
 						<label>$LOCALIZE[31377]</label>
 						<label2>$INFO[Skin.String(home.blurfx)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.blurfx)</onclick>
+						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.blurfx)</onclick>
 						<selected>Skin.HasSetting(home.blurfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
@@ -771,7 +771,7 @@
 					<control type="radiobutton" id="9640">
 						<label>$LOCALIZE[31378]</label>
 						<label2>$INFO[Skin.String(home.colorfx.disable)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox)">Skin.ToggleSetting(home.colorfx.disable)</onclick>
+						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.colorfx.disable)</onclick>
 						<selected>!Skin.HasSetting(home.colorfx.disable)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
@@ -951,7 +951,8 @@
 							<label2>$INFO[System.AddonVersion(script.colorbox),, &#8226; $LOCALIZE[31071]]</label2>
 							<icon>$INFO[System.AddonIcon(script.colorbox)]</icon>
 							<onclick condition="System.HasAddon(script.colorbox)">Addon.OpenSettings(script.colorbox)</onclick>
-							<onclick condition="!System.HasAddon(script.colorbox)">InstallAddon(script.colorbox)</onclick>
+							<onclick condition="!System.HasAddon(script.colorbox) + !System.Platform.Android">InstallAddon(script.colorbox)</onclick>
+							<onclick condition="!System.HasAddon(script.colorbox) + System.Platform.Android">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[31078],message=$LOCALIZE[31085][CR]$LOCALIZE[31086],yesaction=InstallAddon(script.trakt),noaction=Close)</onclick>
 						</item>
 						<item>
 							<label>CU LRC Lyrics</label>
