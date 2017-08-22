@@ -4,7 +4,6 @@
 		<control type="group">
 			<include>toggle_Menu</include>
 			<include content="global_Notification">
-				<param name="Left">1036</param>
 				<param name="Height">108</param>
 				<param name="Width">756</param>
 				<param name="Symbol">&#57483;</param>

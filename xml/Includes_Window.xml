@@ -457,7 +457,7 @@
 		<param name="Label1"/>
 		<param name="Label2"/>
 		<param name="Label2"/>
-		<param name="Left" default="1164"/>
+		<param name="Left" default="1036"/>
 		<param name="ProgressID"/>
 		<param name="ProgressInfo"/>
 		<param name="ShowFrame" default="true"/>
@@ -477,9 +477,9 @@
 				<include>transition_Chrome</include>
 
 				<!-- Reposition for homescreen and clock -->
-				<animation effect="slide" start="0"  end="128" time="150" condition="Window.IsActive(Home) + !Skin.HasSetting(home.clock)">Conditional</animation>
-				<animation effect="slide" start="0,0"  end="-10,10" time="150" condition="Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)">Conditional</animation>
-				
+				<animation effect="slide" start="0"  end="128" time="150" condition="Window.IsActive(Home) + !Skin.HasSetting(home.clock) + !String.IsEqual(Skin.String(homemenu.layout),compact)">Conditional</animation>
+				<animation effect="slide" start="0,0"  end="118,10" time="150" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.layout),compact)">Conditional</animation>
+
 				<control type="image">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[Height]</height>

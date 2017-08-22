@@ -539,7 +539,7 @@
 				<animation effect="slide" end="0,432" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,5)">Conditional</animation>
 				<animation effect="slide" end="0,324" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,6)">Conditional</animation>
 				<animation effect="slide" end="0,216" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,7)">Conditional</animation>
-				<animation effect="slide" end="0,108" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsGreaterOrEqual(Container($PARAM[ID]).NumItems,8)">Conditional</animation>
+				<animation effect="slide" end="0,108" time="0" condition="!Skin.HasSetting(home.clock) + Integer.IsEqual(Container($PARAM[ID]).NumItems,8)">Conditional</animation>
 				<itemlayout width="128" height="108">
 					<control type="label">
 						<width>128</width>
