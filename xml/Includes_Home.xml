@@ -126,6 +126,7 @@
 				<texture>$VAR[home:SlideShowLogo]</texture>
 				<aspectratio>keep</aspectratio>
 				<fadetime>300</fadetime>
+				<include>transition_Background</include>
 				<visible>String.StartsWith(Skin.String(home.background),fanart-)</visible>
 				<visible>![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)] + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 			</control>
