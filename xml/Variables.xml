@@ -222,7 +222,7 @@
 	<variable name="info:Source">
 		<value condition="[String.Contains(ListItem.FileNameAndPath,HDR) + !String.Contains(ListItem.FileNameAndPath,HDRip)] + [String.Contains(ListItem.FileNameAndPath,2160p) | String.Contains(ListItem.FileNameAndPath,UHD) | String.Contains(ListItem.FileNameAndPath,UltraHD) | String.Contains(ListItem.FileNameAndPath,Ultra-HD) | String.Contains(ListItem.FileNameAndPath,4K)]">HDR</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,blu-ray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50)">BluRay</value>
-		<value condition="[String.Contains(ListItem.FilenameAndPath,web.dl) | String.Contains(ListItem.FilenameAndPath,web-dl) | String.Contains(ListItem.FilenameAndPath,web-download) | String.Contains(ListItem.FilenameAndPath,webrip)] + ![String.Contains(ListItem.VideoCodec,vp8) | String.Contains(ListItem.VideoCodec,vp9)]">WEB-DL</value>
+		<value condition="[String.Contains(ListItem.FilenameAndPath,web.dl) | String.Contains(ListItem.FilenameAndPath,web-dl) | String.Contains(ListItem.FilenameAndPath,webdl) | String.Contains(ListItem.FilenameAndPath,web-download) | String.Contains(ListItem.FilenameAndPath,webrip)] + ![String.Contains(ListItem.VideoCodec,vp8) | String.Contains(ListItem.VideoCodec,vp9)]">WEB-DL</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,hdrip)">HDTV</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,PDTV) | String.Contains(ListItem.FilenameAndPath,sdtv) | String.Contains(ListItem.FilenameAndPath,sd)">SD</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,hddvd) | String.Contains(ListItem.FilenameAndPath,hd-dvd)">HDDVD</value>
@@ -880,7 +880,7 @@
 		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$LOCALIZE[31656]: $INFO[ListItem.TVShowTitle] $INFO[ListItem.Title]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[31656]: $INFO[ListItem.TVShowTitle] $INFO[ListItem.Season,$LOCALIZE[20373] ]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,musicvideo)">$INFO[ListItem.Artist,$LOCALIZE[31656]: ]</value>
-		<value>$INFO[ListItem.Label]</value>
+		<value>YouTube</value>
 	</variable>
 
 
@@ -1198,13 +1198,13 @@
 	</variable>
 
 	<variable name="widget:Layout.Symbol">
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31044])">&#59136;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31053])">&#59133;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31202])">&#59141;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31201])">&#59154;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[31225])">&#59112;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[21371])">&#59141;</value>
-		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),$LOCALIZE[20020])">&#59137;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),Wide)">&#59136;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),Fullscreen)">&#59133;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),Landscape)">&#59141;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),Portrait)">&#59154;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),Square)">&#59112;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),Thumbnail)">&#59141;</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetLayout),Banner)">&#59137;</value>
 	</variable>
 
 	<variable name="widget:Name">
@@ -1258,11 +1258,8 @@
 
 
 <!-- Window -->
-	
-
 	<variable name="window:Grid">
 		<value condition="Control.IsVisible(51)">overlays/270.png</value>
-		<!--<value condition="Control.IsVisible(56) + [Window.IsActive(AddonBrowser) | Window.IsActive(programs) | Container.Content(addons)]">overlays/384.png</value>-->
 		<value condition="Control.IsVisible(50)">overlays/108.png</value>
 		<value condition="Control.IsVisible(52)">overlays/648-108.png</value>
 		<value condition="Control.IsVisible(521)">overlays/216-432-108.png</value>
@@ -1287,7 +1284,6 @@
 		<value condition="Window.IsActive(osdaudiosettings)">&#57371;</value>
 		<value condition="Window.IsActive(gamepadinput) | Window.IsActive(gamecontrollers)">&#57371;</value>
 		<value condition="Window.IsActive(visualisationpresetlist)">&#57463;</value>
-		<!--<value condition="Window.IsActive(peripherals) | Window.IsActive(peripheralsettings)">&#59018;</value>-->
 		<value condition="Window.IsActive(DialogSelect.xml)">&#57447;</value>
 		<!-- DialogConfirm.xml -->
 		<value condition="Window.IsActive(yesnodialog)">&#57437;</value>
@@ -1298,7 +1294,6 @@
 		<value condition="Window.IsActive(locksettings)">&#57486;</value>
 		<value condition="Window.IsActive(contentsettings)">&#57407;</value>
 		<value condition="Window.IsActive(networksetup)">&#58902;</value>
-		<!--<value condition="Window.IsActive(mediafilter)">&#59042;</value>-->
 		<value condition="Window.IsActive(pvrtimersetting)">&#57473;</value>
 		<value condition="Window.IsActive(DialogSettings.xml)">&#59014;</value>
 		<!-- Custom -->
@@ -1363,7 +1358,7 @@
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$INFO[ListItem.Season,$LOCALIZE[20373] ]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,artist)">$INFO[ListItem.Artist]</value>
-		<value>$INFO[ListItem.Title]</value>
+		<value>$INFO[Window(movieinformation).Property(InfoTitle)]</value>
 	</variable>
 
 	<variable name="window:Title.Dialog">
@@ -1486,7 +1481,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=ratedmovies)">$ADDON[script.extendedinfo 32135]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=ratedtvshows)">$ADDON[script.extendedinfo 32145]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=personmovies)">$INFO[Window(Home).Property(ExtString)]</value>
-		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=studio)">$INFO[Window(Home).Property(ExtString)]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=studio)">$INFO[Window(movieinformation).Property(InfoStudio)]</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/)">Extended Info</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb)">The Movie Database</value>
 	</variable>
@@ -1498,8 +1493,8 @@
 	</variable>
 
 	<variable name="more:Similar">
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[31658]</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie)">$LOCALIZE[31659]</value>
+		<value condition="String.IsEqual(Window(movieinformation).Property(InfoDbtype),movie)">$LOCALIZE[31658]</value>
+		<value condition="String.IsEqual(Window(movieinformation).Property(InfoDbtype),tvshow)">$LOCALIZE[31659]</value>
 		<value>$LOCALIZE[31657]</value>
 	</variable>
 
