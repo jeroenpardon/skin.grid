@@ -213,21 +213,23 @@
 				<visible>Control.IsVisible(50)</visible>
 				<include>fadeinout</include>
 				<include content="view_Slide">
-					<param name="ID" value="50"/>
-					<param name="Type" value="list"/>
-					<param name="Top" value="0"/>
-					<param name="Left" value="-128"/>
-					<param name="Width" value="2048"/>
+					<param name="Art" value="$INFO[ListItem.Icon]"/>
 					<param name="ArtHeight" value="810"/>
 					<param name="ArtWidth" value="597"/>
+					<param name="Height" value="810"/>
+					<param name="ID" value="50"/>
 					<param name="ItemHeight" value="810"/>
 					<param name="ItemWidth" value="597"/>
-					<param name="OnDown" value="5000"/>
+					<param name="Left" value="-128"/>
 					<param name="OnBack" value="5000"/>
-					<param name="Height" value="810"/>
-					<param name="ShowOverlay" value="true"/>
+					<param name="OnDown" value="5000"/>
 					<param name="ShowInfo" value="false"/>
+					<param name="ShowOverlay" value="true"/>
 					<param name="TextWidth" value="536"/>
+					<param name="Top" value="0"/>
+					<param name="Type" value="list"/>
+					<param name="Visible" value="true"/>
+					<param name="Width" value="2048"/>
 				</include>
 			</control>
 		</control>
