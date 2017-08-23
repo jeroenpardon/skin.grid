@@ -88,7 +88,7 @@
 			<match>all</match>
 			<rule tag="property" attribute="name|widgetLayout" value="landscape" />
 			<rule tag="property" attribute="name|widgetArt" value="fanart" />
-			<rule tag="property" attribute="name|widgetType" value="tvshows" />
+			<!--<rule tag="property" attribute="name|widgetType" value="tvshows" />-->
 		</property>
 		<property name="logo">false</property>
 

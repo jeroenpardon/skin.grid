@@ -175,10 +175,10 @@
 
 	<include name="home_Menu-Horizontal">
 		<param name="FocusPosition" default="1"/>
-		<param name="MainFontFocused" default="Light-60"/>
-		<param name="MainFont" default="Light-48"/>
-		<param name="SubFontFocused" default="Light-52"/>
-		<param name="SubFont" default="Light-32"/>
+		<param name="MainFontFocused" default="Thin-60"/>
+		<param name="MainFont" default="Thin-48"/>
+		<param name="SubFontFocused" default="Thin-52"/>
+		<param name="SubFont" default="Thin-32"/>
 		
 		<definition>
 			<!-- Main menu -->
@@ -285,7 +285,7 @@
 							<width>384</width>
 							<height>108</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Condensed$PARAM[MainFont]</font>
+							<font>CondensedLight-48</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
@@ -305,7 +305,7 @@
 							<width>384</width>
 							<height>108</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Condensed$PARAM[MainFont]</font>
+							<font>CondensedLight-48</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
@@ -327,7 +327,7 @@
 							<width>384</width>
 							<height>108</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Condensed$PARAM[MainFont]</font>
+							<font>CondensedLight-48</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
@@ -395,7 +395,7 @@
 						<width>640</width>
 						<height>64</height>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Light-32</font>
+						<font>Thin-32</font>
 						<align>center</align>
 						<aligny>center</aligny>
 						<textcolor>$VAR[home:FX.Color2]</textcolor>
@@ -415,7 +415,7 @@
 							<width>640</width>
 							<height>64</height>
 							<label>$INFO[ListItem.Label]</label>
-							<font>Light-32</font>
+							<font>Thin-32</font>
 							<align>center</align>
 							<aligny>center</aligny>
 							<textcolor>$VAR[home:FX.Color2]</textcolor>
