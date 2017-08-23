@@ -114,7 +114,7 @@
 							<onclick>Close</onclick>
 							<onclick>SetProperty(BrowseAddons,True,home)</onclick>
 							<onclick>ActivateWindow(AddonBrowser,addons://)</onclick>
-							<onclick>SetFocus(50,3)</onclick>
+							<onclick>SetFocus(50,2)</onclick>
 							<onclick>Select</onclick>
 						</item>
 						<!-- Add-on browser -->
