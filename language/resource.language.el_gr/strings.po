@@ -238,6 +238,10 @@ msgctxt "#31077"
 msgid "Never played"
 msgstr "Δεν έχει αναπαραχθεί"
 
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr ""
+
 msgctxt "#31079"
 msgid "Descriptions"
 msgstr "Περιγραφές"
@@ -253,6 +257,17 @@ msgstr "Ταξινόμηση"
 msgctxt "#31084"
 msgid "Items"
 msgstr "Στοιχεία"
+
+#. A message that notifies the user that the add-on they are about to install
+#. will not work on their operating system / platform. The name of the OS will
+#. be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
+msgstr ""
 
 #: artwork
 msgctxt "#31200"
@@ -417,6 +432,10 @@ msgstr "Μενού"
 msgctxt "#31307"
 msgid "Scrollbar visibility"
 msgstr "Ορατότητα μπάρας κύλισης"
+
+msgctxt "#31308"
+msgid "Visual effects"
+msgstr ""
 
 msgctxt "#31309"
 msgid "Customize this menu"
@@ -830,6 +849,12 @@ msgstr "Προγράμματα"
 msgctxt "#31611"
 msgid "Recently played channels"
 msgstr "Πρόσφατα παιγμένα κανάλια"
+
+#. example usage: start as in the start date AND start time of a tv broadcast
+#. e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
+msgstr ""
 
 #: media
 msgctxt "#31650"

@@ -4,6 +4,7 @@
 # Addon Provider: Jeroen
 # Translators:
 # Bastien Giot <bastien.giot@gmail.com>, 2017
+# Rémi B <bourrou.remi@gmail.com>, 2017
 # Carl-Emmanuel F <carlemmanuelf@gmail.com>, 2017
 msgid ""
 msgstr ""
@@ -39,7 +40,7 @@ msgstr "Type du Menu Accueil"
 #. home menu -->
 msgctxt "#31003"
 msgid "Enable condensed menu layout"
-msgstr ""
+msgstr "Activer la disposition condensée du Menu Accueil"
 
 msgctxt "#31005"
 msgid "Layout"
@@ -47,7 +48,7 @@ msgstr "Disposition"
 
 msgctxt "#31006"
 msgid "Automatically collapse submenus"
-msgstr "Automatiquement réduire les sous-menus"
+msgstr "Réduire automatiquement les sous-menus"
 
 msgctxt "#31007"
 msgid "Statusbar information"
@@ -90,7 +91,7 @@ msgstr "Sélectionner la disposition des widgets"
 
 msgctxt "#31033"
 msgid "Select sort direction"
-msgstr "Sélectionner ordre de tri"
+msgstr "Sélectionner l'ordre de tri"
 
 msgctxt "#31034"
 msgid "Fullscreen (16:9)"
@@ -118,7 +119,7 @@ msgstr "Afficher les noms des widgets"
 
 msgctxt "#31041"
 msgid "Select widget artwork"
-msgstr "Sélectionner illustration du widget"
+msgstr "Sélectionner l'illustration du widget"
 
 msgctxt "#31044"
 msgid "Wide"
@@ -192,7 +193,7 @@ msgstr "Playlist intelligente"
 
 msgctxt "#31066"
 msgid "Library node"
-msgstr "Noeud de bibliothèque"
+msgstr "Nœud de médiathèque"
 
 msgctxt "#31067"
 msgid "Library statistics"
@@ -237,7 +238,11 @@ msgstr "Nombre de visionnages"
 
 msgctxt "#31077"
 msgid "Never played"
-msgstr "Jamais vu"
+msgstr "Jamais visionné"
+
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr "Incompatible"
 
 msgctxt "#31079"
 msgid "Descriptions"
@@ -254,6 +259,17 @@ msgstr "Tri"
 msgctxt "#31084"
 msgid "Items"
 msgstr "Éléments "
+
+#. A message that notifies the user that the add-on they are about to install
+#. will not work on their operating system / platform. The name of the OS will
+#. be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr "L'extension fournissant cette option ne fonctionnera pas sur "
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
+msgstr "Voulez-vous l'installer quand même ?"
 
 #: artwork
 msgctxt "#31200"
@@ -368,7 +384,7 @@ msgstr "Activer les illustrations animées"
 
 msgctxt "#31227"
 msgid "Limit to movie information screen"
-msgstr ""
+msgstr "Limiter à l'écran d'information sur le film"
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
@@ -419,6 +435,10 @@ msgctxt "#31307"
 msgid "Scrollbar visibility"
 msgstr "Visibilité de la barre de défilement"
 
+msgctxt "#31308"
+msgid "Visual effects"
+msgstr "Effets visuels"
+
 msgctxt "#31309"
 msgid "Customize this menu"
 msgstr "Personnaliser ce menu"
@@ -445,7 +465,7 @@ msgstr "Vue de la bilbiothèque"
 
 msgctxt "#31315"
 msgid "Show now playing video in background"
-msgstr "Afficher en arrière plan la vidéo en cours"
+msgstr "Afficher la vidéo en cours en arrière plan "
 
 msgctxt "#31316"
 msgid "Show fanart for currently playing artist"
@@ -521,11 +541,11 @@ msgstr "Réinitialiser les paramètres de l'habillage"
 
 msgctxt "#31334"
 msgid "This will reset all skin settings."
-msgstr "Cela réinitialisera tous les paramètres de l'Habillage."
+msgstr "Cela réinitialisera tous les paramètres de l'habillage."
 
 msgctxt "#31335"
 msgid "Supported add-ons"
-msgstr "Add-ons compatibles"
+msgstr "Extensions compatibles"
 
 msgctxt "#31336"
 msgid "Debug grid"
@@ -703,7 +723,7 @@ msgstr "Effet de flou"
 #. changes colours of text and textures to match the fanart image
 msgctxt "#31378"
 msgid "Fanart colours"
-msgstr ""
+msgstr "Couleurs du Fanart"
 
 #: osd / player
 msgctxt "#31550"
@@ -831,6 +851,12 @@ msgstr "Programme"
 msgctxt "#31611"
 msgid "Recently played channels"
 msgstr "Chaines récemment visionnées"
+
+#. example usage: start as in the start date AND start time of a tv broadcast
+#. e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
+msgstr "Début"
 
 #: media
 msgctxt "#31650"

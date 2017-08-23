@@ -38,7 +38,7 @@ msgstr "Päävalikon tyyppi"
 #. home menu -->
 msgctxt "#31003"
 msgid "Enable condensed menu layout"
-msgstr ""
+msgstr "Tiivistetty valikko"
 
 msgctxt "#31005"
 msgid "Layout"
@@ -207,7 +207,7 @@ msgstr "Valitse sisältö"
 #. example usage: this is a required add-on
 msgctxt "#31070"
 msgid "Required"
-msgstr "Vaadittu"
+msgstr "Pakollinen"
 
 #. example usage: this is an optional add-on
 msgctxt "#31071"
@@ -237,6 +237,10 @@ msgctxt "#31077"
 msgid "Never played"
 msgstr "Toistamaton"
 
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr "Yhteensopimaton"
+
 msgctxt "#31079"
 msgid "Descriptions"
 msgstr "Kuvaukset"
@@ -251,12 +255,23 @@ msgstr "Lajittelu"
 
 msgctxt "#31084"
 msgid "Items"
-msgstr "Kohteet"
+msgstr "Kohdetta"
+
+#. A message that notifies the user that the add-on they are about to install
+#. will not work on their operating system / platform. The name of the OS will
+#. be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr "Tämä lisäosa ei toimi käyttöjärjestelmässä"
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
+msgstr "Haluatko silti asentaa sen?"
 
 #: artwork
 msgctxt "#31200"
 msgid "Posters"
-msgstr "Julisteet"
+msgstr "Juliste"
 
 msgctxt "#31201"
 msgid "Portrait"
@@ -264,7 +279,7 @@ msgstr "Valokuva"
 
 msgctxt "#31202"
 msgid "Landscape"
-msgstr "Vaaka"
+msgstr "Vaakakuva"
 
 msgctxt "#31203"
 msgid "Thumbnails"
@@ -366,7 +381,7 @@ msgstr "Käytä animoituja kuvia"
 
 msgctxt "#31227"
 msgid "Limit to movie information screen"
-msgstr ""
+msgstr "Rajoita elokuvatietoruutuun"
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
@@ -403,7 +418,7 @@ msgstr "Ole hyvä ja kirjaudu"
 
 msgctxt "#31304"
 msgid "About"
-msgstr "Tietoja"
+msgstr "Tämä on"
 
 msgctxt "#31305"
 msgid "Settings level"
@@ -417,13 +432,17 @@ msgctxt "#31307"
 msgid "Scrollbar visibility"
 msgstr "Vierityspalkin näkyvyys"
 
+msgctxt "#31308"
+msgid "Visual effects"
+msgstr "Visuaaliset tehosteet"
+
 msgctxt "#31309"
 msgid "Customize this menu"
 msgstr "Muokkaa tätä valikkoa"
 
 msgctxt "#31310"
 msgid "Customize options menu"
-msgstr "Muokkaa asetusvalikkoa"
+msgstr "Muokkaa sivuvalikkoa"
 
 msgctxt "#31311"
 msgid "Customize home menu and widgets"
@@ -539,7 +558,7 @@ msgstr "Ohjelmaoppaan vieritysnopeus"
 
 msgctxt "#31339"
 msgid "Options menu"
-msgstr "Asetusvalikko"
+msgstr "Sivuvalikko"
 
 #. Example usage: allows the user to configure what source is used for media
 #. ratings
@@ -582,27 +601,27 @@ msgstr "Näytä arvosanojen kuvakkeet"
 
 msgctxt "#31349"
 msgid "Menu playback controls"
-msgstr "Valikon toistosäätimet"
+msgstr "Valikon toistopainikkeet"
 
 msgctxt "#31350"
 msgid "fullscreen / playlist button"
-msgstr "kokoruutu- / toistolistapainike"
+msgstr "Kokoruutu / toistolista"
 
 msgctxt "#31351"
 msgid "Player controls"
-msgstr "Toistosäätimet"
+msgstr "Toistopainikkeet"
 
 msgctxt "#31352"
 msgid "All windows"
-msgstr "Kaikki ikkunat"
+msgstr "Kaikissa valikoissa"
 
 msgctxt "#31353"
 msgid "Except homescreen"
-msgstr "Paitsi päävalikko"
+msgstr "Muualla paitsi päävalikossa"
 
 msgctxt "#31354"
 msgid "Homescreen only"
-msgstr "Vain päävalikko"
+msgstr "Vain päävalikossa"
 
 msgctxt "#31355"
 msgid "Full keyboard"
@@ -701,7 +720,7 @@ msgstr "Sumennus"
 #. changes colours of text and textures to match the fanart image
 msgctxt "#31378"
 msgid "Fanart colours"
-msgstr ""
+msgstr "Fanitaiteen värit"
 
 #: osd / player
 msgctxt "#31550"
@@ -731,7 +750,7 @@ msgstr "Päättyy"
 
 msgctxt "#31557"
 msgid "Get subtitles"
-msgstr "Lataa tekstitykset"
+msgstr "Lataa tekstityksiä"
 
 msgctxt "#31558"
 msgid "Disable subtitles"
@@ -830,6 +849,12 @@ msgctxt "#31611"
 msgid "Recently played channels"
 msgstr "Viimeksi katsotut kanavat"
 
+#. example usage: start as in the start date AND start time of a tv broadcast
+#. e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
+msgstr "Alku"
+
 #: media
 msgctxt "#31650"
 msgid "Last episode"
@@ -896,7 +921,7 @@ msgstr "Viimeksi toistettu"
 
 msgctxt "#31665"
 msgid "Recently Added"
-msgstr "Viimeksi lisätty"
+msgstr "Viimeksi lisätyt"
 
 msgctxt "#31666"
 msgid "Repositories"
@@ -944,7 +969,7 @@ msgstr "Tuntematon tila"
 
 msgctxt "#31709"
 msgid "Unwatched episodes"
-msgstr "Katsomattomat jaksot"
+msgstr "Katsomatonta jaksoa"
 
 msgctxt "#31710"
 msgid "Playing"
@@ -960,7 +985,7 @@ msgstr "Katselulista"
 
 msgctxt "#31713"
 msgid "Live TV"
-msgstr "Tv-lähetys"
+msgstr "Tv"
 
 msgctxt "#31714"
 msgid "Recently Played"
@@ -1041,7 +1066,7 @@ msgstr "YouTube: Suorat"
 
 msgctxt "#31854"
 msgid "Goodbye"
-msgstr "Hyvästi"
+msgstr "Hei hei"
 
 msgctxt "#31855"
 msgid "See you later"

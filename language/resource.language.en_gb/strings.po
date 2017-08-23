@@ -1106,6 +1106,11 @@ msgctxt "#31863"
 msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
 msgstr ""
 
+#. Do not translate
+msgctxt "#31864"
+msgid "Noto (Unicode, manual installation)"
+msgstr ""
+
 
 
 #: about

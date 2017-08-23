@@ -38,7 +38,7 @@ msgstr "Typ głównego menu"
 #. home menu -->
 msgctxt "#31003"
 msgid "Enable condensed menu layout"
-msgstr ""
+msgstr "Włącz skondensowany układ menu"
 
 msgctxt "#31005"
 msgid "Layout"
@@ -71,7 +71,7 @@ msgstr "Przywróć całe menu do ustawień domyślnych"
 #. example usage: name of a home menu layout option
 msgctxt "#31025"
 msgid "Compact"
-msgstr ""
+msgstr "Kompaktowy"
 
 #: widgets
 msgctxt "#31030"
@@ -104,7 +104,7 @@ msgstr "Poziomy (16:9)"
 
 msgctxt "#31037"
 msgid "Portrait (2:3)"
-msgstr "Portret (2:3)"
+msgstr "Portretowy (2:3)"
 
 msgctxt "#31038"
 msgid "Square (1:1)"
@@ -120,7 +120,7 @@ msgstr "Pokazuj grafikę widżetów"
 
 msgctxt "#31044"
 msgid "Wide"
-msgstr ""
+msgstr "Szeroki"
 
 #: general
 msgctxt "#31050"
@@ -154,11 +154,11 @@ msgstr "Pokaz slajdów zdjęć"
 
 msgctxt "#31057"
 msgid "Horizontal"
-msgstr ""
+msgstr "Poziomy"
 
 msgctxt "#31058"
 msgid "Vertical"
-msgstr ""
+msgstr "Pionowy"
 
 msgctxt "#31059"
 msgid "Developer"
@@ -166,7 +166,7 @@ msgstr "Twórca"
 
 msgctxt "#31060"
 msgid "Global"
-msgstr ""
+msgstr "Globalne"
 
 msgctxt "#31061"
 msgid "Context menu"
@@ -174,7 +174,7 @@ msgstr "Menu kontekstowe"
 
 msgctxt "#31062"
 msgid "Other"
-msgstr ""
+msgstr "Inny"
 
 msgctxt "#31063"
 msgid "None selected"
@@ -237,6 +237,10 @@ msgctxt "#31077"
 msgid "Never played"
 msgstr "Nigdy nie odtwarzane"
 
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr ""
+
 msgctxt "#31079"
 msgid "Descriptions"
 msgstr "Opisy"
@@ -253,6 +257,17 @@ msgctxt "#31084"
 msgid "Items"
 msgstr "Pozycje"
 
+#. A message that notifies the user that the add-on they are about to install
+#. will not work on their operating system / platform. The name of the OS will
+#. be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
+msgstr ""
+
 #: artwork
 msgctxt "#31200"
 msgid "Posters"
@@ -260,11 +275,11 @@ msgstr "Plakaty"
 
 msgctxt "#31201"
 msgid "Portrait"
-msgstr ""
+msgstr "Portretowy"
 
 msgctxt "#31202"
 msgid "Landscape"
-msgstr ""
+msgstr "Poziome miniatury"
 
 msgctxt "#31203"
 msgid "Thumbnails"
@@ -317,11 +332,11 @@ msgstr "Pobierz całą grafikę"
 
 msgctxt "#31215"
 msgid "Landscape art type"
-msgstr ""
+msgstr "Typ grafiki poziomych miniatur"
 
 msgctxt "#31216"
 msgid "List view artwork type"
-msgstr ""
+msgstr "Typ grafiki widoku listy"
 
 msgctxt "#31217"
 msgid "No images available. Would you like to download some?"
@@ -333,7 +348,7 @@ msgstr "Fanart"
 
 msgctxt "#31219"
 msgid "Download landscape"
-msgstr ""
+msgstr "Pobierz poziome miniatury"
 
 msgctxt "#31220"
 msgid "Viewtype"
@@ -358,7 +373,7 @@ msgstr "Wideo fanart"
 
 msgctxt "#31225"
 msgid "Square"
-msgstr ""
+msgstr "Kwadratowy"
 
 msgctxt "#31226"
 msgid "Enable animated artwork"
@@ -366,7 +381,7 @@ msgstr "Włącz animowane grafiki"
 
 msgctxt "#31227"
 msgid "Limit to movie information screen"
-msgstr ""
+msgstr "Tylko na ekranie informacji o filmie"
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
@@ -417,6 +432,10 @@ msgctxt "#31307"
 msgid "Scrollbar visibility"
 msgstr "Widoczność suwaka"
 
+msgctxt "#31308"
+msgid "Visual effects"
+msgstr "Efekty wizualne"
+
 msgctxt "#31309"
 msgid "Customize this menu"
 msgstr "Modyfikuj to menu"
@@ -443,7 +462,7 @@ msgstr "Widoki biblioteki"
 
 msgctxt "#31315"
 msgid "Show now playing video in background"
-msgstr "Pokazuj teraz odtwarzane wideo w tle"
+msgstr "Pokazuj aktualnie odtwarzane wideo w tle"
 
 msgctxt "#31316"
 msgid "Show fanart for currently playing artist"
@@ -467,7 +486,7 @@ msgstr "Zawsze pokazuj"
 
 msgctxt "#31321"
 msgid "Show only when focused"
-msgstr "Pokazuj jeśli aktywne"
+msgstr "Pokazuj jeśli aktywny"
 
 msgctxt "#31322"
 msgid "Show clock"
@@ -515,11 +534,11 @@ msgstr "Wybierz pakiet fanartu dla pogody"
 
 msgctxt "#31333"
 msgid "Reset skin settings"
-msgstr "Przywróć ustawienia skóry"
+msgstr "Przywróć domyślne ustawienia skóry"
 
 msgctxt "#31334"
 msgid "This will reset all skin settings."
-msgstr ""
+msgstr "Nastąpi przywrócenie wszystkich ustawień skóry."
 
 msgctxt "#31335"
 msgid "Supported add-ons"
@@ -574,7 +593,7 @@ msgstr "Wybierz tryb wprowadzania tekstu"
 
 msgctxt "#31347"
 msgid "Press up in information screens for popup"
-msgstr "Wciśnij do góry na ekranie informacji, aby wywołać popup"
+msgstr "Wciśnij 'do góry' na ekranie informacji, aby wywołać popup"
 
 msgctxt "#31348"
 msgid "Show video rating overlays"
@@ -614,7 +633,7 @@ msgstr "Tylko pole wprowadzania"
 
 msgctxt "#31357"
 msgid "The skin will need to be restarted."
-msgstr ""
+msgstr "Wymagane będzie przeładowanie skóry."
 
 msgctxt "#31358"
 msgid "Start video or music playlist on startup"
@@ -630,7 +649,7 @@ msgstr "Typ obrazów w tle"
 
 msgctxt "#31361"
 msgid "Hide background fanart while scrolling"
-msgstr "Ukrywaj tło fanart podczas przewijania"
+msgstr "Ukrywaj fanart w tle podczas przewijania"
 
 msgctxt "#31362"
 msgid "Slideshow contents"
@@ -670,7 +689,7 @@ msgstr "Biblioteka seriali"
 
 msgctxt "#31371"
 msgid "Restore skin settings"
-msgstr "Przywróć ustawienia skóry"
+msgstr "Przywróć ustawienia skóry z kopii"
 
 msgctxt "#31372"
 msgid "Backup skin settings"
@@ -690,18 +709,18 @@ msgstr "Ustawienia napisów"
 
 msgctxt "#31376"
 msgid "Set special effects"
-msgstr ""
+msgstr "Ustaw efekty specjalne"
 
 #. skin setting that enables a blur effect to the home menu background
 msgctxt "#31377"
 msgid "Blur effect"
-msgstr ""
+msgstr "Efekt rozmycia"
 
 #. skin setting that enables a blur effect to the home menu background, and
 #. changes colours of text and textures to match the fanart image
 msgctxt "#31378"
 msgid "Fanart colours"
-msgstr ""
+msgstr "Kolory fanartu"
 
 #: osd / player
 msgctxt "#31550"
@@ -828,7 +847,13 @@ msgstr "Programy"
 
 msgctxt "#31611"
 msgid "Recently played channels"
-msgstr ""
+msgstr "Ostatnio odtwarzane kanały"
+
+#. example usage: start as in the start date AND start time of a tv broadcast
+#. e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
+msgstr "Start"
 
 #: media
 msgctxt "#31650"

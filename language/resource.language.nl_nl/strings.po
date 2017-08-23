@@ -27,9 +27,18 @@ msgctxt "#31001"
 msgid "Home menu layout"
 msgstr "Indeling van het startmenu"
 
+#. Skin setting that allows the user to choose from several home menu layouts
+#. e.g. vertical and horizontal
 msgctxt "#31002"
 msgid "Home menu type"
 msgstr "Startmenu type"
+
+#. example usage: enabling this skin setting will show 5 items on screen at
+#. once instead of 3 by using a condensed font. Only applies to horizontal
+#. home menu -->
+msgctxt "#31003"
+msgid "Enable condensed menu layout"
+msgstr ""
 
 msgctxt "#31005"
 msgid "Layout"
@@ -229,6 +238,10 @@ msgctxt "#31077"
 msgid "Never played"
 msgstr "Nooit afgespeeld"
 
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr ""
+
 msgctxt "#31079"
 msgid "Descriptions"
 msgstr "Omschrijvingen"
@@ -244,6 +257,17 @@ msgstr "Sorteren"
 msgctxt "#31084"
 msgid "Items"
 msgstr "stuks"
+
+#. A message that notifies the user that the add-on they are about to install
+#. will not work on their operating system / platform. The name of the OS will
+#. be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
+msgstr ""
 
 #: artwork
 msgctxt "#31200"
@@ -357,7 +381,7 @@ msgid "Enable animated artwork"
 msgstr "Schakel geanimeerde afbeeldingen in"
 
 msgctxt "#31227"
-msgid "Only in movie information screen"
+msgid "Limit to movie information screen"
 msgstr ""
 
 msgctxt "#31228"
@@ -387,7 +411,7 @@ msgstr ""
 
 msgctxt "#31302"
 msgid "Shutdown menu"
-msgstr ""
+msgstr "Afsluitscherm"
 
 msgctxt "#31303"
 msgid "Please log in"
@@ -399,51 +423,55 @@ msgstr "Over"
 
 msgctxt "#31305"
 msgid "Settings level"
-msgstr ""
+msgstr "Instellingen niveau"
 
 msgctxt "#31306"
 msgid "Menus"
-msgstr ""
+msgstr "Menu's"
 
 msgctxt "#31307"
 msgid "Scrollbar visibility"
+msgstr "Zichtbaarheid schuifbalk"
+
+msgctxt "#31308"
+msgid "Visual effects"
 msgstr ""
 
 msgctxt "#31309"
 msgid "Customize this menu"
-msgstr ""
+msgstr "Pas dit menu aan"
 
 msgctxt "#31310"
 msgid "Customize options menu"
-msgstr ""
+msgstr "Opties menu aanpassen"
 
 msgctxt "#31311"
 msgid "Customize home menu and widgets"
-msgstr ""
+msgstr "Hoofdmenu en widgets aanpassen"
 
 msgctxt "#31312"
 msgid "Customize"
-msgstr ""
+msgstr "Pas aan"
 
 msgctxt "#31313"
 msgid "TV Show Library"
-msgstr ""
+msgstr "TV serie verzameling"
 
 msgctxt "#31314"
 msgid "Library views"
-msgstr ""
+msgstr "Bibliotheekweergave"
 
 msgctxt "#31315"
 msgid "Show now playing video in background"
-msgstr ""
+msgstr "Toon spelende video in de achtergrond"
 
 msgctxt "#31316"
 msgid "Show fanart for currently playing artist"
-msgstr ""
+msgstr "Toon fanart for huidige artiest"
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
-msgstr ""
+msgstr "Animeer achtergrondafbeeldingen"
 
 msgctxt "#31318"
 msgid "Display fanart in now playing screen"
@@ -692,13 +720,7 @@ msgstr ""
 #. skin setting that enables a blur effect to the home menu background, and
 #. changes colours of text and textures to match the fanart image
 msgctxt "#31378"
-msgid "Blur effect and fanart colours"
-msgstr ""
-
-#. skin setting that changes colours of text and textures to match the fanart
-#. image
-msgctxt "#31378"
-msgid "Fanart colours only"
+msgid "Fanart colours"
 msgstr ""
 
 #: osd / player
@@ -826,6 +848,12 @@ msgstr ""
 
 msgctxt "#31611"
 msgid "Recently played channels"
+msgstr ""
+
+#. example usage: start as in the start date AND start time of a tv broadcast
+#. e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
 msgstr ""
 
 #: media

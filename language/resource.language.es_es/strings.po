@@ -38,7 +38,7 @@ msgstr "Tipo de Menú Principal"
 #. home menu -->
 msgctxt "#31003"
 msgid "Enable condensed menu layout"
-msgstr ""
+msgstr "Activar diseño de menú condensado"
 
 msgctxt "#31005"
 msgid "Layout"
@@ -71,7 +71,7 @@ msgstr "Resteblecer todos los ítems de menú"
 #. example usage: name of a home menu layout option
 msgctxt "#31025"
 msgid "Compact"
-msgstr ""
+msgstr "Compacto"
 
 #: widgets
 msgctxt "#31030"
@@ -154,11 +154,11 @@ msgstr "Presentación de Fotos"
 
 msgctxt "#31057"
 msgid "Horizontal"
-msgstr ""
+msgstr "Horizontal"
 
 msgctxt "#31058"
 msgid "Vertical"
-msgstr ""
+msgstr "Vertical"
 
 msgctxt "#31059"
 msgid "Developer"
@@ -227,7 +227,7 @@ msgstr "En"
 #. example usage: shorthand for minutes
 msgctxt "#31075"
 msgid "Min"
-msgstr "Mín."
+msgstr "Mín"
 
 msgctxt "#31076"
 msgid "Playcount"
@@ -236,6 +236,10 @@ msgstr "Cantidad de reproducciones"
 msgctxt "#31077"
 msgid "Never played"
 msgstr "Nunca se ha reproducido"
+
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr ""
 
 msgctxt "#31079"
 msgid "Descriptions"
@@ -252,6 +256,17 @@ msgstr "Clasificación"
 msgctxt "#31084"
 msgid "Items"
 msgstr "Ítems"
+
+#. A message that notifies the user that the add-on they are about to install
+#. will not work on their operating system / platform. The name of the OS will
+#. be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
+msgstr ""
 
 #: artwork
 msgctxt "#31200"
@@ -366,7 +381,7 @@ msgstr "Activar arte animado"
 
 msgctxt "#31227"
 msgid "Limit to movie information screen"
-msgstr ""
+msgstr "Limitar a pantalla de información de película"
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
@@ -416,6 +431,10 @@ msgstr "Menús"
 msgctxt "#31307"
 msgid "Scrollbar visibility"
 msgstr "Visibilidad de barra de desplazamiento"
+
+msgctxt "#31308"
+msgid "Visual effects"
+msgstr "Efectos Visuales"
 
 msgctxt "#31309"
 msgid "Customize this menu"
@@ -487,7 +506,7 @@ msgstr "Velocidad de auto-desplazamiento"
 
 msgctxt "#31326"
 msgid "affects performance"
-msgstr "Afecta el rendimiento"
+msgstr "afecta el rendimiento"
 
 msgctxt "#31327"
 msgid "Normal"
@@ -519,7 +538,7 @@ msgstr "Restablecer ajustes del skin"
 
 msgctxt "#31334"
 msgid "This will reset all skin settings."
-msgstr ""
+msgstr "Esto restablecerá todos los ajustes del skin."
 
 msgctxt "#31335"
 msgid "Supported add-ons"
@@ -586,7 +605,7 @@ msgstr "Controles de Reproducción del Menú"
 
 msgctxt "#31350"
 msgid "fullscreen / playlist button"
-msgstr "Botón de fullscreen / lista de reproducción"
+msgstr "botón de fullscreen / lista de reproducción"
 
 msgctxt "#31351"
 msgid "Player controls"
@@ -614,7 +633,7 @@ msgstr "Campo de entrada solamente"
 
 msgctxt "#31357"
 msgid "The skin will need to be restarted."
-msgstr ""
+msgstr "El skin deberá ser reiniciado."
 
 msgctxt "#31358"
 msgid "Start video or music playlist on startup"
@@ -690,18 +709,18 @@ msgstr "Ajustes de Subtítulos"
 
 msgctxt "#31376"
 msgid "Set special effects"
-msgstr ""
+msgstr "Establecer efectos especiales"
 
 #. skin setting that enables a blur effect to the home menu background
 msgctxt "#31377"
 msgid "Blur effect"
-msgstr ""
+msgstr "Efecto Difuminado"
 
 #. skin setting that enables a blur effect to the home menu background, and
 #. changes colours of text and textures to match the fanart image
 msgctxt "#31378"
 msgid "Fanart colours"
-msgstr ""
+msgstr "Colores de Fanart"
 
 #: osd / player
 msgctxt "#31550"
@@ -829,6 +848,12 @@ msgstr "Programas"
 msgctxt "#31611"
 msgid "Recently played channels"
 msgstr "Canales reproducidos recientemente"
+
+#. example usage: start as in the start date AND start time of a tv broadcast
+#. e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
+msgstr "Inicio"
 
 #: media
 msgctxt "#31650"
