@@ -545,7 +545,7 @@
 		<param name="ArtHeight" default="432"/>
 		<param name="ArtWidth" default="756"/>
 		<param name="Aspect" default="scale"/>
-		<param name="AspectRatioAlign" default="right"/>
+		<param name="AspectRatioAlign" default="center"/>
 		<param name="AspectRatioAlignY" default="top"/>
 		<param name="DiffuseTexture" default="views/diffuse/kodi_landscape.png"/>
 		<param name="Fallback" default="$VAR[art:Fallback]"/>
