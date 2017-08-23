@@ -60,7 +60,8 @@
 	</variable>
 
 	<variable name="home:FX.Color1">
-		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value condition="System.HasAddon(script.colorbox) + Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android">$INFO[Window(Home).Property(ImageColorSEVEN)]</value>
 		<value>$VAR[color:Main]</value>
 	</variable>
 
@@ -107,7 +108,8 @@
 	</variable>
 
 	<variable name="color:Date">
-		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="Window.IsActive(Home) + Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
 		<value condition="Window.IsActive(Home)">$VAR[color:Text.2]</value>
 		<value>$VAR[color:Text.3]</value>
 	</variable>
