@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <fonts>
-	<fontset id="Default">
+	<fontset id="def" idloc="31860">
 
 		<!-- Condensed -->
 		<font>
 			<name>CondensedLight-32</name>
-			<filename>Default/CondensedLight.ttf</filename>
+			<filename>def/CondensedLight.ttf</filename>
 			<size>32</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>CondensedLight-48</name>
-			<filename>Default/CondensedLight.ttf</filename>
+			<filename>def/CondensedLight.ttf</filename>
 			<size>48</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>CondensedBold-36</name>
-			<filename>Default/CondensedBold.ttf</filename>
+			<filename>def/CondensedBold.ttf</filename>
 			<size>36</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>CondensedBold-52</name>
-			<filename>Default/CondensedBold.ttf</filename>
+			<filename>def/CondensedBold.ttf</filename>
 			<size>60</size>
 			<style>uppercase</style>
 		</font>
@@ -31,147 +31,147 @@
 		<!-- Debug -->
 		<font>
 			<name>Debug</name>
-			<filename>Default/Debug.ttf</filename>
+			<filename>def/Debug.ttf</filename>
 			<size>11</size>
 		</font>
 
 		<!-- Weather -->
  		<font>
  			<name>Weather-32</name>
- 			<filename>Default/Weather.ttf</filename>
+ 			<filename>def/Weather.ttf</filename>
  			<size>54</size>
  		</font>
 
 		<!-- Symbols -->
 		<font>
 			<name>Symbols-22</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Symbols-24</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>Symbols-26</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Symbols-28</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>Symbols-32</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>Symbols-38</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>Symbols-46</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>46</size>
 		</font>
 		<font>
 			<name>Symbols-64</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>64</size>
 		</font>
 
 		<!-- Black -->
 		<font>
 			<name>Black-18</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>18</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-20</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>20</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-22</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>22</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-24</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>24</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-26</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>26</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-28</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>28</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-32</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>32</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-40</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>42</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-42</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>42</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-48</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>48</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-52</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>52</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-54</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>54</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-60</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>60</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-64</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>64</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-72</name>
-			<filename>Default/Black.ttf</filename>
+			<filename>def/Black.ttf</filename>
 			<size>72</size>
 			<style>uppercase</style>
 		</font>
@@ -179,43 +179,43 @@
 		<!-- Thin -->
 		<font>
 			<name>Thin-32</name>
-			<filename>Default/Thin.ttf</filename>
+			<filename>def/Thin.ttf</filename>
 			<size>32</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-36</name>
-			<filename>Default/Thin.ttf</filename>
+			<filename>def/Thin.ttf</filename>
 			<size>36</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-42</name>
-			<filename>Default/Thin.ttf</filename>
+			<filename>def/Thin.ttf</filename>
 			<size>42</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-46</name>
-			<filename>Default/Thin.ttf</filename>
+			<filename>def/Thin.ttf</filename>
 			<size>46</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-48</name>
-			<filename>Default/Thin.ttf</filename>
+			<filename>def/Thin.ttf</filename>
 			<size>48</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-60</name>
-			<filename>Default/Thin.ttf</filename>
+			<filename>def/Thin.ttf</filename>
 			<size>60</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-64</name>
-			<filename>Default/Thin.ttf</filename>
+			<filename>def/Thin.ttf</filename>
 			<size>64</size>
 			<style>uppercase</style>
 		</font>
@@ -223,37 +223,37 @@
 		<!-- Slab -->
 		<font>
 			<name>Slab-20</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>20</size>
 			<linespacing>1</linespacing>
 		</font>
 		<font>
 			<name>Slab-22</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>22</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Slab-24</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>24</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Slab-24-S</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>24</size>
 			<linespacing>2.8</linespacing>
 		</font>
 		<font>
 			<name>Slab-26</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>26</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Slab-32</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>32</size>
 			<linespacing>1.3</linespacing>
 		</font>
@@ -261,42 +261,440 @@
 		<!-- Regular -->
 		<font>
 			<name>Regular-18</name>
-			<filename>Default/Regular.ttf</filename>
+			<filename>def/Regular.ttf</filename>
 			<size>16</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Regular-20</name>
-			<filename>Default/Regular.ttf</filename>
+			<filename>def/Regular.ttf</filename>
 			<size>20</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Regular-20-L</name>
-			<filename>Default/Regular.ttf</filename>
+			<filename>def/Regular.ttf</filename>
 			<size>20</size>
 		</font>
 		<font>
 			<name>Regular-22</name>
-			<filename>Default/Regular.ttf</filename>
+			<filename>def/Regular.ttf</filename>
 			<size>22</size>
 			<style>uppercase</style>
 		</font>
 		<font> 
 			<name>Regular-22-L</name>
-			<filename>Default/Regular.ttf</filename>
+			<filename>def/Regular.ttf</filename>
 			<size>22</size>
 			<linespacing>1.2</linespacing>
 		</font>
 		<font>
 			<name>Regular-32</name>
-			<filename>Default/Regular.ttf</filename>
+			<filename>def/Regular.ttf</filename>
 			<size>32</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Regular-60</name>
-			<filename>Default/Regular.ttf</filename>
+			<filename>def/Regular.ttf</filename>
+			<size>60</size>
+			<style>uppercase</style>
+		</font>
+
+		<!-- Estuary fonts for add-on compatibility -->
+		<font>
+			<name>font10</name>
+			<filename>Arial.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>font12</name>
+			<filename>Arial.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>font13</name>
+			<filename>Arial.ttf</filename>
+			<size>27</size>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>Arial.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font16</name>
+			<filename>Arial.ttf</filename>
+			<size>34</size>
+		</font>
+		<font>
+			<name>font30</name>
+			<filename>Arial.ttf</filename>
+			<size>42</size>
+		</font>
+		<font>
+			<name>fontContextMenu</name>
+			<filename>Arial.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>font10_title</name>
+			<filename>Arial.ttf</filename>
+			<size>15</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font12_title</name>
+			<filename>Arial.ttf</filename>
+			<size>22</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font13_title</name>
+			<filename>Arial.ttf</filename>
+			<size>27</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font24_title</name>
+			<filename>Arial.ttf</filename>
+			<size>33</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font28_title</name>
+			<filename>Arial.ttf</filename>
+			<size>39</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font30_title</name>
+			<filename>Arial.ttf</filename>
+			<size>42</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font35_title</name>
+			<filename>Arial.ttf</filename>
+			<size>49</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>font_MainMenu</name>
+			<filename>Arial.ttf</filename>
+			<size>52</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>WeatherTemp</name>
+			<filename>Arial.ttf</filename>
+			<size>120</size>
+			<style>bold</style>
+		</font>
+		<font>
+			<name>Mono30</name>
+			<filename>Arial.ttf</filename>
+			<size>30</size>
+		</font>
+	</fontset>
+
+	<fontset id="rob" idloc="31862">
+
+		<!-- Condensed -->
+		<font>
+			<name>CondensedLight-32</name>
+			<filename>rob/CondensedLight.ttf</filename>
+			<size>32</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>CondensedLight-48</name>
+			<filename>rob/CondensedLight.ttf</filename>
+			<size>48</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>CondensedBold-36</name>
+			<filename>rob/CondensedBold.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>CondensedBold-52</name>
+			<filename>rob/CondensedBold.ttf</filename>
+			<size>60</size>
+			<style>uppercase</style>
+		</font>
+		
+		<!-- Debug -->
+		<font>
+			<name>Debug</name>
+			<filename>def/Debug.ttf</filename>
+			<size>11</size>
+		</font>
+
+		<!-- Weather -->
+ 		<font>
+ 			<name>Weather-32</name>
+ 			<filename>def/Weather.ttf</filename>
+ 			<size>54</size>
+ 		</font>
+
+		<!-- Symbols -->
+		<font>
+			<name>Symbols-22</name>
+			<filename>def/Symbols.ttf</filename>
+			<size>22</size>
+		</font>
+		<font>
+			<name>Symbols-24</name>
+			<filename>def/Symbols.ttf</filename>
+			<size>24</size>
+		</font>
+		<font>
+			<name>Symbols-26</name>
+			<filename>def/Symbols.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
+			<name>Symbols-28</name>
+			<filename>def/Symbols.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Symbols-32</name>
+			<filename>def/Symbols.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>Symbols-38</name>
+			<filename>def/Symbols.ttf</filename>
+			<size>38</size>
+		</font>
+		<font>
+			<name>Symbols-46</name>
+			<filename>def/Symbols.ttf</filename>
+			<size>46</size>
+		</font>
+		<font>
+			<name>Symbols-64</name>
+			<filename>def/Symbols.ttf</filename>
+			<size>64</size>
+		</font>
+
+		<!-- Black -->
+		<font>
+			<name>Black-18</name>
+			<filename>rob/Black.ttf</filename>
+			<size>18</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-20</name>
+			<filename>rob/Black.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-22</name>
+			<filename>rob/Black.ttf</filename>
+			<size>22</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-24</name>
+			<filename>rob/Black.ttf</filename>
+			<size>24</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-26</name>
+			<filename>rob/Black.ttf</filename>
+			<size>26</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-28</name>
+			<filename>rob/Black.ttf</filename>
+			<size>28</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-32</name>
+			<filename>rob/Black.ttf</filename>
+			<size>32</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-40</name>
+			<filename>rob/Black.ttf</filename>
+			<size>42</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-42</name>
+			<filename>rob/Black.ttf</filename>
+			<size>42</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-48</name>
+			<filename>rob/Black.ttf</filename>
+			<size>48</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-52</name>
+			<filename>rob/Black.ttf</filename>
+			<size>52</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-54</name>
+			<filename>rob/Black.ttf</filename>
+			<size>54</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-60</name>
+			<filename>rob/Black.ttf</filename>
+			<size>60</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-64</name>
+			<filename>rob/Black.ttf</filename>
+			<size>64</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Black-72</name>
+			<filename>rob/Black.ttf</filename>
+			<size>72</size>
+			<style>uppercase</style>
+		</font>
+
+		<!-- Thin -->
+		<font>
+			<name>Thin-32</name>
+			<filename>rob/Thin.ttf</filename>
+			<size>32</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-36</name>
+			<filename>rob/Thin.ttf</filename>
+			<size>36</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-42</name>
+			<filename>rob/Thin.ttf</filename>
+			<size>42</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-46</name>
+			<filename>rob/Thin.ttf</filename>
+			<size>46</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-48</name>
+			<filename>rob/Thin.ttf</filename>
+			<size>48</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-60</name>
+			<filename>rob/Thin.ttf</filename>
+			<size>60</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Thin-64</name>
+			<filename>rob/Thin.ttf</filename>
+			<size>64</size>
+			<style>uppercase</style>
+		</font>
+
+		<!-- Slab -->
+		<font>
+			<name>Slab-20</name>
+			<filename>def/Slab.ttf</filename>
+			<size>20</size>
+			<linespacing>1</linespacing>
+		</font>
+		<font>
+			<name>Slab-22</name>
+			<filename>def/Slab.ttf</filename>
+			<size>22</size>
+			<linespacing>1.3</linespacing>
+		</font>
+		<font>
+			<name>Slab-24</name>
+			<filename>def/Slab.ttf</filename>
+			<size>24</size>
+			<linespacing>1.3</linespacing>
+		</font>
+		<font>
+			<name>Slab-24-S</name>
+			<filename>def/Slab.ttf</filename>
+			<size>24</size>
+			<linespacing>2.8</linespacing>
+		</font>
+		<font>
+			<name>Slab-26</name>
+			<filename>def/Slab.ttf</filename>
+			<size>26</size>
+			<linespacing>1.3</linespacing>
+		</font>
+		<font>
+			<name>Slab-32</name>
+			<filename>def/Slab.ttf</filename>
+			<size>32</size>
+			<linespacing>1.3</linespacing>
+		</font>
+
+		<!-- Regular -->
+		<font>
+			<name>Regular-18</name>
+			<filename>rob/Regular.ttf</filename>
+			<size>16</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Regular-20</name>
+			<filename>rob/Regular.ttf</filename>
+			<size>20</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Regular-20-L</name>
+			<filename>rob/Regular.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>Regular-22</name>
+			<filename>rob/Regular.ttf</filename>
+			<size>22</size>
+			<style>uppercase</style>
+		</font>
+		<font> 
+			<name>Regular-22-L</name>
+			<filename>rob/Regular.ttf</filename>
+			<size>22</size>
+			<linespacing>1.2</linespacing>
+		</font>
+		<font>
+			<name>Regular-32</name>
+			<filename>rob/Regular.ttf</filename>
+			<size>32</size>
+			<style>uppercase</style>
+		</font>
+		<font>
+			<name>Regular-60</name>
+			<filename>rob/Regular.ttf</filename>
 			<size>60</size>
 			<style>uppercase</style>
 		</font>
@@ -399,30 +797,30 @@
 	</fontset>
 
 
-	<fontset id="Alternate">
+	<fontset id="ssp" idloc="31863">
 
 		<!-- Condensed -->
 		<font>
 			<name>CondensedLight-32</name>
-			<filename>Alternate/CondensedLight.ttf</filename>
+			<filename>rob/CondensedLight.ttf</filename>
 			<size>32</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>CondensedLight-48</name>
-			<filename>Alternate/CondensedLight.ttf</filename>
+			<filename>rob/CondensedLight.ttf</filename>
 			<size>48</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>CondensedBold-36</name>
-			<filename>Alternate/CondensedBold.ttf</filename>
+			<filename>rob/CondensedBold.ttf</filename>
 			<size>36</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>CondensedBold-52</name>
-			<filename>Alternate/CondensedBold.ttf</filename>
+			<filename>rob/CondensedBold.ttf</filename>
 			<size>60</size>
 			<style>uppercase</style>
 		</font>
@@ -430,229 +828,229 @@
 		<!-- Debug -->
 		<font>
 			<name>Debug</name>
-			<filename>Default/Debug.ttf</filename>
+			<filename>def/Debug.ttf</filename>
 			<size>11</size>
 		</font>
 
 		<!-- Weather -->
  		<font>
  			<name>Weather-32</name>
- 			<filename>Default/Weather.ttf</filename>
+ 			<filename>def/Weather.ttf</filename>
  			<size>54</size>
  		</font>
 
 		<!-- Symbols -->
 		<font>
 			<name>Symbols-22</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Symbols-24</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>Symbols-26</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Symbols-28</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>Symbols-32</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>Symbols-38</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>Symbols-46</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>46</size>
 		</font>
 		<font>
 			<name>Symbols-64</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>64</size>
 		</font>
 
 		<!-- Black -->
 		<font>
 			<name>Black-18</name>
-			<filename>Alternate/Black.ttf</filename>
-			<size>18</size>
-			<style>uppercase</style>
-		</font>
-		<font>
-			<name>Black-20</name>
-			<filename>Alternate/Black.ttf</filename>
+			<filename>ssp/Black.ttf</filename>
 			<size>20</size>
 			<style>uppercase</style>
 		</font>
 		<font>
-			<name>Black-22</name>
-			<filename>Alternate/Black.ttf</filename>
+			<name>Black-20</name>
+			<filename>ssp/Black.ttf</filename>
 			<size>22</size>
 			<style>uppercase</style>
 		</font>
 		<font>
-			<name>Black-24</name>
-			<filename>Alternate/Black.ttf</filename>
+			<name>Black-22</name>
+			<filename>ssp/Black.ttf</filename>
 			<size>24</size>
 			<style>uppercase</style>
 		</font>
 		<font>
-			<name>Black-26</name>
-			<filename>Alternate/Black.ttf</filename>
+			<name>Black-24</name>
+			<filename>ssp/Black.ttf</filename>
 			<size>26</size>
 			<style>uppercase</style>
 		</font>
 		<font>
-			<name>Black-28</name>
-			<filename>Alternate/Black.ttf</filename>
+			<name>Black-26</name>
+			<filename>ssp/Black.ttf</filename>
 			<size>28</size>
 			<style>uppercase</style>
 		</font>
 		<font>
+			<name>Black-28</name>
+			<filename>ssp/Black.ttf</filename>
+			<size>30</size>
+			<style>uppercase</style>
+		</font>
+		<font>
 			<name>Black-32</name>
-			<filename>Alternate/Black.ttf</filename>
-			<size>32</size>
+			<filename>ssp/Black.ttf</filename>
+			<size>34</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-40</name>
-			<filename>Alternate/Black.ttf</filename>
+			<filename>ssp/Black.ttf</filename>
 			<size>42</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-42</name>
-			<filename>Alternate/Black.ttf</filename>
-			<size>42</size>
+			<filename>ssp/Black.ttf</filename>
+			<size>44</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-48</name>
-			<filename>Alternate/Black.ttf</filename>
-			<size>48</size>
+			<filename>ssp/Black.ttf</filename>
+			<size>50</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-52</name>
-			<filename>Alternate/Black.ttf</filename>
-			<size>52</size>
-			<style>uppercase</style>
-		</font>
-		<font>
-			<name>Black-54</name>
-			<filename>Alternate/Black.ttf</filename>
+			<filename>ssp/Black.ttf</filename>
 			<size>54</size>
 			<style>uppercase</style>
 		</font>
 		<font>
+			<name>Black-54</name>
+			<filename>ssp/Black.ttf</filename>
+			<size>56</size>
+			<style>uppercase</style>
+		</font>
+		<font>
 			<name>Black-60</name>
-			<filename>Alternate/Black.ttf</filename>
-			<size>60</size>
+			<filename>ssp/Black.ttf</filename>
+			<size>62</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-64</name>
-			<filename>Alternate/Black.ttf</filename>
-			<size>64</size>
+			<filename>ssp/Black.ttf</filename>
+			<size>66</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Black-72</name>
-			<filename>Alternate/Black.ttf</filename>
-			<size>72</size>
+			<filename>ssp/Black.ttf</filename>
+			<size>74</size>
 			<style>uppercase</style>
 		</font>
 
 		<!-- Thin -->
 		<font>
 			<name>Thin-32</name>
-			<filename>Alternate/Thin.ttf</filename>
-			<size>32</size>
+			<filename>ssp/Thin.ttf</filename>
+			<size>34</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-36</name>
-			<filename>Alternate/Thin.ttf</filename>
-			<size>36</size>
+			<filename>ssp/Thin.ttf</filename>
+			<size>38</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-42</name>
-			<filename>Alternate/Thin.ttf</filename>
-			<size>42</size>
+			<filename>ssp/Thin.ttf</filename>
+			<size>44</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-46</name>
-			<filename>Alternate/Thin.ttf</filename>
-			<size>46</size>
-			<style>uppercase</style>
-		</font>
-		<font>
-			<name>Thin-48</name>
-			<filename>Alternate/Thin.ttf</filename>
+			<filename>ssp/Thin.ttf</filename>
 			<size>48</size>
 			<style>uppercase</style>
 		</font>
 		<font>
+			<name>Thin-48</name>
+			<filename>ssp/Thin.ttf</filename>
+			<size>50</size>
+			<style>uppercase</style>
+		</font>
+		<font>
 			<name>Thin-60</name>
-			<filename>Alternate/Thin.ttf</filename>
-			<size>60</size>
+			<filename>ssp/Thin.ttf</filename>
+			<size>62</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Thin-64</name>
-			<filename>Alternate/Thin.ttf</filename>
-			<size>64</size>
+			<filename>ssp/Thin.ttf</filename>
+			<size>66</size>
 			<style>uppercase</style>
 		</font>
 
 		<!-- Slab -->
 		<font>
 			<name>Slab-20</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>20</size>
 			<linespacing>1</linespacing>
 		</font>
 		<font>
 			<name>Slab-22</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>22</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Slab-24</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>24</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Slab-24-S</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>24</size>
 			<linespacing>2.8</linespacing>
 		</font>
 		<font>
 			<name>Slab-26</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>26</size>
 			<linespacing>1.3</linespacing>
 		</font>
 		<font>
 			<name>Slab-32</name>
-			<filename>Default/Slab.ttf</filename>
+			<filename>def/Slab.ttf</filename>
 			<size>32</size>
 			<linespacing>1.3</linespacing>
 		</font>
@@ -660,43 +1058,43 @@
 		<!-- Regular -->
 		<font>
 			<name>Regular-18</name>
-			<filename>Alternate/Regular.ttf</filename>
-			<size>16</size>
+			<filename>ssp/Regular.ttf</filename>
+			<size>18</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Regular-20</name>
-			<filename>Alternate/Regular.ttf</filename>
-			<size>20</size>
+			<filename>ssp/Regular.ttf</filename>
+			<size>22</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Regular-20-L</name>
-			<filename>Alternate/Regular.ttf</filename>
-			<size>20</size>
+			<filename>ssp/Regular.ttf</filename>
+			<size>22</size>
 		</font>
 		<font>
 			<name>Regular-22</name>
-			<filename>Alternate/Regular.ttf</filename>
-			<size>22</size>
+			<filename>ssp/Regular.ttf</filename>
+			<size>24</size>
 			<style>uppercase</style>
 		</font>
 		<font> 
 			<name>Regular-22-L</name>
-			<filename>Alternate/Regular.ttf</filename>
-			<size>22</size>
+			<filename>ssp/Regular.ttf</filename>
+			<size>24</size>
 			<linespacing>1.2</linespacing>
 		</font>
 		<font>
 			<name>Regular-32</name>
-			<filename>Alternate/Regular.ttf</filename>
-			<size>32</size>
+			<filename>ssp/Regular.ttf</filename>
+			<size>34</size>
 			<style>uppercase</style>
 		</font>
 		<font>
 			<name>Regular-60</name>
-			<filename>Alternate/Regular.ttf</filename>
-			<size>60</size>
+			<filename>ssp/Regular.ttf</filename>
+			<size>62</size>
 			<style>uppercase</style>
 		</font>
 
@@ -799,7 +1197,7 @@
 
 
 <!-- Unicode -->
-	<fontset id="Unicode">
+	<fontset id="Unicode" idloc="31861">
 		<!-- Condensed -->
 		<font>
 			<name>CondensedLight-32</name>
@@ -829,56 +1227,56 @@
 		<!-- Debug -->
 		<font>
 			<name>Debug</name>
-			<filename>Default/Debug.ttf</filename>
+			<filename>def/Debug.ttf</filename>
 			<size>11</size>
 		</font>
 
 		<!-- Weather -->
  		<font>
  			<name>Weather-32</name>
- 			<filename>Default/Weather.ttf</filename>
+ 			<filename>def/Weather.ttf</filename>
  			<size>54</size>
  		</font>
 
 		<!-- Symbols -->
 		<font>
 			<name>Symbols-22</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>22</size>
 		</font>
 		<font>
 			<name>Symbols-24</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>24</size>
 		</font>
 		<font>
 			<name>Symbols-26</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>26</size>
 		</font>
 		<font>
 			<name>Symbols-28</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>28</size>
 		</font>
 		<font>
 			<name>Symbols-32</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>32</size>
 		</font>
 		<font>
 			<name>Symbols-38</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>38</size>
 		</font>
 		<font>
 			<name>Symbols-46</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>46</size>
 		</font>
 		<font>
 			<name>Symbols-64</name>
-			<filename>Default/Symbols.ttf</filename>
+			<filename>def/Symbols.ttf</filename>
 			<size>64</size>
 		</font>
 
