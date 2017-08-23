@@ -13,8 +13,7 @@
 			<param name="GridTexture">overlays/home.png</param>
 			<param name="DiffuseColor">ff000000</param>
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
-			<param condition="Skin.HasSetting(home.blurfx)" name="id">7975</param>
-			<param condition="!Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable)">7977</param>
+			<param condition="!Skin.HasSetting(home.colorfx.disable)">7977</param>
 		</include>
 		<include>home_Menu-vertical</include>
 		<include>global_WindowChrome</include>
