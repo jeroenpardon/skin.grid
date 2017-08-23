@@ -58,7 +58,7 @@
 	<property property="widgetLayout" label="$LOCALIZE[31034]">fullscreen</property>
 	<property property="widgetLayout" label="$LOCALIZE[31035]" condition="!String.IsEqual(Container(211).ListItem.Property(widgetType),addons)">wide</property>
 	<property property="widgetLayout" label="$LOCALIZE[31036]">landscape</property>
-	<property property="widgetLayout" label="$LOCALIZE[31037]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows)">portrait</property>
+	<property property="widgetLayout" label="$LOCALIZE[31037]" condition="String.IsEqual(Container(211).ListItem.Property(widgetType),movies) | String.IsEqual(Container(211).ListItem.Property(widgetType),tvshows) | String.IsEqual(Container(211).ListItem.Property(widgetType),episodes)">portrait</property>
 	<property property="widgetLayout" label="$LOCALIZE[31038]">square</property>
 
 	<!-- Widget art -->
