@@ -7,13 +7,6 @@
 	<controls>
 		<!--background-->
 
-		<!-- Colorbox multiimage -->
-		<control type="multiimage" id="7975">
-			<left>-2160</left>
-			<include>home_MultiImage</include>
-			<imagepath background="true">$VAR[background:Global]</imagepath>
-		</control>
-
 		<control type="group">
 			<visible>!Control.IsVisible(53)</visible>
 			<include content="background_Global">

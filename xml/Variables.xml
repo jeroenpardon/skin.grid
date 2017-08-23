@@ -107,7 +107,7 @@
 	</variable>
 
 	<variable name="color:Date">
-		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.colorfx.disable) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.colorfx.disable)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
 		<value condition="Window.IsActive(Home)">$VAR[color:Text.2]</value>
 		<value>$VAR[color:Text.3]</value>
 	</variable>

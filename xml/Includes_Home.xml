@@ -13,6 +13,7 @@
 			<param name="GridTexture">overlays/home.png</param>
 			<param name="DiffuseColor">ff000000</param>
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
+			<param condition="Skin.HasSetting(home.blurfx) | !Skin.HasSetting(home.colorfx.disable)" name="id">7975</param>
 		</include>
 		<include>home_Menu-vertical</include>
 		<include>global_WindowChrome</include>
@@ -33,7 +34,11 @@
 				<!-- Background_Slideshow-->
 				<control type="multiimage">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
+					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + [!Skin.HasSetting(home.blurfx) | Skin.HasSetting(home.colorfx.disable)]</visible>
+				</control>
+				<control type="multiimage" id="7975">
+					<imagepath background="true">$VAR[background:Home]</imagepath>
+					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + [Skin.HasSetting(home.blurfx) | !Skin.HasSetting(home.colorfx.disable)]</visible>
 				</control>
 
 				<!-- Full blur overlay -->

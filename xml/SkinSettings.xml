@@ -775,7 +775,6 @@
 						<selected>!Skin.HasSetting(home.colorfx.disable)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
-						<enable>String.IsEqual(Skin.String(homemenu.layout),horizontal)</enable>
 					</control>
 
 					<!-- Global -->
