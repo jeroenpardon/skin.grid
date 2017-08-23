@@ -518,9 +518,9 @@
 				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
 			</control>
 			<control type="label">
-				<width min="50" max="200">auto</width>
+				<width min="25" max="200">auto</width>
 				<height>$PARAM[Height]</height>
-				<label>$INFO[ListItem.VideoResolution,,P]$VAR[info:Source, &#8226; ]&#32;&#32;</label>
+				<label>$VAR[media:VideoResolution]$VAR[info:Source, &#8226; ]&#32;&#32;</label>
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Regular-20</font>
 				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
