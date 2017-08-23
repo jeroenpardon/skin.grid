@@ -937,6 +937,7 @@
 	</variable>
 
 	<variable name="player:InfoToggle">
+		<value condition="Pvr.IsPlayingRecording">$LOCALIZE[19047]</value>
 		<value condition="VideoPlayer.Content(livetv)">$LOCALIZE[19047]</value>
 		<value condition="VideoPlayer.Content(movies)">$LOCALIZE[24007]</value>
 		<value condition="VideoPlayer.Content(episodes)">$LOCALIZE[20352]</value>
