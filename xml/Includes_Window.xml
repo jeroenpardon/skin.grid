@@ -20,7 +20,7 @@
 				<include>transition_Background</include>
 
 				<!-- Background Slideshow -->
-				<control type="multiimage" id=$PARAM[id]>
+				<control type="multiimage" id="$PARAM[id]">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
 					<visible>!String.IsEqual(Skin.String(home.background),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
@@ -72,7 +72,7 @@
 				</control>
 				
 				<!-- Custom background -->
-				<control type="multiimage" id=$PARAM[id]>
+				<control type="multiimage" id="$PARAM[id]">
 					<imagepath background="true">$VAR[background:Global]</imagepath>
 					<include>fadeinout</include>
 					<visible>!String.IsEqual(Skin.String(global.background),none)</visible>
