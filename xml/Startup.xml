@@ -11,6 +11,7 @@
 	<onload condition="System.HasAddon(script.artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<onload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">RunScript(script.colorbox,daemon=True)</onload>
 	<onload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">SetProperty(FIVE_daemon_set,blur,home)</onload>
+	<onload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">SetProperty(SEVEN_daemon_set,True,home)</onload>
 	<onload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=main,set=main:hsv*0.0;0.0;0.0|var=comp,set=main:hsv*0.0;-0.2;0.2|var=quality,set=8|var=blursize,set=5|var=bitsize,set=1|var=pixelsize,se​​t=12|var=black,set=000000|var=white,set=ffffff",home),00:05,true)</onload>
 
 	<onload condition="!String.IsEqual(Skin.String(home.background),fanart) + !String.IsEqual(Skin.String(home.background),videofanart)">Skin.SetString(HomeLoaded,True)</onload>

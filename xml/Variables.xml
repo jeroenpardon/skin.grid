@@ -60,13 +60,20 @@
 	</variable>
 
 	<variable name="home:FX.Color1">
-		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value condition="System.HasAddon(script.colorbox) + Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorFIVE)) + !String.IsEqual(Window(home).Property(ImageColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageColorSEVEN)]</value>
 		<value>$VAR[color:Main]</value>
 	</variable>
 
 	<variable name="home:FX.Color2">
-		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="System.HasAddon(script.colorbox) + Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorFIVE)) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
 		<value>$VAR[color:Accent]</value>
+	</variable>
+
+	<variable name="home:FX.ColorVertDiffuse">
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
+		<value>ff000000</value>
 	</variable>
 
 	<variable name="home:FX.Diffuse">
@@ -107,7 +114,8 @@
 	</variable>
 
 	<variable name="color:Date">
-		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.colorfx.disable) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="Window.IsActive(Home) + Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorFIVE)) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable) + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
 		<value condition="Window.IsActive(Home)">$VAR[color:Text.2]</value>
 		<value>$VAR[color:Text.3]</value>
 	</variable>

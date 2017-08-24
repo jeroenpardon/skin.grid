@@ -5,6 +5,7 @@
 		<param name="GridTexture" default="overlays/90.png"/>
 		<param name="DiffuseColor"/>
 		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)]"/>
+		<param name="id" default=""/>
 		<definition>
 
 			<!-- No Background -->
@@ -19,7 +20,7 @@
 				<include>transition_Background</include>
 
 				<!-- Background Slideshow -->
-				<control type="multiimage">
+				<control type="multiimage" id=$PARAM[id]>
 					<imagepath background="true">$VAR[background:Home]</imagepath>
 					<visible>!String.IsEqual(Skin.String(home.background),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
@@ -57,18 +58,8 @@
 		<param name="DiffuseColor"/>
 		<param name="RestrictFX" default="false"/>
 		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)]"/>
+		<param name="id" default=""/>
 		<definition>
-
-			<!-- Colorbox image -->
-			<control type="multiimage" id="7975">
-				<left>-2160</left>
-				<width>1</width>
-				<height>1</height>
-				<timeperimage>10000</timeperimage>
-				<randomize>true</randomize>
-				<fadetime>600</fadetime>
-				<imagepath background="true">$VAR[background:Global]</imagepath>
-			</control>
 
 			<control type="group">
 				<include>transition_Background</include>
@@ -81,7 +72,7 @@
 				</control>
 				
 				<!-- Custom background -->
-				<control type="multiimage">
+				<control type="multiimage" id=$PARAM[id]>
 					<imagepath background="true">$VAR[background:Global]</imagepath>
 					<include>fadeinout</include>
 					<visible>!String.IsEqual(Skin.String(global.background),none)</visible>
