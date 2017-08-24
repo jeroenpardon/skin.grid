@@ -270,6 +270,7 @@
 				<onright>$PARAM[PageControl]</onright>
 				<pagecontrol>$PARAM[PageControl]</pagecontrol>
 				<include>global_ListScroll</include>
+				<preloaditems>4</preloaditems>
 				<!--library-->
 				<itemlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
 					<control type="image">
