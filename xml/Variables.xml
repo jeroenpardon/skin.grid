@@ -1367,7 +1367,7 @@
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,season)">$INFO[ListItem.Season,$LOCALIZE[20373] ]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,artist)">$INFO[ListItem.Artist]</value>
-		<value>$INFO[Window(movieinformation).Property(InfoTitle)]</value>
+		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
 	<variable name="window:Title.Dialog">
