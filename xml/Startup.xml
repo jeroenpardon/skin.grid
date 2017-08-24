@@ -4,6 +4,7 @@
 
 	<onload>RunScript(script.grab.fanart,mode=random,refresh=30)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,20)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 
 	<onload condition="System.HasAddon(script.artistslideshow) + String.IsEmpty(Window(Visualisation).Property(ArtistSlideshowRunning))">RunScript(script.artistslideshow, daemon=True)</onload>
 	<onload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">RunScript(script.colorbox,daemon=True)</onload>
