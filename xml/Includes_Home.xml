@@ -11,9 +11,9 @@
 	<include name="home_Vertical">
 		<include content="background_Home">
 			<param name="GridTexture">overlays/home.png</param>
-			<param name="DiffuseColor">ff000000</param>
+			<param name="DiffuseColor">$VAR[home:FX.ColorVertDiffuse]</param>
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
-			<param condition="!Skin.HasSetting(home.colorfx.disable)">7977</param>
+			<param name="id" condition="!Skin.HasSetting(home.colorfx.disable)">7977</param>
 		</include>
 		<include>home_Menu-vertical</include>
 		<include>global_WindowChrome</include>
