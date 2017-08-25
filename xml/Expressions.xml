@@ -26,8 +26,8 @@
 	<!-- Listitems -->
 	<expression name="ListItem.IsParent">[ListItem.IsParentFolder | String.StartsWith(ListItem.Label,* All)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
 	<expression name="!ListItem.IsParent">!ListItem.IsParentFolder + !String.StartsWith(ListItem.Label,* All) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
-	<expression name="ListItem.HasInfo">!String.IsEmpty(ListItem.DBID) | String.StartsWith(Container.FolderPath,pvr://) | Window.IsActive(settings)</expression>
-	<expression name="!ListItem.HasInfo">String.IsEmpty(ListItem.DBID) + !String.StartsWith(Container.FolderPath,pvr://) + !Window.IsActive(settings)</expression>
+	<expression name="ListItem.HasInfo">!String.IsEmpty(ListItem.DBID) | String.StartsWith(Container.FolderPath,pvr://) | Window.IsActive(settings) | Window.IsActive(1110)</expression>
+	<expression name="!ListItem.HasInfo">String.IsEmpty(ListItem.DBID) + !String.StartsWith(Container.FolderPath,pvr://) + !Window.IsActive(settings) + !Window.IsActive(1110)</expression>
 
 	<!-- Viewtypes -->
 	<expression name="Thumbview.ShowInfo">Container.Content(episodes) | [String.IsEqual(Skin.String(views.landscape.art),fanart) + !Skin.HasSetting(logos.enable)] | [String.IsEqual(Skin.String(views.landscape.art),fanart) + Skin.HasSetting(logos.enable) + String.IsEmpty(ListItem.Art(clearlogo))] | [String.IsEqual(Skin.String(views.landscape.art),landscape) + String.IsEmpty(ListItem.Art(landscape)) + !Skin.HasSetting(logos.enable)]</expression>
