@@ -21,6 +21,7 @@
 					<include content="row_Keyboard">
 						<param name="Height">102</param>
 					</include>
+
 					<control type="edit" id="312">
 						<left>10</left>
 						<top>10</top>
@@ -549,6 +550,11 @@
 					</include>
 				</control>
 			</control>
+		</control>
+		<!-- Invisible control so that it's label can be used in the edit control 312 -->
+		<control type="label" id="311">
+			<label></label>
+			<visible>false</visible>
 		</control>
 	</controls>
 </window>
