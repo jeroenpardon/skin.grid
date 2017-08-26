@@ -203,13 +203,16 @@
 					<visible>$PARAM[ShowItemCount]</visible>
 					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(volumebar) | Player.Muted] + !Window.IsVisible(busydialog)</visible>
 				</control>
-				<control type="label">
+				<control type="button">
 					<width>128</width>
 					<height>$PARAM[Height]</height>
 					<label>$PARAM[Symbol]</label>
 					<font>$PARAM[SymbolFont]</font>
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
+					<texturenofocus></texturenofocus>
+					<onclick>SetFocus(7000)</onclick>
+					<onclick>SetProperty(MenuOpen,true,Home)</onclick>
 					<visible>!Window.IsVisible(busydialog)</visible>
 					<visible>$PARAM[ShowSymbol]</visible>
 				</control>
@@ -275,35 +278,42 @@
 					<visible>false</visible>
 				</control>
 				<control type="grouplist">
-					<left>160</left>
+					<left>128</left>
 					<width>1600</width>
 					<height>$PARAM[Height]</height>
 					<orientation>vertical</orientation>
-					<control type="label">
-						<width>1280</width>
+					<visible>!Window.IsActive(Home)</visible>
+					<control type="button">
+						<width max="1280">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<onclick>Back</onclick>
+						<texturenofocus></texturenofocus>
 						<visible>$EXP[!Window.HasOverlay]</visible>
 					</control>
-					<control type="label">
-						<width>1600</width>
+					<control type="button">
+						<width ma="1600">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<onclick>Back</onclick>
+						<texturenofocus></texturenofocus>
 						<visible>$EXP[!Window.HasOverlay]</visible>
 					</control>
-					<control type="label">
-						<width>832</width>
+					<control type="button">
+						<width max="832">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<onclick>Back</onclick>
+						<texturenofocus></texturenofocus>
 						<visible>$EXP[Window.HasOverlay]</visible>
 					</control>
 				</control>
@@ -326,6 +336,20 @@
 						<visible>!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia + [Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),home)]] | [!Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),nohome)]]</visible>
 						<animation effect="slide" end="128" time="0" condition="!Skin.HasSetting(home.clock) + Window.IsActive(home)">Conditional</animation>
 					</control>
+				</control>
+
+				<!-- Home button -->
+				<control type="button">
+					<right>128</right>
+					<width>128</width>
+					<height>$PARAM[Height]</height>
+					<label>&#57449;</label>
+					<font>$PARAM[SymbolFont]</font>
+					<align>center</align>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<texturenofocus></texturenofocus>
+					<onclick>ActivateWindow(Home)</onclick>
+					<visible>system.getbool(input.enablemouse) + !Window.IsActive(Home)</visible>
 				</control>
 				
 				<!-- Clock -->
@@ -494,7 +518,7 @@
 
 					<control type="group">
 						<height>$PARAM[Height]</height>
-						
+
 						<!-- Reposition for homescreen and clock -->
 						<animation effect="slide" start="0,0"  end="0,2" time="150" condition="Window.IsVisible(Home)">Conditional</animation>
 
