@@ -22,7 +22,7 @@
 		<param name="OnRight" default="24"/>
 		<param name="Orientation" default="vertical"/>
 		<param name="PageControl" default="6500"/>
-		<param name="ShowFallback" default="ListItem.IsParentFolder | [String.IsEmpty(ListItem.Art(fanart)) + !Container.Content(images)]"/>
+		<param name="ShowFallback" default="String.IsEmpty(Listitem.Art(thumb))"/>
 		<param name="ShowIconLabel" default="false"/>
 		<param name="ShowInfo" default="true"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
@@ -64,7 +64,7 @@
 							<texture colordiffuse="$VAR[color:Text.2]">$PARAM[Fallback]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 							<bordersize>10</bordersize>
-							<visible>String.IsEmpty(Listitem.Art(thumb))</visible>
+							<visible>$PARAM[ShowFallback]</visible>
 						</control>
 						<control type="label">
 							<width>$PARAM[ArtWidth]</width>
@@ -182,7 +182,7 @@
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 							<bordertexture border="10">$PARAM[Frame]</bordertexture>
 							<bordersize>10</bordersize>
-							<visible>String.IsEmpty(Listitem.Art(thumb))</visible>
+							<visible>$PARAM[ShowFallback]</visible>
 						</control>
 						<control type="label">
 							<width>$PARAM[ArtWidth]</width>

@@ -190,6 +190,7 @@
 					<param name="Label2">$VAR[media:Info]</param>
 					<param name="ShowInfo">false</param>
 					<param name="ShowLogo">false</param>
+					<param name="ShowFallback">String.IsEmpty(Listitem.Art(banner))</param>
 					<param name="ShowOverlay">false</param>
 					<param name="ViewTypeLabel">$LOCALIZE[20020]</param>
 					<param name="Width">1664</param>
