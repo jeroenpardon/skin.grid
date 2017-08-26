@@ -60,6 +60,11 @@
 					<visible>String.IsEqual(Window(Home).Property(BlurIsActive),true) | String.IsEqual(Window(Home).Property(HomeFocusedItem),widgets)</visible>
 				</control>
 
+				<!-- Logos -->
+				<include content="home_Logos">
+					<param name="Bottom">226</param>
+				</include>
+
 				<!-- Background video -->
 				<include>background_Video</include>
 
@@ -80,11 +85,6 @@
 		
 				<!-- Horizontal home window chrome -->
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">global_WindowChrome</include>
-
-				<!-- Logos -->
-				<include content="home_Logos">
-					<param name="Bottom">226</param>
-				</include>
 
 				<!-- Feed container-->
 				<include content="home_Widgets">
@@ -139,8 +139,8 @@
 				<aspectratio>keep</aspectratio>
 				<fadetime>300</fadetime>
 				<include>transition_Background</include>
+				<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				<visible>Skin.HasSetting(home.logo) + String.StartsWith(Skin.String(home.background),fanart-)</visible>
-				<visible>![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)] + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 			</control>
 		</definition>
 	</include>

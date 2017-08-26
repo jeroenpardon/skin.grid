@@ -29,7 +29,10 @@
 				<include>background_Video</include>
 
 				<!-- Now playing -->
-				<include>background_Player</include>
+				<control type="group">
+					<visible>Skin.HasSetting(home.nowplaying)</visible>
+					<include>background_Player</include>
+				</control>
 
 				<!-- Overlay -->
 				<control type="group">
@@ -120,7 +123,7 @@
 				<aspectratio>stretch</aspectratio>
 				<width>1920</width>
 				<height>1080</height>
-				<texture colordiffuse="ff000000">colorize/white.png</texture>
+				<texture colordiffuse="ff000000">colorize/white.png</texture>`
 			</control>
 			<control type="videowindow">
 				<top>0</top>
@@ -132,7 +135,7 @@
 
 	<include name="background_Player">
 		<control type="group">
-			<animation type="conditional" condition="Skin.HasSetting(burns.enable)" loop="true">
+			<animation type="conditional" condition="!Window.IsActive(Home) + Skin.HasSetting(burns.enable)" loop="true">
 				<effect type="Fade" start="0" end="100" time="2000"/>
 				<effect type="Zoom" center="screen_Center" start="130" end="100" time="15000"/>
 				<effect type="Fade" start="100" end="0" time="1000" delay="14000"/>
