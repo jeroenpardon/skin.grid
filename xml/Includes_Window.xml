@@ -338,18 +338,45 @@
 					</control>
 				</control>
 
-				<!-- Home button -->
-				<control type="button">
+				<!-- Touch navigation -->
+				<control type="grouplist" id="6000">
 					<right>128</right>
-					<width>128</width>
-					<height>$PARAM[Height]</height>
-					<label>&#57449;</label>
-					<font>$PARAM[SymbolFont]</font>
-					<align>center</align>
-					<textcolor>$VAR[color:Accent]</textcolor>
-					<texturenofocus></texturenofocus>
-					<onclick>ActivateWindow(Home)</onclick>
-					<visible>system.getbool(input.enablemouse) + !Window.IsActive(Home)</visible>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<control type="button" id="6001">
+						<width>128</width>
+						<height>$PARAM[Height]</height>
+						<label>&#58921;</label>
+						<font>$PARAM[SymbolFont]</font>
+						<align>center</align>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<texturenofocus></texturenofocus>
+						<onclick>Action(Back)</onclick>
+						<visible>system.getbool(input.enablemouse) + !Window.IsActive(Home)</visible>
+					</control>
+					<control type="button" id="6002">
+						<width>128</width>
+						<height>$PARAM[Height]</height>
+						<label>&#57449;</label>
+						<font>$PARAM[SymbolFont]</font>
+						<align>center</align>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<texturenofocus></texturenofocus>
+						<onclick>ActivateWindow(Home)</onclick>
+						<visible>system.getbool(input.enablemouse) + !Window.IsActive(Home)</visible>
+					</control>
+					<control type="button" id="6003">
+						<width>128</width>
+						<height>$PARAM[Height]</height>
+						<label>&#58881;</label>
+						<font>$PARAM[SymbolFont]</font>
+						<align>center</align>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<texturenofocus></texturenofocus>
+						<onclick>SetFocus(7000)</onclick>
+						<onclick>SetProperty(MenuOpen,true,Home)</onclick>
+						<visible>system.getbool(input.enablemouse) + !Window.IsActive(Home)</visible>
+					</control>
 				</control>
 				
 				<!-- Clock -->
