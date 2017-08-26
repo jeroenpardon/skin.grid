@@ -561,6 +561,7 @@
 								<width>$PARAM[TextWidth]</width>
 								<height>50%</height>
 								<font>Black-22</font>
+								<label>$PARAM[Label1]</label>
 								<textcolor>$PARAM[TextColor]</textcolor>
 							</control>
 							<control type="label" id="402">
@@ -568,6 +569,7 @@
 								<width>$PARAM[TextWidth]</width>
 								<height>50%</height>
 								<font>Regular-20</font>
+								<label>$PARAM[Label2]</label>
 								<textcolor>$PARAM[TextColor]</textcolor>
 								<scroll>true</scroll>
 							</control>
