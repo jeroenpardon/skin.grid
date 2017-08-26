@@ -108,6 +108,7 @@
 
 			<!--path-->
 			<control type="label">
+				<visible>!Skin.HasSetting(ratings.video.info)</visible>
 				<left>128</left>
 				<bottom>0</bottom>
 				<height>72</height>
@@ -118,6 +119,11 @@
 				<aligny>center</aligny>
 				<scroll>true</scroll>
 				<textcolor>$VAR[color:Text.3]</textcolor>
+			</control>
+
+			<control type="group">
+				<visible>Skin.HasSetting(ratings.video.info)</visible>
+				<include content="media_Ratings"></include>
 			</control>
 
 			<!--functions-->	

@@ -536,8 +536,15 @@
 						<enable>String.IsEqual(Skin.String(ratings.video),default) | String.IsEqual(Skin.String(ratings.video),user)</enable>
 						<include>radio_Settings</include>
 					</control>
-					<!-- Parental Guidance ratings-->
+					<!-- Ratings in DialogVideoInfo instead of path -->
 					<control type="radiobutton" id="9424">
+						<label>$LOCALIZE[31379]</label>
+						<onclick>Skin.ToggleSetting(ratings.video.info)</onclick>
+						<selected>Skin.HasSetting(ratings.video.info)</selected>
+						<include>radio_Settings</include>
+					</control>
+					<!-- Parental Guidance ratings-->
+					<control type="radiobutton" id="9425">
 						<label>$LOCALIZE[31342]</label>
 						<onclick>Skin.ToggleSetting(ratings.pg.enable)</onclick>
 						<selected>Skin.HasSetting(ratings.pg.enable)</selected>

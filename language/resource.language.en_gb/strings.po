@@ -724,6 +724,10 @@ msgctxt "#31378"
 msgid "Fanart colours"
 msgstr ""
 
+#. skin setting that replaces video information file path with rottentomatoes, metacritic, imdb, tmdb, and/or tvdb ratings.
+msgctxt "#31379"
+msgid "Show ratings in video information (replaces file path)"
+msgstr ""
 
 
 #: osd / player
