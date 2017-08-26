@@ -16,7 +16,10 @@
 			<param name="id" condition="!Skin.HasSetting(home.colorfx.disable)">7977</param>
 		</include>
 		<include>home_Menu-vertical</include>
-		<include>global_WindowChrome</include>
+		<include content="global_WindowChrome">
+			<param name="Height">98</param>
+			<param name="ProgressHeight">98</param>
+		</include>
 		<include>home_Logos</include>
 		<include content="home_Widgets">
 			<param name="Left">screen_Width</param>
