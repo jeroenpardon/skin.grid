@@ -128,7 +128,6 @@
 							<label>$PARAM[Label]</label>
 							<height>24</height>
 							<font>Black-24</font>
-							<scroll>false</scroll>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
@@ -139,7 +138,6 @@
 							<label>$PARAM[Label]</label>
 							<height>24</height>
 							<font>Black-24</font>
-							<scroll>false</scroll>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
@@ -151,7 +149,6 @@
 							<label>$PARAM[Label2]</label>
 							<height>24</height>
 							<font>Regular-20</font>
-							<scroll>false</scroll>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Text.2]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
