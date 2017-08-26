@@ -901,7 +901,7 @@
 				<top>12</top>
 				<label>$LOCALIZE[31667]</label>
 				<onup>7012</onup>
-				<ondown>7092</ondown>
+				<ondown>7014</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<onclick>Right</onclick>
@@ -922,6 +922,45 @@
 					<label>$LOCALIZE[184]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(92)</visible>
+				</control>
+			</control>
+		</control>
+
+		<!-- Add-on2 system settings -->
+		<control type="group" id="7014">
+			<height>108</height>
+			<visible>Window.IsActive(1110) | String.IsEqual(Container.FolderPath,addons://)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(93)</visible>
+			</control>
+			<control type="radiobutton" id="93">
+				<top>12</top>
+				<label>$LOCALIZE[24992]</label>
+				<onup>7013</onup>
+				<ondown>7092</ondown>
+				<onleft>7100</onleft>
+				<onright>50</onright>
+				<onclick>Right</onclick>
+				<onclick>ActivateWindowAndFocus(systemsettings,-95,0,-79,0)</onclick>
+				<include>menu_Button</include>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$LOCALIZE[10140]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(93)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$LOCALIZE[10140]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(93)</visible>
 				</control>
 			</control>
 		</control>
