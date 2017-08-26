@@ -3,6 +3,11 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>7000</menucontrol>
 	<views>50,55,56</views>
+
+	<!-- Check for property so we know where to return to -->
+	<onback condition="!String.IsEmpty(Window(home).Property(BrowseAddons))">ActivateWindow(1110)</onback>
+	<onback>ClearProperty(BrowseAddons,Home)</onback>
+
 	<controls>
 
 	<!--menu trigger-->
