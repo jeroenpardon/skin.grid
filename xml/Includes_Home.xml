@@ -34,7 +34,7 @@
 				<!-- Background_Slideshow-->
 				<control type="multiimage">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + ![!Skin.HasSetting(home.blurfx) | Skin.HasSetting(home.colorfx.disable)]</visible>
+					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + [!Skin.HasSetting(home.blurfx) | Skin.HasSetting(home.colorfx.disable)]</visible>
 				</control>
 				<control type="multiimage" id="7975">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
@@ -42,7 +42,7 @@
 				</control>
 				<control type="multiimage" id="7977">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + [!Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable)]</visible>
+					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + !Skin.HasSetting(home.blurfx) + !Skin.HasSetting(home.colorfx.disable)</visible>
 				</control>
 
 				<!-- Full blur overlay -->
