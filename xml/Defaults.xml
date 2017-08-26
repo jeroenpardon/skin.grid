@@ -4,7 +4,7 @@
 	<default type="multiimage">
 		<aspectratio>scale</aspectratio>
 		<fadetime>fadetime_Slideshow</fadetime>
-		<include>Burns</include>
+		<include condition="!Window.IsActive(Home)">Burns</include>
 		<include>screen_Dimensions</include>
 		<pauseatend>10000</pauseatend>
 		<randomize>true</randomize>
