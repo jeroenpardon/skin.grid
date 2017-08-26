@@ -624,139 +624,119 @@
 				<width>1664</width>
 				<height>32</height>
 				<left>128</left>
-				<bottom>20</bottom>
+				<bottom>18</bottom>
 				<orientation>horizontal</orientation>
 				<align>center</align>
 				<itemgap>12</itemgap>
 				<usecontrolcoords>true</usecontrolcoords>
 
-				<control type="image">
+				<control type="label">
+					<textcolor>$VAR[color:Accent]</textcolor>
 					<top>0</top>
-					<width>32</width>
-					<height>32</height>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/metacritic.png</texture>
+					<width>auto</width>
+					<height>28</height>
+					<align>right</align>
+					<font>Black-22</font>
+					<label>MetaCritic</label>
 					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
 				</control>
 				<control type="label">
 					<textcolor>$VAR[color:Text.2]</textcolor>
-					<top>2</top>
+					<top>0</top>
 					<width>auto</width>
 					<height>28</height>
 					<align>right</align>
-					<font>Regular-18</font>
+					<font>Regular-20</font>
 					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating), ,%   ]</label>
 					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.MetaCritic.Rating))</visible>
 				</control>
-				<control type="image">
+				<control type="label">
+					<textcolor>$VAR[color:Accent]</textcolor>
 					<top>0</top>
-					<width>32</width>
-					<height>32</height>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/tmdb.png</texture>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
-				</control>
-				<control type="label">
-					<textcolor>$VAR[color:Text.2]</textcolor>
-					<top>2</top>
 					<width>auto</width>
 					<height>28</height>
 					<align>right</align>
-					<font>Regular-18</font>
-					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB), ,   ]</label>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
+					<font>Black-22</font>
+					<label>RottenTomatoes</label>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))</visible>
 				</control>
-
-				<control type="image">
+				<control type="label">
+					<textcolor>$VAR[color:Text.2]</textcolor>
 					<top>0</top>
-					<width>32</width>
-					<height>32</height>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/tvdb.png</texture>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TVDB))</visible>
-				</control>
-				<control type="label">
-					<textcolor>$VAR[color:Text.2]</textcolor>
-					<top>2</top>
 					<width>auto</width>
 					<height>28</height>
 					<align>right</align>
-					<font>font_Regular-18</font>
-					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TVDB), ,   ]</label>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TVDB))</visible>
-				</control>
-
-
-				<control type="image">
-					<top>0</top>
-					<width>32</width>
-					<height>32</height>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/popcorn.png</texture>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
-				</control>
-				<control type="label">
-					<textcolor>$VAR[color:Text.2]</textcolor>
-					<top>2</top>
-					<width>auto</width>
-					<height>28</height>
-					<align>right</align>
-					<font>Regular-18</font>
-					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter), ,%   ]</label>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.UserMeter))</visible>
-				</control>
-				<control type="image">
-					<width>32</width>
-					<height>32</height>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/rtrotten.png</texture>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))</visible>
-					<visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),0) + !Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),59)</visible>
-				</control>
-				<control type="image">
-					<width>32</width>
-					<height>32</height>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/rtfresh.png</texture>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))</visible>
-					<visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),59) + !Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),74)</visible>
-				</control>
-				<control type="image" description="remove the rtfresh texture line for certified logo">
-					<width>32</width>
-					<height>32</height>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/rtfresh.png</texture>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/certified.png</texture>
-					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))</visible>
-					<visible>Integer.IsGreater(Window(home).Property(SkinHelper.ListItem.RottenTomatoes.Rating),74)</visible>
-				</control>
-				<control type="label">
-					<textcolor>$VAR[color:Text.2]</textcolor>
-					<top>2</top>
-					<width>auto</width>
-					<height>28</height>
-					<align>right</align>
-					<font>Regular-18</font>
+					<font>Regular-20</font>
 					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating), ,%   ]</label>
 					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.RottenTomatoes.Rating))</visible>
 				</control>
-				<control type="image">
-					<top>1</top>
-					<width>40</width>
-					<height>32</height>
-					<texture colordiffuse="$VAR[color:Accent]">ratings/imdbicon.png</texture>
-					<visible>!String.IsEmpty(ListItem.RatingAndVotes) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
-				</control>
 				<control type="label">
-					<textcolor>$VAR[color:Text.2]</textcolor>
-					<top>2</top>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<top>0</top>
 					<width>auto</width>
 					<height>28</height>
 					<align>right</align>
-					<font>Regular-18</font>
+					<font>Black-22</font>
+					<label>TMDB</label>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
+				</control>
+				<control type="label">
+					<textcolor>$VAR[color:Text.2]</textcolor>
+					<top>0</top>
+					<width>auto</width>
+					<height>28</height>
+					<align>right</align>
+					<font>Regular-20</font>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TMDB), ,   ]</label>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TMDB))</visible>
+				</control>
+				<control type="label">
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<top>0</top>
+					<width>auto</width>
+					<height>28</height>
+					<align>right</align>
+					<font>Black-22</font>
+					<label>TVDB</label>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TVDB))</visible>
+				</control>
+				<control type="label">
+					<textcolor>$VAR[color:Text.2]</textcolor>
+					<top>0</top>
+					<width>auto</width>
+					<height>28</height>
+					<align>right</align>
+					<font>Regular-20</font>
+					<label>$INFO[Window(Home).Property(SkinHelper.ListItem.Rating.TVDB), ,   ]</label>
+					<visible>!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Rating.TVDB))</visible>
+				</control>
+				<control type="label">
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<top>0</top>
+					<width>auto</width>
+					<height>28</height>
+					<align>right</align>
+					<font>Black-22</font>
+					<label>IMDB</label>
+					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) | [String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !String.IsEmpty(ListItem.RatingAndVotes)]</visible>
+				</control>
+				<control type="label">
+					<textcolor>$VAR[color:Text.2]</textcolor>
+					<top>0</top>
+					<width>auto</width>
+					<height>28</height>
+					<align>right</align>
+					<font>Regular-20</font>
 					<label>$INFO[Window(home).Property(SkinHelper.ListItem.Rating.IMDB), ,]$INFO[Window(home).Property(SkinHelper.ListItem.Votes.IMDB), (, $LOCALIZE[205])]</label>
 					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB))</visible>
 				</control>
 				<control type="label">
 					<textcolor>$VAR[color:Text.2]</textcolor>
-					<top>2</top>
+					<top>0</top>
 					<width>auto</width>
 					<height>28</height>
 					<align>right</align>
-					<font>Regular-18</font>
+					<font>Regular-20</font>
 					<label>$INFO[ListItem.RatingAndVotes, ,]</label>
 					<visible>String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Rating.IMDB)) + !String.IsEmpty(ListItem.RatingAndVotes)</visible>
 				</control>
