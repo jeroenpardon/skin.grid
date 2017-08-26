@@ -443,7 +443,6 @@
 		<param name="Height" default="108"/>
 		<param name="ID1"/>
 		<param name="ID2"/>
-		<param name="InfoTop" default="16"/>
 		<param name="Label"/>
 		<param name="Label1"/>
 		<param name="Label2"/>
@@ -468,6 +467,8 @@
 				<include>transition_Chrome</include>
 
 				<!-- Reposition for homescreen and clock -->
+				<animation effect="slide" start="0,0"  end="0,-11" time="150" condition="Window.IsVisible(Home) + Skin.HasSetting(home.clock)">Conditional</animation>
+				<animation effect="slide" start="0,0"  end="0,-11" time="150" condition="Window.IsVisible(Home) + !Skin.HasSetting(home.clock)">Conditional</animation>
 				<animation effect="slide" start="0"  end="128" time="150" condition="Window.IsActive(Home) + !Skin.HasSetting(home.clock) + !String.IsEqual(Skin.String(homemenu.layout),compact)">Conditional</animation>
 				<animation effect="slide" start="0,0"  end="118,10" time="150" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.layout),compact)">Conditional</animation>
 
@@ -479,69 +480,75 @@
 				</control>
 
 				<control type="group">
-					<include>transition_Chrome</include>
+					<height>$PARAM[Height]</height>
+					<control type="progress" id="$PARAM[ProgressID]">
+						<width>100%</width>
+						<height>$PARAM[Height]</height>
+						<info>$PARAM[ProgressInfo]</info>
+						<lefttexture></lefttexture>
+						<midtexture colordiffuse="$VAR[color:Accent]">colorize/100.png</midtexture>
+						<righttexture></righttexture>
+						<visible>[Player.HasMedia + Window.IsVisible(1105)] | Window.IsActive(extendedprogressdialog)</visible>
+						<visible>$PARAM[ShowProgress]</visible>
+					</control>
+
 					<control type="group">
-						<control type="progress" id="$PARAM[ProgressID]">
-							<width>100%</width>
-							<height>$PARAM[Height]</height>
-							<info>$PARAM[ProgressInfo]</info>Player.Progress
-							<lefttexture></lefttexture>
-							<midtexture colordiffuse="$VAR[color:Accent]">colorize/100.png</midtexture>
-							<righttexture></righttexture>
-							<visible>[Player.HasMedia + Window.IsVisible(1105)] | Window.IsActive(extendedprogressdialog)</visible>
-							<visible>$PARAM[ShowProgress]</visible>
-						</control>
+						<height>$PARAM[Height]</height>
+						
+						<!-- Reposition for homescreen and clock -->
+						<animation effect="slide" start="0,0"  end="0,2" time="150" condition="Window.IsVisible(Home)">Conditional</animation>
+
+						<!-- Notification labels -->
 						<control type="group">
-							<top>$PARAM[InfoTop]</top>
 							<left>108</left>
-							<control type="label" id="$PARAM[ID1]">
+							<height>$PARAM[Height]</height>
+							<control type="label" id="401">
+								<centertop>38%</centertop>
 								<width>$PARAM[TextWidth]</width>
-								<height>54</height>
+								<height>50%</height>
 								<font>Black-22</font>
-								<label>$PARAM[Label1]</label>
+								<textcolor>$PARAM[TextColor]</textcolor>
+							</control>
+							<control type="label" id="402">
+								<centerbottom>38%</centerbottom>
+								<width>$PARAM[TextWidth]</width>
+								<height>50%</height>
+								<font>Regular-20</font>
+								<textcolor>$PARAM[TextColor]</textcolor>
+								<scroll>true</scroll>
+							</control>
+						</control>
+
+						<!-- Progress labels -->
+						<control type="group">
+							<left>108</left>
+							<height>$PARAM[Height]</height>
+							<control type="label" id="$PARAM[ID1]">
+								<centertop>38%</centertop>
+								<width>$PARAM[TextWidth]</width>
+								<height>50%</height>
+								<font>Black-22</font>
 								<textcolor>$PARAM[TextColor]</textcolor>
 							</control>
 							<control type="label" id="$PARAM[ID2]">
-								<top>38</top>
+								<centerbottom>38%</centerbottom>
 								<width>$PARAM[TextWidth]</width>
-								<height>54</height>
-								<aligny>top</aligny>
+								<height>50%</height>
 								<font>Regular-20</font>
-								<label>$PARAM[Label2]</label>
 								<textcolor>$PARAM[TextColor]</textcolor>
+								<scroll>true</scroll>
 							</control>
 						</control>
-					</control>
 
-					<!-- Symbol -->
-					<control type="label">
-						<width>108</width>
-						<height>$PARAM[Height]</height>
-						<font>Symbols-38</font>
-						<label>$PARAM[Symbol]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<textcolor>$PARAM[TextColor]</textcolor>
-					</control>
-
-					<!-- Notification labels -->
-					<control type="group">
-						<top>$PARAM[InfoTop]</top>
-						<left>108</left>
-						<control type="label" id="401">
-							<width>$PARAM[TextWidth]</width>
-							<height>54</height>
-							<font>Black-22</font>
+						<!-- Symbol -->
+						<control type="label">
+							<width>108</width>
+							<height>$PARAM[Height]</height>
+							<font>Symbols-38</font>
+							<label>$PARAM[Symbol]</label>
+							<align>center</align>
+							<aligny>center</aligny>
 							<textcolor>$PARAM[TextColor]</textcolor>
-						</control>
-						<control type="label" id="402">
-							<top>38</top>
-							<width>$PARAM[TextWidth]</width>
-							<height>54</height>
-							<aligny>top</aligny>
-							<font>Regular-20</font>
-							<textcolor>$PARAM[TextColor]</textcolor>
-							<scroll>true</scroll>
 						</control>
 					</control>
 				</control>
