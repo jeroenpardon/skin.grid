@@ -553,6 +553,7 @@
 		</control>
 		<!-- Invisible control so that it's label can be used in the edit control 312 -->
 		<control type="label" id="311">
+			<left>2000</left>
 			<label></label>
 			<visible>false</visible>
 		</control>

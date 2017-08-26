@@ -709,12 +709,14 @@
 						<label>$LOCALIZE[33063]</label>
 						<include>global_Header</include>
 					</control>
-					<!-- Themes -->
+					<!-- Manage colour themes -->
 					<control type="group" id="9595">
 						<height>90</height>
 						<control type="button" id="471">
 							<label>$LOCALIZE[31800]</label>
 							<onleft>9001</onleft>
+							<!-- Set a property to display as a window header when choosing thumbnail for saved theme -->
+							<onclick condition="System.HasAddon(script.skin.helper.service)">SetProperty(FileBrowserHeader,$LOCALIZE[20019],Home)</onclick>
 							<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=colorthemes)</onclick>
 							<include>install_HelperService</include>
 							<include>radio_Settings</include>

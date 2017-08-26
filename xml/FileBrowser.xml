@@ -3,6 +3,10 @@
 	<defaultcontrol always="true">451</defaultcontrol>
 	<onunload condition="!String.IsEmpty(Window(home).Property(BrowseAddons))">ActivateWindow(1110)</onunload>
 	<onunload>ClearProperty(BrowseAddons,home)</onunload>
+
+	<!-- Clear any custom set window header -->
+	<onunload>ClearProperty(FileBrowserHeader,home)</onunload>
+	
 	<controls>
 
 	<!--background-->

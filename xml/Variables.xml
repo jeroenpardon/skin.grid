@@ -1380,6 +1380,7 @@
 		<value condition="Window.IsActive(pvrguidesearch)">$LOCALIZE[19133]</value>
 		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]</value>
 		<value condition="Window.Is(mediafilter)">$LOCALIZE[587]</value>
+		<value condition="Window.IsActive(filebrowser) + !String.IsEmpty(Window(Home).Property(FileBrowserHeader))">$INFO[Window(Home).Property(FileBrowserHeader)]</value>
 		<value condition="Window.Is(osdaudiosettings)">$LOCALIZE[13396]</value>
 		<value condition="Window.Is(osdvideosettings)">$LOCALIZE[13395]</value>
 		<value condition="Window.IsVisible(mediasource)">$LOCALIZE[10129]</value>
