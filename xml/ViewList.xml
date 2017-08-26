@@ -326,6 +326,7 @@
 						<aligny>$PARAM[Aligny]</aligny>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						<scroll>false</scroll>
 						<visible>$EXP[ListItem.HasInfo]</visible>
 					</control>
 					<control type="label">
@@ -338,6 +339,7 @@
 						<textcolor>$VAR[color:Text.2]</textcolor>
 						<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 						<aligny>top</aligny>
+						<scroll>false</scroll>
 						<visible>$EXP[ListItem.HasInfo]</visible>
 					</control>
 					<control type="label" id="4">
@@ -776,6 +778,7 @@
 							<label>$INFO[ListItem.Label]</label>
 							<height>90</height>
 							<font>Black-26</font>
+							<scroll>true</scroll>
 							<textcolor>$VAR[color:Accent]</textcolor>
 							<selectedcolor>$VAR[color:Accent]</selectedcolor>
 						</control>
@@ -785,6 +788,7 @@
 							<label>$PARAM[Label2]</label>
 							<height>45</height>
 							<font>Regular-20</font>
+							<scroll>true</scroll>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Text.2]</textcolor>
 							<selectedcolor>$VAR[color:Text.3]</selectedcolor>
@@ -795,6 +799,7 @@
 							<label>$VAR[media:Description]</label>
 							<height>96</height>
 							<font>Regular-22-L</font>
+							<scroll>true</scroll>
 							<aligny>top</aligny>
 							<textcolor>$VAR[color:Text.3]</textcolor>
 							<autoscroll>false</autoscroll>

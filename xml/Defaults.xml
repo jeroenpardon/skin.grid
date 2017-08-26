@@ -18,7 +18,7 @@
 		<textcolor>$VAR[color:Text.3]</textcolor>
 		<disabledcolor>$VAR[color:Disabled]</disabledcolor>
 		<selectedcolor>$VAR[color:Main]</selectedcolor>
-		<scroll>false</scroll>
+		<scroll>true</scroll>
 		<scrollspeed>autoscroll_Line</scrollspeed>
 		<scrollsuffix> | </scrollsuffix>
 	</default>
