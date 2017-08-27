@@ -123,7 +123,7 @@
 				<aspectratio>stretch</aspectratio>
 				<width>1920</width>
 				<height>1080</height>
-				<texture colordiffuse="ff000000">colorize/white.png</texture>`
+				<texture colordiffuse="ff000000">colorize/white.png</texture>
 			</control>
 			<control type="videowindow">
 				<top>0</top>
@@ -218,6 +218,7 @@
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/20.png</texture>
 					<aspectratio>stretch</aspectratio>
+					<visible>$EXP[VolumeBarMuted]</visible>
 					<visible>!Window.IsActive(Home)</visible>
 				</control>
 
@@ -272,7 +273,7 @@
 					<width>1600</width>
 					<height>$PARAM[Height]</height>
 					<orientation>vertical</orientation>
-
+					<visible>$EXP[VolumeBarMuted]</visible>
 					<control type="button">
 						<width max="1280">auto</width>
 						<height>$PARAM[Height]</height>
@@ -375,6 +376,7 @@
 					<left>$PARAM[TimeLeft]</left>
 					<width>128</width>
 					<height>$PARAM[Height]</height>
+					<visible>$EXP[VolumeBarMuted]</visible>
 					<visible>![Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact) + Window.IsVisible(volumebar)]</visible>
 					<visible>![Window.IsActive(home) + !Skin.HasSetting(home.clock) + !Window.IsActive(movieinformation)] | Window.IsActive(home) + Window.IsVisible(volumebar) + !Player.Muted</visible>
 					<control type="image">
