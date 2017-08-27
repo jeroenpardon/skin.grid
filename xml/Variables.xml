@@ -1050,7 +1050,7 @@
 	</variable>
 
 
-<!-- Weather -->
+<!-- Weather
 	<variable name="weather:Day1">
 		<value condition="String.IsEqual(Window(Weather).Property(Day1.Title),$LOCALIZE[11])">$LOCALIZE[41]</value>
 		<value condition="String.IsEqual(Window(Weather).Property(Day1.Title),$LOCALIZE[12])">$LOCALIZE[42]</value>
@@ -1110,6 +1110,7 @@
 		<value condition="String.IsEqual(Window(Weather).Property(Day6.Title),$LOCALIZE[16])">$LOCALIZE[46]</value>
 		<value condition="String.IsEqual(Window(Weather).Property(Day6.Title),$LOCALIZE[17])">$LOCALIZE[47]</value>
 	</variable>
+ -->
 
 	<variable name="weather:Icons">
 		<value condition="!String.IsEmpty(Skin.String(weather.icons))">$INFO[Skin.String(weather.icons)]</value>
