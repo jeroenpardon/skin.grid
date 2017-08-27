@@ -631,18 +631,6 @@
 							<height>$PARAM[ArtHeight]</height>
 						</control>
 					</control>
-					<!-- Airs today -->
-					<control type="button">
-						<width min="90">auto</width>
-						<top>54</top>
-						<label>$VAR[info:AirsToday]</label>
-						<height>54</height>
-						<onclick>noop</onclick>
-						<textcolor>$LOCALIZE[31718]</textcolor>
-						<texturenofocus colordiffuse="eeE65100">colorize/95.png</texturenofocus>
-						<texturefocus colordiffuse="eeE65100">colorize/95.png</texturefocus>
-						<visible>String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])</visible>
-					</control>
 				</control>
 				<!-- Media info -->
 				<control type="group">
