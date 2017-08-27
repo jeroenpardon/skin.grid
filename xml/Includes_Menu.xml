@@ -926,7 +926,7 @@
 			</control>
 		</control>
 
-		<!-- Add-on2 system settings -->
+		<!-- Add-ons system settings -->
 		<control type="group" id="7014">
 			<height>108</height>
 			<visible>Window.IsActive(1110) | String.IsEqual(Container.FolderPath,addons://)</visible>
