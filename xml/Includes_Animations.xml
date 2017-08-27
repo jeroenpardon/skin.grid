@@ -22,6 +22,7 @@
 		<animation effect="slide" end="0,-108" time="300" tween="Sine" easing="In" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.layout),horizontal) + !String.IsEqual(Window(Home).Property(ShowClock),true)">Conditional</animation>
 	</include>
 
+
 <!--global-->
 	<include name="fadeinout">
 		<animation type="WindowOpen">
@@ -62,8 +63,8 @@
 		</animation>
 	</include>
 
-<!--transitions-->
 
+<!--transitions-->
 	<include name="transition_Home">
 		<animation type="WindowClose">
 			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
@@ -135,6 +136,7 @@
 			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
 		</animation>
 	</include>
+
 
 <!--toggles-->
 	<include name="toggle_Menu">

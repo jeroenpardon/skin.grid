@@ -469,7 +469,7 @@ msgid "Show now playing video in background"
 msgstr ""
 
 msgctxt "#31316"
-msgid "Show fanart for currently playing artist"
+msgid "Show on the homescreen too"
 msgstr ""
 
 msgctxt "#31317"

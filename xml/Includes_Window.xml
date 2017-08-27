@@ -142,26 +142,13 @@
 			</animation>
 			<control type="visualisation" id="2">
 				<include>screen_Dimensions</include>
-				<visible>String.IsEqual(Skin.String(viz.mode),viz) | String.IsEqual(Skin.String(viz.mode),blend)</visible>
+				<visible>Player.HasAudio + [String.IsEqual(Skin.String(viz.mode),viz) | String.IsEqual(Skin.String(viz.mode),blend)]</visible>
 			</control>
 			<control type="multiimage">
-				<include>screen_Dimensions</include>
-				<aspectratio align="center">scale</aspectratio>
-				<randomize>true</randomize>
-				<loop>true</loop>
-				<timeperimage>8000</timeperimage>
-				<fadetime>fadetime_Slideshow</fadetime>
-				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
-				<visible>!String.IsEqual(Skin.String(viz.mode),viz) + [System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + !String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))]</visible>
-			</control>
-			<control type="image">
-				<include>screen_Dimensions</include>
-				<texture>$VAR[player:Art]</texture>
-				<fadetime>fadetime_Thumb</fadetime>
-				<aspectratio align="center" aligny="center">scale</aspectratio>
-				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
-				<visible>!String.IsEqual(Skin.String(viz.mode),viz) + [String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))]</visible>
+				<imagepath background="true">$VAR[background:Player]</imagepath>
+				<include>fadeinout</include>
+				<animation effect="fade" end="60" time="0" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
+				<visible>Player.HasAudio + [!String.IsEqual(Skin.String(viz.mode),none) | !String.IsEqual(Skin.String(viz.mode),blend) | !String.IsEqual(Skin.String(viz.mode),viz)]</visible>
 			</control>
 		</control>
 	</include>
@@ -285,7 +272,7 @@
 					<width>1600</width>
 					<height>$PARAM[Height]</height>
 					<orientation>vertical</orientation>
-					<visible>!Window.IsActive(Home)</visible>
+
 					<control type="button">
 						<width max="1280">auto</width>
 						<height>$PARAM[Height]</height>

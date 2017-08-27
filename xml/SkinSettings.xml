@@ -375,13 +375,6 @@
 						<include>radio_Settings</include>
 						<visible>String.StartsWith(Skin.String(home.background),fanart-)</visible>
 					</control>
-					<!-- Playing item on home -->
-					<control type="radiobutton" id="9325">
-						<label>$LOCALIZE[31316]</label>
-						<onclick>Skin.ToggleSetting(home.nowplaying)</onclick>
-						<selected>Skin.HasSetting(home.nowplaying)</selected>
-						<include>radio_Settings</include>
-					</control>
 
 					<!-- Global -->
 					<control type="label" id="9330">
@@ -451,6 +444,12 @@
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=viz.mode,header=$LOCALIZE[31711])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
+					</control>
+					<control type="radiobutton" id="9352">
+						<label>$LOCALIZE[31316]</label>
+						<onclick>Skin.ToggleSetting(home.nowplaying)</onclick>
+						<selected>Skin.HasSetting(home.nowplaying)</selected>
+						<include>radio_Settings</include>
 					</control>
 
 					<!-- Weather -->

@@ -5,8 +5,6 @@
 	<variable name="background:Home">
 		<value condition="Window.IsActive(movieinformation) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Window.IsActive(movieinformation) + String.IsEmpty(ListItem.Art(fanart))">views/fallback/fanart.jpg</value>
-		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying) + System.HasAddon(script.artistslideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
-		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying)">$VAR[player:Art]</value>
 		<value condition="String.IsEqual(Skin.String(home.background),custom) + !String.IsEmpty(Skin.String(custom.home))">$INFO[Skin.String(custom.home)]</value>
 		<value condition="String.IsEqual(Skin.String(home.background),custom)">views/fallback/fanart.jpg</value>
 		<value condition="String.IsEqual(Skin.String(home.background),pictures)">$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]</value>
@@ -29,6 +27,11 @@
 		<value condition="String.IsEqual(Skin.String(global.background),fanart) + !String.IsEmpty(ListItem.Art(artist.fanart))">$INFO[ListItem.Art(artist.fanart)]</value>
 		<value condition="String.IsEqual(Skin.String(global.background),fanart) + !String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
 		<value>views/fallback/fanart.jpg</value>
+	</variable>
+
+	<variable name="background:Player">
+		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying) + System.HasAddon(script.artistslideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
+		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying)">$VAR[player:Art]</value>
 	</variable>
 
 <!-- Home -->
