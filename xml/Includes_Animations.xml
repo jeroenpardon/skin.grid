@@ -2,8 +2,8 @@
 <includes>
 
 	 <include name="Burns">
-	 	<animation effect="zoom" start="110" end="125" center="960,540" time="10000" tween="sine" easing="inout" pulse="true" condition="true">Conditional</animation>
-	 	<animation effect="zoom" start="125" end="110" center="960,540" time="10000" tween="sine" easing="inout" pulse="true" condition="true" delay="10000">Conditional</animation>
+	 	<animation effect="zoom" start="110" end="125" center="960,540" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(burns.enable) + ![Skin.HasSetting(home.blurfx) + Window.IsActive(Home)]">Conditional</animation>
+	 	<animation effect="zoom" start="125" end="110" center="960,540" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(burns.enable) + ![Skin.HasSetting(home.blurfx) + Window.IsActive(Home)]" delay="10000">Conditional</animation>
 	</include>
 
 	<include name="UnfocusList">
