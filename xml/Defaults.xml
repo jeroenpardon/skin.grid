@@ -6,8 +6,9 @@
 		<fadetime>fadetime_Slideshow</fadetime>
 		<include condition="!Window.IsActive(Home)">Burns</include>
 		<include>screen_Dimensions</include>
-		<pauseatend>10000</pauseatend>
+		<pauseatend>0</pauseatend>
 		<randomize>true</randomize>
+		<include>Burns</include>
 		<timeperimage>30000</timeperimage>
 	</default>
 
