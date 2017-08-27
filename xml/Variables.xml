@@ -159,7 +159,7 @@
 		<value>$INFO[ListItem.Episode]</value>
 	</variable>
 
-
+	<!-- skinhelper label not functioning -->
 	<variable name="info:Airdate">
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate))">$INFO[Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.LastEpisode.Airdate))">$INFO[Window(Home).Property(SkinHelper.ListItem.LastEpisode.Airdate)]</value>
