@@ -465,8 +465,8 @@ msgid "Show now playing video in background"
 msgstr "Näytä video valikoiden taustalla"
 
 msgctxt "#31316"
-msgid "Show fanart for currently playing artist"
-msgstr "Näytä esittäjän fanitaide toiston aikana"
+msgid "Show on the homescreen too"
+msgstr ""
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
@@ -1071,6 +1071,31 @@ msgstr "Hei hei"
 msgctxt "#31855"
 msgid "See you later"
 msgstr "Nähdään myöhemmin"
+
+#. Do not translate
+msgctxt "#31860"
+msgid "Default (Cyrillic, Latin, Vietnamese"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31861"
+msgid "Unicode"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31862"
+msgid "Roboto (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31863"
+msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31864"
+msgid "Noto (Unicode, manual installation)"
+msgstr ""
 
 #: about
 msgctxt "#31980"

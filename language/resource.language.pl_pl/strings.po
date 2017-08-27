@@ -239,7 +239,7 @@ msgstr "Nigdy nie odtwarzane"
 
 msgctxt "#31078"
 msgid "Incompatible"
-msgstr ""
+msgstr "Niekompatybilny"
 
 msgctxt "#31079"
 msgid "Descriptions"
@@ -262,11 +262,11 @@ msgstr "Pozycje"
 #. be isted by the skin after "on"
 msgctxt "#31085"
 msgid "The add-on providing this feature will not work on"
-msgstr ""
+msgstr "Dodatek wspierający tę funkcję nie działa na systemie"
 
 msgctxt "#31086"
 msgid "Do you want to install it anyway?"
-msgstr ""
+msgstr "Czu chcesz go zainstalować mimo to?"
 
 #: artwork
 msgctxt "#31200"
@@ -465,8 +465,8 @@ msgid "Show now playing video in background"
 msgstr "Pokazuj aktualnie odtwarzane wideo w tle"
 
 msgctxt "#31316"
-msgid "Show fanart for currently playing artist"
-msgstr "Pokazuj fanart dla aktualnie odtwarzanego artysty"
+msgid "Show on the homescreen too"
+msgstr ""
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
@@ -1071,6 +1071,31 @@ msgstr "Do widzenia"
 msgctxt "#31855"
 msgid "See you later"
 msgstr "Zobaczymy się później"
+
+#. Do not translate
+msgctxt "#31860"
+msgid "Default (Cyrillic, Latin, Vietnamese"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31861"
+msgid "Unicode"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31862"
+msgid "Roboto (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31863"
+msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31864"
+msgid "Noto (Unicode, manual installation)"
+msgstr ""
 
 #: about
 msgctxt "#31980"

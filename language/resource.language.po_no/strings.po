@@ -466,7 +466,7 @@ msgid "Show now playing video in background"
 msgstr "Vis video som avspilles i bakgrunn"
 
 msgctxt "#31316"
-msgid "Show fanart for currently playing artist"
+msgid "Show on the homescreen too"
 msgstr ""
 
 msgctxt "#31317"
@@ -1072,6 +1072,31 @@ msgstr "Farvel"
 msgctxt "#31855"
 msgid "See you later"
 msgstr "Ser deg siden"
+
+#. Do not translate
+msgctxt "#31860"
+msgid "Default (Cyrillic, Latin, Vietnamese"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31861"
+msgid "Unicode"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31862"
+msgid "Roboto (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31863"
+msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31864"
+msgid "Noto (Unicode, manual installation)"
+msgstr ""
 
 #: about
 msgctxt "#31980"

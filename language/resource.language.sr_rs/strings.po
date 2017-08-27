@@ -38,7 +38,7 @@ msgstr "Главни Мени тип"
 #. home menu -->
 msgctxt "#31003"
 msgid "Enable condensed menu layout"
-msgstr ""
+msgstr "Омогућити одређени приказ менија"
 
 msgctxt "#31005"
 msgid "Layout"
@@ -237,6 +237,10 @@ msgctxt "#31077"
 msgid "Never played"
 msgstr "Никада репродуковано"
 
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr "Није компатибилно"
+
 msgctxt "#31079"
 msgid "Descriptions"
 msgstr "Опис"
@@ -252,6 +256,17 @@ msgstr "Сортирај"
 msgctxt "#31084"
 msgid "Items"
 msgstr "Називи"
+
+#. A message that notifies the user that the add-on they are about to install
+#. will not work on their operating system / platform. The name of the OS will
+#. be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr "Овај Додатак неће радити"
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
+msgstr "Да ли заиста желиш да инсталираш?"
 
 #: artwork
 msgctxt "#31200"
@@ -366,7 +381,7 @@ msgstr "Омогући анимаране слике"
 
 msgctxt "#31227"
 msgid "Limit to movie information screen"
-msgstr ""
+msgstr "Ограничење приказа информација за филмове"
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
@@ -417,6 +432,10 @@ msgctxt "#31307"
 msgid "Scrollbar visibility"
 msgstr "Видљивост Клизача"
 
+msgctxt "#31308"
+msgid "Visual effects"
+msgstr "Визуални ефекти"
+
 msgctxt "#31309"
 msgid "Customize this menu"
 msgstr "Прилагоди овај мени"
@@ -446,8 +465,8 @@ msgid "Show now playing video in background"
 msgstr "Прикажи видео у позадини"
 
 msgctxt "#31316"
-msgid "Show fanart for currently playing artist"
-msgstr "Прикажи позадинску слику певача"
+msgid "Show on the homescreen too"
+msgstr ""
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
@@ -702,7 +721,7 @@ msgstr "Ефекат \"мутно\""
 #. changes colours of text and textures to match the fanart image
 msgctxt "#31378"
 msgid "Fanart colours"
-msgstr ""
+msgstr "Боје позадинских слика"
 
 #: osd / player
 msgctxt "#31550"
@@ -830,6 +849,12 @@ msgstr "Програми"
 msgctxt "#31611"
 msgid "Recently played channels"
 msgstr "Недавно гледани Канали"
+
+#. example usage: start as in the start date AND start time of a tv broadcast
+#. e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
+msgstr "Старт"
 
 #: media
 msgctxt "#31650"
@@ -1047,6 +1072,31 @@ msgstr "До скорог виђења"
 msgctxt "#31855"
 msgid "See you later"
 msgstr "Видимо се касније"
+
+#. Do not translate
+msgctxt "#31860"
+msgid "Default (Cyrillic, Latin, Vietnamese"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31861"
+msgid "Unicode"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31862"
+msgid "Roboto (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31863"
+msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31864"
+msgid "Noto (Unicode, manual installation)"
+msgstr ""
 
 #: about
 msgctxt "#31980"
