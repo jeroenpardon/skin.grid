@@ -507,6 +507,9 @@
 				<height>$PARAM[Height]</height>
 				<include>transition_Chrome</include>
 
+				<!-- Reposition for touch -->
+				<animation effect="slide" start="0,0"  end="-454,0" time="150" condition="system.getbool(input.enablemouse)">Conditional</animation>
+
 				<!-- Reposition for homescreen and clock -->
 				<animation effect="slide" start="0,0"  end="0,-11" time="150" condition="Window.IsVisible(Home) + Skin.HasSetting(home.clock)">Conditional</animation>
 				<animation effect="slide" start="0,0"  end="0,-11" time="150" condition="Window.IsVisible(Home) + !Skin.HasSetting(home.clock)">Conditional</animation>
