@@ -57,7 +57,7 @@
 		<definition>
 			<control type="group">
 				<top>0</top>
-				
+	
 				<include>transition_Background</include>
 
 				<!-- Background_Slideshow-->

@@ -86,6 +86,11 @@
 	<!-- Shortcut grouping -->
 	<groupings>
 		<node label="Grid">
+			<!-- Videos -->
+			<node label="3">
+				<shortcut label="$LOCALIZE[31719]" type="31066">ActivateWindow(Videos,plugin://service.library.data.provider?type=randommovies,return)</shortcut>
+				<shortcut label="$LOCALIZE[3]" type="31066">ActivateWindow(Videos,files)</shortcut>
+			</node>
 			<!-- Movies -->
 			<node label="20342">
 				<shortcut label="$LOCALIZE[31712]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=movies,return)</shortcut>
@@ -120,9 +125,12 @@
 				<shortcut label="$ADDON[script.extendedinfo 32038]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/?info=airingtodaytvshows,return)</shortcut>
 			</node>
 			<!-- Other -->
+			<node label="1036">
+				<shortcut label="$LOCALIZE[1036]" type="$LOCALIZE[593]">ActivateWindow(Videos,plugin://script.skin.helper.widgets/?action=favourites&amp;mediatype=favourites,return)</shortcut>
+				<shortcut label="$LOCALIZE[1036]" type="$LOCALIZE[14211]">ActivateWindow(Videos,plugin://script.skin.helper.widgets/?action=favourites&amp;mediafilter=media&amp;mediatype=favourites,return)</shortcut>
+			</node>
+			<!-- Other -->
 			<node label="31062">
-				<shortcut label="$LOCALIZE[31719]" type="31066">ActivateWindow(Videos,plugin://service.library.data.provider?type=randommovies,return)</shortcut>
-				<shortcut label="$LOCALIZE[3]" type="31066">ActivateWindow(Videos,files)</shortcut>
 				<shortcut label="$LOCALIZE[24001]" type="10040">ActivateWindow(1110)</shortcut>
 				<shortcut label="$LOCALIZE[13000]" type="5">ActivateWindow(Settings)</shortcut>
 				<shortcut label="$LOCALIZE[13012]" type="31302">ActivateWindow(shutdownmenu)</shortcut>

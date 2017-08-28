@@ -285,6 +285,7 @@
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
 		<value condition="Container.Content(videos) | String.IsEmpty(Container.Content) + String.StartsWith(Container.FolderPath,plugin://plugin.)">$INFO[ListItem.Label2]</value>
 		<value condition="Container.Content(sets)">$INFO[ListItem.Year]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites)">$INFO[ListItem.Genre]$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]</value>
 		<value condition="Container.Content(files)">$INFO[ListItem.Date]$INFO[ListItem.Size,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(movies) + Control.IsVisible(50)">$INFO[ListItem.Year]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;, $LOCALIZE[31075]]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)] + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  &#9733; ]$INFO[ListItem.Genre,  |  ]</value>
@@ -1412,7 +1413,12 @@
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 		<value condition="Window.IsActive(1110)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsActive(MyPlaylist.xml)">$LOCALIZE[13350]</value>
-		<value condition="String.StartsWith(Container.FolderPath,plugin://script.watchlist) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=nextepisodes) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.service/?action=recommendedmovies) | String.StartsWith(Container.FolderPath,plugin://service.library.data.provider?type=recommended)">$LOCALIZE[31712]</value>
+
+
+		<value condition="String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites&amp;mediatype=favourites)">$ADDON[script.skin.helper.widgets 32000]</value>
+		<value condition="String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites&amp;mediafilter=media&amp;mediatype=favourites)">$ADDON[script.skin.helper.widgets 32000]</value>
+
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.watchlist) | String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=next&amp;) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=recommendedmovies) | String.StartsWith(Container.FolderPath,plugin://service.library.data.provider?type=recommended)">$LOCALIZE[31712]</value>
 		<value condition="String.IsEqual(Container.FolderPath,sources://video/)">$LOCALIZE[31661]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
 		<value condition="String.IsEqual(Container.FolderName,$LOCALIZE[369])">$INFO[Container.Content]</value>
