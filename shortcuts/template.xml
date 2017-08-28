@@ -251,6 +251,7 @@
 		<controls>
 			<include content="widget_Header">
 				<param name="ID">1000$SKINSHORTCUTS[id]</param>
+				<param name="Height">$SKINSHORTCUTS[headerheight]</param>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
