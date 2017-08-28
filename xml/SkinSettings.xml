@@ -762,7 +762,8 @@
 					<control type="radiobutton" id="9630">
 						<label>$LOCALIZE[31377]</label>
 						<label2>$INFO[Skin.String(home.blurfx)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.blurfx)</onclick>
+						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android + String.IsEqual(Skin.String(homemenu.layout),horizontal)">Skin.ToggleSetting(home.blurfx)</onclick>
+						<onclick condition="String.Contains(Control.GetLabel(9660),*)">Skin.ToggleSetting(burns.enable)</onclick>
 						<selected>Skin.HasSetting(home.blurfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
@@ -772,9 +773,9 @@
 					<!-- Fanart colours -->
 					<control type="radiobutton" id="9640">
 						<label>$LOCALIZE[31378]</label>
-						<label2>$INFO[Skin.String(home.colorfx.disable)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.colorfx.disable)</onclick>
-						<selected>!Skin.HasSetting(home.colorfx.disable)</selected>
+						<label2>$INFO[Skin.String(home.colorfx)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.colorfx)</onclick>
+						<selected>Skin.HasSetting(home.colorfx)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 					</control>
@@ -788,8 +789,10 @@
 					<control type="radiobutton" id="9660">
 						<label>$LOCALIZE[31365] ($LOCALIZE[31326])</label>
 						<onclick>Skin.ToggleSetting(burns.enable)</onclick>
+						<!--<onclick condition="!String.Contains(Control.GetLabel(9660),*)">ReloadSkin()</onclick>-->
 						<selected>Skin.HasSetting(burns.enable)</selected>
 						<include>radio_Settings</include>
+						<enable>!Skin.HasSetting(home.blurfx)</enable>
 					</control>
 					<!-- Animated artwork -->
 					<control type="radiobutton" id="9670">
