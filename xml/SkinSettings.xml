@@ -79,7 +79,7 @@
 				<!-- Visual FX -->
 				<control type="button" id="6">
 					<include>settings_Menu</include>
-					<label>Visual effects</label>
+					<label>$LOCALIZE[31308]</label>
 					<onfocus>Skin.SetString(category,visualfx)</onfocus>
 					<onright>9600</onright>
 				</control>
