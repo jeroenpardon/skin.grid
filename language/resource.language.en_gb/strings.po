@@ -1108,7 +1108,7 @@ msgstr ""
 
 #. Do not translate
 msgctxt "#31864"
-msgid "Noto (Unicode, manual installation)"
+msgid "Heebo (Hebrew, Latin)"
 msgstr ""
 
 

@@ -33,7 +33,7 @@
 			</control>
 			<control type="progress" id="20">
 				<left>-1920</left>
-				<info>Player.Progressbar</info>
+				<info>System.Progressbar</info>
 				<visible>false</visible>
 			</control>
 
