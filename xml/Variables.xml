@@ -235,7 +235,7 @@
 		<value condition="String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,blu-ray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,brrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50)">BluRay</value>
 		<value condition="[String.Contains(ListItem.FilenameAndPath,web.dl) | String.Contains(ListItem.FilenameAndPath,web-dl) | String.Contains(ListItem.FilenameAndPath,webdl) | String.Contains(ListItem.FilenameAndPath,web-download) | String.Contains(ListItem.FilenameAndPath,webrip)] + ![String.Contains(ListItem.VideoCodec,vp8) | String.Contains(ListItem.VideoCodec,vp9)]">WEB-DL</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,hdtv) | String.Contains(ListItem.FilenameAndPath,hdrip)">HDTV</value>
-		<value condition="String.Contains(ListItem.FilenameAndPath,PDTV) | String.Contains(ListItem.FilenameAndPath,sdtv) | String.Contains(ListItem.FilenameAndPath,sd)">SD</value>
+		<value condition="String.Contains(ListItem.FilenameAndPath,PDTV) | String.Contains(ListItem.FilenameAndPath,sdtv) | [String.Contains(ListItem.FilenameAndPath,sd) + !String.Contains(ListItem.FilenameAndPath,sda) + !String.Contains(ListItem.FilenameAndPath,sdb) + !String.Contains(ListItem.FilenameAndPath,sdc) + !String.Contains(ListItem.FilenameAndPath,sdd)]">SD</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,hddvd) | String.Contains(ListItem.FilenameAndPath,hd-dvd)">HDDVD</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,.telesync) | String.Contains(ListItem.FilenameAndPath,.ts.)">TS</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,.cam)">CAM</value>
