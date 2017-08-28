@@ -1088,12 +1088,12 @@ msgstr ""
 
 #. Do not translate
 msgctxt "#31860"
-msgid "Default (Cyrillic, Latin, Vietnamese"
+msgid "Default (Cyrillic, Latin, Vietnamese)"
 msgstr ""
 
 #. Do not translate
 msgctxt "#31861"
-msgid "Unicode"
+msgid "Arial Unicode (All languages)"
 msgstr ""
 
 #. Do not translate
