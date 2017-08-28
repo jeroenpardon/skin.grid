@@ -25,7 +25,8 @@
 		<item control="304">$ADDON[script.skinshortcuts 32003]</item><!--move down-->
 		<item control="307">$ADDON[script.skinshortcuts 32027]</item><!--change action-->
 		<item control="305">$ADDON[script.skinshortcuts 32025]</item><!--set label-->
-		<item control="313">$ADDON[script.skinshortcuts 32117]</item><!--disable-->
+		<item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),False)">$LOCALIZE[31019]</item><!-- Disable shortcut -->
+        <item control="313" condition="String.IsEqual(Container(211).ListItem.Property(skinshortcuts-disabled),True)">$LOCALIZE[31020]</item><!-- Enable shortcut -->
 		<item control="302">$ADDON[script.skinshortcuts 32001]</item><!--delete-->
 	</contextmenu>
 
