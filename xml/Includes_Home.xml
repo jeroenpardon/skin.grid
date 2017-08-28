@@ -15,6 +15,32 @@
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
 			<param name="id" condition="Skin.HasSetting(home.colorfx)">7977</param>
 		</include>
+
+		<!-- Scroll indicators -->
+		<control type="label">
+			<width>128</width>
+			<height>98</height>
+			<font>Symbols-32</font>
+			<label>&#58919;</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[color:Text.3]</textcolor>
+			<include>fadeinout</include>
+			<visible>Container(9000).HasPrevious + IntegerGreaterThan(Container(9000).NumItems,8) + !Player.Muted</visible>
+		</control>
+		<control type="label">
+			<bottom>0</bottom>
+			<width>128</width>
+			<height>98</height>
+			<font>Symbols-32</font>
+			<label>&#58922;</label>
+			<align>center</align>
+			<aligny>center</aligny>
+			<textcolor>$VAR[color:Text.3]</textcolor>
+			<include>fadeinout</include>
+			<visible>Container(9000).HasNext + IntegerGreaterThan(Container(9000).NumItems,8)</visible>
+		</control>
+
 		<include>home_Menu-vertical</include>
 		<include content="global_WindowChrome">
 			<param name="Height">98</param>
