@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol></defaultcontrol>
 
-	<onload>SetProperty(ApplySettings,1,Home)</onload>
+	<onload>SetProperty(GridIsLoaded,1,Home)</onload>
 
 	<onload>RunScript(script.grab.fanart,mode=random,refresh=30)</onload>
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,20)</onload>

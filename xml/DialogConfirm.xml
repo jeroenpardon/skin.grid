@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>9000</defaultcontrol>
-	<onunload condition="String.IsEmpty(Window(Home).Property(ApplySettings))">ActivateWindow(Startup.xml)</onunload>
+	<onunload condition="String.IsEmpty(Window(Home).Property(GridIsLoaded))">ActivateWindow(Startup.xml)</onunload>
 	<controls>
 
 		<include>background_Global</include>
