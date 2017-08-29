@@ -169,6 +169,7 @@
 		<param name="TimeLeft" default="1792"/>
 		<param name="Title" default="$INFO[Control.GetLabel(1)]"/>
 		<param name="Top" default="0"/>
+		<param name="Visible" default="true"/>
 		<param name="Width" default="screen_Width"/>
 		<definition>
 			<control type="group">
@@ -176,6 +177,7 @@
 				<width>screen_Width</width>
 				<include>transition_Chrome</include>
 				<include condition="!Window.IsActive(movieinformation)">slide_Clock</include>
+				<visible>$PARAM[Visible]</visible>
 				<control type="image">
 					<width>128</width>
 					<height>$PARAM[Height]</height>

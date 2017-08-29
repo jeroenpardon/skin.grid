@@ -1,26 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
-	<visible>VideoPlayer.IsFullscreen | Window.IsActive(visualisation)</visible>
-	<visible>Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(fullscreeninfo)</visible>
-	<visible>!Window.IsActive(videoosd) + !Window.IsActive(playerprocessinfo) + !Window.IsActive(subtitlesearch) + !Window.IsActive(script-cu-lrclyrics-main.xml)</visible>
+	<visible>[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsActive(VideoOSD) + !Window.IsActive(sliderdialog) + !Window.IsActive(bookmarks)</visible>
 	<controls>
+		<include content="global_WindowChrome">
+			<param name="Title">$VAR[window:Title.Player]</param>
+			<param name="Visible">Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
+		</include>
 		<control type="group">
-			<include>fadeinout</include>
-			
-			<include content="global_WindowChrome">
-				<param name="Title">$VAR[window:Title.Player]</param>
+			<include condition="!VideoPlayer.Content(livetv)">osd_Info</include>
+			<include condition="VideoPlayer.Content(livetv)" content="osd_Info">
+				<param name="InfoWidth">1490</param>
+				<param name="TextWidth">1464</param>
+				<param name="ArtWidth">112</param>
+				<param name="ArtHeight">112</param>
 			</include>
-			<control type="group">
-				<visible>Player.ShowInfo</visible>
-				<include condition="!VideoPlayer.Content(livetv)">osd_Info</include>
-				<include condition="VideoPlayer.Content(livetv)" content="osd_Info">
-					<param name="InfoWidth">1490</param>
-					<param name="TextWidth">1464</param>
-					<param name="ArtWidth">112</param>
-					<param name="ArtHeight">112</param>
-				</include>
-			</control>
 		</control>
 	</controls>
 </window>

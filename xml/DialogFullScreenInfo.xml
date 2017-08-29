@@ -2,32 +2,13 @@
 <window>
 	<defaultcontrol always="true">636</defaultcontrol>
 	<controls>
-		<!--trigger button to allow interaction while info panel is active--> 
 		<control type="button" id="636">
 			<onleft>Action(StepBack)</onleft>
 			<onright>Action(StepForward)</onright>
 			<onup>Action(ChapterOrBigStepForward)</onup>
 			<ondown>Action(ChapterOrBigStepBack)</ondown>
-			<onfocus>HideSubtitles</onfocus>
 			<onclick>ActivateWindow(videoosd)</onclick>
-			<oninfo>Back</oninfo>
 			<include>TriggerButton</include>
-		</control>
-		<control type="group">
-			<visible>![Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.Caching] | Player.Forwarding | Player.Rewinding]</visible>
-			<control type="group">
-				<include>osd_Info</include>
-				<visible>!VideoPlayer.Content(livetv)</visible>
-			</control>
-			<control type="group">
-				<include condition="!VideoPlayer.Content(livetv)">osd_Info</include>
-				<include condition="VideoPlayer.Content(livetv)" content="osd_Info">
-					<param name="InfoWidth">1490</param>
-					<param name="TextWidth">1464</param>
-					<param name="ArtWidth">112</param>
-					<param name="ArtHeight">112</param>
-				</include>
-			</control>
 		</control>
 	</controls>
 </window>

@@ -1289,11 +1289,11 @@
 		<value condition="Window.IsVisible(DialogVolumeBar.xml) + IntegerGreaterThan(Player.Volume,50)">&#57504;</value>
 		<value condition="Window.IsVisible(DialogVolumeBar.xml) + IntegerGreaterThan(Player.Volume,0)">&#57503;</value>
 		<value condition="Player.Muted">&#57505;</value>
-		<value condition="Window.IsActive(seekbar) + Player.Playing">&#59053;</value>
-		<value condition="Window.IsActive(seekbar) + Player.Paused">&#59054;</value>
-		<value condition="Window.IsActive(seekbar) + Player.Rewinding">&#59056;</value>
-		<value condition="Window.IsActive(seekbar) + Player.Forwarding">&#59055;</value>
-		<value condition="Window.IsActive(seekbar)">&#57457;</value>
+		<value condition="VideoPlayer.IsFullscreen + Player.Playing">&#59053;</value>
+		<value condition="VideoPlayer.IsFullscreen + Player.Paused">&#59054;</value>
+		<value condition="VideoPlayer.IsFullscreen + Player.Rewinding">&#59056;</value>
+		<value condition="VideoPlayer.IsFullscreen + Player.Forwarding">&#59055;</value>
+		<value condition="VideoPlayer.IsFullscreen">&#57457;</value>
 		<!-- DialogSelect.xml -->
 		<value condition="Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(Settings) | Window.IsActive(addonsettings) | Window.IsActive(osdaudiodspsettings)">&#59014;</value>
 		<value condition="Window.IsActive(osdaudiosettings)">&#57371;</value>
