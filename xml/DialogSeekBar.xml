@@ -3,10 +3,12 @@
 	<defaultcontrol></defaultcontrol>
 	<visible>[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsActive(VideoOSD) + !Window.IsActive(sliderdialog) + !Window.IsActive(bookmarks)</visible>
 	<controls>
+
 		<include content="global_WindowChrome">
 			<param name="Title">$VAR[window:Title.Player]</param>
-			<param name="Visible">Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
+			<param name="Visible">Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsActive(visualisation)</param>
 		</include>
+
 		<control type="group">
 			<include condition="!VideoPlayer.Content(livetv)">osd_Info</include>
 			<include condition="VideoPlayer.Content(livetv)" content="osd_Info">
@@ -16,5 +18,6 @@
 				<param name="ArtHeight">112</param>
 			</include>
 		</control>
+
 	</controls>
 </window>

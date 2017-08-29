@@ -5,8 +5,6 @@
 	<controls>
 		<include>background_Player</include>
 		<control type="group">
-			<include>fadeinout</include>
-			<visible>Player.ShowInfo + ![Window.IsActive(MusicOSD) | Window.IsVisible(okdialog) | Window.IsVisible(AddonSettings) | Window.IsVisible(SelectDialog) | Window.IsVisible(VisualisationPresetList) | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
 			<include content="osd_Info">
 				<param name="Left" value="148"/>
 				<param name="InfoLeft" value="256"/>

@@ -31,7 +31,7 @@
 
 	<variable name="background:Player">
 		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying) + System.HasAddon(script.artistslideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
-		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying)">$VAR[player:Art]</value>
+		<value condition="Player.HasAudio + Window.IsActive(Home) + Skin.HasSetting(home.nowplaying) | Window.IsActive(visualisation)">$VAR[player:Art]</value>
 	</variable>
 
 <!-- Home -->
@@ -1294,11 +1294,11 @@
 		<value condition="Window.IsVisible(DialogVolumeBar.xml) + IntegerGreaterThan(Player.Volume,50)">&#57504;</value>
 		<value condition="Window.IsVisible(DialogVolumeBar.xml) + IntegerGreaterThan(Player.Volume,0)">&#57503;</value>
 		<value condition="Player.Muted">&#57505;</value>
-		<value condition="VideoPlayer.IsFullscreen + Player.Playing">&#59053;</value>
-		<value condition="VideoPlayer.IsFullscreen + Player.Paused">&#59054;</value>
-		<value condition="VideoPlayer.IsFullscreen + Player.Rewinding">&#59056;</value>
-		<value condition="VideoPlayer.IsFullscreen + Player.Forwarding">&#59055;</value>
-		<value condition="VideoPlayer.IsFullscreen">&#57457;</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + Player.Playing">&#59053;</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + Player.Paused">&#59054;</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + Player.Rewinding">&#59056;</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + Player.Forwarding">&#59055;</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)]">&#57457;</value>
 		<!-- DialogSelect.xml -->
 		<value condition="Window.IsActive(osdvideosettings) | Window.IsActive(osdaudiosettings) | Window.IsActive(Settings) | Window.IsActive(addonsettings) | Window.IsActive(osdaudiodspsettings)">&#59014;</value>
 		<value condition="Window.IsActive(osdaudiosettings)">&#57371;</value>
@@ -1418,11 +1418,8 @@
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 		<value condition="Window.IsActive(1110)">$LOCALIZE[24001]</value>
 		<value condition="Window.IsActive(MyPlaylist.xml)">$LOCALIZE[13350]</value>
-
-
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites&amp;mediatype=favourites)">$ADDON[script.skin.helper.widgets 32000]</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites&amp;mediafilter=media&amp;mediatype=favourites)">$ADDON[script.skin.helper.widgets 32000]</value>
-
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.watchlist) | String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=next&amp;) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=recommendedmovies) | String.StartsWith(Container.FolderPath,plugin://service.library.data.provider?type=recommended)">$LOCALIZE[31712]</value>
 		<value condition="String.IsEqual(Container.FolderPath,sources://video/)">$LOCALIZE[31661]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
@@ -1445,7 +1442,7 @@
 		<value condition="!String.IsEmpty(Player.SeekStepSize) + ![Player.Forwarding | Player.Rewinding]">$LOCALIZE[773] $INFO[Player.SeekStepSize]</value>
 		<value condition="Player.DisplayAfterSeek + ![Player.Forwarding | Player.Rewinding]">$INFO[Player.TimeRemaining]</value>
 		<value condition="!Player.DisplayAfterSeek + Player.Seeking">$LOCALIZE[773]</value>
-		<value condition="VideoPlayer.IsFullscreen">$INFO[Player.TimeRemaining]</value>
+		<value condition="VideoPlayer.IsFullscreen | Window.IsActive(visualisation)">$INFO[Player.TimeRemaining]</value>
 	</variable>
 
 	<variable name="window:Title.PVR">
