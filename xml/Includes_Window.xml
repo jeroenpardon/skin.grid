@@ -286,7 +286,7 @@
 						<visible>$EXP[!Window.HasOverlay]</visible>
 					</control>
 					<control type="button">
-						<width ma="1600">auto</width>
+						<width max="1600">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
