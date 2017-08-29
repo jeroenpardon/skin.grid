@@ -101,6 +101,12 @@
 	<setting id="epg.scrollspeed" value="fast" label="$LOCALIZE[31328]"/>
 	<setting id="epg.scrollspeed" value="instant" label="$LOCALIZE[31329]"/>
 
+	<!-- EPG row count 
+	<setting id="epg.rowcount" value="seven" label="seven" default="true"/>
+	<setting id="epg.rowcount" value="five" label="five"/>
+	<setting id="epg.rowcount" value="ten" label="ten"/>
+	-->
+
 	<!-- List view artwork type -->
 	<setting id="view.list.art" value="posters" label="$LOCALIZE[31200]"/>
 	<setting id="view.list.art" value="fanart" label="$LOCALIZE[31218]" default="true"/>

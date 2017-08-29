@@ -9,13 +9,13 @@
 	<include file="Includes_OSD.xml" />
 	<include file="Includes_Window.xml" />
 	<include file="Menu.xml" />
+	<include file="script-skinshortcuts-includes.xml" />
 	<include file="Variables.xml" />
 	<include file="ViewGallery.xml" />
+	<include file="ViewGuide.xml" />
 	<include file="ViewIcon.xml" />
 	<include file="ViewList.xml" />
 	<include file="ViewSlide.xml" />
-	<include file="ViewsPVR.xml" />
-	<include file="script-skinshortcuts-includes.xml" />
 
 <!-- Constants -->
 	<constant name="autoscroll_Delay">10000</constant>
@@ -796,4 +796,5 @@
 		<aligny>center</aligny>
 		<textcolor>white</textcolor>
 	</include>
+
 </includes> 
