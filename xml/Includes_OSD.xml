@@ -477,8 +477,10 @@
 
 	<!--fullscreen info-->
 	<include name="osd_Info">
+		<param name="Visible">Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
 		<definition>
 			<control type="group">
+				<visible>$PARAM[Visible]</visible>
 				<include>transition_Content</include>
 				<control type="image">
 					<width>screen_Width</width>
@@ -486,7 +488,6 @@
 					<texture colordiffuse="ff000000">views/diffuse/fullscreeninfo.png</texture>
 					<animation effect="fade" end="60" time="0" condition="Window.IsActive(visualisation)">Conditional</animation>
 				</control>
-
 				<control type="group">
 					<top>750</top>
 					<width>1920</width>
