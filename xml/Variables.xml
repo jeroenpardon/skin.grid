@@ -318,8 +318,8 @@
 	<variable name="media:Title">
 		<value condition="Window.IsActive(videoplaylist) + !String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Title]</value>
 		<value condition="Window.IsActive(videoplaylist) + String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Label]</value>
-		<value condition="Container.Content(tvshows) + String.Contains(Container.FolderPath,plugin://script.skin.helper.service/?action=nextairedtvshows)">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Label]</value>
-		<value condition="Container.Content(episodes) + !Skin.HasSetting(logos.enable)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Title,: ]</value>
+		<value condition="Container.Content(episodes) + String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=nextmediatype=episodes)">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Label]</value>
+		<value condition="Container.Content(episodes) + !Skin.HasSetting(logos.enable)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Title,: ]</value> 
 		<value condition="Container.Content(episodes) + ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Title]</value>
 		<value condition="Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)">[B]$INFO[ListItem.ChannelNumber,,  ][/B]$INFO[ListItem.Label]</value>
