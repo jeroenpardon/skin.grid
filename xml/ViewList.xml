@@ -270,7 +270,7 @@
 				<onright>$PARAM[PageControl]</onright>
 				<pagecontrol>$PARAM[PageControl]</pagecontrol>
 				<include>global_ListScroll</include>
-				<preloaditems>4</preloaditems>
+				<preloaditems>2</preloaditems>
 				<!--library-->
 				<itemlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
 					<control type="image">
@@ -356,28 +356,28 @@
 					<control type="image">
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
 						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | [Container.Content(files) + !Container.HasFiles + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(tags) | Container.Content(years) | Container.Content(events)</visible>
 					</control>
 					<control type="image">
 						<width>1036</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
 						<visible>$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(Container.FolderPath,pvr://channels/) | Container.Content(favourites)</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
 						<visible>$EXP[Art.IsPortrait]</visible>
 					</control>			
 					<control type="image">
 						<width>$PARAM[SymbolSize]</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture colordiffuse="ff000000">colorize/15.png</texture>
+						<texture background="true" colordiffuse="ff000000">colorize/15.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="group">
@@ -400,7 +400,7 @@
 							<top>22</top>
 							<width>$PARAM[IconSize]</width>
 							<height>$PARAM[IconSize]</height>
-							<texture>$PARAM[Icon]</texture>
+							<texture background="true">$PARAM[Icon]</texture>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<visible>$PARAM[ShowIcon]</visible>
 						</control>
@@ -591,7 +591,7 @@
 					<control type="image">
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ArtHeight]</height>
-						<texture>$PARAM[Art]</texture>
+						<texture background="true">$PARAM[Art]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
 					</control>
@@ -600,7 +600,7 @@
 						<bottom>24</bottom>
 						<width>100%</width>
 						<height>40%</height>
-						<texture>$PARAM[Logo]</texture>
+						<texture background="true">$PARAM[Logo]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<visible>$PARAM[ShowLogo]</visible>
@@ -611,7 +611,7 @@
 						<bottom>24</bottom>
 						<width>64</width>
 						<height>64</height>
-						<texture>$PARAM[ProviderLogo]</texture>
+						<texture background="true">$PARAM[ProviderLogo]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						<visible>!ListItem.IsParentFolder</visible>
