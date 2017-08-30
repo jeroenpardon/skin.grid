@@ -728,20 +728,20 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
+							<texture background="true" colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture>$PARAM[Art]</texture>
+							<texture background="true">$PARAM[Art]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
 						<control type="image">
 							<bottom>24</bottom>
 							<width>$PARAM[ArtWidth]</width>
 							<height>35%</height>
-							<texture>$PARAM[Logo]</texture>
+							<texture background="true">$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
@@ -805,20 +805,20 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="$VAR[color:Text.2]" diffuse="views/diffuse/direction/left.png">$VAR[art:Fallback]</texture>
+							<texture background="true" colordiffuse="$VAR[color:Text.2]" diffuse="views/diffuse/direction/left.png">$VAR[art:Fallback]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture diffuse="views/diffuse/direction/left.png">$PARAM[Art]</texture>
+							<texture background="true" diffuse="views/diffuse/direction/left.png">$PARAM[Art]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
 						<control type="image">
 							<bottom>24</bottom>
 							<width>$PARAM[ArtWidth]</width>
 							<height>35%</height>
-							<texture>$PARAM[Logo]</texture>
+							<texture background="true">$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
