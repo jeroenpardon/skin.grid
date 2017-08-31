@@ -1291,8 +1291,8 @@
 
 	<variable name="window:Symbol">
 		<value condition="Window.IsActive(pictureinfo)">&#57483;</value>
-		<value condition="Window.IsVisible(DialogVolumeBar.xml) + IntegerGreaterThan(Player.Volume,50)">&#57504;</value>
-		<value condition="Window.IsVisible(DialogVolumeBar.xml) + IntegerGreaterThan(Player.Volume,0)">&#57503;</value>
+		<value condition="Window.IsVisible(DialogVolumeBar.xml) + Integer.IsGreater(Player.Volume,50)">&#57504;</value>
+		<value condition="Window.IsVisible(DialogVolumeBar.xml) + Integer.IsGreater(Player.Volume,0)">&#57503;</value>
 		<value condition="Player.Muted">&#57505;</value>
 		<value condition="[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + Player.Playing">&#59053;</value>
 		<value condition="[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + Player.Paused">&#59054;</value>
