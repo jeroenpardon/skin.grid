@@ -1,4 +1,4 @@
-![Logo](http://imgur.com/mlPLvDB.png)
+![Logo](http://imgur.com/GKJck7u.png)
 
 ### About
 Grid is a graphical user interface for Kodi. The goal for Grid is to provide an elegant and intuitive way of enjoying all the wonderful features that Kodi provides. The design and development focuses on feature quality rather than quantity with a lot of attention spent on the little details that matter.
