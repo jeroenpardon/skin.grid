@@ -21,25 +21,3 @@
 		</control>
 	</controls>
 </window>
-
-	<!--<visible>Player.HasMedia + !Window.IsVisible(home) + !Window.IsActive(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(visualisation) + !Window.IsVisible(notification) + !Window.IsVisible(extendedprogressdialog) + ![Window.IsVisible(DialogVolumeBar.xml) + !Player.Muted]</visible>-->
-
-<!--
-		<control type="group">
-
-			<control type="group">
-				<include>toggle_Menu</include>
-				<include>transition_Content</include>
-				<include content="global_Notification">
-					<param name="Height">108</param>
-					<param name="Width">756</param>
-					<param name="Symbol">$VAR[toast:Symbol]</param>
-					<param name="Label1">11111111$VAR[toast:PlayingTitle]</param>
-					<param name="Label2">$VAR[toast:PlayingInfo]</param>
-					<param name="ProgressID">2998</param>
-					<param name="ProgressInfo">Player.Progress</param>
-					<param name="TextColor">$VAR[color:Main]</param>
-				</include>
-			</control>
-		</control>
--->
