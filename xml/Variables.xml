@@ -1050,7 +1050,8 @@
 	</variable>
 
 	<variable name="toast:PlayingTitle">
-		<value condition="Player.HasVideo">$INFO[VideoPlayer.Title]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.EpisodeName)">$INFO[VideoPlayer.EpisodeName]</value>
+		<value condition="!String.IsEmpty(VideoPlayer.Title)">$INFO[VideoPlayer.Title]</value>
 		<value condition="Player.HasAudio + !Player.IsInternetStream">$INFO[MusicPlayer.Title]</value>
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Duration,, $LOCALIZE[31075]]</value>
 	</variable>
