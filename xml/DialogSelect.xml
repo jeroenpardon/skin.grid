@@ -124,9 +124,9 @@
 				<ondown>5</ondown>
 				<align>right</align>
 				<orientation>horizontal</orientation>
-				<!-- Manual -->
+				<!-- Manual / Select / Get -->
 				<control type="button" id="55">
-					<label>&#57475;</label>
+					<label>&#58906;</label>
 					<font>Symbols-24</font>
 					<width>108</width>
 					<onclick>SendClick(5)</onclick>
