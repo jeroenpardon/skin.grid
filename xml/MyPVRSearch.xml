@@ -29,22 +29,25 @@
 			</control>
 
 		<!--views-->
-
-			<include content="view_List">
-				<param name="Label">$INFO[ListItem.Label]</param>
-				<param name="Label2">$INFO[ListItem.Date]$INFO[ListItem.ChannelName, - ]</param>
-				<param name="ShowIcon">true</param>
-			</include>
-
 			<control type="group">
-				<visible>Control.IsVisible(50)</visible>
-				<include content="info_List">
-					<param name="Visible">$EXP[HasMedia]</param>
+				<include>transition_Content</include>
+				<include content="view_List">
+					<param name="Label">$INFO[ListItem.Label]</param>
+					<param name="Label2">$INFO[ListItem.Date]$INFO[ListItem.ChannelName, - ]</param>
+					<param name="ShowIcon">true</param>
 				</include>
-			</control>
 
-			<!--scrollbars-->
-			<include>global_Scrollbar</include>
+				<control type="group">
+					<visible>Control.IsVisible(50)</visible>
+					<include content="info_List">
+						<param name="Visible">$EXP[HasMedia]</param>
+					</include>
+				</control>
+
+				<!--scrollbars-->
+				<include>global_Scrollbar</include>
+
+			</control>
 
 		</control>
 
