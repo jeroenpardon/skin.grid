@@ -533,7 +533,7 @@
 		<value condition="ListItem.Property(Addon.HasUpdate)">&#57496;</value>
 		<value condition="ListItem.Property(Addon.Orphaned)">&#59168;</value>
 		<!--more global properties-->
-		<value condition="String.IsEqual(ListItem.FolderPath,pvr://timers/addtimer/) | String.IsEqual(ListItem.FolderPath,net://) | String.IsEqual(ListItem.FolderPath,add) | String.IsEqual(ListItem.FolderPath,newplaylist://) | String.Contains(ListItem.FolderPath,newsmartplaylist://)">&#57493;</value>
+		<value condition="String.IsEqual(ListItem.FolderPath,pvr://timers/addtimer/) | String.IsEqual(ListItem.FolderPath,net://) | String.IsEqual(ListItem.FolderPath,add) | String.IsEqual(ListItem.FolderPath,newplaylist://) | String.Contains(ListItem.FolderPath,newsmartplaylist://) | String.StartsWith(ListItem.FolderPath,newtag://)">&#57493;</value>
 		<value condition="String.IsEqual(ListItem.FolderPath,zeroconf://) | String.IsEqual(ListItem.FolderPath,upnp://) | String.IsEqual(ListItem.FolderPath,nfs://)">&#57399;</value>
 		<value condition="String.IsEqual(ListItem.FolderPath,smb://)">&#59187;</value>
 		<value condition="String.IsEqual(ListItem.FileNameAndPath,fanart://None/) | String.IsEqual(ListItem.FileNameAndPath,thumb://None/)">&#57474;</value>
@@ -541,6 +541,10 @@
 		<value condition="String.IsEqual(ListItem.FileNameAndPath,image://Browse/)">&#57401;</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,PlayMedia)">&#57477;</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,ActivateWindow) | String.Contains(ListItem.Label,$LOCALIZE[15102])">&#57401;</value>
+
+		<value condition="String.Contains(ListItem.FolderPath,/tags/)">&#57429;</value>
+
+
 		<!--content types-->
 		<value condition="Container.Content(actors) | Container.Content(directors)">&#57349;</value>
 		<value condition="Container.Content(artists)">&#57443;</value>
