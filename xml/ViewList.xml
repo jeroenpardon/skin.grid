@@ -938,7 +938,7 @@
 						<aligny>center</aligny>
 						<label>$PARAM[Symbol]</label>
 						<textcolor>$VAR[color:Text.3]</textcolor>
-						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 						<visible>$PARAM[ShowSymbol]</visible>
 					</control>
 					<control type="image">
@@ -959,7 +959,7 @@
 							<font>$PARAM[Font]</font>
 							<label>$PARAM[Label]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>$PARAM[Label2Empty]</visible>
 						</control>
 						<control type="label">
@@ -970,7 +970,7 @@
 							<font>$PARAM[Font]</font>
 							<label>$PARAM[Label]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
@@ -1017,7 +1017,7 @@
 							<aligny>center</aligny>
 							<label>$PARAM[Symbol]</label>
 							<textcolor>$VAR[color:Main]</textcolor>
-							<selectedcolor>$VAR[color:Main]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 						</control>
 						<control type="label">
 							<width>$PARAM[SymbolSize]</width>
@@ -1027,7 +1027,7 @@
 							<aligny>center</aligny>
 							<label>$PARAM[Symbol]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>!Control.HasFocus($PARAM[ID])</visible>
 						</control>
 						<control type="image">
@@ -1085,7 +1085,7 @@
 							<font>$PARAM[Font]</font>
 							<label>$PARAM[Label]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>$PARAM[Label2Empty]</visible>
 						</control>
 						<!--a label2 is available, so use two rows-->
@@ -1097,7 +1097,7 @@
 							<font>$PARAM[Font]</font>
 							<label>$PARAM[Label]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
