@@ -192,9 +192,6 @@
 		<value></value>
 	</variable>
 
-
-	
-
 	<variable name="info:AudioChannels">
 		<value condition="String.IsEqual(ListItem.AudioChannels,1)">1.0</value>
 		<value condition="String.IsEqual(ListItem.AudioChannels,2)">2.0</value>
