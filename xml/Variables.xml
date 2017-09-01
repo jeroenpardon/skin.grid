@@ -158,13 +158,30 @@
 		<value>$INFO[ListItem.Episode]</value>
 	</variable>
 
-	<!-- skinhelper label not functioning -->
+	<variable name="info:NextEpisode">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Label))">$INFO[Window(Home).Property(SkinHelper.ListItem.NextEpisode.Label)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.LastEpisode.Label))">$INFO[Window(Home).Property(SkinHelper.ListItem.LastEpisode.Label)]</value>
+		<value>$LOCALIZE[31054]</value>
+	</variable>
+
+	<variable name="info:AirsNext">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate))">$INFO[Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate)]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.LastEpisode.Airdate))">$INFO[Window(Home).Property(SkinHelper.ListItem.LastEpisode.Airdate)]</value>
+		<value>$LOCALIZE[31054]</value>
+	</variable>
+
+	<variable name="info:AirsNext.Label">
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate))">$LOCALIZE[31669]</value>
+		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.LastEpisode.Airdate))">$LOCALIZE[31670]</value>
+		<value>$LOCALIZE[31670]</value>
+	</variable>
+	
 	<variable name="info:Airdate">
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate))">$INFO[Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate)]</value>
 		<value condition="!String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.LastEpisode.Airdate))">$INFO[Window(Home).Property(SkinHelper.ListItem.LastEpisode.Airdate)]</value>
 		<value>$LOCALIZE[31054]</value>
 	</variable>
-	
+
 	<variable name="info:Airdate.Label">
 		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Continuing)">$LOCALIZE[31651]</value>
 		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.Status),Ended) | String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Status))">$LOCALIZE[31650]</value>
@@ -174,6 +191,9 @@
 		<value condition="String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])">$LOCALIZE[31718]</value>
 		<value></value>
 	</variable>
+
+
+	
 
 	<variable name="info:AudioChannels">
 		<value condition="String.IsEqual(ListItem.AudioChannels,1)">1.0</value>
@@ -541,10 +561,7 @@
 		<value condition="String.IsEqual(ListItem.FileNameAndPath,image://Browse/)">&#57401;</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,PlayMedia)">&#57477;</value>
 		<value condition="String.Contains(ListItem.FilenameAndPath,ActivateWindow) | String.Contains(ListItem.Label,$LOCALIZE[15102])">&#57401;</value>
-
 		<value condition="String.Contains(ListItem.FolderPath,/tags/)">&#57429;</value>
-
-
 		<!--content types-->
 		<value condition="Container.Content(actors) | Container.Content(directors)">&#57349;</value>
 		<value condition="Container.Content(artists)">&#57443;</value>
@@ -780,7 +797,7 @@
 	</variable>
 	<variable name="information:L4">
 		<value condition="Container.Content(movies)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$VAR[media:VideoResolution]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="Container.Content(tvshows)">$VAR[info:Airdate]</value>
+		<value condition="Container.Content(tvshows)">$VAR[info:NextEpisode]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$VAR[media:VideoResolution]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(musicvideos)">$INFO[ListItem.VideoCodec,,&#32;&#32;|&#32;&#32;]$VAR[media:VideoResolution]$VAR[info:Source,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(albums)">$INFO[Window(Home).Property(SkinHelper.ListItem.Duration)]</value>
@@ -878,7 +895,7 @@
 	</variable>
 	<variable name="information:R4">
 		<value condition="Container.Content(movies)">$VAR[info:AudioCodec]$VAR[info:AudioChannels,&#32;&#32;|&#32;&#32;]$INFO[ListItem.AudioLanguage,&#32;&#32;|&#32;&#32;]$INFO[ListItem.SubtitleLanguage, (, $LOCALIZE[287])]</value>
-		<value condition="Container.Content(tvshows)">$INFO[Window(Home).Property(SkinHelper.ListItem.Country)]</value>
+		<value condition="Container.Content(tvshows)">$VAR[info:AirsNext]</value>
 		<value condition="Container.Content(episodes)">$VAR[info:AudioCodec]$VAR[info:AudioChannels,&#32;&#32;|&#32;&#32;]$INFO[ListItem.AudioLanguage,&#32;&#32;|&#32;&#32;]$INFO[ListItem.SubtitleLanguage, (, $LOCALIZE[287])]</value>
 		<value condition="Container.Content(musicvideos)">$VAR[info:AudioCodec]$VAR[info:AudioChannels,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(albums)">$INFO[Window(Home).Property(SkinHelper.ListItem.SongCount)]</value>
@@ -887,7 +904,7 @@
 	</variable>
 	<variable name="information:R4.Label">
 		<value condition="Container.Content(movies)">$LOCALIZE[292]</value>
-		<value condition="Container.Content(tvshows)">$LOCALIZE[574]</value>
+		<value condition="Container.Content(tvshows)">$VAR[info:AirsNext.Label]</value>
 		<value condition="Container.Content(episodes)">$LOCALIZE[292]</value>
 		<value condition="Container.Content(musicvideos)">$LOCALIZE[292]</value>
 		<value condition="Container.Content(albums)">$LOCALIZE[182]</value>
