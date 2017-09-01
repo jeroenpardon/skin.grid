@@ -27,6 +27,5 @@ More info on the add-ons required and/or supported by Grid can be found [here](h
 If you like Grid and would like to buy me a beer (or coffee), a [donation](http://bit.ly/refocusdonate) is greatly appreciated.
 
 ### Links
-[Kodi](http://www.kodi.tv/)
-
-[Grid discussion on Kodi forum](https://forum.kodi.tv/showthread.php?tid=318152)
+- [Kodi's official website](http://www.kodi.tv/)
+- [Grid discussion on Kodi forum](https://forum.kodi.tv/showthread.php?tid=318152)
