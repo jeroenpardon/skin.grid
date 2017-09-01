@@ -28,4 +28,5 @@ If you like Grid and would like to buy me a beer (or coffee), a [donation](http:
 
 ### Links
 [Kodi](http://www.kodi.tv/)
+
 [Grid discussion on Kodi forum](https://forum.kodi.tv/showthread.php?tid=318152)
