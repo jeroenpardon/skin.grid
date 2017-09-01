@@ -16,7 +16,6 @@
 	</variable>
 
 	<variable name="background:Global">
-		<!--<value>$INFO[Window(home).Property(ImageFilterEIGHT)]</value>-->
 		<value condition="Window.IsVisible(fullscreenvideo)">$INFO[Player.Art(fanart)]</value>
 		<value condition="Window.IsActive(weather) + String.IsEmpty(Skin.String(weather.background))">views/fallback/fanart.jpg</value>
 		<value condition="Window.IsActive(weather) + !String.IsEmpty(Skin.String(weather.background))">$INFO[Skin.String(weather.background)]$INFO[Window(Weather).Property(Daily.1.FanartCode)].jpg</value>
