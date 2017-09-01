@@ -665,7 +665,6 @@
 	<variable name="art:Portrait">
 		<value condition="[Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedposter))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="Container.Content(tvshows) + ListItem.IsParentFolder">$INFO[Container().ListItem(2).Art(tvshow.poster)]</value>
-		<value condition="Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366])">$INFO[Container().ListItem(2).Art(thumb)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(Container.Art(season.poster))">$INFO[Container.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
