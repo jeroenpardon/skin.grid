@@ -1040,12 +1040,11 @@
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/radio/)">&#57443;</value>
 	</variable>
 
-	<variable name="pvr:GuideLabel">
-		<value condition="ListItem.HasTimer + !ListItem.IsRecording">&#59179;  $INFO[ListItem.Label]</value>
-		<value condition="ListItem.IsRecording">&#58904;  $INFO[ListItem.Label]</value>
-		<value>$INFO[ListItem.Label]</value>
+	<variable name="pvr:GuideLabel2">
+		<value condition="ListItem.HasTimer + !ListItem.IsRecording">[B]$LOCALIZE[19058][/B] - $INFO[ListItem.Genre]</value>
+		<value condition="ListItem.IsRecording">[B]$LOCALIZE[19043][/B] - $INFO[ListItem.Genre]</value>
+		<value>$INFO[ListItem.Genre]</value>
 	</variable>
-
 
 <!-- Toast -->
 	<variable name="toast:Symbol">

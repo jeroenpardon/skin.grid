@@ -131,14 +131,14 @@
 							<height>40</height>
 							<font>Black-22</font>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<label>$VAR[pvr:GuideLabel]</label>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label" id="3">
 							<left>32</left>
 							<bottom>22</bottom>
 							<width>30</width>
 							<height>20</height>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$VAR[pvr:GuideLabel2]</label>
 							<font>Regular-18</font>
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
@@ -158,14 +158,14 @@
 							<height>40</height>
 							<font>Black-22</font>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<label>$VAR[pvr:GuideLabel]</label>
+							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label" id="3">
 							<left>32</left>
 							<bottom>22</bottom>
 							<width>30</width>
 							<height>20</height>
-							<label>$INFO[ListItem.Genre]</label>
+							<label>$VAR[pvr:GuideLabel2]</label>
 							<font>Regular-18</font>
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
