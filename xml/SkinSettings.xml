@@ -769,10 +769,11 @@
 					<!-- Blur -->
 					<control type="radiobutton" id="9630">
 						<label>$LOCALIZE[31377]</label>
-						<label2>$INFO[Skin.String(home.blurfx)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.blurfx)</onclick>
+						<label2>$INFO[Skin.String(home.fx.home.image)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.fx.home.image)</onclick>
 						<onclick condition="String.Contains(Control.GetLabel(9660),*)">Skin.ToggleSetting(burns.enable)</onclick>
-						<selected>Skin.HasSetting(home.blurfx)</selected>
+						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357][CR]$LOCALIZE[31082],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(home.logo),noaction=Close)</onclick>
+						<selected>Skin.HasSetting(home.fx.home.image)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 						<enable>String.IsEqual(Skin.String(homemenu.layout),horizontal)</enable>
@@ -781,9 +782,10 @@
 					<!-- Fanart colours -->
 					<control type="radiobutton" id="9640">
 						<label>$LOCALIZE[31378]</label>
-						<label2>$INFO[Skin.String(home.colorfx)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.colorfx)</onclick>
-						<selected>Skin.HasSetting(home.colorfx)</selected>
+						<label2>$INFO[Skin.String(fx.home.color)]</label2>
+						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(fx.home.color)</onclick>
+						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357][CR]$LOCALIZE[31082],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(home.logo),noaction=Close)</onclick>
+						<selected>Skin.HasSetting(fx.home.color)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 					</control>
