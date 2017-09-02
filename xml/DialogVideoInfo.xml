@@ -31,7 +31,7 @@
 					<height>90</height>
 					<label>$VAR[information:Heading]</label>
 					<aligny>center</aligny>
-					<font>Slab-24</font>
+					<font>Regular-20</font>
 					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
 
