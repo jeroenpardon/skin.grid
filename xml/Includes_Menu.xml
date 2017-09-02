@@ -534,6 +534,7 @@
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
+				<onclick>SetProperty(SearchQuery,true,virtualkeyboard)</onclick>
 				<onclick>Right</onclick>
 				<visible>Window.IsActive(videos) | Window.IsActive(music)</visible>
 			</control>
