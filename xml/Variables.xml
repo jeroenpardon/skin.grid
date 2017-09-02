@@ -25,6 +25,7 @@
 		<value condition="String.IsEqual(Skin.String(background.media),fanart) + !String.IsEmpty(ListItem.Art(tvshow.fanart))">$INFO[ListItem.Art(tvshow.fanart)]</value>
 		<value condition="!Window.IsMedia | Window.IsMedia + ListItem.IsParentFolder">$INFO[Skin.String(background.nomedia)]</value>
 		<value condition="String.IsEqual(Skin.String(background.media),custom)">$INFO[Skin.String(background.custom)]</value>
+		<value>$INFO[Skin.String(background.nomedia)]</value>
 	</variable>
 
 	<variable name="background:Player">
