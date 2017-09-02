@@ -582,7 +582,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Accent]</textcolor>
-					<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
+					<visible>ListItem.IsParentFolder</visible>
 				</control>
 				<!-- Landscape art -->
 				<control type="group">
