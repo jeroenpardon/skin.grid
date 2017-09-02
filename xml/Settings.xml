@@ -115,7 +115,7 @@
 							<property name="Icon">&#58944;</property>
 							<onclick>ActivateWindow(PVRSettings)</onclick>
 						</item>
-						<!--systeminfo-->
+						<!-- Games -->
 						<item id="9">
 							<label>$LOCALIZE[15016]</label>
 							<label2>$LOCALIZE[35201] &#8226; $LOCALIZE[35150] &#8226; $LOCALIZE[35151]</label2>
