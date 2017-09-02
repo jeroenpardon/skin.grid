@@ -477,7 +477,7 @@
 
 	<!--fullscreen info-->
 	<include name="osd_Info">
-		<param name="Visible">Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
+		<param name="Visible">Player.Paused | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
 		<definition>
 			<control type="group">
 				<visible>$PARAM[Visible]</visible>
