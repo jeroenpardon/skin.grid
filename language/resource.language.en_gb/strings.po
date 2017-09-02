@@ -257,6 +257,10 @@ msgctxt "#31081"
 msgid "Reload"
 msgstr ""
 
+#. Asking the user to perform an action (like restarting the skin) right away
+msgctxt "#31082"
+msgid "Is it ok to do this now?"
+msgstr ""
 
 msgctxt "#31083"
 msgid "Sorting"
