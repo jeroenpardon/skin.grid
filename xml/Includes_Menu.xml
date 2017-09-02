@@ -104,7 +104,7 @@
 	<include name="menu_Views">
 		<param name="OnUp" default="300"/>
 		<param name="OnDown" default="7003"/>
-		<param name="Visible" default="7003"/>
+		<param name="Visible" default="true"/>
 		<definition>
 			<!--change viewtype-->
 			<control type="group" id="7001">
