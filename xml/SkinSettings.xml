@@ -800,7 +800,7 @@
 						<!--<onclick condition="!String.Contains(Control.GetLabel(9660),*)">ReloadSkin()</onclick>-->
 						<selected>Skin.HasSetting(burns.enable)</selected>
 						<include>radio_Settings</include>
-						<enable>!Skin.HasSetting(home.blurfx)</enable>
+						<enable>!Skin.HasSetting(home.fx.home.image)</enable>
 					</control>
 					<!-- Animated artwork -->
 					<control type="radiobutton" id="9670">

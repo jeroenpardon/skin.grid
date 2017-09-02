@@ -13,7 +13,7 @@
 			<param name="GridTexture">overlays/home.png</param>
 			<param name="DiffuseColor">$VAR[home:FX.ColorVertDiffuse]</param>
 			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
-			<param name="id" condition="Skin.HasSetting(home.colorfx)">7977</param>
+			<param name="id" condition="Skin.HasSetting(fx.home.color)">7977</param>
 		</include>
 
 		<!-- Scroll indicators -->
@@ -63,15 +63,15 @@
 				<!-- Background_Slideshow-->
 				<control type="multiimage">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + [!Skin.HasSetting(home.blurfx) | Skin.HasSetting(home.colorfx)]</visible>
+					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + [!Skin.HasSetting(home.fx.home.image) | Skin.HasSetting(fx.home.color)]</visible>
 				</control>
 				<control type="multiimage" id="7975">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + Skin.HasSetting(home.blurfx)</visible>
+					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + Skin.HasSetting(home.fx.home.image)</visible>
 				</control>
 				<control type="multiimage" id="7977">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + !Skin.HasSetting(home.blurfx) + Skin.HasSetting(home.colorfx)</visible>
+					<visible>![Player.HasAudio + Skin.HasSetting(home.nowplaying)] + !Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color)</visible>
 				</control>
 
 				<!-- Full blur overlay -->
