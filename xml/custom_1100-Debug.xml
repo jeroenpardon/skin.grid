@@ -57,6 +57,10 @@
 					<label>Container.FolderName: $INFO[Container.FolderName]</label>
 					<include>debug_Label</include>
 				</control>
+				<control type="button">
+					<label></label>
+					<height>24</height>
+				</control>
 
 
 				<!-- Path -->
@@ -92,6 +96,10 @@
 				</control>
 				<control type="button">
 					<label>ListItem.Label2: $INFO[ListItem.Label2]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>ListItem.DBTYPE: $INFO[ListItem.DBTYPE]</label>
 					<include>debug_Label</include>
 				</control>
 				<control type="button">
