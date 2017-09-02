@@ -10,7 +10,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
-				<param name="Title">$VAR[window:Title.Dialog]</param>
+				<param name="Title">$LOCALIZE[35058]</param>
 			</include>
 		</control>
 
