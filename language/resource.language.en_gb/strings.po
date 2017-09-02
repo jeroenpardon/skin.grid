@@ -408,6 +408,10 @@ msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
 msgstr ""
 
+msgctxt "#31232"
+msgid "Background image"
+msgstr ""
+
 
 
 #: settings

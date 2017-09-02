@@ -36,27 +36,19 @@
 	<setting id="submenu.type" value="vertical" label="$LOCALIZE[31058]"/>
 
 	<!-- Home background type -->
-	<setting id="home.background" value="none" label="$LOCALIZE[36502]"/>
-	<setting id="home.background" value="fanart-all" label="$LOCALIZE[31366] - $LOCALIZE[31368]"/>
-	<setting id="home.background" value="fanart-video" label="$LOCALIZE[31366] - $LOCALIZE[14236]"/>
-	<setting id="home.background" value="fanart-movies" label="$LOCALIZE[31366] - $LOCALIZE[31369]"/>
-	<setting id="home.background" value="fanart-tvshows" label="$LOCALIZE[31366] - $LOCALIZE[31370]"/>
-	<setting id="home.background" value="fanart-music" label="$LOCALIZE[31366] - $LOCALIZE[14237]"/>
-	<setting id="home.background" value="pictures" label="$LOCALIZE[31056]"/>
-	<setting id="home.background" value="custom" label="$LOCALIZE[636]" default="true"/>
+	<setting id="background.home" value="none" label="$LOCALIZE[36502]"/>
+	<setting id="background.home" value="fanart-all" label="$LOCALIZE[31366] - $LOCALIZE[31368]"/>
+	<setting id="background.home" value="fanart-video" label="$LOCALIZE[31366] - $LOCALIZE[14236]"/>
+	<setting id="background.home" value="fanart-movies" label="$LOCALIZE[31366] - $LOCALIZE[31369]"/>
+	<setting id="background.home" value="fanart-tvshows" label="$LOCALIZE[31366] - $LOCALIZE[31370]"/>
+	<setting id="background.home" value="fanart-music" label="$LOCALIZE[31366] - $LOCALIZE[14237]"/>
+	<setting id="background.home" value="pictures" label="$LOCALIZE[31056]"/>
+	<setting id="background.home" value="custom" label="$LOCALIZE[636]" default="true"/>
 
 	<!-- Global background type -->
-	<setting id="global.background" value="none" label="$LOCALIZE[36502]"/>
-	<setting id="global.background" value="custom" label="$LOCALIZE[636]" default="true"/>
-	<setting id="global.background" value="fanart" label="$LOCALIZE[31218]"/>
-
-	<!-- Global backgrounds -->
-	<setting id="global.source" value="global" label="$LOCALIZE[31368]" default="true">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
-	<setting id="global.source" value="video" label="$LOCALIZE[31369]">
-		<onselect condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onselect>
-	</setting>
+	<setting id="background.media" value="none" label="$LOCALIZE[36502]"/>
+	<setting id="background.media" value="custom" label="$LOCALIZE[636]" default="true"/>
+	<setting id="background.media" value="fanart" label="$LOCALIZE[31218]"/>
 
 	<!-- Global scrolling type -->
 	<setting id="global.scrolltype" value="active" label="$LOCALIZE[31320]"/>
@@ -88,7 +80,6 @@
 	<setting id="ratings.overlay" value="tvshows" label="$LOCALIZE[20343]"/>
 
 	<setting id="ratings.music" value="disabled" label="$LOCALIZE[36502]" default="true"/>
-	<!--<setting id="ratings.music" value="default" label="Kodi $LOCALIZE[571]"/>-->
 	<setting id="ratings.music" value="user" label="$LOCALIZE[38018]"/>
 
 	<!-- Options menu player controls type -->
