@@ -89,7 +89,7 @@
 							<width>64</width>
 							<height>64</height>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="group">
 							<left>114</left>
@@ -130,7 +130,7 @@
 							<width>64</width>
 							<height>64</height>
 							<texture>$INFO[ListItem.Icon]</texture>
-							<aspectratio>keep</aspectratio>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
 						</control>
 						<control type="label">
 							<right>0</right>

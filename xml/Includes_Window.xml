@@ -4,7 +4,8 @@
 		<param name="DiffuseTexture"/>
 		<param name="GridTexture" default="overlays/90.png"/>
 		<param name="DiffuseColor"/>
-		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)]"/>
+		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(background.mediavideo)]"/>
+		<param name="id" default=""/>
 		<definition>
 
 			<!-- No Background -->
@@ -12,43 +13,30 @@
 				<include>screen_Dimensions</include>
 				<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
 				<aspectratio>stretch</aspectratio>
-				<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
+				<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 			</control>
 
 			<control type="group">
 				<include>transition_Background</include>
 
-				<!-- Slideshow -->
-				<control type="multiimage">
-					<timeperimage>30000</timeperimage>
-					<fadetime>300</fadetime>
-					<pauseatend>10000</pauseatend>
-					<randomize>true</randomize>
-					<include>screen_Dimensions</include>
-					<include>Burns</include>
-					<aspectratio>scale</aspectratio>
+				<!-- Background Slideshow -->
+				<control type="multiimage" id="$PARAM[id]">
 					<imagepath background="true">$VAR[background:Home]</imagepath>
-					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
-						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
-					</animation>
-					<visible>!String.IsEqual(Skin.String(background.home),none) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
+					<visible>!String.IsEqual(Skin.String(background.home),none) + !String.IsEqual(Skin.String(homemenu.layout),compact) + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
 				</control>
 
 				<!-- Background video -->
 				<include>background_Video</include>
 
 				<!-- Now playing -->
-				<control type="image">
-					<include>screen_Dimensions</include>
-					<texture>$VAR[player:Art]</texture>
-					<fadetime>fadetime_Thumb</fadetime>
-					<include>fadeinout</include>
-					<aspectratio align="center" aligny="center">scale</aspectratio>
-					<visible>Player.HasAudio + Skin.HasSetting(home.nowplaying)</visible>
+				<control type="group">
+					<visible>Skin.HasSetting(home.nowplaying)</visible>
+					<include>background_Player</include>
 				</control>
 
 				<!-- Overlay -->
 				<control type="group">
+					<visible>String.IsEqual(Skin.String(homemenu.layout),vertical)</visible>
 					<control type="image">
 						<include>screen_Dimensions</include>
 						<texture background="true" diffuse="$PARAM[DiffuseTexture]">overlays/background.png</texture>
@@ -59,32 +47,24 @@
 						<colordiffuse>$VAR[color:Accent]</colordiffuse>
 						<include>screen_Dimensions</include>
 						<texture background="true" diffuse="$PARAM[DiffuseTexture]" colordiffuse="$PARAM[DiffuseColor]">$PARAM[GridTexture]</texture>
+						<include>fadeinout</include>
+						<visible>!ControlGroup(9100).HasFocus()</visible>
 					</control>
-				</control>
-
-				<!-- Logos -->
-				<control type="image">
-					<right>64</right>
-					<bottom>90</bottom>
-					<width>330</width>
-					<height>128</height>
-					<texture>$VAR[home:SlideShowLogo]</texture>
-					<aspectratio>keep</aspectratio>
-					<fadetime>300</fadetime>
-					<visible>String.IsEqual(Skin.String(background.home),fanart) | String.IsEqual(Skin.String(background.home),videofanart)</visible>
-					<visible>![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)] + ![Player.HasAudio + Skin.HasSetting(home.nowplaying)]</visible>
-					<visible>!Window.IsActive(movieinformation) + Skin.HasSetting(fanart.sourcelogo) + [String.IsEqual(Skin.String(fanart.source),global) | String.IsEqual(Skin.String(fanart.source),video)]</visible>
 				</control>
 			</control>
 		</definition>
 	</include>
 
 	<include name="background_Global">
+		<param name="BackgroundPath" default="$VAR[background:Global]"/>
 		<param name="DiffuseTexture"/>
 		<param name="GridTexture" default="overlays/90.png"/>
 		<param name="DiffuseColor"/>
-		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(global.backgroundvideo)]"/>
+		<param name="RestrictFX" default="false"/>
+		<param name="Visible" default="!Window.IsVisible(fullscreenvideo) + ![Player.HasVideo + Skin.HasSetting(background.mediavideo)]"/>
+		<param name="id" default=""/>
 		<definition>
+
 			<control type="group">
 				<include>transition_Background</include>
 				<!-- No Background -->
@@ -92,40 +72,20 @@
 					<include>screen_Dimensions</include>
 					<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<visible>String.IsEqual(Skin.String(background.global),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.type),stream)</visible>
+					<visible>String.IsEqual(Skin.String(background.media),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
 				
-				<control type="multiimage">
-					<timeperimage>30000</timeperimage>
-					<fadetime>300</fadetime>
-					<pauseatend>10000</pauseatend>
-					<randomize>true</randomize>
-					<include>screen_Dimensions</include>
-					<include>Burns</include>
-					<aspectratio>scale</aspectratio>
-					<imagepath background="true">$VAR[background:Global]</imagepath>
-					<animation type="Conditional" condition="ControlGroup(9100).HasFocus()">
-						<effect type="Fade" time="250" start="100" end="0" tween="cubic" easing="InOut"/>
-					</animation>
-					<visible>!String.IsEqual(Skin.String(background.global),none)</visible>
+				<!-- Custom background -->
+				<control type="multiimage" id="$PARAM[id]">
+					<imagepath background="true">$PARAM[BackgroundPath]</imagepath>
+					<include>fadeinout</include>
+					<visible>!String.IsEqual(Skin.String(background.media),none)</visible>
 				</control>
 
-				<control type="image">
-					<include>screen_Dimensions</include>
-					<include>Burns</include>
-					<fadetime>500</fadetime>
-					<aspectratio>scale</aspectratio>
-					<include>fadeinout</include>
-					<texture background="true">$VAR[background:Path]</texture>
-					<visible>![Container.Scrolling + Skin.HasSetting(fanart.scrolling)]</visible>
-					<visible>![Window.IsActive(Home) + !String.IsEqual(Skin.String(homemenu.type),vertical)]</visible>
-					<visible>String.IsEqual(Skin.String(background.global),fanart) | String.IsEqual(Skin.String(background.global),videofanart)</visible>
-				</control>
-				
 				<!-- Background video -->
 				<include>background_Video</include>
 
-				<!--overlay-->
+				<!-- Overlay -->
 				<control type="group">
 					<control type="image">
 						<include>screen_Dimensions</include>
@@ -145,7 +105,7 @@
 
 	<include name="background_Video">
 		<control type="group">
-			<visible>Skin.HasSetting(global.backgroundvideo) + Player.HasVideo + ![String.IsEqual(Skin.String(homemenu.type),stream) + Window.IsActive(home)]</visible>
+			<visible>Skin.HasSetting(background.mediavideo) + Player.HasVideo + !Window.IsActive(home)</visible>
 			<control type="image">
 				<aspectratio>stretch</aspectratio>
 				<include>screen_Dimensions</include>
@@ -155,66 +115,76 @@
 				<include>screen_Dimensions</include>
 			</control>
 		</control>
+
+		<control type="group">
+			<top>0</top>
+			<left>0</left>
+			<visible>Skin.HasSetting(background.mediavideo) + Player.HasVideo + Window.IsActive(home)</visible>
+			<control type="image">
+				<aspectratio>stretch</aspectratio>
+				<width>1920</width>
+				<height>1080</height>
+				<texture colordiffuse="ff000000">colorize/white.png</texture>
+			</control>
+			<control type="videowindow">
+				<top>0</top>
+				<width>1920</width>
+				<height>1080</height>
+			</control>
+		</control>
 	</include>
 
 	<include name="background_Player">
 		<control type="group">
-			<animation type="conditional" condition="Skin.HasSetting(burns.enable)" loop="true">
+			<animation type="conditional" condition="!Window.IsActive(Home) + Skin.HasSetting(burns.enable)" loop="true">
 				<effect type="Fade" start="0" end="100" time="2000"/>
 				<effect type="Zoom" center="screen_Center" start="130" end="100" time="15000"/>
 				<effect type="Fade" start="100" end="0" time="1000" delay="14000"/>
 			</animation>
 			<control type="visualisation" id="2">
 				<include>screen_Dimensions</include>
-				<visible>String.IsEqual(Skin.String(viz.mode),viz) | String.IsEqual(Skin.String(viz.mode),blend)</visible>
+				<visible>Player.HasAudio + [String.IsEqual(Skin.String(viz.mode),viz) | String.IsEqual(Skin.String(viz.mode),blend)]</visible>
 			</control>
 			<control type="multiimage">
-				<include>screen_Dimensions</include>
-				<aspectratio align="center">scale</aspectratio>
-				<randomize>true</randomize>
-				<loop>true</loop>
-				<timeperimage>8000</timeperimage>
-				<fadetime>fadetime_Slideshow</fadetime>
-				<imagepath background="true">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</imagepath>
-				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
-				<visible>!String.IsEqual(Skin.String(viz.mode),viz) + [System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) + !String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))]</visible>
-			</control>
-			<control type="image">
-				<include>screen_Dimensions</include>
-				<texture>$VAR[player:Art]</texture>
-				<fadetime>fadetime_Thumb</fadetime>
-				<aspectratio align="center" aligny="center">scale</aspectratio>
-				<animation effect="fade" end="60" time="250" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
-				<visible>!String.IsEqual(Skin.String(viz.mode),viz) + [String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow)) | String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))]</visible>
+				<imagepath background="true">$VAR[background:Player]</imagepath>
+				<include>fadeinout</include>
+				<animation effect="fade" end="60" time="0" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
+				<visible>Player.HasAudio + [!String.IsEqual(Skin.String(viz.mode),none) | !String.IsEqual(Skin.String(viz.mode),blend) | !String.IsEqual(Skin.String(viz.mode),viz)]</visible>
 			</control>
 		</control>
 	</include>
 
 	<include name="global_WindowChrome">
-		<param name="Top" default="0"/>
-		<param name="TextWidth" default="1600"/>
-		<param name="Width" default="screen_Width"/>
-		<param name="TextureWidth" default="1664"/>
-		<param name="Height" default="108"/>
 		<param name="Font" default="Black-48"/>
-		<param name="Symbol" default="$VAR[window:Symbol]"/>
-		<param name="ShowSymbol" default="true"/>
-		<param name="SymbolFont" default="Symbols-32"/>
+		<param name="Height" default="108"/>
 		<param name="ItemCount" default="$INFO[Container.NumItems]"/>
+		<param name="ProgressLeft" default="128"/>
+		<param name="ProgressTop" default="0"/>
+		<param name="ProgressHeight" default="108"/>
+		<param name="ProgressWidth" default="1664"/>
+		<param name="ShowItemCount" default="True" />
+		<param name="ShowSymbol" default="true"/>
+		<param name="Symbol" default="$VAR[window:Symbol]"/>
+		<param name="SymbolFont" default="Symbols-32"/>
+		<param name="TextWidth" default="1600"/>
 		<param name="TimeLeft" default="1792"/>
 		<param name="Title" default="$INFO[Control.GetLabel(1)]"/>
-		<param name="ShowItemCount" default="True" />
+		<param name="Top" default="0"/>
+		<param name="Visible" default="true"/>
+		<param name="Width" default="screen_Width"/>
 		<definition>
 			<control type="group">
 				<height>108</height>
 				<width>screen_Width</width>
 				<include>transition_Chrome</include>
+				<include condition="!Window.IsActive(movieinformation)">slide_Clock</include>
+				<visible>$PARAM[Visible]</visible>
 				<control type="image">
 					<width>128</width>
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/30.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<visible>!Window.IsActive(Home)</visible>
+					<visible>![Window.IsActive(Home) + IntegerGreaterThan(Player.Volume,0)]</visible>
 				</control>
 				<control type="label">
 					<width>128</width>
@@ -226,13 +196,16 @@
 					<visible>$PARAM[ShowItemCount]</visible>
 					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(volumebar) | Player.Muted] + !Window.IsVisible(busydialog)</visible>
 				</control>
-				<control type="label">
+				<control type="button">
 					<width>128</width>
 					<height>$PARAM[Height]</height>
 					<label>$PARAM[Symbol]</label>
 					<font>$PARAM[SymbolFont]</font>
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
+					<texturenofocus></texturenofocus>
+					<onclick>SetFocus(7000)</onclick>
+					<onclick>SetProperty(MenuOpen,true,Home)</onclick>
 					<visible>!Window.IsVisible(busydialog)</visible>
 					<visible>$PARAM[ShowSymbol]</visible>
 				</control>
@@ -244,18 +217,20 @@
 				</include>
 				<control type="image">
 					<left>128</left>
-					<width>$PARAM[TextureWidth]</width>
+					<width>$PARAM[ProgressWidth]</width>
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/20.png</texture>
 					<aspectratio>stretch</aspectratio>
+					<visible>$EXP[VolumeBarMuted]</visible>
 					<visible>!Window.IsActive(Home)</visible>
 				</control>
 
 				<!-- Volume slider -->
 				<control type="progress" id="29999">
-					<left>128</left>
-					<width>$PARAM[TextureWidth]</width>
-					<height>$PARAM[Height]</height>
+					<top>$PARAM[ProgressTop]</top>
+					<left>$PARAM[ProgressLeft]</left>
+					<width>$PARAM[ProgressWidth]</width>
+					<height>$PARAM[ProgressHeight]</height>
 					<info>Player.Volume</info>
 					<texturebg colordiffuse="$VAR[color:Accent]">colorize/0.png</texturebg>
 					<lefttexture></lefttexture>
@@ -268,14 +243,28 @@
 				<control type="progress" id="12">
 					<left>128</left>
 					<width>1664</width>
-					<height>108</height>
+					<height>$PARAM[ProgressHeight]</height>
 					<info>Player.Progress</info>
 					<texturebg colordiffuse="$VAR[color:Accent]">progress/player/0.png</texturebg>
 					<lefttexture></lefttexture>
 					<midtexture colordiffuse="$VAR[color:Accent]">progress/player/50.png</midtexture>
 					<righttexture></righttexture>
-					<visible>Window.IsVisible(seekbar) + !Window.IsActive(volumebar)</visible>
+					<visible>[Window.IsVisible(seekbar) | Window.IsVisible(visualisation)] + ![Window.IsActive(volumebar) + !Player.Muted]</visible>
 					<include>transition_Chrome</include>
+				</control>
+
+				<!-- Player progress -->
+				<control type="progress" id="20">
+					<left>128</left>
+					<width>1664</width>
+					<height>$PARAM[ProgressHeight]</height>
+					<info>Player.Progressbar</info>
+					<texturebg colordiffuse="$VAR[color:Accent]">progress/player/0.png</texturebg>
+					<lefttexture></lefttexture>
+					<midtexture colordiffuse="$VAR[color:Accent]">progress/player/50.png</midtexture>
+					<righttexture></righttexture>
+					<include>transition_Chrome</include>
+					<visible>Window.IsVisible(progressdialog)</visible>
 				</control>
 
 				<!-- Window title -->
@@ -283,35 +272,42 @@
 					<visible>false</visible>
 				</control>
 				<control type="grouplist">
-					<left>160</left>
+					<left>128</left>
 					<width>1600</width>
 					<height>$PARAM[Height]</height>
 					<orientation>vertical</orientation>
-					<control type="label">
-						<width>1280</width>
+					<visible>$EXP[VolumeBarMuted]</visible>
+					<control type="button">
+						<width max="1280">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<onclick>Back</onclick>
+						<texturenofocus></texturenofocus>
 						<visible>$EXP[!Window.HasOverlay]</visible>
 					</control>
-					<control type="label">
-						<width>1600</width>
+					<control type="button">
+						<width max="1600">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<onclick>Back</onclick>
+						<texturenofocus></texturenofocus>
 						<visible>$EXP[!Window.HasOverlay]</visible>
 					</control>
-					<control type="label">
-						<width>832</width>
+					<control type="button">
+						<width max="832">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<onclick>Back</onclick>
+						<texturenofocus></texturenofocus>
 						<visible>$EXP[Window.HasOverlay]</visible>
 					</control>
 				</control>
@@ -321,19 +317,62 @@
 					<orientation>horizontal</orientation>
 					<align>right</align>
 					<control type="button">
-						<width>auto</width>
+						<width>756</width>
 						<height>$PARAM[Height]</height>
 						<label>$INFO[System.Date]</label>
 						<font>Regular-22-L</font>
 						<align>right</align>
 						<aligny>center</aligny>
-						<textcolor>$VAR[color:Text.3]</textcolor>
+						<textcolor>$VAR[color:Date]</textcolor>
 						<texturenofocus></texturenofocus>
+						<visible>!String.IsEqual(Skin.String(homemenu.layout),compact) + !system.getbool(input.enablemouse)</visible>
 						<visible>$EXP[!Window.HasOverlay]</visible>
 						<visible>!Window.IsActive(extendedprogressdialog) + !Window.IsActive(notification) + !Player.HasMedia + [Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),home)]] | [!Window.IsActive(home) + [String.IsEqual(Skin.String(date.enabled),global) | String.IsEqual(Skin.String(date.enabled),nohome)]]</visible>
 						<animation effect="slide" end="128" time="0" condition="!Skin.HasSetting(home.clock) + Window.IsActive(home)">Conditional</animation>
 					</control>
 				</control>
+
+				<!-- Touch navigation 
+				<control type="grouplist" id="6000">
+					<right>128</right>
+					<orientation>horizontal</orientation>
+					<align>right</align>
+					<control type="button" id="6001">
+						<width>128</width>
+						<height>$PARAM[Height]</height>
+						<label>&#58921;</label>
+						<font>$PARAM[SymbolFont]</font>
+						<align>center</align>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<texturenofocus></texturenofocus>
+						<onclick>Action(Back)</onclick>
+						<visible>system.getbool(input.enablemouse) + !Window.IsActive(Home)</visible>
+					</control>
+					<control type="button" id="6002">
+						<width>128</width>
+						<height>$PARAM[Height]</height>
+						<label>&#57449;</label>
+						<font>$PARAM[SymbolFont]</font>
+						<align>center</align>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<texturenofocus></texturenofocus>
+						<onclick>ActivateWindow(Home)</onclick>
+						<visible>system.getbool(input.enablemouse) + !Window.IsActive(Home)</visible>
+					</control>
+					<control type="button" id="6003">
+						<width>128</width>
+						<height>$PARAM[Height]</height>
+						<label>&#58881;</label>
+						<font>$PARAM[SymbolFont]</font>
+						<align>center</align>
+						<textcolor>$VAR[color:Text.3]</textcolor>
+						<texturenofocus></texturenofocus>
+						<onclick>SetFocus(7000)</onclick>
+						<onclick>SetProperty(MenuOpen,true,Home)</onclick>
+						<visible>system.getbool(input.enablemouse) + !Window.IsActive(Home)</visible>
+					</control>
+				</control>
+				-->
 				
 				<!-- Clock -->
 				<control type="group">
@@ -341,6 +380,8 @@
 					<left>$PARAM[TimeLeft]</left>
 					<width>128</width>
 					<height>$PARAM[Height]</height>
+					<visible>$EXP[VolumeBarMuted]</visible>
+					<visible>![Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact) + Window.IsVisible(volumebar)]</visible>
 					<visible>![Window.IsActive(home) + !Skin.HasSetting(home.clock) + !Window.IsActive(movieinformation)] | Window.IsActive(home) + Window.IsVisible(volumebar) + !Player.Muted</visible>
 					<control type="image">
 						<width>100%</width>
@@ -443,26 +484,25 @@
 	</include>
 
 	<include name="global_Notification">
-		<param name="Left" default="1164"/>
-		<param name="Top" default="0"/>
-		<param name="InfoTop" default="16"/>
+		<param name="DiffuseLevel" default="50"/>
 		<param name="Height" default="108"/>
-		<param name="Width" default="756"/>
-		<param name="TextWidth" default="600"/>
-		<param name="Label"/>
-		<param name="Label2"/>
 		<param name="ID1"/>
 		<param name="ID2"/>
+		<param name="Label"/>
 		<param name="Label1"/>
 		<param name="Label2"/>
+		<param name="Label2"/>
+		<param name="Left" default="1036"/>
 		<param name="ProgressID"/>
 		<param name="ProgressInfo"/>
-		<param name="Symbol" default="&#57483;"/>
-		<param name="ShowProgress" default="true"/>
 		<param name="ShowFrame" default="true"/>
-		<param name="Visible"/>
-		<param name="DiffuseLevel" default="50"/>
+		<param name="ShowProgress" default="true"/>
+		<param name="Symbol" default="&#57483;"/>
 		<param name="TextColor" default="$VAR[color:Main]"/>
+		<param name="TextWidth" default="600"/>
+		<param name="Top" default="0"/>
+		<param name="Visible"/>
+		<param name="Width" default="756"/>
 		<definition>
 			<control type="group">
 				<top>$PARAM[Top]</top>
@@ -470,11 +510,16 @@
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
 				<include>transition_Chrome</include>
-				<visible>!Window.IsActive(startup)</visible>
 
-				<!-- Use the current control ID as for some reason the animation is not executed when based on the widgets' control group ID -->
-				<animation effect="slide" end="-10,10" time="150" tween="Quadratic" easing="In" delay="250" condition="Window.IsActive(Home) + String.Contains(System.CurrentControlID,100) + !Skin.HasSetting(home.clock)">Conditional</animation>
-				<animation effect="slide" end="118,10" time="150" tween="Quadratic" easing="In" delay="250" condition="Window.IsActive(Home) + String.Contains(System.CurrentControlID,100) + Skin.HasSetting(home.clock)">Conditional</animation>
+				<!-- Reposition for touch
+				<animation effect="slide" start="0,0"  end="-454,0" time="150" condition="system.getbool(input.enablemouse)">Conditional</animation>
+				-->
+
+				<!-- Reposition for homescreen and clock -->
+				<animation effect="slide" start="0,0"  end="0,-11" time="150" condition="Window.IsVisible(Home) + !String.IsEqual(Skin.String(homemenu.layout),horizontal) + Skin.HasSetting(home.clock)">Conditional</animation>
+				<animation effect="slide" start="0,0"  end="0,-11" time="150" condition="Window.IsVisible(Home) + !Skin.HasSetting(home.clock)">Conditional</animation>
+				<animation effect="slide" start="0"  end="128" time="150" condition="Window.IsActive(Home) + !Skin.HasSetting(home.clock) + !String.IsEqual(Skin.String(homemenu.layout),compact)">Conditional</animation>
+				<animation effect="slide" start="0,0"  end="118,10" time="150" condition="Window.IsActive(Home) + String.IsEqual(Skin.String(homemenu.layout),compact)">Conditional</animation>
 
 				<control type="image">
 					<width>$PARAM[Width]</width>
@@ -484,69 +529,77 @@
 				</control>
 
 				<control type="group">
-					<include>transition_Chrome</include>
+					<height>$PARAM[Height]</height>
+					<control type="progress" id="$PARAM[ProgressID]">
+						<width>100%</width>
+						<height>$PARAM[Height]</height>
+						<info>$PARAM[ProgressInfo]</info>
+						<lefttexture></lefttexture>
+						<midtexture colordiffuse="$VAR[color:Accent]">colorize/100.png</midtexture>
+						<righttexture></righttexture>
+						<visible>[Player.HasMedia + Window.IsVisible(1105)] | Window.IsActive(extendedprogressdialog)</visible>
+						<visible>$PARAM[ShowProgress]</visible>
+					</control>
+
 					<control type="group">
-						<control type="progress" id="$PARAM[ProgressID]">
-							<width>100%</width>
-							<height>$PARAM[Height]</height>
-							<info>$PARAM[ProgressInfo]</info>Player.Progress
-							<lefttexture></lefttexture>
-							<midtexture colordiffuse="$VAR[color:Accent]">colorize/100.png</midtexture>
-							<righttexture></righttexture>
-							<visible>[Player.HasMedia + Window.IsVisible(1105)] | Window.IsActive(extendedprogressdialog)</visible>
-							<visible>$PARAM[ShowProgress]</visible>
-						</control>
+						<height>$PARAM[Height]</height>
+
+						<!-- Reposition for homescreen and clock -->
+						<animation effect="slide" start="0,0"  end="0,2" time="150" condition="Window.IsVisible(Home)">Conditional</animation>
+
+						<!-- Notification labels -->
 						<control type="group">
-							<top>$PARAM[InfoTop]</top>
 							<left>108</left>
-							<control type="label" id="$PARAM[ID1]">
+							<height>$PARAM[Height]</height>
+							<control type="label" id="401">
+								<centertop>38%</centertop>
 								<width>$PARAM[TextWidth]</width>
-								<height>54</height>
+								<height>50%</height>
 								<font>Black-22</font>
 								<label>$PARAM[Label1]</label>
 								<textcolor>$PARAM[TextColor]</textcolor>
 							</control>
-							<control type="label" id="$PARAM[ID2]">
-								<top>38</top>
+							<control type="label" id="402">
+								<centerbottom>38%</centerbottom>
 								<width>$PARAM[TextWidth]</width>
-								<height>54</height>
-								<aligny>top</aligny>
+								<height>50%</height>
 								<font>Regular-20</font>
 								<label>$PARAM[Label2]</label>
 								<textcolor>$PARAM[TextColor]</textcolor>
+								<scroll>true</scroll>
 							</control>
 						</control>
-					</control>
 
-					<!-- Symbol -->
-					<control type="label">
-						<width>108</width>
-						<height>$PARAM[Height]</height>
-						<font>Symbols-38</font>
-						<label>$PARAM[Symbol]</label>
-						<align>center</align>
-						<aligny>center</aligny>
-						<textcolor>$PARAM[TextColor]</textcolor>
-					</control>
-
-					<!-- Notification labels -->
-					<control type="group">
-						<top>$PARAM[InfoTop]</top>
-						<left>108</left>
-						<control type="label" id="401">
-							<width>$PARAM[TextWidth]</width>
-							<height>54</height>
-							<font>Black-22</font>
-							<textcolor>$PARAM[TextColor]</textcolor>
+						<!-- Progress labels -->
+						<control type="group">
+							<left>108</left>
+							<height>$PARAM[Height]</height>
+							<control type="label" id="$PARAM[ID1]">
+								<centertop>38%</centertop>
+								<width>$PARAM[TextWidth]</width>
+								<height>50%</height>
+								<font>Black-22</font>
+								<textcolor>$PARAM[TextColor]</textcolor>
+							</control>
+							<control type="label" id="$PARAM[ID2]">
+								<centerbottom>38%</centerbottom>
+								<width>$PARAM[TextWidth]</width>
+								<height>50%</height>
+								<font>Regular-20</font>
+								<textcolor>$PARAM[TextColor]</textcolor>
+								<scroll>true</scroll>
+							</control>
 						</control>
-						<control type="label" id="402">
-							<top>38</top>
-							<width>$PARAM[TextWidth]</width>
-							<height>54</height>
-							<aligny>top</aligny>
-							<font>Regular-20</font>
+
+						<!-- Symbol -->
+						<control type="label">
+							<width>108</width>
+							<height>$PARAM[Height]</height>
+							<font>Symbols-38</font>
+							<label>$PARAM[Symbol]</label>
+							<align>center</align>
+							<aligny>center</aligny>
 							<textcolor>$PARAM[TextColor]</textcolor>
-							<scroll>true</scroll>
 						</control>
 					</control>
 				</control>

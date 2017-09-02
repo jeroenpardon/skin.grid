@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-
-	<!--<onload condition="!Skin.HasSetting(FirstRunWidgets)">ActivateWindow(1106)</onload>-->
-	<onload>AlarmClock(LoadHome,SetProperty(HomeInit,true),0:03,silent)</onload>
+	<onload>SetProperty(SubMenuIsOpen,false,Home)</onload>
+	<onfocus>SetProperty(ShowClock,true,Home)</onfocus>
 
 	<!-- Skin Shortcuts -->
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onload>
@@ -25,19 +24,9 @@
 		</control>
 
 		<!-- Main menu layouts -->
-		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical) | String.IsEmpty(Skin.String(homemenu.type))">home_Menu-vertical</include>
-		
-		<include condition="String.IsEqual(Skin.String(homemenu.type),vertical2)">home_Menu-vertical2</include>
-		
-		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + Skin.HasSetting(home.clock)">
-			<param name="Top">108</param>
-			<param name="Height">972</param>
-		</include>
-		
-		<include content="home_Menu-stream" condition="String.IsEqual(Skin.String(homemenu.type),stream) + !Skin.HasSetting(home.clock)">
-			<param name="Top">0</param>
-			<param name="Height">screen_Height</param>
-		</include>
+		<include condition="String.IsEqual(Skin.String(homemenu.layout),vertical) | String.IsEmpty(Skin.String(homemenu.layout))">home_Vertical</include>
+		<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">home_Horizontal</include>
+		<include condition="String.IsEqual(Skin.String(homemenu.layout),compact)">home_Compact</include>
 
 		<!-- Post startup -->
 		<control type="group">
@@ -51,7 +40,7 @@
 				<centerleft>50%</centerleft>
 				<top>498</top>
 				<width>200</width>
-				<height>168</height>
+				<height>168</height> 
 				<control type="image">
 					<width>200</width>
 					<height>84</height>
@@ -82,7 +71,6 @@
 				<visible>String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))</visible>
 			</control>
 		</control>
-	</controls>
 
-	
+	</controls>
 </window>

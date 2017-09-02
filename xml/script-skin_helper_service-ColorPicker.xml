@@ -174,7 +174,7 @@
 						<width>256</width>
 						<height>90</height>
 						<onup>3030</onup>
-						<ondown>5131</ondown>
+						<ondown>3010</ondown>
 						<label>$ADDON[script.skin.helper.colorpicker 32049]</label>
 						<texturesliderbar colordiffuse="ff000000">colorize/15.png</texturesliderbar>
 						<textureslidernib colordiffuse="$VAR[color:Accent]">glyphs/slider/alt/nib-nf.png</textureslidernib>
@@ -209,7 +209,7 @@
 					</control>
 
 					<!-- Edit manual -->
-					<control type="button" id="5131">
+					<control type="button" id="3010">
 						<top>90</top>
 						<width>256</width>
 						<height>90</height>

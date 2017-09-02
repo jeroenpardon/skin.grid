@@ -26,8 +26,14 @@ msgctxt "#31001"
 msgid "Home menu layout"
 msgstr ""
 
+#. Skin setting that allows the user to choose from several home menu layouts e.g. vertical and horizontal
 msgctxt "#31002"
 msgid "Home menu type"
+msgstr ""
+
+#. example usage: enabling this skin setting will show 5 items on screen at once instead of 3 by using a condensed font. Only applies to horizontal home menu -->
+msgctxt "#31003"
+msgid "Enable condensed menu layout"
 msgstr ""
 
 
@@ -47,6 +53,13 @@ msgctxt "#31018"
 msgid "You're about to delete settings. You will no longer be able to change any system settings unless you have provided a different method. Are you sure?"
 msgstr ""
 
+msgctxt "#31019"
+msgid "Disable shortcut"
+msgstr ""
+
+msgctxt "#31020"
+msgid "Enable shortcut"
+msgstr ""
 
 msgctxt "#31021"
 msgid "Add shortcut"
@@ -57,19 +70,10 @@ msgid "Reset all menu items to defaults"
 msgstr ""
 
 #. example usage: name of a home menu layout option
-msgctxt "#31023"
-msgid "Vertical - Minimal"
-msgstr ""
-
-#. example usage: name of a home menu layout option
-msgctxt "#31024"
-msgid "Vertical - Stream"
-msgstr ""
-
-#. example usage: name of a home menu layout option
 msgctxt "#31025"
-msgid "Stream"
+msgid "Compact"
 msgstr ""
+
 
 
 #: widgets
@@ -154,6 +158,13 @@ msgctxt "#31056"
 msgid "Pictures slideshow"
 msgstr ""
 
+msgctxt "#31057"
+msgid "Horizontal"
+msgstr ""
+
+msgctxt "#31058"
+msgid "Vertical"
+msgstr ""
 
 msgctxt "#31059"
 msgid "Developer"
@@ -233,6 +244,9 @@ msgctxt "#31077"
 msgid "Never played"
 msgstr ""
 
+msgctxt "#31078"
+msgid "Incompatible"
+msgstr ""
 
 msgctxt "#31079"
 msgid "Descriptions"
@@ -243,6 +257,10 @@ msgctxt "#31081"
 msgid "Reload"
 msgstr ""
 
+#. Asking the user to perform an action (like restarting the skin) right away
+msgctxt "#31082"
+msgid "Is it ok to do this now?"
+msgstr ""
 
 msgctxt "#31083"
 msgid "Sorting"
@@ -250,6 +268,15 @@ msgstr ""
 
 msgctxt "#31084"
 msgid "Items"
+msgstr ""
+
+#. A message that notifies the user that the add-on they are about to install will not work on their operating system / platform. The name of the OS will be isted by the skin after "on"
+msgctxt "#31085"
+msgid "The add-on providing this feature will not work on"
+msgstr ""
+
+msgctxt "#31086"
+msgid "Do you want to install it anyway?"
 msgstr ""
 
 
@@ -275,6 +302,7 @@ msgctxt "#31204"
 msgid "Logos"
 msgstr ""
 
+#. example usage: type of artwork, translation might not be needed / suited
 msgctxt "#31205"
 msgid "Clearart"
 msgstr ""
@@ -343,6 +371,7 @@ msgctxt "#31221"
 msgid "Gallery"
 msgstr ""
 
+#. Viewtype name. Translation might not be needed / suitable.
 msgctxt "#31222"
 msgid "Slide"
 msgstr ""
@@ -364,7 +393,7 @@ msgid "Enable animated artwork"
 msgstr ""
 
 msgctxt "#31227"
-msgid "Only in movie information screen"
+msgid "Limit to movie information screen"
 msgstr ""
 
 msgctxt "#31228"
@@ -381,6 +410,10 @@ msgstr ""
 
 msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
+msgstr ""
+
+msgctxt "#31232"
+msgid "Background image"
 msgstr ""
 
 
@@ -419,7 +452,7 @@ msgid "Scrollbar visibility"
 msgstr ""
 
 msgctxt "#31308"
-msgid "Startup playlist"
+msgid "Visual effects"
 msgstr ""
 
 msgctxt "#31309"
@@ -451,7 +484,7 @@ msgid "Show now playing video in background"
 msgstr ""
 
 msgctxt "#31316"
-msgid "Show fanart for currently playing artist"
+msgid "Show on the homescreen too"
 msgstr ""
 
 msgctxt "#31317"
@@ -523,7 +556,7 @@ msgid "Reset skin settings"
 msgstr ""
 
 msgctxt "#31334"
-msgid "This will reset all skin settings and Grid will be restarted."
+msgid "This will reset all skin settings."
 msgstr ""
 
 msgctxt "#31335"
@@ -617,7 +650,7 @@ msgid "Input field only"
 msgstr ""
 
 msgctxt "#31357"
-msgid "Grid needs to be reloaded for this. Is that ok?"
+msgid "The skin will need to be restarted."
 msgstr ""
 
 msgctxt "#31358"
@@ -692,6 +725,20 @@ msgctxt "#31375"
 msgid "Subtitle settings"
 msgstr ""
 
+msgctxt "#31376"
+msgid "Set special effects"
+msgstr ""
+
+#. skin setting that enables a blur effect to the home menu background
+msgctxt "#31377"
+msgid "Blur effect"
+msgstr ""
+
+#. skin setting that enables a blur effect to the home menu background, and changes colours of text and textures to match the fanart image
+msgctxt "#31378"
+msgid "Fanart colours"
+msgstr ""
+
 
 
 #: osd / player
@@ -715,9 +762,6 @@ msgctxt "#31554"
 msgid "Software decoding"
 msgstr ""
 
-msgctxt "#31555"
-msgid "Player processing info"
-msgstr ""
 
 #. example usage: the movie will finish playing at 22:00
 msgctxt "#31556"
@@ -827,6 +871,10 @@ msgctxt "#31611"
 msgid "Recently played channels"
 msgstr ""
 
+#. example usage: start as in the start date AND start time of a tv broadcast e.g. 20:40 - Monday, 21 august 2017
+msgctxt "#31612"
+msgid "Start"
+msgstr ""
 
 
 #: media
@@ -907,6 +955,14 @@ msgstr ""
 
 msgctxt "#31668"
 msgid "TV Shows"
+msgstr ""
+
+msgctxt "#31669"
+msgid "Next air date"
+msgstr ""
+
+msgctxt "#31670"
+msgid "Last air date"
 msgstr ""
 
 
@@ -1050,6 +1106,32 @@ msgstr ""
 
 msgctxt "#31855"
 msgid "See you later"
+msgstr ""
+
+
+#. Do not translate
+msgctxt "#31860"
+msgid "Default (Cyrillic, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31861"
+msgid "Arial Unicode (All languages)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31862"
+msgid "Roboto (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31863"
+msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
+msgstr ""
+
+#. Do not translate
+msgctxt "#31864"
+msgid "Heebo (Hebrew, Latin)"
 msgstr ""
 
 

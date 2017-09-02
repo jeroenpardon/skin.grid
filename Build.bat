@@ -31,6 +31,7 @@ xcopy "language\resource.language.pl_pl" "BUILD\skin.grid\language\resource.lang
 xcopy "language\resource.language.pt_pt" "BUILD\skin.grid\language\resource.language.pt_pt" /E /Q /I /Y
 xcopy "language\resource.language.ro_ro" "BUILD\skin.grid\language\resource.language.ro_ro" /E /Q /I /Y
 xcopy "language\resource.language.ru_ru" "BUILD\skin.grid\language\resource.language.ru_ru" /E /Q /I /Y
+xcopy "language\resource.language.sr_rs" "BUILD\skin.grid\language\resource.language.sr_rs" /E /Q /I /Y
 xcopy "language\resource.language.sv_se" "BUILD\skin.grid\language\resource.language.sv_se" /E /Q /I /Y
 xcopy "language\resource.language.zh_cn" "BUILD\skin.grid\language\resource.language.zh_cn" /E /Q /I /Y
 xcopy "playlists" "BUILD\skin.grid\playlists" /E /Q /I /Y

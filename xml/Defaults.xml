@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<default type="multiimage">
+		<aspectratio>scale</aspectratio>
+		<fadetime>fadetime_Slideshow</fadetime>
+		<include condition="!Window.IsActive(Home)">Burns</include>
+		<include>screen_Dimensions</include>
+		<pauseatend>0</pauseatend>
+		<randomize>true</randomize>
+		<include>Burns</include>
+		<timeperimage>30000</timeperimage>
+	</default>
+
 	<default type="label">
 		<font>Slab-32</font>
 		<height>90</height>
@@ -208,11 +219,5 @@
 		<textureslidernib>-</textureslidernib>
 		<textureslidernibfocus>-</textureslidernibfocus>
 	</default>
-
-	
-
-	
-
-	
 
 </includes>

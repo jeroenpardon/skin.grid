@@ -3,9 +3,10 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<menucontrol>7000</menucontrol>
 	<views>50,51,52,521,53,54,55,56,57</views>
-	<controls>
 
+	<controls>
 		<!--background-->
+
 		<control type="group">
 			<visible>!Control.IsVisible(53)</visible>
 			<include content="background_Global">
@@ -120,7 +121,7 @@
 					<param name="ItemHeight">400</param>
 					<param name="ItemWidth">277.3</param>
 					<param name="Label2">$VAR[media:Info]</param>
-					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
+					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default) | String.IsEmpty(ListItem.Art(poster))</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="ShowLogo">false</param>
 					<param name="ShowOverlay">Container.Content(seasons)</param>
@@ -139,7 +140,7 @@
 					<param name="AspectRatioAlignY">center</param>
 					<param name="Fallback">views/fallback/landscape.png</param>
 					<param name="Label2">$VAR[media:Info]</param>
-					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default)</param>
+					<param name="ShowFallback">ListItem.IsParentFolder | String.StartsWith(ListItem.Art(thumb),Default) | String.IsEmpty(ListItem.Art(thumb))</param>
 					<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="ShowOverlay">$EXP[Thumbview.ShowInfo]</param>
@@ -189,6 +190,7 @@
 					<param name="Label2">$VAR[media:Info]</param>
 					<param name="ShowInfo">false</param>
 					<param name="ShowLogo">false</param>
+					<param name="ShowFallback">String.IsEmpty(Listitem.Art(banner))</param>
 					<param name="ShowOverlay">false</param>
 					<param name="ViewTypeLabel">$LOCALIZE[20020]</param>
 					<param name="Width">1664</param>
@@ -220,5 +222,6 @@
 
 		<!--menu-->
 		<include>menu_Options</include>
+
 	</controls>
 </window>

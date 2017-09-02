@@ -4,18 +4,18 @@
 	<include file="Expressions.xml" />
 	<include file="HomeMenu.xml" />
 	<include file="Includes_Animations.xml" />
-	<include file="Includes_Feed.xml" />
+	<include file="Includes_Home.xml" />
 	<include file="Includes_Menu.xml" />
 	<include file="Includes_OSD.xml" />
 	<include file="Includes_Window.xml" />
 	<include file="Menu.xml" />
+	<include file="script-skinshortcuts-includes.xml" />
 	<include file="Variables.xml" />
 	<include file="ViewGallery.xml" />
+	<include file="ViewGuide.xml" />
 	<include file="ViewIcon.xml" />
 	<include file="ViewList.xml" />
 	<include file="ViewSlide.xml" />
-	<include file="ViewsPVR.xml" />
-	<include file="script-skinshortcuts-includes.xml" />
 
 <!-- Constants -->
 	<constant name="autoscroll_Delay">10000</constant>
@@ -517,9 +517,9 @@
 				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 			</control>
 			<control type="label">
-				<width min="50" max="200">auto</width>
+				<width min="25" max="200">auto</width>
 				<height>$PARAM[Height]</height>
-				<label>$INFO[ListItem.VideoResolution,,P]$VAR[info:Source, &#8226; ]&#32;&#32;</label>
+				<label>$VAR[media:VideoResolution]$VAR[info:Source, &#8226; ]&#32;&#32;</label>
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Regular-20</font>
 				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
@@ -692,6 +692,10 @@
 	<include name="install_Info">
 		<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 	</include>
+	<include name="install_Colorbox">
+		<onclick condition="!System.HasAddon(script.colorbox) + System.Platform.Android">RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[31078],message=$LOCALIZE[31085][CR]$LOCALIZE[31086],yesaction=InstallAddon(script.trakt),noaction=Close)</onclick>
+		<onclick condition="!System.HasAddon(script.colorbox) + !System.Platform.Android">InstallAddon(script.colorbox)</onclick>
+	</include>
 
 <!-- PVR -->
 	<include name="epgscroll_Instant">
@@ -791,4 +795,5 @@
 		<aligny>center</aligny>
 		<textcolor>white</textcolor>
 	</include>
+
 </includes> 

@@ -270,6 +270,7 @@
 				<onright>$PARAM[PageControl]</onright>
 				<pagecontrol>$PARAM[PageControl]</pagecontrol>
 				<include>global_ListScroll</include>
+				<preloaditems>2</preloaditems>
 				<!--library-->
 				<itemlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
 					<control type="image">
@@ -296,9 +297,8 @@
 						<top>22</top>
 						<width>$PARAM[IconSize]</width>
 						<height>$PARAM[IconSize]</height>
-						<align>left</align>
-						<aligny>center</aligny>
 						<texture>$PARAM[Icon]</texture>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<visible>$PARAM[ShowIcon]</visible>
 					</control>
 					<!--!ListItem.HasInfo-->
@@ -356,32 +356,28 @@
 					<control type="image">
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
 						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | [Container.Content(files) + !Container.HasFiles + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(tags) | Container.Content(years) | Container.Content(events)</visible>
 					</control>
 					<control type="image">
 						<width>1036</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(Container.FolderPath,pvr://channels/)</visible>
-						<!--
-						<visible>[Container.Content(files) + Container.HasFiles] | $EXP[Content.IsPVR] | [Container.Content(files) + Container.HasFiles] | Container.Content(videos) | Container.Content(addons) | Container.Content(albums) | Container.Content(artists) | Container.Content(episodes) | Container.Content(images) | Container.Content(musicvideos) | Container.Content(songs) | String.StartsWith(Container.FolderPath,pvr://) | String.StartsWith(Container.FolderPath,plugin://plugin.video) | [!String.IsEqual(Skin.String(view.list.art),posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)]]</visible>
-						-->
+						<visible>$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(ListItem.FolderPath,pvr://) | Container.Content(favourites)</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
 						<visible>$EXP[Art.IsPortrait]</visible>
-						<!--<visible>String.IsEqual(Skin.String(view.list.art),posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] | Container.Content(actors)</visible>-->
 					</control>			
 					<control type="image">
 						<width>$PARAM[SymbolSize]</width>
 						<height>$PARAM[ItemHeight]</height>
-						<texture colordiffuse="ff000000">colorize/15.png</texture>
+						<texture background="true" colordiffuse="ff000000">colorize/15.png</texture>
 						<aspectratio>stretch</aspectratio>
 					</control>
 					<control type="group">
@@ -404,9 +400,8 @@
 							<top>22</top>
 							<width>$PARAM[IconSize]</width>
 							<height>$PARAM[IconSize]</height>
-							<align>left</align>
-							<aligny>center</aligny>
-							<texture>$PARAM[Icon]</texture>
+							<texture background="true">$PARAM[Icon]</texture>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<visible>$PARAM[ShowIcon]</visible>
 						</control>
 						<control type="label">
@@ -481,9 +476,8 @@
 							<top>22</top>
 							<width>$PARAM[IconSize]</width>
 							<height>$PARAM[IconSize]</height>
-							<align>left</align>
-							<aligny>center</aligny>
 							<texture>$PARAM[Icon]</texture>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<visible>$PARAM[ShowIcon]</visible>
 						</control>
 						<control type="label">
@@ -548,7 +542,7 @@
 		<param name="ArtHeight" default="432"/>
 		<param name="ArtWidth" default="756"/>
 		<param name="Aspect" default="scale"/>
-		<param name="AspectRatioAlign" default="right"/>
+		<param name="AspectRatioAlign" default="center"/>
 		<param name="AspectRatioAlignY" default="top"/>
 		<param name="DiffuseTexture" default="views/diffuse/kodi_landscape.png"/>
 		<param name="Fallback" default="$VAR[art:Fallback]"/>
@@ -588,7 +582,7 @@
 					<align>center</align>
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Accent]</textcolor>
-					<visible>ListItem.IsParentFolder | String.IsEmpty(ListItem.Art(thumb))</visible>
+					<visible>ListItem.IsParentFolder</visible>
 				</control>
 				<!-- Landscape art -->
 				<control type="group">
@@ -597,7 +591,7 @@
 					<control type="image">
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ArtHeight]</height>
-						<texture>$PARAM[Art]</texture>
+						<texture background="true">$PARAM[Art]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
 					</control>
@@ -606,7 +600,7 @@
 						<bottom>24</bottom>
 						<width>100%</width>
 						<height>40%</height>
-						<texture>$PARAM[Logo]</texture>
+						<texture background="true">$PARAM[Logo]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<visible>$PARAM[ShowLogo]</visible>
@@ -617,7 +611,7 @@
 						<bottom>24</bottom>
 						<width>64</width>
 						<height>64</height>
-						<texture>$PARAM[ProviderLogo]</texture>
+						<texture background="true">$PARAM[ProviderLogo]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="left" aligny="bottom">keep</aspectratio>
 						<visible>!ListItem.IsParentFolder</visible>
@@ -625,7 +619,7 @@
 					</control>
 					<!-- Videowindow -->
 					<control type="group">
-						<visible>!System.Platform.Android + [VideoPLayer.Content(livetv) + [Window.IsActive(tvchannels) | Window.IsActive(radiochannels)]</visible>
+						<visible>!System.Platform.Android + [VideoPLayer.Content(livetv) + [Window.IsActive(tvchannels) | Window.IsActive(radiochannels)]]</visible>
 						<control type="image">
 							<width>$PARAM[Width]</width>
 							<height>$PARAM[ArtHeight]</height>
@@ -636,17 +630,6 @@
 							<width>$PARAM[Width]</width>
 							<height>$PARAM[ArtHeight]</height>
 						</control>
-					</control>
-					<!-- Airs today -->
-					<control type="button">
-						<width min="90">auto</width>
-						<top>54</top>
-						<label>$VAR[info:AirsToday]</label>
-						<height>54</height>
-						<textcolor>$LOCALIZE[31718]</textcolor>
-						<texturenofocus colordiffuse="eeE65100">colorize/95.png</texturenofocus>
-						<texturefocus colordiffuse="eeE65100">colorize/95.png</texturefocus>
-						<visible>String.IsEqual(Window(Home).Property(SkinHelper.ListItem.NextEpisode.Airdate),$INFO[System.Date(DDDD)])</visible>
 					</control>
 				</control>
 				<!-- Media info -->
@@ -745,20 +728,20 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
+							<texture background="true" colordiffuse="$VAR[color:Text.2]">$VAR[art:Fallback]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture>$PARAM[Art]</texture>
+							<texture background="true">$PARAM[Art]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
 						<control type="image">
 							<bottom>24</bottom>
 							<width>$PARAM[ArtWidth]</width>
 							<height>35%</height>
-							<texture>$PARAM[Logo]</texture>
+							<texture background="true">$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
@@ -822,20 +805,20 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture colordiffuse="$VAR[color:Text.2]" diffuse="views/diffuse/direction/left.png">$VAR[art:Fallback]</texture>
+							<texture background="true" colordiffuse="$VAR[color:Text.2]" diffuse="views/diffuse/direction/left.png">$VAR[art:Fallback]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture diffuse="views/diffuse/direction/left.png">$PARAM[Art]</texture>
+							<texture background="true" diffuse="views/diffuse/direction/left.png">$PARAM[Art]</texture>
 							<aspectratio align="center" aligny="center">scale</aspectratio>
 						</control>
 						<control type="image">
 							<bottom>24</bottom>
 							<width>$PARAM[ArtWidth]</width>
 							<height>35%</height>
-							<texture>$PARAM[Logo]</texture>
+							<texture background="true">$PARAM[Logo]</texture>
 							<aspectratio align="center" aligny="bottom">keep</aspectratio>
 							<visible>$PARAM[ShowLogo]</visible>
 						</control>
@@ -955,7 +938,7 @@
 						<aligny>center</aligny>
 						<label>$PARAM[Symbol]</label>
 						<textcolor>$VAR[color:Text.3]</textcolor>
-						<selectedcolor>$VAR[color:Accent]</selectedcolor>
+						<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 						<visible>$PARAM[ShowSymbol]</visible>
 					</control>
 					<control type="image">
@@ -976,7 +959,7 @@
 							<font>$PARAM[Font]</font>
 							<label>$PARAM[Label]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>$PARAM[Label2Empty]</visible>
 						</control>
 						<control type="label">
@@ -987,7 +970,7 @@
 							<font>$PARAM[Font]</font>
 							<label>$PARAM[Label]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
@@ -1034,7 +1017,7 @@
 							<aligny>center</aligny>
 							<label>$PARAM[Symbol]</label>
 							<textcolor>$VAR[color:Main]</textcolor>
-							<selectedcolor>$VAR[color:Main]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 						</control>
 						<control type="label">
 							<width>$PARAM[SymbolSize]</width>
@@ -1044,7 +1027,7 @@
 							<aligny>center</aligny>
 							<label>$PARAM[Symbol]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>!Control.HasFocus($PARAM[ID])</visible>
 						</control>
 						<control type="image">
@@ -1102,7 +1085,7 @@
 							<font>$PARAM[Font]</font>
 							<label>$PARAM[Label]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>$PARAM[Label2Empty]</visible>
 						</control>
 						<!--a label2 is available, so use two rows-->
@@ -1114,7 +1097,7 @@
 							<font>$PARAM[Font]</font>
 							<label>$PARAM[Label]</label>
 							<textcolor>$VAR[color:Accent]</textcolor>
-							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">

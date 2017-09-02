@@ -31,6 +31,9 @@
 				<height>$PARAM[Height]</height>
 				<onup>7000</onup>
 				<onback>$PARAM[OnBack]</onback>
+				<!-- Search result focus workaround -->
+				<onfocus condition="String.IsEqual(Window(virtualkeyboard).Property(SearchQuery),true)">Control.Move(52,-1)</onfocus>
+
 				<onup>SetProperty(MenuOpen,true,Home)</onup>
 				<ondown condition="Window.IsActive(movieinformation)">5000</ondown>
 				<ondown condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</ondown>
