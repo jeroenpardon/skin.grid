@@ -396,6 +396,7 @@
 						<onclick>Skin.ToggleSetting(fanart.scrolling)</onclick>
 						<selected>Skin.HasSetting(fanart.scrolling)</selected>
 						<include>radio_Settings</include>
+						<visible>String.IsEqual(Skin.String(background.media),fanart)</visible>
 					</control>
 					<control type="button" id="9324">
 						<label>$LOCALIZE[31216]</label>
