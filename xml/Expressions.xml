@@ -29,9 +29,18 @@
 	<expression name="ListItem.IsParent">[ListItem.IsParentFolder | String.StartsWith(ListItem.Label,* All)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
 	<expression name="!ListItem.IsParent">!ListItem.IsParentFolder + !String.StartsWith(ListItem.Label,* All) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
 	
-	<expression name="ListItem.HasInfo">[!String.IsEmpty(ListItem.DBID) + ![Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(years) | Container.Content(countries) | Container.Content(tags)]] | Window.IsActive(settings) | String.StartsWith(ListItem.FolderPath,pvr://) | [Container.Content(addons) + !String.IsEmpty(ListItem.AddonVersion)] | [Window.IsActive(1110) + !String.IsEmpty(ListItem.Label2)]</expression>
+	<expression name="ListItem.HasInfo">!String.IsEmpty(ListItem.DBTYPE) | [String.IsEmpty(ListItem.DBTYPE) + !String.IsEmpty(ListItem.Label2)]</expression>
 	
-	<expression name="!ListItem.HasInfo">[String.IsEmpty(ListItem.DBID) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(years) | Container.Content(countries) | Container.Content(tags)] + !Window.IsActive(settings) + !String.StartsWith(ListItem.FolderPath,pvr://) + ![Container.Content(addons) + !String.IsEmpty(ListItem.AddonVersion)] + ![Window.IsActive(1110) + !String.IsEmpty(ListItem.Label2)]</expression>
+
+	<!--
+	[!String.IsEmpty(ListItem.DBID) + ![Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(years) | Container.Content(countries) | Container.Content(tags)]] | Window.IsActive(settings) | String.StartsWith(ListItem.FolderPath,pvr://) | [Container.Content(addons) + !String.IsEmpty(ListItem.AddonVersion)] | [Window.IsActive(1110) + !String.IsEmpty(ListItem.Label2)] | Container.Content(episodes)
+	-->
+
+	<expression name="!ListItem.HasInfo">String.IsEmpty(ListItem.DBTYPE) + String.IsEmpty(ListItem.Label2)</expression>
+
+	<!--
+	[String.IsEmpty(ListItem.DBID) | Container.Content(genres) | Container.Content(years) | Container.Content(actors) | Container.Content(directors) | Container.Content(studios) | Container.Content(years) | Container.Content(countries) | Container.Content(tags)] + !Window.IsActive(settings) + !String.StartsWith(ListItem.FolderPath,pvr://) + ![Container.Content(addons) + !String.IsEmpty(ListItem.AddonVersion)] + ![Window.IsActive(1110) + !String.IsEmpty(ListItem.Label2)] + !Container.Content(episodes)
+	-->
 
 	<!--
 	<expression name="ListItem.HasInfo">!String.IsEmpty(ListItem.DBID) | [String.StartsWith(Container.FolderPath,plugin://) + !String.IsEmpty(ListItem.Label2)] | String.StartsWith(Container.FolderPath,pvr://) | Window.IsActive(settings) | [Window.IsActive(1110) + !String.IsEmpty(ListItem.Label2)] | [Container.Content(addons) + !String.IsEmpty(ListItem.AddonVersion)]</expression>	
