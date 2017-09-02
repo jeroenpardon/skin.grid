@@ -338,7 +338,7 @@
 		<value condition="Window.IsActive(videoplaylist) + !String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Title]</value>
 		<value condition="Window.IsActive(videoplaylist) + String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(episodes) + [String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=nextmediatype=episodes) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) | String.IsEqual(Container.FolderPath,special://skin/extras/playlists/episodes/unwatched.xsp)]">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Title]</value>
-		<value condition="Container.Content(episodes) + !Skin.HasSetting(logos.enable)">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Title,: ]</value> 
+		<value condition="Container.Content(episodes) + !Skin.HasSetting(logos.enable) + !ListItem.IsParentFolder">$INFO[ListItem.TVShowTitle]$INFO[ListItem.Title,: ]</value> 
 		<value condition="Container.Content(episodes) + ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Title]</value>
 		<value condition="Window.IsActive(tvrecordings) | Window.IsActive(radiorecordings)">[B]$INFO[ListItem.ChannelNumber,,  ][/B]$INFO[ListItem.Label]</value>
@@ -684,18 +684,18 @@
 	
 	<variable name="art:Portrait">
 		<value condition="[Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + !String.IsEmpty(ListItem.Art(animatedposter))] + [!Skin.HasSetting(art.animated.info) | Skin.HasSetting(art.animated.info) + Window.IsActive(movieinformation)]">$INFO[ListItem.Art(animatedposter)]</value>
-		<value condition="Container.Content(tvshows) + ListItem.IsParentFolder">$INFO[Container().ListItem(2).Art(tvshow.poster)]</value>
+
+		<!-- Get the parent tv show poster from the first season and set it on the all seasons node -->
+		<value condition="Container.Content(seasons) + String.IsEqual(ListItem.Label,$LOCALIZE[20366])">$INFO[Container().ListItem(1).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(Container.Art(season.poster))">$INFO[Container.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<!--<value condition="Container.Content(actors) + String.IsEmpty(ListItem.Art(thumb))">views/fallback/portrait-person.png</value>-->
 		<value>$INFO[ListItem.Art(thumb)]</value>
 	</variable>
 
 	<variable name="art:Square">
 		<value condition="!String.IsEqual(ListItem.Icon,DefaultFolder.png) + !String.IsEmpty(ListItem.Icon)">$INFO[ListItem.Icon]</value>
-		<!--<value condition="!String.IsEqual(ListItem.Icon,DefaultFolderBack.png) + [Container.Content(albums) | Container.Content(songs)]">views/fallback/music.jpg</value>-->
 	</variable>
 
 	<variable name="art:Fallback">
