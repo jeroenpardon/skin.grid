@@ -196,7 +196,7 @@
 					<visible>$PARAM[ShowItemCount]</visible>
 					<visible>$EXP[!Window.IsInfo] + ![Window.IsVisible(volumebar) | Player.Muted] + !Window.IsVisible(busydialog)</visible>
 				</control>
-				<control type="button">
+				<control type="label">
 					<width>128</width>
 					<height>$PARAM[Height]</height>
 					<label>$PARAM[Symbol]</label>
@@ -204,8 +204,10 @@
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<texturenofocus></texturenofocus>
+					<!--
 					<onclick>SetFocus(7000)</onclick>
 					<onclick>SetProperty(MenuOpen,true,Home)</onclick>
+					-->
 					<visible>!Window.IsVisible(busydialog)</visible>
 					<visible>$PARAM[ShowSymbol]</visible>
 				</control>
@@ -277,37 +279,43 @@
 					<height>$PARAM[Height]</height>
 					<orientation>vertical</orientation>
 					<visible>$EXP[VolumeBarMuted]</visible>
-					<control type="button">
+					<control type="label">
 						<width max="1280">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<!--
 						<onclick>Back</onclick>
 						<texturenofocus></texturenofocus>
+						-->
 						<visible>$EXP[!Window.HasOverlay]</visible>
 					</control>
-					<control type="button">
+					<control type="label">
 						<width max="1600">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<!--
 						<onclick>Back</onclick>
 						<texturenofocus></texturenofocus>
+						-->
 						<visible>$EXP[!Window.HasOverlay]</visible>
 					</control>
-					<control type="button">
+					<control type="label">
 						<width max="832">auto</width>
 						<height>$PARAM[Height]</height>
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
 						<label>$PARAM[Title]</label>
+						<!--
 						<onclick>Back</onclick>
 						<texturenofocus></texturenofocus>
+						-->
 						<visible>$EXP[Window.HasOverlay]</visible>
 					</control>
 				</control>
