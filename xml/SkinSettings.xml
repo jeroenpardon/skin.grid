@@ -770,7 +770,7 @@
 					<control type="radiobutton" id="9630">
 						<label>$LOCALIZE[31377]</label>
 						<label2>$INFO[Skin.String(home.blurfx)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android + String.IsEqual(Skin.String(homemenu.layout),horizontal)">Skin.ToggleSetting(home.blurfx)</onclick>
+						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.blurfx)</onclick>
 						<onclick condition="String.Contains(Control.GetLabel(9660),*)">Skin.ToggleSetting(burns.enable)</onclick>
 						<selected>Skin.HasSetting(home.blurfx)</selected>
 						<include>install_Colorbox</include>
