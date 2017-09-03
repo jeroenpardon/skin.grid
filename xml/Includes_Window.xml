@@ -285,6 +285,7 @@
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
+						<textoffsetx>32</textoffsetx>
 						<label>$PARAM[Title]</label>
 						<!--
 						<onclick>Back</onclick>
@@ -298,6 +299,7 @@
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
+						<textoffsetx>32</textoffsetx>
 						<label>$PARAM[Title]</label>
 						<!--
 						<onclick>Back</onclick>
@@ -311,6 +313,7 @@
 						<aligny>center</aligny>
 						<font>$PARAM[Font]</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
+						<textoffsetx>32</textoffsetx>
 						<label>$PARAM[Title]</label>
 						<!--
 						<onclick>Back</onclick>

@@ -574,6 +574,7 @@
 		<value condition="Container.Content(addons)">&#57389;</value>
 		<value condition="Container.Content(songs) | Window.IsActive(musicplaylisteditor)">&#57441;</value>
 		<value condition="Container.Content(events)">&#57439;</value>
+		<value condition="Container.Content(games) + !ListItem.IsFolder">&#57370;</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://plugin.video)">&#57352;</value>
 		<!--default icons-->
 		<value condition="String.IsEqual(ListItem.ActualIcon,DefaultActor.png) | String.IsEqual(ListItem.ActualIcon,DefaultArtist.png) | String.IsEqual(ListItem.ActualIcon,DefaultMusicRoles.png) | String.IsEqual(ListItem.ActualIcon,DefaultUser.png)">&#57389;</value>
