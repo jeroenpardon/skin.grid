@@ -416,7 +416,18 @@ msgctxt "#31232"
 msgid "Background image"
 msgstr ""
 
+msgctxt "#31233"
+msgid "Extraposter"
+msgstr ""
 
+#: for Extraposter
+msgctxt "#31234"
+msgid "Enabled"
+msgstr ""
+
+msgctxt "#31235"
+msgid "Disabled"
+msgstr ""
 
 #: settings
 msgctxt "#31300"
