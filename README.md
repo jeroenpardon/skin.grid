@@ -31,6 +31,8 @@ excerpt:
 **To Kodi box sellers / streambox sellers, etc:**
 This means you are **not** allowed to sell products with Grid (pre)installed without my **prior written consent**!
 
+Any redistribution of this software (or modifications / derivatives of it) must include the original license files and an this readme unmodified.
+
 ## Add-ons
 More info on the add-ons required and/or supported by Grid can be found [here](https://github.com/jeroenpardon/skin.grid/wiki/Add-ons).
 
