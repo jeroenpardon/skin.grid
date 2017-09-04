@@ -1192,45 +1192,8 @@
 				</control>
 			</control>
 		</control>
-		<!-- System information -->
-		<control type="group" id="7011">
-			<height>108</height>
-			<visible>Window.IsActive(Settings)</visible>
-			<control type="image">
-				<width>384</width>
-				<height>108</height>
-				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-				<visible>Control.HasFocus(25)</visible>
-			</control>
-			<control type="button" id="25">
-				<top>12</top>
-				<label>$LOCALIZE[130]</label>
-				<onup>7010</onup>
-				<ondown>7012</ondown>
-				<onleft>7100</onleft>
-				<onright>50</onright>
-				<include>menu_Button</include>
-				<onclick>ActivateWindow(systeminfo)</onclick>
-			</control>
-			<control type="group">
-				<top>54</top>
-				<left>32</left>
-				<control type="label">
-					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$INFO[System.FriendlyName]</label>
-					<include>menu_Label</include>
-					<visible>!Control.HasFocus(25)</visible>
-				</control>
-				<control type="label">
-					<width>384</width>
-					<label>$INFO[System.FriendlyName]</label>
-					<include>menu_Label</include>
-					<visible>Control.HasFocus(25)</visible>
-				</control>
-			</control>
-		</control>
 		<!--file manager-->
-		<control type="group" id="7012">
+		<control type="group" id="7011">
 			<height>108</height>
 			<visible>Window.IsActive(settings)</visible>
 			<control type="image">
@@ -1242,8 +1205,8 @@
 			<control type="button" id="30">
 				<top>12</top>
 				<label>$LOCALIZE[7]</label>
-				<onup>7011</onup>
-				<ondown>7013</ondown>
+				<onup>7010</onup>
+				<ondown>7012</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
@@ -1267,7 +1230,7 @@
 			</control>
 		</control>
 		<!--events-->
-		<control type="group" id="7013">
+		<control type="group" id="7012">
 			<height>108</height>
 			<visible>Window.IsActive(settings)</visible>
 			<control type="image">
@@ -1279,8 +1242,8 @@
 			<control type="button" id="40">
 				<top>12</top>
 				<label>$LOCALIZE[14111]</label>
-				<onup>7012</onup>
-				<ondown>7014</ondown>
+				<onup>7011</onup>
+				<ondown>7013</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
@@ -1304,7 +1267,7 @@
 			</control>
 		</control>
 		<!--event logging level-->
-		<control type="group" id="7014">
+		<control type="group" id="7013">
 			<height>108</height>
 			<visible>Window.IsActive(eventlog)</visible>
 			<control type="image">
@@ -1315,8 +1278,8 @@
 			</control>
 			<control type="button" id="21">
 				<top>12</top>
-				<onup>7013</onup>
-				<ondown>7015</ondown>
+				<onup>7012</onup>
+				<ondown>7014</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
@@ -1339,7 +1302,7 @@
 			</control>
 		</control>
 		<!--only show current level-->
-		<control type="group" id="7015">
+		<control type="group" id="7014">
 			<height>108</height>
 			<visible>Window.IsActive(eventlog)</visible>
 			<control type="image">
@@ -1350,8 +1313,8 @@
 			</control>
 			<control type="radiobutton" id="22">
 				<top>12</top>
-				<onup>7014</onup>
-				<ondown>7016</ondown>
+				<onup>7013</onup>
+				<ondown>7015</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
@@ -1374,7 +1337,7 @@
 			</control>
 		</control>
 		<!--clear-->
-		<control type="group" id="7016">
+		<control type="group" id="7015">
 			<height>108</height>
 			<visible>Window.IsActive(eventlog)</visible>
 			<control type="image">
@@ -1386,7 +1349,7 @@
 			<control type="button" id="20">
 				<top>12</top>
 				<label>$LOCALIZE[192]</label>
-				<onup>7015</onup>
+				<onup>7014</onup>
 				<ondown>7090</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
@@ -1410,7 +1373,7 @@
 			</control>
 		</control>
 		<!-- Skin debug grid -->
-		<control type="group" id="7017">
+		<control type="group" id="7016">
 			<height>108</height>
 			<visible>Window.IsActive(SkinSettings)</visible>
 			<control type="image">
@@ -1423,7 +1386,7 @@
 				<top>12</top>
 				<label>$LOCALIZE[31336]</label>
 				<onup>7011</onup>
-				<ondown>7018</ondown>
+				<ondown>7017</ondown>
 				<onleft>7100</onleft>
 				<onright>9001</onright>
 				<include>menu_Button</include>
@@ -1447,7 +1410,7 @@
 			</control>
 		</control>
 		<!-- Skin debug labels -->
-		<control type="group" id="7018">
+		<control type="group" id="7017">
 			<height>108</height>
 			<visible>Window.IsActive(SkinSettings)</visible>
 			<control type="image">
@@ -1459,8 +1422,8 @@
 			<control type="radiobutton" id="31">
 				<top>12</top>
 				<label>$LOCALIZE[31337]</label>
-				<onup>7017</onup>
-				<ondown>7019</ondown>
+				<onup>7016</onup>
+				<ondown>7018</ondown>
 				<onleft>7100</onleft>
 				<onright>9001</onright>
 				<include>menu_Button</include>
@@ -1485,7 +1448,7 @@
 		</control>
 
 		<!-- Reload skin -->
-		<control type="group" id="7019">
+		<control type="group" id="7018">
 			<height>108</height>
 			<visible>Window.IsActive(SkinSettings)</visible>
 			<control type="image">
@@ -1497,8 +1460,8 @@
 			<control type="radiobutton" id="32">
 				<top>12</top>
 				<label>$LOCALIZE[31081]</label>
-				<onup>7018</onup>
-				<ondown>7090</ondown>
+				<onup>7017</onup>
+				<ondown>7019</ondown>
 				<onleft>7100</onleft>
 				<onright>9001</onright>
 				<include>menu_Button</include>
@@ -1522,10 +1485,47 @@
 			</control>
 		</control>
 
+		<!-- Reload skin -->
+		<control type="group" id="7019">
+			<height>108</height>
+			<visible>Window.IsActive(settings)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(33)</visible>
+			</control>
+			<control type="radiobutton" id="33">
+				<top>12</top>
+				<label>$LOCALIZE[10040]</label>
+				<onup>7018</onup>
+				<ondown>7090</ondown>
+				<onleft>7100</onleft>
+				<onright>9001</onright>
+				<include>menu_Button</include>
+				<onclick>ActivateWindow(addonbrowser)</onclick>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>33</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$LOCALIZE[518]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(33)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$LOCALIZE[518]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(33)</visible>
+				</control>
+			</control>
+		</control>
+
 		<include content="menu_Extras"></include>
 
 	</include>
-
 
 	<include name="menu_PVR">
 		<!--channels-->
