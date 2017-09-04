@@ -46,14 +46,26 @@
 		<value>$INFO[Skin.String(background.nomedia)]</value>
 	</variable>
 
-
 	<variable name="background:Player">
 		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying) + System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
 		<value condition="Player.HasAudio + Window.IsActive(Home) + Skin.HasSetting(home.nowplaying) | Window.IsActive(visualisation)">$VAR[player:Art]</value>
 	</variable>
 
 	<variable name="background:TVGuide">
-		<value condition="String.IsEqual(Window(Home).Property(tvguide),monday)">$INFO[Container(200).ListItem.Property(Art(fanart))]</value>
+		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(203)">$INFO[Container(203).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(204)">$INFO[Container(204).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(205)">$INFO[Container(205).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(206)">$INFO[Container(206).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(207)">$INFO[Container(207).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(208)">$INFO[Container(208).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(209)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(210)">$INFO[Container(210).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(211)">$INFO[Container(211).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(212)">$INFO[Container(212).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(213)">$INFO[Container(213).ListItem.Property(Fanart)]</value>
+		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Fanart)]</value>
 	</variable>
 
 <!-- Home -->
@@ -1312,6 +1324,7 @@
 		<value condition="Window.IsActive(script-skinshortcuts.xml)">&#57449;</value>
 		<value condition="Window.IsActive(script-skin_helper_service-ColorPicker.xml)">&#59104;</value>
 		<value condition="Window.IsActive(script-cu-lrclyrics-main.xml)">&#57420;</value>
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">&#57461;</value>
 		<!-- Settings -->
 		<value condition="Window.IsActive(osdvideosettings)">&#57352;</value>
 		<value condition="Window.IsActive(osdaudiosettings)">&#57504;</value>
@@ -1351,6 +1364,13 @@
 		<value></value>
 	</variable>
 
+	<variable name="window:Title.Addons">
+		<value condition="[Window.IsVisible(volumebar) + !Player.Muted] + Window.IsActive(Home)">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$LOCALIZE[31206]</value>
+		<value condition="Window.IsActive(script-cu-lrclyrics-main.xml)">$LOCALIZE[24013]</value>
+		<value>$INFO[ListItem.Label]</value>
+	</variable>
+
 	<variable name="window:Title.Custom">
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(1103)">$LOCALIZE[31206]</value>
@@ -1381,7 +1401,6 @@
 
 	<variable name="window:Title.Info">
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
-		<value condition="Window.IsActive(script-cu-lrclyrics-main.xml)">$LOCALIZE[24013]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[24003]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Label]</value>

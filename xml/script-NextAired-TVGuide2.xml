@@ -26,8 +26,7 @@
 			<control type="group">
 				<include>transition_Chrome</include>
 				<include content="global_WindowChrome">
-					<param name="Title">TV Guide</param>
-					<param name="Symbol">&#57461;</param>
+					<param name="Title">$VAR[window:Title.Addons]</param>
 				</include>
 			</control>
 
