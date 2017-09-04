@@ -20,7 +20,7 @@ https://img.shields.io/badge/Downloads-Snapshot-brightgreen.svg?style=flat-squar
 
 ## License
 [![badge-license](
-https://img.shields.io/badge/License-CC_BY--NC--SA-brightgreen.svg?style=flat-square
+https://img.shields.io/badge/License-CC_BY--NC--SA-orange.svg?style=flat-square
 )](http://creativecommons.org/licenses/by-nc-sa/3.0/)
 
 This software is licensed under a [Attribution-NonCommercial-ShareAlike 3.0 Unported license](http://creativecommons.org/licenses/by-nc-sa/3.0/)
