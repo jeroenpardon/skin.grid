@@ -5,7 +5,7 @@
 	<onload>SetFocus(9050)</onload>
 	<controls>
 
-		<!--menu trigger-->
+		<!-- Menu trigger -->
 		<control type="button" id="5500">
 			<onleft>7000</onleft>
 			<onfocus>SetFocus(9050)</onfocus>
@@ -14,100 +14,15 @@
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 
+		<!-- Background -->
 		<control type="group">
 			<include>toggle_Menu</include>
+			<include content="background_Global">
+				<param name="GridTexture">overlays/400.png</param>
+				<param name="BackgroundPath">$VAR[background:TVGuide]</param>
+			</include>
 
-			<control type="group">
-				<include content="background_Global">
-					<param name="GridTexture">overlays/400.png</param>
-				</include>
-			</control>
-
-			<control type="group">
-				<visible>false</visible>
-					<visible>!IsEmpty(Window(Home).Property(TVGuide.BackgroundFanart))</visible>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(200).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(200)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(201).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(201)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(202).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(202)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(203).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(203)</visible>
-					</control>
-					<control type="image">
-						<texture background="true">$INFO[Container(204).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(204)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(205).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(205)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(206).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(206)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(207).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(207)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(208).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(208)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(209).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(209)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(210).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(210)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(211).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(211)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(212).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(212)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(213).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(213)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(214).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(214)</visible>
-					</control>
-					<control type="image">
-						<include>TVGuideBackground</include>
-						<texture background="true">$INFO[Container(215).ListItem.Property(Fanart)]</texture>
-						<visible>Control.HasFocus(215)</visible>
-					</control>
-				</control>
-
-			<!--chrome-->
+			<!-- Chrome -->
 			<control type="group">
 				<include>transition_Chrome</include>
 				<include content="global_WindowChrome">
@@ -116,9 +31,9 @@
 				</include>
 			</control>
 
+			<!-- Content -->
 			<control type="group">
 				<include>transition_Content</include>
-
 				<control type="grouplist" id="9050">
 					<left>0</left>
 					<top>108</top>
@@ -128,8 +43,7 @@
 					<ondown>9050</ondown>
 					<include>global_ListScroll</include>
 					<orientation>vertical</orientation>
-
-					<!-- Monday -->
+					<!-- Today -->
 					<control type="group" id="100">
 						<width>1920</width>
 						<height>432</height>
@@ -146,9 +60,8 @@
 								<param name="ID">200</param>
 							</include>
 						</control>
-					</control>
-						
-					<!-- Tuesday -->	
+					</control>				
+					<!-- Tomorrow -->	
 					<control type="group" id="101">
 						<height>432</height>
 						<visible>Integer.IsGreater(Container(201).NumItems,0)</visible>
@@ -165,8 +78,7 @@
 							</include>
 						</control>
 					</control>
-
-					<!-- Wednesday -->
+					<!-- Today +2 -->
 					<control type="group" id="102">
 						<height>432</height>
 						<visible>Integer.IsGreater(Container(202).NumItems,0)</visible>
@@ -183,8 +95,7 @@
 							</include>
 						</control>
 					</control>
-
-					<!-- Thursday -->
+					<!-- Today +3 -->
 					<control type="group" id="103">
 						<height>432</height>
 						<visible>Integer.IsGreater(Container(203).NumItems,0)</visible>
@@ -201,8 +112,7 @@
 							</include>
 						</control>
 					</control>
-
-					<!-- Friday -->
+					<!-- Today +4 -->
 					<control type="group" id="104">
 						<height>432</height>
 						<visible>Integer.IsGreater(Container(204).NumItems,0)</visible>
@@ -219,8 +129,7 @@
 							</include>
 						</control>
 					</control>
-
-					<!-- Saturday -->
+					<!-- Today +5 -->
 					<control type="group" id="105">
 						<height>432</height>
 						<visible>Integer.IsGreater(Container(205).NumItems,0)</visible>
@@ -237,7 +146,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 6 -->
 					<control type="group" id="106">
 						<height>432</height>
@@ -255,7 +163,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 7 -->
 					<control type="group" id="107">
 						<height>432</height>
@@ -273,7 +180,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 8 -->
 					<control type="group" id="108">
 						<height>432</height>
@@ -291,7 +197,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 9 -->
 					<control type="group" id="109">
 						<height>432</height>
@@ -309,7 +214,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 10 -->
 					<control type="group" id="110">
 						<height>432</height>
@@ -327,7 +231,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 11 -->
 					<control type="group" id="111">
 						<height>432</height>
@@ -345,7 +248,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 12 -->
 					<control type="group" id="112">
 						<height>432</height>
@@ -363,7 +265,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 13 -->
 					<control type="group" id="113">
 						<height>432</height>
@@ -381,7 +282,6 @@
 							</include>
 						</control>
 					</control>
-
 					<!-- Today + 14 -->
 					<control type="group" id="114">
 						<height>432</height>
@@ -399,14 +299,11 @@
 							</include>
 						</control>
 					</control>
-
 				</control>
-
 			</control>
-
 		</control>
 
-		<!--menu-->
+		<!-- Menu -->
 		<include>menu_Options</include>
 	
 	</controls>

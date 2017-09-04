@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+	<include name="TVGuideBackground">
+		<include>screen_Dimensions</include>
+		<aspectratio>scale</aspectratio>
+		<fadetime>600</fadetime>
+	</include>
+
+	<include name="TVGuideContainer">
+		<left>128</left>
+		<width>1792</width>
+		<height>486</height>
+		<onleft>SetProperty(MenuOpen,true,Home)</onleft>
+		<onleft>7000</onleft>
+		<orientation>horizontal</orientation>
+	</include>
+
 	<include name="TVGuideLayout">
 		<param name="ID"/>
 		<param name="Art" default="$INFO[ListItem.Property(Art(fanart))]"/>
@@ -19,7 +34,6 @@
 		<param name="Frame" default="views/frame/square.png"/>
 		<definition>
 			<itemlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
-
 				<control type="label">
 					<left>12</left>
 					<width>$PARAM[ItemWidth]</width>
@@ -30,7 +44,6 @@
 					<selectedcolor>$VAR[color:Accent]</selectedcolor>
 					<font>Regular-20</font>
 				</control>
-
 				<control type="group">
 					<top>$PARAM[RulerHeight]</top>
 					<control type="image">
@@ -47,14 +60,10 @@
 						<bordersize>$PARAM[BorderSize]</bordersize>
 						<aspectratio>stretch</aspectratio>
 					</control>
-
 					<include>TVGuideInfo</include>
-				
 				</control>
-
 			</itemlayout>
 			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
-				
 				<control type="label">
 					<left>12</left>
 					<width>$PARAM[ItemWidth]</width>
@@ -65,7 +74,6 @@
 					<selectedcolor>$VAR[color:Accent]</selectedcolor>
 					<font>Regular-20</font>
 				</control>
-
 				<control type="group">
 					<top>$PARAM[RulerHeight]</top>
 					<control type="image">
@@ -82,7 +90,6 @@
 						<bordersize>$PARAM[BorderSize]</bordersize>
 						<aspectratio>stretch</aspectratio>
 					</control>
-
 					<control type="image">
 						<width>$PARAM[ArtWidth]</width>
 						<height>$PARAM[ArtHeight]</height>
@@ -91,48 +98,71 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus($PARAM[ID])</visible>
 					</control>
-
 					<include>TVGuideInfo</include>
 				</control>
-
 			</focusedlayout>
 		</definition>
 	</include>
 
-	<include name="TVGuideBackground">
-		<include>screen_Dimensions</include>
-		<aspectratio>scale</aspectratio>
-		<fadetime>600</fadetime>
+	<include name="TVGuideDate">
+		<param name="ID"/>
+		<param name="HeaderID"/>
+		<definition>
+			<control type="group" id="$PARAM[HeaderID]">
+				<top>54</top>
+				<width>128</width>
+				<height>108</height>
+				<control type="image">
+					<width>128</width>
+					<height>128</height>
+					<texture colordiffuse="ff000000">colorize/15.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<top>24</top>
+					<height>64</height>
+					<width>128</width>
+					<label>$PARAM[Day]</label>
+					<align>center</align>
+					<aligny>bottom</aligny>
+					<font>Black-28</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label">
+					<top>64</top>
+					<height>64</height>
+					<width>128</width>
+					<label>$PARAM[Date]</label>
+					<align>center</align>
+					<aligny>top</aligny>
+					<font>Regular-20</font>
+					<textcolor>$VAR[color:Text.2]</textcolor>
+				</control>
+			</control>
+		</definition>
 	</include>
 
-
 	<include name="TVGuideInfo">
-
-		<control type="group">
-
-			<control type="image">
-				<top>10</top>
-				<right>10</right>
-				<width>80</width>
-				<height>54</height>
-				<texture colordiffuse="$VAR[color:Text.2]">colorize/90.png</texture>
-				<aspectratio>stretch</aspectratio>
-			</control>
-			<control type="label" id="66">
-				<top>10</top>
-				<right>10</right>
-				<width>80</width>
-				<height>54</height>
-				<align>center</align>
-				<aligny>center</aligny>
-				<label>$INFO[ListItem.Property(NextSeasonNumber),[B]S[/B]]$INFO[ListItem.Property(NextEpisodeNumber),[B]E[/B]]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</label>
-				<textcolor>$VAR[color:Accent]</textcolor>
-				<selectedcolor>$VAR[color:Accent]</selectedcolor>
-				<font>Regular-18</font>
-			</control>
+		<control type="image">
+			<top>10</top>
+			<right>10</right>
+			<width>80</width>
+			<height>54</height>
+			<texture colordiffuse="$VAR[color:Text.2]">colorize/90.png</texture>
+			<aspectratio>stretch</aspectratio>
 		</control>
-
-
+		<control type="label" id="66">
+			<top>10</top>
+			<right>10</right>
+			<width>80</width>
+			<height>54</height>
+			<align>center</align>
+			<aligny>center</aligny>
+			<label>$INFO[ListItem.Property(NextSeasonNumber),[B]S[/B]]$INFO[ListItem.Property(NextEpisodeNumber),[B]E[/B]]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</label>
+			<textcolor>$VAR[color:Accent]</textcolor>
+			<selectedcolor>$VAR[color:Accent]</selectedcolor>
+			<font>Regular-18</font>
+		</control>
 		<control type="group">
 			<left>32</left>
 			<bottom>36</bottom>
@@ -170,72 +200,5 @@
 			</control>
 		</control>
 	</include>
-
-	<include name="TVGuideContainer">
-		<left>128</left>
-		<width>1792</width>
-		<height>486</height>
-		<onleft>SetProperty(MenuOpen,true,Home)</onleft>
-		<onleft>7000</onleft>
-		<orientation>horizontal</orientation>
-	</include>
-
-	<include name="TVGuideDate">
-		<param name="ID"/>
-		<param name="HeaderID"/>
-		<definition>
-			<control type="group" id="$PARAM[HeaderID]">
-				<top>54</top>
-				<width>128</width>
-				<height>108</height>
-				<control type="image">
-					<width>128</width>
-					<height>128</height>
-					<texture colordiffuse="ff000000">colorize/15.png</texture>
-					<aspectratio>stretch</aspectratio>
-				</control>
-
-				<control type="label">
-					<top>24</top>
-					<height>64</height>
-					<width>128</width>
-					<label>$PARAM[Day]</label>
-					<align>center</align>
-					<aligny>bottom</aligny>
-					<font>Black-28</font>
-					<textcolor>$VAR[color:Accent]</textcolor>
-				</control>
-
-				<control type="label">
-					<top>64</top>
-					<height>64</height>
-					<width>128</width>
-					<label>$PARAM[Date]</label>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>Regular-20</font>
-					<textcolor>$VAR[color:Text.2]</textcolor>
-				</control>
-			</control>
-		</definition>
-	</include>
+	
 </includes>
-
-
-
-			<!---
-			<include content="view_Thumbnails">
-				<param name="ID">200</param>
-				<param name="Art">$INFO[ListItem.Property(Art(poster))]</param>
-				<param name="Fallback">views/fallback/landscape.png</param>
-				<param name="Width">1664</param>
-				<param name="Height">360</param>
-				<param name="ItemWidth">240</param>
-				<param name="ItemHeight">360</param>
-				<param name="ArtWidth">240</param>
-				<param name="ArtHeight">360</param>
-				<param name="ShowInfo">false</param>
-				<param name="OnUp">203</param>
-				<param name="OnDown">201</param>
-			</include>
-			-->
