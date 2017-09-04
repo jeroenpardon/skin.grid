@@ -347,7 +347,7 @@
 		<value condition="Container.Content(tvshows)">$VAR[info:ShowStatus]$INFO[ListItem.Genre,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Studio,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</value>
-		<value condition="Container.Content(artists)">$INFO[ListItem.Genre]$VAR[info:Origin,&#32;&#32;|&#32;&#32;]</value>
+		<value condition="Container.Content(artists)">$INFO[ListItem.Genre]$VAR[information:R1,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Artist]$INFO[ListItem.FileExtension,&#32;&#32;|&#32;&#32;]$INFO[ListItem.Duration,&#32;&#32;|&#32;&#32;]</value>
 		<value condition="Container.Content(musicvideos)">$INFO[ListItem.Artist]$INFO[ListItem.Album,&#32;&#32;|&#32;&#32;]</value>
