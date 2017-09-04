@@ -257,16 +257,16 @@
 					<control type="image">
 						<width>screen_Width</width>
 						<height>screen_Height</height>
-						<texture>$INFO[ListItem.Thumb]</texture>
-						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture>$INFO[ListItem.FileNameAndPath]</texture>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
 					</control>
 				</itemlayout>
 				<focusedlayout width="screen_Width" height="screen_Height">
 					<control type="image">
 						<width>screen_Width</width>
 						<height>screen_Height</height>
-						<texture>$INFO[ListItem.Thumb]</texture>
-						<aspectratio align="center" aligny="center">scale</aspectratio>
+						<texture>$INFO[ListItem.FileNameAndPath]</texture>
+						<aspectratio align="center" aligny="center">keep</aspectratio>
 					</control>
 				</focusedlayout>
 				<content>$VAR[art:ExtraFanart]</content>
