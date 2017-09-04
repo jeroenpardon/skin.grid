@@ -2032,4 +2032,87 @@
 			</control>
 		</control>
 	</include>
+
+
+	<include name="menu_Other">
+		<!-- TV Show Next Aired -->
+		<control type="group" id="7010">
+			<height>108</height>
+			<visible>Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(60)</visible>
+			</control>
+			<control type="button" id="60">
+				<top>12</top>
+				<label>$LOCALIZE[5]</label>
+				<onup>7014</onup>
+				<ondown>7014</ondown>
+				<onleft>7100</onleft>
+				<onright>5500</onright>
+				<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
+				<include>menu_Button</include>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>TV Show - Next Aired</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(60)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>TV Show - Next Aired</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(60)</visible>
+				</control>
+			</control>
+		</control>
+
+		<control type="group" id="7014">
+			<height>108</height>
+			<visible>Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(61)</visible>
+			</control>
+			<control type="button" id="61">
+				<top>12</top>
+				<label>$LOCALIZE[20343]</label>
+				<onup>7011</onup>
+				<ondown>7090</ondown>
+				<onleft>7100</onleft>
+				<onright>5500</onright>
+				<onclick>ActivateWindow(Videos,videodb://tvshows/titles/,return)</onclick>
+				<include>menu_Button</include>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$LOCALIZE[14022]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(61)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$LOCALIZE[14022]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(61)</visible>
+				</control>
+			</control>
+		</control>
+
+		<include content="menu_Extras"></include>
+		
+	</include>
+
+
 </includes>
