@@ -33,7 +33,7 @@
 			<!-- Content -->
 			<control type="group">
 				<include>transition_Content</include>
-				<control type="grouplist" id="2000">
+				<control type="grouplist" id="9050">
 					<left>0</left>
 					<top>108</top>
 					<width>1920</width>
@@ -53,7 +53,7 @@
 						</include>
 						<control type="list" id="200">
 							<include>TVGuideContainer</include>
-							<onup>106</onup>
+							<onup>noop</onup>
 							<ondown>101</ondown>
 							<include content="TVGuideLayout">
 								<param name="ID">200</param>
@@ -156,7 +156,7 @@
 						<control type="list" id="206">
 							<include>TVGuideContainer</include>
 							<onup>105</onup>
-							<ondown>100</ondown>
+							<ondown>noop</ondown>
 							<include content="TVGuideLayout">
 								<param name="ID">206</param>
 							</include>
