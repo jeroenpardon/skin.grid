@@ -31,7 +31,7 @@
 
 
 	<variable name="background:Player">
-		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying) + System.HasAddon(script.artistslideshow)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
+		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying) + System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window.Property(ArtistSlideshow.ArtworkReady))">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
 		<value condition="Player.HasAudio + Window.IsActive(Home) + Skin.HasSetting(home.nowplaying) | Window.IsActive(visualisation)">$VAR[player:Art]</value>
 	</variable>
 
@@ -927,7 +927,8 @@
 <!-- Player -->
 	<variable name="player:Art">
 		<value condition="!String.IsEmpty(Player.Art(fanart))">$INFO[Player.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(MusicPlayer.Cover)">$INFO[MusicPlayer.Cover]</value>
+		<!--<value condition="!String.IsEmpty(MusicPlayer.Cover)">$INFO[MusicPlayer.Cover]</value>-->
+		<value>$INFO[Player.Art(thumb)]</value>
 	</variable>
 
 	<variable name="player:AudioCodec">
