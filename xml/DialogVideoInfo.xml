@@ -18,14 +18,14 @@
 			<top>108</top>
 			<include>transition_Content</include>
 
-			<!--info-->
+			<!-- Content -->
 			<control type="grouplist">
 				<left>604</left>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
 				<visible>!Control.IsVisible(50)</visible>
 
-				<!--tagline-->
+				<!-- Tagline -->
 				<control type="label">
 					<width>1188</width>
 					<height>90</height>
@@ -35,78 +35,103 @@
 					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
 
-				<!--info columns-->
+				<!-- Info columns -->
 				<control type="group">
 					<width>1188</width>
 					<height>384</height>
 					
-					<!--left info column-->
+					<!-- Left info column-->
 					<control type="grouplist">
 						<width>570</width>
 						<height>360</height>
 						<orientation>vertical</orientation>
 						<itemgap>0</itemgap>
-						<!--L1-->
 						<include content="information_Block">
 							<param name="Label">$VAR[information:L1.Label]</param>
 							<param name="InfoLabel">$VAR[information:L1]</param>
 						</include>
-						<!--L2-->
 						<include content="information_Block">
 							<param name="Label">$VAR[information:L2.Label]</param>
 							<param name="InfoLabel">$VAR[information:L2]</param>
 						</include>
-						<!--L3-->
 						<include content="information_Block">
 							<param name="Label">$VAR[information:L3.Label]</param>
 							<param name="InfoLabel">$VAR[information:L3]</param>
 						</include>
-						<!--L4-->
 						<include content="information_Block">
 							<param name="Label">$VAR[information:L4.Label]</param>
 							<param name="InfoLabel">$VAR[information:L4]</param>
 						</include>
 					</control>
 					
-					<!--right info column-->
+					<!-- Right info column -->
 					<control type="grouplist">
 						<left>594</left>
 						<width>570</width>
 						<height>360</height>
 						<orientation>vertical</orientation>
 						<itemgap>0</itemgap>
-						<!--R1-->
 						<include content="information_Block">
 							<param name="Label">$VAR[information:R1.Label]</param>
 							<param name="InfoLabel">$VAR[information:R1]</param>
 						</include>
-						<!--R2-->
 						<include content="information_Block">
 							<param name="Label">$VAR[information:R2.Label]</param>
 							<param name="InfoLabel">$VAR[information:R2]</param>
 						</include>
-						<!--R3-->
 						<include content="information_Block">
 							<param name="Label">$VAR[information:R3.Label]</param>
 							<param name="InfoLabel">$VAR[information:R3]</param>
 						</include>
-						<!--R4-->
 						<include content="information_Block">
 							<param name="Label">$VAR[information:R4.Label]</param>
 							<param name="InfoLabel">$VAR[information:R4]</param>
 						</include>
 					</control>
 				</control>
-				<control type="textbox" id="401">
+
+				<!-- Plot -->
+				<control type="textbox">
 					<width>1188</width>
 					<height>295</height>
 					<label>$INFO[ListItem.Genre,, - ]$INFO[ListItem.Plot][CR]$VAR[info:Extended]</label>
 					<font>Slab-24</font>
 					<textcolor>$VAR[color:Text.3]</textcolor>
+					<visible>String.IsEmpty(ListItem.Tag)</visible>
+				</control>
+				<control type="textbox">
+					<width>1188</width>
+					<height>250</height>
+					<label>$INFO[ListItem.Genre,, - ]$INFO[ListItem.Plot][CR]$VAR[info:Extended]</label>
+					<font>Slab-24</font>
+					<textcolor>$VAR[color:Text.3]</textcolor>
+					<visible>!String.IsEmpty(ListItem.Tag)</visible>
 				</control>
 			</control>
 
-			<!--path-->
+			<!-- Tags -->
+			<control type="grouplist">
+				<left>604</left>
+				<bottom>162</bottom>
+				<height>90</height>
+				<width>1188</width>
+				<orientation>horizontal</orientation>
+				<visible>!String.IsEmpty(ListItem.Tag)</visible>
+				<control type="label">
+					<width>45</width>
+					<label>&#57429;</label>
+					<font>Symbols-26</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<label>$INFO[ListItem.Tag]</label>
+					<font>Regular-20</font>
+					<textcolor>$VAR[color:Text.2]</textcolor>
+				</control>
+			</control>
+
+			<!-- Path -->
 			<control type="label">
 				<left>128</left>
 				<bottom>0</bottom>
@@ -120,7 +145,7 @@
 				<textcolor>$VAR[color:Text.3]</textcolor>
 			</control>
 
-			<!--functions-->	
+			<!-- Functions -->	
 			<control type="group">
 				<left>0</left>
 				<bottom>72</bottom>
@@ -138,7 +163,7 @@
 					<height>90</height>
 					<itemgap>0</itemgap>
 					<onup condition="Control.IsVisible(50)">50</onup>
-					<onup condition="!Control.IsVisible(50) + Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=$INFO[ListItem.Title],message='"$VAR[media:Description]"')</onup>
+					<onup condition="!Control.IsVisible(50) + Skin.HasSetting(plot.window)">RunScript(script.skin.helper.service,action=textviewer,header=$INFO[ListItem.Title],message=$INFO[ListItem.Genre][CR][CR]$ESCINFO[ListItem.Plot][CR][CR]$VAR[info:Extended])</onup>
 					<orientation>horizontal</orientation>
 					<align>center</align>
 					<!--play / browse-->
@@ -242,7 +267,7 @@
 			</control>
 		</control>
 
-		<!--gallery-->
+		<!-- Gallery -->
 		<control type="group" id="9998">
 			<control type="list" id="9999">
 				<width>screen_Width</width>
