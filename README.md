@@ -12,7 +12,7 @@ Currently Grid is compatible with Kodi 17 Krypton only. Kodi 18 Leia compatibili
 Grid supports Cyrillic (extended), Greek (extended), Hebrew, Latin (extended) and Vietnamese characters. Any other language is supported through the Unicode (Arial) fontset, but this comes with compromises in looks and usability. Interested in helping out with translating Grid? See [here](https://github.com/jeroenpardon/skin.grid/wiki/Support-&-contribute) for more info.
 
 ## Download
-[![forthebadge](
+[![badge-release](
 https://img.shields.io/badge/Downloads-Releases-brightgreen.svg?style=flat-square
 )](https://github.com/jeroenpardon/skin.grid/releases) [![forthebadge](
 https://img.shields.io/badge/Downloads-Snapshot-brightgreen.svg?style=flat-square
