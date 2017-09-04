@@ -79,7 +79,7 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture>$PARAM[Art]</texture>
+							<texture background="true">$PARAM[Art]</texture>
 							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[AspectRatio]</aspectratio>
 							<bordersize>10</bordersize>
 						</control>
@@ -197,7 +197,7 @@
 						<control type="image">
 							<width>$PARAM[ArtWidth]</width>
 							<height>$PARAM[ArtHeight]</height>
-							<texture>$PARAM[Art]</texture>
+							<texture background="true">$PARAM[Art]</texture>
 							<bordertexture border="10">$PARAM[Frame]</bordertexture>
 							<bordersize>10</bordersize>
 							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[AspectRatio]</aspectratio>
