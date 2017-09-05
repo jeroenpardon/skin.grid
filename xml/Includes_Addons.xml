@@ -158,7 +158,7 @@
 			<height>54</height>
 			<align>center</align>
 			<aligny>center</aligny>
-			<label>$INFO[ListItem.Property(NextSeasonNumber),[B]S[/B]]$INFO[ListItem.Property(NextEpisodeNumber),[B]E[/B]]$INFO[ListItem.Premiered,&#32;&#32;|&#32;&#32;]</label>
+			<label>$INFO[ListItem.Property(NextSeasonNumber),[B]S[/B]]$INFO[ListItem.Property(NextEpisodeNumber),[B]E[/B]]</label>
 			<textcolor>$VAR[color:Accent]</textcolor>
 			<selectedcolor>$VAR[color:Accent]</selectedcolor>
 			<font>Regular-18</font>
