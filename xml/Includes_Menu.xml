@@ -2123,7 +2123,7 @@
 			<control type="button" id="61">
 				<top>12</top>
 				<label>$LOCALIZE[20343]</label>
-				<onup>7011</onup>
+				<onup>7010</onup>
 				<ondown>7090</ondown>
 				<onleft>7100</onleft>
 				<onright>5500</onright>
