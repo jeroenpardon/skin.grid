@@ -38,8 +38,8 @@
 					<top>108</top>
 					<width>1920</width>
 					<height>972</height>
-					<onup>9050</onup>
-					<ondown>9050</ondown>
+					<onup>noop</onup>
+					<ondown>noop</ondown>
 					<include>global_ListScroll</include>
 					<orientation>vertical</orientation>
 					<!-- Today -->
