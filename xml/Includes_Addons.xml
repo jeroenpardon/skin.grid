@@ -158,7 +158,6 @@
 			<font>Regular-18</font>
 		</control>
 		<control type="group">
-			<left>32</left>
 			<bottom>36</bottom>
 			<left>$PARAM[TextLeft]</left>
 			<width>$PARAM[TextWidth]</width>

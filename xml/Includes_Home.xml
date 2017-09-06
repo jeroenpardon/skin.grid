@@ -1,13 +1,5 @@
 <includes>
 
-	<include name="home_Image">
-		<bottom>0</bottom>
-		<include>screen_Dimensions</include>
-		<aspectratio>scale</aspectratio>
-		<fadetime>fadetime_Slideshow</fadetime>
-		<aspectratio align="center" aligny="bottom">scale</aspectratio>
-	</include>
-
 	<include name="home_Vertical">
 		<include content="background_Home">
 			<param name="GridTexture">overlays/home.png</param>
