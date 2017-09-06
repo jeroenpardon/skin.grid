@@ -69,11 +69,6 @@
 	</variable>
 
 <!-- Home -->
-	<variable name="shortcut:Symbol">
-		<value condition="String.IsEqual(Window.Property(groupname),mainmenu)">$INFO[ListItem.Property(homeSymbol)]</value>
-		<value>&#57425;</value>
-	</variable>
-
 	<variable name="home:Symbol">
 		<value condition="String.IsEmpty(Container(9000).ListItemAbsolute.Property(isSubmenu))">$INFO[ListItem.Property(homeSymbol)]</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItemAbsolute.Property(isSubmenu))">&#57425;</value>

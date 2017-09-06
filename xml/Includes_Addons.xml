@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<include name="TVGuideBackground">
-		<include>screen_Dimensions</include>
-		<aspectratio>scale</aspectratio>
-		<fadetime>600</fadetime>
-	</include>
-
 	<include name="TVGuideContainer">
 		<left>128</left>
 		<width>1792</width>

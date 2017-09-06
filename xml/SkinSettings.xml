@@ -355,7 +355,7 @@
 						<label>- $LOCALIZE[31364]</label>
 						<label2>$INFO[Skin.String(custom.home.Label)]</label2>
 						<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=custom.home,header=$LOCALIZE[31364],allowmulti=true,resourceaddon=resource.images.skinbackgrounds)</onclick>
-						<include>install_HelperService</include>
+						<include>install_HelperBackgrounds</include>
 						<include>button_Settings</include>
 						<visible>String.IsEqual(Skin.String(background.home),custom)</visible>
 					</control>
