@@ -60,6 +60,14 @@ msgstr ""
 "Sie löschen den \"Einstellungen\"-Eintrag. Sie werden keine "
 "Systemeinstellungen mehr ändern können. Wollen Sie wirklich fortfahren?"
 
+msgctxt "#31019"
+msgid "Disable shortcut"
+msgstr "Shortcut deaktivieren"
+
+msgctxt "#31020"
+msgid "Enable shortcut"
+msgstr "Shortcut aktivieren"
+
 msgctxt "#31021"
 msgid "Add shortcut"
 msgstr "Verknüpfung hinzufügen"
@@ -249,6 +257,11 @@ msgctxt "#31081"
 msgid "Reload"
 msgstr "Neu laden"
 
+#. Asking the user to perform an action (like restarting the skin) right away
+msgctxt "#31082"
+msgid "Is it ok to do this now?"
+msgstr "Soll das jetzt getan werden?"
+
 msgctxt "#31083"
 msgid "Sorting"
 msgstr "Sortierung"
@@ -381,7 +394,7 @@ msgstr "Animiertes Artwork aktivieren"
 
 msgctxt "#31227"
 msgid "Limit to movie information screen"
-msgstr ""
+msgstr "Nur im Informations-Fenster"
 
 msgctxt "#31228"
 msgid "Fanart (movies and TV shows only)"
@@ -398,6 +411,10 @@ msgstr "Fanart bevorzugen"
 msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
 msgstr "Logo für das aktuelle Fanart anzeigen"
+
+msgctxt "#31232"
+msgid "Background image"
+msgstr "Hintergrundbild"
 
 #: settings
 msgctxt "#31300"
@@ -466,7 +483,7 @@ msgstr "Aktuelle Video-Wiedergabe im Hintergrund anzeigen"
 
 msgctxt "#31316"
 msgid "Show on the homescreen too"
-msgstr ""
+msgstr "Auch auf dem Startbildschirm anzeigen"
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
@@ -935,6 +952,14 @@ msgctxt "#31668"
 msgid "TV Shows"
 msgstr "TV-Serien"
 
+msgctxt "#31669"
+msgid "Next air date"
+msgstr "Nächstes Sendedatum"
+
+msgctxt "#31670"
+msgid "Last air date"
+msgstr "Letztes Sendedatum"
+
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"
 msgid "Name & Type"
@@ -1074,28 +1099,28 @@ msgstr "Tschüss!"
 
 #. Do not translate
 msgctxt "#31860"
-msgid "Default (Cyrillic, Latin, Vietnamese"
-msgstr ""
+msgid "Default (Cyrillic, Latin, Vietnamese)"
+msgstr "Standard (Kyrillisch, Latein, Vietnamesisch)"
 
 #. Do not translate
 msgctxt "#31861"
-msgid "Unicode"
-msgstr ""
+msgid "Arial Unicode (All languages)"
+msgstr "Arial Unicode (Alle Sprachen)"
 
 #. Do not translate
 msgctxt "#31862"
 msgid "Roboto (Cyrillic, Greek, Latin, Vietnamese)"
-msgstr ""
+msgstr "Roboto (Kyrillisch, Griechisch, Latein, Vietnamesisch)"
 
 #. Do not translate
 msgctxt "#31863"
 msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
-msgstr ""
+msgstr "Source Sans Pro (Kyrillisch, Griechisch, Latein, Vietnamesisch)"
 
 #. Do not translate
 msgctxt "#31864"
-msgid "Noto (Unicode, manual installation)"
-msgstr ""
+msgid "Heebo (Hebrew, Latin)"
+msgstr "Heebo (Hebräisch, Latein)"
 
 #: about
 msgctxt "#31980"

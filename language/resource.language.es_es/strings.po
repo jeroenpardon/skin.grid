@@ -60,6 +60,14 @@ msgstr ""
 "Está a punto de eliminar ajustes.  No podrá luego cambiar ningún ajuste de "
 "sistema, a menos que haya provisto un método diferente.  ¿Está seguro?"
 
+msgctxt "#31019"
+msgid "Disable shortcut"
+msgstr ""
+
+msgctxt "#31020"
+msgid "Enable shortcut"
+msgstr ""
+
 msgctxt "#31021"
 msgid "Add shortcut"
 msgstr "Adicionar acceso rápido"
@@ -249,6 +257,11 @@ msgctxt "#31081"
 msgid "Reload"
 msgstr "Recargar"
 
+#. Asking the user to perform an action (like restarting the skin) right away
+msgctxt "#31082"
+msgid "Is it ok to do this now?"
+msgstr ""
+
 msgctxt "#31083"
 msgid "Sorting"
 msgstr "Clasificación"
@@ -398,6 +411,10 @@ msgstr "Preferir Fanart"
 msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
 msgstr "Mostrar logo para fanart en pantalla ahora"
+
+msgctxt "#31232"
+msgid "Background image"
+msgstr ""
 
 #: settings
 msgctxt "#31300"
@@ -935,6 +952,14 @@ msgctxt "#31668"
 msgid "TV Shows"
 msgstr "Series"
 
+msgctxt "#31669"
+msgid "Next air date"
+msgstr ""
+
+msgctxt "#31670"
+msgid "Last air date"
+msgstr ""
+
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"
 msgid "Name & Type"
@@ -1074,12 +1099,12 @@ msgstr "Hasta luego"
 
 #. Do not translate
 msgctxt "#31860"
-msgid "Default (Cyrillic, Latin, Vietnamese"
+msgid "Default (Cyrillic, Latin, Vietnamese)"
 msgstr ""
 
 #. Do not translate
 msgctxt "#31861"
-msgid "Unicode"
+msgid "Arial Unicode (All languages)"
 msgstr ""
 
 #. Do not translate
@@ -1094,7 +1119,7 @@ msgstr ""
 
 #. Do not translate
 msgctxt "#31864"
-msgid "Noto (Unicode, manual installation)"
+msgid "Heebo (Hebrew, Latin)"
 msgstr ""
 
 #: about
