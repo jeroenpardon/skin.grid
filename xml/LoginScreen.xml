@@ -10,6 +10,7 @@
 			<top>335</top>
 			<width>960</width>
 			<height>198</height>
+			<include>transition_Content</include>
 			<control type="button">
 				<label>&#57484;</label>
 				<width>108</width>
@@ -23,7 +24,7 @@
 			</control>
 			<control type="button">
 				<left>108</left>
-				<label>$VAR[login:Hello]... $LOCALIZE[31303]</label>
+				<label>$LOCALIZE[31303]</label>
 				<width>852</width>
 				<height>108</height>
 				<textoffsetx>32</textoffsetx>

@@ -100,8 +100,7 @@
 					<width>1664</width>
 					<label>$LOCALIZE[20126] $INFO[System.Profilename]</label>
 					<onclick>Dialog.Close(all,true)</onclick>
-					<onclick>SetProperty(IsExiting,true,Home)</onclick>
-					<onclick>AlarmClock(ExitTimer,System.LogOff,0:03,silent)</onclick>
+					<onclick>System.LogOff</onclick>
 					<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 					<visible>System.Loggedon</visible>
 				</control>
