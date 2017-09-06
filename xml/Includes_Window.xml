@@ -149,7 +149,7 @@
 				<imagepath background="true">$VAR[background:Player]</imagepath>
 				<include>fadeinout</include>
 				<animation effect="fade" end="60" time="0" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
-				<visible>Player.HasAudio + [!String.IsEqual(Skin.String(viz.mode),none) | !String.IsEqual(Skin.String(viz.mode),blend) | !String.IsEqual(Skin.String(viz.mode),viz)]</visible>
+				<visible>Player.HasAudio + [String.IsEmpty(Skin.String(viz.mode)) | String.IsEqual(Skin.String(viz.mode),fanart) | String.IsEqual(Skin.String(viz.mode),blend)]</visible>
 			</control>
 		</control>
 	</include>
