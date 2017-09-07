@@ -480,7 +480,7 @@
 					<height>$PARAM[Height]</height>
 					<visible>$PARAM[BigInfo]</visible>
 					<control type="label">
-						<bottom>180</bottom>
+						<bottom>220</bottom>
 						<label>$VAR[widget:Label]</label>
 						<width>$PARAM[TextWidth]</width>
 						<height>28</height>
@@ -490,7 +490,7 @@
 						<animation effect="fade" end="40" time="200">Unfocus</animation>
 					</control>
 					<control type="label">
-						<bottom>140</bottom>
+						<bottom>180</bottom>
 						<height>24</height>
 						<width>$PARAM[TextWidth]</width>
 						<label>$VAR[widget:Label2]</label>
@@ -500,9 +500,9 @@
 						<animation effect="fade" end="40" time="200">Unfocus</animation>
 					</control>
 					<control type="textbox">
-						<bottom>48</bottom>
+						<bottom>50</bottom>
 						<width>90%</width>
-						<height>74</height>
+						<height>115</height>
 						<label>$INFO[ListItem.Plot]</label>
 						<font>Slab-24</font>
 						<textcolor>$VAR[color:Accent]</textcolor>

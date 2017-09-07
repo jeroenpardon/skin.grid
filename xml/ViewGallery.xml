@@ -86,37 +86,29 @@
 	<include name="info_Gallery">
 		<definition>
 			<control type="group">
+				<left>128</left>
 				<top>750</top>
 				<width>1920</width>
 				<height>285</height>
-				<control type="group">
-					<left>64</left>
-					<height>384</height>
-					<bottom>64</bottom>
+				<control type="label">
+					<bottom>170</bottom>
+					<label>$VAR[media:Title]</label>
+					<width>1664</width>
+					<height>28</height>
+					<font>Black-54</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
-				<control type="group">
-					<left>128</left>
-					<control type="label">
-						<bottom>180</bottom>
-						<label>$VAR[media:Title]</label>
-						<width>1664</width>
-						<height>28</height>
-						<font>Black-64</font>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
-					<control type="label">
-						<bottom>146</bottom>
-						<height>0</height>
-						<width>1664</width>
-						<label>$VAR[media:Info]</label>
-						<font>Black-26</font>
-						<aligny>center</aligny>
-						<textcolor>$VAR[color:Text.2]</textcolor>
-					</control>
+				<control type="label">
+					<bottom>130</bottom>
+					<height>24</height>
+					<width>1664</width>
+					<label>$VAR[media:Info]</label>
+					<font>Black-26</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Text.2]</textcolor>
 				</control>
 				<control type="textbox">
-					<left>128</left>
 					<bottom>0</bottom>
 					<width>1664</width>
 					<height>115</height>
