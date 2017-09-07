@@ -36,6 +36,7 @@
 		<include>home_Menu-vertical</include>
 		<include content="global_WindowChrome">
 			<param name="Height">98</param>
+			<param name="Title">$VAR[window:Title.Home]</param>
 			<param name="ProgressHeight">98</param>
 		</include>
 		<include>home_Logos</include>
