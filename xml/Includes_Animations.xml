@@ -95,6 +95,21 @@
 		</animation>
 	</include>
 
+	<include name="transition_Fullscreen">
+		<animation type="WindowOpen">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="Sine" easing="InOut"/>
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="Sine" easing="InOut"/>
+		</animation>
+		<animation type="Visible">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="Sine" easing="InOut"/>
+		</animation>			
+		<animation type="Hidden">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="Sine" easing="InOut"/>
+		</animation>
+	</include>
+
 	<include name="transition_Chrome">
 		<animation type="WindowOpen">
 			<effect type="Fade" time="transition_Open" start="0" end="100" tween="Sine" easing="InOut"/>

@@ -2,7 +2,7 @@
 <window>
 	<controls>
 		<control type="group">
-			<visible>Window.IsActive(fullscreenvideo)</visible>
+			<visible>VideoPlayer.IsFullscreen</visible>
 			<include content="global_WindowChrome">
 				<param name="Title">$VAR[window:Title.Player]</param>
 			</include>

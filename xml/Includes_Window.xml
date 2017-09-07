@@ -176,7 +176,8 @@
 			<control type="group">
 				<height>108</height>
 				<width>screen_Width</width>
-				<include>transition_Chrome</include>
+				<include condition="!VideoPlayer.IsFullscreen">transition_Chrome</include>
+				<include condition="VideoPlayer.IsFullscreen">transition_Fullscreen</include>
 				<include condition="!Window.IsActive(movieinformation)">slide_Clock</include>
 				<visible>$PARAM[Visible]</visible>
 				<control type="image">
@@ -184,7 +185,8 @@
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/30.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<visible>Window.IsVisible(volumebar) | !IntegerGreaterThan(Player.Volume,0)</visible>
+
+					<visible>![Window.IsActive(Home) + IntegerGreaterThan(Player.Volume,0)]</visible>
 				</control>
 				<control type="label">
 					<width>128</width>
