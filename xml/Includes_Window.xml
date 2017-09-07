@@ -184,7 +184,7 @@
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/30.png</texture>
 					<aspectratio>stretch</aspectratio>
-					<visible>![Window.IsActive(Home) + IntegerGreaterThan(Player.Volume,0)]</visible>
+					<visible>Window.IsVisible(volumebar) | !IntegerGreaterThan(Player.Volume,0)</visible>
 				</control>
 				<control type="label">
 					<width>128</width>
@@ -204,10 +204,6 @@
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<texturenofocus></texturenofocus>
-					<!--
-					<onclick>SetFocus(7000)</onclick>
-					<onclick>SetProperty(MenuOpen,true,Home)</onclick>
-					-->
 					<visible>!Window.IsVisible(busydialog)</visible>
 					<visible>$PARAM[ShowSymbol]</visible>
 				</control>
