@@ -797,13 +797,23 @@
 
 	<!-- Debug -->
 	<include name="debug_Label">
-		<font>Debug</font>
+		<font>DebugLabel</font>
 		<width>auto</width>
 		<texturenofocus colordiffuse="ff000000">colorize/100.png</texturenofocus>
 		<height>25</height>
 		<textoffsetx>8</textoffsetx>
 		<aligny>center</aligny>
 		<textcolor>white</textcolor>
+	</include>
+
+	<include name="debug_Header">
+		<font>DebugHeader</font>
+		<width>auto</width>
+		<texturenofocus colordiffuse="ffffffff">colorize/100.png</texturenofocus>
+		<height>25</height>
+		<textoffsetx>8</textoffsetx>
+		<aligny>center</aligny>
+		<textcolor>black</textcolor>
 	</include>
 
 </includes> 

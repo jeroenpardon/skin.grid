@@ -2,7 +2,8 @@
 <window type="dialog" id="1100">
 	<visible>Skin.HasSetting(dev.grid) | Skin.HasSetting(dev.overlay)</visible>
 	<controls>
-		<!--grid-->
+
+		<!-- Grid -->
 		<control type="group">
 			<visible>Skin.HasSetting(dev.grid)</visible>
 			<control type="image">
@@ -12,19 +13,33 @@
 				<aspectratio>keep</aspectratio>
 			</control>
 		</control>
-		<!--info-->
+
+		<!-- Info -->
 		<control type="group">
 			<height>screen_Height</height>
 			<visible>Skin.HasSetting(dev.overlay)</visible>
 			<control type="grouplist">
-				<top>0</top>
 				<height>screen_Height</height>
 				<itemgap>0</itemgap>
 				
+				<!-- System -->
+				<control type="button" id="200">
+					<label>System</label>
+					<include>debug_Header</include>
+				</control>
+				<control type="button" id="205">
+					<label>CPU: $INFO[System.CpuUsage]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button" id="210">
+					<label>RAM: $INFO[System.Memory(used.percent)] used</label>
+					<include>debug_Label</include>
+				</control>
+
 				<!-- Window -->
 				<control type="button">
-					<label>[B]Window[/B]</label>
-					<include>debug_Label</include>
+					<label>Window</label>
+					<include>debug_Header</include>
 				</control>
 				<control type="button">
 					<label>System.Window: $INFO[System.CurrentWindow]</label>
@@ -34,16 +49,11 @@
 					<label>System.CurrentControl: $INFO[System.CurrentControl] $INFO[System.CurrentControlID, (ID=,)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button">
-					<label></label>
-					<height>24</height>
-				</control>
-
 
 				<!-- Content -->
 				<control type="button">
-					<label>[B]Content[/B]</label>
-					<include>debug_Label</include>
+					<label>Content</label>
+					<include>debug_Header</include>
 				</control>
 				<control type="button">
 					<label>Container.ViewMode: $INFO[Container.Viewmode, - ]</label>
@@ -57,16 +67,11 @@
 					<label>Container.FolderName: $INFO[Container.FolderName]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button">
-					<label></label>
-					<height>24</height>
-				</control>
-
 
 				<!-- Path -->
 				<control type="button">
-					<label>[B]Path[/B]</label>
-					<include>debug_Label</include>
+					<label>Path</label>
+					<include>debug_Header</include>
 				</control>
 				<control type="button">
 					<label>Container.FolderPath: $INFO[Container.FolderPath]</label>
@@ -80,15 +85,11 @@
 					<label>ListItem.FolderPath: $INFO[ListItem.FolderPath]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button">
-					<label></label>
-					<height>24</height>
-				</control>
 
 				<!-- Labels -->
 				<control type="button">
-					<label>[B]Labels[/B]</label>
-					<include>debug_Label</include>
+					<label>Labels</label>
+					<include>debug_Header</include>
 				</control>
 				<control type="button">
 					<label>ListItem.Label: $INFO[ListItem.Label]</label>
@@ -106,52 +107,49 @@
 					<label>ListItem.DBID: $INFO[ListItem.DBID]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button">
-					<label></label>
-					<height>24</height>
-				</control>
 
 				<!-- Artwork -->
 				<control type="button">
-					<label>[B]Artwork[/B]</label>
-					<include>debug_Label</include>
+					<label>Artwork</label>
+					<include>debug_Header</include>
 				</control>
-
-				<control type="button" id="70">
+				<control type="button">
 					<label>Container.Art(season.poster): $INFO[Container.Art(season.poster)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="90">
+				<control type="button">
 					<label>Container.Art(tvshow.fanart): $INFO[Container.Art(tvshow.fanart)]</label>
 					<include>debug_Label</include>
 				</control>
-
-
-				<control type="button" id="55">
+				<control type="button">
 					<label>ListItem.Icon: $INFO[ListItem.Icon] ($INFO[ListItem.ActualIcon])</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="60">
+				<control type="button">
+					<label>ListItem.ActualIcon: $INFO[ListItem.ActualIcon]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
 					<label>ListItem.Art(thumb): $INFO[ListItem.Art(thumb)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="65">
+				<control type="button">
 					<label>ListItem.Art(poster): $INFO[ListItem.Art(poster)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="80">
+				<control type="button">
 					<label>ListItem.Art(fanart): $INFO[ListItem.Art(fanart)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="85">
+				<control type="button">
 					<label>ListItem.Art(set.fanart): $INFO[ListItem.Art(set.fanart)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="95">
+				<control type="button">
 					<label>ListItem.Art(clearart): $INFO[ListItem.Art(clearart)]</label>
 					<include>debug_Label</include>
 				</control>
-				<control type="button" id="100">
+				<control type="button">
 					<label>ListItem.Art(tvshow.clearlogo): $INFO[ListItem.Art(tvshow.clearlogo)]</label>
 					<include>debug_Label</include>
 				</control>
@@ -162,45 +160,6 @@
 				<control type="button">
 					<label>ListItem.Art(clearlogo): $INFO[ListItem.Art(clearlogo)]</label>
 					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label></label>
-					<height>24</height>
-				</control>
-
-				<control type="button">
-					<label>$INFO[Skin.String(homemenu.layout)]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label>$INFO[Window(Home).Property(MenuIsFocused)]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label></label>
-					<height>24</height>
-				</control>
-
-				<!-- System -->
-				<control type="button" id="200">
-					<label>[B]System[/B]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button" id="205">
-					<label>CPU: $INFO[System.CpuUsage]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button" id="210">
-					<label>RAM: $INFO[System.Memory(used.percent)] used</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button" id="220">
-					<label>Resolution: $INFO[System.ScreenResolution]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label></label>
-					<height>24</height>
 				</control>
 			</control>
 		</control>
