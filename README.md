@@ -39,9 +39,7 @@ More info on the add-ons required and/or supported by Grid can be found [here](h
 ## Support
 [![badge-support](
 https://img.shields.io/badge/Support-Donate-blue.svg?style=flat-square
-)](http://paypal.me/jeroenpardon) [![badge-discussion](https://img.shields.io/badge/Support-Discussion-blue.svg?style=flat-square)](https://forum.kodi.tv/showthread.php?tid=318152&action=lastpost) [![badge-issues](
-https://img.shields.io/badge/Github-Issues-red.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/issues) [![badge-transifex](
+)](http://paypal.me/jeroenpardon) [![badge-discussion](https://img.shields.io/badge/Support-Discussion-blue.svg?style=flat-square)](https://forum.kodi.tv/showthread.php?tid=318152&action=lastpost) [![badge-transifex](
 https://img.shields.io/badge/Localization-Transifex-red.svg?style=flat-square
 )](https://www.transifex.com/grid/)
 
