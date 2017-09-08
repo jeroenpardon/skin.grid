@@ -64,17 +64,6 @@
 
 
 <!--transitions-->
-	<include name="transition_Home">
-		<animation type="WindowClose">
-			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Close" start="0,0"  end="0,108" tween="Sine" easing="InOut" center="auto" />
-		</animation>
-		<animation type="WindowOpen">
-			<effect type="Fade" time="transition_Open" start="0" end="100" tween="cubic" easing="InOut"/>
-			<effect type="slide" time="transition_Open" start="0,108"  end="0,0" tween="Sine" easing="InOut" center="auto" />
-		</animation>
-	</include>
-
 	<include name="transition_HomeAlt">
 		<animation type="WindowClose">
 			<effect type="Fade" time="transition_Close" start="100" end="0" tween="cubic" easing="InOut"/>
@@ -103,6 +92,21 @@
 		<animation type="Hidden">
 			<effect type="Fade" time="transition_Close" start="100" end="0" tween="Sine" easing="InOut"/>
 			<effect type="slide" time="transition_Close" start="0,0"  end="0,108" tween="Sine" easing="InOut" center="auto" />
+		</animation>
+	</include>
+
+	<include name="transition_Fullscreen">
+		<animation type="WindowOpen">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="Sine" easing="InOut"/>
+		</animation>			
+		<animation type="WindowClose">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="Sine" easing="InOut"/>
+		</animation>
+		<animation type="Visible">
+			<effect type="Fade" time="transition_Open" start="0" end="100" tween="Sine" easing="InOut"/>
+		</animation>			
+		<animation type="Hidden">
+			<effect type="Fade" time="transition_Close" start="100" end="0" tween="Sine" easing="InOut"/>
 		</animation>
 	</include>
 

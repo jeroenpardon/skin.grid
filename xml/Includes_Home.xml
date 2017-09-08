@@ -1,13 +1,5 @@
 <includes>
 
-	<include name="home_Image">
-		<bottom>0</bottom>
-		<include>screen_Dimensions</include>
-		<aspectratio>scale</aspectratio>
-		<fadetime>fadetime_Slideshow</fadetime>
-		<aspectratio align="center" aligny="bottom">scale</aspectratio>
-	</include>
-
 	<include name="home_Vertical">
 		<include content="background_Home">
 			<param name="GridTexture">overlays/home.png</param>
@@ -44,6 +36,7 @@
 		<include>home_Menu-vertical</include>
 		<include content="global_WindowChrome">
 			<param name="Height">98</param>
+			<param name="Title">$VAR[window:Title.Home]</param>
 			<param name="ProgressHeight">98</param>
 		</include>
 		<include>home_Logos</include>
@@ -488,7 +481,7 @@
 					<height>$PARAM[Height]</height>
 					<visible>$PARAM[BigInfo]</visible>
 					<control type="label">
-						<bottom>180</bottom>
+						<bottom>220</bottom>
 						<label>$VAR[widget:Label]</label>
 						<width>$PARAM[TextWidth]</width>
 						<height>28</height>
@@ -498,7 +491,7 @@
 						<animation effect="fade" end="40" time="200">Unfocus</animation>
 					</control>
 					<control type="label">
-						<bottom>140</bottom>
+						<bottom>180</bottom>
 						<height>24</height>
 						<width>$PARAM[TextWidth]</width>
 						<label>$VAR[widget:Label2]</label>
@@ -508,9 +501,9 @@
 						<animation effect="fade" end="40" time="200">Unfocus</animation>
 					</control>
 					<control type="textbox">
-						<bottom>48</bottom>
+						<bottom>50</bottom>
 						<width>90%</width>
-						<height>74</height>
+						<height>115</height>
 						<label>$INFO[ListItem.Plot]</label>
 						<font>Slab-24</font>
 						<textcolor>$VAR[color:Accent]</textcolor>

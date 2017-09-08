@@ -16,7 +16,7 @@ Grid supports Cyrillic (extended), Greek (extended), Hebrew, Latin (extended) an
 https://img.shields.io/badge/Downloads-Releases-brightgreen.svg?style=flat-square
 )](https://github.com/jeroenpardon/skin.grid/releases) [![forthebadge](
 https://img.shields.io/badge/Downloads-Snapshot-brightgreen.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/archive/master.zip) [![badge-install](https://img.shields.io/badge/Wiki-Install-blue.svg?style=flat-square)](https://github.com/jeroenpardon/skin.grid/wiki/Installation) 
+)](https://github.com/jeroenpardon/skin.grid/archive/master.zip) [![badge-install](https://img.shields.io/badge/Wiki-Install-blue.svg?style=flat-square)](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation) 
 
 ## License
 [![badge-license](
@@ -34,7 +34,7 @@ This means you are **not** allowed to sell products with Grid (pre)installed wit
 Any redistribution of this software (or modifications / derivatives of it) must include the original license files and an this readme unmodified.
 
 ## Add-ons
-More info on the add-ons required and/or supported by Grid can be found [here](https://github.com/jeroenpardon/skin.grid/wiki/Add-ons).
+More info on the add-ons required and/or supported by Grid can be found [here](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation#addons).
 
 ## Support
 [![badge-support](

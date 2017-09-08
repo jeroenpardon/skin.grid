@@ -188,10 +188,12 @@
 					<param name="ItemHeight">180</param>
 					<param name="ItemWidth">832</param>
 					<param name="Label2">$VAR[media:Info]</param>
-					<param name="ShowInfo">false</param>
+					<param name="ShowInfo">String.IsEmpty(ListItem.Art(banner))</param>
 					<param name="ShowLogo">false</param>
 					<param name="ShowFallback">String.IsEmpty(Listitem.Art(banner))</param>
 					<param name="ShowOverlay">false</param>
+					<param name="TextPosY">60</param>
+					<param name="TextWidth">787</param>
 					<param name="ViewTypeLabel">$LOCALIZE[20020]</param>
 					<param name="Width">1664</param>
 					<param name="Visible">Container.Content(movies) | Container.Content(tvshows)</param>

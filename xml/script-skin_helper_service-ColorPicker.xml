@@ -55,7 +55,7 @@
 						<font>Symbols-26</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>Text.1</textcolor>
+						<textcolor>$VAR[color:Text.3]</textcolor>
 					</control>
 					<control type="label">
 						<left>114</left>

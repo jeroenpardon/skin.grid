@@ -39,9 +39,7 @@
 				<width>1344</width>
 				<label></label>
 				<hinttext>551</hinttext>
-				<onleft></onleft>
 				<onright>9001</onright>
-				<onup></onup>
 				<ondown>10</ondown>
 			</control>
 

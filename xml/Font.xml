@@ -30,7 +30,12 @@
 		
 		<!-- Debug -->
 		<font>
-			<name>Debug</name>
+			<name>DebugHeader</name>
+			<filename>Default/Debug.ttf</filename>
+			<size>11</size>
+		</font>
+		<font>
+			<name>DebugLabel</name>
 			<filename>Default/Debug.ttf</filename>
 			<size>11</size>
 		</font>

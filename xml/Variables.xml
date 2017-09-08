@@ -69,11 +69,6 @@
 	</variable>
 
 <!-- Home -->
-	<variable name="shortcut:Symbol">
-		<value condition="String.IsEqual(Window.Property(groupname),mainmenu)">$INFO[ListItem.Property(homeSymbol)]</value>
-		<value>&#57425;</value>
-	</variable>
-
 	<variable name="home:Symbol">
 		<value condition="String.IsEmpty(Container(9000).ListItemAbsolute.Property(isSubmenu))">$INFO[ListItem.Property(homeSymbol)]</value>
 		<value condition="!String.IsEmpty(Container(9000).ListItemAbsolute.Property(isSubmenu))">&#57425;</value>
@@ -545,21 +540,21 @@
 		<value condition="String.Contains(ListItem.FolderPath,category.gameaddons) | String.Contains(Container.FolderPath,category.gameaddons)">&#57371;</value>
 		<value condition="String.Contains(ListItem.FolderPath,category.infoproviders) | String.Contains(Container.FolderPath,category.infoproviders)">&#59159;</value>
 		<value condition="String.Contains(ListItem.FolderPath,category.lookandfeel)">&#57479;</value>
-		<value condition="String.Contains(ListItem.FolderPath,xbmc.addon.audio)">&#57441;</value>
-		<value condition="String.Contains(ListItem.FolderPath,xbmc.addon.image)">&#57394;</value>
+		<value condition="String.Contains(Container.FolderPath,xbmc.addon.audio)">&#57441;</value>
+		<value condition="String.Contains(Container.FolderPath,xbmc.addon.image)">&#57394;</value>
 		<value condition="String.Contains(ListItem.FolderPath,kodi.peripheral)">&#59018;</value>
-		<value condition="String.Contains(ListItem.FolderPath,xbmc.python.weather)">&#59000;</value>
-		<value condition="String.Contains(ListItem.FolderPath,xbmc.addon.executable)">&#57498;</value>
+		<value condition="String.Contains(Container.FolderPath,xbmc.python.weather)">&#59000;</value>
+		<value condition="String.Contains(Container.FolderPath,xbmc.addon.executable)">&#57498;</value>
 		<value condition="String.Contains(ListItem.FolderPath,xbmc.python.lyrics)">&#57443;</value>
 		<value condition="String.Contains(ListItem.FolderPath,xbmc.pvrclient)">&#58944;</value>
-		<value condition="String.Contains(ListItem.FolderPath,xbmc.service)">&#57399;</value>
-		<value condition="String.Contains(ListItem.FolderPath,xbmc.subtitle.module)">&#58947;</value>
-		<value condition="String.Contains(ListItem.FolderPath,xbmc.addon.video)">&#57352;</value>
+		<value condition="String.Contains(Container.FolderPath,xbmc.service)">&#57399;</value>
+		<value condition="String.Contains(Container.FolderPath,xbmc.subtitle.module)">&#58947;</value>
+		<value condition="String.Contains(Container.FolderPath,xbmc.addon.video)">&#57352;</value>
 		<value condition="String.Contains(ListItem.FolderPath,kodi.inputstream)">&#57475;</value>
-		<value condition="String.Contains(ListItem.FolderPath,xbmc.webinterface)">&#59162;</value>
+		<value condition="String.Contains(Container.FolderPath,xbmc.webinterface)">&#59162;</value>
 		<value condition="String.Contains(ListItem.FolderPath,kodi.resource.uisounds)">&#57442;</value>
-		<value condition="String.Contains(ListItem.FolderPath,kodi.resource.images)">&#57394;</value>
-		<value condition="String.Contains(ListItem.FolderPath,kodi.resource.language)">&#57480;</value>
+		<value condition="String.Contains(ListItem.FolderPath,resource.images)">&#57394;</value>
+		<value condition="String.Contains(ListItem.FolderPath,resource.language)">&#57480;</value>
 		<value condition="String.Contains(ListItem.FolderPath,xbmc.ui.screensaver)">&#57367;</value>
 		<value condition="String.Contains(ListItem.FolderPath,xbmc.gui.skin) | String.Contains(Container.FolderPath,xbmc.gui.skin)">&#58910;</value>
 		<value condition="String.Contains(ListItem.FolderPath,xbmc.player.musicviz)">&#57463;</value>
@@ -1425,6 +1420,7 @@
 		<value condition="String.IsEqual(Container.FolderPath,sources://video/)">$LOCALIZE[31661]</value>
 		<value condition="Window.IsActive(Games)">$LOCALIZE[15016]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
+		<value condition="Container.Content(tvshows) + String.IsEqual(Container.Foldername,Title)">$LOCALIZE[20343]</value>
 		<value condition="String.IsEqual(Container.FolderName,$LOCALIZE[369])">$INFO[Container.Content]</value>
 		<value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container.Content]</value>

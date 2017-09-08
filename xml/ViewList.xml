@@ -772,17 +772,17 @@
 							<width>1088</width>
 							<label>$PARAM[Label2]</label>
 							<height>45</height>
-							<font>Regular-20</font>
+							<font>Regular-22</font>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Text.2]</textcolor>
 							<selectedcolor>$VAR[color:Text.3]</selectedcolor>
 						</control>
 						<control type="textbox">
-							<top>128</top>
+							<top>110</top>
 							<width>1064</width>
 							<label>$VAR[media:Description]</label>
-							<height>96</height>
-							<font>Regular-22-L</font>
+							<height>115</height>
+							<font>Slab-24</font>
 							<aligny>top</aligny>
 							<textcolor>$VAR[color:Text.3]</textcolor>
 							<autoscroll>false</autoscroll>
@@ -848,17 +848,17 @@
 							<width>1088</width>
 							<label>$PARAM[Label2]</label>
 							<height>45</height>
-							<font>Regular-20</font>
+							<font>Regular-22</font>
 							<aligny>center</aligny>
 							<textcolor>$VAR[color:Main]</textcolor>
 							<selectedcolor>$VAR[color:Main]</selectedcolor>
 						</control>
 						<control type="textbox">
-							<top>128</top>
+							<top>110</top>
 							<width>1064</width>
 							<label>$VAR[media:Description]</label>
-							<height>96</height>
-							<font>Regular-22-L</font>
+							<height>115</height>
+							<font>Slab-24</font>
 							<aligny>top</aligny>
 							<textcolor>$VAR[color:Main]</textcolor>
 						</control>

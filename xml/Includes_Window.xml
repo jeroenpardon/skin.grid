@@ -149,7 +149,7 @@
 				<imagepath background="true">$VAR[background:Player]</imagepath>
 				<include>fadeinout</include>
 				<animation effect="fade" end="60" time="0" condition="String.IsEqual(Skin.String(viz.mode),blend)">Conditional</animation>
-				<visible>Player.HasAudio + [!String.IsEqual(Skin.String(viz.mode),none) | !String.IsEqual(Skin.String(viz.mode),blend) | !String.IsEqual(Skin.String(viz.mode),viz)]</visible>
+				<visible>Player.HasAudio + [String.IsEmpty(Skin.String(viz.mode)) | String.IsEqual(Skin.String(viz.mode),fanart) | String.IsEqual(Skin.String(viz.mode),blend)]</visible>
 			</control>
 		</control>
 	</include>
@@ -176,7 +176,8 @@
 			<control type="group">
 				<height>108</height>
 				<width>screen_Width</width>
-				<include>transition_Chrome</include>
+				<include condition="!VideoPlayer.IsFullscreen">transition_Chrome</include>
+				<include condition="VideoPlayer.IsFullscreen">transition_Fullscreen</include>
 				<include condition="!Window.IsActive(movieinformation)">slide_Clock</include>
 				<visible>$PARAM[Visible]</visible>
 				<control type="image">
@@ -184,6 +185,7 @@
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/30.png</texture>
 					<aspectratio>stretch</aspectratio>
+
 					<visible>![Window.IsActive(Home) + IntegerGreaterThan(Player.Volume,0)]</visible>
 				</control>
 				<control type="label">
@@ -204,10 +206,6 @@
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<texturenofocus></texturenofocus>
-					<!--
-					<onclick>SetFocus(7000)</onclick>
-					<onclick>SetProperty(MenuOpen,true,Home)</onclick>
-					-->
 					<visible>!Window.IsVisible(busydialog)</visible>
 					<visible>$PARAM[ShowSymbol]</visible>
 				</control>

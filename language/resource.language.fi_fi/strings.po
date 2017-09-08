@@ -60,6 +60,14 @@ msgstr ""
 "Olet poistamassa asetukset. Et voi enää muuttaa järjestelmäasetuksia, jollei"
 " sinulla ole jotain toista tapaa käytössä. Oletko varma?"
 
+msgctxt "#31019"
+msgid "Disable shortcut"
+msgstr "Pikakuvake ei käytössä"
+
+msgctxt "#31020"
+msgid "Enable shortcut"
+msgstr "Pikakuvake käytössä"
+
 msgctxt "#31021"
 msgid "Add shortcut"
 msgstr "Lisää pikakuvake"
@@ -249,6 +257,11 @@ msgctxt "#31081"
 msgid "Reload"
 msgstr "Lataa uudelleen"
 
+#. Asking the user to perform an action (like restarting the skin) right away
+msgctxt "#31082"
+msgid "Is it ok to do this now?"
+msgstr "Tehdäänkö tämä nyt?"
+
 msgctxt "#31083"
 msgid "Sorting"
 msgstr "Lajittelu"
@@ -399,6 +412,10 @@ msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
 msgstr "Näytä logo fanitaiteen lisäksi"
 
+msgctxt "#31232"
+msgid "Background image"
+msgstr "Taustakuva"
+
 #: settings
 msgctxt "#31300"
 msgid "Homescreen"
@@ -466,7 +483,7 @@ msgstr "Näytä video valikoiden taustalla"
 
 msgctxt "#31316"
 msgid "Show on the homescreen too"
-msgstr ""
+msgstr "Näytä myös päävalikossa"
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
@@ -935,6 +952,14 @@ msgctxt "#31668"
 msgid "TV Shows"
 msgstr "Tv-sarjat"
 
+msgctxt "#31669"
+msgid "Next air date"
+msgstr "Seuraava esityspäivä"
+
+msgctxt "#31670"
+msgid "Last air date"
+msgstr "Edellinen esityspäivä"
+
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"
 msgid "Name & Type"
@@ -1074,28 +1099,29 @@ msgstr "Nähdään myöhemmin"
 
 #. Do not translate
 msgctxt "#31860"
-msgid "Default (Cyrillic, Latin, Vietnamese"
-msgstr ""
+msgid "Default (Cyrillic, Latin, Vietnamese)"
+msgstr "Oletus (kyrillinen, latinalainen, vietnamilainen)"
 
 #. Do not translate
 msgctxt "#31861"
-msgid "Unicode"
-msgstr ""
+msgid "Arial Unicode (All languages)"
+msgstr "Arial Unicode (kaikki kielet)"
 
 #. Do not translate
 msgctxt "#31862"
 msgid "Roboto (Cyrillic, Greek, Latin, Vietnamese)"
-msgstr ""
+msgstr "Roboto (kyrillinen, kreikkalainen, latinalainen, vietnamilainen)"
 
 #. Do not translate
 msgctxt "#31863"
 msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
 msgstr ""
+"Source Sans Pro (kyrillinen, kreikkalainen, latinalainen, vietnamilainen)"
 
 #. Do not translate
 msgctxt "#31864"
-msgid "Noto (Unicode, manual installation)"
-msgstr ""
+msgid "Heebo (Hebrew, Latin)"
+msgstr "Heebo (heprea, latinalainen)"
 
 #: about
 msgctxt "#31980"
