@@ -14,9 +14,9 @@ Grid supports Cyrillic (extended), Greek (extended), Hebrew, Latin (extended) an
 ## Download
 [![badge-release](
 https://img.shields.io/badge/Downloads-Releases-brightgreen.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/releases) [![forthebadge](
+)](https://github.com/jeroenpardon/skin.grid/releases) [![badge-snapshot](
 https://img.shields.io/badge/Downloads-Snapshot-brightgreen.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/archive/master.zip) [![badge-install](https://img.shields.io/badge/Wiki-Install-blue.svg?style=flat-square)](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation) 
+)](https://github.com/jeroenpardon/skin.grid/archive/master.zip) [![badge-addon](https://img.shields.io/badge/Downloads-Automatic-brightgreen.svg?style=flat-square)](https://gitlab.com/jeroenpardon/repository.jeroen) [![badge-install](https://img.shields.io/badge/Wiki-Install-blue.svg?style=flat-square)](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation)
 
 ## License
 [![badge-license](
