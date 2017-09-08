@@ -104,7 +104,7 @@
 					<height>24</height>
 					<width>1664</width>
 					<label>$VAR[media:Info]</label>
-					<font>Black-26</font>
+					<font>Black-24</font>
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Text.2]</textcolor>
 				</control>
