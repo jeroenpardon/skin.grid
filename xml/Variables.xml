@@ -327,6 +327,7 @@
 	</variable>
 
 	<variable name="media:Info">
+		<value condition="Container.Content(games)">$INFO[ListItem.Size]$INFO[ListItem.FileExtension,  |  ]</value>
 		<value condition="Container.Content(addons) + String.StartsWith(ListItem.FolderPath,addons://user/)">$INFO[ListItem.AddonVersion,$LOCALIZE[19114] ]$INFO[ListItem.Property(Addon.Status),  |  ]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
 		<value condition="Container.Content(videos) | String.IsEmpty(Container.Content) + String.StartsWith(Container.FolderPath,plugin://plugin.)">$INFO[ListItem.Label2]</value>
