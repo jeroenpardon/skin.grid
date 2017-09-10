@@ -48,8 +48,8 @@
 				<ondown>$PARAM[ID]</ondown>
 				<onleft>7000</onleft>
 				<onleft>SetProperty(MenuOpen,true,Home)</onleft>
-				<onright condition="Window.IsActive(bookmarks)">9000</onright>
-				<onright condition="!Window.IsActive(bookmarks)">6500</onright>
+				<onright condition="Window.IsActive(videobookmarks)">9000</onright>
+				<onright condition="!Window.IsActive(videobookmarks)">6500</onright>
 				<orientation>$PARAM[Orientation]</orientation>
 				<pagecontrol>$PARAM[PageControl]</pagecontrol>
 				<preloaditems>4</preloaditems>
