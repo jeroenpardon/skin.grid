@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<include name="TVGuideContainer">
+	<include name="tvguide_Container">
 		<left>128</left>
 		<width>1792</width>
 		<height>486</height>
@@ -10,7 +10,7 @@
 		<orientation>horizontal</orientation>
 	</include>
 
-	<include name="TVGuideLayout">
+	<include name="tvguide_Layout">
 		<param name="ID"/>
 		<param name="Art" default="$INFO[ListItem.Property(Art(fanart))]"/>
 		<param name="ArtHeight" default="378"/>
@@ -54,7 +54,7 @@
 						<bordersize>$PARAM[BorderSize]</bordersize>
 						<aspectratio>stretch</aspectratio>
 					</control>
-					<include>TVGuideInfo</include>
+					<include>tvguide_Info</include>
 				</control>
 			</itemlayout>
 			<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
@@ -92,13 +92,13 @@
 						<aspectratio>stretch</aspectratio>
 						<visible>Control.HasFocus($PARAM[ID])</visible>
 					</control>
-					<include>TVGuideInfo</include>
+					<include>tvguide_Info</include>
 				</control>
 			</focusedlayout>
 		</definition>
 	</include>
 
-	<include name="TVGuideDate">
+	<include name="tvguide_Date">
 		<param name="ID"/>
 		<param name="HeaderID"/>
 		<definition>
@@ -136,7 +136,7 @@
 		</definition>
 	</include>
 
-	<include name="TVGuideInfo">
+	<include name="tvguide_Info">
 		<control type="image">
 			<top>10</top>
 			<right>10</right>
@@ -158,6 +158,7 @@
 			<font>Regular-18</font>
 		</control>
 		<control type="group">
+			<left>32</left>
 			<bottom>36</bottom>
 			<left>$PARAM[TextLeft]</left>
 			<width>$PARAM[TextWidth]</width>

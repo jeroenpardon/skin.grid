@@ -14,9 +14,9 @@ Grid supports Cyrillic (extended), Greek (extended), Hebrew, Latin (extended) an
 ## Download
 [![badge-release](
 https://img.shields.io/badge/Downloads-Releases-brightgreen.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/releases) [![forthebadge](
+)](https://github.com/jeroenpardon/skin.grid/releases) [![badge-snapshot](
 https://img.shields.io/badge/Downloads-Snapshot-brightgreen.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/archive/master.zip) [![badge-install](https://img.shields.io/badge/Wiki-Install-blue.svg?style=flat-square)](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation) 
+)](https://github.com/jeroenpardon/skin.grid/archive/master.zip) [![badge-addon](https://img.shields.io/badge/Downloads-Automatic-brightgreen.svg?style=flat-square)](https://gitlab.com/jeroenpardon/repository.jeroen) [![badge-install](https://img.shields.io/badge/Wiki-Install-blue.svg?style=flat-square)](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation)
 
 ## License
 [![badge-license](
@@ -31,7 +31,7 @@ excerpt:
 **To Kodi box sellers / streambox sellers, etc:**
 This means you are **not** allowed to sell products with Grid (pre)installed without my **prior written consent**!
 
-Any redistribution of this software (or modifications / derivatives of it) must include the original license files and an this readme unmodified.
+Any redistribution of this software (or modifications / derivatives of it) must include the original license files and an unmodified copy of [this readme](https://github.com/jeroenpardon/skin.grid/edit/master/README.md) file. You cannot remove me, the original author, from the provider-name field in the addon.xml file.
 
 ## Add-ons
 More info on the add-ons required and/or supported by Grid can be found [here](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation#addons).
@@ -39,9 +39,7 @@ More info on the add-ons required and/or supported by Grid can be found [here](h
 ## Support
 [![badge-support](
 https://img.shields.io/badge/Support-Donate-blue.svg?style=flat-square
-)](http://paypal.me/jeroenpardon) [![badge-discussion](https://img.shields.io/badge/Support-Discussion-blue.svg?style=flat-square)](https://forum.kodi.tv/showthread.php?tid=318152&action=lastpost) [![badge-issues](
-https://img.shields.io/badge/Github-Issues-red.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/issues) [![badge-transifex](
+)](http://paypal.me/jeroenpardon) [![badge-discussion](https://img.shields.io/badge/Support-Discussion-blue.svg?style=flat-square)](https://forum.kodi.tv/showthread.php?tid=318152&action=lastpost) [![badge-transifex](
 https://img.shields.io/badge/Localization-Transifex-red.svg?style=flat-square
 )](https://www.transifex.com/grid/)
 
