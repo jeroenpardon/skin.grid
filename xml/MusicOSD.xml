@@ -11,8 +11,6 @@
 		<top>224</top>
 	</coordinates>
 	<controls>
-
-	<include>osd_PlayControls</include>
-		
+		<include>osd_PlayControls</include>
 	</controls>
 </window>
