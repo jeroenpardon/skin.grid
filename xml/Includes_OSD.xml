@@ -582,6 +582,7 @@
 				</control>
 			</control>
 			<control type="list" id="800">
+				<defaultcontrol always="true">801</defaultcontrol>
 				<width>540</width>
 				<height>800</height>
 				<onback>Skin.Reset(OSD)</onback>
