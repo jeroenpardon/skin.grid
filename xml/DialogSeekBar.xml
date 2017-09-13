@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
-	<visible>[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsActive(videoosd) + !Window.IsActive(sliderdialog) + !Window.IsActive(videobookmarks) + !Window.IsActive(subtitlesearch)</visible>
+	<visible>[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsActive(videoosd) + !Window.IsActive(sliderdialog) + !Window.IsActive(videobookmarks) + !Window.IsActive(subtitlesearch) + !Window.IsActive(gameviewmode) + !Window.IsActive(gamevideofilter)</visible>
 	<controls>
 		<include content="global_WindowChrome">
 			<param name="Title">$VAR[window:Title.Player]</param>
-			<param name="Visible">Player.Caching | Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Window.IsVisible(gameosd)] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsActive(visualisation)</param>
+			<param name="Visible">Player.Caching | Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.HasGame] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsActive(visualisation)</param>
 		</include>
 		<control type="group">
 			<include condition="!VideoPlayer.Content(livetv) + !Player.HasGame">osd_Info</include>
