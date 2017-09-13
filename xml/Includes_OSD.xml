@@ -583,9 +583,11 @@
 			</control>
 			<control type="list" id="800">
 				<width>540</width>
-				<height>360</height>
-				<onup>700</onup>
-				<ondown>700</ondown>
+				<height>800</height>
+				<onback>Skin.Reset(OSD)</onback>
+				<onleft>Skin.Reset(OSD)</onleft>
+				<onup>800</onup>
+				<ondown>800</ondown>
 				<orientation>vertical</orientation>
 				<include content="osd_MenuLayout">
 					<param name="ID">800</param>
@@ -596,27 +598,60 @@
 						<label>$LOCALIZE[35224] [Select + X]</label>
 						<label2>&#59053;</label2>
 						<onclick>Play</onclick>
+						<visible>String.IsEmpty(Skin.String(OSD))</visible>
 					</item>
 					<!-- Reset -->
 					<item id="802">
 						<label>$LOCALIZE[10035] [Select + B]</label>
 						<label2>&#57497;</label2>
 						<onclick>PlayerControl(Reset)</onclick>
+						<visible>String.IsEmpty(Skin.String(OSD))</visible>
 					</item>
 					<!-- Stop -->
 					<item id="803">
 						<label>$LOCALIZE[35222] [Select + Start]</label>
 						<label2>&#57445;</label2>
 						<onclick>Stop</onclick>
+						<visible>String.IsEmpty(Skin.String(OSD))</visible>
 					</item>
-
 					<!-- Settings -->
-					<item id="803">
+					<item id="810">
 						<label>$LOCALIZE[5]</label>
 						<label2>&#59014;</label2>
-						<onclick>SetProperty(settingslist_content,games,home)</onclick>
-						<onclick>SetProperty(settingslist_header,$LOCALIZE[5],home)</onclick>
-						<onclick>ActivateWindow(1101)</onclick>
+						<onclick>Skin.SetString(OSD,Game)</onclick>
+						<onclick>Control.SetFocus(800,1)</onclick>
+						<visible>String.IsEmpty(Skin.String(OSD))</visible>
+					</item>
+					<!-- Up -->
+					<item id="811">
+						<label>..</label>
+						<label2>&#57424;</label2>
+						<onclick>Skin.Reset(OSD)</onclick>
+						<visible allowhiddenfocus="true">Skin.String(OSD,Game)</visible>
+					</item>
+					<!-- Video Filter -->
+					<item id="812">
+						<label>$LOCALIZE[35225]</label>
+						<label2>&#59082;</label2>
+						<onclick>Skin.Reset(OSD)</onclick>
+						<onclick>ActivateWindow(GameVideoFilter)</onclick>
+						<visible allowhiddenfocus="true">Skin.String(OSD,Game)</visible>
+					</item>
+					<!-- View mode -->
+					<item id="813">
+						<label>$LOCALIZE[629]</label>
+						<label2>&#59119;</label2>
+						<onclick>Skin.Reset(OSD)</onclick>
+						<onclick>ActivateWindow(GameViewMode)</onclick>
+						<visible allowhiddenfocus="true">Skin.String(OSD,Game)</visible>
+					</item>
+					<!-- Input settings -->
+					<item id="814">
+						<label>$LOCALIZE[35223]</label>
+						<label2>&#57371;</label2>
+						<onclick>Skin.Reset(OSD)</onclick>
+						<onclick>ActivateWindow(GameControllers)</onclick>
+						<visible allowhiddenfocus="true">Skin.String(OSD,Game)</visible>
 					</item>
 				</content>
 			</control>
