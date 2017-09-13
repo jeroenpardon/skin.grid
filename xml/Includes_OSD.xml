@@ -33,6 +33,16 @@
 					<aligny>center</aligny>
 					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
+				<control type="label">
+					<right>32</right>
+					<width max="270">auto</width>
+					<height>90</height>
+					<label>$INFO[ListItem.Property(ButtonHint)]</label>
+					<font>Regular-20</font>
+					<align>right</align>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Text.2]</textcolor>
+				</control>
 			</itemlayout>
 			<focusedlayout width="540" height="90">
 				<control type="group">
@@ -55,6 +65,16 @@
 						<align>left</align>
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Accent]</textcolor>
+					</control>
+					<control type="label">
+						<right>32</right>
+						<width max="270">auto</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Property(ButtonHint)]</label>
+						<font>Regular-20</font>
+						<align>right</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Text.2]</textcolor>
 					</control>
 				</control>
 				<control type="group">
@@ -81,6 +101,16 @@
 						<label>$INFO[ListItem.Label]</label>
 						<font>Regular-20</font>
 						<align>left</align>
+						<aligny>center</aligny>
+						<textcolor>$VAR[color:Main]</textcolor>
+					</control>
+					<control type="label">
+						<right>32</right>
+						<width max="270">auto</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Property(ButtonHint)]</label>
+						<font>Regular-20</font>
+						<align>right</align>
 						<aligny>center</aligny>
 						<textcolor>$VAR[color:Main]</textcolor>
 					</control>
@@ -596,22 +626,25 @@
 				<content>
 					<!-- Pause / resume -->
 					<item id="801">
-						<label>$LOCALIZE[35224] [Select + X]</label>
+						<label>$LOCALIZE[35224]</label>
 						<label2>&#59053;</label2>
+						<property name="ButtonHint">Select + X</property>
 						<onclick>Play</onclick>
 						<visible>String.IsEmpty(Skin.String(OSD))</visible>
 					</item>
 					<!-- Reset -->
 					<item id="802">
-						<label>$LOCALIZE[10035] [Select + B]</label>
+						<label>$LOCALIZE[10035]</label>
 						<label2>&#57497;</label2>
+						<property name="ButtonHint">Select + B</property>
 						<onclick>PlayerControl(Reset)</onclick>
 						<visible>String.IsEmpty(Skin.String(OSD))</visible>
 					</item>
 					<!-- Stop -->
 					<item id="803">
-						<label>$LOCALIZE[35222] [Select + Start]</label>
+						<label>$LOCALIZE[35222]</label>
 						<label2>&#57445;</label2>
+						<property name="ButtonHint">Select + Start</property>
 						<onclick>Stop</onclick>
 						<visible>String.IsEmpty(Skin.String(OSD))</visible>
 					</item>
@@ -635,6 +668,7 @@
 						<label>$LOCALIZE[35225]</label>
 						<label2>&#59082;</label2>
 						<onclick>Skin.Reset(OSD)</onclick>
+						<onclick>Close</onclick>
 						<onclick>ActivateWindow(GameVideoFilter)</onclick>
 						<visible allowhiddenfocus="true">Skin.String(OSD,Game)</visible>
 					</item>
@@ -643,6 +677,7 @@
 						<label>$LOCALIZE[629]</label>
 						<label2>&#59119;</label2>
 						<onclick>Skin.Reset(OSD)</onclick>
+						<onclick>Close</onclick>
 						<onclick>ActivateWindow(GameViewMode)</onclick>
 						<visible allowhiddenfocus="true">Skin.String(OSD,Game)</visible>
 					</item>
@@ -651,6 +686,7 @@
 						<label>$LOCALIZE[35223]</label>
 						<label2>&#57371;</label2>
 						<onclick>Skin.Reset(OSD)</onclick>
+						<onclick>Close</onclick>
 						<onclick>ActivateWindow(GameControllers)</onclick>
 						<visible allowhiddenfocus="true">Skin.String(OSD,Game)</visible>
 					</item>

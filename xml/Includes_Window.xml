@@ -185,7 +185,6 @@
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/30.png</texture>
 					<aspectratio>stretch</aspectratio>
-
 					<visible>![Window.IsActive(Home) + IntegerGreaterThan(Player.Volume,0)]</visible>
 				</control>
 				<control type="label">
