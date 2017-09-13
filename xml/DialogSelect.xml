@@ -62,7 +62,7 @@
 								<bottom>24</bottom>
 								<width>348</width>
 								<height>24</height>
-								<label>$INFO[ListItem.Label]$INFO[ListItem.Label2]</label>
+								<label>$INFO[ListItem.Label]</label>
 								<font>Black-24</font>
 								<align>center</align>
 								<textcolor>$VAR[color:Accent]</textcolor>
@@ -101,7 +101,7 @@
 								<bottom>24</bottom>
 								<width>348</width>
 								<height>24</height>
-								<label>$INFO[ListItem.Label]$INFO[ListItem.Label2]</label>
+								<label>$INFO[ListItem.Label]</label>
 								<font>Black-24</font>
 								<align>center</align>
 								<textcolor>$VAR[color:Accent]</textcolor>
