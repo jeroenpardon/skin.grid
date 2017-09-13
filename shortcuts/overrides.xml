@@ -245,7 +245,7 @@
 		</node>
 
 		<!-- Movies -->
-		<node label="342">  
+		<node label="342">
 			<shortcut label="$ADDON[script.watchlist 32001]" widget="$ADDON[script.watchlist 32001]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">plugin://script.watchlist/?type=movies</shortcut>
 			<shortcut label="$ADDON[script.skin.helper.widgets 32029]" widget="$ADDON[script.watchlist 32029]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">plugin://script.skin.helper.widgets/?action=INPROGRESSANDRECOMMENDED&amp;mediatype=MOVIES&amp;reload=$INFO[Window(Home).Property(widgetreload)]</shortcut>
 			<shortcut label="$LOCALIZE[31720]" widget="$LOCALIZE[31720]" type="movies" widgetType="movies" condition="Library.HasContent(movies)">special://skin/extras/playlists/movies/unwatched.xsp</shortcut>
@@ -260,7 +260,7 @@
 			<shortcut label="$LOCALIZE[626]" widget="$LOCALIZE[626]" type="tvshows" widgetType="tvshows" condition="Library.HasContent(tvshows)">videodb://inprogresstvshows/</shortcut>
 		</node>
 
-		<!-- Muic -->
+		<!-- Music -->
 		<node label="2">
 			<shortcut label="$ADDON[359]" widget="$ADDON[359]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
 			<shortcut label="$LOCALIZE[517]" widget="$LOCALIZE[517]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
@@ -279,10 +279,11 @@
 			<shortcut label="$ADDON[script.skin.helper.widgets 32018]" widget="$ADDON[script.skin.helper.widgets 32018]" type="pvr" widgetType="videos">plugin://script.skin.helper.widgets/?action=recordings&amp;mediatype=pvr&amp;reload=$INFO[Window(Home).Property(widgetreload2)]</shortcut>
 		</node>
 
-		<!-- Favourites -->
-		<node label="1036">
-			<shortcut label="$ADDON[script.skin.helper.widgets 32000]" widget="$ADDON[script.skin.helper.widgets 32000]" type="mixed" widgetType="mixed">plugin://script.skin.helper.widgets/?action=favourites&amp;mediatype=favourites</shortcut>
-			<shortcut label="$ADDON[script.skin.helper.widgets 32001]" widget="$ADDON[script.skin.helper.widgets 32001]" type="mixed" widgetType="mixed">plugin://script.skin.helper.widgets/?action=favourites&amp;mediafilter=media&amp;mediatype=favourites</shortcut>
+		<!-- Scripts -->
+		<node label="$LOCALIZE[10020]">
+			<shortcut label="Skin Helper Service">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=scriptwidgets</shortcut>
+			<shortcut label="Extended Info">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=extendedinfo</shortcut>
+			<shortcut label="Library Data Provider">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=librarydataprovider</shortcut>
 		</node>
 
 		<!-- Default -->
