@@ -36,9 +36,8 @@
 				<control type="group">
 					<visible>Control.IsVisible(50)</visible>
 					<include>transition_ViewChange</include>
-					<include>view_List</include>
-					<include content="info_List">
-						<param name="Visible">Container.Content(artists)</param>
+					<include content="view_List">
+						<param name="TextWidth">1664</param>
 					</include>
 					<!--
 					<include content="info_List">
