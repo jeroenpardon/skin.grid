@@ -459,6 +459,7 @@
 						<onclick>Skin.ToggleSetting(home.nowplaying)</onclick>
 						<selected>Skin.HasSetting(home.nowplaying)</selected>
 						<include>radio_Settings</include>
+						<enable>!String.IsEqual(Skin.String(homemenu.layout),compact)</enable>
 					</control>
 
 					<!-- Weather -->
