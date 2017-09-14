@@ -197,7 +197,8 @@
 				<top>12</top>
 				<label>$LOCALIZE[580]</label>
 				<onup>7003</onup>
-				<ondown>7010</ondown>
+				<ondown condition="!Container.Content(games)">7010</ondown>
+				<ondown condition="Container.Content(games)">7091</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
@@ -265,7 +266,7 @@
 		<!--get more-->
 		<control type="group" id="7091">
 			<height>108</height>
-			<visible>Container.Content(addons) + !Window.IsActive(AddonBrowser)</visible>
+			<visible>[Container.Content(addons) + !Window.IsActive(AddonBrowser)] | Container.Content(games)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -771,6 +772,19 @@
 		<include content="menu_Extras"></include>
 
 	</include>
+
+
+	<include name="menu_Games">	
+
+		<include content="menu_Views"></include>
+		<include content="menu_Commons"></include>
+
+		<include content="menu_Extras"></include>
+
+
+	</include>
+
+
 
 
 	<include name="menu_Addons">	
