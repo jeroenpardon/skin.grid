@@ -379,12 +379,14 @@
 
 <!-- Menu -->
 	<variable name="menu:GetAddons">
+		<value condition="Container.Content(games)">ActivateWindow(addonbrowser,addons://all/category.gameaddons)</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/video)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.video)</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/audio)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.audio)</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/image)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.image)</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/executable)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.executable)</value>
 	</variable>
 	<variable name="menu:GetAddonsLabel">
+		<value condition="Container.Content(games)">$LOCALIZE[35049]</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/video)">$LOCALIZE[1037]</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/audio)">$LOCALIZE[1038]</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/image)">$LOCALIZE[1039]</value>
@@ -1271,6 +1273,7 @@
 		<value condition="Control.IsVisible(521)">overlays/216-432-108.png</value>
 		<value condition="Control.IsVisible(54)">overlays/400.png</value>
 		<value condition="Control.IsVisible(55)">overlays/321.png</value>
+		<value condition="Control.IsVisible(56)">overlays/321.png</value>
 		<value condition="Control.IsVisible(57)">overlays/180.png</value>
 		<value>overlays/90.png</value>
 	</variable>
