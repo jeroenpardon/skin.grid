@@ -4,13 +4,5 @@
 	<onload condition="System.HasAddon(script.artistslideshow)">RunScript(script.artistslideshow)</onload>
 	<controls>
 		<include>background_Player</include>
-		<control type="group">
-			<include content="osd_Info">
-				<param name="Left" value="148"/>
-				<param name="InfoLeft" value="256"/>
-				<param name="Top" value="734"/>
-				<param name="InfoTop" value="900"/>
-			</include>
-		</control>
 	</controls>
 </window>
