@@ -507,88 +507,70 @@
 
 	<!--fullscreen info-->
 	<include name="osd_Info">
+		<param name="Art" default="$INFO[MusicPlayer.Cover]"/>
+		<param name="ArtPosY" default="64"/>
+		<param name="ArtSize" default="200"/>
+		<param name="Description" default="$VAR[player:Info]"/>
+		<param name="DescriptionLeft" default="0"/>
+		<param name="DescriptionWidth" default="1664"/>
+		<param name="Label" default="$VAR[player:Title]"/>
+		<param name="Label2" default="$VAR[player:Info]"/>
+		<param name="ShowArt" default="false"/>
+		<param name="TextLeft" default="0"/>
+		<param name="TextWidth" default="1664"/>
 		<param name="Top" default="750"/>
 		<param name="Visible">[Player.Paused + !Player.HasGame] | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
 		<definition>
+			<control type="image">
+				<width>screen_Width</width>
+				<height>screen_Height</height>
+				<include>transition_Content</include>
+				<texture colordiffuse="ff000000">views/diffuse/fullscreeninfo.png</texture>
+				<animation effect="fade" end="60" time="0" condition="Window.IsActive(visualisation)">Conditional</animation>
+				<visible>$PARAM[Visible]</visible>
+			</control>
 			<control type="group">
+				<left>128</left>
+				<top>$PARAM[Top]</top>
+				<height>285</height>
 				<visible>$PARAM[Visible]</visible>
 				<include>transition_Content</include>
 				<control type="image">
-					<width>screen_Width</width>
-					<height>screen_Height</height>
-					<texture colordiffuse="ff000000">views/diffuse/fullscreeninfo.png</texture>
-					<animation effect="fade" end="60" time="0" condition="Window.IsActive(visualisation)">Conditional</animation>
+					<top>$PARAM[ArtPosY]</top>
+					<width>$PARAM[ArtSize]</width>
+					<height>$PARAM[ArtSize]</height>
+					<texture>$PARAM[Art]</texture>
+					<aspectratio align="left">scale</aspectratio>
+					<visible>$PARAM[ShowArt]</visible>
 				</control>
-				<control type="group">
-					<top>$PARAM[Top]</top>
-					<width>1920</width>
-					<height>285</height>
-					<control type="group">
-						<left>64</left>
-						<height>384</height>
-						<bottom>64</bottom>
-					</control>
-					<control type="group">
-						<left>128</left>
-						<visible>VideoPlayer.Content(livetv)</visible>
-						<control type="image">
-							<bottom>137</bottom>
-							<width>82</width>
-							<height>82</height>
-							<texture>$INFO[VideoPlayer.Cover]</texture>
-						</control>
-						<control type="label">
-							<left>112</left>
-							<bottom>180</bottom>
-							<label>$VAR[player:Title]</label>
-							<width>1552</width>
-							<height>28</height>
-							<font>Black-64</font>
-							<aligny>center</aligny>
-							<textcolor>$VAR[color:Accent]</textcolor>
-						</control>
-						<control type="label">
-							<left>112</left>
-							<bottom>146</bottom>
-							<height>0</height>
-							<width>1552</width>
-							<label>$VAR[player:Info]</label>
-							<font>Black-26</font>
-							<aligny>center</aligny>
-							<textcolor>$VAR[color:Text.2]</textcolor>
-						</control>
-					</control>
-					<control type="group">
-						<left>128</left>
-						<visible>!VideoPlayer.Content(livetv)</visible>
-						<control type="label">
-							<bottom>180</bottom>
-							<label>$VAR[player:Title]</label>
-							<width>1664</width>
-							<height>28</height>
-							<font>Black-64</font>
-							<aligny>center</aligny>
-							<textcolor>$VAR[color:Accent]</textcolor>
-						</control>
-						<control type="label">
-							<bottom>146</bottom>
-							<height>0</height>
-							<width>1664</width>
-							<label>$VAR[player:Info]</label>
-							<font>Black-26</font>
-							<aligny>center</aligny>
-							<textcolor>$VAR[color:Text.2]</textcolor>
-						</control>
-					</control>
-					<control type="textbox">
-						<left>128</left>
-						<bottom>0</bottom>
-						<width>1664</width>
-						<height>115</height>
-						<label>$VAR[player:Description]</label>
-						<font>Slab-24</font>
-						<textcolor>$VAR[color:Accent]</textcolor>
-					</control>
+				<control type="label">
+					<bottom>170</bottom>
+					<left>$PARAM[TextLeft]</left>
+					<label>$PARAM[Label]</label>
+					<width>$PARAM[TextWidth]</width>
+					<height>28</height>
+					<font>Black-54</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Accent]</textcolor>
+				</control>
+				<control type="label">
+					<left>$PARAM[TextLeft]</left>
+					<bottom>130</bottom>
+					<height>24</height>
+					<width>$PARAM[TextWidth]</width>
+					<label>$PARAM[Label2]</label>
+					<font>Black-24</font>
+					<aligny>center</aligny>
+					<textcolor>$VAR[color:Text.2]</textcolor>
+				</control>
+				<control type="textbox">
+					<left>$PARAM[DescriptionLeft]</left>
+					<bottom>0</bottom>
+					<width>$PARAM[TextWidth]</width>
+					<height>115</height>
+					<label>$VAR[player:Description]</label>
+					<font>Slab-24</font>
+					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
 			</control>
 		</definition>
