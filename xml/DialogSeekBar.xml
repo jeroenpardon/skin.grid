@@ -5,7 +5,7 @@
 	<controls>
 		<include content="global_WindowChrome">
 			<param name="Title">$VAR[window:Title.Player]</param>
-			<param name="Visible">Player.Caching | Player.Seeking | Player.DisplayAfterSeek | [Player.Paused + !Player.HasGame] | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsActive(visualisation)</param>
+			<param name="Visible">[[Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + !Player.HasGame] | Player.Paused | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
 		</include>
 		<control type="group">
 			<include condition="!VideoPlayer.Content(livetv) + !Player.HasGame">osd_Info</include>
