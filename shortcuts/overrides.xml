@@ -89,29 +89,29 @@
 		<node label="Grid">
 			<!-- Videos -->
 			<node label="3">
-				<shortcut label="$LOCALIZE[31719]" type="31066">ActivateWindow(Videos,plugin://service.library.data.provider?type=randommovies,return)</shortcut>
-				<shortcut label="$LOCALIZE[3]" type="31066">ActivateWindow(Videos,files)</shortcut>
+				<shortcut label="$LOCALIZE[31719]" type="31004">ActivateWindow(Videos,plugin://service.library.data.provider?type=randommovies,return)</shortcut>
+				<shortcut label="$LOCALIZE[3]" type="31004">ActivateWindow(Videos,files)</shortcut>
 			</node>
 			<!-- Movies -->
 			<node label="20342">
-				<shortcut label="$LOCALIZE[31712]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=movies,return)</shortcut>
-				<shortcut label="$LOCALIZE[31665]" type="31066">ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</shortcut>
-				<shortcut label="$LOCALIZE[16101]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/movies/unwatched.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31712]" type="31004">ActivateWindow(Videos,plugin://script.watchlist?type=movies,return)</shortcut>
+				<shortcut label="$LOCALIZE[31665]" type="31004">ActivateWindow(Videos,videodb://recentlyaddedmovies/,return)</shortcut>
+				<shortcut label="$LOCALIZE[16101]" type="31004">ActivateWindow(Videos,special://skin/extras/playlists/movies/unwatched.xsp,return)</shortcut>
 			</node>
 			<!-- TV Shows -->
 			<node label="20343">
-				<shortcut label="$LOCALIZE[31712]" type="24000">ActivateWindow(Videos,plugin://script.watchlist?type=episodes,return)</shortcut>
-				<shortcut label="$LOCALIZE[31665]" type="31066">ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</shortcut>
-				<shortcut label="$LOCALIZE[16101]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/episodes/unwatched.xsp,return)</shortcut>
-				<shortcut label="$LOCALIZE[575]" type="31066">ActivateWindow(Videos,videodb://inprogresstvshows/,return)</shortcut>			
+				<shortcut label="$LOCALIZE[31712]" type="31004">ActivateWindow(Videos,plugin://script.watchlist?type=episodes,return)</shortcut>
+				<shortcut label="$LOCALIZE[31665]" type="31004">ActivateWindow(Videos,videodb://recentlyaddedepisodes/,return)</shortcut>
+				<shortcut label="$LOCALIZE[16101]" type="31004">ActivateWindow(Videos,special://skin/extras/playlists/episodes/unwatched.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[575]" type="31004">ActivateWindow(Videos,videodb://inprogresstvshows/,return)</shortcut>			
 			</node>
 			<!-- Music -->
 			<node label="2">		
-				<shortcut label="$LOCALIZE[31665]" type="31066">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
-				<shortcut label="$LOCALIZE[31714]" type="31066">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
-				<shortcut label="$LOCALIZE[31715]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/albums/recommended.xsp,return)</shortcut>
-				<shortcut label="$LOCALIZE[31662]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/albums/random.xsp,return)</shortcut>
-				<shortcut label="$LOCALIZE[31663]" type="31065">ActivateWindow(Videos,special://skin/extras/playlists/songs/random.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31665]" type="31004">ActivateWindow(MusicLibrary,musicdb://recentlyaddedalbums/,return)</shortcut>
+				<shortcut label="$LOCALIZE[31714]" type="31004">ActivateWindow(MusicLibrary,musicdb://recentlyplayedalbums/,return)</shortcut>
+				<shortcut label="$LOCALIZE[31715]" type="31004">ActivateWindow(Videos,special://skin/extras/playlists/albums/recommended.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31662]" type="31004">ActivateWindow(Videos,special://skin/extras/playlists/albums/random.xsp,return)</shortcut>
+				<shortcut label="$LOCALIZE[31663]" type="31004">ActivateWindow(Videos,special://skin/extras/playlists/songs/random.xsp,return)</shortcut>
 			</node>
 			<!-- TMDb -->
 			<node label="themoviedb">
@@ -132,18 +132,19 @@
 			</node>
 			<!-- Other -->
 			<node label="31062">
-				<shortcut label="$LOCALIZE[24001]" type="10040">ActivateWindow(1110)</shortcut>
-				<shortcut label="$LOCALIZE[13000]" type="5">ActivateWindow(Settings)</shortcut>
-				<shortcut label="$LOCALIZE[13012]" type="31302">ActivateWindow(shutdownmenu)</shortcut>
-				<shortcut label="$LOCALIZE[31311]" type="20077">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</shortcut>
-				<shortcut label="$LOCALIZE[31310]" type="20077">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=optionsmenu)</shortcut>
+				<shortcut label="$LOCALIZE[24001]" type="31004">ActivateWindow(1110)</shortcut>	
+				<shortcut label="$LOCALIZE[13000]" type="31004">ActivateWindow(Settings)</shortcut>
+				<shortcut label="$LOCALIZE[31311]" type="31004">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=mainmenu)</shortcut>
+				<shortcut label="$LOCALIZE[31310]" type="31004">RunScript(script.skinshortcuts,type=manage&amp;nolabels=True&amp;group=optionsmenu)</shortcut>
 			</node>
 		</node>
 
 		<!-- Common shortcuts -->
 		<node label="32029">
 			<content>common</content>
-			<shortcut label="$LOCALIZE[24001]" type="10040">ActivateWindow(addonbrowser)</shortcut>
+			<shortcut label="$LOCALIZE[24001]" type="31072">ActivateWindow(addonbrowser)</shortcut>
+			<shortcut label="$LOCALIZE[15016]" type="31072">ActivateWindow(games)</shortcut>
+			<shortcut label="$LOCALIZE[31302]" type="31072">ActivateWindow(shutdownmenu)</shortcut>
 		</node>
 
 		<!-- Video shortcuts -->
@@ -336,28 +337,6 @@
 	</widget-groupings>
 
 
-
-	<!-- Widgets 
-	
-	<widget label="31717" name="31717" type="episodes" condition="Library.HasContent(tvshows)" path="plugin://script.watchlist/?type=episodes" target="video">EpisodesWatchlist</widget>
-	<widget label="31709" name="31709" type="episodes" condition="Library.HasContent(tvshows)" path="special://skin/extras/playlists/episodes/unwatched.xsp" target="video">UnwatchedEpisodes</widget>
-	<widget label="20387" name="20387" type="episodes" condition="Library.HasContent(tvshows)" path="videodb://recentlyaddedepisodes/" target="video">RecentlyAddedEpisodes</widget>
-	<widget label="626" name="626" type="tvshows" condition="Library.HasContent(tvshows)" path="videodb://inprogresstvshows/" target="video">InProgressShows</widget>
-	<widget label="20390" name="20390" type="musicvideos" condition="Library.HasContent(musicvideos)" path="videodb://recentlyaddedmusicvideos/" target="video">RecentlyAddedMusicVideos</widget>
-	<widget label="1037" name="1037" type="addons" path="addons://sources/video/" target="video">VideoAddons</widget>
-	<widget label="1038" name="1038" type="addons" path="addons://sources/audio/" target="video">MusicAddons</widget>
-	<widget label="1039" name="1039" type="addons" path="addons://sources/image/" target="video">PictureAddons</widget>
-	<widget label="1043" name="1043" type="addons" path="addons://sources/executable/" target="video">ProgramAddons</widget>
-	<widget label="31607" name="31607" type="tvshows" path="pvr://channels/tv/*?view=lastplayed" target="pvr">PVRLastPlayedTV</widget>
-
-	<widget label="19017" name="19017" type="tvshows" path="plugin://script.skin.helper.widgets/?action=recordings&amp;mediatype=pvr&amp;limit=25&amp;reload=$INFO[Window(home).Property(widgetreload2)]" target="pvr">PVRRecordings</widget>
-
-
-	<widget label="31852" name="31852" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/popular_right_now/" target="video">YouTubePopular</widget>
-	<widget label="31853" name="31853" type="tvshows" condition="System.HasAddon(plugin.video.youtube)" path="plugin://plugin.video.youtube/special/live/" target="video">YouTubeLive</widget>
-
--->
-
 <!--home menu properties-->
 	<propertyfallback property="homeSymbol">&#57424;</propertyfallback>
 	<propertydefault defaultID="Settings" property="homeSymbol">&#59014;</propertydefault>
@@ -374,6 +353,7 @@
 	<propertydefault defaultID="livetv" property="homeSymbol">&#58944;</propertydefault>
 	<propertydefault defaultID="radio" property="homeSymbol">&#57443;</propertydefault>
 	<propertydefault defaultID="music" property="homeSymbol">&#57441;</propertydefault>
+	<propertydefault defaultID="games" property="homeSymbol">&#57370;</propertydefault>
 	<propertydefault defaultID="pictures" property="homeSymbol">&#57394;</propertydefault>
 	<propertydefault defaultID="weather" property="homeSymbol">&#59000;</propertydefault>
 	<propertydefault defaultID="programs" property="homeSymbol">&#57498;</propertydefault>
