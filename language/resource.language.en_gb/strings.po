@@ -258,6 +258,10 @@ msgctxt "#31079"
 msgid "Descriptions"
 msgstr ""
 
+#. The website that provides the weather forecast information. See settings > services > weather 
+msgctxt "#31080"
+msgid "Weather service"
+msgstr ""
 
 msgctxt "#31081"
 msgid "Reload"
