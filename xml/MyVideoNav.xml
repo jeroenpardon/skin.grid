@@ -144,7 +144,8 @@
 					<param name="ShowInfo">$EXP[Thumbview.ShowInfo]</param>
 					<param name="ShowInfo">Container.Content(seasons) | String.StartsWith(ListItem.Art(thumb),Default)</param>
 					<param name="ShowOverlay">$EXP[Thumbview.ShowInfo]</param>
-					<param name="Visible">!Container.Content(addons)</param>
+					<!--<param name="Visible">!Container.Content(addons)</param>-->
+					<param name="Visible">$EXP[Content.IsVideo]</param>
 				</include>
 			</control>
 
