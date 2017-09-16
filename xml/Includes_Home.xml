@@ -18,7 +18,7 @@
 			<aligny>center</aligny>
 			<textcolor>$VAR[color:Text.3]</textcolor>
 			<include>fadeinout</include>
-			<visible>Container(9000).HasPrevious + IntegerGreaterThan(Container(9000).NumItems,8) + !Player.Muted</visible>
+			<visible>Container(9000).HasPrevious + Integer.IsGreater(Container(9000).NumItems,8) + !Player.Muted</visible>
 		</control>
 		<control type="label">
 			<bottom>0</bottom>
@@ -30,7 +30,7 @@
 			<aligny>center</aligny>
 			<textcolor>$VAR[color:Text.3]</textcolor>
 			<include>fadeinout</include>
-			<visible>Container(9000).HasNext + IntegerGreaterThan(Container(9000).NumItems,8)</visible>
+			<visible>Container(9000).HasNext + Integer.IsGreater(Container(9000).NumItems,8)</visible>
 		</control>
 
 		<include>home_Menu-vertical</include>
