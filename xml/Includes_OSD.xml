@@ -505,7 +505,7 @@
 		</definition>
 	</include>
 
-	<!--fullscreen info-->
+	<!-- Fullscreen info -->
 	<include name="osd_Info">
 		<param name="Art" default="$INFO[MusicPlayer.Cover]"/>
 		<param name="ArtPosY" default="64"/>
