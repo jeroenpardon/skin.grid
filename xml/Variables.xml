@@ -316,8 +316,8 @@
 		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.PlotOutline]</value>
 		<value condition="Container.Content(tvshows) + !String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
-		<value condition="!String.IsEmpty(ListItem.Plotoutline) + !Container.Content(episodes)">$INFO[ListItem.Plotoutline]</value>
 		<value condition="!String.IsEmpty(Container.ShowPlot) + String.IsEmpty(ListItem.Plotoutline) + String.IsEmpty(ListItem.Plot)">$INFO[Container.ShowPlot]</value>
+		<value condition="!String.IsEmpty(ListItem.Plotoutline)">$INFO[ListItem.Plotoutline]</value>
 		<value>$INFO[ListItem.Plot]</value>
 	</variable>
 
