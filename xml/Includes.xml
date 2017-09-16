@@ -734,13 +734,14 @@
 <!-- Home -->
 	<include name="home_Status">
 		<param name="Left" default="128"/>
-		<param name="Width" default="1664"/>
+		<param name="Width" default="1792"/>
 		<definition>
 			<control type="group">
 				<left>$PARAM[Left]</left>
 				<include>fadeinout</include>
 				<visible>!ControlGroup(9100).HasFocus()</visible>
 				<control type="label">
+					<left>128</left>
 					<bottom>0</bottom>
 					<width>$PARAM[Width]</width>
 					<textoffsetx>32</textoffsetx>
