@@ -169,7 +169,7 @@
 		</control>
 		<include content="home_Status">
 			<param name="Left">128"</param>
-			<param name="Width">1772"</param>
+			<param name="Width">1792"</param>
 		</include>
 	</include>
 
