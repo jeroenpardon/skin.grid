@@ -11,7 +11,7 @@
 	<expression name="Content.IsMusic">Window.IsActive(music) | String.Contains(Container.FolderPath,special://musicplaylists)</expression>
 	<expression name="Content.IsPVR">Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml) | Window.IsActive(MyPVRTimers.xml)</expression>
 	<expression name="!Content.IsPVR">!Window.IsActive(MyPVRChannels.xml) +!Window.IsActive(MyPVRRecordings.xml) +!Window.IsActive(MyPVRGuide.xml) +!Window.IsActive(MyPVRTimers.xml) +!Window.IsActive(MyPVRSearch.xml) +!Window.IsActive(MyPVRTimers.xml)</expression>
-	<expression name="Content.IsVideo">Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)</expression>
+	<expression name="Content.IsVideo">Container.Content(videos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(files)</expression>
 
 	<!-- Folderpath -->
 	<expression name="FolderPath.IsTMDB">String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb) | String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies) | String.StartsWith(ListItem.Icon,http://image.tmdb.org/) | String.Contains(ListItem.FilenameAndPath,tmdb)</expression>

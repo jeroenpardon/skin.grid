@@ -6,7 +6,6 @@
 	<onunload>Skin.Reset(OSD)</onunload>
 	<include>fadeinout</include>
 	<coordinates>
-		<system>1</system>
 		<left>690</left>
 		<top>198</top>
 	</coordinates>

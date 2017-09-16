@@ -517,14 +517,14 @@
 				<font>Regular-20</font>
 				<visible>!String.IsEmpty(ListItem.MPAA) + Skin.HasSetting(ratings.pg.enable)</visible>
 			</control>
-			<!--video codec-->
+			<!-- Video information -->
 			<control type="label">
 				<width min="0">auto</width>
 				<height>$PARAM[Height]</height>
 				<label>&#57402;</label>
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Symbols-24</font>
-				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 			</control>
 			<control type="label">
 				<width min="25" max="200">auto</width>
@@ -532,7 +532,7 @@
 				<label>$VAR[media:VideoResolution]$VAR[info:Source, &#8226; ]&#32;&#32;</label>
 				<textcolor>$VAR[color:Text.2]</textcolor>
 				<font>Regular-20</font>
-				<visible>!String.IsEmpty(ListItem.VideoCodec)</visible>
+				<visible>!String.IsEmpty(ListItem.VideoResolution)</visible>
 			</control>
 			<!--audio-->
 			<control type="label">

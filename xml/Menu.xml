@@ -22,27 +22,27 @@
 					<control type="image">
 						<width>192</width>
 						<height>108</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture colordiffuse="$VAR[color:Accent]">colorize/70.png</texture>
 						<visible>Control.HasFocus(5001) | Control.HasFocus(7100)</visible>
 					</control>
 					<control type="image">
 						<left>192</left>
 						<width>192</width>
 						<height>108</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture colordiffuse="$VAR[color:Accent]">colorize/70.png</texture>
 						<visible>Control.HasFocus(5002) | ControlGroup(7000).HasFocus()</visible>
 					</control>
 					<control type="image">
 						<top>108</top>
 						<width>384</width>
 						<height>972</height>
-						<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+						<texture colordiffuse="$VAR[color:Accent]">colorize/70.png</texture>
 					</control>
 				</control>
 				<control type="image">
 					<width>384</width>
 					<height>1080</height>
-					<texture colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
+					<texture colordiffuse="$VAR[color:Accent]">colorize/70.png</texture>
 					<visible>Skin.HasSetting(shortcutsmenu.disable)</visible>
 				</control>
 			</control>
