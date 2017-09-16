@@ -31,7 +31,7 @@
 			<!--views-->			
 			<include>transition_Content</include>
 
-			<include content="view_EPG">
+			<include content="view_Guide">
 				<param name="ID" value="50"/>
 				<param name="Height" value="720"/>
 			</include>

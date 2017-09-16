@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	<include name="view_EPG">
+	<include name="view_Guide">
 		<param name="ChannelWidth" default="300"/>
 		<param name="Height" default="720"/>
 		<param name="ID" default="50"/>
