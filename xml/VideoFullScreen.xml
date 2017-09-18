@@ -2,8 +2,10 @@
 <window>
 	<defaultcontrol></defaultcontrol>
 	<controls>
+		<!--
 		<include content="global_WindowChrome">
 			<param name="Title">$VAR[window:Title.Player]</param>
 		</include>
+		-->
 	</controls>
 </window>

@@ -5,6 +5,11 @@
 	<controls>
 		<control type="group">
 
+			<include content="global_WindowChrome">
+				<param name="Title">$VAR[window:Title.Player]</param>
+				<param name="Visible">[[Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + !Player.HasGame] | Player.Paused | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
+			</include>
+
 			<!-- Music -->
 			<include condition="Player.HasAudio" content="osd_Info">
 				<param name="ArtPosY">40</param>
