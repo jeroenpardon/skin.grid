@@ -15,10 +15,19 @@ html {
 	margin-top:1em;
 }
 
+#footer a, #footer a:visited{
+  color: #BFC0C0;
+  text-decoration:none;
+}
+
+#footer a:hover{
+  color:white;
+}
+
 .devicons{
 	color:white;
-	font-size:5em;
-	margin-right:0.3em;
+	font-size:4em;
+
 	color:#BFC0C0;
 	cursor: hand;
 	text-decoration: none;
@@ -41,6 +50,34 @@ h1 {
 	text-transform: uppercase;
 	font-size: 1.5em;
 	color: #16a085;
+  line-height:1em;
+}
+
+h2 {
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: 1em;
+	color: #ffffff;
+  line-height:1em;
+}
+
+p{
+  color: #BFC0C0;
+}
+
+a:link, a:visited{
+ color: #16a085;
+  text-decoration:none;
+}
+
+a:hover{
+  color:#ffffff;
+  text-decoration:none;
+}
+
+ul{
+  list-style-type: none;
+  padding-left:0;
 }
 
 .flex-x-item:nth-of-type(1) {
