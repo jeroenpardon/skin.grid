@@ -107,22 +107,13 @@
 					<label>ListItem.DBID: $INFO[ListItem.DBID]</label>
 					<include>debug_Label</include>
 				</control>
-
 				<!-- Artwork -->
 				<control type="button">
 					<label>Artwork</label>
 					<include>debug_Header</include>
 				</control>
 				<control type="button">
-					<label>Container.Art(season.poster): $INFO[Container.Art(season.poster)]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label>Container.Art(tvshow.fanart): $INFO[Container.Art(tvshow.fanart)]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label>ListItem.Icon: $INFO[ListItem.Icon] ($INFO[ListItem.ActualIcon])</label>
+					<label>ListItem.Icon: $INFO[ListItem.Icon]</label>
 					<include>debug_Label</include>
 				</control>
 				<control type="button">
@@ -138,6 +129,14 @@
 					<include>debug_Label</include>
 				</control>
 				<control type="button">
+					<label>ListItem.Art(banner): $INFO[ListItem.Art(banner)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>ListItem.Art(tvshow.banner): $INFO[ListItem.Art(tvshow.banner)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
 					<label>ListItem.Art(fanart): $INFO[ListItem.Art(fanart)]</label>
 					<include>debug_Label</include>
 				</control>
@@ -146,11 +145,7 @@
 					<include>debug_Label</include>
 				</control>
 				<control type="button">
-					<label>ListItem.Art(clearart): $INFO[ListItem.Art(clearart)]</label>
-					<include>debug_Label</include>
-				</control>
-				<control type="button">
-					<label>ListItem.Art(tvshow.clearlogo): $INFO[ListItem.Art(tvshow.clearlogo)]</label>
+					<label>ListItem.Overlay: $INFO[ListItem.Overlay]</label>
 					<include>debug_Label</include>
 				</control>
 				<control type="button">
@@ -159,6 +154,22 @@
 				</control>
 				<control type="button">
 					<label>ListItem.Art(clearlogo): $INFO[ListItem.Art(clearlogo)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>ListItem.Art(tvshow.clearlogo): $INFO[ListItem.Art(tvshow.clearlogo)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>ListItem.Art(clearart): $INFO[ListItem.Art(clearart)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>Container.Art(season.poster): $INFO[Container.Art(season.poster)]</label>
+					<include>debug_Label</include>
+				</control>
+				<control type="button">
+					<label>Container.Art(tvshow.fanart): $INFO[Container.Art(tvshow.fanart)]</label>
 					<include>debug_Label</include>
 				</control>
 			</control>
