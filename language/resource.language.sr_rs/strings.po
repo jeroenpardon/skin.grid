@@ -40,6 +40,10 @@ msgctxt "#31003"
 msgid "Enable condensed menu layout"
 msgstr "Омогућити одређени приказ менија"
 
+msgctxt "#31004"
+msgid "Skin shortcut"
+msgstr "Пречица подешавања скина"
+
 msgctxt "#31005"
 msgid "Layout"
 msgstr "Приказ"
@@ -59,6 +63,14 @@ msgid ""
 msgstr ""
 "Избрисаћете подешавања.Више нећете бити у могућности да мењате подешавање "
 "система, осим ако имате други начин. Да ли сте сигурни?"
+
+msgctxt "#31019"
+msgid "Disable shortcut"
+msgstr "Онемогући пречице"
+
+msgctxt "#31020"
+msgid "Enable shortcut"
+msgstr "Омогући пречице"
 
 msgctxt "#31021"
 msgid "Add shortcut"
@@ -214,6 +226,10 @@ msgctxt "#31071"
 msgid "Optional"
 msgstr "Опционо"
 
+msgctxt "#31072"
+msgid "Common menu item"
+msgstr "Заједничко подешавања менија"
+
 #. example usage: this addon is installed
 msgctxt "#31073"
 msgid "Installed"
@@ -248,6 +264,11 @@ msgstr "Опис"
 msgctxt "#31081"
 msgid "Reload"
 msgstr "Поново Учитај"
+
+#. Asking the user to perform an action (like restarting the skin) right away
+msgctxt "#31082"
+msgid "Is it ok to do this now?"
+msgstr "Могу ли да наставим ?"
 
 msgctxt "#31083"
 msgid "Sorting"
@@ -399,6 +420,10 @@ msgctxt "#31231"
 msgid "Show logo for currently displayed fanart"
 msgstr "Прикажи лого за приказану позадинску слику"
 
+msgctxt "#31232"
+msgid "Background image"
+msgstr "Пзадинска слика"
+
 #: settings
 msgctxt "#31300"
 msgid "Homescreen"
@@ -466,7 +491,7 @@ msgstr "Прикажи видео у позадини"
 
 msgctxt "#31316"
 msgid "Show on the homescreen too"
-msgstr ""
+msgstr "Прикажи на главном менију такође"
 
 msgctxt "#31317"
 msgid "Animate backgrounds"
@@ -936,6 +961,14 @@ msgctxt "#31668"
 msgid "TV Shows"
 msgstr "ТВ Серије"
 
+msgctxt "#31669"
+msgid "Next air date"
+msgstr "Следећи датум приказивања"
+
+msgctxt "#31670"
+msgid "Last air date"
+msgstr "Последњи датум приказивања"
+
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"
 msgid "Name & Type"
@@ -1075,28 +1108,28 @@ msgstr "Видимо се касније"
 
 #. Do not translate
 msgctxt "#31860"
-msgid "Default (Cyrillic, Latin, Vietnamese"
-msgstr ""
+msgid "Default (Cyrillic, Latin, Vietnamese)"
+msgstr "Фабричко (Ћирилица,Латиница,Вијатнамско)"
 
 #. Do not translate
 msgctxt "#31861"
-msgid "Unicode"
-msgstr ""
+msgid "Arial Unicode (All languages)"
+msgstr "Ариал уникод (Сва писма)"
 
 #. Do not translate
 msgctxt "#31862"
 msgid "Roboto (Cyrillic, Greek, Latin, Vietnamese)"
-msgstr ""
+msgstr "Робото (Ћирилица,Латиница,Вијатнамско)"
 
 #. Do not translate
 msgctxt "#31863"
 msgid "Source Sans Pro (Cyrillic, Greek, Latin, Vietnamese)"
-msgstr ""
+msgstr "Source Sans Pro (Ћирилица,Латиница,Вијатнамско)"
 
 #. Do not translate
 msgctxt "#31864"
-msgid "Noto (Unicode, manual installation)"
-msgstr ""
+msgid "Heebo (Hebrew, Latin)"
+msgstr "Heebo (Хебрејски,Латиница)"
 
 #: about
 msgctxt "#31980"

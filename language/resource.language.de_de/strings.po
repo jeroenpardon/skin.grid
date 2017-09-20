@@ -40,6 +40,10 @@ msgctxt "#31003"
 msgid "Enable condensed menu layout"
 msgstr "Verdichtetes Menü-Layout aktivieren"
 
+msgctxt "#31004"
+msgid "Skin shortcut"
+msgstr "Skin-Verknüpfung"
+
 msgctxt "#31005"
 msgid "Layout"
 msgstr "Layout"
@@ -62,11 +66,11 @@ msgstr ""
 
 msgctxt "#31019"
 msgid "Disable shortcut"
-msgstr "Shortcut deaktivieren"
+msgstr "Verknüpfung deaktivieren"
 
 msgctxt "#31020"
 msgid "Enable shortcut"
-msgstr "Shortcut aktivieren"
+msgstr "Verknüpfung aktivieren"
 
 msgctxt "#31021"
 msgid "Add shortcut"
@@ -221,6 +225,10 @@ msgstr "Benötigt"
 msgctxt "#31071"
 msgid "Optional"
 msgstr "Optional"
+
+msgctxt "#31072"
+msgid "Common menu item"
+msgstr "Typisches Menü-Element"
 
 #. example usage: this addon is installed
 msgctxt "#31073"

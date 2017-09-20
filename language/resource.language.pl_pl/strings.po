@@ -40,6 +40,10 @@ msgctxt "#31003"
 msgid "Enable condensed menu layout"
 msgstr "Włącz skondensowany układ menu"
 
+msgctxt "#31004"
+msgid "Skin shortcut"
+msgstr ""
+
 msgctxt "#31005"
 msgid "Layout"
 msgstr "Układ"
@@ -221,6 +225,10 @@ msgstr "Wymagany"
 msgctxt "#31071"
 msgid "Optional"
 msgstr "Opcjonalny"
+
+msgctxt "#31072"
+msgid "Common menu item"
+msgstr ""
 
 #. example usage: this addon is installed
 msgctxt "#31073"
