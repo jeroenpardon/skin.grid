@@ -240,6 +240,7 @@
 		<param name="TextLeft" default="160"/>
 		<param name="Label" default="$VAR[media:Title]"/>
 		<param name="Font" default="Black-24"/>
+		<param name="Font2" default="Regular-20"/>
 		<param name="Align" default="left"/>
 		<param name="Aligny" default="center"/>
 		<param name="Label2" default="$VAR[media:Info]"/>
@@ -334,7 +335,7 @@
 						<height>54</height>
 						<width>$PARAM[TextWidth]</width>
 						<label>$PARAM[Label2]</label>
-						<font>Regular-20</font>
+						<font>$PARAM[Font2]</font>
 						<textcolor>$VAR[color:Text.2]</textcolor>
 						<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 						<aligny>top</aligny>
@@ -435,7 +436,7 @@
 							<height>54</height>
 							<width>$PARAM[TextWidth]</width>
 							<label>$PARAM[Label2]</label>
-							<font>Regular-20</font>
+							<font>$PARAM[Font2]</font>
 							<textcolor>$VAR[color:Main]</textcolor>
 							<selectedcolor>$VAR[color:Main]</selectedcolor>
 							<aligny>top</aligny>
@@ -511,7 +512,7 @@
 							<height>54</height>
 							<width>$PARAM[TextWidth]</width>
 							<label>$PARAM[Label2]</label>
-							<font>Regular-20</font>
+							<font>$PARAM[Font2]</font>
 							<textcolor>$VAR[color:Text.2]</textcolor>
 							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
 							<aligny>top</aligny>
