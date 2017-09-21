@@ -192,10 +192,10 @@
 				<top>90</top>
 				<left>128</left>
 				<control type="image">
-					<width>360</width>
-					<height>360</height>
+					<width>416</width>
+					<height>416</height>
 					<texture background="true">$VAR[art:Square]</texture>
-					<aspectratio align="center" aligny="center">keep</aspectratio>
+					<aspectratio align="center" aligny="top">keep</aspectratio>
 				</control>
 			</control>
 		</control>
