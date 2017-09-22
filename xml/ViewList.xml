@@ -24,12 +24,13 @@
 				<texture colordiffuse="$PARAM[DiffuseColor]">colorize/$PARAM[DiffuseLevel].png</texture>
 				<aspectratio>stretch</aspectratio>
 			</control>
-			<control type="image">
+			<control type="multiimage">
 				<left>9</left>
 				<top>9</top>
 				<width>72</width>
 				<height>72</height>
-				<texture>$PARAM[Art]</texture>
+				<timeperimage>6000</timeperimage>
+				<imagepath>$PARAM[Art]</imagepath>
 				<aspectratio>stretch</aspectratio>
 				<visible>$PARAM[ShowArt]</visible>
 			</control>
@@ -589,10 +590,11 @@
 				<control type="group">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
-					<control type="image">
+					<control type="multiimage">
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ArtHeight]</height>
-						<texture background="true">$PARAM[Art]</texture>
+						<imagepath background="true">$PARAM[Art]</imagepath>
+						<timeperimage>6000</timeperimage>>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
 					</control>

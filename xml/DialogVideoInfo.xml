@@ -233,10 +233,11 @@
 			<!-- Artwork -->
 			<control type="group">
 				<visible>!Control.IsVisible(50)</visible>
-				<control type="image">
+				<control type="multiimage">
 					<width>540</width>
 					<height>810</height>
-					<texture background="true">$VAR[art:Portrait]</texture>
+					<timeperimage>6000</timeperimage>
+					<imagepath background="true">$VAR[art:Portrait]</imagepath>
 					<aspectratio align="left">scale</aspectratio>
 				</control>
 			</control>
