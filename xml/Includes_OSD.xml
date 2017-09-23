@@ -238,7 +238,7 @@
 					<control type="image">
 						<width>540</width>
 						<height>540</height>
-						<texture colordiffuse="ff000000" flipy="true">grid/osd/90.png</texture>
+						<texture colordiffuse="ff000000" flipy="true">osd/90.png</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
 				</control>
@@ -589,7 +589,7 @@
 				<control type="image">
 					<width>540</width>
 					<height>360</height>
-					<texture colordiffuse="ff000000" flipy="true" border="0,0,0,360">grid/osd/90.png</texture>
+					<texture colordiffuse="ff000000" flipy="true" border="0,0,0,360">osd/90.png</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
 			</control>

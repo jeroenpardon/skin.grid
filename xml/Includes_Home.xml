@@ -4,7 +4,7 @@
 		<include content="background_Home">
 			<param name="GridTexture">overlays/home.png</param>
 			<param name="DiffuseColor">$VAR[home:FX.ColorVertDiffuse]</param>
-			<param name="DiffuseTexture">grid/home/vertical/diffuse.png</param>
+			<param name="DiffuseTexture">diffuse/home.png</param>
 			<param name="id" condition="Skin.HasSetting(fx.home.color)">7977</param>
 		</include>
 
@@ -175,7 +175,7 @@
 				<left>128</left>
 				<width>1792</width>
 				<include>screen_Height</include>
-				<texture colordiffuse="ff000000">colorize/white.png</texture>
+				<texture colordiffuse="ff000000">colorize/100.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 			</control>

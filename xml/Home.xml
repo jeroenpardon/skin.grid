@@ -47,7 +47,7 @@
 				<control type="image">
 					<width>200</width>
 					<height>84</height>
-					<texture>logos/startup_01.png</texture>
+					<texture>startup/01.png</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<colordiffuse>$VAR[color:Accent]</colordiffuse>
 				</control>
@@ -55,7 +55,7 @@
 					<top>84</top>
 					<width>200</width>
 					<height>84</height>
-					<texture>logos/startup_02.png</texture>
+					<texture>startup/02.png</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<colordiffuse>$VAR[color:Accent]</colordiffuse>
 					<visible>!String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready)) | !System.HasAddon(script.grab.fanart)</visible>

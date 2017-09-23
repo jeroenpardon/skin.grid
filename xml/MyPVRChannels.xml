@@ -44,7 +44,7 @@
 				<visible>Control.IsVisible(50)</visible>
 				<include content="info_List">
 					<param name="Visible">true</param>
-					<param name="Aspect">scale</param>
+					<param name="Aspect">keep</param>
 					<param name="AspectRatioAlign">center</param>
 					<param name="AspectRatioAlignY">center</param>
 				</include>

@@ -53,7 +53,7 @@
 				<control type="image">
 					<width>900</width>
 					<height>540</height>
-					<texture colordiffuse="ff000000">grid/osd/90.png</texture>
+					<texture colordiffuse="ff000000">osd/90.png</texture>
 					<aspectratio>keep</aspectratio>
 				</control>
 				<!--programme listing-->

@@ -284,7 +284,7 @@
 	<include name="startup_Background">
 		<control type="image">
 			<include>screen_Dimensions</include>
-			<texture colordiffuse="ff000000">colorize/white.png</texture>
+			<texture colordiffuse="ff000000">colorize/100.png</texture>
 		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>

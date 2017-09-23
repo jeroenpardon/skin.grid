@@ -11,7 +11,7 @@
 			<!-- No Background -->
 			<control type="image">
 				<include>screen_Dimensions</include>
-				<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>String.IsEqual(Skin.String(background.home),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 			</control>
@@ -70,7 +70,7 @@
 				<!-- No Background -->
 				<control type="image">
 					<include>screen_Dimensions</include>
-					<texture colordiffuse="$VAR[color:Main]">colorize/white.png</texture>
+					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
 					<aspectratio>stretch</aspectratio>
 					<visible>String.IsEqual(Skin.String(background.media),none) | Window.IsActive(home) + String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 				</control>
@@ -109,7 +109,7 @@
 			<control type="image">
 				<aspectratio>stretch</aspectratio>
 				<include>screen_Dimensions</include>
-				<texture colordiffuse="ff000000">colorize/white.png</texture>
+				<texture colordiffuse="ff000000">colorize/100.png</texture>
 			</control>
 			<control type="videowindow">
 				<include>screen_Dimensions</include>
@@ -124,7 +124,7 @@
 				<aspectratio>stretch</aspectratio>
 				<width>1920</width>
 				<height>1080</height>
-				<texture colordiffuse="ff000000">colorize/white.png</texture>
+				<texture colordiffuse="ff000000">colorize/100.png</texture>
 			</control>
 			<control type="videowindow">
 				<top>0</top>

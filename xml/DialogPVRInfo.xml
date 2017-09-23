@@ -175,15 +175,6 @@
 						<onclick condition="!System.HasAddon(plugin.video.youtube)">ActivateWindow(Videos,plugin://plugin.video.youtube)</onclick>
 						<texturenofocus></texturenofocus>
 					</control>
-					<!-- Ok -->
-					<control type="togglebutton" id="7">
-						<width>256</width>
-						<height>90</height>
-						<align>center</align>
-						<font>Black-20</font>
-						<label>$LOCALIZE[186]</label>
-						<texturenofocus></texturenofocus>
-					</control>
 				</control>
 			</control>
 
