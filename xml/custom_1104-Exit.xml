@@ -17,7 +17,6 @@
 				<aspectratio>stretch</aspectratio>
 			</control>
 			<control type="group">
-				<!--<animation effect="fade" start="100" end="0" delay="2000" time="500" condition="String.IsEqual(Window(Home).Property(IsExiting),true)">Conditional</animation>-->
 				<include>startup_Background</include>
 				<control type="grouplist">
 					<width max="1920">auto</width>
