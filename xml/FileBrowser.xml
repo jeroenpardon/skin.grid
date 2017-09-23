@@ -50,17 +50,18 @@
 						<aspectratio align="right" aligny="top">keep</aspectratio>
 					</control>
 					<include content="dialog_List">
-						<param name="ID">451</param>
-						<param name="Left">657</param>
-						<param name="Width">593</param>
 						<param name="Height">810</param>
+						<param name="ID">451</param>
 						<param name="ItemHeight">90</param>
 						<param name="ItemWidth">1024</param>
-						<param name="TextWidth">429</param>
-						<param name="ShowArt">true</param>
-						<param name="OnUp">451</param>
+						<param name="Label">$INFO[ListItem.Label]</param>
+						<param name="Left">657</param>
 						<param name="OnDown">451</param>
 						<param name="OnRight">9000</param>
+						<param name="OnUp">451</param>
+						<param name="ShowArt">true</param>
+						<param name="TextWidth">429</param>
+						<param name="Width">593</param>
 					</include>
 				</control>
 			</control>
