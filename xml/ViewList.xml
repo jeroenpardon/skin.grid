@@ -589,16 +589,10 @@
 				<control type="group">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
-					<control type="image" id="7975">
-						<width>$PARAM[Width]</width>
-						<height>$PARAM[ArtHeight]</height>
-						<texture background="true">$PARAM[Art]</texture>
-						<fadetime>fadetime_Thumb</fadetime>
-						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
-					</control>
 
-					<!-- Icon fill -->
+					<!-- Icon fill 
 					<control type="group">
+						<visible>String.StartsWith(Container.FolderPath,pvr://)</visible>
 						<control type="image">
 							<width>$PARAM[Width]</width>
 							<height>$PARAM[ArtHeight]</height>
@@ -613,6 +607,15 @@
 							<texture background="true">$INFO[ListItem.Icon]</texture>
 							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">keep</aspectratio>
 						</control>
+					</control>
+					-->
+
+					<control type="image" id="7975">
+						<width>$PARAM[Width]</width>
+						<height>$PARAM[ArtHeight]</height>
+						<texture background="true">$PARAM[Art]</texture>
+						<fadetime>fadetime_Thumb</fadetime>
+						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
 					</control>
 
 					<!-- Clearlogo -->
