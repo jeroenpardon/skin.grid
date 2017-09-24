@@ -41,6 +41,7 @@
 	<onload condition="String.IsEmpty(Skin.String(ratings.overlay))">Skin.SetString(ratings.overlay,disabled)</onload>
 	<onload condition="String.IsEmpty(Skin.String(ratings.video))">Skin.SetString(ratings.video,disabled)</onload>
 	<onload condition="String.IsEmpty(Skin.String(view.list.art))">Skin.SetString(view.list.art,fanart)</onload>
+	<onload condition="String.IsEmpty(Skin.String(view.list.pvr))">Skin.SetString(view.list.pvr,icons)</onload>
 	<onload condition="String.IsEmpty(Skin.String(views.landscape.art))">Skin.SetString(views.landscape.art,fanart)</onload>
 
 	<!-- Go -->

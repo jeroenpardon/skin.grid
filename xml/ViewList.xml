@@ -592,6 +592,7 @@
 
 					<!-- Icon fill -->
 					<control type="group">
+						<visible>String.IsEqual(Skin.String(view.list.pvr),icons)</visible>
 						<visible>String.StartsWith(Container.FolderPath,pvr://)</visible>
 						<control type="image">
 							<width>$PARAM[Width]</width>
@@ -609,13 +610,13 @@
 						</control>
 					</control>
 			
-
 					<control type="image" id="7975">
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ArtHeight]</height>
-						<texture background="true">$PARAM[Art]</texture>
+						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
-						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">$PARAM[Aspect]</aspectratio>
+						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">keep</aspectratio>
+						<visible>String.IsEqual(Skin.String(view.list.pvr),thumbnails)</visible>
 					</control>
 
 					<!-- Clearlogo -->

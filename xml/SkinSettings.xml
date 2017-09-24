@@ -441,20 +441,33 @@
 						<include>install_Downloader</include>
 						<include>button_Settings</include>
 					</control>
-					
-					<!-- Now playing -->
+
+					<!-- PVR -->
 					<control type="label" id="9350">
-						<label>$LOCALIZE[31711]</label>
+						<label>PVR</label>
 						<include>global_Header</include>
 					</control>
 					<control type="button" id="9351">
+						<label>$LOCALIZE[31216]</label>
+						<label2>$INFO[Skin.String(view.list.pvr.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=view.list.pvr,header=$LOCALIZE[31216])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+					
+					<!-- Now playing -->
+					<control type="label" id="9360">
+						<label>$LOCALIZE[31711]</label>
+						<include>global_Header</include>
+					</control>
+					<control type="button" id="9361">
 						<label>$LOCALIZE[31360]</label>
 						<label2>$INFO[Skin.String(viz.mode.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=viz.mode,header=$LOCALIZE[31711])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<control type="radiobutton" id="9352">
+					<control type="radiobutton" id="9362">
 						<label>$LOCALIZE[31316]</label>
 						<onclick>Skin.ToggleSetting(home.nowplaying)</onclick>
 						<selected>Skin.HasSetting(home.nowplaying)</selected>
@@ -463,18 +476,18 @@
 					</control>
 
 					<!-- Weather -->
-					<control type="label" id="9360">
+					<control type="label" id="9370">
 						<label>$LOCALIZE[8]</label>
 						<include>global_Header</include>
 					</control>
-					<control type="button" id="9361">
+					<control type="button" id="9371">
 						<label>$LOCALIZE[536]</label>
 						<label2>$INFO[Skin.String(weather.icons.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=weather.icons,addontype=resource.images.weathericons)</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<control type="button" id="9362">
+					<control type="button" id="9372">
 						<label>$LOCALIZE[33069]</label>
 						<label2>$INFO[Skin.String(weather.background.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=weather.background,addontype=resource.images.weatherfanart)</onclick>
