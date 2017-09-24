@@ -613,10 +613,10 @@
 					<control type="image" id="7975">
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ArtHeight]</height>
-						<texture background="true">$INFO[ListItem.ActualIcon]</texture>
+						<texture background="true">$VAR[art:Landscape]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">keep</aspectratio>
-						<visible>String.IsEqual(Skin.String(view.list.pvr),thumbnails)</visible>
+						<visible>String.IsEqual(Skin.String(view.list.pvr),thumbnails) | !String.StartsWith(Container.FolderPath,pvr://)</visible>
 					</control>
 
 					<!-- Clearlogo -->
