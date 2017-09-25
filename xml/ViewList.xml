@@ -366,7 +366,7 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(ListItem.FolderPath,pvr://) | Container.Content(favourites)] + !String.IsEmpty(Container.Content)</visible>
+						<visible>[$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(ListItem.FolderPath,pvr://) | Container.Content(favourites)] | [!String.StartsWith(ListItem.FolderPath,pvr://) + !String.IsEmpty(Container.Content)]</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>
