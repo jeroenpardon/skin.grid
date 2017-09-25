@@ -606,7 +606,7 @@
 							<width>256</width>
 							<height>256</height>
 							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">keep</aspectratio>
+							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[Aspect]</aspectratio>
 						</control>
 					</control>
 			
