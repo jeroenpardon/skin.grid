@@ -615,7 +615,7 @@
 						<height>$PARAM[ArtHeight]</height>
 						<texture background="true">$VAR[art:Landscape]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
-						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">keep</aspectratio>
+						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[Aspect]</aspectratio>
 						<visible>String.IsEqual(Skin.String(view.list.pvr),thumbnails) | !String.StartsWith(Container.FolderPath,pvr://)</visible>
 					</control>
 
