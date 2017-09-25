@@ -452,7 +452,9 @@
 						<label2>$INFO[Skin.String(view.list.pvr.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=view.list.pvr,header=$LOCALIZE[31216])</onclick>
 						<include>install_HelperService</include>
+						<include>install_Colorbox</include>
 						<include>button_Settings</include>
+						<enable>System.HasAddon(script.colorbox) + !System.Platform.Android</enable>
 					</control>
 					
 					<!-- Now playing -->
