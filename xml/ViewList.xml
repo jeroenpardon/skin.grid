@@ -359,7 +359,7 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !String.StartsWith(ListItem.FolderPath,library://)] | [Container.Content(files) + !Container.HasFiles + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(tags) | Container.Content(years) | Container.Content(events) | Container.Content(games)</visible>
+						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !String.StartsWith(ListItem.FolderPath,library://)] | [Container.Content(files) + !Container.HasFiles + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(tags) | Container.Content(years) | Container.Content(events)</visible>
 					</control>
 					<control type="image">
 						<width>1036</width>
