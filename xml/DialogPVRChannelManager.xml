@@ -1,27 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<window>
+<window type="dialog">
 	<defaultcontrol always="true">34</defaultcontrol>
 
 	<controls>
 
-	<!--global includes-->
+		<!-- Global includes -->
 		<include>background_Global</include>
 
-	<!--window chrome-->		
 		<control type="group">
 			<include>transition_Chrome</include>
-			<include content="global_WindowChrome">
-				<param name="Title">$VAR[window:Title.Dialog]</param>
-			</include>
+			<include>global_WindowChrome</include>
 		</control>
 
-	<!--content-->
 		<control type="group">
 			<left>128</left>
 			<top>198</top>
 			<width>1664</width>
-			<include>transition_Content</include>			
-			<!--channel list-->
+			<include>transition_Content</include>
+
+
+
+			<!-- Channel list -->
 			<control type="list" id="20">
 				<height>810</height>
 				<width>634</width>
@@ -112,7 +111,9 @@
 					</control>
 				</focusedlayout>
 			</control>
-			<!--channel options-->
+
+
+			<!-- Channel options -->
 			<control type="grouplist" id="200">
 				<left>724</left>
 				<width>634</width>
@@ -172,7 +173,7 @@
 				</control>
 			</control>
 
-		<!--dialog controls-->
+
 			<control type="button" id ="5">
 				<right>0</right>
 				<top>0</top>
@@ -205,5 +206,6 @@
 				</control>
 			</control>
 		</control>
+
 	</controls>
 </window>

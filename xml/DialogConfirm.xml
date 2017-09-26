@@ -6,7 +6,21 @@
 
 		<include>background_Global</include>
 
-	<!-- Window chrome -->		
+		<!-- Window chrome -->
+
+		<control type="progress" id="20">
+			<left>128</left>
+			<width>1664</width>
+			<height>108</height>
+			<info>Player.Progressbar</info>
+			<texturebg colordiffuse="$VAR[color:Accent]">progress/player/0.png</texturebg>
+			<lefttexture></lefttexture>
+			<midtexture colordiffuse="$VAR[color:Accent]">progress/player/50.png</midtexture>
+			<righttexture></righttexture>
+			<include>transition_Chrome</include>
+			<visible>Window.IsVisible(progressdialog)</visible>
+		</control>
+
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
@@ -15,7 +29,7 @@
 			</include>
 		</control>
 
-	<!-- Content -->
+		<!-- Content -->
 		<control type="group">
 			<left>128</left>
 			<top>378</top>
@@ -40,7 +54,7 @@
 				<visible>false</visible>
 			</control>
 
-		<!-- Dialog buttons -->
+			<!-- Dialog buttons -->
 			<control type="grouplist" id="9000">
 				<centerleft>50%</centerleft>
 				<top>360</top>
