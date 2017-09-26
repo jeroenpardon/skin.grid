@@ -18,8 +18,6 @@
 			<width>1664</width>
 			<include>transition_Content</include>
 
-
-
 			<!-- Channel list -->
 			<control type="list" id="20">
 				<height>810</height>
@@ -112,7 +110,6 @@
 				</focusedlayout>
 			</control>
 
-
 			<!-- Channel options -->
 			<control type="grouplist" id="200">
 				<left>724</left>
@@ -124,7 +121,7 @@
 				<ondown>200</ondown>
 				<itemgap>0</itemgap>
 				<pagecontrol>6500</pagecontrol>
-				<!--tv / radio toggle-->
+				<!-- TV / radio toggle-->
 				<control type="label" id="1">
 					<width>634</width>
 					<height>90</height>
@@ -138,42 +135,42 @@
 					<ondown>7</ondown>
 					<usealttexture>String.IsEmpty(Window.Property(IsRadio))</usealttexture>
 				</control>
-				<!--channel options-->
+				<!-- Channel options -->
 				<control type="label" id="2">
 					<width>634</width>
 					<height>90</height>
 					<label>$LOCALIZE[31609]</label>
 					<include>global_Header</include>
 				</control>
-				<!--active-->
+				<!-- Active -->
 				<control type="radiobutton" id ="7">
 					<label>$LOCALIZE[19074]</label>
 					<width>634</width>
 					<onup>34</onup>
 				</control>
-				<!--channel name-->
+				<!-- Channel name -->
 				<control type="edit" id ="8">
 					<label>19201</label>
 					<width>634</width>
 				</control>
-				<!--EPG activated-->
+				<!-- EPG activated -->
 				<control type="radiobutton" id ="12">
 					<label>$LOCALIZE[19206]</label>
 					<width>634</width>
 				</control>		
-				<!--epg source-->
+				<!-- EPG source -->
 				<control type="spincontrolex" id ="13">
 					<label>$LOCALIZE[19200]</label>
 					<width>634</width>
 				</control>
-				<!--parental locked-->
+				<!-- Parental locked -->
 				<control type="radiobutton" id ="14">
 					<label>$LOCALIZE[19267]</label>
 					<width>634</width>
 				</control>
 			</control>
 
-
+			<!-- Dialog controls -->
 			<control type="button" id ="5">
 				<right>0</right>
 				<top>0</top>
@@ -194,12 +191,12 @@
 				<onup>5</onup>
 				<ondown>noop</ondown>
 				<orientation>horizontal</orientation>
-				<!--Ok-->
+				<!-- Ok -->
 				<control type="button" id="4">
 					<label>&#58956;</label>
 					<include>button_Dialog</include>
 				</control>
-				<!--cancel-->
+				<!-- Cancel -->
 				<control type="button" id="6">
 					<label>&#58950;</label>
 					<include>button_Dialog</include>

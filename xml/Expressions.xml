@@ -3,7 +3,7 @@
 	<!-- Art -->
 	<expression name="Art.IsPortrait">[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + String.IsEqual(Skin.String(view.list.art),posters)] | Container.Content(actors) | Container.Content(sets)</expression>	
 	
-
+	
 	<expression name="Art.IsLandscape">[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos)] + !String.IsEqual(Skin.String(view.list.art),posters)] | Container.Content(episodes) | Container.Content(images) | Container.Content(artists) | Container.Content(addons) | [Container.Content(files) + Container.HasFiles] | String.StartsWith(Container.FolderPath,pvr://recordings/) | Container.Content(favourites) | String.IsEmpty(Container.Content)</expression>
 
 	<!--<expression name="Art.IsLandscape">Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(artists) | Container.Content(addons) | String.StartsWith(Container.FolderPath,pvr://recordings/) | [Container.Content(files) + Container.HasFiles] | [!String.IsEqual(Skin.String(view.list.art),posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] | String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(favourites)</expression>-->
