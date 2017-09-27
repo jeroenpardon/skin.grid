@@ -593,7 +593,7 @@
 					<!-- Icon fill -->
 					<control type="group">
 						<visible>String.IsEqual(Skin.String(view.list.pvr),icons)</visible>
-						<visible>String.StartsWith(Container.FolderPath,pvr://) | [Container.Content(addons) + String.IsEmpty(ListItem.Art(fanart))]</visible>
+						<visible>String.StartsWith(Container.FolderPath,pvr://)</visible>
 						<control type="image">
 							<width>$PARAM[Width]</width>
 							<height>$PARAM[ArtHeight]</height>
