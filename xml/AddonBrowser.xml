@@ -45,7 +45,7 @@
 					<include content="info_List">
 						<param name="Art" value="$VAR[art:Landscape]"/>
 						<param name="Visible" value="true"/>
-						<param name="Aspect">keep</param>
+						<param name="Aspect">scale</param>
 						<param name="AspectRatioAlign">center</param>
 						<param name="AspectRatioAlignY">center</param>
 					</include>

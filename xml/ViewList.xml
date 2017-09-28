@@ -361,12 +361,13 @@
 						<include>toggle_Focus</include>
 						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !String.StartsWith(ListItem.FolderPath,library://)] | [Container.Content(files) + !Container.HasFiles + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(tags) | Container.Content(years) | Container.Content(events)</visible>
 					</control>
+					<!-- Landscape width -->
 					<control type="image">
 						<width>1036</width>
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(ListItem.FolderPath,pvr://) | Container.Content(favourites)] | [!String.StartsWith(ListItem.FolderPath,pvr://) + !String.IsEmpty(Container.Content)]</visible>
+						<visible>[$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(ListItem.FolderPath,pvr://) | Container.Content(favourites)]</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>
@@ -553,7 +554,6 @@
 		<param name="ShowDescription" default="true"/>
 		<param name="ShowInfo" default="true"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
-		<param name="ShowProviderLogo" default="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb) | String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/?info=incinemamovies) | String.Contains(ListItem.FilenameAndPath,tmdb) | [String.StartsWith(Container.FolderPath,plugin://) + String.StartsWith(ListItem.Icon,http://image.tmdb.org/)]"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
 		<param name="SymbolFont" default="Symbols-46"/>
 		<param name="TextHeight" default="365"/>
@@ -609,11 +609,12 @@
 							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[Aspect]</aspectratio>
 						</control>
 					</control>
-			
+					
+					<!-- Reference artwork -->
 					<control type="image" id="7975">
 						<width>$PARAM[Width]</width>
 						<height>$PARAM[ArtHeight]</height>
-						<texture background="true">$VAR[art:Landscape]</texture>
+						<texture background="true">$PARAM[Art]</texture>
 						<fadetime>fadetime_Thumb</fadetime>
 						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[Aspect]</aspectratio>
 						<visible>String.IsEqual(Skin.String(view.list.pvr),thumbnails) | !String.StartsWith(Container.FolderPath,pvr://)</visible>
@@ -629,18 +630,7 @@
 						<aspectratio align="center" aligny="bottom">keep</aspectratio>
 						<visible>$PARAM[ShowLogo]</visible>
 					</control>
-					<!-- Provider logo -->
-					<control type="image">
-						<left>24</left>
-						<bottom>24</bottom>
-						<width>64</width>
-						<height>64</height>
-						<texture background="true">$PARAM[ProviderLogo]</texture>
-						<fadetime>fadetime_Thumb</fadetime>
-						<aspectratio align="left" aligny="bottom">keep</aspectratio>
-						<visible>!ListItem.IsParentFolder</visible>
-						<visible>$PARAM[ShowProviderLogo]</visible>
-					</control>
+
 					<!-- Videowindow -->
 					<control type="group">
 						<visible>!System.Platform.Android + [VideoPLayer.Content(livetv) + [Window.IsActive(tvchannels) | Window.IsActive(radiochannels)]]</visible>
