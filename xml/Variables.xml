@@ -540,7 +540,7 @@
 		<value condition="String.Contains(ListItem.FolderPath,kodi.audiodecoder) | String.Contains(Container.FolderPath,kodi.audiodecoder)">&#57504;</value>
 		<value condition="String.Contains(ListItem.FolderPath,xbmc.audioencoder) | String.Contains(Container.FolderPath,xbmc.audioencoder)">&#57463;</value>
 		<value condition="String.Contains(ListItem.FolderPath,kodi.context.item) | String.Contains(Container.FolderPath,kodi.context.item)">&#59117;</value>
-		<value condition="String.Contains(ListItem.FolderPath,category.gameaddons) | String.Contains(Container.FolderPath,category.gameaddons)">&#57371;</value>
+		<value condition="String.Contains(ListItem.FolderPath,game.controller) | String.Contains(ListItem.FolderPath,category.gameaddons) | String.Contains(Container.FolderPath,category.gameaddons)">&#57371;</value>
 		<value condition="String.Contains(ListItem.FolderPath,category.infoproviders) | String.Contains(Container.FolderPath,category.infoproviders)">&#59159;</value>
 		<value condition="String.Contains(ListItem.FolderPath,category.lookandfeel)">&#57479;</value>
 		<value condition="String.Contains(Container.FolderPath,xbmc.addon.audio)">&#57441;</value>
