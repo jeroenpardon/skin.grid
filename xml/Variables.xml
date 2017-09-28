@@ -513,7 +513,7 @@
 		<value condition="ListItem.Property(Addon.HasUpdate)">&#57496;</value>
 		<value condition="ListItem.Property(Addon.Orphaned)">&#59168;</value>
 		<value condition="ListItem.Property(Addon.HasUpdate)">&#57496;</value>
-		<value condition="!ListItem.Property(Addon.IsEnabled) + Container.Content(addons) + String.StartsWith(Container.FolderPath,addons://user/)">&#58901;</value>
+		<value condition="!ListItem.Property(Addon.IsEnabled) + Container.Content(addons) + String.StartsWith(Container.FolderPath,addons://user/)">&#57474;</value>
 		<value condition="ListItem.Property(Addon.IsInstalled)">&#57472;</value>
 		<value condition="String.IsEqual(ListItem.FilenameAndPath,addons://recently_updated/)">&#57496;</value>
 		<value condition="String.IsEqual(ListItem.FilenameAndPath,addons://repos/)">&#59005;</value>
@@ -523,7 +523,9 @@
 		<value condition="String.Contains(ListItem.FolderPath,kodi.audiodecoder) | String.Contains(Container.FolderPath,kodi.audiodecoder)">&#57504;</value>
 		<value condition="String.Contains(ListItem.FolderPath,xbmc.audioencoder) | String.Contains(Container.FolderPath,xbmc.audioencoder)">&#57463;</value>
 		<value condition="String.Contains(ListItem.FolderPath,kodi.context.item) | String.Contains(Container.FolderPath,kodi.context.item)">&#59117;</value>
-		<value condition="String.Contains(ListItem.FolderPath,category.gameaddons) | String.Contains(Container.FolderPath,category.gameaddons)">&#57371;</value>
+		<!-- Games -->
+		<value condition="String.Contains(ListItem.FolderPath,category.gameaddons) | String.Contains(ListItem.ListItem,category.gameaddons) | String.Contains(ListItem.FolderPath,category.emulators) | String.Contains(ListItem.FolderPath,category.gameproviders) | String.Contains(ListItem.FolderPath,category.standalonegames)">&#57370;</value>
+		<value condition="String.Contains(ListItem.FolderPath,game.controller) | String.Contains(ListItem.FolderPath,category.gameaddons) | String.Contains(Container.FolderPath,category.gameaddons)">&#57371;</value>
 		<value condition="String.Contains(ListItem.FolderPath,category.infoproviders) | String.Contains(Container.FolderPath,category.infoproviders)">&#59159;</value>
 		<value condition="String.Contains(ListItem.FolderPath,category.lookandfeel)">&#57479;</value>
 		<value condition="String.Contains(Container.FolderPath,xbmc.addon.audio)">&#57441;</value>
