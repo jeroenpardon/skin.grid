@@ -20,7 +20,7 @@
 	<onload>Skin.SetString(fx.pixelsize,12)</onload>
 	<onload>Skin.SetString(fx.quality,8)</onload>
 	<onload>Skin.SetString(fx.white,ffffff)</onload>
-
+	
 	<onload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">RunScript(script.colorbox,daemon=True)</onload>
 	<onload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">SetProperty(FIVE_daemon_set,blur,home)</onload>
 	<onload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">SetProperty(SEVEN_daemon_set,True,home)</onload>

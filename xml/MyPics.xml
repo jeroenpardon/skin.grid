@@ -42,7 +42,7 @@
 				<include content="info_List">
 					<param name="AspectRatio">keep</param>
 					<param name="AspectRatioAlign">top</param>
-					<param name="Visible">$EXP[Art.IsLandscape]</param>
+					<param name="Visible">Container.HasFiles</param>
 				</include>
 			</control>
 

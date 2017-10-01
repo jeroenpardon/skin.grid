@@ -362,9 +362,6 @@ msgctxt "#31215"
 msgid "Landscape art type"
 msgstr ""
 
-msgctxt "#31216"
-msgid "List view artwork type"
-msgstr ""
 
 msgctxt "#31217"
 msgid "No images available. Would you like to download some?"

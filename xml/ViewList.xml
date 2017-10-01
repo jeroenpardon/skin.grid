@@ -227,11 +227,10 @@
 	<include name="view_List">
 		<param name="ID" default="50"/>
 		<param name="Top" default="108"/>
+		<param name="ViewType" default="list"/>
 		<param name="Left" default="0"/>
 		<param name="Width" default="1920"/>
 		<param name="Height" default="972"/>
-		<param name="OnUp" default="50"/>
-		<param name="OnDown" default="50"/>
 		<param name="OnLeft" default="7000"/>
 		<param name="OnRight" default="6500"/>
 		<param name="PageControl" default="6500"/>
@@ -259,13 +258,13 @@
 		<param name="TextWidth" default="832"/>
 		<definition>
 			<control type="list" id="$PARAM[ID]">
-				<viewtype label="535">list</viewtype>
+				<viewtype label="535">$PARAM[ViewType]</viewtype>
 				<top>$PARAM[Top]</top>
 				<left>$PARAM[Left]</left>
 				<width>$PARAM[Width]</width> 
 				<height>$PARAM[Height]</height>
-				<onup>$PARAM[OnUp]</onup>
-				<ondown>$PARAM[OnDown]</ondown>
+				<onup>$PARAM[ID]</onup>
+				<ondown>$PARAM[ID]</ondown>
 				<onleft>SetProperty(MenuOpen,true,Home)</onleft>
 				<onleft>$PARAM[OnLeft]</onleft>
 				<onright>$PARAM[PageControl]</onright>
@@ -359,7 +358,7 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[String.IsEmpty(Container.Content) + $EXP[!Content.IsPVR] + !String.StartsWith(Container.FolderPath,plugin://plugin.video) + !String.StartsWith(ListItem.FolderPath,library://)] | [Container.Content(files) + !Container.HasFiles + !String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(countries) | Container.Content(directors) | Container.Content(genres) | Container.Content(playlists) | Container.Content(studios) | Container.Content(tags) | Container.Content(years) | Container.Content(events) | Container.Content(games)</visible>
+						<visible>[String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://)] | Container.Content(genres) | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | [Container.Content(images) + !Container.HasFiles]</visible>
 					</control>
 					<!-- Landscape width -->
 					<control type="image">
@@ -367,14 +366,14 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[$EXP[Art.IsLandscape] | Container.Content(albums) | Container.Content(songs) | String.StartsWith(ListItem.FolderPath,pvr://) | Container.Content(favourites)]</visible>
+						<visible>!Control.IsVisible(501) + ![String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://)] + ![Container.Content(images) + !Container.HasFiles] + !Container.Content(playlists)</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>$EXP[Art.IsPortrait]</visible>
+						<visible>Control.IsVisible(501)</visible>
 					</control>			
 					<control type="image">
 						<width>$PARAM[SymbolSize]</width>
@@ -541,12 +540,16 @@
 	<include name="info_List">
 		<param name="Art" default="$VAR[art:Landscape]"/>
 		<param name="Art2" default="$VAR[art:Square]"/>
+		<param name="ArtCenterLeft"/>
+		<param name="ArtLeft"/>
+		<param name="Right"/>
 		<param name="ArtHeight" default="432"/>
 		<param name="ArtWidth" default="756"/>
 		<param name="Aspect" default="scale"/>
 		<param name="AspectRatioAlign" default="center"/>
 		<param name="AspectRatioAlignY" default="top"/>
 		<param name="DiffuseTexture" default="views/diffuse/kodi_landscape.png"/>
+		<param name="FallbackColor" default="$VAR[color:Text.2]"/>
 		<param name="Fallback" default="$VAR[art:Fallback]"/>
 		<param name="Height" default="972"/>
 		<param name="Logo" default="$VAR[art:Logo]"/>
@@ -567,10 +570,11 @@
 				<width>$PARAM[Width]</width>
 				<height>$PARAM[Height]</height>
 				<visible>$PARAM[Visible]</visible>
+
 				<control type="image">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
-					<texture colordiffuse="$VAR[color:Text.2]">$PARAM[Fallback]</texture>
+					<texture colordiffuse="$VAR[color:Fallback]">$PARAM[Fallback]</texture>
 					<aspectratio align="center" aligny="center">scale</aspectratio>
 					<visible>String.IsEmpty(ListItem.Art(thumb)) | String.StartsWith(Container.FolderPath,pvr://channels/)</visible>
 				</control>
@@ -585,40 +589,23 @@
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<visible>ListItem.IsParentFolder</visible>
 				</control>
+
+				
+
+				<!-- Artwork landscape -->
+				<control type="image">
+					<left>$PARAM[ArtLeft]</left>
+					<width>$PARAM[Width]</width>
+					<height>$PARAM[ArtHeight]</height>
+					<fadetime>fadetime_Thumb</fadetime>
+					<texture background="true">$PARAM[Art]</texture>
+					<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[Aspect]</aspectratio>
+				</control>
+
 				<!-- Landscape art -->
 				<control type="group">
 					<width>$PARAM[Width]</width>
 					<height>$PARAM[ArtHeight]</height>
-
-					<!-- Icon fill -->
-					<control type="group">
-						<visible>String.IsEqual(Skin.String(view.list.pvr),icons)</visible>
-						<visible>String.StartsWith(Container.FolderPath,pvr://)</visible>
-						<control type="image">
-							<width>$PARAM[Width]</width>
-							<height>$PARAM[ArtHeight]</height>
-							<texture background="true" colordiffuse="$INFO[Window(home).Property(ImageColorFIVE)]">colorize/100.png</texture>
-							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="center">stretch</aspectratio>
-						</control>
-						<control type="image" id="7977">
-							<centerleft>50%</centerleft>
-							<centertop>50%</centertop>
-							<width>256</width>
-							<height>256</height>
-							<texture background="true">$INFO[ListItem.Icon]</texture>
-							<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[Aspect]</aspectratio>
-						</control>
-					</control>
-					
-					<!-- Reference artwork -->
-					<control type="image" id="7975">
-						<width>$PARAM[Width]</width>
-						<height>$PARAM[ArtHeight]</height>
-						<texture background="true">$PARAM[Art]</texture>
-						<fadetime>fadetime_Thumb</fadetime>
-						<aspectratio align="$PARAM[AspectRatioAlign]" aligny="$PARAM[AspectRatioAlignY]">$PARAM[Aspect]</aspectratio>
-						<visible>String.IsEqual(Skin.String(view.list.pvr),thumbnails) | !String.StartsWith(Container.FolderPath,pvr://)</visible>
-					</control>
 
 					<!-- Clearlogo -->
 					<control type="image">

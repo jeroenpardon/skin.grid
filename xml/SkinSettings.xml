@@ -398,13 +398,6 @@
 						<include>radio_Settings</include>
 						<visible>String.IsEqual(Skin.String(background.media),fanart)</visible>
 					</control>
-					<control type="button" id="9324">
-						<label>$LOCALIZE[31216]</label>
-						<label2>$INFO[Skin.String(view.list.art.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=view.list.art,header=$LOCALIZE[31216])</onclick>
-						<include>install_HelperService</include>
-						<include>button_Settings</include>
-					</control>
 					<control type="button" id="9325">
 						<label>$LOCALIZE[31215]</label>
 						<label2>$INFO[Skin.String(views.landscape.art.label)]</label2>
@@ -442,7 +435,7 @@
 						<include>button_Settings</include>
 					</control>
 
-					<!-- PVR -->
+					<!-- PVR
 					<control type="label" id="9350">
 						<label>PVR</label>
 						<include>global_Header</include>
@@ -456,6 +449,7 @@
 						<include>button_Settings</include>
 						<enable>System.HasAddon(script.colorbox) + !System.Platform.Android</enable>
 					</control>
+					-->
 					
 					<!-- Now playing -->
 					<control type="label" id="9360">

@@ -145,6 +145,11 @@
 		<value>Text.3</value>
 	</variable>
 
+	<variable name="color:Fallback">
+		<value condition="System.HasAddon(script.colorbox) + String.StartsWith(Container.FolderPath,pvr://channels/)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value>$VAR[color:Text.2]</value>
+	</variable>
+
 	<variable name="color:Date">
 		<value condition="Window.IsActive(Home) + Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorFIVE)) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
 		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
@@ -409,6 +414,11 @@
 		<value>$LOCALIZE[16039]</value>
 	</variable>
 
+	<variable name="menu:ListMode">
+		<value condition="String.IsEqual(System.CurrentControl,50)">Landscape</value>
+		<value>Portrait</value>
+	</variable>
+	
 	<variable name="menu:MasterMode">
 		<value condition="String.Contains(Control.GetLabel(11),*)">$LOCALIZE[16041]</value>
 		<value>$LOCALIZE[16039]</value>
@@ -687,11 +697,20 @@
 		<value condition="String.IsEqual(ListItem.DBTYPE,episode)">$INFO[Container.ListItem.Path,,extrafanart]</value>
 	</variable>
 
+	<variable name="art:Landscape.Pvr">
+		<value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
+		<value condition="!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
+	</variable>
+
 	<variable name="art:Landscape">
 		<value condition="[Container.Content(images) + !ListItem.IsFolder] | [String.IsEmpty(Container.Content) + !ListItem.IsFolder + !Control.Isvisible(50) + String.StartsWith(Container.FolderPath,pvr://recordings)]">$INFO[ListItem.Icon]</value>
 		<value condition="Container.Content(images) + ListItem.IsFolder">$INFO[ListItem.Art(thumb)]</value>
+		
+		<!--
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
+		-->
+
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Fanart)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) + !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Thumb))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.Thumb)]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://recordings/) | Window.IsVisible(DialogPVRInfo.xml)">$INFO[ListItem.Icon]</value>
@@ -742,6 +761,11 @@
 		<value condition="[Container.Content(albums) | Container.Content(songs)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/portrait-music.png</value>
 		<value condition="[Container.Content(movies) | Container.Content(tvshows)] + !String.StartsWith(ListItem.Icon,DefaultFolderBack)">views/fallback/portrait-video.png</value>
 		<value>views/fallback/portrait.png</value>
+	</variable>
+
+	<variable name="art:Fallback.Pvr">
+		<value condition="System.HasAddon(script.colorbox)">colorize/100.png</value>
+		<value>views/fallback/landscape.png</value>
 	</variable>
 
 
@@ -1271,7 +1295,7 @@
 <!-- Window -->
 	<variable name="window:Grid">
 		<value condition="Control.IsVisible(51)">overlays/270.png</value>
-		<value condition="Control.IsVisible(50)">overlays/108.png</value>
+		<value condition="Control.IsVisible(50) | Control.IsVisible(501)">overlays/108.png</value>
 		<value condition="Control.IsVisible(52)">overlays/648-108.png</value>
 		<value condition="Control.IsVisible(521)">overlays/216-432-108.png</value>
 		<value condition="Control.IsVisible(54)">overlays/400.png</value>

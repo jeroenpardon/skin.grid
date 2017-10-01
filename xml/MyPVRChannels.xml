@@ -7,13 +7,13 @@
 
 	<controls>
 
-	<!--menu trigger-->
+	<!-- Menu trigger -->
 		<control type="button" id="5500">
 			<onfocus>Control.SetFocus(50)</onfocus>
 			<visible allowhiddenfocus="true">false</visible>
 		</control>
 
-	<!--background-->
+	<!-- Background -->
 		<include content="background_Global">
 			<param name="GridTexture">$VAR[window:Grid]</param>
 		</include>
@@ -21,7 +21,7 @@
 		<control type="group">
 			<include>toggle_Menu</include>
 
-		<!--chrome-->
+		<!-- Chrome -->
 			<control type="group">
 				<include>transition_Chrome</include>
 				<include content="global_WindowChrome">
@@ -30,8 +30,7 @@
 				<visible>!Window.IsActive(movieinformation)</visible>
 			</control>
 
-		<!--views-->
-		
+		<!-- Views -->		
 			<include>transition_Content</include>
 			
 			<include content="view_List">
@@ -42,20 +41,41 @@
 
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
+
 				<include content="info_List">
-					<param name="Visible">true</param>
-					<param name="Aspect">keep</param>
+					<param name="Visible">!IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart)) | !IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))</param>
+					<param name="Fallback">$VAR[art:Fallback.Pvr]</param>
+					<param name="Aspect">scale</param>
+					<param name="Art">$VAR[art:Landscape.Pvr]</param>
 					<param name="AspectRatioAlign">center</param>
 					<param name="AspectRatioAlignY">center</param>
 				</include>
+
+				<include content="info_List">
+					<param name="Visible">IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart)) + IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.Fanart))</param>
+					<param name="Fallback">$VAR[art:Fallback.Pvr]</param>
+					<param name="Aspect">keep</param>
+					<param name="Art">$INFO[ListItem.Icon]</param>
+					<param name="AspectRatioAlign">center</param>
+					<param name="AspectRatioAlignY">center</param>
+				</include>
+
 			</control>
 
-			<!--scrollbars-->
+			<!-- Scrollbars -->
 			<include>global_Scrollbar</include>
 
 		</control>
 
-		<!--menu-->
+		<!-- Colorbox reference -->
+		<control type="multiimage" id="7975">
+			<left>-2000</left>
+			<width>1</width>
+			<height>1</height>
+			<imagepath background="true">$INFO[ListItem.Icon]</imagepath>
+		</control>
+
+		<!-- Menu -->
 		<include>menu_Options</include>
 
 	</controls>
