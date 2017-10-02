@@ -227,7 +227,7 @@
 	<include name="view_List">
 		<param name="ID" default="50"/>
 		<param name="Top" default="108"/>
-		<param name="ViewLayout" default="$LOCALIZE[535] - $LOCALIZE[31202]"/>
+		<param name="ViewLayout" default="535"/>
 		<param name="Left" default="0"/>
 		<param name="Width" default="1920"/>
 		<param name="Height" default="972"/>

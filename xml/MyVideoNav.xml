@@ -41,6 +41,7 @@
 				<include>transition_ViewChange</include>
 				<include content="view_List">
 					<param name="Visible" value="!Container.Content(seasons)"/>
+					<param name="ViewLayout">$LOCALIZE[535] - $LOCALIZE[31202]</param>
 				</include>
 			</control>
 
