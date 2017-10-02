@@ -103,10 +103,10 @@
 
 	<include name="menu_Views">
 		<param name="OnUp" default="300"/>
-		<param name="OnDown" default="7002"/>
+		<param name="OnDown" default="7003"/>
 		<param name="Visible" default="true"/>
 		<definition>
-			<!-- Viewtype selection -->
+			<!--change viewtype-->
 			<control type="group" id="7001">
 				<height>108</height>
 				<visible>$PARAM[Visible]</visible>
@@ -114,9 +114,9 @@
 					<width>384</width>
 					<height>108</height>
 					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-					<visible>Control.HasFocus(701)</visible>
+					<visible>Control.HasFocus(7002)</visible>
 				</control>
-				<control type="button" id="701">
+				<control type="button" id="7002">
 					<top>12</top>
 					<label>$LOCALIZE[31220]</label>
 					<onup>$PARAM[OnUp]</onup>
@@ -133,57 +133,16 @@
 						<textcolor>$VAR[color:Main]</textcolor>
 						<label>$INFO[Container.ViewMode]</label>
 						<include>menu_Label</include>
-						<visible>!Control.HasFocus(701)</visible>
+						<visible>!Control.HasFocus(7002)</visible>
 					</control>
 					<control type="label">
 						<width>384</width>
 						<label>$INFO[Container.ViewMode]</label>
 						<include>menu_Label</include>
-						<visible>Control.HasFocus(701)</visible>
+						<visible>Control.HasFocus(7002)</visible>
 					</control>
 				</control>
 			</control>
-
-			<!-- List view orientation -->
-			<control type="group" id="7002">
-				<height>108</height>
-				<visible>$PARAM[Visible]</visible>
-				<control type="image">
-					<width>384</width>
-					<height>108</height>
-					<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-					<visible>Control.HasFocus(702)</visible>
-				</control>
-				<control type="button" id="702">
-					<top>12</top>
-					<label>$LOCALIZE[31005]</label>
-					<onup>7001</onup>
-					<ondown>7003</ondown>
-					<onleft>7100</onleft>
-					<onright>50</onright>
-					<include>menu_Button</include>
-					<onclick condition="Control.IsVisible(501)">Container.SetViewMode(50)</onclick>
-					<onclick condition="Control.IsVisible(50)">Container.SetViewMode(501)</onclick>
-				</control>
-				<control type="group">
-					<top>54</top>
-					<left>32</left>
-					<control type="label">
-						<textcolor>$VAR[color:Main]</textcolor>
-						<label>$VAR[menu:ListMode]</label>
-						<include>menu_Label</include>
-						<visible>!Control.HasFocus(702)</visible>
-					</control>
-					<control type="label">
-						<width>384</width>
-						<label>$VAR[menu:ListMode]</label>
-						<include>menu_Label</include>
-						<visible>Control.HasFocus(702)</visible>
-					</control>
-				</control>
-			</control>
-
-
 		</definition>
 	</include>
 

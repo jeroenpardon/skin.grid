@@ -46,6 +46,7 @@
 				<include>transition_ViewChange</include>
 				<include content="view_List">
 					<param name="ID">501</param>
+					<param name="ViewLayout">$LOCALIZE[535] - $LOCALIZE[31201]</param>
 				</include>
 			</control>
 
@@ -80,23 +81,20 @@
 				<visible>Control.IsVisible(501)</visible>
 				<!--portrait-->
 				<include content="info_List">
-					<param name="ViewType">list2</param>
 					<param name="Art">$VAR[art:Portrait]</param>
 					<param name="ArtHeight">972</param>
 					<param name="Aspect">scale</param>
-					<param name="OnUp">501</param>
-					<param name="OnDown">501</param>
 					<param name="AspectRatioAlignY">center</param>
 					<param name="Fallback">$VAR[art:Fallback.Portrait]</param>
+					<param name="OnDown">501</param>
+					<param name="OnUp">501</param>
 					<param name="ShowDescription">false</param>
 					<param name="ShowInfo">false</param>
 					<param name="ShowLogo">false</param>
-					<param name="Width">648</param>
 					<param name="Visible">true</param>
+					<param name="Width">648</param>
 				</include>
 			</control>
-
-
 
 			<!-- Big List -->
 			<control type="group">

@@ -415,8 +415,8 @@
 	</variable>
 
 	<variable name="menu:ListMode">
-		<value condition="Control.IsVisible(50)">Landscape</value>
-		<value condition="Control.IsVisible(501)">Portrait</value>
+		<value condition="Control.IsVisible(501)">Landscape</value>
+		<value>Portrait</value>
 	</variable>
 	
 	<variable name="menu:MasterMode">

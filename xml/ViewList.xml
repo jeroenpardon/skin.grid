@@ -227,7 +227,7 @@
 	<include name="view_List">
 		<param name="ID" default="50"/>
 		<param name="Top" default="108"/>
-		<param name="ViewType" default="list"/>
+		<param name="ViewLayout" default="$LOCALIZE[535] - $LOCALIZE[31202]"/>
 		<param name="Left" default="0"/>
 		<param name="Width" default="1920"/>
 		<param name="Height" default="972"/>
@@ -258,7 +258,7 @@
 		<param name="TextWidth" default="832"/>
 		<definition>
 			<control type="list" id="$PARAM[ID]">
-				<viewtype label="535">$PARAM[ViewType]</viewtype>
+				<viewtype label="$PARAM[ViewLayout]">list</viewtype>
 				<top>$PARAM[Top]</top>
 				<left>$PARAM[Left]</left>
 				<width>$PARAM[Width]</width> 
