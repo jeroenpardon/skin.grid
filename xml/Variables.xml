@@ -415,8 +415,8 @@
 	</variable>
 
 	<variable name="menu:ListMode">
-		<value condition="String.IsEqual(System.CurrentControl,50)">Landscape</value>
-		<value>Portrait</value>
+		<value condition="Control.IsVisible(50)">Landscape</value>
+		<value condition="Control.IsVisible(501)">Portrait</value>
 	</variable>
 	
 	<variable name="menu:MasterMode">
@@ -472,12 +472,12 @@
 		<value>$LOCALIZE[16039]</value>
 	</variable>
 
-	<variable name="menu:Tab1Color">
+	<variable name="menu:Color.Tab1">
 		<value condition="Control.HasFocus(5001) | Control.HasFocus(7100)">$VAR[color:Main]</value>
 		<value>$VAR[color:Accent]</value>
 	</variable>
 	
-	<variable name="menu:Tab2Color">
+	<variable name="menu:Color.Tab2">
 		<value condition="Control.HasFocus(5002) | ControlGroup(7000).HasFocus()">$VAR[color:Main]</value>
 		<value>$VAR[color:Accent]</value>
 	</variable>
