@@ -39,7 +39,9 @@
 			<!--list-->
 			<control type="group">
 				<include>transition_ViewChange</include>
-				<include>view_List</include>
+				<include content="view_List">
+					<param name="Visible" value="!Container.Content(seasons)"/>
+				</include>
 			</control>
 
 			<control type="group">
@@ -47,6 +49,7 @@
 				<include content="view_List">
 					<param name="ID">501</param>
 					<param name="ViewLayout">$LOCALIZE[535] - $LOCALIZE[31201]</param>
+					<param name="Visible" value="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(files)"/>
 				</include>
 			</control>
 
@@ -54,10 +57,7 @@
 			<control type="group">
 				<visible>Control.IsVisible(50)</visible>
 				<control type="group">
-					<!--landscape-->
-					<include content="info_List">
-						<param name="Visible">$EXP[Art.IsLandscape]</param>
-					</include>
+
 					<!--square, fixed-->
 					<include content="info_List">
 						<param name="Visible">$EXP[Art.IsSquare]</param>

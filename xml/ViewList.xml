@@ -256,6 +256,7 @@
 		<param name="TextLeft" default="152"/>
 		<param name="ListWidth" default="1144"/><!--1036-->
 		<param name="TextWidth" default="832"/>
+		<param name="Visible"/>
 		<definition>
 			<control type="list" id="$PARAM[ID]">
 				<viewtype label="$PARAM[ViewLayout]">list</viewtype>
@@ -271,6 +272,7 @@
 				<pagecontrol>$PARAM[PageControl]</pagecontrol>
 				<include>global_ListScroll</include>
 				<preloaditems>2</preloaditems>
+				<visible>$PARAM[Visible]</visible>
 				<!--library-->
 				<itemlayout width="$PARAM[Width]" height="$PARAM[ItemHeight]">
 					<control type="image">
@@ -358,7 +360,7 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://)] | Container.Content(genres) | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | [Container.Content(images) + !Container.HasFiles]</visible>
+						<visible>[String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://) + !String.StartsWith(Container.FolderPath,plugin://)] | Container.Content(genres) | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | [Container.Content(images) + !Container.HasFiles]</visible>
 					</control>
 					<!-- Landscape width -->
 					<control type="image">
@@ -366,7 +368,7 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>!Control.IsVisible(501) + ![String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://)] + ![Container.Content(images) + !Container.HasFiles] + !Container.Content(playlists)</visible>
+						<visible>!Control.IsVisible(501) + ![String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://) + !String.StartsWith(Container.FolderPath,plugin://)] + ![Container.Content(images) + !Container.HasFiles] + !Container.Content(playlists)</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>

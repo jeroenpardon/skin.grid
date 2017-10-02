@@ -2,7 +2,7 @@
 
 	<!-- Art -->
 
-	<expression name="Content.HasLandscape">[Container.Content(files) + Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(files) | Container.Content(videos) | Container.Content(musicvideos) | Container.Content(addons)</expression>
+	<expression name="Content.HasLandscape">[Container.Content(files) + Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(files) | Container.Content(videos) | Container.Content(musicvideos) | Container.Content(addons) | [String.IsEmpty(Container.Content) + String.StartsWith(Container.FolderPath,plugin://)]</expression>
 
 
 	<expression name="Art.IsPortrait">![Container.Content(episodes)] + [Container.Content(files) + !Container.HasFiles]</expression>	
