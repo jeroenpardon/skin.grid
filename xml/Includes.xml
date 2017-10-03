@@ -288,7 +288,7 @@
 		</control>
 		<control type="image">
 			<include>screen_Dimensions</include>
-			<texture>startup/login.jpg</texture>
+			<texture>startup/background.jpg</texture>
 			<aspectratio align="center">keep</aspectratio>
 			<colordiffuse>$VAR[color:Main]</colordiffuse>
 		</control>
