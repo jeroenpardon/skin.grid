@@ -98,11 +98,12 @@
 	<setting id="epg.rowcount" value="ten" label="ten"/>
 	-->
 
-	<!-- List view artwork type -->
+	<!-- List view artwork type
 	<setting id="view.list.art" value="posters" label="$LOCALIZE[31200]"/>
 	<setting id="view.list.art" value="fanart" label="$LOCALIZE[31218]" default="true"/>
 	<setting id="view.list.art" value="landscape" label="$LOCALIZE[31202]"/>
-
+	-->
+	
 	<!-- PVR List view artwork type -->
 	<setting id="view.list.pvr" value="thumbnails" label="$LOCALIZE[31203] ($LOCALIZE[31087])"/>
 	<setting id="view.list.pvr" value="icons" label="$LOCALIZE[19066]" default="true"/>

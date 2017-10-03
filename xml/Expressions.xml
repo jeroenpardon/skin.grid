@@ -1,10 +1,14 @@
 <includes>
 
 	<!-- Art -->
-	<expression name="Art.IsPortrait">[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] + String.IsEqual(Skin.String(view.list.art),posters)] | Container.Content(actors) | Container.Content(sets)</expression>	
+
+	<expression name="Content.HasLandscape">[Container.Content(files) + Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(files) | Container.Content(videos) | Container.Content(musicvideos) | Container.Content(addons) | [String.IsEmpty(Container.Content) + String.StartsWith(Container.FolderPath,plugin://)]</expression>
+
+
+	<expression name="Art.IsPortrait">![Container.Content(episodes)] + [Container.Content(files) + !Container.HasFiles]</expression>	
 	
 	
-	<expression name="Art.IsLandscape">[[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(musicvideos)] + !String.IsEqual(Skin.String(view.list.art),posters)] | Container.Content(episodes) | Container.Content(images) | Container.Content(artists) | Container.Content(addons) | [Container.Content(files) + Container.HasFiles] | String.StartsWith(Container.FolderPath,pvr://recordings/) | Container.Content(favourites)</expression>
+	<expression name="Art.IsLandscape">!String.IsEqual(Skin.String(view.list.art),posters)</expression>
 
 	<!--<expression name="Art.IsLandscape">Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(images) | Container.Content(artists) | Container.Content(addons) | String.StartsWith(Container.FolderPath,pvr://recordings/) | [Container.Content(files) + Container.HasFiles] | [!String.IsEqual(Skin.String(view.list.art),posters) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)] | String.StartsWith(Container.FolderPath,plugin://plugin.video)] | Container.Content(favourites)</expression>-->
 
@@ -33,8 +37,11 @@
 	<!-- Listitems -->
 	<expression name="ListItem.IsParent">[ListItem.IsParentFolder | String.StartsWith(ListItem.Label,* All)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
 	<expression name="!ListItem.IsParent">!ListItem.IsParentFolder + !String.StartsWith(ListItem.Label,* All) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>	
-	<expression name="ListItem.HasInfo">!String.IsEmpty(ListItem.DBID) | [String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | Container.Content(addons) | String.StartsWith(ListItem.FolderPath,pvr://)</expression>
-	<expression name="!ListItem.HasInfo">String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2) + !Container.Content(addons) + !String.StartsWith(ListItem.FolderPath,pvr://)</expression>
+	<expression name="ListItem.HasInfo">[!String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | [String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | Container.Content(artists) | String.StartsWith(Container.FolderPath,pvr://) | Container.Content(addons)</expression>
+	
+	<expression name="!ListItem.HasInfo">[[String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)] | [!String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)]] + !Container.Content(artists) + !String.StartsWith(Container.FolderPath,pvr://) + !Container.Content(addons)</expression>
+
+	<!--<expression name="!ListItem.HasInfo">String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2) + !Container.Content(addons) + !String.StartsWith(ListItem.FolderPath,pvr://)</expression>-->
 
 	<!-- Viewtypes -->
 	<expression name="Thumbview.ShowInfo">Container.Content(episodes) | [String.IsEqual(Skin.String(views.landscape.art),fanart) + !Skin.HasSetting(logos.enable)] | [String.IsEqual(Skin.String(views.landscape.art),fanart) + Skin.HasSetting(logos.enable) + String.IsEmpty(ListItem.Art(clearlogo))] | [String.IsEqual(Skin.String(views.landscape.art),landscape) + String.IsEmpty(ListItem.Art(landscape)) + !Skin.HasSetting(logos.enable)]</expression>
