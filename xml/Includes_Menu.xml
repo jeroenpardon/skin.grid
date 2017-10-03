@@ -389,6 +389,46 @@
 		</control>
 	</include>
 
+	<include name="menu_AddonSettings">
+		<!-- Add-on settings -->
+		<control type="group" id="7011">
+			<height>108</height>
+			<visible>!String.IsEmpty(Container.PluginName)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(94)</visible>
+			</control>
+			<control type="radiobutton" id="94">
+				<top>12</top>
+				<label>$LOCALIZE[24000]</label>
+				<onup>7010</onup>
+				<ondown>7092</ondown>
+				<onleft>7100</onleft>
+				<onright>50</onright>
+				<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
+				<include>menu_Button</include>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$LOCALIZE[5]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(94)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$LOCALIZE[5]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(94)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+
 	<include name="menu_Video">	
 		<include content="menu_Views"></include>
 		<include content="menu_Commons"></include>
@@ -939,9 +979,9 @@
 			</control>
 			<control type="radiobutton" id="93">
 				<top>12</top>
-				<label>$LOCALIZE[24992]</label>
+				<label>$INFO[Container.PluginName]</label>
 				<onup>7013</onup>
-				<ondown>7092</ondown>
+				<ondown>7015</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<onclick>Right</onclick>
@@ -965,6 +1005,101 @@
 				</control>
 			</control>
 		</control>
+
+		<!-- Add-on settings -->
+		<control type="group" id="7015">
+			<height>108</height>
+			<visible>!String.IsEmpty(Container.PluginName)</visible>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(94)</visible>
+			</control>
+			<control type="radiobutton" id="94">
+				<top>12</top>
+				<label>$LOCALIZE[24992]</label>
+				<onup>7014</onup>
+				<ondown>7092</ondown>
+				<onleft>7100</onleft>
+				<onright>50</onright>
+				<onclick>Addon.OpenSettings($INFO[Container.PluginName])</onclick>
+				<include>menu_Button</include>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$LOCALIZE[5]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(94)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$LOCALIZE[5]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(94)</visible>
+				</control>
+			</control>
+		</control>
+
+		<include content="menu_AddonSettings">
+
+			
+
+		</include>
+
+		<include content="menu_Extras"></include>
+
+	</include>
+
+
+	<include name="menu_Games">	
+
+		<include condition="!Window.IsActive(1110)">menu_Views</include>
+		<include condition="!Window.IsActive(1110)">menu_Commons</include>
+
+
+		<!-- Games system settings -->
+		<control type="group" id="7010">
+			<height>108</height>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(93)</visible>
+			</control>
+			<control type="radiobutton" id="93">
+				<top>12</top>
+				<label>$LOCALIZE[24992]</label>
+				<onup>7004</onup>
+				<ondown>7011</ondown>
+				<onleft>7100</onleft>
+				<onright>50</onright>
+				<onclick>Right</onclick>
+				<onclick>ActivateWindowAndFocus(systemsettings,-95,0,-79,0)</onclick>
+				<include>menu_Button</include>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$LOCALIZE[15016] $LOCALIZE[21417]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(93)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$LOCALIZE[15016] $LOCALIZE[21417]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(93)</visible>
+				</control>
+			</control>
+		</control>
+
+		<include content="menu_AddonSettings"></include>
 
 		<include content="menu_Extras"></include>
 

@@ -114,6 +114,7 @@
 					<include condition="Window.IsActive(Videos)">menu_Video</include>
 					<include condition="Window.IsActive(Pictures)">menu_Pictures</include>
 					<include condition="Window.IsActive(Music)">menu_Music</include>
+					<include condition="Window.IsActive(Games)">menu_Games</include>
 					<include condition="Window.IsActive(AddonBrowser) | Window.IsActive(Programs) | Window.IsActive(1110)">menu_Addons</include>
 					<include condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">menu_Other</include>
 					<include condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(SkinSettings) | Window.IsActive(eventlog)">menu_System</include>
