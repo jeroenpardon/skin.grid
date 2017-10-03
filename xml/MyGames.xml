@@ -42,6 +42,9 @@
 					
 					<include content="info_List">
 						<param name="Art">$VAR[art:Landscape]</param>
+						<param name="AspectRatio">keep</param>
+						<param name="AspectRatioAlign">center</param>
+						<param name="AspectRatioAlignY">top</param>
 						<param name="Visible">!String.IsEmpty(Container.Content)</param>
 					</include>
 				
