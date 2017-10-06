@@ -35,7 +35,7 @@ Grid currently supports these character sets:
 * Latin (extended)
 * Vietnamese
 
-Any other language is supported through the Unicode (Arial) fontset, but this comes with compromises in looks and usability.
+Any other language is supported through the Unicode (Arial) fontset, but this comes with compromises on looks and usability.
 If you are interested in providing a translation of Grid into your language(s), you are more than welcome to. Join a language team or add a new language at Grid's Transifex [project page](https://www.transifex.com/grid)
 
 <a name="Download"></a>
