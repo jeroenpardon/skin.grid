@@ -249,7 +249,7 @@
 					<lefttexture></lefttexture>
 					<midtexture colordiffuse="$VAR[color:Accent]">progress/player/50.png</midtexture>
 					<righttexture></righttexture>
-					<visible>[Window.IsVisible(seekbar) | Window.IsVisible(visualisation)] + ![Window.IsActive(volumebar) + !Player.Muted] + !Window.IsActive(DialogSettings.xml)</visible>
+					<visible>[Window.IsVisible(seekbar) | Window.IsVisible(visualisation)] + ![Window.IsActive(volumebar) +  [!Player.Muted | VideoPlayer.IsFullscreen]] + !Window.IsActive(DialogSettings.xml)</visible>
 					<include>transition_Chrome</include>
 				</control>
 

@@ -52,7 +52,7 @@
 
 					<!--landscape-->
 					<include content="info_List">
-						<param name="Visible">$EXP[Art.IsLandscape]</param>
+						<param name="Visible">$EXP[Content.HasLandscape]</param>
 					</include>
 				</control>
 

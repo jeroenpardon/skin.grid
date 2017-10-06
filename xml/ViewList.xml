@@ -225,38 +225,40 @@
 	</include>
 
 	<include name="view_List">
-		<param name="ID" default="50"/>
-		<param name="Top" default="108"/>
-		<param name="ViewLayout" default="535"/>
-		<param name="Left" default="0"/>
-		<param name="Width" default="1920"/>
+		<param name="Align" default="left"/>
+		<param name="Aligny" default="center"/>
+		<param name="Font" default="Black-24"/>
+		<param name="Font2" default="Regular-20"/>
+		<param name="HasInfo" default="false"/>
 		<param name="Height" default="972"/>
+		<param name="Icon" default="$INFO[ListItem.Icon]"/>
+		<param name="IconSize" default="64"/>
+		<param name="ID" default="50"/>
+		<param name="ItemHeight" default="108"/>
+		<param name="Label" default="$VAR[media:Title]"/>
+		<param name="Label2" default="$VAR[media:Info]"/>
+		<param name="Left" default="0"/>
+		<param name="ListWidth" default="1144"/><!--1036-->
 		<param name="OnLeft" default="7000"/>
 		<param name="OnRight" default="6500"/>
 		<param name="PageControl" default="6500"/>
-		<param name="ItemHeight" default="108"/>
 		<param name="ShowArt" default="false"/>
-		<param name="TextLeft" default="160"/>
-		<param name="Label" default="$VAR[media:Title]"/>
-		<param name="Font" default="Black-24"/>
-		<param name="Font2" default="Regular-20"/>
-		<param name="Align" default="left"/>
-		<param name="Aligny" default="center"/>
-		<param name="Label2" default="$VAR[media:Info]"/>
-		<param name="SymbolFont" default="Symbols-32"/>
-		<param name="ShowSymbol" default="true"/>
-		<param name="SymbolSize" default="128"/>
-		<param name="Symbol" default="$VAR[symbol:Global]"/>
-		<param name="IconSize" default="64"/>
-		<param name="Icon" default="$INFO[ListItem.Icon]"/>
 		<param name="ShowIcon" default="String.StartsWith(ListItem.FolderPath,pvr://)"/>
+		<param name="ShowSymbol" default="true"/>
+		<param name="Symbol" default="$VAR[symbol:Global]"/>
+		<param name="SymbolFont" default="Symbols-32"/>
+		<param name="SymbolSize" default="128"/>
 		<param name="TextColor" default="Color1"/>
 		<param name="TextColor2" default="Color2"/>
-		<param name="HasInfo" default="false"/>
 		<param name="TextLeft" default="152"/>
-		<param name="ListWidth" default="1144"/><!--1036-->
+		<param name="TextLeft" default="160"/>
 		<param name="TextWidth" default="832"/>
+		<param name="Top" default="108"/>
+		<param name="ViewLayout" default="535"/>
 		<param name="Visible"/>
+		<param name="Width" default="1920"/>
+		<param name="WidthFull" default="[String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://) + !String.StartsWith(Container.FolderPath,plugin://)] | Container.Content(genres) | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | [Container.Content(images) + !Container.HasFiles]"/>
+		<param name="WidthLandscape" default="!Control.IsVisible(501) + ![String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://) + !String.StartsWith(Container.FolderPath,plugin://)] + ![Container.Content(images) + !Container.HasFiles] + !Container.Content(playlists)"/>
 		<definition>
 			<control type="list" id="$PARAM[ID]">
 				<viewtype label="$PARAM[ViewLayout]">list</viewtype>
@@ -360,7 +362,7 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>[String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://) + !String.StartsWith(Container.FolderPath,plugin://)] | Container.Content(genres) | Container.Content(years) | Container.Content(directors) | Container.Content(studios) | Container.Content(countries) | Container.Content(tags) | Container.Content(playlists) | [Container.Content(images) + !Container.HasFiles]</visible>
+						<visible>$PARAM[WidthFull]</visible>
 					</control>
 					<!-- Landscape width -->
 					<control type="image">
@@ -368,7 +370,7 @@
 						<height>$PARAM[ItemHeight]</height>
 						<texture background="true" colordiffuse="$VAR[color:Accent]">colorize/75.png</texture>
 						<include>toggle_Focus</include>
-						<visible>!Control.IsVisible(501) + ![String.IsEmpty(Container.Content) + !String.StartsWith(Container.FolderPath,pvr://) + !String.StartsWith(Container.FolderPath,plugin://)] + ![Container.Content(images) + !Container.HasFiles] + !Container.Content(playlists)</visible>
+						<visible>$PARAM[WidthLandscape]</visible>
 					</control>
 					<control type="image">
 						<width>$PARAM[ListWidth]</width>
@@ -764,7 +766,7 @@
 						<top>0</top>
 						<control type="label">
 							<width>1088</width>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$VAR[media:Title]</label>
 							<height>90</height>
 							<font>Black-26</font>
 							<textcolor>$VAR[color:Accent]</textcolor>
@@ -840,7 +842,7 @@
 						<left>$PARAM[TextLeft]</left>
 						<control type="label">
 							<width>1088</width>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$VAR[media:Title]</label>
 							<height>90</height>
 							<font>Black-26</font>
 							<textcolor>$VAR[color:Main]</textcolor>
