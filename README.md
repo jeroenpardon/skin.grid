@@ -1,5 +1,5 @@
 <a name="Top"></a>
-![Logo](https://i.imgur.com/qzsfvEO.png)
+![Logo](https://i.imgur.com/33zw5CH.png)
 
 [About](#About) | [License](#License) | [Compatibility](#Compatibility) | [Language Support](#Language) | [Download](#Download) | [Add-ons](#Add-ons) | [Support](#Support) | [Credits](#Credits) | [FAQ](#FAQ) | [Stats](#Stats)
 
