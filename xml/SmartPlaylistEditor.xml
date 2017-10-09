@@ -16,50 +16,49 @@
 
 	<!--name & type-->
 		<control type="group" id="8995">
+			<left>128</left>
+			<top>198</top>
 			<include>transition_Content</include>
-			<control type="grouplist" id="8996">
-				<left>128</left>
-				<top>198</top>
-				<width>768</width>
+			<control type="grouplist" id="8996">	
+				<width>660</width>
 				<height>360</height>
 				<onup>noop</onup>
 				<ondown>10</ondown>
 				<onright>8999</onright>
 				<orientation>vertical</orientation>
 				<itemgap>0</itemgap>
-				<!--header-->
+				<!-- Header -->
 				<control type="label">
-					<width>806</width>
+					<width>660</width>
 					<label>$LOCALIZE[31700]</label>
 					<include>global_Header</include>
 				</control>
-				<!--set playlist type-->
+				<!-- Set playlist type -->
 				<control type="button" id="22">
-					<width>768</width>
+					<width>660</width>
 					<label>$LOCALIZE[467]</label>
 				</control>
-				<!--set playlist name-->
+				<!-- Set playlist name -->
 				<control type="button" id="12">
-					<width>768</width>
+					<width>660</width>
 					<label>$LOCALIZE[21433]</label>
 				</control>
-				<!--find items where:-->
+				<!-- Find items where -->
 				<control type="label" id="9">
 					<left>24</left>
-					<width>642</width>
+					<width>660</width>
 					<label>$LOCALIZE[21434]:</label>
 					<include>global_Header</include>
 				</control>
 			</control>
 
 			<control type="group" id="8997">
-				<left>128</left>
-				<top>558</top>
-				<width>768</width>
-			<!--rules list control-->
+				<top>360</top>
+				<width>660</width>
+			<!-- Rules list control -->
 				<include content="dialog_List">
 					<param name="ID">10</param>
-					<param name="Width">552</param>
+					<param name="Width">444</param>
 					<param name="Height">810</param>
 					<param name="ItemHeight">90</param>
 					<param name="ShowSymbol" value="false"/>
@@ -69,7 +68,7 @@
 					<param name="OnLeft" value="noop"/>
 					<param name="OnRight" value="8998"/>
 				</include>
-			<!--list controls-->
+			<!-- -->
 				<control type="grouplist" id="8998">
 					<right>0</right>
 					<width>216</width>
@@ -103,58 +102,56 @@
 
 		<!--options-->
 			<control type="grouplist" id="8999">
-				<left>986</left>
-				<top>198</top>
-				<ondown>9000</ondown>
+				<left>724</left>
 				<onleft>8997</onleft>
+				<onright>9000</onright>
 				<itemgap>0</itemgap>
 				<control type="label">
-					<width>806</width>
+					<width>660</width>
 					<label>$LOCALIZE[33063]</label>
 					<include>global_Header</include>
 				</control>
 				<!--items must match-->
 				<control type="button" id="16">
-					<width>806</width>
+					<width>660</width>
 					<label>$LOCALIZE[21424]</label>
 				</control>
 				<!--limit to-->
 				<control type="button" id="17">
-					<width>806</width>
+					<width>660</width>
 					<label>$LOCALIZE[21427]</label>
 				</control>
 				<!--order by-->
 				<control type="button" id="18">
-					<width>806</width>
+					<width>660</width>
 					<label>$LOCALIZE[581]</label>
 				</control>
 				<!--direction-->
 				<control type="button" id="19">
-					<width>806</width>
+					<width>660</width>
 					<label>$LOCALIZE[580]</label>
 				</control>
 				<!--group by-->
 				<control type="button" id="23">
-					<width>806</width>
+					<width>660</width>
 					<label>$LOCALIZE[21458]</label>
 				</control>
 				<!--mixed-->
 				<control type="radiobutton" id="24">
-					<width>806</width>
+					<width>660</width>
 					<label>$LOCALIZE[21459]</label>
 				</control>
 			</control>
 
 		<!--dialog controls-->
 			<control type="grouplist" id="9000">
-				<bottom>72</bottom>
 				<right>128</right>
 				<width>216</width>
 				<height>90</height>
 				<itemgap>0</itemgap>
-				<onleft>noop</onleft>
+				<onleft>8999</onleft>
 				<onright>noop</onright>
-				<onup>8999</onup>
+				<onup>noop</onup>
 				<orientation>horizontal</orientation>
 				<!--ok-->
 				<control type="button" id="20">
