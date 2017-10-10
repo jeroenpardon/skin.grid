@@ -99,11 +99,12 @@ Even though I enjoy working on Grid greatly, a lot of time and effort is investe
 
 - [BigDaddyRal](https://github.com/bigdaddyral)
 - [FrissonReynald](https://github.com/FrissonReynald)
-- [Slurrrp](https://github.com/Slurrrp)
-- [loggio](https://github.com/loggio)
-- [monkeyboyohyeah](https://github.com/monkeyboyohyeah)
 - [KOKONUTCREME](https://github.com/KOKONUTCREME)
+- [loggio](https://github.com/loggio)
 - [lstar337](https://github.com/lstar337)
+- [monkeyboyohyeah](https://github.com/monkeyboyohyeah)
+- [Rafał Wójcik](https://github.com/Ostrymiecz)
+- [Slurrrp](https://github.com/Slurrrp)
 
 <a name="FAQ"></a>
 ## Frequently asked questions
