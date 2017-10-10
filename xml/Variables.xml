@@ -1440,7 +1440,7 @@
 		<value condition="Window.IsActive(MyPlaylist.xml)">$LOCALIZE[13350]</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites&amp;mediatype=favourites)">$ADDON[script.skin.helper.widgets 32000]</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites&amp;mediafilter=media&amp;mediatype=favourites)">$ADDON[script.skin.helper.widgets 32000]</value>
-		<value condition="String.StartsWith(Container.FolderPath,plugin://script.watchlist) | String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=next&amp;) | String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=recommendedmovies) | String.StartsWith(Container.FolderPath,plugin://service.library.data.provider?type=recommended)">$LOCALIZE[31712]</value>
+		<value condition="String.StartsWith(Container.FolderPath,plugin://script.watchlist) | String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=next&amp;) | String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=recommended&amp;mediatype=movies) | String.StartsWith(Container.FolderPath,plugin://service.library.data.provider?type=recommended)">$LOCALIZE[31712]</value>
 		<value condition="String.IsEqual(Container.FolderPath,sources://video/)">$LOCALIZE[31661]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
 		<value condition="Container.Content(tvshows) + String.IsEqual(Container.Foldername,Title)">$LOCALIZE[20343]</value>
