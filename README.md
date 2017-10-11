@@ -49,7 +49,7 @@ https://img.shields.io/badge/Downloads-Snapshot-brightgreen.svg?style=flat-squar
 
 **Official releases**
 
-Official, stable releases of Grid can be installed through the official Kodi repository when it is made publicly available. If you don't know how, check [this guide](http://kodi.wiki/view/HOW-TO:Change_skins). Any dependencies should be installed automatically.
+Official, stable releases of Grid can be installed through the official Kodi repository. If you don't know how, check [this guide](http://kodi.wiki/view/HOW-TO:Change_skins). Any dependencies should be installed automatically.
 
 **Beta releases**
 
