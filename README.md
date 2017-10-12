@@ -1,5 +1,6 @@
 <a name="Top"></a>
-![Logo](https://i.imgur.com/33zw5CH.png)
+
+[![Logo](https://i.imgur.com/33zw5CH.png)](http://www.gridskin.net/)
 
 [About](#About) | [License](#License) | [Compatibility](#Compatibility) | [Language Support](#Language) | [Download](#Download) | [Support](#Support) | [Add-ons](#Add-ons) | [Contribute](#Contribute) | [Credits](#Credits) | [FAQ](#FAQ) | [Stats](#Stats)
 
