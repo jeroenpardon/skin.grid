@@ -50,8 +50,8 @@
 		<disclaimer lang="sv_se">Mus och pekskärm stöds inte</disclaimer>
 		<platform>all</platform>
 		<license>Attribution-NonCommercial-ShareAlike 3.0 Unported</license>
-		<forum></forum>
+		<forum>https://forum.kodi.tv/forumdisplay.php?fid=280</forum>
 		<source>https://github.com/jeroenpardon/skin.grid/</source>
-		<website>http://jeroenpardon.github.io/</website>
+		<website>http://www.gridskin.net</website>
 	</extension>
 </addon>
