@@ -5,6 +5,7 @@
 <!-- In the case of a bug report, please describe how to reproduce the problem in clear steps -->
 
 ### Checklist:
+<!-- Tick the boxes by inserting an "X" between "[ ]" -->
 - [ ] I have checked if I am using the latest version of Grid at the time of opening this issue
 - [ ] I am running a Kodi version that is listed as compatible in Grid's README file
 - [ ] I have checked if all of the [required add-ons](https://github.com/jeroenpardon/skin.grid.beta/wiki/Required-and-supported-add-ons) are installed on my system
