@@ -141,6 +141,8 @@ Still no.
 
 Maybe. But don't get mad when I don't. As much as I hope people will enjoy using Grid, development is also driven by my own preferences. Also, please note that "because other skins have this feature too" is not a good reason for me to add it to Grid.
 
+I have to stress that I am not a crowd pleaser. If someone has a great idea it would be stupid for me to ignore it, but I don’t make “Swiss army knife” type skins, nor design by commitee. As such I carefully select which features can be added in a way that fit in with the skin and my vision. That design / development principle makes my skins what they are, for better or for worse.
+
 > But if you don't want the features, why not just make it optional?
 
 'Just make it an option' is short for 'I can't make design decisions'. It pollutes the UI and focus of the skin. Grid is not and will never be a swiss army knife type of skin. Apart from that, I just have no motivation to add features I wouldn't ever use myself.
