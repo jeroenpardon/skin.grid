@@ -177,7 +177,7 @@
 
 	<variable name="count:UnwatchedEpisodes">
 		<value condition="Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),1) | String.IsEqual(ListItem.Property(UnWatchedEpisodes),0)">$LOCALIZE[31709]</value>
-		<value condition="String.IsEqual(ListItem.Property(UnWatchedEpisodes),1)">$LOCALIZE[31708]</value>
+		<value condition="Integer.IsEqual(ListItem.Property(UnWatchedEpisodes),1)">$LOCALIZE[31708]</value>
 	</variable>
 
 

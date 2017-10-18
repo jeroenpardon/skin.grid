@@ -1010,6 +1010,9 @@ msgctxt "#31707"
 msgid "Status unknown"
 msgstr ""
 
+msgctxt "#31708"
+msgid "Unwatched episode"
+msgstr ""
 
 msgctxt "#31709"
 msgid "Unwatched episodes"
