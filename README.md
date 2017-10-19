@@ -121,6 +121,10 @@ Grid's main menu is completely customizable, meaning you can add any location or
 
 The cause for this is **always** one or more of the [required add-ons](#Add-ons) not being installed on your system, or you're using a different (outdated) version of one or more of these add-ons. Make sure your add-ons are all updated.
 
+> I want to make modifications to Grid, can you tell me how?
+
+I can point you in the right direction if I can, but I can't and won't talk you through it step by step. You will need to bring some self reliance, effort and willingness to learn. I am releasing Grid for free so don't be offended by me not offering you skinning lessons too.
+
 > I only see unwatched status indicators. Is there an option to display watched status indicators as well?
 
 No, there isn't and there never will be. There is an indicator if the item is unwatched or when it's partly watched. If there is no indicator, the item is not watched. I find this obvious and logical, and thus feel there is no added value in placing an indicator on files that have been watched. If you are reading a book, you place a bookmark where you stopped reading. You don't put a bookmark on every page you've read so far.
