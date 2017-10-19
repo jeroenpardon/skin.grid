@@ -123,7 +123,7 @@ The cause for this is **always** one or more of the [required add-ons](#Add-ons)
 
 > I want to make modifications to Grid, can you tell me how?
 
-I can point you in the right direction if I can, but I can't and won't talk you through it step by step. You will need to bring some self reliance, effort and willingness to learn. I am releasing Grid for free so don't be offended by me not offering you skinning lessons too.
+I can point you in the right direction if I can, but I can't and won't talk you through it step by step. You will need to bring some self reliance, effort and willingness to learn. I am releasing Grid for free and my available time is limited, so don't be offended by me not offering you free skinning lessons too.
 
 > I only see unwatched status indicators. Is there an option to display watched status indicators as well?
 
