@@ -113,6 +113,10 @@ Even though I enjoy working on Grid greatly, a lot of time and effort is investe
 
 <a name="FAQ"></a>
 ## Frequently asked questions
+> ZOMG!#$ this skin haz no filemanager! And the menu doesn't have shortcuts to X or Y!
+
+Grid's main menu is completely customizable, meaning you can add any location or function to it's main menu. The items you see after installing Grid are merely defaults you can adjust to your liking.
+
 > When installing, I get an error message saying "dependencies not met"
 
 The cause for this is **always** one or more of the [required add-ons](#Add-ons) not being installed on your system, or you're using a different (outdated) version of one or more of these add-ons. Make sure your add-ons are all updated.
