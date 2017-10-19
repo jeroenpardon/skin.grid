@@ -115,7 +115,7 @@ Even though I enjoy working on Grid greatly, a lot of time and effort is investe
 ## Frequently asked questions
 > ZOMG!#$ this skin haz no filemanager! And the menu doesn't have shortcuts to X or Y!
 
-Grid's main menu is completely customizable, meaning you can add any location or function to it's main menu. The items you see after installing Grid are merely defaults you can adjust to your liking.
+Grid's main menu is completely customizable, meaning you can add any location or function to it's main menu. The items you see after installing Grid are merely defaults you can adjust to your liking. Go to System, Skin Settings, Menus to customize the main menu.
 
 > When installing, I get an error message saying "dependencies not met"
 
