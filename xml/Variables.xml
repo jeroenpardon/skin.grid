@@ -1,6 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+
+	<variable name="setup:Accept">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">ActivateWindow(skinsettings)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">RunScript(script.artwork.downloader, mode=custom, silent=true, clearlogo)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">ActivateWindow(skinsettings)</value>
+	</variable>
+
+	<variable name="setup:Decline">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Skin.SetString(Setup,stage2)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Skin.SetString(Setup,stage3)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Skin.SetBool(SetupDone)</value>
+	</variable>
+
+
+
+	<variable name="setup:Advance">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Skin.SetString(Setup,stage2)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Skin.SetString(Setup,stage3)</value>
+
+
+	</variable>
+
+	<variable name="setup:Header">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Setting up your homescreen</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Download artwork</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">More customization</value>
+	</variable>
+
+
+
+	<variable name="setup:Description">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Grid's main menu is highly customizable. You can add shortcuts to any location or to specific functions. The entries that are there after installing are merely defaults you can change to your liking. Do you want to customize the menu now? You can always do this later in the skin settings.</value>
+
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Grid makes heavy use of additional artwork to enrich and easily identify your media. Would you like to check for available artwork now? You can always do this later in the skin settings.</value>
+
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Grid offers many more customization options, you can find them all in the skin settings section.[CR]You are welcome to join the discussion in Grid's forum section on the official Kodi forums. Please do read the FAQ before you do so. You can find these and a link to the forum at www.gridskin.net.</value>
+
+
+	</variable>	
+
 	<variable name="background:TVGuide">
 		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
 		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Fanart)]</value>
