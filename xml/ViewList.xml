@@ -176,14 +176,14 @@
 	</include>
 
 	<include name="view_List-Focus">
+		<param name="FadeCondition" default="Window.IsActive(contextmenu)"/>
+		<param name="Height" default="40"/>
 		<param name="Left" default="0"/>
 		<param name="Right" default="0"/>
-		<param name="Width" default="1280"/>
-		<param name="Height" default="40"/>
-		<param name="Visible" default="true"/>
-		<param name="TextureDiffuse" default="colorize/70.png"/>
 		<param name="TextureColor" default="$PARAM[TextColor]"/>
-		<param name="FadeCondition" default="Window.IsActive(contextmenu)"/>
+		<param name="TextureDiffuse" default="colorize/70.png"/>
+		<param name="Visible" default="true"/>
+		<param name="Width" default="1280"/>
 		<definition>
 			<control type="image">
 				<left>$PARAM[Left]</left>
@@ -201,14 +201,14 @@
 	</include>
 
 	<include name="view_List-Commons">
-		<param name="Top" default="0"/>
+		<onright condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</onright>
 		<param name="Height" default="972"/>
-		<param name="Width"/>
-		<param name="OnUp" default="50"/>
 		<param name="OnDown" default="50"/>
 		<param name="OnLeft" default="7000"/>
-		<onright condition="Integer.IsGreater(Container($PARAM[ID]).NumPages,1)">$PARAM[PageControl]</onright>
+		<param name="OnUp" default="50"/>
 		<param name="PageControl" default="6500"/>
+		<param name="Top" default="0"/>
+		<param name="Width"/>
 		<include>global_ListScroll</include>
 		<definition>
 			<viewtype label="535">list</viewtype>
@@ -694,23 +694,23 @@
 
 <!--BIGLIST-->
 	<include name="view_BigList">
-		<param name="ID" default="51"/>
-		<param name="Top" default="108"/>
-		<param name="Width" default="1792"/>
-		<param name="Height" default="972"/>
-		<param name="ArtWidth" default="481"/>
-		<param name="ArtHeight" default="270"/>
-		<param name="ItemHeight" default="270"/>
-		<param name="TextLeft" default="673"/>
-		<param name="SymbolFont" default="Symbols-32"/>
-		<param name="Icon" default="$VAR[symbol:Global]"/>
 		<param name="Art" default="$VAR[art:Landscape]"/>
+		<param name="ArtHeight" default="270"/>
+		<param name="ArtWidth" default="481"/>
 		<param name="FadeCondition" default="$EXP[!Views.ListHasFocus]"/>
+		<param name="Height" default="972"/>
+		<param name="Icon" default="$VAR[symbol:Global]"/>
+		<param name="ID" default="51"/>
+		<param name="ItemHeight" default="270"/>
+		<param name="Label2" default="$VAR[media:Info]"/>
 		<param name="Logo" default="$VAR[art:Logo]"/>
+		<param name="PageControl" default="6500"/>
 		<param name="ShowLogo" default="$EXP[Views.ShowLogo]"/>
 		<param name="Symbol" default="$VAR[symbol:Global]"/>
-		<param name="Label2" default="$VAR[media:Info]"/>
-		<param name="PageControl" default="6500"/>
+		<param name="SymbolFont" default="Symbols-32"/>
+		<param name="TextLeft" default="673"/>
+		<param name="Top" default="108"/>
+		<param name="Width" default="1792"/>
 		<definition>
 			<control type="list" id="51">
 				<viewtype label="537">biglist</viewtype>

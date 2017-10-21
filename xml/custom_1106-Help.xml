@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window type="dialog" id="1106">
 	<defaultcontrol>1101</defaultcontrol>
-	<zorder>999</zorder>
 
 	<controls>
 		
 		<include>startup_Background</include>
+
+
+		<!-- Menu trigger -->
+		<control type="button" id="5500">
+			<onfocus>Control.SetFocus(1100)</onfocus>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
 
 		<control type="group">
 			<include>toggle_Menu</include>
@@ -21,16 +27,16 @@
 			<!-- Content -->
 			<control type="grouplist" id="100">
 				<left>384</left>
-				<top>324</top>
+				<top>388</top>
 				<itemgap>0</itemgap>
 				<include>transition_Content</include>
 
 				<!-- Header -->
 				<control type="label">
 					<width>1152</width>
-					<height>64</height>
+					<height>72</height>
 					<label>$VAR[setup:Header]</label>
-					<font>Black-28</font>
+					<font>Black-42</font>
 					<aligny>top</aligny>
 					<align>center</align>
 					<textcolor>$VAR[color:Accent]</textcolor>
@@ -59,11 +65,12 @@
 					<width>1152</width>
 					<align>center</align>
 					<onright>1100</onright>
+					<onleft condition="String.IsEqual(Skin.String(Setup),stage2)">7000</onleft>
 					<orientation>horizontal</orientation>
 					<control type="button" id="1101">
 						<width min="216">auto</width>
 						<height>90</height>
-						<label>Take me there</label>
+						<label>$VAR[setup:Accept.Label]</label>
 						<align>center</align>
 						<onright>1102</onright>
 						<textcolor>$VAR[color:Text.2]</textcolor>
@@ -79,9 +86,14 @@
 						<onclick condition="String.IsEqual(Skin.String(Setup),stage3)">Close</onclick>
 						<textcolor>$VAR[color:Text.2]</textcolor>
 						<onclick>$VAR[setup:Decline]</onclick>
+						<visible>!String.IsEqual(Skin.String(Setup),stage2)</visible>
 					</control>
 				</control>
 			</control>
 		</control>
+
+		<!-- Menu -->
+		<include>menu_Options</include>
+
 	</controls>
 </window>

@@ -1,46 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-
-	<variable name="setup:Accept">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">ActivateWindow(skinsettings)</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">RunScript(script.artwork.downloader, mode=custom, silent=true, clearlogo)</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">ActivateWindow(skinsettings)</value>
-	</variable>
-
-	<variable name="setup:Decline">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Skin.SetString(Setup,stage2)</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Skin.SetString(Setup,stage3)</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Skin.SetBool(SetupDone)</value>
-	</variable>
-
-
-
-	<variable name="setup:Advance">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Skin.SetString(Setup,stage2)</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Skin.SetString(Setup,stage3)</value>
-
-
-	</variable>
-
-	<variable name="setup:Header">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Setting up your homescreen</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Download artwork</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">More customization</value>
-	</variable>
-
-
-
-	<variable name="setup:Description">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Grid's main menu is highly customizable. You can add shortcuts to any location or to specific functions. The entries that are there after installing are merely defaults you can change to your liking. Do you want to customize the menu now? You can always do this later in the skin settings.</value>
-
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Grid makes heavy use of additional artwork to enrich and easily identify your media. Would you like to check for available artwork now? You can always do this later in the skin settings.</value>
-
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Grid offers many more customization options, you can find them all in the skin settings section.[CR]You are welcome to join the discussion in Grid's forum section on the official Kodi forums. Please do read the FAQ before you do so. You can find these and a link to the forum at www.gridskin.net.</value>
-
-
-	</variable>	
-
 	<variable name="background:TVGuide">
 		<value condition="Control.HasFocus(201)">$INFO[Container(201).ListItem.Property(Fanart)]</value>
 		<value condition="Control.HasFocus(202)">$INFO[Container(202).ListItem.Property(Fanart)]</value>
@@ -1137,6 +1097,50 @@
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
 
+
+<!-- Setup -->
+	<variable name="setup:Accept">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">ActivateWindowAndFocus(skinsettings,2,0,9211,0)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Skin.SetString(Setup,stage3)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">ActivateWindow(skinsettings)</value>
+	</variable>
+
+	<variable name="setup:Accept.Label">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Take me there</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Got it!</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Take me there</value>
+	</variable>
+
+	<variable name="setup:Advance">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Skin.SetString(Setup,stage2)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Skin.SetString(Setup,stage3)</value>
+	</variable>
+
+	<variable name="setup:Decline">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Skin.SetString(Setup,stage2)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Skin.SetString(Setup,stage3)</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Skin.SetBool(SetupDone)</value>
+	</variable>
+
+	<variable name="setup:Decline.Label">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">I'll do this later</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Got it!</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">I'll do this later</value>
+	</variable>
+
+	<variable name="setup:Description">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Grid's main menu is highly customizable, you can add shortcuts to any location or to specific functions.[CR]The entries present right after installing are merely defaults you can change to your liking.[CR]Do you want to customize the menu now?</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">The options menu gives you access to library related features, system settings and other functions.[CR]Depending on the scrolling orientation you can access the menu by either pressing left or up.[CR]Try it out now by pressing left.</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Grid offers many customization options, you can find them all in the skin settings section.[CR]You are welcome to join the discussion in Grid's forum section on the official Kodi forums. Please do read the FAQ before you do so. You can find these and a link to the forum at www.gridskin.net.</value>
+	</variable>
+
+	<variable name="setup:Header">
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Setting up your homescreen</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Accessing the options menu</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Finally</value>
+	</variable>
+
+
 <!-- Toast -->
 	<variable name="toast:Symbol">
 		<value condition="Player.Paused">&#59054;</value>
@@ -1548,8 +1552,22 @@
 		<value>overlays/debug/90.png</value>
 	</variable>
 
+	<variable name="more:Similar">
+		<value condition="String.IsEqual(Window(movieinformation).Property(InfoDbtype),movie)">$LOCALIZE[31658]</value>
+		<value condition="String.IsEqual(Window(movieinformation).Property(InfoDbtype),tvshow)">$LOCALIZE[31659]</value>
+		<value>$LOCALIZE[31657]</value>
+	</variable>
 
-<!-- Other -->
+	<variable name="manage:SetArt">
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[13511]</value>
+		<value>$LOCALIZE[13405]</value>
+	</variable>
+
+	<variable name="skin:AddonStatus">
+		<value condition="!String.IsEmpty(ListItem.Label2)">&#57472;</value>
+		<value>&#57474;</value>
+	</variable>
+
 	<variable name="tmdb:Path">
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31658]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=similarmovies)">$LOCALIZE[31658]</value>
@@ -1567,22 +1585,6 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/?info=studio)">$INFO[Window(movieinformation).Property(InfoStudio)]</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/)">Extended Info</value>
 		<value condition="String.IsEqual(Container.FolderPath,plugin://script.extendedinfo/tmdb)">The Movie Database</value>
-	</variable>
-
-	<variable name="more:Similar">
-		<value condition="String.IsEqual(Window(movieinformation).Property(InfoDbtype),movie)">$LOCALIZE[31658]</value>
-		<value condition="String.IsEqual(Window(movieinformation).Property(InfoDbtype),tvshow)">$LOCALIZE[31659]</value>
-		<value>$LOCALIZE[31657]</value>
-	</variable>
-
-	<variable name="manage:SetArt">
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[13511]</value>
-		<value>$LOCALIZE[13405]</value>
-	</variable>
-
-	<variable name="skin:AddonStatus">
-		<value condition="!String.IsEmpty(ListItem.Label2)">&#57472;</value>
-		<value>&#57474;</value>
 	</variable>
 
 	<variable name="view:TextColor2_Selected">
