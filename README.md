@@ -113,9 +113,17 @@ Even though I enjoy working on Grid greatly, a lot of time and effort is investe
 
 <a name="FAQ"></a>
 ## Frequently asked questions
+> ZOMG!#$ this skin haz no filemanager! And the menu doesn't have shortcuts to X or Y!
+
+Grid's main menu is completely customizable, meaning you can add any location or function to it's main menu. The items you see after installing Grid are merely defaults you can adjust to your liking. Go to System, Skin Settings, Menus to customize the main menu.
+
 > When installing, I get an error message saying "dependencies not met"
 
 The cause for this is **always** one or more of the [required add-ons](#Add-ons) not being installed on your system, or you're using a different (outdated) version of one or more of these add-ons. Make sure your add-ons are all updated.
+
+> I want to make modifications to Grid, can you tell me how?
+
+I can point you in the right direction if I can, but I can't and won't talk you through it step by step. You will need to bring some self reliance, effort and willingness to learn. I am releasing Grid for free and my available time is limited, so don't be offended by me not offering you free skinning lessons too.
 
 > I only see unwatched status indicators. Is there an option to display watched status indicators as well?
 
@@ -140,6 +148,8 @@ Still no.
 > Can you add feature X or Y?
 
 Maybe. But don't get mad when I don't. As much as I hope people will enjoy using Grid, development is also driven by my own preferences. Also, please note that "because other skins have this feature too" is not a good reason for me to add it to Grid.
+
+I have to stress that I am not a crowd pleaser. If someone has a great idea it would be stupid for me to ignore it, but I don’t make “Swiss army knife” type skins, nor design by commitee. As such I carefully select which features can be added in a way that fit in with the skin and my vision. That design / development principle makes my skins what they are, for better or for worse.
 
 > But if you don't want the features, why not just make it optional?
 

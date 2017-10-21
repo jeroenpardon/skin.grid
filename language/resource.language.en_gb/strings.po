@@ -1010,6 +1010,9 @@ msgctxt "#31707"
 msgid "Status unknown"
 msgstr ""
 
+msgctxt "#31708"
+msgid "Unwatched episode"
+msgstr ""
 
 msgctxt "#31709"
 msgid "Unwatched episodes"
@@ -1144,6 +1147,11 @@ msgstr ""
 #. Do not translate
 msgctxt "#31864"
 msgid "Heebo (Hebrew, Latin)"
+msgstr ""
+
+#. Alternate
+msgctxt "#31865"
+msgid "Alternate (Cyrillic, Latin, Vietnamese)"
 msgstr ""
 
 
