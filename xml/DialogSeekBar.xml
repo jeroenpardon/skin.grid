@@ -23,11 +23,6 @@
 				<param name="InfoWidth">1490</param>
 			</include>
 
-			<!-- Game -->
-			<include condition="Player.HasGame" content="osd_Info">
-				<param name="Top">850</param>
-			</include>
-
 			<!-- Video -->
 			<include condition="VideoPlayer.Content(livetv)" content="osd_Info">
 				<param name="ShowArt">true</param>
