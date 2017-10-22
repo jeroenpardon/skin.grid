@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol always="true">9</defaultcontrol>
 	<controls>
 
 	<!-- Background -->
@@ -10,7 +10,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
-				<param name="Title">$VAR[window:Title.Dialog]</param>
+				<param name="Label">$VAR[window:Title.Media]</param>
 				<param name="ShowItemCount">false</param>
 			</include>
 		</control>
@@ -22,64 +22,63 @@
 			<include>transition_Content</include>
 		
 			<!--button area-->
-			<control type="grouplist" id="3">
+			<control type="grouplist" id="9">
 				<width>324</width>
 				<height>810</height>
 				<itemgap>0</itemgap>
-				<onleft/>
-				<onright>5</onright>
-				<onup>3</onup>
-				<ondown>3</ondown>
+				<onright>2</onright>
+				<onup>9</onup>
+				<ondown>9</ondown>
 			</control>
-
+		
 			<!--control area-->
-			<control type="grouplist" id="5">
+			<control type="grouplist" id="2">
 				<left>414</left>
 				<width>944</width>
 				<height>810</height>
 				<itemgap>0</itemgap>
-				<onleft>3</onleft>
+				<onleft>9</onleft>
 				<onright>9001</onright>
-				<onup>5</onup>
-				<ondown>5</ondown>
+				<onup>2</onup>
+				<ondown>2</ondown>
 				<pagecontrol>6500</pagecontrol>
 			</control>
 
 		<!-- Category -->
-			<control type="button" id="10">
+			<control type="button" id="13">
 				<width>384</width>
 				<height>90</height>
 				<font>Black-22</font>
 			</control>
 
-			<!-- Default radiobutton -->
-			<control type="radiobutton" id="8">
+			<!--default button-->
+			<control type="button" id="3">
+				<font>Regular-22-L</font>
+			</control>
+
+			<!--default radiobutton-->
+			<control type="radiobutton" id="4">
 				<textwidth>840</textwidth>
 				<font>Regular-22-L</font>
 			</control>
 
 			<!--default spincontrol-->
-			<control type="spincontrolex" id="9">
+			<control type="spincontrolex" id="5">
 				<font>Regular-22-L</font>
 			</control>
 
 			<!--default separator-->
-			<control type="image" id="11">
+			<control type="image" id="6">
 				<visible>false</visible>
 			</control>
 
-			<!--default edit control-->
-			<control type="edit" id="12">
-				<font>Regular-22-L</font>
-			</control>
-
 			<!--default label-->
-			<control type="label" id="14">
+			<control type="label" id="7">
 				<include>global_Header</include>
 			</control>
 
 			<!--default slider-->
-			<control type="sliderex" id="13">
+			<control type="sliderex" id="8">
 				<font>Regular-22-L</font>
 			</control>
 
@@ -89,12 +88,12 @@
 				<width>216</width>
 				<height>90</height>
 				<itemgap>0</itemgap>
-				<onleft>5</onleft>
+				<onleft>2</onleft>
 				<onright>noop</onright>
-				<ondown>30</ondown>
+				<ondown>12</ondown>
 				<orientation>horizontal</orientation>
 				<!--ok-->
-				<control type="button" id="28">
+				<control type="button" id="10">
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<font>Symbols-24</font>
@@ -102,7 +101,7 @@
 					<include>button_Dialog</include>
 				</control>
 				<!--cancel-->
-				<control type="button" id="29">
+				<control type="button" id="11">
 					<label></label>
 					<textoffsetx>40</textoffsetx>
 					<font>Symbols-24</font>
@@ -111,7 +110,7 @@
 				</control>
 			</control>
 			<!--defaults-->
-			<control type="button" id="30">
+			<control type="button" id="12">
 				<top>180</top>
 				<right>128</right>
 				<width>216</width>
