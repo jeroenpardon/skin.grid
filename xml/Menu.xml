@@ -7,7 +7,7 @@
 			<animation type="WindowClose">
 				<effect type="slide" end="-384" tween="Sine" easing="Out" time="150"/>
 			</animation>
-           	<control type="image">
+			<control type="image">
 				<width>384</width>
 				<height>1080</height>
 				<texture colordiffuse="$VAR[color:Accent]">colorize/20.png</texture>
@@ -18,7 +18,7 @@
 				<width>384</width>
 				<height>1080</height>
 				<control type="group">
-					<visible>!Skin.HasSetting(shortcutsmenu.disable)+ </visible>
+					<visible>!Skin.HasSetting(shortcutsmenu.disable) + !Window.IsActive(1106)</visible>
 					<control type="image">
 						<width>192</width>
 						<height>108</height>
