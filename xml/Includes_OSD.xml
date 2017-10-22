@@ -238,7 +238,7 @@
 					<control type="image">
 						<width>540</width>
 						<height>540</height>
-						<texture colordiffuse="ff000000" flipy="true">osd/90.png</texture>
+						<texture colordiffuse="ff000000" flipy="true">grid/osd/90.png</texture>
 						<aspectratio>scale</aspectratio>
 					</control>
 				</control>
@@ -423,8 +423,8 @@
 						</item>
 						<!--toggle subtitles-->
 						<item id="34">
-							<label>$VAR[player:Subtitles]</label>
-							<label2>$VAR[player:Subtitles2]</label2>
+							<label>$VAR[player:Video.SubtitlesLanguage]</label>
+							<label2>$VAR[player:Video.SubtitlesEnabled]</label2>
 							<onclick>Skin.Reset(OSD)</onclick>
 							<onclick>ShowSubtitles</onclick>
 							<onclick>Dialog.Close(VideoOSD,true)</onclick>
@@ -446,8 +446,8 @@
 							<visible allowhiddenfocus="true">Skin.String(OSD,3D)</visible>
 						</item>
 						<item id="42">
-							<label>$VAR[player:Toggle3D]</label>
-							<label2>$VAR[player:Toggle3D2]</label2>
+							<label>$VAR[player:3D.Label]</label>
+							<label2>$VAR[player:3D.Symbol]</label2>
 							<onclick>StereoModeToMono</onclick>
 							<onclick>Skin.Reset(OSD)</onclick>
 							<onclick>Dialog.Close(VideoOSD,true)</onclick>
@@ -589,7 +589,7 @@
 				<control type="image">
 					<width>540</width>
 					<height>360</height>
-					<texture colordiffuse="ff000000" flipy="true" border="0,0,0,360">osd/90.png</texture>
+					<texture colordiffuse="ff000000" flipy="true" border="0,0,0,360">grid/osd/90.png</texture>
 					<aspectratio>scale</aspectratio>
 				</control>
 			</control>

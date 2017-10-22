@@ -296,6 +296,51 @@ msgstr ""
 
 
 
+#: setup
+msgctxt "#31150"
+msgid "Setting up your homescreen"
+msgstr ""
+
+#. Translators: Do not remove the [CR]'s
+msgctxt "#31151"
+msgid "Grid's main menu is highly customizable, you can add shortcuts to any location or to specific functions.[CR]The entries present right after installing are merely defaults you can change to your liking.[CR]Do you want to customize the menu now?"
+msgstr ""
+
+msgctxt "#31152"
+msgid "Accessing the options menu"
+msgstr ""
+
+#. Translators: Do not remove the [CR]'s
+msgctxt "#31153"
+msgid "The options menu gives you access to library related features, system settings and other functions.[CR]Depending on the scrolling orientation you can access the menu by either pressing left or up.[CR]Try it out now by pressing left."
+msgstr ""
+
+#. Example usage: last step, concluding
+msgctxt "#31154"
+msgid "And finally"
+msgstr ""
+
+#. Translators: Do not remove the [CR]'s
+msgctxt "#31155"
+msgid "Grid offers many customization options, you can find them all in the skin settings section.[CR]You are welcome to join the discussion in Grid's forum section on the official Kodi forums. Please do read the FAQ before you do so. You can find these and a link to the forum at www.gridskin.net."
+msgstr ""
+
+#. Example usage: Yes, show me where to find the options
+msgctxt "#31160"
+msgid "Yes, take me there"
+msgstr ""
+
+msgctxt "#31161"
+msgid "I'll do this later"
+msgstr ""
+
+#. Example usage: clear, understood
+msgctxt "#31162"
+msgid "Got it"
+msgstr ""
+
+
+
 #: artwork
 msgctxt "#31200"
 msgid "Posters"
@@ -1010,6 +1055,9 @@ msgctxt "#31707"
 msgid "Status unknown"
 msgstr ""
 
+msgctxt "#31708"
+msgid "Unwatched episode"
+msgstr ""
 
 msgctxt "#31709"
 msgid "Unwatched episodes"
@@ -1144,6 +1192,11 @@ msgstr ""
 #. Do not translate
 msgctxt "#31864"
 msgid "Heebo (Hebrew, Latin)"
+msgstr ""
+
+#. Alternate
+msgctxt "#31865"
+msgid "Alternate (Cyrillic, Latin, Vietnamese)"
 msgstr ""
 
 

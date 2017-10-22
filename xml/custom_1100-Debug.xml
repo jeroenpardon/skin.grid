@@ -193,10 +193,12 @@
 				<control type="button">
 					<label>Window(Home).Property(ImageColorFIVE) $INFO[Window(Home).Property(ImageColorFIVE)]</label>
 					<include>debug_Label</include>
+					<visible>!String.IsEmpty(Window(Home).Property(ImageColorFIVE))</visible>
 				</control>
 				<control type="button">
 					<label>Window(Home).Property(ImageColorSEVEN) $INFO[Window(Home).Property(ImageColorSEVEN)]</label>
 					<include>debug_Label</include>
+					<visible>!String.IsEmpty(Window(Home).Property(ImageColorSEVEN))</visible>
 				</control>
 
 			</control>

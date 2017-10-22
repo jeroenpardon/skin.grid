@@ -15,4 +15,12 @@
 		<thumb />
 		<action>ActivateWindow(shutdownmenu)</action>
 	</shortcut>
+	<shortcut>
+		<defaultID>7</defaultID>
+		<label>7</label>
+		<label2>Common Shortcut</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(filemanager)</action>
+	</shortcut>
 </shortcuts>
