@@ -4,7 +4,7 @@
 	<menucontrol>7000</menucontrol>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
 
-	<onunload condition="String.IsEqual(Window(Home).Property(Setup),stage1) + Window.Previous(1106)">ReplaceWindowAndFocus(1106,1100,0,1101,0)</onunload>
+	<onunload condition="String.IsEqual(Window(Home).Property(Setup),stage2) + Window.Previous(1106)">ReplaceWindowAndFocus(1106,1100,0,1103,0)</onunload>
 
 	<controls>
 

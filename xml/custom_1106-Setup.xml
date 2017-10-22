@@ -81,7 +81,7 @@
 					<control type="button" id="1102">
 						<width min="216">auto</width>
 						<height>90</height>
-						<label>I'll do this later</label>
+						<label>$VAR[setup:Decline.Label]</label>
 						<align>center</align>
 						<onclick condition="String.IsEqual(Skin.String(Setup),stage3)">Close</onclick>
 						<textcolor>$VAR[color:Text.2]</textcolor>

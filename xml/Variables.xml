@@ -1089,9 +1089,9 @@
 	</variable>
 
 	<variable name="setup:Accept.Label">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Take me there</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Got it!</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Take me there</value>
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31160]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">$LOCALIZE[31162]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31160]</value>
 	</variable>
 
 	<variable name="setup:Advance">
@@ -1106,21 +1106,21 @@
 	</variable>
 
 	<variable name="setup:Decline.Label">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">I'll do this later</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Got it!</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">I'll do this later</value>
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31161]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">$LOCALIZE[31162]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31161]</value>
 	</variable>
 
 	<variable name="setup:Description">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Grid's main menu is highly customizable, you can add shortcuts to any location or to specific functions.[CR]The entries present right after installing are merely defaults you can change to your liking.[CR]Do you want to customize the menu now?</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">The options menu gives you access to library related features, system settings and other functions.[CR]Depending on the scrolling orientation you can access the menu by either pressing left or up.[CR]Try it out now by pressing left.</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Grid offers many customization options, you can find them all in the skin settings section.[CR]You are welcome to join the discussion in Grid's forum section on the official Kodi forums. Please do read the FAQ before you do so. You can find these and a link to the forum at www.gridskin.net.</value>
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31151]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">$LOCALIZE[31153]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31155]</value>
 	</variable>
 
 	<variable name="setup:Header">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">Setting up your homescreen</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">Accessing the options menu</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">Finally</value>
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31150]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">$LOCALIZE[31152]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31154]</value>
 	</variable>
 
 
