@@ -140,7 +140,7 @@
 			</animation>
 			<control type="visualisation" id="2">
 				<include>screen_Dimensions</include>
-				<visible>Player.HasAudio + [String.IsEqual(Skin.String(viz.mode),viz) | String.IsEqual(Skin.String(viz.mode),blend)]</visible>
+				<visible>Player.HasAudio + [String.IsEqual(Skin.String(viz.mode),viz) | String.IsEqual(Skin.String(viz.mode),blend) | Pvr.IsPlayingRadio]</visible>
 			</control>
 			<control type="multiimage">
 				<imagepath background="true">$VAR[background:Player]</imagepath>
