@@ -540,7 +540,7 @@
 					<width>$PARAM[ArtSize]</width>
 					<height>$PARAM[ArtSize]</height>
 					<texture>$PARAM[Art]</texture>
-					<aspectratio align="left">scale</aspectratio>
+					<aspectratio align="center">keep</aspectratio>
 					<visible>$PARAM[ShowArt]</visible>
 				</control>
 				<control type="label">

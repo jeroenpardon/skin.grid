@@ -985,10 +985,11 @@
 
 	<variable name="player:Description">
 		<value condition="Player.HasAudio + MusicPlayer.HasNext">$INFO[MusicPlayer.Offset(1).Artist,$LOCALIZE[209]: ]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</value>
-		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre,,  |  ]$INFO[VideoPlayer.Plot]</value>
+		<value condition="Pvr.IsPlayingTv">$INFO[VideoPlayer.Genre,,  |  ]$INFO[VideoPlayer.Plot]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.PlotOutline]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.Plot)">$INFO[VideoPlayer.Plot]</value>
 		<value condition="!Player.HasGame">$INFO[Player.FolderPath]</value>
+		<value>$LOCALIZE[19055]</value>
 	</variable>
 
 	<variable name="player:Duration">
@@ -997,7 +998,8 @@
 	</variable>
 
 	<variable name="player:Info">
-		<!--<value condition="Player.HasAudio">$VAR[player:Time]$VAR[player:Duration, / ]</value>-->
+		<value condition="Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelGroup]</value>
+
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,  |  ]</value>
 		<value condition="Player.HasGame">$INFO[Player.FolderPath]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ] ($INFO[VideoPlayer.Endtime])</value>
@@ -1040,10 +1042,11 @@
 	</variable>
 
 	<variable name="player:Title">
-		<value condition="Window.IsActive(visualisation) | Window.IsActive(slideshow)">$INFO[MusicPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</value>
+		<value condition="Pvr.IsPlayingTV">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
+		<value condition="Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelNumber,,. ]$INFO[MusicPlayer.ChannelName]</value>
+		<value>$INFO[MusicPlayer.Title]</value>
 	</variable>
 
 	<variable name="player:3D.Label">
