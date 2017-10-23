@@ -74,6 +74,18 @@
 
 					<!-- Channel layout -->
 					<channellayout width="$PARAM[ChannelWidth]" height="$PARAM[ItemHeight]">
+						<control type="label">
+							<left>9</left>
+							<width>72</width>
+							<font>Symbols-32</font>
+							<height>$PARAM[ItemHeight]</height>
+							<label>&#57361;</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.3]</textcolor>
+							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<visible>String.IsEmpty(ListItem.Icon)</visible>
+						</control>
 						<control type="image">
 							<left>9</left>
 							<top>9</top>
@@ -97,6 +109,18 @@
 							<width>$PARAM[ChannelWidth]</width>
 							<height>90</height>
 							<texture colordiffuse="ff000000">colorize/20.png</texture>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<width>72</width>
+							<font>Symbols-32</font>
+							<height>$PARAM[ItemHeight]</height>
+							<label>&#57361;</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.3]</textcolor>
+							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<visible>String.IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="image">
 							<left>9</left>
