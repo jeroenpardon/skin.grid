@@ -142,6 +142,15 @@
 							<font>Regular-18</font>
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
+						<control type="image" id="12">
+							<left>10</left>
+							<bottom>2</bottom>
+							<width>$PARAM[ItemTextureWidth]</width>
+							<height>12</height>
+							<texture colordiffuse="ffd50000">colorize/95.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.HasTimer</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
 						<control type="image" id="2">
@@ -151,6 +160,16 @@
 							<texture fallback="pvr/genres/0.png" border="5">$INFO[ListItem.Property(GenreType),pvr/genres/,.png]</texture>
 							<bordertexture>colorize/100.png</bordertexture>
 							<bordersize>6</bordersize>
+						</control>
+						<control type="image" id="12">
+							<left>10</left>
+							<bottom>2</bottom>
+							<width>$PARAM[ItemTextureWidth]</width>
+							<height>$PARAM[ItemTextureHeight]</height>
+							<texture colordiffuse="ffd50000">pvr/status.png</texture>
+							<bordersize>6</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.HasTimer</visible>
 						</control>
 						<control type="label" id="1">
 							<left>32</left>
