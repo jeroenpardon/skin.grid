@@ -330,6 +330,7 @@
 		<value condition="Container.Content(tvshows) + [Control.IsVisible(50) | Control.IsVisible(51) | Control.IsVisible(53)]">$INFO[ListItem.Property(UnWatchedEpisodes)] $VAR[count:UnwatchedEpisodes]$INFO[ListItem.Studio,  |  ]</value>
 		<value condition="Container.Content(tvshows)">$VAR[info:ShowStatus]$INFO[ListItem.Genre,  |  ]$INFO[ListItem.Studio,  |  ]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
+		<value condition="Container.Content(episodes) + String.StartsWith(Container.FolderPath,plugin://plugin.video)">$INFO[ListItem.Label2]$INFO[ListItem.Premiered,  |  ]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,  |  ]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Genre]$VAR[info:Origin,  |  ]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year,  |  ]</value>
@@ -353,7 +354,7 @@
 	<variable name="media:Title">
 		<value condition="Window.IsActive(videoplaylist) + !String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Title]</value>
 		<value condition="Window.IsActive(videoplaylist) + String.IsEmpty(ListItem.TVShowTitle)">$INFO[ListItem.Label]</value>
-		<value condition="Container.Content(episodes) + ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
+		<value condition="Container.Content(episodes) + [ListItem.IsParentFolder | String.StartsWith(Container.FolderPath,plugin://plugin.video)]">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(episodes) + [String.IsEqual(Container.FolderPath,plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes) | String.IsEqual(Container.FolderPath,plugin://script.watchlist/?type=episodes) | String.StartsWith(Container.FolderPath,videodb://recentlyaddedepisodes/) | String.IsEqual(Container.FolderPath,special://skin/extras/playlists/episodes/unwatched.xsp)]">$INFO[ListItem.TVShowTitle,,: ]$INFO[ListItem.Title]</value>
 		<value condition="Container.Content(episodes) + !Skin.HasSetting(logos.enable) + !ListItem.IsParentFolder">$INFO[ListItem.Title]</value> 
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Title]</value>
