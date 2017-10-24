@@ -537,6 +537,20 @@
 						<visible>String.IsEqual(Skin.String(homemenu.layout),vertical)</visible>
 					</control>
 
+					<!-- OSD -->
+					<control type="label" id="9470">
+						<label>$LOCALIZE[478]</label>
+						<include>global_Header</include>
+					</control>
+					<!-- Ratings sources -->
+					<control type="button" id="9471">
+						<label>$LOCALIZE[14051]</label>
+						<label2>$INFO[Skin.String(player.progress.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=player.progress,header=$LOCALIZE[14051])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+
 					<!-- Descriptions -->
 					<control type="label" id="9450">
 						<label>$LOCALIZE[31079]</label>
@@ -556,6 +570,7 @@
 						<selected>Skin.HasSetting(plot.window)</selected>
 						<include>radio_Settings</include>
 					</control>
+
 					<!-- Ratings -->
 					<control type="label" id="9460">
 						<label>$LOCALIZE[31345]</label>
