@@ -582,6 +582,7 @@
 					<aspectratio align="center" aligny="center">scale</aspectratio>
 					<visible>String.IsEmpty(ListItem.Art(thumb)) | String.StartsWith(Container.FolderPath,pvr://channels/)</visible>
 				</control>
+
 				<!-- Symbol -->
 				<control type="label">
 					<width>$PARAM[Width]</width>
@@ -593,8 +594,6 @@
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<visible>ListItem.IsParentFolder</visible>
 				</control>
-
-				
 
 				<!-- Artwork landscape -->
 				<control type="image">
