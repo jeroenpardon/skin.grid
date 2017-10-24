@@ -74,6 +74,18 @@
 
 					<!-- Channel layout -->
 					<channellayout width="$PARAM[ChannelWidth]" height="$PARAM[ItemHeight]">
+						<control type="label">
+							<left>9</left>
+							<width>72</width>
+							<font>Symbols-32</font>
+							<height>$PARAM[ItemHeight]</height>
+							<label>&#57361;</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.3]</textcolor>
+							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<visible>String.IsEmpty(ListItem.Icon)</visible>
+						</control>
 						<control type="image">
 							<left>9</left>
 							<top>9</top>
@@ -97,6 +109,18 @@
 							<width>$PARAM[ChannelWidth]</width>
 							<height>90</height>
 							<texture colordiffuse="ff000000">colorize/20.png</texture>
+						</control>
+						<control type="label">
+							<left>9</left>
+							<width>72</width>
+							<font>Symbols-32</font>
+							<height>$PARAM[ItemHeight]</height>
+							<label>&#57361;</label>
+							<align>center</align>
+							<aligny>center</aligny>
+							<textcolor>$VAR[color:Text.3]</textcolor>
+							<selectedcolor>$VAR[color:Accent]</selectedcolor>
+							<visible>String.IsEmpty(ListItem.Icon)</visible>
 						</control>
 						<control type="image">
 							<left>9</left>
@@ -142,6 +166,15 @@
 							<font>Regular-18</font>
 							<textcolor>$VAR[color:Accent]</textcolor>
 						</control>
+						<control type="image" id="12">
+							<left>10</left>
+							<bottom>2</bottom>
+							<width>$PARAM[ItemTextureWidth]</width>
+							<height>12</height>
+							<texture colordiffuse="ffd50000">colorize/95.png</texture>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.HasTimer</visible>
+						</control>
 					</itemlayout>
 					<focusedlayout width="$PARAM[ItemWidth]" height="$PARAM[ItemHeight]">
 						<control type="image" id="2">
@@ -151,6 +184,16 @@
 							<texture fallback="pvr/genres/0.png" border="5">$INFO[ListItem.Property(GenreType),pvr/genres/,.png]</texture>
 							<bordertexture>colorize/100.png</bordertexture>
 							<bordersize>6</bordersize>
+						</control>
+						<control type="image" id="12">
+							<left>10</left>
+							<bottom>2</bottom>
+							<width>$PARAM[ItemTextureWidth]</width>
+							<height>$PARAM[ItemTextureHeight]</height>
+							<texture colordiffuse="ffd50000">pvr/status.png</texture>
+							<bordersize>6</bordersize>
+							<aspectratio>stretch</aspectratio>
+							<visible>ListItem.HasTimer</visible>
 						</control>
 						<control type="label" id="1">
 							<left>32</left>

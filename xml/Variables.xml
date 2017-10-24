@@ -985,10 +985,11 @@
 
 	<variable name="player:Description">
 		<value condition="Player.HasAudio + MusicPlayer.HasNext">$INFO[MusicPlayer.Offset(1).Artist,$LOCALIZE[209]: ]$INFO[MusicPlayer.Offset(1).Title, - ] ($INFO[MusicPlayer.PlaylistPosition,]$INFO[MusicPlayer.PlaylistLength,/])</value>
-		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.Genre,,  |  ]$INFO[VideoPlayer.Plot]</value>
+		<value condition="Pvr.IsPlayingTv">$INFO[VideoPlayer.Genre,,  |  ]$INFO[VideoPlayer.Plot]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.PlotOutline)">$INFO[VideoPlayer.PlotOutline]</value>
 		<value condition="!String.IsEmpty(VideoPlayer.Plot)">$INFO[VideoPlayer.Plot]</value>
 		<value condition="!Player.HasGame">$INFO[Player.FolderPath]</value>
+		<value>$LOCALIZE[19055]</value>
 	</variable>
 
 	<variable name="player:Duration">
@@ -997,7 +998,8 @@
 	</variable>
 
 	<variable name="player:Info">
-		<!--<value condition="Player.HasAudio">$VAR[player:Time]$VAR[player:Duration, / ]</value>-->
+		<value condition="Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelGroup]</value>
+
 		<value condition="Player.HasAudio">$INFO[MusicPlayer.Artist]$INFO[MusicPlayer.Album,  |  ]</value>
 		<value condition="Player.HasGame">$INFO[Player.FolderPath]</value>
 		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.NextTitle,$LOCALIZE[209]: ] ($INFO[VideoPlayer.Endtime])</value>
@@ -1040,10 +1042,11 @@
 	</variable>
 
 	<variable name="player:Title">
-		<value condition="Window.IsActive(visualisation) | Window.IsActive(slideshow)">$INFO[MusicPlayer.Title]</value>
-		<value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</value>
+		<value condition="Pvr.IsPlayingTV">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
+		<value condition="Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelNumber,,. ]$INFO[MusicPlayer.ChannelName]</value>
+		<value>$INFO[MusicPlayer.Title]</value>
 	</variable>
 
 	<variable name="player:3D.Label">
@@ -1434,12 +1437,15 @@
 		<value condition="Window.IsActive(pictureinfo)">$LOCALIZE[13406]</value>
 		<value condition="Window.IsActive(pvrchannelmanager)">$LOCALIZE[19199]</value>
 		<value condition="Window.IsActive(pvrgroupmanager)">$LOCALIZE[19143]</value>
+		<value condition="Window.IsActive(filebrowser) + !String.IsEmpty(Window(Home).Property(FileBrowserHeader))">$INFO[Window(Home).Property(FileBrowserHeader)]</value>
+		<value condition="Window.IsActive(filebrowser)">$LOCALIZE[1024]</value>
+	
+		<!-- Workaround for weather addon settings window --> 
 		<value condition="Window.IsActive(addonsettings) + Window.Previous(servicesettings)">$LOCALIZE[31080] - $LOCALIZE[5]</value>
 		<value condition="Window.IsActive(addonsettings)">$INFO[ListItem.Label,, - $LOCALIZE[5]]</value>
 		<value condition="Window.IsActive(pvrguidesearch)">$LOCALIZE[19133]</value>
 		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]</value>
 		<value condition="Window.Is(mediafilter)">$LOCALIZE[587]</value>
-		<value condition="Window.IsActive(filebrowser) + !String.IsEmpty(Window(Home).Property(FileBrowserHeader))">$INFO[Window(Home).Property(FileBrowserHeader)]</value>
 		<value condition="Window.Is(osdaudiosettings)">$LOCALIZE[13396]</value>
 		<value condition="Window.Is(osdvideosettings)">$LOCALIZE[13395]</value>
 		<value condition="Window.IsVisible(mediasource)">$LOCALIZE[10129]</value>
