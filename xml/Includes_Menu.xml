@@ -1730,13 +1730,13 @@
 				<left>32</left>
 				<control type="label">
 					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$INFO[Pvr.BackendName]</label>
+					<label>$INFO[Container(10).NumItems,, $LOCALIZE[14301]]</label>
 					<include>menu_Label</include>
 					<visible>!Control.HasFocus(102)</visible>
 				</control>
 				<control type="label">
 					<width>384</width>
-					<label>$INFO[Pvr.BackendName]</label>
+					<label>$INFO[Container(10).NumItems,, $LOCALIZE[14301]]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(102)</visible>
 				</control>
