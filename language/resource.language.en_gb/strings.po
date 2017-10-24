@@ -876,6 +876,16 @@ msgctxt "#31568"
 msgid "Set episode"
 msgstr ""
 
+#. example usage: Elapsed time of current playing media
+msgctxt "#31569"
+msgid "Elapsed"
+msgstr ""
+
+#. example usage: Remaining time of current playing media
+msgctxt "#31570"
+msgid "Remaining"
+msgstr ""
+
 
 
 #: pvr
