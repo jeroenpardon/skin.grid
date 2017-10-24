@@ -18,12 +18,11 @@
 				<param name="DescriptionLeft">232</param>
 			</include>
 
-			<!-- Video -->
+			<!-- PVR -->
 			<include condition="Player.HasVideo + !VideoPlayer.Content(livetv)" content="osd_Info">
 				<param name="InfoWidth">1490</param>
 			</include>
 
-<<<<<<< HEAD
 			<!-- Game -->
 			<include condition="Player.HasGame" content="osd_Info">
 				<param name="Top">850</param>
@@ -31,10 +30,6 @@
 
 			<!-- Video -->
 			<include condition="VideoPlayer.Content(livetv)" content="osd_Info">
-=======
-			<!-- PVR -->
-			<include condition="Pvr.IsPlayingTV" content="osd_Info">
->>>>>>> 7d20cf1... this fixes #140
 				<param name="ShowArt">true</param>
 				<param name="ArtSize">96</param>
 				<param name="TextLeft">132</param>
