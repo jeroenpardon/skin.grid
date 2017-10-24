@@ -31,6 +31,12 @@
 	<setting id="date.enabled" value="global" label="$LOCALIZE[31352]"/>
 	<setting id="date.enabled" value="nohome" label="$LOCALIZE[31353]"/>
 
+	<!-- Player time display-->
+	<setting id="player.progress" value="remaining" label="$LOCALIZE[31570]" default="true"/>
+	<setting id="player.progress" value="elapsed" label="$LOCALIZE[31569]"/>
+	<setting id="player.progress" value="both" label="$LOCALIZE[31570] / $LOCALIZE[31569]"/>
+	<setting id="player.progress" value="reversed" label="$LOCALIZE[31569] / $LOCALIZE[31570]"/>
+
 	<!-- Horizontal home submenu orientation-->
 	<setting id="submenu.type" value="horizontal" label="horizontal" default="true"/>
 	<setting id="submenu.type" value="vertical" label="$LOCALIZE[31058]"/>
