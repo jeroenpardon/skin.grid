@@ -180,7 +180,7 @@
 					<label>$VAR[home:Status]</label>
 					<align>center</align>
 					<aligny>center</aligny>
-					<textcolor>$VAR[color:Text.3]</textcolor>
+					<textcolor>$VAR[color:Accent]</textcolor>
 					<shadowcolor>black</shadowcolor>
 					<include>fadeinout</include>
 				</control>
@@ -190,9 +190,9 @@
 					<height>64</height>
 					<font>Regular-20</font>
 					<urlset>1</urlset>
-					<textcolor>$VAR[color:Text.3]</textcolor>
+					<textcolor>$VAR[color:Accent]</textcolor>
 					<titlecolor>$VAR[color:Text.2]</titlecolor>
-					<headlinecolor>$VAR[color:Text.3]</headlinecolor>
+					<headlinecolor>$VAR[color:Accent]</headlinecolor>
 					<include>fadeinout</include>
 					<visible>String.IsEqual(Skin.String(home.status),rss)</visible>
 				</control>
