@@ -435,22 +435,20 @@
 						<include>button_Settings</include>
 					</control>
 
-					<!-- PVR
+					<!-- PVR-->
 					<control type="label" id="9350">
 						<label>PVR</label>
 						<include>global_Header</include>
 					</control>
-					<control type="button" id="9351">
-						<label>$LOCALIZE[31216]</label>
-						<label2>$INFO[Skin.String(view.list.pvr.Label)]</label2>
-						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=view.list.pvr,header=$LOCALIZE[31216])</onclick>
+					<control type="radiobutton" id="9351">
+						<label>$LOCALIZE[31379]</label>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">Skin.ToggleSetting(pvr.scraper.disable)</onclick>
+						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357][CR]$LOCALIZE[31082],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(home.logo),noaction=Close)</onclick>
+						<selected>Skin.HasSetting(pvr.scraper.disable)</selected>
 						<include>install_HelperService</include>
-						<include>install_Colorbox</include>
-						<include>button_Settings</include>
-						<enable>System.HasAddon(script.colorbox) + !System.Platform.Android</enable>
+						<include>radio_Settings</include>
 					</control>
-					-->
-					
+
 					<!-- Now playing -->
 					<control type="label" id="9360">
 						<label>$LOCALIZE[31711]</label>

@@ -796,6 +796,11 @@ msgctxt "#31378"
 msgid "Fanart colours"
 msgstr ""
 
+#. setting that disables the PVR artwork scraper
+msgctxt "#31379"
+msgid "Disable artwork scraper"
+msgstr ""
+
 
 
 #: osd / player
