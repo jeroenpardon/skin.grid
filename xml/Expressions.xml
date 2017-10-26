@@ -2,7 +2,7 @@
 
 	<!-- Art -->
 
-	<expression name="Content.HasLandscape">[Container.Content(files) + Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(files) | Container.Content(videos) | Container.Content(musicvideos) | Container.Content(addons) | [String.IsEmpty(Container.Content) + String.StartsWith(Container.FolderPath,plugin://)]</expression>
+	<expression name="Content.HasLandscape">[Container.Content(files) + Container.HasFiles] | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(files) | Container.Content(videos) | Container.Content(musicvideos) | Container.Content(addons) | [String.IsEmpty(Container.Content) + String.StartsWith(Container.FolderPath,plugin://)]</expression>
 
 
 	<expression name="Art.IsPortrait">![Container.Content(episodes)] + [Container.Content(files) + !Container.HasFiles]</expression>	
@@ -37,9 +37,9 @@
 	<!-- Listitems -->
 	<expression name="ListItem.IsParent">[ListItem.IsParentFolder | String.StartsWith(ListItem.Label,* All)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
 	<expression name="!ListItem.IsParent">!ListItem.IsParentFolder + !String.StartsWith(ListItem.Label,* All) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>	
-	<expression name="ListItem.HasInfo">[!String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | [String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | Container.Content(artists) | String.StartsWith(Container.FolderPath,pvr://) | [String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)]</expression>
+	<expression name="ListItem.HasInfo">[!String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | [String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | Container.Content(artists) | String.StartsWith(Container.FolderPath,pvr://) | [String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)] | Container.Content(seasons)</expression>
 	
-	<expression name="!ListItem.HasInfo">[[String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)] | [!String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)]] + !Container.Content(artists) + !String.StartsWith(Container.FolderPath,pvr://) + ![String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)]</expression>
+	<expression name="!ListItem.HasInfo">[[String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)] | [!String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)]] + !Container.Content(artists) + !String.StartsWith(Container.FolderPath,pvr://) + ![String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)] + !Container.Content(seasons)</expression>
 
 	<!--<expression name="!ListItem.HasInfo">[[String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)] | [!String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)]] + !Container.Content(artists) + !String.StartsWith(Container.FolderPath,pvr://) + !Container.Content(addons) + ![String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)]</expression>-->
 
