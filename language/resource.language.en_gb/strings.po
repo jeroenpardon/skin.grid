@@ -289,11 +289,6 @@ msgctxt "#31086"
 msgid "Do you want to install it anyway?"
 msgstr ""
 
-#. A message that notifies the user that the add-on they are about to install will not work on their operating system / platform. The name of the OS will be isted by the skin after "on"
-msgctxt "#31087"
-msgid "when available"
-msgstr ""
-
 
 
 #: setup
