@@ -42,7 +42,7 @@ msgstr "Tiivistetty valikko"
 
 msgctxt "#31004"
 msgid "Skin shortcut"
-msgstr ""
+msgstr "Pikakuvake"
 
 msgctxt "#31005"
 msgid "Layout"
@@ -228,7 +228,7 @@ msgstr "Vapaaehtoinen"
 
 msgctxt "#31072"
 msgid "Common menu item"
-msgstr ""
+msgstr "Yleinen valikkokohde"
 
 #. example usage: this addon is installed
 msgctxt "#31073"
@@ -261,6 +261,12 @@ msgctxt "#31079"
 msgid "Descriptions"
 msgstr "Kuvaukset"
 
+#. The website that provides the weather forecast information. See settings >
+#. services > weather
+msgctxt "#31080"
+msgid "Weather service"
+msgstr "Sääpalvelu"
+
 msgctxt "#31081"
 msgid "Reload"
 msgstr "Lataa uudelleen"
@@ -288,6 +294,74 @@ msgstr "Tämä lisäosa ei toimi käyttöjärjestelmässä"
 msgctxt "#31086"
 msgid "Do you want to install it anyway?"
 msgstr "Haluatko silti asentaa sen?"
+
+#: setup
+msgctxt "#31150"
+msgid "Setting up your homescreen"
+msgstr "Päävalikon muokkaus"
+
+#. Translators: Do not remove the [CR]'s
+msgctxt "#31151"
+msgid ""
+"Grid's main menu is highly customizable, you can add shortcuts to any "
+"location or to specific functions.[CR]The entries present right after "
+"installing are merely defaults you can change to your liking.[CR]Do you want"
+" to customize the menu now?"
+msgstr ""
+"Gridin päävalikkoa on mahdollista muokata monilla tavoin; voit lisätä "
+"pikakuvakkeita mihin tahansa kohteeseen tai toimintoon.[CR]Valmiina olevat "
+"valikot ovat vain esimerkkejä, joita voit muokata niin paljon kuin "
+"haluat.[CR]Haluatko tehdä muutoksia päävalikkoon nyt?"
+
+msgctxt "#31152"
+msgid "Accessing the options menu"
+msgstr "Sivuvalikon avaaminen"
+
+#. Translators: Do not remove the [CR]'s
+msgctxt "#31153"
+msgid ""
+"The options menu gives you access to library related features, system "
+"settings and other functions.[CR]Depending on the scrolling orientation you "
+"can access the menu by either pressing left or up.[CR]Try it out now by "
+"pressing left."
+msgstr ""
+"Sivuvalikko sisältää mediakirjastoon liittyviä ominaisuuksia, "
+"järjestelmäasetuksia ja muita toimintoja.[CR]Valikko aukeaa painamalla "
+"nuolinappia joko ylöspäin tai vasemmalle riippuen käytössäolevasta "
+"näkymästä.[CR]Kokeile sitä nyt painamalla vasemmalle."
+
+#. Example usage: last step, concluding
+msgctxt "#31154"
+msgid "And finally"
+msgstr "Lopuksi"
+
+#. Translators: Do not remove the [CR]'s
+msgctxt "#31155"
+msgid ""
+"Grid offers many customization options, you can find them all in the skin "
+"settings section.[CR]You are welcome to join the discussion in Grid's forum "
+"section on the official Kodi forums. Please do read the FAQ before you do "
+"so. You can find these and a link to the forum at www.gridskin.net."
+msgstr ""
+"Gridin muokkaamiseen liittyvät asetukset löytyvät valikosta \"Ulkoasun "
+"asetukset\".[CR]Voit kertoa mielipiteesi ja toiveesi Gridiin liittyen Kodin "
+"virallisella keskustelupalstalla. Luethan ensin usein kysytyt kysymykset "
+"-osion. Se ja linkki keskustelupalstalle löytyy osoitteesta "
+"www.gridskin.net."
+
+#. Example usage: Yes, show me where to find the options
+msgctxt "#31160"
+msgid "Yes, take me there"
+msgstr "Kyllä, siirry sinne"
+
+msgctxt "#31161"
+msgid "I'll do this later"
+msgstr "Teen sen myöhemmin"
+
+#. Example usage: clear, understood
+msgctxt "#31162"
+msgid "Got it"
+msgstr "Selvä"
 
 #: artwork
 msgctxt "#31200"
@@ -354,10 +428,6 @@ msgstr "Lataa kaikki kuvat"
 msgctxt "#31215"
 msgid "Landscape art type"
 msgstr "Vaakakuvan tyyppi"
-
-msgctxt "#31216"
-msgid "List view artwork type"
-msgstr "Listanäkymän kuvatyyppi"
 
 msgctxt "#31217"
 msgid "No images available. Would you like to download some?"
@@ -747,6 +817,11 @@ msgctxt "#31378"
 msgid "Fanart colours"
 msgstr "Fanitaiteen värit"
 
+#. setting that disables the PVR artwork scraper
+msgctxt "#31379"
+msgid "Disable artwork scraper"
+msgstr ""
+
 #: osd / player
 msgctxt "#31550"
 msgid "Rwd"
@@ -823,6 +898,16 @@ msgstr "Luo"
 msgctxt "#31568"
 msgid "Set episode"
 msgstr "Aseta jakso"
+
+#. example usage: Elapsed time of current playing media
+msgctxt "#31569"
+msgid "Elapsed"
+msgstr "Kulunut"
+
+#. example usage: Remaining time of current playing media
+msgctxt "#31570"
+msgid "Remaining"
+msgstr "Jäljellä"
 
 #: pvr
 msgctxt "#31600"
@@ -1000,6 +1085,10 @@ msgctxt "#31707"
 msgid "Status unknown"
 msgstr "Tuntematon tila"
 
+msgctxt "#31708"
+msgid "Unwatched episode"
+msgstr "Katsomaton jakso"
+
 msgctxt "#31709"
 msgid "Unwatched episodes"
 msgstr "Katsomatonta jaksoa"
@@ -1130,6 +1219,11 @@ msgstr ""
 msgctxt "#31864"
 msgid "Heebo (Hebrew, Latin)"
 msgstr "Heebo (heprea, latinalainen)"
+
+#. Alternate
+msgctxt "#31865"
+msgid "Alternate (Cyrillic, Latin, Vietnamese)"
+msgstr "Vaihtoehtoinen (kyrillinen, latinalainen, vietnamilainen)"
 
 #: about
 msgctxt "#31980"
