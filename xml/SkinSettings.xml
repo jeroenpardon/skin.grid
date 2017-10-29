@@ -536,33 +536,40 @@
 					</control>
 
 					<!-- OSD -->
-					<control type="label" id="9470">
+					<control type="label" id="9450">
 						<label>$LOCALIZE[478]</label>
 						<include>global_Header</include>
 					</control>
-					<!-- Ratings sources -->
-					<control type="button" id="9471">
+					<!-- Progress time format -->
+					<control type="button" id="9451">
 						<label>$LOCALIZE[14051]</label>
 						<label2>$INFO[Skin.String(player.progress.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=player.progress,header=$LOCALIZE[14051])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
+					<!-- Disable media info on pause -->
+					<control type="radiobutton" id="9452">
+						<label>$LOCALIZE[31380]</label>
+						<onclick>Skin.ToggleSetting(osd.pauseinfo)</onclick>
+						<selected>Skin.HasSetting(osd.pauseinfo)</selected>
+						<include>radio_Settings</include>
+					</control>
 
 					<!-- Descriptions -->
-					<control type="label" id="9450">
+					<control type="label" id="9460">
 						<label>$LOCALIZE[31079]</label>
 						<include>global_Header</include>
 					</control>
 					<!-- Autoscroll -->
-					<control type="button" id="9451">
+					<control type="button" id="9461">
 						<label>$LOCALIZE[31325]</label>
 						<label2>$INFO[Skin.String(autoscroll.speed.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=autoscroll.speed,header=$LOCALIZE[31325])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<control type="radiobutton" id="9452">
+					<control type="radiobutton" id="9462">
 						<label>$LOCALIZE[31347]</label>
 						<onclick>Skin.ToggleSetting(plot.window)</onclick>
 						<selected>Skin.HasSetting(plot.window)</selected>
@@ -570,19 +577,19 @@
 					</control>
 
 					<!-- Ratings -->
-					<control type="label" id="9460">
+					<control type="label" id="9470">
 						<label>$LOCALIZE[31345]</label>
 						<include>global_Header</include>
 					</control>
 					<!-- Ratings sources -->
-					<control type="button" id="9461">
+					<control type="button" id="9471">
 						<label>$LOCALIZE[31340] - $LOCALIZE[157]</label>
 						<label2>$INFO[Skin.String(ratings.video.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.video,header=$LOCALIZE[31340] - $LOCALIZE[157])</onclick>
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
-					<control type="button" id="9462">
+					<control type="button" id="9472">
 						<label>$LOCALIZE[31340] - $LOCALIZE[2]</label>
 						<label2>$INFO[Skin.String(ratings.music.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.music,header=$LOCALIZE[31340] - $LOCALIZE[2])</onclick>
@@ -590,7 +597,7 @@
 						<include>button_Settings</include>
 					</control>
 					<!-- Ratings overlay on artwork -->
-					<control type="button" id="9463">
+					<control type="button" id="9473">
 						<label>$LOCALIZE[31348]</label>
 						<label2>$INFO[Skin.String(ratings.overlay.Label)]</label2>
 						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=ratings.overlay,header=$LOCALIZE[31348])</onclick>
@@ -598,7 +605,7 @@
 						<include>radio_Settings</include>
 					</control>
 					<!-- Parental Guidance ratings-->
-					<control type="radiobutton" id="9464">
+					<control type="radiobutton" id="9474">
 						<label>$LOCALIZE[31342]</label>
 						<onclick>Skin.ToggleSetting(ratings.pg.enable)</onclick>
 						<selected>Skin.HasSetting(ratings.pg.enable)</selected>

@@ -796,6 +796,11 @@ msgctxt "#31379"
 msgid "Disable artwork scraper"
 msgstr ""
 
+#. setting that disables showing media information when pausing video
+msgctxt "#31380"
+msgid "Don't show media information when pausing video"
+msgstr ""
+
 
 
 #: osd / player
