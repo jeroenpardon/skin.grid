@@ -10,7 +10,6 @@
 		<param name="ItemTextureWidth" default="58"/>
 		<param name="ItemWidth" default="60"/>
 		<param name="Left" default="128"/>
-		<param name="OnDown" default="50"/>
 		<param name="OnLeft" default="7000"/>
 		<param name="OnUp" default="50"/>
 		<param name="RulerHeight" default="90"/>
@@ -36,10 +35,10 @@
 				<control type="epggrid" id="10">
 					<viewtype label="$PARAM[ViewTypeLabel]">list</viewtype>
 					<height>$PARAM[Height]</height>
-					<ondown>$PARAM[OnDown]</ondown>
-					<onleft>$PARAM[OnLeft]</onleft>
+					<onup>10</onup>
+					<ondown>10</ondown>
+					<onleft>7000</onleft>
 					<onright>noop</onright>
-					<onup>$PARAM[OnUp]</onup>
 					<progresstexture border="11,91,11,11">pvr/progress.png</progresstexture>
 					<rulerunit>6</rulerunit>
 					<timeblocks>$PARAM[TimeBlocks]</timeblocks>
