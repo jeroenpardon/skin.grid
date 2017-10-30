@@ -527,12 +527,14 @@
 				<include>transition_Content</include>
 				<texture colordiffuse="ff000000">views/diffuse/fullscreeninfo.png</texture>
 				<animation effect="fade" end="60" time="0" condition="Window.IsActive(visualisation)">Conditional</animation>
+				<visible>![Player.Paused + Skin.HasSetting(osd.pauseinfo)]</visible>
 				<visible>$PARAM[Visible]</visible>
 			</control>
 			<control type="group">
 				<left>128</left>
 				<top>$PARAM[Top]</top>
 				<height>285</height>
+				<visible>![Player.Paused + Skin.HasSetting(osd.pauseinfo)]</visible>
 				<visible>$PARAM[Visible]</visible>
 				<include>transition_Content</include>
 				<control type="image">

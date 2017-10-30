@@ -970,7 +970,7 @@
 		<!-- Add-ons system settings -->
 		<control type="group" id="7014">
 			<height>108</height>
-			<visible>Window.IsActive(1110) | String.IsEqual(Container.FolderPath,addons://)</visible>
+			<visible>String.IsEqual(Container.FolderPath,addons://)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>

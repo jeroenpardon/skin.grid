@@ -289,11 +289,6 @@ msgctxt "#31086"
 msgid "Do you want to install it anyway?"
 msgstr ""
 
-#. A message that notifies the user that the add-on they are about to install will not work on their operating system / platform. The name of the OS will be isted by the skin after "on"
-msgctxt "#31087"
-msgid "when available"
-msgstr ""
-
 
 
 #: setup
@@ -794,6 +789,16 @@ msgstr ""
 #. skin setting that enables a blur effect to the home menu background, and changes colours of text and textures to match the fanart image
 msgctxt "#31378"
 msgid "Fanart colours"
+msgstr ""
+
+#. setting that disables the PVR artwork scraper
+msgctxt "#31379"
+msgid "Disable artwork scraper"
+msgstr ""
+
+#. setting that disables showing media information when pausing video
+msgctxt "#31380"
+msgid "Don't show media information when pausing video"
 msgstr ""
 
 

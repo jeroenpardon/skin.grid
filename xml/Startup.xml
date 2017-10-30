@@ -8,7 +8,7 @@
 	
 	<!-- Skin Helper -->
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,20)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
+	<onload condition="!Skin.HasSetting(pvr.scraper.disable)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableWallBackgrounds)</onload>
@@ -42,7 +42,6 @@
 	<onload condition="String.IsEmpty(Skin.String(ratings.overlay))">Skin.SetString(ratings.overlay,disabled)</onload>
 	<onload condition="String.IsEmpty(Skin.String(ratings.video))">Skin.SetString(ratings.video,disabled)</onload>
 	<onload condition="String.IsEmpty(Skin.String(view.list.art))">Skin.SetString(view.list.art,fanart)</onload>
-	<onload condition="String.IsEmpty(Skin.String(view.list.pvr))">Skin.SetString(view.list.pvr,icons)</onload>
 	<onload condition="String.IsEmpty(Skin.String(views.landscape.art))">Skin.SetString(views.landscape.art,fanart)</onload>
 
 	<!-- Go -->
