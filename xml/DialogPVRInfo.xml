@@ -154,7 +154,7 @@
 					<include content="button_Info">
 						<param name="ID" value="3" />
 						<param name="Label" value="YouTube" />
-						<param name="OnClick" value="InstallAddon(script.extendedinfo)" />
+						<param name="OnClick" value="InstallAddon(plugin.video.youtube)" />
 						<param name="Visible" value="!System.HasAddon(plugin.video.youtube)" />
 					</include>
 				</control>
