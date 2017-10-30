@@ -143,20 +143,6 @@
 						<param name="Label" value="$LOCALIZE[19003]" />
 						<param name="Visible" value="Window.IsActive(PVRGuideInfo)" />
 					</include>
-					<!-- YouTube search -->
-					<include content="button_Info">
-						<param name="ID" value="3" />
-						<param name="Label" value="YouTube" />
-						<param name="OnClick" value="Dialog.Close(all)" />
-						<param name="OnClick2" value="RunScript(script.skin.helper.service,action=searchyoutube,title=$INFO[ListItem.Label] Trailer,header=YouTube: $INFO[ListItem.Label])" />
-						<param name="Visible" value="System.HasAddon(plugin.video.youtube)" />
-					</include>
-					<include content="button_Info">
-						<param name="ID" value="3" />
-						<param name="Label" value="YouTube" />
-						<param name="OnClick" value="InstallAddon(plugin.video.youtube)" />
-						<param name="Visible" value="!System.HasAddon(plugin.video.youtube)" />
-					</include>
 				</control>
 			</control>
 

@@ -819,7 +819,12 @@ msgstr "Kolory fanartu"
 #. setting that disables the PVR artwork scraper
 msgctxt "#31379"
 msgid "Disable artwork scraper"
-msgstr ""
+msgstr "Wyłącz pobieranie grafiki"
+
+#. setting that disables showing media information when pausing video
+msgctxt "#31380"
+msgid "Don't show media information when pausing video"
+msgstr "Nie pokazuj informacji o materiale w czasie pauzy"
 
 #: osd / player
 msgctxt "#31550"
