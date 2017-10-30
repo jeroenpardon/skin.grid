@@ -66,7 +66,7 @@
 	</variable>
 
 	<variable name="home:Status">
-		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.IsRecordingTV">$INFO[Pvr.TVNowRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.TVNowRecordingChannel, - ]</value>
+		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.IsRecordingTV">$INFO[Pvr.TVNowRecordingTitle,[COLOR=Attention]$LOCALIZE[19158]:[/COLOR] ]$INFO[Pvr.TVNowRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.IsRecordingRadio">$INFO[Pvr.RadioNowRecordingTitle,$LOCALIZE[19158]: ]$INFO[Pvr.RadioNowRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),pvr) + Pvr.HasTVTimer | Pvr.HasRadioTimer">$INFO[Pvr.NextRecordingTitle,$LOCALIZE[19157]: ]$INFO[Pvr.NextRecordingChannel, - ]</value>
 		<value condition="String.IsEqual(Skin.String(home.status),library)">$VAR[stats:Count.Movies]$VAR[stats:Count.Shows]$VAR[stats:Count.Episodes]$VAR[stats:Count.MusicVideos]$VAR[stats:Count.Songs]$VAR[stats:Count.Albums]$VAR[stats:Count.Artists]</value>
@@ -683,6 +683,7 @@
 	</variable>
 
 	<variable name="art:Landscape">
+		<value condition="Container.Content(addons) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Container.Content(addons)">$INFO[ListItem.Art(thumb)]</value>
 		<value condition="[Container.Content(images) + !ListItem.IsFolder] | [String.IsEmpty(Container.Content) + !ListItem.IsFolder + !Control.Isvisible(50) + String.StartsWith(Container.FolderPath,pvr://recordings)]">$INFO[ListItem.Icon]</value>
 		<value condition="Container.Content(images) + ListItem.IsFolder">$INFO[ListItem.Art(thumb)]</value>

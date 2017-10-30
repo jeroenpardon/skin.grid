@@ -719,6 +719,25 @@
 		</definition>
 	</include>
 
+<!-- Media info windows -->
+	<include name="button_Info">
+		<param name="ID"/>
+		<param name="Label"/>
+		<param name="Width" default="256"/>
+		<param name="Visible" default="true"/>
+		<definition>
+			<control type="togglebutton" id="$PARAM[ID]">
+				<width>$PARAM[Width]</width>
+				<height>$PARAM[Height]</height>
+				<align>center</align>
+				<font>Black-20</font>
+				<label>$PARAM[Label]</label>
+				<texturenofocus></texturenofocus>
+				<visible>$PARAM[Visible]</visible>
+			</control>
+		</definition>
+	</include>
+
 <!-- Skin Shortcuts -->
 	<include name="shortcuts_ScrollingControls">
 		<animation effect="slide" end="0,90" time="0" condition="Container(211).Row(1)">Conditional</animation>
