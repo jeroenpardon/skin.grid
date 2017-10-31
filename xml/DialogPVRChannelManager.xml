@@ -126,8 +126,8 @@
 				<!-- TV / radio toggle-->
 				<control type="togglebutton" id="34">
 					<width>576</width>
-					<label>$LOCALIZE[19023]</label>
-					<altlabel>$LOCALIZE[19024]</altlabel>
+					<label>$LOCALIZE[31614]</label>
+					<altlabel>$LOCALIZE[31615]</altlabel>
 					<ondown>7</ondown>
 					<usealttexture>String.IsEmpty(Window.Property(IsRadio))</usealttexture>
 				</control>
