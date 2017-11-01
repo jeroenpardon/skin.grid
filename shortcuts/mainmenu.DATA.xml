@@ -20,7 +20,7 @@
 	</shortcut>
 	<shortcut>
 		<defaultID>videos</defaultID>
-		<label>10006</label>
+		<label>Videos</label>
 		<label2>Common menu item</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
@@ -52,11 +52,19 @@
 	</shortcut>
 	<shortcut>
 		<defaultID>music</defaultID>
-		<label>10005</label>
+		<label>Music</label>
 		<label2>Common Shortcut</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(Music)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>15016</defaultID>
+		<label>15016</label>
+		<label2>Common menu item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(games)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>pictures</defaultID>
