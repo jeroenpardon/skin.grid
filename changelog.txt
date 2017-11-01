@@ -12,6 +12,8 @@
 - Alternate, capitalized fontset
 - Finish time available in video info window
 - Extra default shortcuts for stupid entitled people
+- Channel manager refinement
+- Lots of PVR tweaks and fixes (thanks joostzilla & h.udo)
 - Various fixes, optimizations and tweaks
 
 1.2.48
