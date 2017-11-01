@@ -948,6 +948,19 @@ msgctxt "#31612"
 msgid "Start"
 msgstr ""
 
+msgctxt "#31613"
+msgid "Select channel logo"
+msgstr ""
+
+msgctxt "#31614"
+msgid "Show TV channels"
+msgstr ""
+
+msgctxt "#31615"
+msgid "Show radio channels"
+msgstr ""
+
+
 
 #: media
 msgctxt "#31650"

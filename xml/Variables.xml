@@ -1444,8 +1444,8 @@
 		<value condition="Window.IsActive(contextmenu)">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(shutdownmenu)">$LOCALIZE[13012]</value>
 		<value condition="Window.IsActive(pictureinfo)">$LOCALIZE[13406]</value>
+		<value condition="Window.IsActive(pvrgroupmanager)">$LOCALIZE[19048]</value>
 		<value condition="Window.IsActive(pvrchannelmanager)">$LOCALIZE[19199]</value>
-		<value condition="Window.IsActive(pvrgroupmanager)">$LOCALIZE[19143]</value>
 		<value condition="Window.IsActive(filebrowser) + !String.IsEmpty(Window(Home).Property(FileBrowserHeader))">$INFO[Window(Home).Property(FileBrowserHeader)]</value>
 		<value condition="Window.IsActive(filebrowser)">$LOCALIZE[1024]</value>
 	
