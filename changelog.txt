@@ -13,6 +13,7 @@
 - Finish time available in video info window
 - Extra default shortcuts for stupid entitled people
 - Channel manager refinement
+- Switch channel groups in OSD Channel Guide using directional buttons
 - Lots of PVR tweaks and fixes (thanks joostzilla & h.udo)
 - Various fixes, optimizations and tweaks
 
