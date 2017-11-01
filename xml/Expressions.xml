@@ -37,15 +37,9 @@
 	<!-- Listitems -->
 	<expression name="ListItem.IsParent">[ListItem.IsParentFolder | String.StartsWith(ListItem.Label,* All)] + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>
 	<expression name="!ListItem.IsParent">!ListItem.IsParentFolder + !String.StartsWith(ListItem.Label,* All) + !String.StartsWith(Container.FolderPath,videodb://movies/sets)</expression>	
-<<<<<<< HEAD
-	<expression name="ListItem.HasInfo">[!String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | [String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | Container.Content(artists) | String.StartsWith(Container.FolderPath,pvr://) | [String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)]</expression>
-	
-	<expression name="!ListItem.HasInfo">[[String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)] | [!String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)]] + !Container.Content(artists) + !String.StartsWith(Container.FolderPath,pvr://) + ![String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)]</expression>
-=======
 	<expression name="ListItem.HasInfo">[!String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | [String.IsEmpty(ListItem.DBID) + !String.IsEmpty(ListItem.Label2)] | Container.Content(artists) | String.StartsWith(Container.FolderPath,pvr://) | [String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)] | Container.Content(seasons)</expression>
 	
 	<expression name="!ListItem.HasInfo">[[String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)] | [!String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)]] + !Container.Content(artists) + !String.StartsWith(Container.FolderPath,pvr://) + ![String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)] + !Container.Content(seasons)</expression>
->>>>>>> master
 
 	<!--<expression name="!ListItem.HasInfo">[[String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)] | [!String.IsEmpty(ListItem.DBID) + String.IsEmpty(ListItem.Label2)]] + !Container.Content(artists) + !String.StartsWith(Container.FolderPath,pvr://) + !Container.Content(addons) + ![String.IsEqual(ListItem.DBType,episode) + String.IsEmpty(ListItem.Label2)]</expression>-->
 
