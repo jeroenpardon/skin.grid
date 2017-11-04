@@ -226,6 +226,7 @@
 		<!--settings-->
 		<node label="$LOCALIZE[5]">
 			<content>settings</content>
+			<shortcut label="MyOSMC" type="5" condition="System.HasAddon(service.osmc.settings)">RunAddon(service.osmc.settings)</shortcut>
 		</node>
 
 		<!--commands-->
@@ -505,6 +506,7 @@
 	<property property="homeSymbol">&#59210;</property>
 	<property property="homeSymbol">&#59211;</property>
 	<property property="homeSymbol">&#59212;</property>
+	<property property="homeSymbol">&#59217;</property>
 	<property property="homeSymbol">&#59221;</property>
 	<property property="homeSymbol">&#59222;</property>
 	<property property="homeSymbol">&#59223;</property>
