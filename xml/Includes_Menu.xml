@@ -429,13 +429,11 @@
 		</control>
 	</include>
 
-	<include name="menu_Video">	
-		<include content="menu_Views"></include>
-		<include content="menu_Commons"></include>
+	<include name="menu_Watched">
 		<!--hide watched-->
 		<control type="group" id="7010">
 			<height>108</height>
-			<visible>Window.IsActive(videos)</visible>
+			<visible>Window.IsActive(videos) | String.StartsWith(Container.FolderPath,pvr://recordings/)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -445,8 +443,10 @@
 			<control type="button" id="10">
 				<top>12</top>
 				<label>$LOCALIZE[20367]</label>
-				<onup>44</onup>
-				<ondown>7011</ondown>
+				<onup condition="!String.StartsWith(Container.FolderPath,pvr://recordings/)">44</onup>
+				<onup condition="String.StartsWith(Container.FolderPath,pvr://recordings/)">7052</onup>
+				<ondown condition="!String.StartsWith(Container.FolderPath,pvr://recordings/)">7011</ondown>
+				<ondown condition="String.StartsWith(Container.FolderPath,pvr://recordings/)">7054</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
@@ -469,6 +469,13 @@
 				</control>
 			</control>
 		</control>
+	</include>
+
+	<include name="menu_Video">	
+		<include content="menu_Views"></include>
+		<include content="menu_Commons"></include>
+		<include content="menu_Watched"></include>
+
 		<!--filter-->
 		<control type="group" id="7011">
 			<height>108</height>
@@ -1044,12 +1051,7 @@
 			</control>
 		</control>
 
-		<include content="menu_AddonSettings">
-
-			
-
-		</include>
-
+		<include content="menu_AddonSettings"></include>
 		<include content="menu_Extras"></include>
 
 	</include>
@@ -1059,7 +1061,6 @@
 
 		<include condition="!Window.IsActive(1110)">menu_Views</include>
 		<include condition="!Window.IsActive(1110)">menu_Commons</include>
-
 
 		<!-- Games system settings -->
 		<control type="group" id="7010">
@@ -1742,6 +1743,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!--recordings-->
 		<control type="group" id="7052">
 			<height>108</height>
@@ -1755,7 +1757,7 @@
 				<top>12</top>
 				<label>$LOCALIZE[19163]</label>
 				<onup>102</onup>
-				<ondown>7054</ondown>
+				<ondown>7010</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
 				<include>menu_Button</include>
@@ -1780,6 +1782,9 @@
 				</control>
 			</control>
 		</control>
+
+		<include content="menu_Watched"></include>
+
 		<!--timers-->
 		<control type="group" id="7054">
 			<height>108</height>
@@ -1792,7 +1797,7 @@
 			<control type="button" id="105">
 				<top>12</top>
 				<label>$LOCALIZE[19040]</label>
-				<onup>7052</onup>
+				<onup>7010</onup>
 				<ondown>106</ondown>
 				<onleft>7100</onleft>
 				<onright>50</onright>
