@@ -23,9 +23,6 @@
 		<thumb />
 		<action>ActivateWindow(filemanager)</action>
 	</shortcut>
-<<<<<<< HEAD
-</shortcuts>
-=======
 	<shortcut>
 		<defaultID>MyOSMC</defaultID>
 		<label>MyOSMC</label>
@@ -44,4 +41,3 @@
 		<action>ActivateWindow(shutdownmenu)</action>
 	</shortcut>
 </shortcuts>
->>>>>>> 223085f... MyOSMC shortcut
