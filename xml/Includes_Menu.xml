@@ -390,7 +390,6 @@
 	</include>
 
 	<include name="menu_AddonSettings">
-		<!-- Add-on settings -->
 		<control type="group" id="7011">
 			<height>108</height>
 			<visible>!String.IsEmpty(Container.PluginName)</visible>
@@ -430,7 +429,6 @@
 	</include>
 
 	<include name="menu_Watched">
-		<!--hide watched-->
 		<control type="group" id="7010">
 			<height>108</height>
 			<visible>Window.IsActive(videos) | String.StartsWith(Container.FolderPath,pvr://recordings/)</visible>
