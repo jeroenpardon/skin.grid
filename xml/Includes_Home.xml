@@ -33,7 +33,16 @@
 			<visible>Container(9000).HasNext + Integer.IsGreater(Container(9000).NumItems,8)</visible>
 		</control>
 
+		<!-- Volume slider -->
+		<include content="global_Progress">
+			<param name="ID">29999</param>
+			<param name="Info">Player.Volume</param>
+			<param name="ProgressHeight">98</param>
+			<param name="Visible">Window.IsActive(volumebar) + Integer.IsGreater(Player.Volume,0)</param>
+		</include>
+
 		<include>home_Menu-vertical</include>
+
 		<include content="global_WindowChrome">
 			<param name="Height">98</param>
 			<param name="Title">$VAR[window:Title.Home]</param>
@@ -101,9 +110,21 @@
 					<animation effect="fade" start="100" end="0" time="400" reversible="true" tween="Quadratic" easing="Out">Hidden</animation>
 					<visible>!String.IsEqual(Window(Home).Property(BlurIsActive),true)</visible>
 				</control>
+
+				<!-- Volume slider -->
+				<include content="global_Progress">
+					<param name="ID">29999</param>
+					<param name="Info">Player.Volume</param>
+					<param name="ProgressHeight">108</param>
+					<param name="Visible">Window.IsActive(volumebar) + Integer.IsGreater(Player.Volume,0)</param>
+				</include>
 		
 				<!-- Horizontal home window chrome -->
-				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">global_WindowChrome</include>
+				<include content="global_WindowChrome">
+					<param name="Height">108</param>
+					<param name="Title">$VAR[window:Title.Home]</param>
+					<param name="ProgressHeight">108</param>
+				</include>
 
 				<!-- Feed container-->
 				<include content="home_Widgets">

@@ -181,9 +181,9 @@
 		<param name="Font" default="Black-48"/>
 		<param name="Height" default="108"/>
 		<param name="ItemCount" default="$INFO[Container.NumItems]"/>
+		<param name="ProgressHeight" default="108"/>
 		<param name="ProgressLeft" default="128"/>
 		<param name="ProgressTop" default="0"/>
-		<param name="ProgressHeight" default="108"/>
 		<param name="ProgressWidth" default="1664"/>
 		<param name="ShowItemCount" default="True" />
 		<param name="ShowSymbol" default="true"/>
