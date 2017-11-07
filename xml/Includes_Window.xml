@@ -154,11 +154,16 @@
 	<include name="global_Progress">
 		<param name="ID"/>
 		<param name="Info"/>
+		<param name="Left" default="128"/>
+		<param name="ProgressHeight"/>
+		<param name="Top"/>
 		<param name="Visible"/>
+		<param name="Width" default="1664"/>
 		<definition>
 			<control type="progress" id="$PARAM[ID]">
-				<left>128</left>
-				<width>1664</width>
+				<top>$PARAM[Top]</top>
+				<left>$PARAM[Left]</left>
+				<width>$PARAM[Width]</width>
 				<height>$PARAM[ProgressHeight]</height>
 				<info>$PARAM[Info]</info>
 				<texturebg colordiffuse="$VAR[color:Accent]">progress/player/0.png</texturebg>
@@ -166,7 +171,8 @@
 				<midtexture colordiffuse="$VAR[color:Accent]">progress/player/50.png</midtexture>
 				<righttexture></righttexture>
 				<visible>$PARAM[Visible]</visible>
-				<include>transition_Chrome</include>
+				<include>fadeinout</include>
+				<orientation>vertical</orientation>
 			</control>
 		</definition>
 	</include>
@@ -202,7 +208,6 @@
 					<height>$PARAM[Height]</height>
 					<texture colordiffuse="ff000000">colorize/30.png</texture>
 					<aspectratio>stretch</aspectratio>
-
 					<visible>![Window.IsActive(Home) + Integer.IsGreater(Player.Volume,0)]</visible>
 				</control>
 				<control type="label">
@@ -246,7 +251,8 @@
 				<include content="global_Progress">
 					<param name="ID">29999</param>
 					<param name="Info">Player.Volume</param>
-					<param name="Visible">Window.IsActive(volumebar) + Integer.IsGreater(Player.Volume,0)</param>
+					<param name="ProgressHeight">108</param>
+					<param name="Visible">!Window.IsVisible(home) + Window.IsActive(volumebar) + Integer.IsGreater(Player.Volume,0)</param>
 				</include>
 
 				<!-- Player progress -->
