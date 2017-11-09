@@ -129,6 +129,7 @@ I can point you in the right direction if I can, but I can't and won't talk you 
 
 No, there isn't and there never will be. There is an indicator if the item is unwatched or when it's partly watched. If there is no indicator, the item is not watched. I find this obvious and logical, and thus feel there is no added value in placing an indicator on files that have been watched. If you are reading a book, you place a bookmark where you stopped reading. You don't put a bookmark on every page you've read so far.
 
+<a name="faq_verticalmenu"></a>
 > Can you make the main menu items in the vertical menu not open the submenu first?
 
 No, that is not the way the menu works or can work. Any main menu item that has one or more submenu items will open the submenu first so you can get to it if needed. Press the main menu item one more time to open whatever the main menu's target is set at. Any main menu item without one or more submenu items will open the main menu item's target right away.
