@@ -2,10 +2,28 @@
 <window>
 	<controls>
 		<control type="group">
-			<visible>VideoPlayer.IsFullscreen</visible>
-			<include content="global_WindowChrome">
-				<param name="Title">$VAR[window:Title.Player]</param>
-			</include>
+			<control type="progress" id="29999">
+				<info>Player.Volume</info>
+				<visible>false</visible>
+			</control>
+			<control type="image">
+				<left>28</left>
+				<top>18</top>
+				<width>72</width>
+				<height>72</height>
+				<texture colordiffuse="$VAR[color:Text.2]">volume/p100.png</texture>
+				<include>fadeinout</include>
+				<animation effect="fade" start="100" end="0" delay="300" time="500" tween="sine" condition="Player.Muted">Conditional</animation>
+			</control>
+			<control type="image">
+				<left>28</left>
+				<top>18</top>
+				<width>72</width>
+				<height>72</height>
+				<texture>$INFO[Control.GetLabel(29999),volume/p,.png]</texture>
+				<include>fadeinout</include>
+				<animation effect="fade" start="100" end="0" delay="300" time="500" tween="sine" condition="Player.Muted">Conditional</animation>
+			</control>
 		</control>
 	</controls>
 </window>
