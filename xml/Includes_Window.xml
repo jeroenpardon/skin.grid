@@ -247,6 +247,14 @@
 					<visible>!Window.IsActive(Home)</visible>
 				</control>
 
+				<!-- Volume slider -->
+				<include content="global_Progress">
+					<param name="ID">29999</param>
+					<param name="Info">Player.Volume</param>
+					<param name="ProgressHeight">108</param>
+					<param name="Visible">!Window.IsVisible(home) + Window.IsActive(volumebar) + Integer.IsGreater(Player.Volume,0)</param>
+				</include>
+
 				<!-- Player progress -->
 				<include content="global_Progress" condition="!Window.IsVisible(pvrgroupmanager)">
 					<param name="ID">12</param>
