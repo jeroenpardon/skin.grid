@@ -320,18 +320,17 @@ msgctxt "#31155"
 msgid "Grid offers many customization options, you can find them all in the skin settings section.[CR]You are welcome to join the discussion in Grid's forum section on the official Kodi forums. Please do read the FAQ before you do so. You can find these and a link to the forum at www.gridskin.net."
 msgstr ""
 
-#. Example usage: Yes, show me where to find the options
-msgctxt "#31160"
-msgid "Yes, take me there"
-msgstr ""
-
-msgctxt "#31161"
-msgid "I'll do this later"
-msgstr ""
-
 #. Example usage: clear, understood
-msgctxt "#31162"
+msgctxt "#31156"
 msgid "Got it"
+msgstr ""
+
+msgctxt "#31157"
+msgid "Customize Grid"
+msgstr ""
+
+msgctxt "#31158"
+msgid "Finish setup"
 msgstr ""
 
 
