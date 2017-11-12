@@ -1198,7 +1198,7 @@ msgstr ""
 
 #. Do not translate
 msgctxt "#31860"
-msgid "Default (Latin, Vietnamese)"
+msgid "Default (Cyrillic, Latin, Vietnamese)"
 msgstr ""
 
 #. Do not translate
