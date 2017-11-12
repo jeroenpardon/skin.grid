@@ -28,10 +28,10 @@
 					<include>global_Header</include>	
 				</control>
 				<control type="label">
-					<label>$VAR[player:Decoder]</label>
+					<label>$VAR[player:Video.Decoder]</label>
 					<height>45</height>
 					<include>global_Label</include>
-					<visible>!VideoPLayer.Content(livetv)</visible>
+					<visible>Player.HasVideo</visible>
 				</control>
 				<control type="label">
 					<label>$LOCALIZE[157]: $INFO[Player.Process(videodecoder),,]$INFO[Player.Process(pixformat), / ,]</label>
