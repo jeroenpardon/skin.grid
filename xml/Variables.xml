@@ -1101,9 +1101,9 @@
 	</variable>
 
 	<variable name="setup:Accept.Label">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31160]</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">$LOCALIZE[31162]</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31160]</value>
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[107]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">$LOCALIZE[31156]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31157]</value>
 	</variable>
 
 	<variable name="setup:Advance">
@@ -1118,9 +1118,9 @@
 	</variable>
 
 	<variable name="setup:Decline.Label">
-		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31161]</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage2)">$LOCALIZE[31162]</value>
-		<value condition="String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31161]</value>
+		<value condition="!String.IsEqual(Skin.String(Setup),stage2) + !String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[106]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage2)">$LOCALIZE[31156]</value>
+		<value condition="String.IsEqual(Skin.String(Setup),stage3)">$LOCALIZE[31158]</value>
 	</variable>
 
 	<variable name="setup:Description">

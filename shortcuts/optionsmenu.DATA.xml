@@ -50,7 +50,7 @@
 	</shortcut>
 	<shortcut>
 		<defaultID>Options</defaultID>
-		<label>$SKIN[31309|skin.grid|Customize this menu]</label>
+		<label>$LOCALIZE[31309]</label>
 		<label2>Skin</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />

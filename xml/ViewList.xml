@@ -978,11 +978,11 @@
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
-							<top>40</top>
+							<top>45</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>top</aligny>
-							<font>Regular-20</font>
+							<font>Regular-18</font>
 							<label>$PARAM[Label2]</label>
 							<textcolor>$VAR[color:Text.2]</textcolor>
 							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
@@ -1067,11 +1067,11 @@
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
-							<top>40</top>
+							<top>45</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>top</aligny>
-							<font>Regular-20</font>
+							<font>Regular-18</font>
 							<label>$PARAM[Label2]</label>
 							<textcolor>$VAR[color:Main]</textcolor>
 							<visible>$PARAM[!Label2Empty]</visible>
@@ -1105,11 +1105,11 @@
 							<visible>$PARAM[!Label2Empty]</visible>
 						</control>
 						<control type="label">
-							<top>40</top>
+							<top>45</top>
 							<width>$PARAM[TextWidth]</width>
 							<height>45</height>
 							<aligny>top</aligny>
-							<font>Regular-20</font>
+							<font>Regular-18</font>
 							<label>$PARAM[Label2]</label>
 							<textcolor>$VAR[color:Text.2]</textcolor>
 							<selectedcolor>$VAR[color:Text.2]</selectedcolor>
