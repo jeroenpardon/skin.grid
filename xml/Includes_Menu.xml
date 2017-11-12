@@ -470,9 +470,9 @@
 	</include>
 
 	<include name="menu_Video">	
-		<include content="menu_Views"></include>
-		<include content="menu_Commons"></include>
-		<include content="menu_Watched"></include>
+		<include>menu_Views</include>
+		<include>menu_Commons</include>
+		<include>menu_Watched</include>
 
 		<!--filter-->
 		<control type="group" id="7011">
