@@ -96,6 +96,7 @@
 					<control type="grouplist">
 						<height>80</height>
 						<orientation>horizontal</orientation>
+						<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)</visible>
 						<!-- Rating -->
 						<control type="label">
 							<width>25</width>
@@ -155,6 +156,16 @@
 						<label>$INFO[ListItem.Genre,, - ]$INFO[ListItem.Plot]</label>
 						<font>Slab-24</font>
 						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow)</visible>
+					</control>
+					<control type="textbox">
+						<align>left</align>
+						<width>1188</width>
+						<height>295</height>
+						<label>$INFO[ListItem.Genre,, - ]$INFO[ListItem.Plot]</label>
+						<font>Slab-24</font>
+						<textcolor>$VAR[color:Accent]</textcolor>
+						<visible>!String.IsEqual(ListItem.DBType,movie) + !String.IsEqual(ListItem.DBType,tvshow)</visible>
 					</control>
 				</control>
 			</control>
