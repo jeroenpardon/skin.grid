@@ -1419,11 +1419,13 @@
 <!-- Window titles -->
 
 	<variable name="window:Title.Home">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="[Window.IsVisible(volumebar) + !Player.Muted] + Window.IsActive(Home)">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value></value>
 	</variable>
 
 	<variable name="window:Title.Addons">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="[Window.IsVisible(volumebar) + !Player.Muted] + Window.IsActive(Home)">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$LOCALIZE[4]</value>
 		<value condition="Window.IsActive(script-cu-lrclyrics-main.xml)">$LOCALIZE[24013]</value>
@@ -1431,6 +1433,7 @@
 	</variable>
 
 	<variable name="window:Title.Custom">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(1103)">$LOCALIZE[31206]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle]</value>
@@ -1440,6 +1443,7 @@
 	</variable>
 
 	<variable name="window:Title.Dialog">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(contextmenu)">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(shutdownmenu)">$LOCALIZE[13012]</value>
@@ -1464,6 +1468,7 @@
 	</variable>
 
 	<variable name="window:Title.Info">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[24003]</value>
@@ -1476,6 +1481,8 @@
 	</variable>
 
 	<variable name="window:Title.Media">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 		<value condition="Window.IsActive(1110)">$LOCALIZE[24001]</value>
@@ -1494,6 +1501,7 @@
 	</variable>
 
 	<variable name="window:Title.Player">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(subtitlesearch)">$LOCALIZE[287]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.IsVisible(osdvideosettings)">$LOCALIZE[13395]</value>
@@ -1509,6 +1517,7 @@
 	</variable>
 
 	<variable name="window:Title.PVR">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/tv/)">$LOCALIZE[19023]</value>
@@ -1520,6 +1529,7 @@
 	</variable>
 
 	<variable name="window:Title.System">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31311]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),optionsmenu)">$LOCALIZE[31310]</value>
