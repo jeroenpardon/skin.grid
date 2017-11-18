@@ -69,6 +69,14 @@
 	<setting id="viz.mode" value="viz" label="$LOCALIZE[250]"/>
 	<setting id="viz.mode" value="blend" label="$LOCALIZE[20131]"/>
 
+	<!-- Video information window infoline-->
+	<setting id="info.extended" value="none" label="$LOCALIZE[13113]" default="true"/>
+	<setting id="info.extended" value="rating" label="$LOCALIZE[563]"/>
+	<setting id="info.extended" value="awards" label="$LOCALIZE[31671]"/>
+	<setting id="info.extended" value="tags" label="$LOCALIZE[20459]"/>
+	<setting id="info.extended" value="ratingawards" label="$LOCALIZE[563] &amp; $LOCALIZE[31671]"/>
+	<setting id="info.extended" value="ratingawardstags" label="$LOCALIZE[563], $LOCALIZE[20459] &amp; $LOCALIZE[20459]"/>
+
 	<!-- Ratings source -->
 	<setting id="ratings.video" value="disabled" label="$LOCALIZE[36502]" default="true"/>
 	<setting id="ratings.video" value="default" label="Kodi $LOCALIZE[571]"/>
