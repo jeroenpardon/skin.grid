@@ -143,7 +143,6 @@
 		<node label="32029">
 			<content>common</content>
 			<shortcut label="$LOCALIZE[24001]" type="31072">ActivateWindow(addonbrowser)</shortcut>
-			<shortcut label="$LOCALIZE[15016]" type="31072">ActivateWindow(games)</shortcut>
 			<shortcut label="$LOCALIZE[31302]" type="31072">ActivateWindow(shutdownmenu)</shortcut>
 		</node>
 
