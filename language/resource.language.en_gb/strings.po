@@ -800,6 +800,11 @@ msgctxt "#31380"
 msgid "Don't show media information when pausing video"
 msgstr ""
 
+#. a skin settings function that allows the user to select additional information to show in the video information window (ratings, awards and tags)
+msgctxt "#31381"
+msgid "Select extended video information"
+msgstr ""
+
 
 
 #: osd / player
@@ -1047,6 +1052,10 @@ msgstr ""
 
 msgctxt "#31670"
 msgid "Last air date"
+msgstr ""
+
+msgctxt "#31671"
+msgid "Awards"
 msgstr ""
 
 

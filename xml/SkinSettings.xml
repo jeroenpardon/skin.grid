@@ -535,6 +535,19 @@
 						<visible>String.IsEqual(Skin.String(homemenu.layout),vertical)</visible>
 					</control>
 
+					<!-- Video information -->
+					<control type="label" id="9444">
+						<label>$LOCALIZE[20159]</label>
+						<include>global_Header</include>
+					</control>
+					<control type="button" id="9445">
+						<label>$LOCALIZE[31381]</label>
+						<label2>$INFO[Skin.String(info.extended.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=info.extended,header=$LOCALIZE[31381])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+					</control>
+
 					<!-- OSD -->
 					<control type="label" id="9450">
 						<label>$LOCALIZE[478]</label>
