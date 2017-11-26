@@ -2299,7 +2299,7 @@
 			</control>
 			<control type="button" id="60">
 				<top>12</top>
-				<label>Close menu</label>
+				<label>$LOCALIZE[31087]</label>
 				<onup>7014</onup>
 				<ondown>7014</ondown>
 				<onleft>7100</onleft>
