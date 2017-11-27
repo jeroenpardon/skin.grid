@@ -820,6 +820,10 @@ msgctxt "#31382"
 msgid "Manage hub sources"
 msgstr ""
 
+msgctxt "#31383"
+msgid "Hubs"
+msgstr ""
+
 
 
 #: osd / player

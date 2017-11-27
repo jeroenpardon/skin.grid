@@ -87,6 +87,12 @@
 	<!-- Shortcut grouping -->
 	<groupings>
 		<node label="Grid">
+			<!-- Hubs -->
+			<node label="31383">
+				<shortcut label="$LOCALIZE[36912]" type="31004">ActivateWindow(1130)</shortcut>
+				<shortcut label="$LOCALIZE[36901]" type="31004">ActivateWindow(1132)</shortcut>
+				<shortcut label="$LOCALIZE[36903]" type="31004">ActivateWindow(1131)</shortcut>
+			</node>
 			<!-- Videos -->
 			<node label="3">
 				<shortcut label="$LOCALIZE[31719]" type="31004">ActivateWindow(Videos,plugin://service.library.data.provider?type=randommovies,return)</shortcut>
