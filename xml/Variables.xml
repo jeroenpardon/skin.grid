@@ -1495,6 +1495,7 @@
 		<value condition="Control.HasFocus(5050)">$INFO[Container(5050).NumItems]</value>
 		<value condition="Control.HasFocus(5060)">$INFO[Container(5060).NumItems]</value>
 		<value condition="Control.HasFocus(5070)">$INFO[Container(5070).NumItems]</value>
+		<value condition="Control.HasFocus(5099)">$INFO[Container(5099).NumItems]</value>
 		<value>$INFO[Container.NumItems]</value>
 	</variable>
 
