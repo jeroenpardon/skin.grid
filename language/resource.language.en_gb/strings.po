@@ -294,6 +294,11 @@ msgctxt "#31087"
 msgid "Close menu"
 msgstr ""
 
+#. As in the sources of media configured on your device
+msgctxt "#31088"
+msgid "Sources"
+msgstr ""
+
 
 
 #: setup
@@ -810,6 +815,11 @@ msgctxt "#31381"
 msgid "Select extended video information"
 msgstr ""
 
+#. used to navigate to a section in the skin settings window that lets the user pick sources to display in the media hubs
+msgctxt "#31382"
+msgid "Manage hub sources"
+msgstr ""
+
 
 
 #: osd / player
@@ -1061,6 +1071,14 @@ msgstr ""
 
 msgctxt "#31671"
 msgid "Awards"
+msgstr ""
+
+msgctxt "#31672"
+msgid "All movies"
+msgstr ""
+
+msgctxt "#31673"
+msgid "All tv shows"
 msgstr ""
 
 

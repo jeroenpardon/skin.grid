@@ -16,6 +16,7 @@
 	<include file="ViewGuide.xml" />
 	<include file="ViewIcon.xml" />
 	<include file="ViewList.xml" />
+	<include file="ViewLabels.xml" />
 	<include file="ViewSlide.xml" />
 
 <!-- Constants -->
@@ -358,6 +359,59 @@
 					<textcolor>$VAR[color:Accent]</textcolor>
 					<selectedcolor>$VAR[color:Accent]</selectedcolor>
 					<font>Regular-18</font>
+				</control>
+			</control>
+		</definition>
+	</include>
+
+	<include name="media_Status.Hub">
+		<param name="Right" default="10"/>
+		<param name="Top" default="10"/>
+		<definition>
+			<control type="group" id="96">
+				<right>$PARAM[Right]</right>
+				<top>$PARAM[Top]</top>
+				<width>96</width>
+				<height>54</height>
+				<visible>Window.IsActive(1131) + String.IsEqual(ListItem.DBType,episode)</visible>
+				<control type="image">
+					<width>96</width>
+					<height>54</height>
+					<texture colordiffuse="$VAR[color:Text.2]">colorize/100.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<width>96</width>
+					<height>54</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Regular-18</font>
+					<label>$VAR[widget:ShortLabel]</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<selectedcolor>$VAR[color:Accent]</selectedcolor>
+				</control>
+			</control>
+			<control type="group" id="97">
+				<right>$PARAM[Right]</right>
+				<top>$PARAM[Top]</top>
+				<width>64</width>
+				<height>54</height>
+				<visible>Window.IsActive(1131) + String.IsEqual(ListItem.DBType,tvshow) + !String.IsEmpty(ListItem.Property(UnwatchedEpisodes))</visible>
+				<control type="image">
+					<width>64</width>
+					<height>54</height>
+					<texture colordiffuse="$VAR[color:Text.2]">colorize/100.png</texture>
+					<aspectratio>stretch</aspectratio>
+				</control>
+				<control type="label">
+					<width>64</width>
+					<height>54</height>
+					<align>center</align>
+					<aligny>center</aligny>
+					<font>Regular-18</font>
+					<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+					<textcolor>$VAR[color:Accent]</textcolor>
+					<selectedcolor>$VAR[color:Accent]</selectedcolor>
 				</control>
 			</control>
 		</definition>

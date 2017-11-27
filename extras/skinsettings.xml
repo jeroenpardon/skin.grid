@@ -6,6 +6,142 @@
 	<setting id="autoscroll.speed" value="slow" label="$LOCALIZE[31330]"/>
 	<setting id="autoscroll.speed" value="fast" label="$LOCALIZE[31328]"/>
 
+
+	<!-- Movies hub -->
+	<setting id="hub.movies.1" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.movies.1" value="inprogress" label="$LOCALIZE[575]" default="true"/>
+	<setting id="hub.movies.1" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.movies.1" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.movies.1" value="all" label="$LOCALIZE[31672]"/>
+	<setting id="hub.movies.1" value="popular" label="$ADDON[script.extendedinfo 32044]"/>
+	<setting id="hub.movies.1" value="cinema" label="$ADDON[script.extendedinfo 32042]"/>
+	<setting id="hub.movies.1" value="upcoming" label="$ADDON[script.extendedinfo 32043]"/>
+
+	<setting id="hub.movies.2" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.movies.2" value="inprogress" label="$LOCALIZE[575]"/>
+	<setting id="hub.movies.2" value="recent" label="$LOCALIZE[31665]" default="true"/>
+	<setting id="hub.movies.2" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.movies.2" value="all" label="$LOCALIZE[31672]"/>
+	<setting id="hub.movies.2" value="popular" label="$ADDON[script.extendedinfo 32044]"/>
+	<setting id="hub.movies.2" value="cinema" label="$ADDON[script.extendedinfo 32042]"/>
+	<setting id="hub.movies.2" value="upcoming" label="$ADDON[script.extendedinfo 32043]"/>
+
+	<setting id="hub.movies.3" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.movies.3" value="inprogress" label="$LOCALIZE[575]"/>
+	<setting id="hub.movies.3" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.movies.3" value="unwatched" label="$LOCALIZE[16101]" default="true"/>
+	<setting id="hub.movies.3" value="all" label="$LOCALIZE[31672]"/>
+	<setting id="hub.movies.3" value="popular" label="$ADDON[script.extendedinfo 32044]"/>
+	<setting id="hub.movies.3" value="cinema" label="$ADDON[script.extendedinfo 32042]"/>
+	<setting id="hub.movies.3" value="upcoming" label="$ADDON[script.extendedinfo 32043]"/>
+
+	<setting id="hub.movies.3" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.movies.4" value="inprogress" label="$LOCALIZE[575]"/>
+	<setting id="hub.movies.4" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.movies.4" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.movies.4" value="all" label="$LOCALIZE[31672]" default="true"/>
+	<setting id="hub.movies.4" value="popular" label="$ADDON[script.extendedinfo 32044]"/>
+	<setting id="hub.movies.4" value="cinema" label="$ADDON[script.extendedinfo 32042]"/>
+	<setting id="hub.movies.4" value="upcoming" label="$ADDON[script.extendedinfo 32043]"/>
+
+	<setting id="hub.movies.5" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.movies.5" value="inprogress" label="$LOCALIZE[575]"/>
+	<setting id="hub.movies.5" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.movies.5" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.movies.5" value="all" label="$LOCALIZE[31672]"/>
+	<setting id="hub.movies.5" value="popular" label="$ADDON[script.extendedinfo 32044]" default="true"/>
+	<setting id="hub.movies.5" value="cinema" label="$ADDON[script.extendedinfo 32042]"/>
+	<setting id="hub.movies.5" value="upcoming" label="$ADDON[script.extendedinfo 32043]"/>
+
+	<setting id="hub.movies.6" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.movies.6" value="inprogress" label="$LOCALIZE[575]"/>
+	<setting id="hub.movies.6" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.movies.6" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.movies.6" value="all" label="$LOCALIZE[31672]"/>
+	<setting id="hub.movies.6" value="popular" label="$ADDON[script.extendedinfo 32044]"/>
+	<setting id="hub.movies.6" value="cinema" label="$ADDON[script.extendedinfo 32042]" default="true"/>
+	<setting id="hub.movies.6" value="upcoming" label="$ADDON[script.extendedinfo 32043]"/>
+
+	<setting id="hub.movies.7" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.movies.7" value="inprogress" label="$LOCALIZE[575]"/>
+	<setting id="hub.movies.7" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.movies.7" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.movies.7" value="all" label="$LOCALIZE[31672]"/>
+	<setting id="hub.movies.7" value="popular" label="$ADDON[script.extendedinfo 32044]"/>
+	<setting id="hub.movies.7" value="cinema" label="$ADDON[script.extendedinfo 32042]" default="true"/>
+	<setting id="hub.movies.7" value="upcoming" label="$ADDON[script.extendedinfo 32043]"/>
+
+
+	<!-- TV Shows hub -->
+	<setting id="hub.shows.1" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.shows.1" value="watchlist" label="$LOCALIZE[31712]" default="true"/>
+	<setting id="hub.shows.1" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.shows.1" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.shows.1" value="all" label="$LOCALIZE[31673]"/>
+	<setting id="hub.shows.1" value="popular" label="$ADDON[script.extendedinfo 32041]"/>
+	<setting id="hub.shows.1" value="onair" label="$ADDON[script.extendedinfo 32039]"/>
+	<setting id="hub.shows.1" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
+
+	<setting id="hub.shows.2" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.shows.2" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.2" value="recent" label="$LOCALIZE[31665]" default="true"/>
+	<setting id="hub.shows.2" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.shows.2" value="all" label="$LOCALIZE[31673]"/>
+	<setting id="hub.shows.2" value="popular" label="$ADDON[script.extendedinfo 32041]"/>
+	<setting id="hub.shows.2" value="onair" label="$ADDON[script.extendedinfo 32039]"/>
+	<setting id="hub.shows.2" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
+
+	<setting id="hub.shows.3" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.shows.3" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.3" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.shows.3" value="unwatched" label="$LOCALIZE[16101]" default="true"/>
+	<setting id="hub.shows.3" value="all" label="$LOCALIZE[31673]"/>
+	<setting id="hub.shows.3" value="popular" label="$ADDON[script.extendedinfo 32041]"/>
+	<setting id="hub.shows.3" value="onair" label="$ADDON[script.extendedinfo 32039]"/>
+	<setting id="hub.shows.3" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
+
+	<setting id="hub.shows.3" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.shows.4" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.4" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.shows.4" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.shows.4" value="all" label="$LOCALIZE[31673]" default="true"/>
+	<setting id="hub.shows.4" value="popular" label="$ADDON[script.extendedinfo 32041]"/>
+	<setting id="hub.shows.4" value="onair" label="$ADDON[script.extendedinfo 32039]"/>
+	<setting id="hub.shows.4" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
+
+	<setting id="hub.shows.5" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.shows.5" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.5" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.shows.5" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.shows.5" value="all" label="$LOCALIZE[31673]"/>
+	<setting id="hub.shows.5" value="popular" label="$ADDON[script.extendedinfo 32041]" default="true"/>
+	<setting id="hub.shows.5" value="onair" label="$ADDON[script.extendedinfo 32039]"/>
+	<setting id="hub.shows.5" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
+
+	<setting id="hub.shows.6" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.shows.6" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.6" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.shows.6" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.shows.6" value="all" label="$LOCALIZE[31673]"/>
+	<setting id="hub.shows.6" value="popular" label="$ADDON[script.extendedinfo 32041]"/>
+	<setting id="hub.shows.6" value="onair" label="$ADDON[script.extendedinfo 32039]" default="true"/>
+	<setting id="hub.shows.6" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
+
+	<setting id="hub.shows.7" value="none" label="$LOCALIZE[13113]"/>
+	<setting id="hub.shows.7" value="watchlist" label="$LOCALIZE[31712]"/>
+	<setting id="hub.shows.7" value="recent" label="$LOCALIZE[31665]"/>
+	<setting id="hub.shows.7" value="unwatched" label="$LOCALIZE[16101]"/>
+	<setting id="hub.shows.7" value="all" label="$LOCALIZE[31673]"/>
+	<setting id="hub.shows.7" value="popular" label="$ADDON[script.extendedinfo 32041]"/>
+	<setting id="hub.shows.7" value="onair" label="$ADDON[script.extendedinfo 32039]" default="true"/>
+	<setting id="hub.shows.7" value="airing" label="$ADDON[script.extendedinfo 32028]"/>
+
+
+
+
+
+	
+
 	<!-- Home menu layout -->
 	<setting id="homemenu.layout" value="vertical" label="$LOCALIZE[31058]" default="true">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>

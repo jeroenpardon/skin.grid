@@ -300,7 +300,7 @@
 				<!-- Select widget -->
 				<control type="group" id="613">
 					<height>90</height>
-					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
+					<visible>String.IsEqual(Window.Property(groupname),mainmenu) | String.IsEqual(Window.Property(groupname),videoshub)</visible>
 					<control type="button" id="312">
 						<width>100%</width>
 						<label>$VAR[widget:Name]</label>
