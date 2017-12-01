@@ -237,7 +237,8 @@
 				</control>
 				<include content="view_Labels">
 					<param name="ID">5099</param>
-					<param name="Path">videodb://tvshows/</param>
+					<param name="Path2">videodb://tvshows/</param>
+					<param name="UseCustomPath">true</param>
 				</include>
 			</control>
 		</control>

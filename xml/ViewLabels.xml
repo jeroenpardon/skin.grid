@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-	
 	<include name="view_Labels">
 		<param name="ID"/>
 		<param name="Path"/>
+		<param name="Path2" default="videodb://recentlyaddedmovies/"/>
+		<param name="UseCustomPath" default="false"/>
 		<definition>
 			<control type="panel" id="$PARAM[ID]">
 				<width>1664</width>
@@ -58,9 +59,11 @@
 						</control>
 					</control>
 				</focusedlayout>
-				<content>$PARAM[Path]</content>
+				<include content="CustomPath" condition="$PARAM[UseCustomPath]">
+					<param name="Path">$PARAM[Path2]</param>
+					<param name="SortBy">$PARAM[SortBy2]</param>
+				</include>
 			</control>
 		</definition>
 	</include>
-
 </includes>

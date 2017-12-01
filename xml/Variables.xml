@@ -1708,6 +1708,9 @@
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31311]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),optionsmenu)">$LOCALIZE[31310]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),36912)">$LOCALIZE[31312] $LOCALIZE[36912]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),36901)">$LOCALIZE[31312] $LOCALIZE[36901]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),36902)">$LOCALIZE[31312] $LOCALIZE[36902]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml)">$LOCALIZE[31312] $INFO[Window.Property(groupname)]</value>
 		<value condition="Window.IsActive(script-skin_helper_service-ColorPicker.xml)">$ADDON[script.skin.helper.colorpicker 32011]</value>
 		<value condition="Window.IsActive(InterfaceSettings)">$LOCALIZE[14207]</value>  

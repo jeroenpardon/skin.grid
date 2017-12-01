@@ -256,7 +256,8 @@
 				</control>
 				<include content="view_Labels">
 					<param name="ID">5099</param>
-					<param name="Path">sources://videos/</param>
+					<param name="Path2">sources://videos/</param>
+					<param name="UseCustomPath">true</param>
 				</include>
 
 			</control>
