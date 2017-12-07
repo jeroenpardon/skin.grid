@@ -122,7 +122,7 @@
 					<include condition="Window.IsActive(videoplaylist) | Window.IsActive(musicplaylist)">menu_Playlist</include>
 					<include condition="Window.IsActive(Weather)">menu_Weather</include>
 					<include condition="Window.IsActive(1106)">menu_Demo</include>
-					<include condition="Window.IsActive(1130) | Window.IsActive(1131) | Window.IsActive(1132)">menu_Hub</include>		
+					<include condition="Window.IsActive(1130) | Window.IsActive(1131) | Window.IsActive(1132) | Window.IsActive(1133)">menu_Hub</include>		
 				</control>
 			</control>
 		</control>
