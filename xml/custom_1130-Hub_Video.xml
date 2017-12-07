@@ -64,7 +64,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">!String.IsEmpty(Skin.String(hub.videos.1))</param>
+					<param name="Visible">Integer.IsGreaterOrEqual(Container(5010).NumItems,1) + !String.IsEqual(Skin.String(hub.videos.1),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -94,7 +94,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">!String.IsEmpty(Skin.String(hub.videos.2))</param>
+					<param name="Visible">Integer.IsGreaterOrEqual(Container(5020).NumItems,1) + !String.IsEqual(Skin.String(hub.videos.2),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -124,7 +124,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">!String.IsEmpty(Skin.String(hub.videos.3))</param>
+					<param name="Visible">Integer.IsGreaterOrEqual(Container(5030).NumItems,1) + !String.IsEqual(Skin.String(hub.videos.3),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -154,7 +154,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">!String.IsEmpty(Skin.String(hub.videos.4))</param>
+					<param name="Visible">Integer.IsGreaterOrEqual(Container(5040).NumItems,1) + !String.IsEqual(Skin.String(hub.videos.4),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -184,7 +184,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">!String.IsEmpty(Skin.String(hub.videos.5))</param>
+					<param name="Visible">Integer.IsGreaterOrEqual(Container(5050).NumItems,1) + !String.IsEqual(Skin.String(hub.videos.5),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -214,7 +214,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">!String.IsEmpty(Skin.String(hub.videos.6))</param>
+					<param name="Visible">Integer.IsGreaterOrEqual(Container(5060).NumItems,1) + !String.IsEqual(Skin.String(hub.videos.6),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -244,7 +244,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">!String.IsEmpty(Skin.String(hub.videos.7))</param>
+					<param name="Visible">Integer.IsGreaterOrEqual(Container(5070).NumItems,1) + !String.IsEqual(Skin.String(hub.videos.7),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
