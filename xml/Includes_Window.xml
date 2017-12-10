@@ -180,7 +180,7 @@
 	<include name="global_WindowChrome">
 		<param name="Font" default="Black-48"/>
 		<param name="Height" default="108"/>
-		<param name="ItemCount" default="$INFO[Container.NumItems]"/>
+		<param name="ItemCount" default="$VAR[window:ItemCount]"/>
 		<param name="ProgressHeight" default="108"/>
 		<param name="ProgressLeft" default="128"/>
 		<param name="ProgressTop" default="0"/>

@@ -289,6 +289,16 @@ msgctxt "#31086"
 msgid "Do you want to install it anyway?"
 msgstr ""
 
+#. Used on a control to close an active / opened menu
+msgctxt "#31087"
+msgid "Close menu"
+msgstr ""
+
+#. As in the sources of media configured on your device
+msgctxt "#31088"
+msgid "Sources"
+msgstr ""
+
 
 
 #: setup
@@ -805,6 +815,31 @@ msgctxt "#31381"
 msgid "Select extended video information"
 msgstr ""
 
+#. used to navigate to a section in the skin settings window that lets the user pick sources to display in the media hubs
+msgctxt "#31382"
+msgid "Manage hub sources"
+msgstr ""
+
+msgctxt "#31383"
+msgid "Hubs"
+msgstr ""
+
+msgctxt "#31384"
+msgid "Configure videos hub"
+msgstr ""
+
+msgctxt "#31385"
+msgid "Configure movies hub"
+msgstr ""
+
+msgctxt "#31386"
+msgid "Configure tv shows hub"
+msgstr ""
+
+msgctxt "#31387"
+msgid "Configure music hub"
+msgstr ""
+
 
 
 #: osd / player
@@ -1056,6 +1091,14 @@ msgstr ""
 
 msgctxt "#31671"
 msgid "Awards"
+msgstr ""
+
+msgctxt "#31672"
+msgid "All movies"
+msgstr ""
+
+msgctxt "#31673"
+msgid "All tv shows"
 msgstr ""
 
 
