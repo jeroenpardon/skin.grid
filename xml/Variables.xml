@@ -51,6 +51,15 @@
 		<value condition="Control.HasFocus(214)">$INFO[Container(214).ListItem.Property(Fanart)]</value>
 	</variable>
 
+	<variable name="background:Hub">
+		<value condition="Control.HasFocus(5010)">$INFO[Container(5010).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(5020)">$INFO[Container(5020).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(5030)">$INFO[Container(5030).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(5040)">$INFO[Container(5040).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(5050)">$INFO[Container(5050).ListItem.Art(fanart)]</value>
+		<value condition="Control.HasFocus(5060)">$INFO[Container(5060).ListItem.Art(fanart)]</value>
+	</variable>
+
 <!-- Home -->
 	<variable name="home:Symbol">
 		<value condition="String.IsEmpty(Container(9000).ListItemAbsolute.Property(isSubmenu))">$INFO[ListItem.Property(homeSymbol)]</value>
@@ -164,8 +173,205 @@
 	</variable>
 
 
-<!-- Info -->
+<!-- Movies hub -->
+	<variable name="hub:Movies.1">
+		<value condition="String.IsEqual(Skin.String(hub.movies.1),inprogress)">special://skin/extras/playlists/movies/inprogress.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.1),recent)">videodb://recentlyaddedmovies/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.1),unwatched)">special://skin/extras/playlists/movies/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.1),all)">videodb://movies/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.1),popular)">plugin://script.extendedinfo/?info=popularmovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.1),cinema)">plugin://script.extendedinfo/?info=incinemamovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.1),upcoming)">plugin://script.extendedinfo/?info=upcomingmovies</value>
+	</variable>
+	<variable name="hub:Movies.2">
+		<value condition="String.IsEqual(Skin.String(hub.movies.2),inprogress)">special://skin/extras/playlists/movies/inprogress.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.2),recent)">videodb://recentlyaddedmovies/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.2),unwatched)">special://skin/extras/playlists/movies/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.2),all)">videodb://movies/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.2),popular)">plugin://script.extendedinfo/?info=popularmovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.2),cinema)">plugin://script.extendedinfo/?info=incinemamovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.2),upcoming)">plugin://script.extendedinfo/?info=upcomingmovies</value>
+	</variable>
+	<variable name="hub:Movies.3">
+		<value condition="String.IsEqual(Skin.String(hub.movies.3),inprogress)">special://skin/extras/playlists/movies/inprogress.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.3),recent)">videodb://recentlyaddedmovies/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.3),unwatched)">special://skin/extras/playlists/movies/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.3),all)">videodb://movies/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.3),popular)">plugin://script.extendedinfo/?info=popularmovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.3),cinema)">plugin://script.extendedinfo/?info=incinemamovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.3),upcoming)">plugin://script.extendedinfo/?info=upcomingmovies</value>
+	</variable>
+	<variable name="hub:Movies.4">
+		<value condition="String.IsEqual(Skin.String(hub.movies.4),inprogress)">special://skin/extras/playlists/movies/inprogress.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.4),recent)">videodb://recentlyaddedmovies/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.4),unwatched)">special://skin/extras/playlists/movies/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.4),all)">videodb://movies/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.4),popular)">plugin://script.extendedinfo/?info=popularmovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.4),cinema)">plugin://script.extendedinfo/?info=incinemamovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.4),upcoming)">plugin://script.extendedinfo/?info=upcomingmovies</value>
+	</variable>
+	<variable name="hub:Movies.5">
+		<value condition="String.IsEqual(Skin.String(hub.movies.5),inprogress)">special://skin/extras/playlists/movies/inprogress.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.5),recent)">videodb://recentlyaddedmovies/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.5),unwatched)">special://skin/extras/playlists/movies/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.5),all)">videodb://movies/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.5),popular)">plugin://script.extendedinfo/?info=popularmovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.5),cinema)">plugin://script.extendedinfo/?info=incinemamovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.5),upcoming)">plugin://script.extendedinfo/?info=upcomingmovies</value>
+	</variable>
+	<variable name="hub:Movies.6">
+		<value condition="String.IsEqual(Skin.String(hub.movies.6),inprogress)">special://skin/extras/playlists/movies/inprogress.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.6),recent)">videodb://recentlyaddedmovies/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.6),unwatched)">special://skin/extras/playlists/movies/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.6),all)">videodb://movies/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.6),popular)">plugin://script.extendedinfo/?info=popularmovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.6),cinema)">plugin://script.extendedinfo/?info=incinemamovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.6),upcoming)">plugin://script.extendedinfo/?info=upcomingmovies</value>
+	</variable>
+	<variable name="hub:Movies.7">
+		<value condition="String.IsEqual(Skin.String(hub.movies.7),inprogress)">special://skin/extras/playlists/movies/inprogress.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.7),recent)">videodb://recentlyaddedmovies/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.7),unwatched)">special://skin/extras/playlists/movies/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.7),all)">videodb://movies/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.7),popular)">plugin://script.extendedinfo/?info=popularmovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.7),cinema)">plugin://script.extendedinfo/?info=incinemamovies</value>
+		<value condition="String.IsEqual(Skin.String(hub.movies.7),upcoming)">plugin://script.extendedinfo/?info=upcomingmovies</value>
+	</variable>
 
+
+	<!-- TV Shows Hub -->
+	<variable name="hub:Shows.1">
+		<value condition="String.IsEqual(Skin.String(hub.shows.1),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.1),recent)">videodb://recentlyaddedepisodes/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.1),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.1),all)">videodb://tvshows/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.1),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.1),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.1),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Shows.2">
+		<value condition="String.IsEqual(Skin.String(hub.shows.2),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.2),recent)">videodb://recentlyaddedepisodes/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.2),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.2),all)">videodb://tvshows/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.2),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.2),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.2),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Shows.3">
+		<value condition="String.IsEqual(Skin.String(hub.shows.3),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.3),recent)">videodb://recentlyaddedepisodes/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.3),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.3),all)">videodb://tvshows/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.3),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.3),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.3),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Shows.4">
+		<value condition="String.IsEqual(Skin.String(hub.shows.4),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.4),recent)">videodb://recentlyaddedepisodes/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.4),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.4),all)">videodb://tvshows/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.4),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.4),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.4),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Shows.5">
+		<value condition="String.IsEqual(Skin.String(hub.shows.5),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.5),recent)">videodb://recentlyaddedepisodes/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.5),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.5),all)">videodb://tvshows/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.5),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.5),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.5),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Shows.6">
+		<value condition="String.IsEqual(Skin.String(hub.shows.6),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.6),recent)">videodb://recentlyaddedepisodes/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.6),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.6),all)">videodb://tvshows/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.6),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.6),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.6),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Shows.7">
+		<value condition="String.IsEqual(Skin.String(hub.shows.7),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.7),recent)">videodb://recentlyaddedepisodes/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.7),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.7),all)">videodb://tvshows/titles/</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.7),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.7),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.7),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+
+
+	<!-- Music Hub -->
+	<variable name="hub:Music.1">
+		<value condition="String.IsEqual(Skin.String(hub.music.1),played)">musicdb://recentlyplayedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),recent)">musicdb://recentlyaddedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),all)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Music.2">
+		<value condition="String.IsEqual(Skin.String(hub.music.2),played)">musicdb://recentlyplayedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),recent)">musicdb://recentlyaddedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),all)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Music.3">
+		<value condition="String.IsEqual(Skin.String(hub.music.3),played)">musicdb://recentlyplayedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),recent)">musicdb://recentlyaddedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),all)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Music.4">
+		<value condition="String.IsEqual(Skin.String(hub.music.4),played)">musicdb://recentlyplayedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),recent)">musicdb://recentlyaddedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),all)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Music.5">
+		<value condition="String.IsEqual(Skin.String(hub.music.5),played)">musicdb://recentlyplayedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),recent)">musicdb://recentlyaddedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),all)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Music.6">
+		<value condition="String.IsEqual(Skin.String(hub.music.6),played)">musicdb://recentlyplayedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),recent)">musicdb://recentlyaddedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),all)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+	<variable name="hub:Music.7">
+		<value condition="String.IsEqual(Skin.String(hub.music.7),played)">musicdb://recentlyplayedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),recent)">musicdb://recentlyaddedalbums/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),all)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+	</variable>
+
+
+<!-- Info -->
 	<variable name="info:Season">
 		<value condition="Integer.IsLessOrEqual(ListItem.Season,9)">0$INFO[ListItem.Season]</value>
 		<value>$INFO[ListItem.Season]</value>
@@ -429,8 +635,22 @@
 		<value>$LOCALIZE[594]</value>
 	</variable>
 
+	<variable name="menu:Browse">
+		<value condition="Window.IsActive(1132)">ActivateWindow(Videos,videodb://movies/)</value>
+		<value condition="Window.IsActive(1131)">ActivateWindow(Videos,videodb://tvshows/)</value>
+		<value condition="Window.IsActive(1130)">ActivateWindow(Videos,sources://video/)</value>
+		<value condition="Window.IsActive(1133)">ActivateWindow(Videos,musicdb://)</value>
+	</variable>
+
+	<variable name="menu:Browse.Label">
+		<value condition="Window.IsActive(1132)">$LOCALIZE[31369]</value>
+		<value condition="Window.IsActive(1131)">$LOCALIZE[31370]</value>
+		<value condition="Window.IsActive(1130)">$LOCALIZE[3]</value>
+		<value condition="Window.IsActive(1133)">$LOCALIZE[14237]</value>
+	</variable>
+
 	<variable name="menu:Search">
-		<value condition="Window.IsActive(videos)">$LOCALIZE[14236]</value>
+		<value condition="Window.IsActive(videos) | Window.IsActive(1131) | Window.IsActive(1132)">$LOCALIZE[14236]</value>
 		<value condition="Window.IsActive(music)">$LOCALIZE[14237]</value>
 		<value condition="Window.IsActive(programs)">$LOCALIZE[0]</value>
 		<value>$LOCALIZE[14237]</value>
@@ -462,16 +682,25 @@
 	</variable>
 
 	<variable name="menu:Update">
-		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)] + library.isscanningvideo">$LOCALIZE[13353]</value>
-		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos)]">$LOCALIZE[24069]</value>
+		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(1131) | Window.IsActive(1132)] + library.isscanningvideo">$LOCALIZE[13353]</value>
+		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(1131) | Window.IsActive(1132)]">$LOCALIZE[24069]</value>
 		<value condition="Window.IsActive(music) + library.isscanningmusic">$LOCALIZE[13353]</value>
 		<value condition="Window.IsActive(music)">$LOCALIZE[24069]</value>
 	</variable>
 
 	<variable name="menu:UpdateLabel2">
-		<value condition="Window.IsActive(videos)">$LOCALIZE[14236]</value>
+		<value condition="Window.IsActive(videos) | Window.IsActive(1131) | Window.IsActive(1132)">$LOCALIZE[14236]</value>
 		<value>$LOCALIZE[14237]</value>
 	</variable>
+
+	<variable name="menu:HubSources">
+		<value condition="Window.IsActive(1130)">ActivateWindowAndFocus(skinsettings,3,0,9331,0)</value>
+		<value condition="Window.IsActive(1131)">ActivateWindowAndFocus(skinsettings,3,0,9321,0)</value>
+		<value condition="Window.IsActive(1132)">ActivateWindowAndFocus(skinsettings,3,0,9311,0)</value>
+		<value condition="Window.IsActive(1133)">ActivateWindowAndFocus(skinsettings,3,0,9341,0)</value>
+	</variable>
+
+	
 
 	
 <!-- Status -->
@@ -1326,6 +1555,19 @@
 
 
 <!-- Window -->
+
+	<variable name="window:ItemCount">
+		<value condition="Control.HasFocus(5010)">$INFO[Container(5010).NumItems]</value>
+		<value condition="Control.HasFocus(5020)">$INFO[Container(5020).NumItems]</value>
+		<value condition="Control.HasFocus(5030)">$INFO[Container(5030).NumItems]</value>
+		<value condition="Control.HasFocus(5040)">$INFO[Container(5040).NumItems]</value>
+		<value condition="Control.HasFocus(5050)">$INFO[Container(5050).NumItems]</value>
+		<value condition="Control.HasFocus(5060)">$INFO[Container(5060).NumItems]</value>
+		<value condition="Control.HasFocus(5070)">$INFO[Container(5070).NumItems]</value>
+		<value condition="Control.HasFocus(5099)">$INFO[Container(5099).NumItems]</value>
+		<value>$INFO[Container.NumItems]</value>
+	</variable>
+
 	<variable name="window:Grid">
 		<value condition="Control.IsVisible(51)">overlays/270.png</value>
 		<value condition="Control.IsVisible(50) | Control.IsVisible(501)">overlays/108.png</value>
@@ -1419,11 +1661,13 @@
 <!-- Window titles -->
 
 	<variable name="window:Title.Home">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="[Window.IsVisible(volumebar) + !Player.Muted] + Window.IsActive(Home)">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value></value>
 	</variable>
 
 	<variable name="window:Title.Addons">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="[Window.IsVisible(volumebar) + !Player.Muted] + Window.IsActive(Home)">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$LOCALIZE[4]</value>
 		<value condition="Window.IsActive(script-cu-lrclyrics-main.xml)">$LOCALIZE[24013]</value>
@@ -1431,6 +1675,7 @@
 	</variable>
 
 	<variable name="window:Title.Custom">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(1103)">$LOCALIZE[31206]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,tvshow)">$INFO[ListItem.TVShowTitle]</value>
@@ -1440,6 +1685,7 @@
 	</variable>
 
 	<variable name="window:Title.Dialog">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(contextmenu)">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(shutdownmenu)">$LOCALIZE[13012]</value>
@@ -1464,6 +1710,7 @@
 	</variable>
 
 	<variable name="window:Title.Info">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Label]</value>
 		<value condition="Window.IsActive(addoninformation)">$LOCALIZE[24003]</value>
@@ -1476,6 +1723,8 @@
 	</variable>
 
 	<variable name="window:Title.Media">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 		<value condition="Window.IsActive(1110)">$LOCALIZE[24001]</value>
@@ -1486,7 +1735,10 @@
 		<value condition="String.IsEqual(Container.FolderPath,sources://video/)">$LOCALIZE[31661]</value>
 		<value condition="Window.IsActive(Games)">$LOCALIZE[15016]</value>
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
-		<value condition="Container.Content(tvshows) + String.IsEqual(Container.Foldername,Title)">$LOCALIZE[20343]</value>
+		<value condition="Window.IsActive(1130)">$LOCALIZE[3]</value>
+		<value condition="Window.IsActive(1133)">$LOCALIZE[2]</value>
+		<value condition="[Container.Content(movies) + String.IsEqual(Container.Foldername,Title)] | Window.IsActive(1132)">$LOCALIZE[342]</value>
+		<value condition="[Container.Content(tvshows) + String.IsEqual(Container.Foldername,Title)] | Window.IsActive(1131)">$LOCALIZE[20343]</value>
 		<value condition="String.IsEqual(Container.FolderName,$LOCALIZE[369])">$INFO[Container.Content]</value>
 		<value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container.Content]</value>
@@ -1494,6 +1746,7 @@
 	</variable>
 
 	<variable name="window:Title.Player">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(subtitlesearch)">$LOCALIZE[287]</value>
 		<value condition="VideoPlayer.IsFullscreen + Window.IsVisible(osdvideosettings)">$LOCALIZE[13395]</value>
@@ -1509,6 +1762,7 @@
 	</variable>
 
 	<variable name="window:Title.PVR">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Skin.HasSetting(global.sortletter) + Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]">$INFO[ListItem.SortLetter]</value>
 		<value condition="String.StartsWith(Container.FolderPath,pvr://channels/tv/)">$LOCALIZE[19023]</value>
@@ -1520,9 +1774,13 @@
 	</variable>
 
 	<variable name="window:Title.System">
+		<value condition="Window.IsVisible(volumebar) + Player.Passthrough">$LOCALIZE[29802]</value>
 		<value condition="Window.IsVisible(volumebar) + !Player.Muted">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),mainmenu)">$LOCALIZE[31311]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),optionsmenu)">$LOCALIZE[31310]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),36912)">$LOCALIZE[31312] $LOCALIZE[36912]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),36901)">$LOCALIZE[31312] $LOCALIZE[36901]</value>
+		<value condition="Window.IsActive(script-skinshortcuts.xml) + String.IsEqual(Window.Property(groupname),36902)">$LOCALIZE[31312] $LOCALIZE[36902]</value>
 		<value condition="Window.IsActive(script-skinshortcuts.xml)">$LOCALIZE[31312] $INFO[Window.Property(groupname)]</value>
 		<value condition="Window.IsActive(script-skin_helper_service-ColorPicker.xml)">$ADDON[script.skin.helper.colorpicker 32011]</value>
 		<value condition="Window.IsActive(InterfaceSettings)">$LOCALIZE[14207]</value>  
