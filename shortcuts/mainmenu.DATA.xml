@@ -19,13 +19,12 @@
 		<visible>Player.HasVideo</visible>
 	</shortcut>
 	<shortcut>
-		<defaultID>36912</defaultID>
-		<label>36912</label>
+		<defaultID>3</defaultID>
+		<label>3</label>
 		<label2>Skin shortcut</label2>
 		<icon>DefaultShortcut.png</icon>
-		<property name="homeSymbol"></property>
 		<thumb />
-		<action>ActivateWindow(1130)</action>
+		<action>ActivateWindow(Videos,files)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>36901</defaultID>
@@ -44,20 +43,20 @@
 		<action>ActivateWindow(1131)</action>
 	</shortcut>
 	<shortcut>
+		<defaultID>36912</defaultID>
+		<label>Music</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(1133)</action>
+	</shortcut>
+	<shortcut>
 		<defaultID>livetv</defaultID>
 		<label>32022</label>
 		<label2>Common menu item</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(TVGuide)</action>
-	</shortcut>
-	<shortcut>
-		<defaultID>music</defaultID>
-		<label>10005</label>
-		<label2>Common Shortcut</label2>
-		<icon>DefaultShortcut.png</icon>
-		<thumb />
-		<action>ActivateWindow(Music)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>pictures</defaultID>
