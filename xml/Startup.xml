@@ -45,6 +45,19 @@
 	<onload condition="String.IsEmpty(Skin.String(view.list.art))">Skin.SetString(view.list.art,fanart)</onload>
 	<onload condition="String.IsEmpty(Skin.String(views.landscape.art))">Skin.SetString(views.landscape.art,fanart)</onload>
 
+	<!-- Hub defaults -->
+	<onload condition="String.IsEmpty(Skin.String(hub.movies.1))">Skin.SetString(hub.movies.1,inprogress)</onload>
+	<onload condition="String.IsEmpty(Skin.String(hub.movies.2))">Skin.SetString(hub.movies.2,recent)</onload>
+	<onload condition="String.IsEmpty(Skin.String(hub.movies.3))">Skin.SetString(hub.movies.3,all)</onload>
+
+	<onload condition="String.IsEmpty(Skin.String(hub.shows.1))">Skin.SetString(hub.shows.1,watchlist)</onload>
+	<onload condition="String.IsEmpty(Skin.String(hub.shows.2))">Skin.SetString(hub.shows.2,recent)</onload>
+	<onload condition="String.IsEmpty(Skin.String(hub.shows.3))">Skin.SetString(hub.shows.3,all)</onload>
+
+	<onload condition="String.IsEmpty(Skin.String(hub.music.1))">Skin.SetString(hub.music.1,played)</onload>
+	<onload condition="String.IsEmpty(Skin.String(hub.music.2))">Skin.SetString(hub.music.2,recent)</onload>
+	<onload condition="String.IsEmpty(Skin.String(hub.music.3))">Skin.SetString(hub.music.3,artists)</onload>
+
 	<!-- Go -->
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 

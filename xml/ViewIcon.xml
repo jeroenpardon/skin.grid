@@ -9,17 +9,10 @@
 		<param name="AspectRatioAlign" default="center"/>
 		<param name="AspectRatioAlignY" default="top"/>
 		<param name="Fallback" default="$VAR[art:Fallback]"/>
-
-
 		<param name="Font1" default="Black-24"/>
 		<param name="Font2" default="Regular-20"/>
-
-
 		<param name="OnUp" default="55"/>
 		<param name="OnDown" default="55"/>
-
-
-
 		<param name="Frame" default="views/frame/square.png"/>
 		<param name="Height" default="972"/>
 		<param name="ItemHeight" default="321"/>
@@ -48,16 +41,9 @@
 		<param name="ViewTypeLabel" default="$LOCALIZE[31202]"/>
 		<param name="Width" default="1664"/>
 		<param name="Visible"/>
-
-
 		<param name="UseCustomPath" default="false"/>
 		<param name="UseCustomPath2" default="false"/>
-
-
 		<param name="Path2" default="videodb://recentlyaddedmovies/"/>
-
-
-
 		<definition>
 			<control type="panel" id="$PARAM[ID]">
 				<viewtype label="$PARAM[ViewTypeLabel]">icon</viewtype>
