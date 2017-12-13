@@ -56,7 +56,7 @@
 					<param name="ItemHeight">468</param>
 					<param name="ItemWidth">832</param>
 					<param name="Label">$INFO[ListItem.Label]</param>
-					<param name="Label2">$INFO[ListItem.Title]</param>
+					<param name="Label2">$INFO[ListItem.Artist]</param>
 					<param name="SortBy2">dateadded</param>
 					<param name="Orientation">horizontal</param>
 					<param name="Path2">$VAR[hub:Music.1]</param>
@@ -86,7 +86,7 @@
 					<param name="ItemHeight">468</param>
 					<param name="ItemWidth">468</param>
 					<param name="Label">$INFO[ListItem.Label]</param>
-					<param name="Label2">$INFO[ListItem.Title]</param>
+					<param name="Label2">$INFO[ListItem.Artist]</param>
 					<param name="SortBy2">dateadded</param>
 					<param name="Orientation">horizontal</param>
 					<param name="Path2">$VAR[hub:Music.2]</param>
@@ -116,7 +116,7 @@
 					<param name="ItemHeight">468</param>
 					<param name="ItemWidth">468</param>
 					<param name="Label">$INFO[ListItem.Label]</param>
-					<param name="Label2">$INFO[ListItem.Title]</param>
+					<param name="Label2">$INFO[ListItem.Artist]</param>
 					<param name="SortBy2">dateadded</param>
 					<param name="Orientation">horizontal</param>
 					<param name="Path2">$VAR[hub:Music.3]</param>
@@ -146,7 +146,7 @@
 					<param name="ItemHeight">468</param>
 					<param name="ItemWidth">468</param>
 					<param name="Label">$INFO[ListItem.Label]</param>
-					<param name="Label2">$INFO[ListItem.Title]</param>
+					<param name="Label2">$INFO[ListItem.Artist]</param>
 					<param name="SortBy2">dateadded</param>
 					<param name="Orientation">horizontal</param>
 					<param name="Path2">$VAR[hub:Music.4]</param>
@@ -176,7 +176,7 @@
 					<param name="ItemHeight">468</param>
 					<param name="ItemWidth">468</param>
 					<param name="Label">$INFO[ListItem.Label]</param>
-					<param name="Label2">$INFO[ListItem.Title]</param>
+					<param name="Label2">$INFO[ListItem.Artist]</param>
 					<param name="SortBy2">dateadded</param>
 					<param name="Orientation">horizontal</param>
 					<param name="Path2">$VAR[hub:Music.5]</param>
@@ -206,7 +206,7 @@
 					<param name="ItemHeight">468</param>
 					<param name="ItemWidth">468</param>
 					<param name="Label">$INFO[ListItem.Label]</param>
-					<param name="Label2">$INFO[ListItem.Title]</param>
+					<param name="Label2">$INFO[ListItem.Artist]</param>
 					<param name="SortBy2">dateadded</param>
 					<param name="Orientation">horizontal</param>
 					<param name="Path2">$VAR[hub:Music.6]</param>
@@ -236,7 +236,7 @@
 					<param name="ItemHeight">468</param>
 					<param name="ItemWidth">468</param>
 					<param name="Label">$INFO[ListItem.Label]</param>
-					<param name="Label2">$INFO[ListItem.Title]</param>
+					<param name="Label2">$INFO[ListItem.Artist]</param>
 					<param name="SortBy2">dateadded</param>
 					<param name="Orientation">horizontal</param>
 					<param name="Path2">$VAR[hub:Music.7]</param>
