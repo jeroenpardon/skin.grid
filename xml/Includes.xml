@@ -825,4 +825,6 @@
 		<textcolor>black</textcolor>
 	</include>
 
+	<include file="Includes_User.xml" />
+
 </includes> 
