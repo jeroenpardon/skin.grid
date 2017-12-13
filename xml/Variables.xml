@@ -309,65 +309,58 @@
 	<variable name="hub:Music.1">
 		<value condition="String.IsEqual(Skin.String(hub.music.1),played)">musicdb://recentlyplayedalbums/</value>
 		<value condition="String.IsEqual(Skin.String(hub.music.1),recent)">musicdb://recentlyaddedalbums/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.1),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.1),all)">musicdb://artists/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.1),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.1),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.1),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),recommended)">special://skin/extras/playlists/albums/recommended.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),artists)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),random)">special://skin/extras/playlists/albums/random.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.1),randomsongs)">special://skin/extras/playlists/albums/randomsongs.xsp</value>
 	</variable>
 	<variable name="hub:Music.2">
 		<value condition="String.IsEqual(Skin.String(hub.music.2),played)">musicdb://recentlyplayedalbums/</value>
 		<value condition="String.IsEqual(Skin.String(hub.music.2),recent)">musicdb://recentlyaddedalbums/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.2),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.2),all)">musicdb://artists/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.2),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.2),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.2),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),recommended)">special://skin/extras/playlists/albums/recommended.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),artists)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),random)">special://skin/extras/playlists/albums/random.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.2),randomsongs)">special://skin/extras/playlists/albums/randomsongs.xsp</value>
 	</variable>
 	<variable name="hub:Music.3">
 		<value condition="String.IsEqual(Skin.String(hub.music.3),played)">musicdb://recentlyplayedalbums/</value>
 		<value condition="String.IsEqual(Skin.String(hub.music.3),recent)">musicdb://recentlyaddedalbums/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.3),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.3),all)">musicdb://artists/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.3),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.3),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.3),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),recommended)">special://skin/extras/playlists/albums/recommended.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),artists)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),random)">special://skin/extras/playlists/albums/random.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.3),randomsongs)">special://skin/extras/playlists/albums/randomsongs.xsp</value>
 	</variable>
 	<variable name="hub:Music.4">
 		<value condition="String.IsEqual(Skin.String(hub.music.4),played)">musicdb://recentlyplayedalbums/</value>
 		<value condition="String.IsEqual(Skin.String(hub.music.4),recent)">musicdb://recentlyaddedalbums/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.4),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.4),all)">musicdb://artists/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.4),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.4),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.4),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),recommended)">special://skin/extras/playlists/albums/recommended.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),artists)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),random)">special://skin/extras/playlists/albums/random.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.4),randomsongs)">special://skin/extras/playlists/albums/randomsongs.xsp</value>
 	</variable>
 	<variable name="hub:Music.5">
 		<value condition="String.IsEqual(Skin.String(hub.music.5),played)">musicdb://recentlyplayedalbums/</value>
 		<value condition="String.IsEqual(Skin.String(hub.music.5),recent)">musicdb://recentlyaddedalbums/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.5),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.5),all)">musicdb://artists/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.5),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.5),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.5),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),recommended)">special://skin/extras/playlists/albums/recommended.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),artists)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),random)">special://skin/extras/playlists/albums/random.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.5),randomsongs)">special://skin/extras/playlists/albums/randomsongs.xsp</value>
 	</variable>
 	<variable name="hub:Music.6">
 		<value condition="String.IsEqual(Skin.String(hub.music.6),played)">musicdb://recentlyplayedalbums/</value>
 		<value condition="String.IsEqual(Skin.String(hub.music.6),recent)">musicdb://recentlyaddedalbums/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.6),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.6),all)">musicdb://artists/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.6),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.6),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.6),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),recommended)">special://skin/extras/playlists/albums/recommended.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),artists)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),random)">special://skin/extras/playlists/albums/random.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.6),randomsongs)">special://skin/extras/playlists/albums/randomsongs.xsp</value>
 	</variable>
 	<variable name="hub:Music.7">
 		<value condition="String.IsEqual(Skin.String(hub.music.7),played)">musicdb://recentlyplayedalbums/</value>
 		<value condition="String.IsEqual(Skin.String(hub.music.7),recent)">musicdb://recentlyaddedalbums/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.7),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.7),all)">musicdb://artists/</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.7),popular)">plugin://script.extendedinfo/?info=populartvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.7),onair)">plugin://script.extendedinfo/?info=onairtvshows</value>
-		<value condition="String.IsEqual(Skin.String(hub.music.7),airing)">plugin://script.extendedinfo/?info=airingtodaytvshows</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),recommended)">special://skin/extras/playlists/albums/recommended.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),artists)">musicdb://artists/</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),random)">special://skin/extras/playlists/albums/random.xsp</value>
+		<value condition="String.IsEqual(Skin.String(hub.music.7),randomsongs)">special://skin/extras/playlists/albums/randomsongs.xsp</value>
 	</variable>
 
 

@@ -63,7 +63,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">Integer.IsGreaterOrEqual(Container(5010).NumItems,1) + !String.IsEqual(Skin.String(hub.movies.1),none)</param>
+					<param name="Visible">[Integer.IsGreater(Container(5010).NumItems,0) | Container(5010).IsUpdating] + !String.IsEqual(Skin.String(hub.movies.1),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -92,7 +92,7 @@
 					<param name="TextPosY">64</param>
 					<param name="TextWidth">800</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">Integer.IsGreaterOrEqual(Container(5020).NumItems,1) + !String.IsEqual(Skin.String(hub.movies.2),none)</param>
+					<param name="Visible">[Integer.IsGreater(Container(5020).NumItems,0) | Container(5020).IsUpdating] + !String.IsEqual(Skin.String(hub.movies.2),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -119,7 +119,7 @@
 					<param name="TextPosY">100</param>
 					<param name="TextWidth">608</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">Integer.IsGreaterOrEqual(Container(5030).NumItems,1) + !String.IsEqual(Skin.String(hub.movies.3),none)</param>
+					<param name="Visible">[Integer.IsGreater(Container(5030).NumItems,0) | Container(5030).IsUpdating] + !String.IsEqual(Skin.String(hub.movies.3),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -146,7 +146,7 @@
 					<param name="TextPosY">100</param>
 					<param name="TextWidth">608</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">Integer.IsGreaterOrEqual(Container(5040).NumItems,1) + !String.IsEqual(Skin.String(hub.movies.4),none)</param>
+					<param name="Visible">[Integer.IsGreater(Container(5040).NumItems,0) | Container(5040).IsUpdating] + !String.IsEqual(Skin.String(hub.movies.4),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -173,7 +173,7 @@
 					<param name="TextPosY">100</param>
 					<param name="TextWidth">608</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">Integer.IsGreaterOrEqual(Container(5050).NumItems,1) + !String.IsEqual(Skin.String(hub.movies.5),none)</param>
+					<param name="Visible">[Integer.IsGreater(Container(5050).NumItems,0) | Container(5050).IsUpdating] + !String.IsEqual(Skin.String(hub.movies.5),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -200,7 +200,7 @@
 					<param name="TextPosY">100</param>
 					<param name="TextWidth">608</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">Integer.IsGreaterOrEqual(Container(5060).NumItems,1) + !String.IsEqual(Skin.String(hub.movies.6),none)</param>
+					<param name="Visible">[Integer.IsGreater(Container(5060).NumItems,0) | Container(5060).IsUpdating] + !String.IsEqual(Skin.String(hub.movies.6),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
@@ -227,7 +227,7 @@
 					<param name="TextPosY">100</param>
 					<param name="TextWidth">608</param>
 					<param name="UseCustomPath">true</param>
-					<param name="Visible">Integer.IsGreaterOrEqual(Container(5070).NumItems,1) + !String.IsEqual(Skin.String(hub.movies.7),none)</param>
+					<param name="Visible">[Integer.IsGreater(Container(5070).NumItems,0) | Container(5070).IsUpdating] + !String.IsEqual(Skin.String(hub.movies.7),none)</param>
 					<param name="Width">1792</param>
 				</include>
 
