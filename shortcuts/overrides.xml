@@ -355,6 +355,11 @@
 	<propertydefault defaultID="musicvideos" property="homeSymbol">&#57352;</propertydefault>
 	<propertydefault defaultID="movies" property="homeSymbol">&#57402;</propertydefault>
 	<propertydefault defaultID="36901" property="homeSymbol">&#57402;</propertydefault>
+
+
+	<propertydefault defaultID="3" property="homeSymbol">&#57352;</propertydefault>
+
+
 	<propertydefault defaultID="videos" property="homeSymbol">&#57352;</propertydefault>
 	<propertydefault defaultID="36912" property="homeSymbol">&#57352;</propertydefault>
 	<propertydefault defaultID="tvshows" property="homeSymbol">&#57361;</propertydefault>
