@@ -10,7 +10,7 @@
 		<control type="group">
 			<include>transition_Chrome</include>
 			<include content="global_WindowChrome">
-				<param name="Label">$VAR[window:Title.Media]</param>
+				<param name="Title">$VAR[window:Title.Dialog]</param>
 				<param name="ShowItemCount">false</param>
 			</include>
 		</control>
@@ -22,7 +22,7 @@
 			<include>transition_Content</include>
 		
 			<!--button area-->
-			<control type="grouplist" id="9">
+			<control type="grouplist" id="3">
 				<width>324</width>
 				<height>810</height>
 				<itemgap>0</itemgap>
@@ -32,7 +32,7 @@
 			</control>
 		
 			<!--control area-->
-			<control type="grouplist" id="2">
+			<control type="grouplist" id="5">
 				<left>414</left>
 				<width>944</width>
 				<height>810</height>
@@ -45,40 +45,40 @@
 			</control>
 
 		<!-- Category -->
-			<control type="button" id="13">
+			<control type="button" id="10">
 				<width>384</width>
 				<height>90</height>
 				<font>Black-22</font>
 			</control>
 
 			<!--default button-->
-			<control type="button" id="3">
+			<control type="button" id="7">
 				<font>Regular-22-L</font>
 			</control>
 
 			<!--default radiobutton-->
-			<control type="radiobutton" id="4">
+			<control type="radiobutton" id="8">
 				<textwidth>840</textwidth>
 				<font>Regular-22-L</font>
 			</control>
 
 			<!--default spincontrol-->
-			<control type="spincontrolex" id="5">
+			<control type="spincontrolex" id="9">
 				<font>Regular-22-L</font>
 			</control>
 
 			<!--default separator-->
-			<control type="image" id="6">
+			<control type="image" id="11">
 				<visible>false</visible>
 			</control>
 
 			<!--default label-->
-			<control type="label" id="7">
+			<control type="label" id="14">
 				<include>global_Header</include>
 			</control>
 
 			<!--default slider-->
-			<control type="sliderex" id="8">
+			<control type="sliderex" id="13">
 				<font>Regular-22-L</font>
 			</control>
 
