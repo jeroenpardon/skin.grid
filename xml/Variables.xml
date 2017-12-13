@@ -499,6 +499,7 @@
 		<value condition="Container.Content(artists)">$INFO[ListItem.Property(Artist_Description)]</value>
 		<value condition="[Control.IsVisible(51) | Control.IsVisible(52)] + Container.Content(albums)">$INFO[ListItem.Property(Album_Description)]</value>
 		<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Comment]</value>
+		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.Plot]</value>
 		<value condition="Container.Content(seasons) + !String.IsEmpty(ListItem.Title) + !String.IsEmpty(ListItem.Property(UnWatchedEpisodes))">$INFO[Container.ShowPlot]</value>
 		<value condition="Container.Content(movies) + !String.IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.PlotOutline]</value>
