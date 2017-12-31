@@ -254,18 +254,20 @@
 					<label>$LOCALIZE[31088]</label>
 					<height>90</height>
 					<include>global_Header</include>
+					<visible>Skin.HasSetting(home.defaultnodes) | !Library.HasContent(Music)</visible>
 				</control>
-				<include condition="Library.HasMusic" content="view_Labels">
+				<include condition="Library.HasContent(Music)" content="view_Labels">
 					<param name="ID">5099</param>
 					<param name="Path2">sources://music/</param>
 					<param name="UseCustomPath">true</param>
+					<param name="Visible">Skin.HasSetting(home.defaultnodes)</param>
 				</include>
 				<control type="button" id="5501">
 					<width>216</width>
 					<onleft>7000</onleft>
 					<label>$LOCALIZE[998]</label>
 					<onclick>ActivateWindow(Music,Files)</onclick>
-					<visible>!Library.HasMusic</visible>
+					<visible>!Library.HasContent(Music)</visible>
 				</control>
 			</control>
 		</control>
