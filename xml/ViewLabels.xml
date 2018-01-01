@@ -5,6 +5,7 @@
 		<param name="Path"/>
 		<param name="Path2" default="videodb://recentlyaddedmovies/"/>
 		<param name="UseCustomPath" default="false"/>
+		<param name="Visible" default="true"/>
 		<definition>
 			<control type="panel" id="$PARAM[ID]">
 				<width>1664</width>
@@ -13,6 +14,7 @@
 				<onleft>SetProperty(MenuOpen,true,Home)</onleft>
 				<orientation>vertical</orientation>
 				<include>global_ListScroll</include>
+				<visible>$PARAM[Visible]</visible>
 				<itemlayout width="277.3" height="90">
 					<control type="group">
 						<width>277.3</width>
