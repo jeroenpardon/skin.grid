@@ -352,8 +352,8 @@
 					<!-- Include library shortcuts -->
 					<control type="radiobutton" id="9320">
 						<label>Include library shortcuts</label>
-						<onclick>Skon.ToggleSetting(hub.defaultnodes)</onclick>
-						<selected>!Skin.HasSetting(home.defaultnodes)</selected>
+						<onclick>Skin.ToggleSetting(hub.defaultnodes)</onclick>
+						<selected>!Skin.HasSetting(hub.defaultnodes)</selected>
 						<include>radio_Settings</include>
 					</control>
 			
