@@ -635,10 +635,10 @@
 	</variable>
 
 	<variable name="menu:Browse">
-		<value condition="Window.IsActive(1132)">ActivateWindow(Videos,videodb://movies/)</value>
-		<value condition="Window.IsActive(1131)">ActivateWindow(Videos,videodb://tvshows/)</value>
+		<value condition="Window.IsActive(1132)">ActivateWindow(Videos,videodb://movies/titles/)</value>
+		<value condition="Window.IsActive(1131)">ActivateWindow(Videos,videodb://tvshows/titles/)</value>
 		<value condition="Window.IsActive(1130)">ActivateWindow(Videos,sources://video/)</value>
-		<value condition="Window.IsActive(1133)">ActivateWindow(Videos,musicdb://)</value>
+		<value condition="Window.IsActive(1133)">ActivateWindow(Videos,musicdb://artists/)</value>
 	</variable>
 
 	<variable name="menu:Browse.Label">

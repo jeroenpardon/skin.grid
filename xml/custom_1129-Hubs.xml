@@ -157,57 +157,64 @@
 					<visible>Skin.String(category,movies)</visible>
 
 					<!-- Source 1 -->
-					<control type="button" id="9201">
+					<control type="button" id="9211">
 						<label>$LOCALIZE[1026] 1</label>
-						<label2>$INFO[Skin.String(hub.movies.1)]</label2>
-						<onclick>Skin.SetPath(hub.movies.1)</onclick>
+						<label2>$INFO[Skin.String(hub.movies.1.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.movies.1,header=$LOCALIZE[31385])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
 					<!-- Source 2 -->
-					<control type="button" id="9202">
+					<control type="button" id="9212">
 						<label>$LOCALIZE[1026] 2</label>
-						<label2>$INFO[Skin.String(hub.movies.2)]</label2>
-						<onclick>Skin.SetPath(hub.movies.2)</onclick>
+						<label2>$INFO[Skin.String(hub.movies.2.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.movies.2,header=$LOCALIZE[31385])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.movies.1))</visible>
 					</control>
 					<!-- Source 3 -->
-					<control type="button" id="9203">
+					<control type="button" id="9213">
 						<label>$LOCALIZE[1026] 3</label>
-						<label2>$INFO[Skin.String(hub.movies.3)]</label2>
-						<onclick>Skin.SetPath(hub.movies.3)</onclick>
+						<label2>$INFO[Skin.String(hub.movies.3.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.movies.3,header=$LOCALIZE[31385])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.movies.2))</visible>
 					</control>
 					<!-- Source 4 -->
-					<control type="button" id="9204">
+					<control type="button" id="9214">
 						<label>$LOCALIZE[1026] 4</label>
-						<label2>$INFO[Skin.String(hub.movies.4)]</label2>
-						<onclick>Skin.SetPath(hub.movies.4)</onclick>
+						<label2>$INFO[Skin.String(hub.movies.4.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.movies.4,header=$LOCALIZE[31385])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.movies.3))</visible>
 					</control>
 					<!-- Source 5 -->
-					<control type="button" id="9205">
+					<control type="button" id="9215">
 						<label>$LOCALIZE[1026] 5</label>
-						<label2>$INFO[Skin.String(hub.movies.5)]</label2>
-						<onclick>Skin.SetPath(hub.movies.5)</onclick>
+						<label2>$INFO[Skin.String(hub.movies.5.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.movies.5,header=$LOCALIZE[31385])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.movies.4))</visible>
 					</control>
 					<!-- Source 6 -->
-					<control type="button" id="9206">
+					<control type="button" id="9216">
 						<label>$LOCALIZE[1026] 6</label>
-						<label2>$INFO[Skin.String(hub.movies.6)]</label2>
-						<onclick>Skin.SetPath(hub.movies.6)</onclick>
+						<label2>$INFO[Skin.String(hub.movies.6.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.movies.6,header=$LOCALIZE[31385])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.movies.5))</visible>
 					</control>
 					<!-- Source 7 -->
-					<control type="button" id="9207">
+					<control type="button" id="9217">
 						<label>$LOCALIZE[1026] 7</label>
-						<label2>$INFO[Skin.String(hub.movies.7)]</label2>
-						<onclick>Skin.SetPath(hub.movies.7)</onclick>
+						<label2>$INFO[Skin.String(hub.movies.7.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.movies.7,header=$LOCALIZE[31385])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.movies.6))</visible>
 					</control>
@@ -229,55 +236,62 @@
 					<!-- Source 1 -->
 					<control type="button" id="9301">
 						<label>$LOCALIZE[1026] 1</label>
-						<label2>$INFO[Skin.String(hub.shows.1)]</label2>
-						<onclick>Skin.SetPath(hub.shows.1)</onclick>
+						<label2>$INFO[Skin.String(hub.shows.1.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.shows.1,header=$LOCALIZE[31386])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
 					<!-- Source 2 -->
 					<control type="button" id="9302">
 						<label>$LOCALIZE[1026] 2</label>
-						<label2>$INFO[Skin.String(hub.shows.2)]</label2>
-						<onclick>Skin.SetPath(hub.shows.2)</onclick>
+						<label2>$INFO[Skin.String(hub.shows.2.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.shows.2,header=$LOCALIZE[31386])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.shows.1))</visible>
 					</control>
 					<!-- Source 3 -->
 					<control type="button" id="9303">
 						<label>$LOCALIZE[1026] 3</label>
-						<label2>$INFO[Skin.String(hub.shows.3)]</label2>
-						<onclick>Skin.SetPath(hub.shows.3)</onclick>
+						<label2>$INFO[Skin.String(hub.shows.3.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.shows.3,header=$LOCALIZE[31386])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.shows.2))</visible>
 					</control>
 					<!-- Source 4 -->
 					<control type="button" id="9304">
 						<label>$LOCALIZE[1026] 4</label>
-						<label2>$INFO[Skin.String(hub.shows.4)]</label2>
-						<onclick>Skin.SetPath(hub.shows.4)</onclick>
+						<label2>$INFO[Skin.String(hub.shows.4.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.shows.4,header=$LOCALIZE[31386])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.shows.3))</visible>
 					</control>
 					<!-- Source 5 -->
 					<control type="button" id="9305">
 						<label>$LOCALIZE[1026] 5</label>
-						<label2>$INFO[Skin.String(hub.shows.5)]</label2>
-						<onclick>Skin.SetPath(hub.shows.5)</onclick>
+						<label2>$INFO[Skin.String(hub.shows.5.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.shows.5,header=$LOCALIZE[31386])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.shows.4))</visible>
 					</control>
 					<!-- Source 6 -->
 					<control type="button" id="9306">
 						<label>$LOCALIZE[1026] 6</label>
-						<label2>$INFO[Skin.String(hub.shows.6)]</label2>
-						<onclick>Skin.SetPath(hub.shows.6)</onclick>
+						<label2>$INFO[Skin.String(hub.shows.6.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.shows.6,header=$LOCALIZE[31386])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.shows.5))</visible>
 					</control>
 					<!-- Source 7 -->
 					<control type="button" id="9307">
 						<label>$LOCALIZE[1026] 7</label>
-						<label2>$INFO[Skin.String(hub.shows.7)]</label2>
-						<onclick>Skin.SetPath(hub.shows.7)</onclick>
+						<label2>$INFO[Skin.String(hub.shows.7.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.shows.7,header=$LOCALIZE[31386])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.shows.6))</visible>
 					</control>
@@ -300,55 +314,62 @@
 					<!-- Source 1 -->
 					<control type="button" id="9401">
 						<label>$LOCALIZE[1026] 1</label>
-						<label2>$INFO[Skin.String(hub.music.1)]</label2>
-						<onclick>Skin.SetPath(hub.music.1)</onclick>
+						<label2>$INFO[Skin.String(hub.music.1.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.music.1,header=$LOCALIZE[31387])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
 					<!-- Source 2 -->
 					<control type="button" id="9402">
 						<label>$LOCALIZE[1026] 2</label>
-						<label2>$INFO[Skin.String(hub.music.2)]</label2>
-						<onclick>Skin.SetPath(hub.music.2)</onclick>
+						<label2>$INFO[Skin.String(hub.music.2.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.music.2,header=$LOCALIZE[31387])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.music.1))</visible>
 					</control>
 					<!-- Source 3 -->
 					<control type="button" id="9403">
 						<label>$LOCALIZE[1026] 3</label>
-						<label2>$INFO[Skin.String(hub.music.3)]</label2>
-						<onclick>Skin.SetPath(hub.music.3)</onclick>
+						<label2>$INFO[Skin.String(hub.music.3.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.music.3,header=$LOCALIZE[31387])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.music.2))</visible>
 					</control>
 					<!-- Source 4 -->
 					<control type="button" id="9404">
 						<label>$LOCALIZE[1026] 4</label>
-						<label2>$INFO[Skin.String(hub.music.4)]</label2>
-						<onclick>Skin.SetPath(hub.music.4)</onclick>
+						<label2>$INFO[Skin.String(hub.music.4.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.music.4,header=$LOCALIZE[31387])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.music.3))</visible>
 					</control>
 					<!-- Source 5 -->
 					<control type="button" id="9405">
 						<label>$LOCALIZE[1026] 5</label>
-						<label2>$INFO[Skin.String(hub.music.5)]</label2>
-						<onclick>Skin.SetPath(hub.music.5)</onclick>
+						<label2>$INFO[Skin.String(hub.music.5.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.music.5,header=$LOCALIZE[31387])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.music.4))</visible>
 					</control>
 					<!-- Source 6 -->
 					<control type="button" id="9406">
 						<label>$LOCALIZE[1026] 6</label>
-						<label2>$INFO[Skin.String(hub.music.6)]</label2>
-						<onclick>Skin.SetPath(hub.music.6)</onclick>
+						<label2>$INFO[Skin.String(hub.music.6.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.music.6,header=$LOCALIZE[31387])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.music.5))</visible>
 					</control>
 					<!-- Source 7 -->
 					<control type="button" id="9407">
 						<label>$LOCALIZE[1026] 7</label>
-						<label2>$INFO[Skin.String(hub.music.7)]</label2>
-						<onclick>Skin.SetPath(hub.music.7)</onclick>
+						<label2>$INFO[Skin.String(hub.music.7.Label)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.music.7,header=$LOCALIZE[31387])</onclick>
+						<include>install_HelperService</include>
 						<include>button_Settings</include>
 						<visible>!String.IsEmpty(Skin.String(hub.music.6))</visible>
 					</control>
