@@ -295,6 +295,16 @@ msgctxt "#31086"
 msgid "Do you want to install it anyway?"
 msgstr "Haluatko silti asentaa sen?"
 
+#. Used on a control to close an active / opened menu
+msgctxt "#31087"
+msgid "Close menu"
+msgstr "Sulje valikko"
+
+#. As in the sources of media configured on your device
+msgctxt "#31088"
+msgid "Sources"
+msgstr "Lähteet"
+
 #: setup
 msgctxt "#31150"
 msgid "Setting up your homescreen"
@@ -349,19 +359,18 @@ msgstr ""
 "-osion. Se ja linkki keskustelupalstalle löytyy osoitteesta "
 "www.gridskin.net."
 
-#. Example usage: Yes, show me where to find the options
-msgctxt "#31160"
-msgid "Yes, take me there"
-msgstr "Kyllä, siirry sinne"
-
-msgctxt "#31161"
-msgid "I'll do this later"
-msgstr "Teen sen myöhemmin"
-
 #. Example usage: clear, understood
-msgctxt "#31162"
+msgctxt "#31156"
 msgid "Got it"
 msgstr "Selvä"
+
+msgctxt "#31157"
+msgid "Customize Grid"
+msgstr "Gridin muokkaus"
+
+msgctxt "#31158"
+msgid "Finish setup"
+msgstr "Viimeistele asennus"
 
 #: artwork
 msgctxt "#31200"
@@ -820,7 +829,45 @@ msgstr "Fanitaiteen värit"
 #. setting that disables the PVR artwork scraper
 msgctxt "#31379"
 msgid "Disable artwork scraper"
-msgstr ""
+msgstr "Älä lataa ohjelmien kuvia"
+
+#. setting that disables showing media information when pausing video
+msgctxt "#31380"
+msgid "Don't show media information when pausing video"
+msgstr "Älä näytä mediatietoja, kun video on tauolla"
+
+#. a skin settings function that allows the user to select additional
+#. information to show in the video information window (ratings, awards and
+#. tags)
+msgctxt "#31381"
+msgid "Select extended video information"
+msgstr "Valitse näytettävät lisätiedot"
+
+#. used to navigate to a section in the skin settings window that lets the
+#. user pick sources to display in the media hubs
+msgctxt "#31382"
+msgid "Manage hub sources"
+msgstr "Hallitse hubien lähteitä"
+
+msgctxt "#31383"
+msgid "Hubs"
+msgstr "Hubit"
+
+msgctxt "#31384"
+msgid "Configure videos hub"
+msgstr "Muokkaa video-hubia"
+
+msgctxt "#31385"
+msgid "Configure movies hub"
+msgstr "Muokkaa elokuva-hubia"
+
+msgctxt "#31386"
+msgid "Configure tv shows hub"
+msgstr "Muokkaa tv-sarja-hubia"
+
+msgctxt "#31387"
+msgid "Configure music hub"
+msgstr "Muokkaa musiikki-hubia"
 
 #: osd / player
 msgctxt "#31550"
@@ -965,6 +1012,18 @@ msgctxt "#31612"
 msgid "Start"
 msgstr "Alku"
 
+msgctxt "#31613"
+msgid "Select channel logo"
+msgstr "Valitse kanavalogo"
+
+msgctxt "#31614"
+msgid "Show TV channels"
+msgstr "Näytä tv-kanavat"
+
+msgctxt "#31615"
+msgid "Show radio channels"
+msgstr "Näytä radiokanavat"
+
 #: media
 msgctxt "#31650"
 msgid "Last episode"
@@ -1052,6 +1111,18 @@ msgstr "Seuraava esityspäivä"
 msgctxt "#31670"
 msgid "Last air date"
 msgstr "Edellinen esityspäivä"
+
+msgctxt "#31671"
+msgid "Awards"
+msgstr "Palkinnot"
+
+msgctxt "#31672"
+msgid "All movies"
+msgstr "Kaikki elokuvat"
+
+msgctxt "#31673"
+msgid "All tv shows"
+msgstr "Kaikki tv-sarjat"
 
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"
