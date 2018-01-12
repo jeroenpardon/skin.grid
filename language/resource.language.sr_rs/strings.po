@@ -295,6 +295,16 @@ msgctxt "#31086"
 msgid "Do you want to install it anyway?"
 msgstr "Да ли заиста желиш да инсталираш?"
 
+#. Used on a control to close an active / opened menu
+msgctxt "#31087"
+msgid "Close menu"
+msgstr "Затвори мени"
+
+#. As in the sources of media configured on your device
+msgctxt "#31088"
+msgid "Sources"
+msgstr "Извори"
+
 #: setup
 msgctxt "#31150"
 msgid "Setting up your homescreen"
@@ -348,19 +358,18 @@ msgstr ""
 " Молимо вас да прочитате FAQ пре него што приступите расправи на форуму. "
 "Можете пронаћи на сајту www.gridskin.net."
 
-#. Example usage: Yes, show me where to find the options
-msgctxt "#31160"
-msgid "Yes, take me there"
-msgstr "Да, пребаци ме тамо"
-
-msgctxt "#31161"
-msgid "I'll do this later"
-msgstr "Урадићу касније"
-
 #. Example usage: clear, understood
-msgctxt "#31162"
+msgctxt "#31156"
 msgid "Got it"
-msgstr "Урађено"
+msgstr "Имаш га"
+
+msgctxt "#31157"
+msgid "Customize Grid"
+msgstr "Прилагоди Грид"
+
+msgctxt "#31158"
+msgid "Finish setup"
+msgstr "Заврши подешавања"
 
 #: artwork
 msgctxt "#31200"
@@ -820,7 +829,45 @@ msgstr "Боје позадинских слика"
 #. setting that disables the PVR artwork scraper
 msgctxt "#31379"
 msgid "Disable artwork scraper"
-msgstr ""
+msgstr "Онеогући Арт скрепер"
+
+#. setting that disables showing media information when pausing video
+msgctxt "#31380"
+msgid "Don't show media information when pausing video"
+msgstr "Не приказуј инфпрмације за време паузе"
+
+#. a skin settings function that allows the user to select additional
+#. information to show in the video information window (ratings, awards and
+#. tags)
+msgctxt "#31381"
+msgid "Select extended video information"
+msgstr "Изабери додатне информавије за видеа"
+
+#. used to navigate to a section in the skin settings window that lets the
+#. user pick sources to display in the media hubs
+msgctxt "#31382"
+msgid "Manage hub sources"
+msgstr "Подеси хаб сервисе"
+
+msgctxt "#31383"
+msgid "Hubs"
+msgstr "Хабови"
+
+msgctxt "#31384"
+msgid "Configure videos hub"
+msgstr "Конфигуриши видео хаб"
+
+msgctxt "#31385"
+msgid "Configure movies hub"
+msgstr "Конфигуриши хаб за филмове"
+
+msgctxt "#31386"
+msgid "Configure tv shows hub"
+msgstr "Конфигуриши хаб за серије"
+
+msgctxt "#31387"
+msgid "Configure music hub"
+msgstr "Конфигуриши хаб за музику"
 
 #: osd / player
 msgctxt "#31550"
@@ -965,6 +1012,18 @@ msgctxt "#31612"
 msgid "Start"
 msgstr "Старт"
 
+msgctxt "#31613"
+msgid "Select channel logo"
+msgstr "Конфигуриши хаб за телевизију"
+
+msgctxt "#31614"
+msgid "Show TV channels"
+msgstr "Прикажи ТВ Канале"
+
+msgctxt "#31615"
+msgid "Show radio channels"
+msgstr "Прикажи радио канале"
+
 #: media
 msgctxt "#31650"
 msgid "Last episode"
@@ -1052,6 +1111,18 @@ msgstr "Следећи датум приказивања"
 msgctxt "#31670"
 msgid "Last air date"
 msgstr "Последњи датум приказивања"
+
+msgctxt "#31671"
+msgid "Awards"
+msgstr "Награде"
+
+msgctxt "#31672"
+msgid "All movies"
+msgstr "Сви филмови"
+
+msgctxt "#31673"
+msgid "All tv shows"
+msgstr "Све ТВ Серије"
 
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"

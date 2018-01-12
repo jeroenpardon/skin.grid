@@ -42,7 +42,7 @@ msgstr "Włącz skondensowany układ menu"
 
 msgctxt "#31004"
 msgid "Skin shortcut"
-msgstr ""
+msgstr "Skrót skóry"
 
 msgctxt "#31005"
 msgid "Layout"
@@ -228,7 +228,7 @@ msgstr "Opcjonalny"
 
 msgctxt "#31072"
 msgid "Common menu item"
-msgstr ""
+msgstr "Wspólna pozycja menu"
 
 #. example usage: this addon is installed
 msgctxt "#31073"
@@ -295,6 +295,16 @@ msgctxt "#31086"
 msgid "Do you want to install it anyway?"
 msgstr "Czy chcesz go zainstalować mimo to?"
 
+#. Used on a control to close an active / opened menu
+msgctxt "#31087"
+msgid "Close menu"
+msgstr "Zamknij menu"
+
+#. As in the sources of media configured on your device
+msgctxt "#31088"
+msgid "Sources"
+msgstr "Źródła"
+
 #: setup
 msgctxt "#31150"
 msgid "Setting up your homescreen"
@@ -348,19 +358,18 @@ msgstr ""
 "Kodi. Przeczytaj najpierw FAQ zanim cokolwiek tam napiszesz. Wszystko "
 "znajdziesz pod adresem www.gridskin.net."
 
-#. Example usage: Yes, show me where to find the options
-msgctxt "#31160"
-msgid "Yes, take me there"
-msgstr "Tak, teraz"
-
-msgctxt "#31161"
-msgid "I'll do this later"
-msgstr "Zrobię to później"
-
 #. Example usage: clear, understood
-msgctxt "#31162"
+msgctxt "#31156"
 msgid "Got it"
 msgstr "OK"
+
+msgctxt "#31157"
+msgid "Customize Grid"
+msgstr "Modyfikuj Grid"
+
+msgctxt "#31158"
+msgid "Finish setup"
+msgstr "Zakończ ustawianie"
 
 #: artwork
 msgctxt "#31200"
@@ -826,6 +835,39 @@ msgctxt "#31380"
 msgid "Don't show media information when pausing video"
 msgstr "Nie pokazuj informacji o materiale w czasie pauzy"
 
+#. a skin settings function that allows the user to select additional
+#. information to show in the video information window (ratings, awards and
+#. tags)
+msgctxt "#31381"
+msgid "Select extended video information"
+msgstr "Wybierz dodatkowe informacje wideo"
+
+#. used to navigate to a section in the skin settings window that lets the
+#. user pick sources to display in the media hubs
+msgctxt "#31382"
+msgid "Manage hub sources"
+msgstr "Zarządzaj źródłami centrów"
+
+msgctxt "#31383"
+msgid "Hubs"
+msgstr "Centrum"
+
+msgctxt "#31384"
+msgid "Configure videos hub"
+msgstr "Ustaw centrum wideo"
+
+msgctxt "#31385"
+msgid "Configure movies hub"
+msgstr "Ustaw centrum filmów"
+
+msgctxt "#31386"
+msgid "Configure tv shows hub"
+msgstr "Ustaw centrum seriali"
+
+msgctxt "#31387"
+msgid "Configure music hub"
+msgstr "Ustaw centrum muzyki"
+
 #: osd / player
 msgctxt "#31550"
 msgid "Rwd"
@@ -969,6 +1011,18 @@ msgctxt "#31612"
 msgid "Start"
 msgstr "Start"
 
+msgctxt "#31613"
+msgid "Select channel logo"
+msgstr "Wybierz logo kanału"
+
+msgctxt "#31614"
+msgid "Show TV channels"
+msgstr "Pokazuj kanały TV"
+
+msgctxt "#31615"
+msgid "Show radio channels"
+msgstr "Pokazuj kanały radiowe"
+
 #: media
 msgctxt "#31650"
 msgid "Last episode"
@@ -1056,6 +1110,18 @@ msgstr "Następna emisja"
 msgctxt "#31670"
 msgid "Last air date"
 msgstr "Poprzednia emisja"
+
+msgctxt "#31671"
+msgid "Awards"
+msgstr "Nagrody"
+
+msgctxt "#31672"
+msgid "All movies"
+msgstr "Wszystkie filmy"
+
+msgctxt "#31673"
+msgid "All tv shows"
+msgstr "Wszystkie seriale"
 
 #. Example usage: Used in the smart playlist editor
 msgctxt "#31700"

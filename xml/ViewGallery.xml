@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="view_Gallery">
-		<param name="Art" default="$INFO[ListItem.Art(fanart)]"/>
+		<param name="Art" default="$VAR[art:Landscape]"/>
 		<param name="ArtHeight" default="screen_Height"/>
 		<param name="ArtWidth" default="screen_Width"/>
 		<param name="Description" default="$VAR[media:Description]"/>
