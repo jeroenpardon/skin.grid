@@ -29,84 +29,90 @@
 			<include>toggle_Menu</include>
 			<include>transition_Content</include>
 
-			<!-- Categories -->
-			<control type="grouplist" id="9001">
+			<control type="list" id="9001">
+				<left>0</left>
+				<top>0</top>
 				<width>384</width>
-				<onleft>7000</onleft>
-				<onup>9001</onup>
-				<ondown>9001</ondown>
-				
-				<!-- General -->
-				<control type="button" id="1">
-					<include>settings_Menu</include>
-					<label>$LOCALIZE[128]</label>
-					<onfocus>Skin.SetString(category,general)</onfocus>
-					<onright>9105</onright>
-				</control>
-
-				<!--Menus-->
-				<control type="button" id="2">
-					<include>settings_Menu</include>
-					<label>$LOCALIZE[31306]</label>
-					<onfocus>Skin.SetString(category,menus)</onfocus>
-					<onright>9200</onright>
-				</control>
-
-				<!-- Hubs -->
-				<control type="button" id="3">
-					<include>settings_Menu</include>
-					<label>Hubs</label>
-					<onfocus>Skin.SetString(category,hubs)</onfocus>
-					<onright>9300</onright>
-				</control>
-
-				<!--Artwork-->
-				<control type="button" id="4">
-					<include>settings_Menu</include>
-					<label>$LOCALIZE[31301]</label>
-					<onfocus>Skin.SetString(category,artwork)</onfocus>
-					<onright>9400</onright>
-				</control>
-				
-				<!-- Information -->
-				<control type="button" id="5">
-					<include>settings_Menu</include>
-					<label>$LOCALIZE[14116]</label>
-					<onfocus>Skin.SetString(category,information)</onfocus>
-					<onright>9500</onright>
-				</control>
-				
-				<!-- Look and feel-->
-				<control type="button" id="6">
-					<include>settings_Menu</include>
-					<label>$LOCALIZE[24997]</label>
-					<onfocus>Skin.SetString(category,lookandfeel)</onfocus>
-					<onright>9600</onright>
-				</control>
-				
-				<!-- Visual FX -->
-				<control type="button" id="7">
-					<include>settings_Menu</include>
-					<label>$LOCALIZE[31308]</label>
-					<onfocus>Skin.SetString(category,visualfx)</onfocus>
-					<onright>9700</onright>
-				</control>
-				
-				<!--addons-->
-				<control type="button" id="8">
-					<include>settings_Menu</include>
-					<label>$LOCALIZE[24001]</label>
-					<onfocus>Skin.SetString(category,addons)</onfocus>
-					<onright>9800</onright>
-				</control>
-				
-				<!--credits-->
-				<control type="button" id="9">
-					<include>settings_Menu</include>
-					<label>$LOCALIZE[31304] Grid</label>
-					<onfocus>Skin.SetString(category,about)</onfocus>
-					<onright>9900</onright>
-				</control>		
+				<height>810</height>
+				<onleft>10000</onleft>
+				<onright>9002</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<itemlayout height="90" width="384">
+					<control type="label">
+						<width>384</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Black-20</font>
+						<aligny>center</aligny>
+						<textoffsetx>24</textoffsetx>
+						<textcolor>$VAR[color:Accent]</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="90" width="384">
+					<control type="image">
+						<width>384</width>
+						<height>90</height>
+						<texture colordiffuse="$VAR[color:Accent]">colorize/70.png</texture>
+						<animation effect="fade" time="0" start="100" end="25" condition="ControlGroup(9002).HasFocus()">Conditional</animation>
+					</control>
+					<control type="label">
+						<width>384</width>
+						<height>90</height>
+						<label>$INFO[ListItem.Label]</label>
+						<font>Black-20</font>
+						<aligny>center</aligny>
+						<textoffsetx>24</textoffsetx>
+						<textcolor>$VAR[color:Main]</textcolor>
+					</control>
+				</focusedlayout>
+				<content>
+					<item id="1">
+						<label>$LOCALIZE[128]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,general)</onfocus>
+					</item>
+					<item id="2">
+						<label>$LOCALIZE[31306]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,menus)</onfocus>
+					</item>
+					<item id="3">
+						<label>$LOCALIZE[31383]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,hubs)</onfocus>
+					</item>
+					<item id="4">
+						<label>$LOCALIZE[31301]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,artwork)</onfocus>
+					</item>
+					<item id="5">
+						<label>$LOCALIZE[14116]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,information)</onfocus>
+					</item>
+					<item id="6">
+						<label>$LOCALIZE[24997]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,lookandfeel)</onfocus>
+					</item>
+					<item id="7">
+						<label>$LOCALIZE[31308]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,visualfx)</onfocus>
+					</item>
+					<item id="8">
+						<label>$LOCALIZE[24001]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,addons)</onfocus>
+					</item>
+					<item id="9">
+						<label>$LOCALIZE[31304]</label>
+						<onclick>noop</onclick>
+						<onfocus>Skin.SetString(category,about)</onfocus>
+					</item>
+				</content>
 			</control>
 
 			<control type="group" id="9002">
@@ -122,7 +128,7 @@
 					<ondown>9105</ondown>
 					<onright>6500</onright>
 					<pagecontrol>6500</pagecontrol>
-					<visible>Skin.String(category,general)</visible>
+					<visible>Container(9001).HasFocus(1)</visible>
 
 					<!-- Playback -->
 					<control type="label" id="9110">
@@ -230,7 +236,7 @@
 					<onup>9200</onup>
 					<ondown>9200</ondown>
 					<pagecontrol>6500</pagecontrol>
-					<visible>Skin.String(category,menus)</visible>
+					<visible>Container(9001).HasFocus(2)</visible>
 					
 					<!-- Home menu-->
 					<control type="label" id="9210">
@@ -340,7 +346,7 @@
 					<onup>9300</onup>
 					<ondown>9300</ondown>
 					<pagecontrol>6500</pagecontrol>
-					<visible>Skin.String(category,hubs)</visible>
+					<visible>Container(9001).HasFocus(3)</visible>
 
 					<!-- Manage hub sources -->
 					<control type="button" id="9310">
@@ -371,7 +377,7 @@
 					<ondown>9400</ondown>
 					<onright>6500</onright>
 					<pagecontrol>6500</pagecontrol>
-					<visible>Skin.String(category,artwork)</visible>
+					<visible>Container(9001).HasFocus(4)</visible>
 
 					<!-- Homescreen -->
 					<control type="label" id="9410">
@@ -538,7 +544,7 @@
 					<ondown>9500</ondown>
 					<onright>6500</onright>
 					<pagecontrol>6500</pagecontrol>
-					<visible>Skin.String(category,information)</visible>
+					<visible>Container(9001).HasFocus(5)</visible>
 
 					<!-- Date -->
 					<control type="button" id="9510">
@@ -674,7 +680,7 @@
 					<ondown>9600</ondown>
 					<onright>6500</onright>
 					<pagecontrol>6500</pagecontrol>
-					<visible>Skin.String(category,lookandfeel)</visible>
+					<visible>Container(9001).HasFocus(6)</visible>
 
 					<!-- Colours -->
 					<control type="label" id="9650">
@@ -838,7 +844,7 @@
 					<onup>9700</onup>
 					<ondown>9700</ondown>
 					<pagecontrol>6500</pagecontrol>
-					<visible>Skin.String(category,visualfx)</visible>
+					<visible>Container(9001).HasFocus(7)</visible>
 					<!-- Homescreen -->
 					<control type="label" id="9710">
 						<label>$LOCALIZE[31300]</label>
@@ -909,7 +915,7 @@
 					<onright>6500</onright>
 					<pagecontrol>6500</pagecontrol>
 					<include>global_ListScroll</include>
-					<visible>Skin.String(category,addons)</visible>
+					<visible>Container(9001).HasFocus(8)</visible>
 					<itemlayout width="1216" height="90">
 						<include content="view_List-Layout">
 							<param name="ShowArt">true</param>
@@ -1083,7 +1089,7 @@
 					<width>1216</width>
 					<height>810</height>
 					<onleft>9001</onleft>
-					<visible>Skin.String(category,about)</visible>
+					<visible>Container(9001).HasFocus(9)</visible>
 					<control type="image">
 						<width>256</width>
 						<height>72</height>
