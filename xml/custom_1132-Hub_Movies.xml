@@ -236,12 +236,21 @@
 					<label>$LOCALIZE[14022]</label>
 					<height>90</height>
 					<include>global_Header</include>
+					<visible>Skin.HasSetting(hub.defaultnodes) | !Library.HasContent(Movies)</visible>
 				</control>
-				<include content="view_Labels">
+				<include content="view_Labels" condition="Library.HasContent(Movies)">
 					<param name="ID">5099</param>
 					<param name="Path2">videodb://movies/</param>
 					<param name="UseCustomPath">true</param>
+					<param name="Visible">Skin.HasSetting(hub.defaultnodes)</param>
 				</include>
+				<control type="button" id="5501">
+					<width>216</width>
+					<onleft>7000</onleft>
+					<label>$LOCALIZE[999]</label>
+					<onclick>ActivateWindow(Videos,Files)</onclick>
+					<visible>!Library.HasContent(Movies)</visible>
+				</control>
 			</control>
 		</control>
 

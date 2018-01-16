@@ -152,7 +152,7 @@
 							<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
 						<control type="label">
-							<top>24</top>
+							<top>26</top>
 							<width>$PARAM[TextWidth]</width>
 							<label>$PARAM[Label2]</label>
 							<height>24</height>
@@ -270,7 +270,7 @@
 							<visible>![Container.Content(movies) | Container.Content(tvshows)]</visible>
 						</control>
 						<control type="label">
-							<top>24</top>
+							<top>26</top>
 							<width>$PARAM[TextWidth]</width>
 							<label>$PARAM[Label2]</label>
 							<height>24</height>

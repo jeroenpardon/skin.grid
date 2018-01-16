@@ -523,7 +523,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites)">$INFO[ListItem.Genre]$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]</value>
 		<value condition="Container.Content(files)">$INFO[ListItem.Date]$INFO[ListItem.Size,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(movies) + Control.IsVisible(50)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$INFO[ListItem.Genre,  |  ]</value>
-		<value condition="[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)] + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  &#9733; ]$INFO[ListItem.Genre,  |  ]</value>
+		<value condition="[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)] + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  &#9734; ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled) + Skin.HasSetting(ratings.pg.enable)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  ]$INFO[ListItem.MPAA,  |  ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$INFO[ListItem.Genre,  |  ]</value>
@@ -531,7 +531,9 @@
 		<value condition="Container.Content(tvshows)">$VAR[info:ShowStatus]$INFO[ListItem.Genre,  |  ]$INFO[ListItem.Studio,  |  ]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
 		<value condition="Container.Content(episodes) + String.StartsWith(Container.FolderPath,plugin://plugin.video)">$INFO[ListItem.Label2]$INFO[ListItem.Premiered,  |  ]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,  |  ]</value>
+		
+		<value condition="Container.Content(episodes) + Control.IsVisible(55)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode, E]$INFO[ListItem.Premiered,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Genre]$VAR[info:Origin,  |  ]</value>
 		<value condition="Container.Content(albums)">$INFO[ListItem.Artist]$INFO[ListItem.Year,  |  ]</value>
 		<value condition="Container.Content(songs)">$INFO[ListItem.Artist]$INFO[ListItem.FileExtension,  |  ]$INFO[ListItem.Duration,  |  ]</value>
@@ -568,6 +570,11 @@
 
 
 <!-- Menu -->
+	<variable name="menu:FilterCount">
+		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container().NumItems] $INFO[Container.Content]</value>
+		<value>$INFO[Container().NumItems,, $LOCALIZE[31084]]</value>
+	</variable>
+
 	<variable name="menu:GetAddons">
 		<value condition="Container.Content(games)">ActivateWindow(addonbrowser,addons://all/category.gameaddons)</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/video)">ActivateWindow(addonbrowser,addons://all/xbmc.addon.video)</value>
@@ -583,10 +590,10 @@
 		<value condition="String.Contains(Container.FolderPath,addons://sources/executable)">$LOCALIZE[1043]</value>
 	</variable>
 
-	<variable name="menu:FilterCount">
-		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container().NumItems] $INFO[Container.Content]</value>
-		<value>$INFO[Container().NumItems,, $LOCALIZE[31084]]</value>
-	</variable>
+	<variable name="menu:Guide">
+		<value condition="Control.IsVisible(10)">$INFO[Container(10).NumItems,, $LOCALIZE[14301]]</value>
+		<value>$INFO[Pvr.BackendHost]</value>
+	</variable>	
 
 	<variable name="menu:HideBroken">
 		<value condition="String.Contains(Control.GetLabel(8),*)">$LOCALIZE[16041]</value>
@@ -630,10 +637,10 @@
 	</variable>
 
 	<variable name="menu:Browse">
-		<value condition="Window.IsActive(1132)">ActivateWindow(Videos,videodb://movies/)</value>
-		<value condition="Window.IsActive(1131)">ActivateWindow(Videos,videodb://tvshows/)</value>
+		<value condition="Window.IsActive(1132)">ActivateWindow(Videos,videodb://movies/titles/)</value>
+		<value condition="Window.IsActive(1131)">ActivateWindow(Videos,videodb://tvshows/titles/)</value>
 		<value condition="Window.IsActive(1130)">ActivateWindow(Videos,sources://video/)</value>
-		<value condition="Window.IsActive(1133)">ActivateWindow(Videos,musicdb://)</value>
+		<value condition="Window.IsActive(1133)">ActivateWindow(Videos,musicdb://artists/)</value>
 	</variable>
 
 	<variable name="menu:Browse.Label">
@@ -688,13 +695,12 @@
 	</variable>
 
 	<variable name="menu:HubSources">
-		<value condition="Window.IsActive(1130)">ActivateWindowAndFocus(skinsettings,3,0,9331,0)</value>
-		<value condition="Window.IsActive(1131)">ActivateWindowAndFocus(skinsettings,3,0,9321,0)</value>
-		<value condition="Window.IsActive(1132)">ActivateWindowAndFocus(skinsettings,3,0,9311,0)</value>
-		<value condition="Window.IsActive(1133)">ActivateWindowAndFocus(skinsettings,3,0,9341,0)</value>
+		<value condition="Window.IsActive(1130)">ActivateWindowAndFocus(1129,1,0,9101,0)</value>
+		<value condition="Window.IsActive(1131)">ActivateWindowAndFocus(1129,3,0,9301,0)</value>
+		<value condition="Window.IsActive(1132)">ActivateWindowAndFocus(1129,2,0,9201,0)</value>
+		<value condition="Window.IsActive(1133)">ActivateWindowAndFocus(1129,4,0,9401,0)</value>
 	</variable>
 
-	
 
 	
 <!-- Status -->
@@ -1606,6 +1612,7 @@
 		<value condition="Window.IsActive(custom_1103-Downloader.xml)">&#58930;</value>
 		<value condition="Window.IsActive(custom_1101-Manage.xml)">&#59028;</value>
 		<value condition="Window.IsActive(custom_1102-More.xml)">&#57413;</value>
+		<value condition="Window.IsActive(custom_1129-Hubs.xml)">&#59014;</value>
 		<!-- Info dialogs -->
 		<value condition="Window.IsActive(movieinformation) + Container.Content(movies)">&#57402;</value>
 		<value condition="Window.IsActive(movieinformation) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">&#57361;</value>
@@ -1791,6 +1798,7 @@
 		<value condition="Window.IsActive(eventlog)">$LOCALIZE[14111]</value>
 		<value condition="Window.IsActive(settings)">$LOCALIZE[10004]</value>
 		<value condition="Window.IsActive(1103)">$LOCALIZE[31206]</value>
+		<value condition="Window.IsActive(1129)">$LOCALIZE[31382]</value>
 	</variable>
 
 	<variable name="window:Grid.Debug">

@@ -12,7 +12,6 @@
 	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableWallBackgrounds)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
 	
 	<!-- Colorbox -->
 	<onload>Skin.SetString(fx.bitsize,1)</onload>
