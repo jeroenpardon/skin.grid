@@ -89,7 +89,7 @@
 		<node label="Grid">
 			<!-- Hubs -->
 			<node label="31383">
-				<shortcut label="$LOCALIZE[36912]" type="31004">ActivateWindow(1130)</shortcut>
+				<shortcut label="$LOCALIZE[3]" type="31004">ActivateWindow(1130)</shortcut>
 				<shortcut label="$LOCALIZE[36901]" type="31004">ActivateWindow(1132)</shortcut>
 				<shortcut label="$LOCALIZE[36903]" type="31004">ActivateWindow(1131)</shortcut>
 			</node>
@@ -355,11 +355,7 @@
 	<propertydefault defaultID="musicvideos" property="homeSymbol">&#57352;</propertydefault>
 	<propertydefault defaultID="movies" property="homeSymbol">&#57402;</propertydefault>
 	<propertydefault defaultID="36901" property="homeSymbol">&#57402;</propertydefault>
-
-
 	<propertydefault defaultID="3" property="homeSymbol">&#57352;</propertydefault>
-
-
 	<propertydefault defaultID="videos" property="homeSymbol">&#57352;</propertydefault>
 	<propertydefault defaultID="36912" property="homeSymbol">&#57352;</propertydefault>
 	<propertydefault defaultID="tvshows" property="homeSymbol">&#57361;</propertydefault>
