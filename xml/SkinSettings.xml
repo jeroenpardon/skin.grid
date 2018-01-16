@@ -813,7 +813,7 @@
 							<include>install_HelperService</include>
 							<include>radio_Settings</include>
 							<onup>9690</onup>
-							<ondown>9696</ondown>
+							<ondown>9697</ondown>
 						</control>
 					</control>
 					<!-- Reset -->
