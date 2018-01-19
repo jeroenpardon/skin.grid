@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol></defaultcontrol>
-	<visible>[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + !Window.IsActive(videoosd) + !Window.IsActive(sliderdialog) + !Window.IsActive(videobookmarks) + !Window.IsActive(subtitlesearch)</visible>
+	<visible>[VideoPlayer.IsFullscreen | Window.IsActive(visualisation)] + ![Window.IsActive(videoosd) + !Skin.HasSetting(osd.menu.progress)] + !Window.IsActive(sliderdialog) + !Window.IsActive(videobookmarks) + !Window.IsActive(subtitlesearch)</visible>
 	<controls>
 		<control type="group">
 
 			<include content="global_WindowChrome">
 				<param name="Title">$VAR[window:Title.Player]</param>
-				<param name="Visible">[[Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + !Player.HasGame] | Player.Paused | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)</param>
+				<param name="Visible">[[Player.Caching | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding] + !Player.HasGame] | Player.Paused | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml) | [Window.IsActive(videoosd) + Skin.HasSetting(osd.menu.progress)]</param>
 			</include>
 
 			<!-- Music -->

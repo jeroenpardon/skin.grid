@@ -863,6 +863,9 @@ msgctxt "#31554"
 msgid "Software decoding"
 msgstr ""
 
+msgctxt "#31555"
+msgid "Show seekbar on opening OSD menu"
+msgstr ""
 
 #. example usage: the movie will finish playing at 22:00
 msgctxt "#31556"

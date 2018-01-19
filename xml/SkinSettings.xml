@@ -610,6 +610,13 @@
 						<selected>Skin.HasSetting(osd.pauseinfo)</selected>
 						<include>radio_Settings</include>
 					</control>
+					<!-- Seekbar on OSD menu -->
+					<control type="radiobutton" id="9553">
+						<label>$LOCALIZE[31555]</label>
+						<onclick>Skin.ToggleSetting(osd.menu.progress)</onclick>
+						<selected>Skin.HasSetting(osd.menu.progress)</selected>
+						<include>radio_Settings</include>
+					</control>
 
 					<!-- Descriptions -->
 					<control type="label" id="9560">
