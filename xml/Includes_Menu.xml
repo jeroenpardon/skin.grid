@@ -106,7 +106,8 @@
 		<param name="OnDown" default="7003"/>
 		<param name="Visible" default="true"/>
 		<definition>
-			<!--change viewtype-->
+
+			<!-- Change viewtype -->
 			<control type="group" id="7001">
 				<height>108</height>
 				<visible>$PARAM[Visible]</visible>
@@ -147,7 +148,8 @@
 	</include>
 
 	<include name="menu_Commons">
-		<!--sort method-->
+		
+		<!-- Sort method -->
 		<control type="group" id="7003">
 			<height>108</height>
 			<control type="image">
@@ -184,7 +186,8 @@
 				</control>
 			</control>
 		</control>
-		<!--sort direction-->
+		
+		<!-- Sort direction -->
 		<control type="group" id="7004">
 			<height>108</height>
 			<control type="image">
@@ -225,7 +228,8 @@
 	<include name="menu_Extras">
 		<param name="OnRight" default="50"/>
 		<definition>
-			<!--update library-->
+
+			<!-- Update library -->
 			<control type="group" id="7090">
 				<height>108</height>
 				<visible>$EXP[Content.IsVideo] | $EXP[Content.IsAudio]</visible>
@@ -264,7 +268,8 @@
 					</control>
 				</control>
 			</control>
-			<!--get more-->
+
+			<!-- Get more -->
 			<control type="group" id="7091">
 				<height>108</height>
 				<visible>Container.Content(addons) + !Window.IsActive(AddonBrowser)</visible>
@@ -301,7 +306,8 @@
 					</control>
 				</control>
 			</control>
-			<!--player controls-->
+
+			<!-- Player controls -->
 			<control type="group" id="7092">
 				<height>108</height>
 				<visible>Player.HasMedia + String.IsEqual(Skin.String(menu.controls),player)</visible>
@@ -351,7 +357,8 @@
 					</control>
 				</control>
 			</control>
-			<!--now playing / fullscreen-->
+			
+			<!-- Mow playing / fullscreen -->
 			<control type="group" id="7093">
 				<height>108</height>
 				<visible>Player.HasMedia + String.IsEqual(Skin.String(menu.controls),fullscreen)</visible>
@@ -393,6 +400,7 @@
 	</include>
 
 	<include name="menu_AddonSettings">
+		
 		<!-- Add-on settings -->
 		<control type="group" id="7011">
 			<height>108</height>
@@ -435,7 +443,8 @@
 	<include name="menu_Video">	
 		<include>menu_Views</include>
 		<include>menu_Commons</include>
-		<!--hide watched-->
+		
+		<!-- Hide watched -->
 		<control type="group" id="7010">
 			<height>108</height>
 			<visible>Window.IsActive(videos)</visible>
@@ -472,7 +481,8 @@
 				</control>
 			</control>
 		</control>
-		<!--filter-->
+
+		<!-- Filter -->
 		<control type="group" id="7011">
 			<height>108</height>
 			<visible>Container.CanFilter + !Container.CanFilterAdvanced | Container.CanFilterAdvanced</visible>
@@ -522,7 +532,8 @@
 				</control>
 			</control>
 		</control>
-		<!--party mode-->
+		
+		<!-- Party mode -->
 		<control type="group" id="7012">
 			<height>108</height>
 			<visible>Container.Content(musicvideos)</visible>
@@ -559,7 +570,8 @@
 				</control>
 			</control>
 		</control>
-		<!--search-->
+
+		<!-- Search -->
 		<control type="group" id="7013">
 			<height>108</height>
 			<visible>$EXP[Content.IsVideo] | $EXP[Content.IsAudio]</visible>
@@ -612,7 +624,8 @@
 				</control>
 			</control>
 		</control>
-		<!--unlock shares-->
+
+		<!-- Unlock shares -->
 		<control type="group" id="7014">
 			<height>108</height>
 			<visible>System.HasLocks</visible>
@@ -660,7 +673,7 @@
 		<include>menu_Views</include>
 		<include>menu_Commons</include>
 
-		<!--slideshow-->
+		<!-- Slideshow -->
 		<control type="group" id="7010">
 			<height>108</height>
 			<visible>Container.Content(images) + Control.IsEnabled(6)</visible>
@@ -696,7 +709,8 @@
 				</control>
 			</control>
 		</control>
-		<!--recursize slideshow-->
+		
+		<!-- Recursize slideshow -->
 		<control type="group" id="7011">
 			<height>108</height>
 			<visible>Window.IsActive(pictures) + Control.IsEnabled(7)</visible>
@@ -733,7 +747,8 @@
 				</control>
 			</control>
 		</control>
-		<!--randomize-->
+		
+		<!-- Randomize -->
 		<control type="group" id="7012">
 			<height>108</height>
 			<visible>Container.Content(images) + Control.IsEnabled(9)</visible>
@@ -780,7 +795,7 @@
 		<include>menu_Views</include>
 		<include>menu_Commons</include>
 
-		<!--party mode-->
+		<!-- Party mode -->
 		<control type="group" id="7010">
 			<height>108</height>
 			<visible>Window.IsActive(music) | Container.Content(musicvideos)</visible>
@@ -833,7 +848,7 @@
 		<include condition="!Window.IsActive(1110)">menu_Views</include>
 		<include condition="!Window.IsActive(1110)">menu_Commons</include>
 
-	<!--hide broken-->
+		<!-- Hide broken -->
 		<control type="group" id="7010">
 			<height>108</height>
 			<visible>Control.IsEnabled(7) + !Window.IsActive(1110)</visible>
@@ -869,7 +884,8 @@
 				</control>
 			</control>
 		</control>
-		<!--hide foreign-->
+		
+		<!-- Hide foreign -->
 		<control type="group" id="7011">
 			<height>108</height>
 			<visible>Control.IsEnabled(7) + !Window.IsActive(1110)</visible>
@@ -905,6 +921,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Refresh repositories -->
 		<control type="group" id="7012">
 			<height>108</height>
@@ -943,6 +960,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Refresh add-on folders -->
 		<control type="group" id="7013">
 			<height>108</height>
@@ -1059,11 +1077,7 @@
 			</control>
 		</control>
 
-		<include content="menu_AddonSettings">
-
-			
-
-		</include>
+		<include>menu_AddonSettings</include>
 
 		<include>menu_Extras</include>
 
@@ -1122,7 +1136,8 @@
 
 
 	<include name="menu_Playlist">
-		<!--change viewtype-->
+		
+		<!-- Change viewtype -->
 		<control type="group" id="7040">
 			<height>108</height>
 			<control type="image">
@@ -1158,7 +1173,8 @@
 				</control>
 			</control>
 		</control>
-		<!--shuffle-->
+
+		<!-- Shuffle -->
 		<control type="group" id="7041">
 			<height>108</height>
 			<control type="image">
@@ -1193,7 +1209,8 @@
 				</control>
 			</control>
 		</control>
-		<!--repeat-->
+
+		<!-- Repeat -->
 		<control type="group" id="7042">
 			<height>108</height>
 			<control type="image">
@@ -1232,7 +1249,8 @@
 				</control>
 			</control>
 		</control>
-		<!--save-->
+		
+		<!-- Save -->
 		<control type="group" id="7042">
 			<height>108</height>
 			<control type="image">
@@ -1267,7 +1285,8 @@
 				</control>
 			</control>
 		</control>
-		<!--clear-->
+		
+		<!-- Clear -->
 		<control type="group" id="7042">
 			<height>108</height>
 			<control type="image">
@@ -1305,7 +1324,8 @@
 	</include>
 
 	<include name="menu_System">
-		<!--settings level-->
+		
+		<!--Settings level -->
 		<control type="group" id="7010">
 			<height>108</height>
 			<visible>Window.IsActive(SettingsCategory.xml)</visible>
@@ -1342,7 +1362,8 @@
 				</control>
 			</control>
 		</control>
-		<!--file manager-->
+
+		<!--File manager -->
 		<control type="group" id="7011">
 			<height>108</height>
 			<visible>Window.IsActive(settings)</visible>
@@ -1379,7 +1400,8 @@
 				</control>
 			</control>
 		</control>
-		<!--events-->
+
+		<!-- Events -->
 		<control type="group" id="7012">
 			<height>108</height>
 			<visible>Window.IsActive(settings)</visible>
@@ -1416,7 +1438,8 @@
 				</control>
 			</control>
 		</control>
-		<!--event logging level-->
+
+		<!-- Event logging level -->
 		<control type="group" id="7013">
 			<height>108</height>
 			<visible>Window.IsActive(eventlog)</visible>
@@ -1451,7 +1474,8 @@
 				</control>
 			</control>
 		</control>
-		<!--only show current level-->
+
+		<!-- Only show current level -->
 		<control type="group" id="7014">
 			<height>108</height>
 			<visible>Window.IsActive(eventlog)</visible>
@@ -1486,7 +1510,8 @@
 				</control>
 			</control>
 		</control>
-		<!--clear-->
+
+		<!-- Clear -->
 		<control type="group" id="7015">
 			<height>108</height>
 			<visible>Window.IsActive(eventlog)</visible>
@@ -1522,6 +1547,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Skin debug grid -->
 		<control type="group" id="7016">
 			<height>108</height>
@@ -1559,6 +1585,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Skin debug labels -->
 		<control type="group" id="7017">
 			<height>108</height>
@@ -1635,7 +1662,7 @@
 			</control>
 		</control>
 
-		<!-- Reload skin -->
+		<!-- Addon browser -->
 		<control type="group" id="7019">
 			<height>108</height>
 			<visible>Window.IsActive(settings)</visible>
@@ -1679,7 +1706,8 @@
 
 
 	<include name="menu_PVR">
-		<!--channels-->
+		
+		<!-- Channels -->
 		<control type="group" id="7050">
 			<height>108</height>
 			<control type="image">
@@ -1718,7 +1746,8 @@
 				</control>
 			</control>
 		</control>
-		<!--guide-->
+
+		<!-- Guide -->
 		<control type="group" id="7051">
 			<height>108</height>
 			<control type="image">
@@ -1757,7 +1786,8 @@
 				</control>
 			</control>
 		</control>
-		<!--recordings-->
+
+		<!-- Recordings -->
 		<control type="group" id="7052">
 			<height>108</height>
 			<control type="image">
@@ -1795,7 +1825,8 @@
 				</control>
 			</control>
 		</control>
-		<!--timers-->
+
+		<!-- Timers -->
 		<control type="group" id="7054">
 			<height>108</height>
 			<control type="image">
@@ -1833,7 +1864,8 @@
 				</control>
 			</control>
 		</control>
-		<!--search-->
+
+		<!-- Search -->
 		<control type="group" id="7055">
 			<height>108</height>
 			<control type="image">
@@ -1871,6 +1903,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Channel groups -->
 		<control type="group" id="7056">
 			<height>108</height>
@@ -1922,7 +1955,7 @@
 			<param name="Visible">String.StartsWith(Container.FolderPath,pvr://recordings/)</param>
 		</include>
 
-		<!--sort method-->
+		<!-- Sort method -->
 		<control type="group" id="7057">
 			<height>108</height>
 			<control type="image">
@@ -1958,7 +1991,8 @@
 				</control>
 			</control>
 		</control>
-		<!--sort direction-->
+
+		<!-- Sort direction -->
 		<control type="group" id="7058">
 			<height>108</height>
 			<control type="image">
@@ -1994,7 +2028,8 @@
 				</control>
 			</control>
 		</control>
-		<!--filter-->
+
+		<!-- Filter -->
 		<control type="group" id="7059">
 			<height>108</height>
 			<visible>Window.IsActive(TVChannels) | Window.IsActive(RadioChannels)</visible>
@@ -2036,6 +2071,7 @@
 	</include>
 
 	<include name="menu_Weather">
+
 		<!-- Location -->
 		<control type="group" id="7010">
 			<height>108</height>
@@ -2072,6 +2108,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Refresh -->
 		<control type="group" id="7011">
 			<height>108</height>
@@ -2107,6 +2144,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Settings -->
 		<control type="group" id="7012">
 			<height>108</height>
@@ -2143,6 +2181,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Icons -->
 		<control type="group" id="7013">
 			<height>108</height>
@@ -2181,6 +2220,7 @@
 				</control>
 			</control>
 		</control>
+
 		<!-- Backgrounds -->
 		<control type="group" id="7014">
 			<height>108</height>
@@ -2221,11 +2261,9 @@
 		</control>
 	</include>
 
-	
-
-
 	<include name="menu_Other">
-		<!-- TV Show Next Aired -->
+
+		<!-- Current add-on settings -->
 		<control type="group" id="7010">
 			<height>108</height>
 			<visible>Window.IsActive(script-globalsearch.xml) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)</visible>
@@ -2263,6 +2301,7 @@
 			</control>
 		</control>
 
+		<!-- TV Show Next Aired -->
 		<control type="group" id="7014">
 			<height>108</height>
 			<visible>Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)</visible>
@@ -2341,7 +2380,6 @@
 				</control>
 			</control>
 		</control>
-
 	</include>
 
 	<include name="menu_Hub">
@@ -2463,6 +2501,5 @@
 		</control>
 
 	</include>
-
 
 </includes>
