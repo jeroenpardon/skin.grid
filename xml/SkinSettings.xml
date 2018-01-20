@@ -1067,6 +1067,13 @@
 							<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
 						</item>
 						<item>
+							<label>Global Search</label>
+							<label2>$INFO[System.AddonVersion(script.globalsearch),, &#8226; $LOCALIZE[31071]]</label2>
+							<icon>$INFO[System.AddonIcon(script.globalsearch)]</icon>
+							<onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
+							<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
+						</item>
+						<item>
 							<label>Library Data Provider</label>
 							<label2>$INFO[System.AddonVersion(service.library.data.provider),, &#8226; $LOCALIZE[31071]]</label2>
 							<icon>$INFO[System.AddonIcon(service.library.data.provider)]</icon>
