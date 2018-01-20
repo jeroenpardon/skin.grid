@@ -1225,7 +1225,7 @@
 
 	<variable name="player:Duration">
 		<value condition="!VideoPlayer.Content(LiveTV)">$INFO[Player.Duration(hh:mm:ss)]</value>
-		<value>$INFO[Pvr.Duration(hh:mm)]</value>
+		<value>$INFO[PVR.EpgEventDuration(hh:mm)]</value>
 	</variable>
 
 	<variable name="player:Info">
@@ -1276,7 +1276,7 @@
 
 	<variable name="player:Time">
 		<value condition="!VideoPlayer.Content(LiveTV)">$INFO[Player.Time(hh:mm:ss)]</value>
-		<value>$INFO[Pvr.Time(hh:mm)]</value>
+		<value>$INFO[PVR.EpgEventElapsedTime(hh:mm)]</value>
 	</variable>
 
 	<variable name="player:Title">

@@ -207,15 +207,15 @@
 						<label>&#59172;</label>
 						<textcolor>Attention</textcolor>
 						<focusedcolor>Attention</focusedcolor>
-						<onclick>PlayerControl(Record)</onclick>
+						<onclick>PVR.ToggleRecordPlayingChannel</onclick>
 						<include>osd_PlayerButton</include>
-						<visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
+						<visible>VideoPlayer.Content(LiveTV) + PVR.IsRecordingPlayingChannel</visible>
 					</control>
 					<control type="button" id="710">
 						<label>&#59172;</label>
-						<onclick>PlayerControl(Record)</onclick>
+						<onclick>PVR.ToggleRecordPlayingChannel</onclick>
 						<include>osd_PlayerButton</include>
-						<visible>VideoPlayer.Content(LiveTV) + !Player.Recording</visible>
+						<visible>VideoPlayer.Content(LiveTV) + !PVR.IsRecordingPlayingChannel</visible>
 					</control>
 					<!-- Teletext -->
 					<control type="button" id="712">
