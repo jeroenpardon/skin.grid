@@ -252,13 +252,13 @@
 					<left>32</left>
 					<control type="label">
 						<textcolor>$VAR[color:Main]</textcolor>
-						<label>$VAR[menu:UpdateLabel2]</label>
+						<label>$VAR[menu:Update.Label]</label>
 						<include>menu_Label</include>
 						<visible>!Control.HasFocus(200)</visible>
 					</control>
 					<control type="label">
 						<width>384</width>
-						<label>$VAR[menu:UpdateLabel2]</label>
+						<label>$VAR[menu:Update.Label]</label>
 						<include>menu_Label</include>
 						<visible>Control.HasFocus(200)</visible>
 					</control>
@@ -2207,12 +2207,14 @@
 		</control>
 	</include>
 
+	
+
 
 	<include name="menu_Other">
 		<!-- TV Show Next Aired -->
 		<control type="group" id="7010">
 			<height>108</height>
-			<visible>Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)</visible>
+			<visible>Window.IsActive(script-globalsearch.xml) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)</visible>
 			<control type="image">
 				<width>384</width>
 				<height>108</height>
@@ -2226,7 +2228,7 @@
 				<ondown>7014</ondown>
 				<onleft>7100</onleft>
 				<onright>5500</onright>
-				<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
+				<onclick>$VAR[menu:AddonSettings]</onclick>
 				<include>menu_Button</include>
 			</control>
 			<control type="group">
@@ -2234,13 +2236,13 @@
 				<left>32</left>
 				<control type="label">
 					<textcolor>$VAR[color:Main]</textcolor>
-					<label>TV Show - Next Aired</label>
+					<label>$VAR[menu:AddonSettings.Label]</label>
 					<include>menu_Label</include>
 					<visible>!Control.HasFocus(60)</visible>
 				</control>
 				<control type="label">
 					<width>384</width>
-					<label>TV Show - Next Aired</label>
+					<label>$VAR[menu:AddonSettings.Label]</label>
 					<include>menu_Label</include>
 					<visible>Control.HasFocus(60)</visible>
 				</control>

@@ -590,6 +590,16 @@
 		<value condition="String.Contains(Container.FolderPath,addons://sources/executable)">$LOCALIZE[1043]</value>
 	</variable>
 
+	<variable name="menu:AddonSettings">
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">Addon.OpenSettings(script.tv.show.next.aired)</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">Addon.OpenSettings(script.globalsearch)</value>
+	</variable>
+
+	<variable name="menu:AddonSettings.Label">
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">TV Show - Next Aired</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">Global Search</value>
+	</variable>
+
 	<variable name="menu:Guide">
 		<value condition="Control.IsVisible(10)">$INFO[Container(10).NumItems,, $LOCALIZE[14301]]</value>
 		<value>$INFO[Pvr.BackendHost]</value>
@@ -685,12 +695,12 @@
 	<variable name="menu:Update">
 		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(1131) | Window.IsActive(1132)] + library.isscanningvideo">$LOCALIZE[13353]</value>
 		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(1131) | Window.IsActive(1132)]">$LOCALIZE[24069]</value>
-		<value condition="Window.IsActive(music) + library.isscanningmusic">$LOCALIZE[13353]</value>
-		<value condition="Window.IsActive(music)">$LOCALIZE[24069]</value>
+		<value condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + library.isscanningmusic">$LOCALIZE[13353]</value>
+		<value condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]">$LOCALIZE[24069]</value>
 	</variable>
 
-	<variable name="menu:UpdateLabel2">
-		<value condition="Window.IsActive(videos) | Window.IsActive(1131) | Window.IsActive(1132)">$LOCALIZE[14236]</value>
+	<variable name="menu:Update.Label">
+		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(1131) | Window.IsActive(1132)]">$LOCALIZE[14236]</value>
 		<value>$LOCALIZE[14237]</value>
 	</variable>
 
@@ -1672,6 +1682,9 @@
 		<value condition="[Window.IsVisible(volumebar) + !Player.Muted] + Window.IsActive(Home)">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$LOCALIZE[4]</value>
 		<value condition="Window.IsActive(script-cu-lrclyrics-main.xml)">$LOCALIZE[24013]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml) + Control.IsVisible(991)">$LOCALIZE[194] $INFO[Control.GetLabel(991)]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml) + Control.IsVisible(999)">$LOCALIZE[284]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">$LOCALIZE[283]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 

@@ -23,6 +23,7 @@
 		<param name="Logo" default="$VAR[art:Logo]"/>
 		<param name="LogoSize" default="30%"/>
 		<param name="LogoPosY" default="30%"/>
+		<param name="OnLeft" default="7000"/>
 		<param name="OnRight" default="24"/>
 		<param name="Orientation" default="vertical"/>
 		<param name="PageControl" default="6500"/>
@@ -53,7 +54,7 @@
 				<height>$PARAM[Height]</height>
 				<onup>$PARAM[OnUp]</onup>
 				<ondown>$PARAM[OnDown]</ondown>
-				<onleft>7000</onleft>
+				<onleft>$PARAM[OnLeft]</onleft>
 				<onleft>SetProperty(MenuOpen,true,Home)</onleft>
 				<onright condition="Window.IsActive(videobookmarks)">9000</onright>
 				<onright condition="!Window.IsActive(videobookmarks)">6500</onright>
