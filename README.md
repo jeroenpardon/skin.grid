@@ -46,7 +46,7 @@ If you are interested in providing a translation of Grid into your language(s), 
 https://img.shields.io/badge/Downloads-Official-brightgreen.svg?style=flat-square
 )](https://github.com/jeroenpardon/skin.grid/releases) [![badge-beta](https://img.shields.io/badge/Downloads-Beta-brightgreen.svg?style=flat-square)](https://gitlab.com/jeroenpardon/repository.jeroen) [![badge-snapshot](
 https://img.shields.io/badge/Downloads-Snapshot-brightgreen.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/archive/master.zip) [![badge-install](https://img.shields.io/badge/Wiki-Install-blue.svg?style=flat-square)](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation)
+)](https://github.com/jeroenpardon/skin.grid/archive/master.zip)
 
 **Official releases**
 

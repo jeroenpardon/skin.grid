@@ -34,7 +34,7 @@
 			<include>transition_Content</include>
 			
 			<include content="view_List">
-				<param name="Label">$INFO[ListItem.ChannelNumber,,. ]$INFO[ListItem.ChannelName,,: ]$INFO[ListItem.Title]</param>
+				<param name="Label">$INFO[ListItem.ChannelNumberLabel,, ]$INFO[ListItem.ChannelName,,: ]$INFO[ListItem.Title]</param>
 				<param name="Label2">$VAR[media:Info]</param>
 				<param name="ShowSymbol">String.IsEmpty(ListItem.Art(thumb))</param>
 			</include>
