@@ -523,7 +523,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites)">$INFO[ListItem.Genre]$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]</value>
 		<value condition="Container.Content(files)">$INFO[ListItem.Date]$INFO[ListItem.Size,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(movies) + Control.IsVisible(50)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$INFO[ListItem.Genre,  |  ]</value>
-		<value condition="[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)] + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  &#9734; ]$INFO[ListItem.Genre,  |  ]</value>
+		<value condition="[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)] + !Container.Content(episodes) + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  &#9734; ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled) + Skin.HasSetting(ratings.pg.enable)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  ]$INFO[ListItem.MPAA,  |  ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$INFO[ListItem.Genre,  |  ]</value>
@@ -531,7 +531,6 @@
 		<value condition="Container.Content(tvshows)">$VAR[info:ShowStatus]$INFO[ListItem.Genre,  |  ]$INFO[ListItem.Studio,  |  ]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
 		<value condition="Container.Content(episodes) + String.StartsWith(Container.FolderPath,plugin://plugin.video)">$INFO[ListItem.Label2]$INFO[ListItem.Premiered,  |  ]</value>
-		
 		<value condition="Container.Content(episodes) + Control.IsVisible(55)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode, E]$INFO[ListItem.Premiered,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Genre]$VAR[info:Origin,  |  ]</value>
