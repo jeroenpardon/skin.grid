@@ -1112,7 +1112,7 @@
 		<value condition="Container.Content(songs)">$INFO[ListItem.Userrating]</value>
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</value>
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.AddonCreator]</value>
-		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.ChannelName]</value>
+		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.ChannelNumberLabel,, ]$INFO[ListItem.ChannelName, ]</value>
 		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="information:R2.Label">
