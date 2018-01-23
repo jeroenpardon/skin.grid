@@ -2,7 +2,7 @@
 <includes>
 
 	 <include name="Burns">
-	 	<animation type="Conditional" condition="Skin.HasSetting(burns.enable) + ![Skin.HasSetting(home.fx.home.image) + Window.IsActive(Home)]" loop="true">
+	 	<animation type="Conditional" condition="Skin.HasSetting(burns.enable) + ![Skin.HasSetting(fx.home.image) + Window.IsActive(Home)]" loop="true">
  			<effect type="zoom" center="960,540" start="100" end="120" time="10000" tween="Sine" easing="InOut"/>
  			<effect type="zoom" center="960,540" start="120" end="100" time="10000" tween="Sine" easing="InOut" delay="10000"/>
  		</animation>
