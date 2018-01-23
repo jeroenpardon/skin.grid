@@ -1,17 +1,5 @@
-1.5.0
-- This release introduces hubs for the various library sections. Enable them by adding them to your main menu. Set up the hub sources in the newly added skin settings section
-- Descriptions now support Hebrew characters
-- Fix for animated fanart skin setting getting re-enabled at boot
-- Enable animated artwork in Gallery View
-- Updated translations
-- Fix for rating star symbol not displaying in some places
-- When selecting " browse library" in hub, start in titles / artists node
-- Hubs disabled by default (may change back again in later release)
-- Reworked skin settings category menu to indicate currently focused category
-- Include duration for episodes in containers
-- Added buttons to clear video hub sources
-- Fixed a navigation issue in skin settings
-- Fixed add-on settings dialog malfunction
+2.0
+- First official Leia release
 - Updated default font to latest version (Cyrillic support)
 - Tweaks to volumebar behaviour
 - Fixed some localisation related issues

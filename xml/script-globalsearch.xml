@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<views>50,51</views>
+	<defaultcontrol always="true">5500</defaultcontrol>
+	<menucontrol>7000</menucontrol>
+
+	<controls>
+
+		<!-- Menu trigger -->
+		<control type="button" id="5500">
+			<onleft>7000</onleft>
+			<onfocus>SetFocus(9000)</onfocus>
+			<onup>9000</onup>
+			<ondown>9000</ondown>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+
+		<!-- Chrome -->
+		<control type="group">
+			<include>toggle_Menu</include>
+
+			<!--global includes-->
+			<include>background_Global</include>
+
+			<!--window chrome-->		
+			<control type="group">
+				<include>transition_Chrome</include>
+				<include content="global_WindowChrome">
+					<param name="Title">$VAR[window:Title.Addons]</param>
+				</include>
+			</control>
+
+			<!-- Categories -->
+			<control type="group">
+				<left>128</left>
+				<top>198</top>
+				<include>transition_Content</include>
+				<visible>![Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml)]</visible>
+				<control type="list" id="9000">
+					<left>0</left>
+					<top>0</top>
+					<width>320</width>
+					<height>810</height>
+					<onleft>7000</onleft>
+					<onright>50</onright>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<itemlayout height="90" width="320">
+						<control type="label">
+							<width>320</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Black-20</font>
+							<aligny>center</aligny>
+							<textoffsetx>24</textoffsetx>
+							<textcolor>$VAR[color:Accent]</textcolor>
+						</control>
+					</itemlayout>
+					<focusedlayout height="90" width="320">
+						<control type="image">
+							<width>320</width>
+							<height>90</height>
+							<texture colordiffuse="$VAR[color:Accent]">colorize/70.png</texture>
+							<animation effect="fade" time="150" start="100" end="25" condition="Control.HasFocus(50)">Conditional</animation>
+						</control>
+						<control type="label">
+							<width>320</width>
+							<height>90</height>
+							<label>$INFO[ListItem.Label]</label>
+							<font>Black-20</font>
+							<aligny>center</aligny>
+							<textoffsetx>24</textoffsetx>
+							<textcolor>$VAR[color:Main]</textcolor>
+						</control>
+					</focusedlayout>
+				</control>
+
+				<!-- Search results-->
+				<control type="panel" id="50">
+					<left>384</left>
+					<width>1280</width>
+					<height>972</height>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<onleft>9000</onleft>
+					<orientation>vertical</orientation>
+					<preloaditems>4</preloaditems>
+					<include>global_ListScroll</include>
+
+					<!-- Portrait -->
+					<itemlayout condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors)" width="320" height="480">
+						<control type="group">
+							<width>320</width>
+							<height>480</height>
+							<control type="image">
+								<width>320</width>
+								<height>480</height>
+								<texture background="true">$VAR[art:Portrait]</texture>
+								<aspectratio align="center" aligny="center">scale</aspectratio>
+								<fadetime>500</fadetime>
+								<bordersize>10</bordersize>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors)" width="320" height="480">
+						<control type="group">
+							<width>320</width>
+							<height>480</height>
+							<control type="image">
+								<width>320</width>
+								<height>480</height>
+								<texture background="true">$VAR[art:Portrait]</texture>
+								<bordertexture border="10">views/frame/square.png</bordertexture>
+								<bordersize>10</bordersize>
+								<aspectratio align="center" aligny="center">scale</aspectratio>
+								<fadetime>500</fadetime>
+							</control>
+						</control>
+					</focusedlayout>
+
+					<!-- Landscape -->
+					<itemlayout condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists)" width="640" height="360">
+						<control type="group">
+							<width>640</width>
+							<height>360</height>
+							<control type="image">
+								<width>640</width>
+								<height>360</height>
+								<texture background="true">$VAR[art:Landscape]</texture>
+								<aspectratio align="center" aligny="center">scale</aspectratio>
+								<fadetime>500</fadetime>
+								<bordersize>10</bordersize>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout condition="Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists)" width="640" height="360">
+						<control type="group">
+							<width>640</width>
+							<height>360</height>
+							<control type="image">
+								<width>640</width>
+								<height>360</height>
+								<texture background="true">$VAR[art:Landscape]</texture>
+								<bordertexture border="10">views/frame/square.png</bordertexture>
+								<bordersize>10</bordersize>
+								<aspectratio align="center" aligny="center">scale</aspectratio>
+								<fadetime>500</fadetime>
+							</control>
+						</control>
+					</focusedlayout>
+
+					<!-- Square -->
+					<itemlayout condition="Container.Content(albums) | Container.Content(songs) | Container.Content(livetv)" width="426.6" height="426.6">
+						<control type="group">
+							<width>426.6</width>
+							<height>426.6</height>
+							<control type="image">
+								<width>426.6</width>
+								<height>426.6</height>
+								<texture background="true">$VAR[art:Square]</texture>
+								<aspectratio align="center" aligny="center">scale</aspectratio>
+								<fadetime>500</fadetime>
+								<bordersize>10</bordersize>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout condition="Container.Content(albums) | Container.Content(songs) | Container.Content(livetv)" width="426.6" height="426.6">
+						<control type="group">
+							<width>426.6</width>
+							<height>426.6</height>
+							<control type="image">
+								<width>426.6</width>
+								<height>426.6</height>
+								<texture background="true">$VAR[art:Square]</texture>
+								<bordertexture border="10">views/frame/square.png</bordertexture>
+								<bordersize>10</bordersize>
+								<aspectratio align="center" aligny="center">scale</aspectratio>
+								<fadetime>500</fadetime>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+
+				<!-- Required -->
+				<control type="button" id="990">
+					<left>200</left>
+					<top>200</top>
+					<width>500</width>
+					<height>120</height>
+					<label>32299</label>
+					<onup>SetFocus(9000,99,absolute)</onup>
+					<ondown>2</ondown>
+					<onleft>500</onleft>
+					<onright>500</onright>
+					<textcolor>green</textcolor>
+					<visible>false</visible>
+				</control>
+
+				<!-- Searching status -->
+				<control type="label" id="991">
+					<left>-3000</left>
+					<label></label>
+				</control>
+				
+				<!-- No results -->
+				<control type="label" id="999">
+					<left>-3000</left>
+					<label></label>
+				</control>
+
+				
+
+			</control>
+		</control>
+
+	<!-- Menu -->
+		<include>menu_Options</include>
+
+	</controls>
+</window>

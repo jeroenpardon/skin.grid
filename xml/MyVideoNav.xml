@@ -42,6 +42,7 @@
 				<include content="view_List">
 					<!--<param name="Visible" value="!Container.Content(seasons)"/>-->
 					<param name="ViewLayout">$LOCALIZE[535] - $LOCALIZE[31202]</param>
+					<param name="Visible" value="!Container.Content(actors)"/>
 				</include>
 			</control>
 
@@ -50,7 +51,7 @@
 				<include content="view_List">
 					<param name="ID">501</param>
 					<param name="ViewLayout">$LOCALIZE[535] - $LOCALIZE[31201]</param>
-					<param name="Visible" value="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(files)"/>
+					<param name="Visible" value="Container.Content(actors) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(files)"/>
 				</include>
 			</control>
 

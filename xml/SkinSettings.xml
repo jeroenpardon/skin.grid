@@ -36,8 +36,8 @@
 				<height>810</height>
 				<onleft>10000</onleft>
 				<onright>9002</onright>
-				<onup>9000</onup>
-				<ondown>9000</ondown>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
 				<itemlayout height="90" width="384">
 					<control type="label">
 						<width>384</width>
@@ -860,11 +860,10 @@
 					<!-- Blur -->
 					<control type="radiobutton" id="9730">
 						<label>$LOCALIZE[31377]</label>
-						<label2>$INFO[Skin.String(home.fx.home.image)]</label2>
-						<onclick condition="System.HasAddon(script.colorbox) + !System.Platform.Android">Skin.ToggleSetting(home.fx.home.image)</onclick>
+						<onclick condition="!System.Platform.Android">Skin.ToggleSetting(fx.home.image)</onclick>
 						<onclick condition="String.Contains(Control.GetLabel(9760),*)">Skin.ToggleSetting(burns.enable)</onclick>
 						<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[20183],message=$LOCALIZE[31357][CR]$LOCALIZE[31082],yesaction=ActivateWindow(startup)|Skin.ToggleSetting(home.logo),noaction=Close)</onclick>
-						<selected>Skin.HasSetting(home.fx.home.image)</selected>
+						<selected>Skin.HasSetting(fx.home.image)</selected>
 						<include>install_Colorbox</include>
 						<include>radio_Settings</include>
 						<enable>String.IsEqual(Skin.String(homemenu.layout),horizontal)</enable>
@@ -893,7 +892,7 @@
 						<!--<onclick condition="!String.Contains(Control.GetLabel(9760),*)">ReloadSkin()</onclick>-->
 						<selected>Skin.HasSetting(burns.enable)</selected>
 						<include>radio_Settings</include>
-						<enable>!Skin.HasSetting(home.fx.home.image)</enable>
+						<enable>!Skin.HasSetting(fx.home.image)</enable>
 					</control>
 					<!-- Animated artwork -->
 					<control type="radiobutton" id="9770">
@@ -1072,6 +1071,13 @@
 							<icon>$INFO[System.AddonIcon(script.extendedinfo)]</icon>
 							<onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
 							<onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
+						</item>
+						<item>
+							<label>Global Search</label>
+							<label2>$INFO[System.AddonVersion(script.globalsearch),, &#8226; $LOCALIZE[31071]]</label2>
+							<icon>$INFO[System.AddonIcon(script.globalsearch)]</icon>
+							<onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
+							<onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
 						</item>
 						<item>
 							<label>Library Data Provider</label>

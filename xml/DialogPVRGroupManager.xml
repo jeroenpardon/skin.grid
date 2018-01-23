@@ -110,6 +110,13 @@
 				<ondown>9001</ondown>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
+				<!-- TV / Radio toggle  -->
+				<control type="togglebutton" id="34">
+					<width>300</width>
+					<label>$LOCALIZE[31615]</label>
+ 					<altlabel>$LOCALIZE[31614]</altlabel>
+ 					<usealttexture>!String.IsEmpty(Window.Property(IsRadio))</usealttexture>
+				</control>
 				<!-- Add group -->
 				<control type="button" id="26">
 					<width>300</width>
