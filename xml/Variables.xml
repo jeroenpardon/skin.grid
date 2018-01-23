@@ -1289,7 +1289,7 @@
 	</variable>
 
 	<variable name="player:Title">
-		<value condition="Pvr.IsPlayingTV">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</value>
+		<value condition="Pvr.IsPlayingTV">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
 		<value condition="Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelNumber,,. ]$INFO[MusicPlayer.ChannelName]</value>
