@@ -24,7 +24,7 @@ Any redistribution of this software (or modifications / derivatives of it) must 
 
 <a name="Compatibility"></a>
 ## Compatibility
-Currently Grid is compatible with Kodi 17 Krypton only. A branch is available for Kodi 18 Leia, but it is to be considered incomplete and unstable. Please do not report issues encountered on the Kodi 18 Leia version.
+Currently Grid is compatible with Kodi 17 Krypton and Kodi 18 Leia.
 
 <a name="Language"></a>
 ## Language support
