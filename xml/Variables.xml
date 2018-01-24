@@ -1750,8 +1750,8 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
 		<value condition="Window.IsActive(1130)">$LOCALIZE[3]</value>
 		<value condition="Window.IsActive(1133)">$LOCALIZE[2]</value>
-		<value condition="[Container.Content(movies) + String.IsEqual(Container.Foldername,Title)] | Window.IsActive(1132)">$LOCALIZE[342]</value>
-		<value condition="[Container.Content(tvshows) + String.IsEqual(Container.Foldername,Title)] | Window.IsActive(1131)">$LOCALIZE[20343]</value>
+		<value condition="[Container.Content(movies) + String.IsEqual(Container.Foldername,$LOCALIZE[10024])] | Window.IsActive(1132)">$LOCALIZE[342]</value>
+		<value condition="[Container.Content(tvshows) + String.IsEqual(Container.Foldername,$LOCALIZE[10024])] | Window.IsActive(1131)">$LOCALIZE[20343]</value>
 		<value condition="String.IsEqual(Container.FolderName,$LOCALIZE[369])">$INFO[Container.Content]</value>
 		<value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container.Content]</value>
