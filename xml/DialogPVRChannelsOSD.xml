@@ -35,7 +35,7 @@
 					<height>100%</height>
 					<font>Black-32</font>
 					<aligny>center</aligny>
-					<label>$INFO[VideoPlayer.ChannelGroup] $INFO[System.Date(dd MMMMM), - ]$INFO[System.Time(hh:mm), - ]</label>
+					<label>$INFO[VideoPlayer.ChannelGroup]$INFO[System.Date(dd MMMMM), - ]$INFO[System.Time(hh:mm), - ]</label>
 					<textcolor>$VAR[color:Accent]</textcolor>
 				</control>
 			</control>
@@ -100,7 +100,7 @@
 								<top>10</top>
 								<width>744</width>
 								<height>45</height>
-								<label>$INFO[ListItem.ChannelName,]$INFO[ListItem.Title, - ]</label>
+								<label>$INFO[ListItem.ChannelNumberLabel,, ]$INFO[ListItem.ChannelName, ]$INFO[ListItem.Title, - ]</label>
 								<font>Black-22</font>
 								<align>left</align>
 								<aligny>center</aligny>
@@ -152,7 +152,7 @@
 								<top>10</top>
 								<width>744</width>
 								<height>45</height>
-								<label>$INFO[ListItem.ChannelName,]$INFO[ListItem.Title, - ]</label>
+								<label>$INFO[ListItem.ChannelNumberLabel,, ]$INFO[ListItem.ChannelName, ]$INFO[ListItem.Title, - ]</label>
 								<font>Black-22</font>
 								<align>left</align>
 								<aligny>center</aligny>
