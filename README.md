@@ -24,7 +24,7 @@ Any redistribution of this software (or modifications / derivatives of it) must 
 
 <a name="Compatibility"></a>
 ## Compatibility
-Currently Grid is compatible with Kodi 17 Krypton only. A branch is available for Kodi 18 Leia, but it is to be considered incomplete and unstable. Please do not report issues encountered on the Kodi 18 Leia version.
+Currently Grid is compatible with Kodi 17 Krypton and Kodi 18 Leia.
 
 <a name="Language"></a>
 ## Language support
@@ -46,7 +46,7 @@ If you are interested in providing a translation of Grid into your language(s), 
 https://img.shields.io/badge/Downloads-Official-brightgreen.svg?style=flat-square
 )](https://github.com/jeroenpardon/skin.grid/releases) [![badge-beta](https://img.shields.io/badge/Downloads-Beta-brightgreen.svg?style=flat-square)](https://gitlab.com/jeroenpardon/repository.jeroen) [![badge-snapshot](
 https://img.shields.io/badge/Downloads-Snapshot-brightgreen.svg?style=flat-square
-)](https://github.com/jeroenpardon/skin.grid/archive/master.zip) [![badge-install](https://img.shields.io/badge/Wiki-Install-blue.svg?style=flat-square)](https://github.com/jeroenpardon/skin.grid/wiki/Download-&-Installation)
+)](https://github.com/jeroenpardon/skin.grid/archive/master.zip)
 
 **Official releases**
 

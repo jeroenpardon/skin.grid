@@ -1,4 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
+	<shortcut>
+		<defaultID>settings</defaultID>
+		<label>10004</label>
+		<label2>Settings</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
 	<shortcut>
 		<defaultID>20077</defaultID>
 		<label>20077</label>
@@ -6,14 +15,6 @@
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(SkinSettings)</action>
-	</shortcut>
-	<shortcut>
-		<defaultID>13012</defaultID>
-		<label>13012</label>
-		<label2>Shutdown menu</label2>
-		<icon>DefaultShortcut.png</icon>
-		<thumb />
-		<action>ActivateWindow(shutdownmenu)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>7</defaultID>

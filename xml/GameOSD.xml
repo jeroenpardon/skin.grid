@@ -7,7 +7,6 @@
 		<top>360</top>
 	</coordinates>
 	<controls>
-		<include content="osd_Game">
-		</include>
+		<include>osd_Game</include>
 	</controls>
 </window>

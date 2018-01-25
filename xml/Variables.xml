@@ -84,29 +84,29 @@
 	</variable>
 
 	<variable name="home:FX.Color1">
-		<value condition="System.HasAddon(script.colorbox) + Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorFIVE)) + !String.IsEqual(Window(home).Property(ImageColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
-		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageColorSEVEN)]</value>
+		<value condition="System.HasAddon(script.colorbox) + Skin.HasSetting(fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorFIVE)) + !String.IsEqual(Window(home).Property(ImageColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageColorFIVE)]</value>
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageColorSEVEN)]</value>
 		<value>$VAR[color:Main]</value>
 	</variable>
 
 	<variable name="home:FX.Color2">
-		<value condition="System.HasAddon(script.colorbox) + Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorFIVE)) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
-		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
+		<value condition="System.HasAddon(script.colorbox) + Skin.HasSetting(fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorFIVE)) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
 		<value>$VAR[color:Accent]</value>
 	</variable>
 
 	<variable name="home:FX.ColorVertDiffuse">
-		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
+		<value condition="System.HasAddon(script.colorbox) + !Skin.HasSetting(fx.home.image) + Skin.HasSetting(fx.home.color) + !System.Platform.Android + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
 		<value>ff000000</value>
 	</variable>
 
 	<variable name="home:FX.Diffuse">
-		<value condition="Skin.HasSetting(home.fx.home.image) + !System.Platform.Android">colorize/100.png</value>
+		<value condition="Skin.HasSetting(fx.home.image) + !System.Platform.Android">colorize/100.png</value>
 		<value>colorize/50.png</value>
 	</variable>
 
 	<variable name="home:FX.Texture">
-		<value condition="Skin.HasSetting(home.fx.home.image) + !System.Platform.Android">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
+		<value condition="Skin.HasSetting(fx.home.image) + !System.Platform.Android">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
 		<value>colorize/50.png</value>
 	</variable>
 
@@ -143,8 +143,8 @@
 	</variable>
 
 	<variable name="color:Date">
-		<value condition="Window.IsActive(Home) + Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorFIVE)) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
-		<value condition="Window.IsActive(Home) + !Skin.HasSetting(home.fx.home.image) + Skin.HasSetting(fx.home.color) + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
+		<value condition="Window.IsActive(Home) + Skin.HasSetting(fx.home.image) + Skin.HasSetting(fx.home.color) + !String.IsEqual(Window(home).Property(FIVE_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorFIVE)) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorFIVE),ff000000) + String.IsEqual(Skin.String(homemenu.layout),horizontal)">$INFO[Window(Home).Property(ImageCColorFIVE)]</value>
+		<value condition="Window.IsActive(Home) + !Skin.HasSetting(fx.home.image) + Skin.HasSetting(fx.home.color) + !String.IsEqual(Window(home).Property(SEVEN_daemon_set),None) + !String.IsEmpty(Window(home).Property(ImageCColorSEVEN)) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ffffffff) + !String.IsEqual(Window(home).Property(ImageCColorSEVEN),ff000000)">$INFO[Window(Home).Property(ImageCColorSEVEN)]</value>
 		<value condition="Window.IsActive(Home)">$VAR[color:Text.2]</value>
 		<value>$VAR[color:Text.3]</value>
 	</variable>
@@ -523,7 +523,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.skin.helper.widgets/?action=favourites)">$INFO[ListItem.Genre]$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]</value>
 		<value condition="Container.Content(files)">$INFO[ListItem.Date]$INFO[ListItem.Size,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(movies) + Control.IsVisible(50)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$INFO[ListItem.Genre,  |  ]</value>
-		<value condition="[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)] + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  &#9734; ]$INFO[ListItem.Genre,  |  ]</value>
+		<value condition="[Control.IsVisible(52) | Control.IsVisible(521) | Control.IsVisible(53)] + !Container.Content(episodes) + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  &#9734; ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled) + Skin.HasSetting(ratings.pg.enable)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  ]$INFO[ListItem.MPAA,  |  ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies) + !String.IsEqual(Skin.String(ratings.video),disabled)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$VAR[info:Rating,  |  ]$INFO[ListItem.Genre,  |  ]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Year]$INFO[ListItem.Duration,  |  , $LOCALIZE[31075]]$INFO[ListItem.Genre,  |  ]</value>
@@ -531,7 +531,6 @@
 		<value condition="Container.Content(tvshows)">$VAR[info:ShowStatus]$INFO[ListItem.Genre,  |  ]$INFO[ListItem.Studio,  |  ]</value>
 		<value condition="Container.Content(seasons)">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
 		<value condition="Container.Content(episodes) + String.StartsWith(Container.FolderPath,plugin://plugin.video)">$INFO[ListItem.Label2]$INFO[ListItem.Premiered,  |  ]</value>
-		
 		<value condition="Container.Content(episodes) + Control.IsVisible(55)">$INFO[ListItem.Season,S]$INFO[ListItem.Episode, E]$INFO[ListItem.Premiered,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Season,$LOCALIZE[20373] ]$INFO[ListItem.Episode, - $LOCALIZE[20359] ]$INFO[ListItem.Premiered,  |  ]$INFO[ListItem.Duration,  |  , $LOCALIZE[12391]]</value>
 		<value condition="Container.Content(artists)">$INFO[ListItem.Genre]$VAR[info:Origin,  |  ]</value>
@@ -588,6 +587,16 @@
 		<value condition="String.Contains(Container.FolderPath,addons://sources/audio)">$LOCALIZE[1038]</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/image)">$LOCALIZE[1039]</value>
 		<value condition="String.Contains(Container.FolderPath,addons://sources/executable)">$LOCALIZE[1043]</value>
+	</variable>
+
+	<variable name="menu:AddonSettings">
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">Addon.OpenSettings(script.tv.show.next.aired)</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">Addon.OpenSettings(script.globalsearch)</value>
+	</variable>
+
+	<variable name="menu:AddonSettings.Label">
+		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">TV Show - Next Aired</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">Global Search</value>
 	</variable>
 
 	<variable name="menu:Guide">
@@ -685,12 +694,12 @@
 	<variable name="menu:Update">
 		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(1131) | Window.IsActive(1132)] + library.isscanningvideo">$LOCALIZE[13353]</value>
 		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(1131) | Window.IsActive(1132)]">$LOCALIZE[24069]</value>
-		<value condition="Window.IsActive(music) + library.isscanningmusic">$LOCALIZE[13353]</value>
-		<value condition="Window.IsActive(music)">$LOCALIZE[24069]</value>
+		<value condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)] + library.isscanningmusic">$LOCALIZE[13353]</value>
+		<value condition="[Container.Content(artists) | Container.Content(albums) | Container.Content(songs)]">$LOCALIZE[24069]</value>
 	</variable>
 
-	<variable name="menu:UpdateLabel2">
-		<value condition="Window.IsActive(videos) | Window.IsActive(1131) | Window.IsActive(1132)">$LOCALIZE[14236]</value>
+	<variable name="menu:Update.Label">
+		<value condition="[Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Window.IsActive(1131) | Window.IsActive(1132)]">$LOCALIZE[14236]</value>
 		<value>$LOCALIZE[14237]</value>
 	</variable>
 
@@ -1113,7 +1122,7 @@
 		<value condition="Container.Content(songs)">$INFO[ListItem.Userrating]</value>
 		<value condition="Window.IsActive(weather)">$INFO[Window.Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</value>
 		<value condition="Window.IsActive(addoninformation)">$INFO[ListItem.AddonCreator]</value>
-		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.ChannelName]</value>
+		<value condition="Window.IsActive(pvrguideinfo)">$INFO[ListItem.ChannelNumberLabel,, ]$INFO[ListItem.ChannelName, ]</value>
 		<value condition="Window.IsActive(pvrrecordinginfo)">$INFO[ListItem.Genre]</value>
 	</variable>
 	<variable name="information:R2.Label">
@@ -1225,7 +1234,7 @@
 
 	<variable name="player:Duration">
 		<value condition="!VideoPlayer.Content(LiveTV)">$INFO[Player.Duration(hh:mm:ss)]</value>
-		<value>$INFO[Pvr.Duration(hh:mm)]</value>
+		<value>$INFO[PVR.EpgEventDuration(hh:mm)]</value>
 	</variable>
 
 	<variable name="player:Info">
@@ -1276,11 +1285,11 @@
 
 	<variable name="player:Time">
 		<value condition="!VideoPlayer.Content(LiveTV)">$INFO[Player.Time(hh:mm:ss)]</value>
-		<value>$INFO[Pvr.Time(hh:mm)]</value>
+		<value>$INFO[PVR.EpgEventElapsedTime(hh:mm)]</value>
 	</variable>
 
 	<variable name="player:Title">
-		<value condition="Pvr.IsPlayingTV">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</value>
+		<value condition="Pvr.IsPlayingTV">$INFO[VideoPlayer.ChannelNumberLabel,,. ]$INFO[VideoPlayer.ChannelName,,: ]$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Title]</value>
 		<value condition="VideoPlayer.Content(movies) | VideoPlayer.Content(musicvideos) | VideoPlayer.Content(files)">$INFO[VideoPlayer.Title]</value>
 		<value condition="Pvr.IsPlayingRadio">$INFO[MusicPlayer.ChannelNumber,,. ]$INFO[MusicPlayer.ChannelName]</value>
@@ -1672,6 +1681,9 @@
 		<value condition="[Window.IsVisible(volumebar) + !Player.Muted] + Window.IsActive(Home)">$LOCALIZE[13376] $INFO[Control.GetLabel(29999),,%]</value>
 		<value condition="Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml)">$LOCALIZE[4]</value>
 		<value condition="Window.IsActive(script-cu-lrclyrics-main.xml)">$LOCALIZE[24013]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml) + Control.IsVisible(991)">$LOCALIZE[194] $INFO[Control.GetLabel(991)]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml) + Control.IsVisible(999)">$LOCALIZE[284]</value>
+		<value condition="Window.IsActive(script-globalsearch.xml)">$LOCALIZE[283]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
 
@@ -1738,8 +1750,8 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
 		<value condition="Window.IsActive(1130)">$LOCALIZE[3]</value>
 		<value condition="Window.IsActive(1133)">$LOCALIZE[2]</value>
-		<value condition="[Container.Content(movies) + String.IsEqual(Container.Foldername,Title)] | Window.IsActive(1132)">$LOCALIZE[342]</value>
-		<value condition="[Container.Content(tvshows) + String.IsEqual(Container.Foldername,Title)] | Window.IsActive(1131)">$LOCALIZE[20343]</value>
+		<value condition="[Container.Content(movies) + String.IsEqual(Container.Foldername,$LOCALIZE[10024])] | Window.IsActive(1132)">$LOCALIZE[342]</value>
+		<value condition="[Container.Content(tvshows) + String.IsEqual(Container.Foldername,$LOCALIZE[10024])] | Window.IsActive(1131)">$LOCALIZE[20343]</value>
 		<value condition="String.IsEqual(Container.FolderName,$LOCALIZE[369])">$INFO[Container.Content]</value>
 		<value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
 		<value condition="!String.IsEmpty(Container.Content)">$INFO[Container.Content]</value>

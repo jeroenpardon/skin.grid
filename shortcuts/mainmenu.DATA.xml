@@ -29,26 +29,26 @@
 	<shortcut>
 		<defaultID>36901</defaultID>
 		<label>36901</label>
-		<label2>Skin shortcut</label2>
+		<label2>Custom item</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
-		<action>ActivateWindow(1132)</action>
+		<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>36903</defaultID>
 		<label>36903</label>
-		<label2>Skin shortcut</label2>
-		<icon>DefaultShortcut.png</icon>
-		<thumb />
-		<action>ActivateWindow(1131)</action>
-	</shortcut>
-	<shortcut>
-		<defaultID>36912</defaultID>
-		<label>Music</label>
 		<label2>Custom item</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
-		<action>ActivateWindow(1133)</action>
+		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>32019</defaultID>
+		<label>32019</label>
+		<label2>Common menu item</label2>
+		<icon>DefaultMusicAlbums.png</icon>
+		<thumb />
+		<action>ActivateWindow(Music)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>livetv</defaultID>
