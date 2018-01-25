@@ -54,7 +54,7 @@
 						<width>384</width>
 						<height>90</height>
 						<texture colordiffuse="$VAR[color:Accent]">colorize/70.png</texture>
-						<animation effect="fade" time="0" start="100" end="25" condition="ControlGroup(9002).HasFocus()">Conditional</animation>
+						<animation effect="fade" time="0" start="100" end="25" condition="ControlGroup(9002).HasFocus() | Control.HasFocus(6500)">Conditional</animation>
 					</control>
 					<control type="label">
 						<width>384</width>
@@ -117,6 +117,7 @@
 
 			<control type="group" id="9002">
 				<left>448</left>
+				<top>0</top>
 
 				<!-- General -->                    
 				<control type="grouplist" id="9105">
@@ -962,7 +963,7 @@
 						</control>
 						<control type="group">
 							<width>1216</width>
-							<visible>!Control.HasFocus(9700)</visible>
+							<visible>!Control.HasFocus(9800)</visible>
 							<include content="view_List-Layout">
 								<param name="ShowArt">true</param>
 								<param name="ShowSymbol">String.IsEmpty(ListItem.Icon)</param>
