@@ -8,11 +8,11 @@
 		<value condition="String.IsEqual(Skin.String(background.home),custom) + !String.IsEmpty(Skin.String(custom.home))">$INFO[Skin.String(custom.home)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),custom)">$INFO[Skin.String(background.nomedia)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),pictures)">$INFO[Window(Home).Property(SkinHelper.PicturesBackground)]</value>
-		<value condition="String.IsEqual(Skin.String(background.home),fanart-all)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
-		<value condition="String.IsEqual(Skin.String(background.home),fanart-video)">$INFO[Window(Home).Property(script.grab.fanart.Video.FanArt)]</value>
-		<value condition="String.IsEqual(Skin.String(background.home),fanart-movies)">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</value>
-		<value condition="String.IsEqual(Skin.String(background.home),fanart-tvshows)">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</value>
-		<value condition="String.IsEqual(Skin.String(background.home),fanart-music)">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</value>
+		<value condition="String.IsEqual(Skin.String(background.home),fanart-all)">$INFO[Window(Home).Property(SkinHelper.GlobalFanartBackground)]</value>
+		<value condition="String.IsEqual(Skin.String(background.home),fanart-video)">$INFO[Window(Home).Property(SkinHelper.AllVideosBackground)]</value>
+		<value condition="String.IsEqual(Skin.String(background.home),fanart-movies)">$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground)]</value>
+		<value condition="String.IsEqual(Skin.String(background.home),fanart-tvshows)">$INFO[Window(Home).Property(SkinHelper.AllTvShowsBackground)]</value>
+		<value condition="String.IsEqual(Skin.String(background.home),fanart-music)">$INFO[Window(Home).Property(SkinHelper.AllMusicBackground)]</value>
 	</variable>
 
 	<variable name="background:Global">
