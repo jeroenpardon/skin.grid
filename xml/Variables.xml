@@ -1580,7 +1580,7 @@
 
 	<variable name="window:Grid">
 		<value condition="Control.IsVisible(51)">overlays/270.png</value>
-		<value condition="Control.IsVisible(50) | Control.IsVisible(501)">overlays/108.png</value>
+		<value condition="Control.IsVisible(50) | Control.IsVisible(501) | Control.IsVisible(450)">overlays/108.png</value>
 		<value condition="Control.IsVisible(52)">overlays/648-108.png</value>
 		<value condition="Control.IsVisible(521)">overlays/216-432-108.png</value>
 		<value condition="Control.IsVisible(54)">overlays/400.png</value>
