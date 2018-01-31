@@ -10,7 +10,9 @@
 		</control>
 
 	<!-- Background -->
-		<include>background_Global</include>
+		<include content="background_Global">
+				<param name="GridTexture">$VAR[window:Grid]</param>
+			</include>
 
 	<!-- Chrome -->
 		<control type="group">
