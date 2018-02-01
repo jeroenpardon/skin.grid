@@ -1281,6 +1281,11 @@ msgctxt "#31865"
 msgid "Alternate (Cyrillic, Latin, Vietnamese)"
 msgstr ""
 
+#. Do not translate
+msgctxt "#31866"
+msgid "DejaVu (Cyrillic, Greek, Latin, Armenian, Georgian)"
+msgstr ""
+
 
 
 #: about
