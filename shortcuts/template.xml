@@ -151,15 +151,15 @@
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="banner">960</property>
 		<controls>
 			<include content="widget_Header">
-				<param name="ID">1000$SKINSHORTCUTS[id]</param>
-				<param name="Height">$SKINSHORTCUTS[headerheight]</param>
+				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
+				<param name="Height">$SKINSHORTCUTS[headerheight]</param>
+				<param name="ID">1000$SKINSHORTCUTS[id]</param>
+				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
 				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
-				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
-				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1920</width>
@@ -209,14 +209,15 @@
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="banner">896</property>
 		<controls>
 			<include content="widget_Header">
-				<param name="ID">1000$SKINSHORTCUTS[id]</param>
+				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
+				<param name="Height">$SKINSHORTCUTS[headerheight]</param>
+				<param name="ID">1000$SKINSHORTCUTS[id]</param>
+				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
 				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
-				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
-				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1792</width>
@@ -266,15 +267,15 @@
 		<property name="itemwidth" tag="property" attribute="name|widgetLayout" value="banner">960</property>
 		<controls>
 			<include content="widget_Header">
-				<param name="ID">1000$SKINSHORTCUTS[id]</param>
-				<param name="Height">$SKINSHORTCUTS[headerheight]</param>
+				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 				<param name="HeaderID">990$SKINSHORTCUTS[id]</param>
 				<param name="HeaderLabel">991$SKINSHORTCUTS[id]</param>	
+				<param name="Height">$SKINSHORTCUTS[headerheight]</param>
+				<param name="ID">1000$SKINSHORTCUTS[id]</param>
+				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
 				<param name="WidgetHeader">$SKINSHORTCUTS[header]</param>
 				<param name="WidgetHeader2">$SKINSHORTCUTS[header2]</param>
 				<param name="WidgetName">$SKINSHORTCUTS[name]</param>
-				<param name="Visible">$SKINSHORTCUTS[showheader]</param>
-				<param name="HasItems">Integer.IsGreater(Container(1000$SKINSHORTCUTS[id]).NumItems,0) | Container(1000$SKINSHORTCUTS[id]).IsUpdating</param>
 			</include>
 			<control type="list" id="1000$SKINSHORTCUTS[id]">
 				<width>1920</width>
