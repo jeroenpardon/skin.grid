@@ -840,6 +840,10 @@ msgctxt "#31387"
 msgid "Configure music hub"
 msgstr ""
 
+msgctxt "#31389"
+msgid "Set background image refresh time"
+msgstr ""
+
 
 
 #: osd / player

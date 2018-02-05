@@ -4,7 +4,8 @@
 	<onload>SetProperty(GridIsLoaded,1,Home)</onload>
 
 	<!-- Fanart grabber -->
-	<onload>RunScript(script.grab.fanart,mode=random,refresh=30)</onload>
+	<onload condition="String.IsEmpty(Skin.String(grab.fanart.interval))">RunScript(script.grab.fanart,mode=random,refresh=20)</onload>
+	<onload condition="!String.IsEmpty(Skin.String(grab.fanart.interval))">RunScript(script.grab.fanart,mode=random,refresh=$INFO[Skin.String(grab.fanart.interval)])</onload>
 	
 	<!-- Skin Helper -->
 	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,20)</onload>
