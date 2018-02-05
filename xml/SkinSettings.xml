@@ -393,6 +393,13 @@
 						<include>install_HelperService</include>
 						<include>button_Settings</include>
 					</control>
+					<!-- Background rotation interval -->
+					<control type="button" id="9412">
+						<label>$LOCALIZE[31389]</label>
+						<label2>$INFO[Skin.String(grab.fanart.interval)]</label2>
+						<onclick>Skin.SetNumeric(grab.fanart.interval)</onclick>
+						<include>button_Settings</include>
+					</control>
 					<!-- Custom image(s) select -->
 					<control type="button" id="9413">
 						<label>- $LOCALIZE[31364]</label>
