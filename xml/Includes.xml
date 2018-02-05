@@ -747,9 +747,6 @@
 	<include name="install_ColorPicker">
 		<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
 	</include>
-	<include name="install_Downloader">
-		<onclick condition="!System.HasAddon(script.artwork.downloader)">InstallAddon(script.artwork.downloader)</onclick>
-	</include>
 	<include name="install_Shortcuts">
 		<onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
 	</include>

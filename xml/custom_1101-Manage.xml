@@ -59,7 +59,7 @@
 						<label>$LOCALIZE[184]</label>
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
-						<onup>601</onup>
+						<onup>536</onup>
 						<ondown>521</ondown>
 						<onclick>Close</onclick>
 						<onclick>SendClick(2003,6)</onclick>
@@ -146,7 +146,7 @@
 						<textoffsetx>114</textoffsetx>
 						<onright>9000</onright>
 						<onup>531</onup>
-						<ondown>541</ondown>
+						<ondown>510</ondown>
 						<onclick>Close</onclick>
 						<onclick>SendClick(2003,12)</onclick>
 						<include>button_Settings</include>
@@ -162,164 +162,6 @@
 						<textcolor>$VAR[color:Text.3]</textcolor>
 						<include>global_Symbol</include>
 						<visible>!Control.HasFocus(536)</visible>
-					</control>
-				</control>
-
-				<control type="label" id="539">
-					<label>$LOCALIZE[31207]</label>
-					<include>global_Header</include>
-					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
-				</control>
-
-				<!-- Get all artwork-->
-				<control type="group" id="540">
-					<height>90</height>
-					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
-					<control type="button" id="541">
-						<width>832</width>
-						<label>$LOCALIZE[31214]</label>
-						<textoffsetx>114</textoffsetx>
-						<onright>9000</onright>
-						<onup>536</onup>
-						<ondown>551</ondown>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,musicvideo) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
-						<include>install_Downloader</include>
-						<include>button_Settings</include>
-					</control>
-					<control type="label">
-						<label>&#59166;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
-						<include>global_Symbol</include>
-						<visible>Control.HasFocus(541)</visible>
-					</control>
-					<control type="label">
-						<label>&#59166;</label>
-						<textcolor>$VAR[color:Text.3]</textcolor>
-						<include>global_Symbol</include>
-						<visible>!Control.HasFocus(541)</visible>
-					</control>
-				</control>
-
-				<!--download landscape-->
-				<control type="group" id="550">
-					<height>90</height>
-					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)</visible>
-					<control type="button" id="551">
-						<width>832</width>
-						<label>$LOCALIZE[31219]</label>
-						<textoffsetx>114</textoffsetx>
-						<onright>9000</onright>
-						<onup>541</onup>
-						<ondown>561</ondown>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], landscape)</onclick>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], landscape)</onclick>
-						<include>install_Downloader</include>
-						<include>button_Settings</include>
-					</control>
-					<control type="label">
-						<label>&#57475;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
-						<include>global_Symbol</include>
-						<visible>Control.HasFocus(551)</visible>
-					</control>
-					<control type="label">
-						<label>&#57475;</label>
-						<textcolor>$VAR[color:Text.3]</textcolor>
-						<include>global_Symbol</include>
-						<visible>!Control.HasFocus(551)</visible>
-					</control>
-				</control>
-
-				<!--download logo-->
-				<control type="group" id="560">
-					<height>90</height>
-					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
-					<control type="button" id="561">
-						<width>832</width>
-						<label>$LOCALIZE[31209]</label>
-						<textoffsetx>114</textoffsetx>
-						<onright>9000</onright>
-						<onup>551</onup>
-						<ondown>570</ondown>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,movie) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], clearlogo)</onclick>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], clearlogo)</onclick>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,musicvideo) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=musicvideo, dbid=$INFO[ListItem.DBID], clearlogo)</onclick>
-						<include>install_Downloader</include>
-						<include>button_Settings</include>
-					</control>
-					<control type="label">
-						<label>&#57475;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
-						<include>global_Symbol</include>
-						<visible>Control.HasFocus(561)</visible>
-					</control>
-					<control type="label">
-						<label>&#57475;</label>
-						<textcolor>$VAR[color:Text.3]</textcolor>
-						<include>global_Symbol</include>
-						<visible>!Control.HasFocus(561)</visible>
-					</control>
-				</control>
-
-				<!--download extrafanart-->
-				<control type="group" id="570">
-					<height>90</height>
-					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
-					<control type="button" id="571">
-						<width>832</width>
-						<label>$LOCALIZE[31212]</label>
-						<textoffsetx>114</textoffsetx>
-						<onright>9000</onright>
-						<onup>561</onup>
-						<ondown>600</ondown>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=movie, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,tvshow) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=tvshow, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
-						<onclick condition="String.IsEqual(ListItem.DBTYPE,musicvideo) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader, mode=custom, mediatype=musicvideo, dbid=$INFO[ListItem.DBID], extrafanart)</onclick>
-						<include>install_Downloader</include>
-						<include>button_Settings</include>
-					</control>
-					<control type="label">
-						<label>&#57475;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
-						<include>global_Symbol</include>
-						<visible>Control.HasFocus(571)</visible>
-					</control>
-					<control type="label">
-						<label>&#57475;</label>
-						<textcolor>$VAR[color:Text.3]</textcolor>
-						<include>global_Symbol</include>
-						<visible>!Control.HasFocus(571)</visible>
-					</control>
-				</control>
-
-				<!--start artwork downloader-->
-				<control type="group" id="600">
-					<height>90</height>
-					<visible>String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,musicvideo)</visible>
-					<control type="button" id="601">
-						<width>832</width>
-						<label>Artwork Downloader $LOCALIZE[5]</label>
-						<textoffsetx>114</textoffsetx>
-						<onright>9000</onright>
-						<onup>571</onup>
-						<ondown>511</ondown>
-						<onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
-						<onclick condition="!System.HasAddon(script.artwork.downloader)">InstallAddon(script.artwork.downloader)</onclick>
-						<include>button_Settings</include>
-					</control>
-					<control type="label">
-						<label>&#59014;</label>
-						<textcolor>$VAR[view:TextColor2_Selected]</textcolor>
-						<include>global_Symbol</include>
-						<visible>Control.HasFocus(601)</visible>
-					</control>
-					<control type="label">
-						<label>&#59014;</label>
-						<textcolor>$VAR[color:Text.3]</textcolor>
-						<include>global_Symbol</include>
-						<visible>!Control.HasFocus(601)</visible>
 					</control>
 				</control>
 			</control>
