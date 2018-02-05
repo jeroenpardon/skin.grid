@@ -989,6 +989,13 @@
 							<onclick condition="!System.HasAddon(resource.uisounds.grid)">InstallAddon(resource.uisounds.grid)</onclick>
 						</item>
 						<item>
+							<label>Fanart Grabber</label>
+							<label2>$INFO[System.AddonVersion(script.grab.fanart),, &#8226; $LOCALIZE[31070]]</label2>
+							<icon>$INFO[System.AddonIcon(script.grab.fanart)]</icon>
+							<onclick condition="System.HasAddon(script.grab.fanart)">Addon.OpenSettings(script.grab.fanart)</onclick>
+							<onclick condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onclick>
+						</item>
+						<item>
 							<label>Skin Helper Service</label>
 							<label2>$INFO[System.AddonVersion(script.skin.helper.service),, &#8226; $LOCALIZE[31070]]</label2>
 							<icon>$INFO[System.AddonIcon(script.skin.helper.service)]</icon>
