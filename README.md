@@ -73,7 +73,6 @@ These add-ons are required by Grid. If you are missing one or more, Kodi will di
 If you are using an official public release of Grid, these add-ons should be installed automatically by Kodi If you are manually installing Grid from Github, you may need to install one or more of these add-ons. Below is where you can find them.
 
 * [resource.uisounds.grid](https://github.com/jeroenpardon/resource.uisounds.grid)
-* [script.grab.fanart](https://github.com/robweber/script.grab.fanart)
 * [script.skin.helper.service](https://github.com/marcelveldt/script.skin.helper.service)
 * [script.skin.helper.widgets](https://github.com/marcelveldt/script.skin.helper.widgets)
 * [script.skinshortcuts](https://github.com/BigNoid/script.skinshortcuts)
@@ -83,7 +82,6 @@ If you are using an official public release of Grid, these add-ons should be ins
 These add-ons are not required for installation but are needed for certain skin features. You will be prompted to install an add-on when you select such a feature.
 
 * [script.artistslideshow](https://github.com/pkscout/script.artistslideshow)
-* [script.artwork.downloader](https://github.com/XBMC-Addons/script.artwork.downloader)
 * [script.cinemavision](https://github.com/CinemaVision/script.cinemavision)
 * [script.colorbox](https://github.com/BADMS/script.colorbox)
 * [script.skin.helper.colorpicker](https://github.com/marcelveldt/script.skin.helper.colorpicker)

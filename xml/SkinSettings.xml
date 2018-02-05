@@ -473,9 +473,9 @@
 					<!-- Download artwork -->
 					<control type="button" id="9445">
 						<label>$LOCALIZE[31206]</label>
-						<onclick condition="System.HasAddon(script.artwork.downloader)">ActivateWindow(1103)</onclick>
-						<include>install_Downloader</include>
+						<onclick condition="System.HasAddon(script.artwork.beef)">ActivateWindow(1103)</onclick>
 						<include>button_Settings</include>
+						<visible>System.HasAddon(script.artwork.beef)</visible>
 					</control>
 
 					<!-- PVR-->
@@ -1022,13 +1022,6 @@
 							<icon>$INFO[System.AddonIcon(script.artistslideshow)]</icon>
 							<onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
 							<onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
-						</item>
-						<item>
-							<label>Artwork Downloader</label>
-							<label2>$INFO[System.AddonVersion(script.artwork.downloader),, &#8226; $LOCALIZE[31071]]</label2>
-							<icon>$INFO[System.AddonIcon(script.artwork.downloader)]</icon>
-							<onclick condition="System.HasAddon(script.artwork.downloader)">Addon.OpenSettings(script.artwork.downloader)</onclick>
-							<include>install_Downloader</include>
 						</item>
 						<item>
 							<label>AutoCompletion for virtual keyboard</label>
