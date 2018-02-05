@@ -1619,7 +1619,6 @@
 		<value condition="Window.IsActive(DialogSettings.xml)">&#59014;</value>
 		<!-- Custom -->
 		<value condition="Window.IsActive(custom_1110-Addons.xml)">&#57389;</value>
-		<value condition="Window.IsActive(custom_1103-Downloader.xml)">&#58930;</value>
 		<value condition="Window.IsActive(custom_1101-Manage.xml)">&#59028;</value>
 		<value condition="Window.IsActive(custom_1102-More.xml)">&#57413;</value>
 		<value condition="Window.IsActive(custom_1129-Hubs.xml)">&#59014;</value>
