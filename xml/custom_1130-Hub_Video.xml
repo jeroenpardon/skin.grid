@@ -38,6 +38,8 @@
 				<include>global_ListScroll</include>
 				<include>transition_Content</include>
 
+				<include content="hub_Video-Source" condition="String.IsEqual(Skin.String(hub.defaultnodes.position),top)"/>
+
 				<!-- Source 1 -->
 				<control type="label" id="5009">
 					<label>$INFO[Container(5010).ListItem(0).FolderName]</label>
@@ -248,25 +250,13 @@
 					<param name="Width">1792</param>
 				</include>
 
-				<!-- Sources -->
-				<control type="label" id="5098">
-					<label>$LOCALIZE[31088]</label>
-					<height>90</height>
-					<include>global_Header</include>
-					<visible>Skin.HasSetting(hub.defaultnodes) | !Library.HasContent(Video)</visible>
-				</control>
-				<include content="view_Labels" condition="Library.HasContent(Video)">
-					<param name="ID">5099</param>
-					<param name="Path2">sources://videos/</param>
-					<param name="UseCustomPath">true</param>
-					<param name="Visible">Skin.HasSetting(hub.defaultnodes)</param>
-				</include>
-				<control type="button" id="5501">
-					<width>216</width>
-					<onleft>7000</onleft>
-					<label>$LOCALIZE[999]</label>
-					<onclick>ActivateWindow(Videos,Files)</onclick>
-					<visible>!Library.HasContent(Video)</visible>
+				<include content="hub_Video-Source" condition="String.IsEqual(Skin.String(hub.defaultnodes.position),bottom)"/>
+
+				<!-- Spacer -->
+				<control type="label">
+					<label></label>
+					<height>45</height>
+					<visible>Skin.HasSetting(hub.defaultnodes)</visible>
 				</control>
 
 			</control>

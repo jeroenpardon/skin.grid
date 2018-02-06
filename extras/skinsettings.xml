@@ -195,6 +195,10 @@
 	<setting id="hub.music.7" value="artists" label="$LOCALIZE[133]"/>
 	
 
+	<setting id="hub.defaultnodes.position" value="top" label="$LOCALIZE[31089]" default="true"/>
+	<setting id="hub.defaultnodes.position" value="bottom" label="$LOCALIZE[31090]"/>
+
+
 	<!-- Home menu layout -->
 	<setting id="homemenu.layout" value="vertical" label="$LOCALIZE[31058]" default="true">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
@@ -203,6 +207,10 @@
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
 	<setting id="homemenu.layout" value="compact" label="$LOCALIZE[31025]">
+		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
+	</setting>
+
+	<setting id="homemenu.layout" value="alt" label="alt">
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
 

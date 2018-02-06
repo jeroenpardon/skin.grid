@@ -358,10 +358,20 @@
 
 					<!-- Include library shortcuts -->
 					<control type="radiobutton" id="9320">
-						<label>Include library shortcuts</label>
+						<label>$LOCALIZE[31390]</label>
 						<onclick>Skin.ToggleSetting(hub.defaultnodes)</onclick>
-						<selected>!Skin.HasSetting(hub.defaultnodes)</selected>
+						<selected>Skin.HasSetting(hub.defaultnodes)</selected>
 						<include>radio_Settings</include>
+					</control>
+
+					<!-- Library shortcuts placement -->
+					<control type="button" id="9321">
+						<label>$LOCALIZE[31391]</label>
+						<label2>$INFO[Skin.String(hub.defaultnodes.position)]</label2>
+						<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=setskinsetting,setting=hub.defaultnodes.position,header=$LOCALIZE[31391])</onclick>
+						<include>install_HelperService</include>
+						<include>button_Settings</include>
+						<visible>Skin.HasSetting(hub.defaultnodes)</visible>
 					</control>
 			
 				</control>

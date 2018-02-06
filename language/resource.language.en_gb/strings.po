@@ -299,6 +299,16 @@ msgctxt "#31088"
 msgid "Sources"
 msgstr ""
 
+#. As in on top of the world
+msgctxt "#31089"
+msgid "Top"
+msgstr ""
+
+#. As in the bottom of the sea
+msgctxt "#31090"
+msgid "Bottom"
+msgstr ""
+
 
 
 #: setup
@@ -842,6 +852,14 @@ msgstr ""
 
 msgctxt "#31389"
 msgid "Set background image refresh time"
+msgstr ""
+
+msgctxt "#31390"
+msgid "Include library shortcuts"
+msgstr ""
+
+msgctxt "#31391"
+msgid "Library shortcuts position"
 msgstr ""
 
 
