@@ -1,18 +1,129 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
+	<include name="hub_Video-Source">
+		<param name="Height" default="90"/>
+		<definition>
+			<!-- Sources -->
+			<control type="label" id="5098">
+				<label>$LOCALIZE[31088]</label>
+				<height>$PARAM[Height]</height>
+				<include>global_Header</include>
+				<visible>Skin.HasSetting(hub.defaultnodes) | !Library.HasContent(Video)</visible>
+			</control>
+			<include content="view_Labels" condition="Library.HasContent(Video)">
+				<param name="ID">5099</param>
+				<param name="Path2">sources://videos/</param>
+				<param name="UseCustomPath">true</param>
+				<param name="Visible">Skin.HasSetting(hub.defaultnodes)</param>
+				<param name="Height">$PARAM[Height]</param>
+			</include>
+			<control type="button" id="5501">
+				<width>216</width>
+				<onleft>7000</onleft>
+				<label>$LOCALIZE[999]</label>
+				<onclick>ActivateWindow(Videos,Files)</onclick>
+				<visible>!Library.HasContent(Video)</visible>
+			</control>
+		</definition>
+	</include>
+
+	<include name="hub_Movie-Source">
+		<param name="Height" default="90"/>
+		<definition>
+			<!-- Sources -->
+			<control type="label" id="5098">
+				<label>$LOCALIZE[14022]</label>
+				<height>$PARAM[Height]</height>
+				<include>global_Header</include>
+				<visible>Skin.HasSetting(hub.defaultnodes) | !Library.HasContent(Movies)</visible>
+			</control>
+			<include content="view_Labels" condition="Library.HasContent(Movies)">
+				<param name="ID">5099</param>
+				<param name="Path2">videodb://movies/</param>
+				<param name="UseCustomPath">true</param>
+				<param name="Visible">Skin.HasSetting(hub.defaultnodes)</param>
+				<param name="Height">$PARAM[Height]</param>
+			</include>
+			<control type="button" id="5501">
+				<width>216</width>
+				<onleft>7000</onleft>
+				<label>$LOCALIZE[999]</label>
+				<onclick>ActivateWindow(Videos,Files)</onclick>
+				<visible>!Library.HasContent(Movies)</visible>
+			</control>
+		</definition>
+	</include>
+
+	<include name="hub_TVShow-Source">
+		<param name="Height" default="90"/>
+		<definition>
+			<!-- Sources -->
+			<control type="label" id="5098">
+				<label>$LOCALIZE[14022]</label>
+				<height>$PARAM[Height]</height>
+				<include>global_Header</include>
+				<visible>Skin.HasSetting(hub.defaultnodes) | !Library.HasContent(TVShows)</visible>
+			</control>
+			<include content="view_Labels" condition="Library.HasContent(TVShows)">
+				<param name="ID">5099</param>
+				<param name="Path2">videodb://tvshows/</param>
+				<param name="UseCustomPath">true</param>
+				<param name="Visible">Skin.HasSetting(hub.defaultnodes)</param>
+				<param name="Height">$PARAM[Height]</param>
+			</include>
+			<control type="button" id="5501">
+				<width>216</width>
+				<onleft>7000</onleft>
+				<label>$LOCALIZE[999]</label>
+				<onclick>ActivateWindow(Videos,Files)</onclick>
+				<visible>!Library.HasContent(TVShows)</visible>
+			</control>
+		</definition>
+	</include>
+
+	<include name="hub_Music-Source">
+		<param name="Height" default="90"/>
+		<definition>
+			<!-- Sources -->
+			<control type="label" id="5098">
+				<label>$LOCALIZE[14022]</label>
+				<height>$PARAM[Height]</height>
+				<include>global_Header</include>
+				<visible>Skin.HasSetting(hub.defaultnodes) | !Library.HasContent(Music)</visible>
+			</control>
+			<include content="view_Labels" condition="Library.HasContent(Music)">
+				<param name="ID">5099</param>
+				<param name="Path2">sources://music/</param>
+				<param name="UseCustomPath">true</param>
+				<param name="Visible">Skin.HasSetting(hub.defaultnodes)</param>
+				<param name="Height">$PARAM[Height]</param>
+			</include>
+			<control type="button" id="5501">
+				<width>216</width>
+				<onleft>7000</onleft>
+				<label>$LOCALIZE[999]</label>
+				<onclick>ActivateWindow(Music,Files)</onclick>
+				<visible>!Library.HasContent(Music)</visible>
+			</control>
+		</definition>
+	</include>
+
+
 	<include name="view_Labels">
 		<param name="ID"/>
+		<param name="Height"/>
 		<param name="Path"/>
 		<param name="Path2" default="videodb://recentlyaddedmovies/"/>
 		<param name="UseCustomPath" default="false"/>
 		<param name="Visible" default="true"/>
 		<definition>
 			<control type="panel" id="$PARAM[ID]">
-				<width>1664</width>
-				<height>216</height>
+				<width>1792</width>
+				<height>$PARAM[Height]</height>
 				<onleft>7000</onleft>
 				<onleft>SetProperty(MenuOpen,true,Home)</onleft>
-				<orientation>vertical</orientation>
+				<orientation>horizontal</orientation>
 				<include>global_ListScroll</include>
 				<visible>$PARAM[Visible]</visible>
 				<itemlayout width="277.3" height="90">
