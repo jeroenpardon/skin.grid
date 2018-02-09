@@ -126,14 +126,13 @@
 					<param name="ProgressHeight">108</param>
 				</include>
 
-
+				<!-- Insert menu -->
 				<include content="home_Menu-Horizontal">
 					<param name="Top">0</param>
 					<param name="Height">972</param>
 				</include>
 				
-
-				<!-- Feed container-->
+				<!-- Widgets container-->
 				<include content="home_Widgets">
 					<param name="Left">0</param>
 					<param name="Top">1080</param>
@@ -142,10 +141,6 @@
 					<param name="OnRight">noop</param>
 					<param name="OnUp">9000</param>
 				</include>
-
-
-		
-
 
 			</control>
 		</definition>
@@ -287,27 +282,22 @@
 				<width>screen_Width</width>
 				<height>$PARAM[Height]</height>
 				<onfocus>SetProperty(HomeFocusedItem,feed,Home)</onfocus>
-
-
+				<onleft>$PARAM[OnLeft]</onleft>
+				<onright>$PARAM[OnRight]</onright>
 				<onup condition="!String.IsEqual(Skin.String(homemenu.layout),horizontal)">9000</onup>
 				<onup condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">9000</onup>
 				<ondown condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</ondown>
 
-				<onleft>$PARAM[OnLeft]</onleft>
-				<onright>$PARAM[OnRight]</onright>
-
-				<!-- Slide in feed for vertical menu -->
+				<!-- Slide in widgets container for vertical menu -->
 				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.layout),vertical)">
 					<effect type="slide" time="500" start="0"  end="-1920" tween="cubic" easing="InOut" center="auto" />
 					<effect type="Fade" time="500" start="0" end="100" tween="cubic" easing="InOut"/>
 				</animation>
 
 				<!-- Slide up when focused in horizontal layout -->
-
 				<include>toggle_WidgetFocus</include>
 
 				<include>global_Scrolltime</include>
-
 
 				<!-- Insert the widgets -->
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),vertical)">skinshortcuts-template-widget_Vertical</include>

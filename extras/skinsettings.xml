@@ -210,10 +210,6 @@
 		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
 	</setting>
 
-	<setting id="homemenu.layout" value="alt" label="alt">
-		<onselect condition="True">SetProperty(skinshortcuts-reloadmainmenu,true)</onselect>
-	</setting>
-
 	<!-- Home statusbar -->
 	<setting id="home.status" value="none" label="$LOCALIZE[13113]" default="true"/>
 	<setting id="home.status" value="library" label="$LOCALIZE[31067]"/>
