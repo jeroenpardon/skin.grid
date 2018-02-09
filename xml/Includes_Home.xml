@@ -47,7 +47,6 @@
 			<param name="Height">98</param>
 			<param name="Title">$VAR[window:Title.Home]</param>
 			<param name="ProgressHeight">98</param>
-			<param name="ShowSymbol" >false</param>
 		</include>
 		<include>home_Logos</include>
 		<include content="home_Widgets">
@@ -125,7 +124,6 @@
 					<param name="Height">108</param>
 					<param name="Title">$VAR[window:Title.Home]</param>
 					<param name="ProgressHeight">108</param>
-					<param name="ShowSymbol" >false</param>
 				</include>
 
 
@@ -267,6 +265,8 @@
 	<include name="home_Widgets">
 		<definition>
 			<param name="Left" default="0"/>
+			<param name="Height" default="1080"/>
+			<param name="Top" default="0"/>
 			<param name="OnLeft" default="noop"/>
 			<param name="OnRight" default="noop"/>
 			<param name="OnUp" default="noop"/>
@@ -274,21 +274,25 @@
 			<control type="image">
 				<left>128</left>
 				<width>1792</width>
-				<include>screen_Height</include>
+				<height>screen_Height</height>
 				<texture colordiffuse="ff000000">colorize/100.png</texture>
 				<aspectratio>stretch</aspectratio>
 				<visible>String.IsEqual(Skin.String(homemenu.layout),compact)</visible>
 			</control>
 			<control type="grouplist" id="9100">
+				<top>$PARAM[Top]</top>
 				<left>$PARAM[Left]</left>
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
 				<width>screen_Width</width>
-				<height>1080</height>
+				<height>$PARAM[Height]</height>
 				<onfocus>SetProperty(HomeFocusedItem,feed,Home)</onfocus>
-				<onup condition="!String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</onup>
-				<onup condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</onup>
-				<ondown>noop</ondown>
+
+
+				<onup condition="!String.IsEqual(Skin.String(homemenu.layout),horizontal)">9000</onup>
+				<onup condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">9000</onup>
+				<ondown condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</ondown>
+
 				<onleft>$PARAM[OnLeft]</onleft>
 				<onright>$PARAM[OnRight]</onright>
 
@@ -298,20 +302,18 @@
 					<effect type="Fade" time="500" start="0" end="100" tween="cubic" easing="InOut"/>
 				</animation>
 
+				<!-- Slide up when focused in horizontal layout -->
+
+				<include>toggle_WidgetFocus</include>
+
 				<include>global_Scrolltime</include>
-				
-				<!-- Insert horizontal menu, set focus position -->
-				<include content="home_Menu-Horizontal" condition="String.IsEqual(Skin.String(homemenu.layout),horizontal) + Skin.HasSetting(homemenu.condensed)">
-					<param name="FocusPosition">2</param>
-				</include>
-				<include content="home_Menu-Horizontal" condition="String.IsEqual(Skin.String(homemenu.layout),horizontal) + !Skin.HasSetting(homemenu.condensed)">
-					<param name="FocusPosition">1</param>
-				</include>
+
 
 				<!-- Insert the widgets -->
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),vertical)">skinshortcuts-template-widget_Vertical</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">skinshortcuts-template-widget_Horizontal</include>
 				<include condition="String.IsEqual(Skin.String(homemenu.layout),compact)">skinshortcuts-template-widget_Compact</include>
+
 				<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.layout),vertical)">
 					<effect type="slide" time="500" start="0"  end="-screen_Width" tween="cubic" easing="InOut" center="auto" />
 					<effect type="Fade" time="500" start="0" end="100" tween="cubic" easing="InOut"/>
@@ -331,7 +333,7 @@
 				<height>$PARAM[Height]</height>
 				<visible>Skin.HasSetting(widget.name)</visible>
 				<control type="image">
-					<width>1000%</width>
+					<width>100%</width>
 					<height>100%</height>
 					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/90.png</texture>
 					<aspectratio>stretch</aspectratio>
