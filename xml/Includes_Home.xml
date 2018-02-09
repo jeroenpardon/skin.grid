@@ -47,6 +47,7 @@
 			<param name="Height">98</param>
 			<param name="Title">$VAR[window:Title.Home]</param>
 			<param name="ProgressHeight">98</param>
+			<param name="ShowSymbol" >false</param>
 		</include>
 		<include>home_Logos</include>
 		<include content="home_Widgets">
@@ -124,15 +125,29 @@
 					<param name="Height">108</param>
 					<param name="Title">$VAR[window:Title.Home]</param>
 					<param name="ProgressHeight">108</param>
+					<param name="ShowSymbol" >false</param>
 				</include>
+
+
+				<include content="home_Menu-Horizontal">
+					<param name="Top">0</param>
+					<param name="Height">972</param>
+				</include>
+				
 
 				<!-- Feed container-->
 				<include content="home_Widgets">
 					<param name="Left">0</param>
+					<param name="Top">1080</param>
+					<param name="Height">1080</param>
 					<param name="OnLeft">noop</param>
 					<param name="OnRight">noop</param>
-					<param name="OnUp">SetFocus(9050)</param>
+					<param name="OnUp">9000</param>
 				</include>
+
+
+		
+
 
 			</control>
 		</definition>

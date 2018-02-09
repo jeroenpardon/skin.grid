@@ -144,6 +144,15 @@
 		</animation>
 	</include>
 
+	<include name="toggle_WidgetFocus">
+		<animation type="Conditional" condition="ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.layout),horizontal)">
+			<effect type="slide" time="250" start="0"  end="0,-540" tween="Sine" easing="In" center="auto" />
+		</animation>
+		<animation type="Conditional" condition="!ControlGroup(9100).HasFocus() + String.IsEqual(Skin.String(homemenu.layout),horizontal)">
+			<effect type="slide" time="250" start="0,-540"  end="0,0" tween="Sine" easing="Out" center="auto" />
+		</animation>
+	</include>
+
 
 <!--toggles-->
 	<include name="toggle_Menu">
