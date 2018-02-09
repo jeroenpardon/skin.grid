@@ -197,8 +197,8 @@
 		<param name="Width" default="screen_Width"/>
 		<definition>
 			<control type="group">
-				<height>108</height>
-				<width>screen_Width</width>
+				<height>$PARAM[Height]</height>
+				<width>$PARAM[Width]</width>
 				<include condition="!VideoPlayer.IsFullscreen">transition_Chrome</include>
 				<include condition="VideoPlayer.IsFullscreen">transition_Fullscreen</include>
 				<include condition="!Window.IsActive(movieinformation)">slide_Clock</include>
