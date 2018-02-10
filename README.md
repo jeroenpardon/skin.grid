@@ -95,6 +95,10 @@ Even though I enjoy working on Grid greatly, a lot of time and effort is investe
 
 [![Image](https://www.paypalobjects.com/images/shared/paypal-logo-129x32.svg "Donate Link") ](http://bit.ly/2nXuTGN "Grid donation button")
 
+Bitcoin: 13vDGFQEyMDgZip1J7MaSdsVY4obijvsns
+
+Ethereum: 0xBa1fd6a4c455a5ec4483E00732183C7b861361fB
+
 <a name="Credits"></a>
 ## Credits
 
