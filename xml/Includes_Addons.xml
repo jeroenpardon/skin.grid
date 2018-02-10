@@ -139,6 +139,14 @@
 	<include name="tvguide_Info">
 		<param name="TextWidth" default="426"/>
 		<definition>
+			<control type="image">
+				<top>10</top>
+				<right>10</right>
+				<width>80</width>
+				<height>54</height>
+				<texture colordiffuse="$VAR[color:Text.2]">colorize/90.png</texture>
+				<aspectratio>stretch</aspectratio>
+			</control>
 			<control type="label" id="66">
 				<top>10</top>
 				<right>10</right>
@@ -188,4 +196,5 @@
 			</control>
 		</definition>
 	</include>
+	
 </includes>
