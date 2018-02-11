@@ -196,7 +196,7 @@
 						<orientation>horizontal</orientation>
 						<control type="button" id="9161">
 							<width>1108</width>
-							<label>$LOCALIZE[1026] 5</label>
+							<label>$LOCALIZE[1026] 6</label>
 							<label2>$INFO[Skin.String(hub.videos.6)]</label2>
 							<ondown>9171</ondown>
 							<onclick>Skin.SetPath(hub.videos.6)</onclick>
