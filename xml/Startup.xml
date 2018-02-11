@@ -8,7 +8,7 @@
 	<onload condition="!Skin.HasSetting(pvr.scraper.disable)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableWallBackgrounds)</onload>
+	<onload>Skin.SetBool(SkinHelper.EnableExtraFanart)</onload>
 	
 	<!-- Colorbox -->
 	<onload>Skin.SetString(fx.bitsize,1)</onload>

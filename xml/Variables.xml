@@ -3,10 +3,8 @@
 
 <!-- Backgrounds -->
 	<variable name="background:Home">
-
 		<value condition="String.IsEqual(Skin.String(homemenu.layout),alt) + Control.HasFocus(9000)">$INFO[Container(10004).ListItem(0).Art(fanart)]</value>
 		<value condition="String.IsEqual(Skin.String(homemenu.layout),alt) + ControlGroup(9100).HasFocus()">$INFO[Container.ListItem(0).Art(fanart)]</value>
-
 		<value condition="Window.IsActive(movieinformation) + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
 		<value condition="Window.IsActive(movieinformation) + String.IsEmpty(ListItem.Art(fanart))">$INFO[Skin.String(background.nomedia)]</value>
 		<value condition="String.IsEqual(Skin.String(background.home),custom) + !String.IsEmpty(Skin.String(custom.home))">$INFO[Skin.String(custom.home)]</value>
@@ -34,8 +32,9 @@
 	</variable>
 
 	<variable name="background:Player">
-		<value condition="Player.HasAudio + Skin.HasSetting(home.nowplaying) + System.HasAddon(script.artistslideshow) + String.IsEqual(Window(visualisation).Property(ArtistSlideshow.ArtworkReady),true)">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
-		<value condition="Player.HasAudio + [[Window.IsActive(Home) + Skin.HasSetting(home.nowplaying)] | Window.IsActive(visualisation)]">$VAR[player:Art]</value>
+		<value condition="!System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window(Home).Property(SkinHelper.Player.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.Player.Art.ExtraFanArt)]</value>
+		<value condition="System.HasAddon(script.artistslideshow) + !String.IsEmpty(Window(Visualisation).Property(ArtistSlideshow))">$INFO[Window(Visualisation).Property(ArtistSlideshow)]</value>
+		<value>$VAR[player:Art]</value>
 	</variable>
 
 	<variable name="background:Addon.TVGuide">
@@ -1199,6 +1198,7 @@
 
 
 <!-- Player -->
+	
 	<variable name="player:Art">
 		<value condition="!String.IsEmpty(MusicPlayer.Property(Fanart_Image))">$INFO[MusicPlayer.Property(Fanart_Image)]</value>
 		<value condition="!String.IsEmpty(MusicPlayer.Cover)">$INFO[MusicPlayer.Cover]</value>
