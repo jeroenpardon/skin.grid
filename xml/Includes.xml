@@ -33,7 +33,7 @@
 	<constant name="screen_Centery">540</constant>
 	<constant name="screen_Height">1080</constant>
 	<constant name="screen_Width">1920</constant>
-	<constant name="slideshow_Timer">20000</constant>
+	<constant name="slideshow_Timer">10000</constant>
 	<constant name="transition_Close">250</constant>
 	<constant name="transition_DialogClose">200</constant>
 	<constant name="transition_DialogOpen">200</constant>

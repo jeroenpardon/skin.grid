@@ -406,8 +406,8 @@
 					<!-- Background rotation interval -->
 					<control type="button" id="9412">
 						<label>$LOCALIZE[31389]</label>
-						<label2>$INFO[Skin.String(grab.fanart.refresh)]</label2>
-						<onclick>Skin.SetNumeric(grab.fanart.refresh)</onclick>
+						<label2>$INFO[Skin.String(slideshow.home.refresh)]</label2>
+						<onclick>Skin.SetNumeric(slideshow.home.refresh)</onclick>
 						<include>button_Settings</include>
 					</control>
 					<!-- Custom image(s) select -->
