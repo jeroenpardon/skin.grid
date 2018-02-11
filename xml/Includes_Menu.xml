@@ -2396,8 +2396,8 @@
 			<control type="button" id="5">
 				<top>12</top>
 				<label>$LOCALIZE[1024]</label>
-				<onup>7015</onup>
-				<ondown>7014</ondown>
+				<onup>7092</onup>
+				<ondown>7015</ondown>
 				<onleft>7100</onleft>
 				<onright>5500</onright>
 				<include>menu_Button</include>
@@ -2420,6 +2420,43 @@
 				</control>
 			</control>
 		</control>
+
+		<!-- Select sources -->
+		<control type="group" id="7015">
+			<height>108</height>
+			<control type="image">
+				<width>384</width>
+				<height>108</height>
+				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
+				<visible>Control.HasFocus(9)</visible>
+			</control>
+			<control type="button" id="9">
+				<top>12</top>
+				<label>$LOCALIZE[31312]</label>
+				<onup>7013</onup>
+				<ondown>7014</ondown>
+				<onleft>7100</onleft>
+				<onright>5500</onright>
+				<include>menu_Button</include>
+				<onclick>$VAR[menu:HubSources]</onclick>
+			</control>
+			<control type="group">
+				<top>54</top>
+				<left>32</left>
+				<control type="label">
+					<textcolor>$VAR[color:Main]</textcolor>
+					<label>$LOCALIZE[31382]</label>
+					<include>menu_Label</include>
+					<visible>!Control.HasFocus(9)</visible>
+				</control>
+				<control type="label">
+					<width>384</width>
+					<label>$LOCALIZE[31382]</label>
+					<include>menu_Label</include>
+					<visible>Control.HasFocus(9)</visible>
+				</control>
+			</control>
+		</control>
 		
 		<!-- Search -->
 		<control type="group" id="7014">
@@ -2433,7 +2470,7 @@
 			<control type="button" id="8">
 				<top>12</top>
 				<label>$LOCALIZE[137]</label>
-				<onup>7013</onup>
+				<onup>7015</onup>
 				<ondown>7090</ondown>
 				<onleft>7100</onleft>
 				<onright>5500</onright>
@@ -2462,43 +2499,6 @@
 		<include content="menu_Extras">
 			<param name="OnRight">5000</param>
 		</include>
-
-		<!-- Select sources -->
-		<control type="group" id="7015">
-			<height>108</height>
-			<control type="image">
-				<width>384</width>
-				<height>108</height>
-				<texture colordiffuse="$VAR[color:Main]">colorize/100.png</texture>
-				<visible>Control.HasFocus(9)</visible>
-			</control>
-			<control type="button" id="9">
-				<top>12</top>
-				<label>$LOCALIZE[31312]</label>
-				<onup>7090</onup>
-				<ondown>7013</ondown>
-				<onleft>7100</onleft>
-				<onright>5500</onright>
-				<include>menu_Button</include>
-				<onclick>$VAR[menu:HubSources]</onclick>
-			</control>
-			<control type="group">
-				<top>54</top>
-				<left>32</left>
-				<control type="label">
-					<textcolor>$VAR[color:Main]</textcolor>
-					<label>$LOCALIZE[31382]</label>
-					<include>menu_Label</include>
-					<visible>!Control.HasFocus(9)</visible>
-				</control>
-				<control type="label">
-					<width>384</width>
-					<label>$LOCALIZE[31382]</label>
-					<include>menu_Label</include>
-					<visible>Control.HasFocus(9)</visible>
-				</control>
-			</control>
-		</control>
 
 	</include>
 
