@@ -280,12 +280,12 @@
 				<itemgap>0</itemgap>
 				<orientation>vertical</orientation>
 				<width>screen_Width</width>
-				<height>$PARAM[Height]</height>
 				<onfocus>SetProperty(HomeFocusedItem,feed,Home)</onfocus>
 				<onleft>$PARAM[OnLeft]</onleft>
 				<onright>$PARAM[OnRight]</onright>
-				<onup condition="!String.IsEqual(Skin.String(homemenu.layout),horizontal)">9000</onup>
+				<onup condition="!String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</onup>
 				<onup condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">9000</onup>
+				<ondown condition="!String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</ondown>
 				<ondown condition="String.IsEqual(Skin.String(homemenu.layout),horizontal)">noop</ondown>
 
 				<!-- Slide in widgets container for vertical menu -->
