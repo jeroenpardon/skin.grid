@@ -46,7 +46,7 @@
 		<defaultID>32019</defaultID>
 		<label>32019</label>
 		<label2>Common menu item</label2>
-		<icon>DefaultMusicAlbums.png</icon>
+		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(Music)</action>
 	</shortcut>
