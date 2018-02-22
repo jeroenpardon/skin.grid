@@ -366,6 +366,64 @@
 		<value condition="String.IsEqual(Skin.String(hub.music.7),randomsongs)">special://skin/extras/playlists/albums/randomsongs.xsp</value>
 	</variable>
 
+	<!-- Addons Hub -->
+	<variable name="hub:Addons.1">
+		<value condition="String.IsEqual(Skin.String(hub.addons.1),video)">addons://user/xbmc.addon.video/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.1),music)">addons://user/xbmc.addon.audio/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.1),pictures)">addons://user/xbmc.addon.image/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.1),programs)">addons://user/xbmc.addon.executable/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.1),games)">addons://user/category.gameproviders/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.1),myaddons)">addons://user</value>
+	</variable>
+	<variable name="hub:Addons.2">
+		<value condition="String.IsEqual(Skin.String(hub.addons.2),video)">addons://user/xbmc.addon.video/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.2),music)">addons://user/xbmc.addon.audio/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.2),pictures)">addons://user/xbmc.addon.image/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.2),programs)">addons://user/xbmc.addon.executable/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.2),games)">addons://user/category.gameproviders/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.2),myaddons)">addons://user</value>
+	</variable>
+	<variable name="hub:Addons.3">
+		<value condition="String.IsEqual(Skin.String(hub.addons.3),video)">addons://user/xbmc.addon.video/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.3),music)">addons://user/xbmc.addon.audio/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.3),pictures)">addons://user/xbmc.addon.image/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.3),programs)">addons://user/xbmc.addon.executable/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.3),games)">addons://user/category.gameproviders/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.3),myaddons)">addons://user</value>
+	</variable>
+	<variable name="hub:Addons.4">
+		<value condition="String.IsEqual(Skin.String(hub.addons.4),video)">addons://user/xbmc.addon.video/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.4),music)">addons://user/xbmc.addon.audio/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.4),pictures)">addons://user/xbmc.addon.image/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.4),programs)">addons://user/xbmc.addon.executable/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.4),games)">addons://user/category.gameproviders/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.4),myaddons)">addons://user</value>
+	</variable>
+	<variable name="hub:Addons.5">
+		<value condition="String.IsEqual(Skin.String(hub.addons.5),video)">addons://user/xbmc.addon.video/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.5),music)">addons://user/xbmc.addon.audio/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.5),pictures)">addons://user/xbmc.addon.image/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.5),programs)">addons://user/xbmc.addon.executable/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.5),games)">addons://user/category.gameproviders/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.5),myaddons)">addons://user</value>
+	</variable>
+	<variable name="hub:Addons.6">
+		<value condition="String.IsEqual(Skin.String(hub.addons.6),video)">addons://user/xbmc.addon.video/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.6),music)">addons://user/xbmc.addon.audio/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.6),pictures)">addons://user/xbmc.addon.image/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.6),programs)">addons://user/xbmc.addon.executable/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.6),games)">addons://user/category.gameproviders/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.6),myaddons)">addons://user</value>
+	</variable>
+	<variable name="hub:Addons.7">
+		<value condition="String.IsEqual(Skin.String(hub.addons.7),video)">addons://user/xbmc.addon.video/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.7),music)">addons://user/xbmc.addon.audio/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.7),pictures)">addons://user/xbmc.addon.image/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.7),programs)">addons://user/xbmc.addon.executable/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.7),games)">addons://user/category.gameproviders/</value>
+		<value condition="String.IsEqual(Skin.String(hub.addons.7),myaddons)">addons://user</value>
+	</variable>
+
 
 <!-- Info -->
 	<variable name="info:Season">
@@ -654,6 +712,7 @@
 		<value condition="Window.IsActive(1131)">ActivateWindow(Videos,videodb://tvshows/titles/)</value>
 		<value condition="Window.IsActive(1130)">ActivateWindow(Videos,sources://video/)</value>
 		<value condition="Window.IsActive(1133)">ActivateWindow(Videos,musicdb://artists/)</value>
+		<value condition="Window.IsActive(1134)">ActivateWindow(AddonBrowser,addons://user/)</value>
 	</variable>
 
 	<variable name="menu:Browse.Label">
@@ -661,6 +720,7 @@
 		<value condition="Window.IsActive(1131)">$LOCALIZE[31370]</value>
 		<value condition="Window.IsActive(1130)">$LOCALIZE[3]</value>
 		<value condition="Window.IsActive(1133)">$LOCALIZE[14237]</value>
+		<value condition="Window.IsActive(1134)">$LOCALIZE[24001]</value>
 	</variable>
 
 	<variable name="menu:Search">
@@ -712,6 +772,7 @@
 		<value condition="Window.IsActive(1131)">ActivateWindowAndFocus(1129,3,0,9301,0)</value>
 		<value condition="Window.IsActive(1132)">ActivateWindowAndFocus(1129,2,0,9201,0)</value>
 		<value condition="Window.IsActive(1133)">ActivateWindowAndFocus(1129,4,0,9401,0)</value>
+		<value condition="Window.IsActive(1134)">ActivateWindowAndFocus(1129,5,0,9502,0)</value>
 	</variable>
 
 
@@ -1754,6 +1815,7 @@
 		<value condition="String.StartsWith(Container.FolderPath,plugin://script.extendedinfo/)">$VAR[tmdb:Path]</value>
 		<value condition="Window.IsActive(1130)">$LOCALIZE[3]</value>
 		<value condition="Window.IsActive(1133)">$LOCALIZE[2]</value>
+		<value condition="Window.IsActive(1134)">$LOCALIZE[24001]</value>
 		<value condition="[Container.Content(movies) + String.IsEqual(Container.Foldername,$LOCALIZE[10024])] | Window.IsActive(1132)">$LOCALIZE[342]</value>
 		<value condition="[Container.Content(tvshows) + String.IsEqual(Container.Foldername,$LOCALIZE[10024])] | Window.IsActive(1131)">$LOCALIZE[20343]</value>
 		<value condition="String.IsEqual(Container.FolderName,$LOCALIZE[369])">$INFO[Container.Content]</value>

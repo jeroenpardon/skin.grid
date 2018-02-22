@@ -93,6 +93,7 @@
 				<shortcut label="$LOCALIZE[36901]" type="31004">ActivateWindow(1132)</shortcut>
 				<shortcut label="$LOCALIZE[36903]" type="31004">ActivateWindow(1131)</shortcut>
 				<shortcut label="$LOCALIZE[2]" type="31004">ActivateWindow(1133)</shortcut>
+				<shortcut label="$LOCALIZE[24001]" type="31004">ActivateWindow(1134)</shortcut>
 			</node>
 			<!-- Videos -->
 			<node label="3">
