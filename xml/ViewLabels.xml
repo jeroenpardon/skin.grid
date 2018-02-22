@@ -109,6 +109,26 @@
 		</definition>
 	</include>
 
+	<include name="hub_Addon-Source">
+		<param name="Height" default="90"/>
+		<definition>
+			<!-- Sources -->
+			<control type="label" id="5098">
+				<label>$LOCALIZE[14022]</label>
+				<height>$PARAM[Height]</height>
+				<include>global_Header</include>
+				<visible>Skin.HasSetting(hub.defaultnodes)</visible>
+			</control>
+			<include content="view_Labels">
+				<param name="ID">5099</param>
+				<param name="Path2">addons://</param>
+				<param name="UseCustomPath">true</param>
+				<param name="Visible">Skin.HasSetting(hub.defaultnodes)</param>
+				<param name="Height">$PARAM[Height]</param>
+			</include>
+		</definition>
+	</include>
+
 
 	<include name="view_Labels">
 		<param name="ID"/>
