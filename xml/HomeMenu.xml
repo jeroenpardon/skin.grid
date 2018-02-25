@@ -356,6 +356,26 @@
 				</content>
 			</control>
 
+			<control type="group">
+				<bottom>0</bottom>
+				<height>64</height>
+				<include>toggle_WidgetFocus</include>
+				<control type="image">
+					<height>64</height>
+					<width>screen_Width</width>
+					<aspectratio>stretch</aspectratio>
+					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/80.png</texture>
+					<visible>Control.HasFocus(9050)</visible>
+				</control>
+				<control type="image">
+					<height>64</height>
+					<width>screen_Width</width>
+					<aspectratio>stretch</aspectratio>
+					<texture colordiffuse="$VAR[home:FX.Color1]">colorize/80.png</texture>
+					<visible>!Control.HasFocus(9050)</visible>
+				</control>
+			</control>
+
 			<!-- Submenu -->
 			<control type="list" id="9050">		
 				<left>0</left>
@@ -368,9 +388,7 @@
 				<ondown>SetProperty(ShowClock,false,Home)</ondown>
 				<onfocus>SetProperty(HomeFocusedItem,submenu,Home)</onfocus>
 				<ondown>SetProperty(BlurIsActive,true,Home)</ondown>
-
 				<ondown>9100</ondown>
-
 				<onback>9000</onback>
 				<focusposition>$PARAM[FocusPosition]</focusposition>
 				<include>global_ListScroll</include>
@@ -379,25 +397,11 @@
 
 				<!-- Move up on widgets focus -->
 				<include>toggle_WidgetFocus</include>
-			
+
+				<animation effect="slide" end="320" time="0" condition="String.IsEqual(Container(9050).NumItems,2)">Conditional</animation>
+				<animation effect="slide" end="640" time="0" condition="String.IsEqual(Container(9050).NumItems,1)">Conditional</animation>
 				
 				<itemlayout condition="!Skin.HasSetting(homemenu.condensed)" width="640" height="64">
-					<control type="image">
-						<height>64</height>
-						<width>640</width>
-						<bottom>0</bottom>
-						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/80.png</texture>
-						<visible>Control.HasFocus(9050)</visible>
-					</control>
-					<control type="image">
-						<height>64</height>
-						<width>640</width>
-						<bottom>0</bottom>
-						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/80.png</texture>
-						<visible>!Control.HasFocus(9050)</visible>
-					</control>
 					<control type="label">
 						<width>640</width>
 						<height>64</height>
@@ -411,13 +415,6 @@
 				<focusedlayout condition="!Skin.HasSetting(homemenu.condensed)" width="640" height="64">
 					<control type="group">
 						<visible>!Control.HasFocus(9050)</visible>
-						<control type="image">
-							<height>64</height>
-							<width>640</width>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$VAR[home:FX.Color1]">colorize/80.png</texture>
-						</control>
 						<control type="label">
 							<width>640</width>
 							<height>64</height>
@@ -430,13 +427,6 @@
 					</control>
 					<control type="group">
 						<visible>Control.HasFocus(9050)</visible>
-						<control type="image">
-							<height>64</height>
-							<width>640</width>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$VAR[home:FX.Color1]">colorize/80.png</texture>
-						</control>
 						<control type="label">
 							<width>640</width>
 							<height>64</height>
@@ -449,22 +439,6 @@
 					</control>
 				</focusedlayout>
 				<itemlayout condition="Skin.HasSetting(homemenu.condensed)" width="384" height="64">
-					<control type="image">
-						<height>64</height>
-						<width>384</width>
-						<bottom>0</bottom>
-						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/40.png</texture>
-						<visible>Control.HasFocus(9050)</visible>
-					</control>
-					<control type="image">
-						<height>64</height>
-						<width>384</width>
-						<bottom>0</bottom>
-						<aspectratio>stretch</aspectratio>
-						<texture colordiffuse="$VAR[home:FX.Color1]">colorize/40.png</texture>
-						<visible>!Control.HasFocus(9050)</visible>
-					</control>
 					<control type="label">
 						<width>384</width>
 						<height>64</height>
@@ -478,13 +452,6 @@
 				<focusedlayout condition="Skin.HasSetting(homemenu.condensed)" width="384" height="64">
 					<control type="group">
 						<visible>!Control.HasFocus(9050)</visible>
-						<control type="image">
-							<height>64</height>
-							<width>384</width>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$VAR[home:FX.Color1]">colorize/40.png</texture>
-						</control>
 						<control type="label">
 							<width>384</width>
 							<height>64</height>
@@ -497,13 +464,6 @@
 					</control>
 					<control type="group">
 						<visible>Control.HasFocus(9050)</visible>
-						<control type="image">
-							<height>64</height>
-							<width>384</width>
-							<bottom>0</bottom>
-							<aspectratio>stretch</aspectratio>
-							<texture colordiffuse="$VAR[home:FX.Color1]">colorize/40.png</texture>
-						</control>
 						<control type="label">
 							<width>384</width>
 							<height>64</height>

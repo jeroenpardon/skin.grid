@@ -278,6 +278,7 @@
 				<top>$PARAM[Top]</top>
 				<left>$PARAM[Left]</left>
 				<itemgap>0</itemgap>
+				<height>$PARAM[Height]</height>
 				<orientation>vertical</orientation>
 				<width>screen_Width</width>
 				<onfocus>SetProperty(HomeFocusedItem,feed,Home)</onfocus>
