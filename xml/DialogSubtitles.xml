@@ -249,7 +249,7 @@
 								<left>108</left>
 								<control type="label">
 									<top>15</top>
-									<width>1058</width>
+									<width>1012</width>
 									<height>45</height>
 									<aligny>bottom</aligny>
 									<font>Black-24</font>
@@ -258,7 +258,7 @@
 								</control>
 								<control type="label">
 									<top>45</top>
-									<width>1058</width>
+									<width>1012</width>
 									<height>45</height>
 									<aligny>top</aligny>
 									<font>Regular-20</font>
@@ -295,7 +295,7 @@
 								<visible>Control.HasFocus(120)</visible>
 								<control type="label">
 									<top>15</top>
-									<width>1058</width>
+									<width>1012</width>
 									<height>45</height>
 									<aligny>bottom</aligny>
 									<font>Black-24</font>
@@ -304,7 +304,7 @@
 								</control>
 								<control type="label">
 									<top>45</top>
-									<width>1058</width>
+									<width>1012</width>
 									<height>45</height>
 									<aligny>top</aligny>
 									<font>Regular-20</font>
@@ -317,7 +317,7 @@
 								<visible>!Control.HasFocus(120)</visible>
 								<control type="label">
 									<top>15</top>
-									<width>1058</width>
+									<width>1012</width>
 									<height>45</height>
 									<aligny>bottom</aligny>
 									<font>Black-24</font>
@@ -326,7 +326,7 @@
 								</control>
 								<control type="label">
 									<top>45</top>
-									<width>1058</width>
+									<width>1012</width>
 									<height>45</height>
 									<aligny>top</aligny>
 									<font>Regular-20</font>
