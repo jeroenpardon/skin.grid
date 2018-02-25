@@ -150,8 +150,9 @@
 		<!-- Common shortcuts -->
 		<node label="32029">
 			<content>common</content>
+			<shortcut label="$LOCALIZE[10821]" type="31072">ActivateWindow(games)</shortcut>
 			<shortcut label="$LOCALIZE[24001]" type="31072">ActivateWindow(addonbrowser)</shortcut>
-			<shortcut label="$LOCALIZE[31302]" type="31072">ActivateWindow(shutdownmenu)</shortcut>
+			<shortcut label="$LOCALIZE[13012]" type="31072">ActivateWindow(shutdownmenu)</shortcut>
 		</node>
 
 		<!-- Video shortcuts -->
@@ -270,7 +271,7 @@
 
 		<!-- Music -->
 		<node label="2">
-			<shortcut label="$ADDON[359]" widget="$ADDON[359]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
+			<shortcut label="$LOCALIZE[359]" widget="$LOCALIZE[359]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
 			<shortcut label="$LOCALIZE[517]" widget="$LOCALIZE[517]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=albums&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
 			<shortcut label="$ADDON[script.skin.helper.widgets 32012]" widget="$ADDON[script.skin.helper.widgets 32012]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recent&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
 			<shortcut label="$ADDON[script.skin.helper.widgets 32013]" widget="$ADDON[script.skin.helper.widgets 32013]" type="music" widgetType="music" condition="Library.HasContent(music)">plugin://script.skin.helper.widgets/?action=recentplayed&amp;mediatype=songs&amp;reload=$INFO[Window(Home).Property(widgetreload-music)]</shortcut>
@@ -288,7 +289,7 @@
 		</node>
 
 		<!-- Scripts -->
-		<node label="$LOCALIZE[10020]">
+		<node label="$LOCALIZE[24001]">
 			<shortcut label="Skin Helper Service">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=scriptwidgets</shortcut>
 			<shortcut label="Extended Info">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=extendedinfo</shortcut>
 			<shortcut label="Library Data Provider">||BROWSE||script.skin.helper.service/?action=widgets&amp;path=librarydataprovider</shortcut>
