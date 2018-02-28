@@ -1,1 +1,19 @@
-<shortcuts />
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+	<shortcut>
+		<defaultID>33003</defaultID>
+		<label>33003</label>
+		<label2>Skin shortcut</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(AddonBrowser,addons://repos/,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>24004</defaultID>
+		<label>24004</label>
+		<label2>Skin shortcut</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb />
+		<action>ActivateWindow(AddonBrowser,addons://recently_updated/,return)</action>
+	</shortcut>
+</shortcuts>
