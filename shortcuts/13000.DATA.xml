@@ -1,14 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
 	<shortcut>
-		<defaultID>settings</defaultID>
-		<label>10004</label>
-		<label2>Settings</label2>
-		<icon>DefaultShortcut.png</icon>
-		<thumb />
-		<action>ActivateWindow(Settings)</action>
-	</shortcut>
-	<shortcut>
 		<defaultID>20077</defaultID>
 		<label>20077</label>
 		<label2>Settings</label2>
@@ -19,24 +11,15 @@
 	<shortcut>
 		<defaultID>7</defaultID>
 		<label>7</label>
-		<label2>Common Shortcut</label2>
+		<label2>Common menu item</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
-		<action>ActivateWindow(filemanager)</action>
-	</shortcut>
-	<shortcut>
-		<defaultID>MyOSMC</defaultID>
-		<label>MyOSMC</label>
-		<label2>Settings</label2>
-		<icon>DefaultShortcut.png</icon>
-		<thumb />
-		<action>RunAddon(service.osmc.settings)</action>
-		<visible>System.HasAddon(service.osmc.settings)</visible>
+		<action>ActivateWindow(FileManager)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>13012</defaultID>
 		<label>13012</label>
-		<label2>Shutdown menu</label2>
+		<label2>Common menu item</label2>
 		<icon>DefaultShortcut.png</icon>
 		<thumb />
 		<action>ActivateWindow(shutdownmenu)</action>

@@ -121,6 +121,12 @@
 				<shortcut label="$LOCALIZE[31662]" type="31004">ActivateWindow(Videos,special://skin/extras/playlists/albums/random.xsp,return)</shortcut>
 				<shortcut label="$LOCALIZE[31663]" type="31004">ActivateWindow(Videos,special://skin/extras/playlists/songs/random.xsp,return)</shortcut>
 			</node>
+			<!-- Add-ons -->
+			<node label="24001">
+				<shortcut label="$LOCALIZE[24001]" type="31004">ActivateWindow(1110)</shortcut>	
+				<shortcut label="$LOCALIZE[33003]" type="31004">ActivateWindow(AddonBrowser,addons://repos/,return)</shortcut>
+				<shortcut label="$LOCALIZE[24004]" type="31004">ActivateWindow(AddonBrowser,addons://recently_updated/,return)</shortcut>
+			</node>
 			<!-- TMDb -->
 			<node label="themoviedb">
 				<shortcut label="$LOCALIZE[1024]" type="TheMovieDB.org">ActivateWindow(Videos,plugin://script.extendedinfo/tmdb,return)</shortcut>
