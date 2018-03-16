@@ -71,6 +71,7 @@
 
 	<!-- Widget sorting method -->
 	<propertySettings property="widgetSortMethod" buttonID="603" title="$LOCALIZE[39010]" showNone="True" />
+	<property property="widgetSortMethod" label="$LOCALIZE[552]">date</property>
     <property property="widgetSortMethod" label="$LOCALIZE[568]">lastplayed</property>
     <property property="widgetSortMethod" label="$LOCALIZE[12012]">lastused</property>
     <property property="widgetSortMethod" label="$LOCALIZE[551]">sorttitle</property>
