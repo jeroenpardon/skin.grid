@@ -52,6 +52,7 @@
 		<include content="home_Widgets">
 			<param name="Left">screen_Width</param>
 			<param name="OnLeft">9000</param>
+			<param name="Height">1080</param>
 		</include>		
 	</include>
 
@@ -99,17 +100,16 @@
 				<!-- Now playing -->
 				<include>background_Player</include>
 
-				<!-- Menu area background gradient (blur) -->
 				<control type="image">
 					<bottom>0</bottom>
 					<width>screen_Width</width>
 					<height>172</height>
-					<aspectratio aligny="bottom">scale</aspectratio>
-					<texture colordiffuse="$VAR[home:FX.Color1]" diffuse="$VAR[home:FX.Diffuse]">$VAR[home:FX.Texture]</texture>
-					<fadetime>fadetime_Slideshow</fadetime>
-					<animation effect="fade" start="100" end="0" time="400" reversible="true" tween="Quadratic" easing="Out">Hidden</animation>
-					<visible>!String.IsEqual(Window(Home).Property(BlurIsActive),true)</visible>
-				</control>
+		            <timeperimage>10000</timeperimage>
+		            <randomize>true</randomize>
+		            <texture colordiffuse="$VAR[home:FX.Color1]" diffuse="$VAR[home:FX.Diffuse]" background="true">$VAR[home:FX.Texture]</texture>
+		            <fadetime>fadetime_Slideshow</fadetime>
+		            <aspectratio aligny="bottom">scale</aspectratio>
+		        </control>
 
 				<!-- Volume slider -->
 				<include content="global_Progress">
@@ -164,6 +164,7 @@
 		<include content="home_Widgets">
 			<param name="Left">128</param>
 			<param name="OnLeft">9000</param>
+			<param name="Height">1080</param>
 		</include>
 		<include content="global_WindowChrome">
 			<param name="TimeLeft">0</param>
@@ -260,7 +261,7 @@
 	<include name="home_Widgets">
 		<definition>
 			<param name="Left" default="0"/>
-			<param name="Height" default="1080"/>
+			<param name="Height"/>
 			<param name="Top" default="0"/>
 			<param name="OnLeft" default="noop"/>
 			<param name="OnRight" default="noop"/>

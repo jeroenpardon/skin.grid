@@ -245,6 +245,7 @@
 	<!-- TV Shows Hub -->
 	<variable name="hub:Shows.1">
 		<value condition="String.IsEqual(Skin.String(hub.shows.1),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.1),inprogress)">videodb://inprogresstvshows/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.1),recent)">videodb://recentlyaddedepisodes/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.1),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.1),all)">videodb://tvshows/titles/</value>
@@ -254,6 +255,7 @@
 	</variable>
 	<variable name="hub:Shows.2">
 		<value condition="String.IsEqual(Skin.String(hub.shows.2),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.2),inprogress)">videodb://inprogresstvshows/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.2),recent)">videodb://recentlyaddedepisodes/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.2),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.2),all)">videodb://tvshows/titles/</value>
@@ -263,6 +265,7 @@
 	</variable>
 	<variable name="hub:Shows.3">
 		<value condition="String.IsEqual(Skin.String(hub.shows.3),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.3),inprogress)">videodb://inprogresstvshows/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.3),recent)">videodb://recentlyaddedepisodes/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.3),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.3),all)">videodb://tvshows/titles/</value>
@@ -272,6 +275,7 @@
 	</variable>
 	<variable name="hub:Shows.4">
 		<value condition="String.IsEqual(Skin.String(hub.shows.4),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.4),inprogress)">videodb://inprogresstvshows/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.4),recent)">videodb://recentlyaddedepisodes/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.4),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.4),all)">videodb://tvshows/titles/</value>
@@ -281,6 +285,7 @@
 	</variable>
 	<variable name="hub:Shows.5">
 		<value condition="String.IsEqual(Skin.String(hub.shows.5),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.5),inprogress)">videodb://inprogresstvshows/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.5),recent)">videodb://recentlyaddedepisodes/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.5),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.5),all)">videodb://tvshows/titles/</value>
@@ -290,6 +295,7 @@
 	</variable>
 	<variable name="hub:Shows.6">
 		<value condition="String.IsEqual(Skin.String(hub.shows.6),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.6),inprogress)">videodb://inprogresstvshows/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.6),recent)">videodb://recentlyaddedepisodes/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.6),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.6),all)">videodb://tvshows/titles/</value>
@@ -299,6 +305,7 @@
 	</variable>
 	<variable name="hub:Shows.7">
 		<value condition="String.IsEqual(Skin.String(hub.shows.7),watchlist)">plugin://script.skin.helper.widgets/?action=next&amp;mediatype=episodes&amp;reload=$INFO[Window(Home).Property(widgetreload)]</value>
+		<value condition="String.IsEqual(Skin.String(hub.shows.7),inprogress)">videodb://inprogresstvshows/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.7),recent)">videodb://recentlyaddedepisodes/</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.7),unwatched)">special://skin/extras/playlists/episodes/unwatched.xsp</value>
 		<value condition="String.IsEqual(Skin.String(hub.shows.7),all)">videodb://tvshows/titles/</value>
@@ -1592,6 +1599,7 @@
 
 	<variable name="widget:SortMethod">
 		<value condition="String.IsEmpty(Container(211).ListItem.Property(widgetSortMethod))">$LOCALIZE[39010]</value>
+		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortMethod),date)">$LOCALIZE[581]: $LOCALIZE[552]</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortMethod),sorttitle)">$LOCALIZE[581]: $LOCALIZE[551]</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortMethod),rating)">$LOCALIZE[581]: $LOCALIZE[563]</value>
 		<value condition="String.IsEqual(Container(211).ListItem.Property(widgetSortMethod),year)">$LOCALIZE[581]: $LOCALIZE[562]</value>

@@ -30,13 +30,14 @@
 					<itemlayout width="screen_Width" height="108">
 						<control type="group">
 							<include content="view_List-Data">
-								<param name="Top">14</param>
 								<param name="Height">54</param>
 								<param name="Label2" value="$INFO[ListItem.Label2]"/>
 								<param name="Symbol" value="$INFO[ListItem.Property(Icon)]"/>
-								<param name="TextColor2">$VAR[color:Text.2]</param>
 								<param name="SymbolColor" value="$VAR[color:Text.3]"/>
 								<param name="SymbolSize" value="128"/>
+								<param name="TextColor2">$VAR[color:Text.2]</param>
+								<param name="TextWidth" default="1664"/>
+								<param name="Top">14</param>
 							</include>
 						</control>
 					</itemlayout>
@@ -47,14 +48,15 @@
 						</include>
 						<control type="group">
 							<include content="view_List-Data">
-								<param name="Top">14</param>
 								<param name="Height">54</param>
 								<param name="Label2" value="$INFO[ListItem.Label2]"/>
-								<param name="TextColor">$VAR[color:Main]</param>
-								<param name="TextColor2">$VAR[color:Main]</param>
 								<param name="Symbol" value="$INFO[ListItem.Property(Icon)]"/>
 								<param name="SymbolColor" value="$VAR[color:Main]"/>
 								<param name="SymbolSize" value="128"/>
+								<param name="TextColor">$VAR[color:Main]</param>
+								<param name="TextColor2">$VAR[color:Main]</param>
+								<param name="TextWidth" default="1664"/>
+								<param name="Top">14</param>
 							</include>
 						</control>
 					</focusedlayout>

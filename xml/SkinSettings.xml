@@ -3,6 +3,7 @@
 	<defaultcontrol always="true">5500</defaultcontrol>
 	<menucontrol>7000</menucontrol>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mode=single&amp;mainmenuID=9000&amp;group=mainmenu|optionsmenu)</onunload>
+	<onunload condition="System.HasAddon(script.colorbox) + !System.Platform.Android">AlarmClock(nms1,SetProperty(NINE_manual_set,"var=main,set=main:hsv*0.0;0.0;0.0|var=comp,set=main:hsv*0.0;-0.2;0.2|var=quality,set=$INFO[Skin.String(fx.quality)]|var=blursize,set=$INFO[Skin.String(fx.blursize)]|var=bitsize,set=$INFO[Skin.String(fx.bitsize)]|var=pixelsize,se​​t=$INFO[Skin.String(fx.pixelsize)]|var=blend,set=$INFO[Skin.String(colorbox_blend)]|var=black,set=$INFO[Skin.String(fx.black)]|var=white,set=$INFO[Skin.String(fx.white)]",home),00:05,true)</onunload>
 
 	<controls>
 
@@ -277,6 +278,16 @@
 						<include>radio_Settings</include>
 						<visible>String.IsEqual(Skin.String(homemenu.layout),horizontal)</visible>
 					</control>
+
+					<!-- Hide submenu until focused -->
+					<control type="radiobutton" id="9223">
+						<label>Hide submenu until focused</label>
+						<onclick>Skin.ToggleSetting(homemenu.hidesub)</onclick>
+						<selected>Skin.HasSetting(homemenu.hidesub)</selected>
+						<include>radio_Settings</include>
+						<visible>String.IsEqual(Skin.String(homemenu.layout),horizontal)</visible>
+					</control>
+
 					<!-- Toggle widget names -->
 					<control type="radiobutton" id="9240">
 						<label>$LOCALIZE[31040]</label>
@@ -333,6 +344,14 @@
 						<label>$LOCALIZE[20410]</label>
 						<onclick>Skin.ToggleSetting(context.trailer)</onclick>
 						<selected>Skin.HasSetting(context.trailer)</selected>
+						<include>radio_Settings</include>
+					</control>
+
+					<!-- Trailer -->
+					<control type="radiobutton" id="343">
+						<label>test</label>
+						<onclick>Skin.ToggleSetting(foo)</onclick>
+						<selected>Skin.HasSetting(foo)</selected>
 						<include>radio_Settings</include>
 					</control>
 				</control>
