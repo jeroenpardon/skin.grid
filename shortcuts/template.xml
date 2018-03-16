@@ -131,7 +131,6 @@
 		<property name="description" tag="property" attribute="name|widgetType">$INFO[ListItem.Plot]</property>
 	</propertyGroup>
 
-
 	<other include="widget_Vertical">
 		<condition tag="property" attribute="name|widgetPath"></condition>
 		<propertyGroup>widget_Commons</propertyGroup>

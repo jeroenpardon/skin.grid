@@ -80,5 +80,6 @@
 				<visible>String.IsEmpty(Window(Home).Property(script.grab.fanart.Ready))</visible>
 			</control>
 		</control>
+
 	</controls>
 </window>
