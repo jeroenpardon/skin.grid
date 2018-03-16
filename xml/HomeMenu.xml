@@ -182,13 +182,11 @@
 		
 		<definition>
 			<!-- Main menu -->
-			<control type="wraplist" id="9000">		
+			<control type="list" id="9000">		
 				<bottom>64</bottom>
 				<width>1920</width>
 				<height>172</height>
 				<onup>noop</onup>
-				<onleft>9000</onleft>
-				<onright>9000</onright>
 				<ondown>9050</ondown>
 				<onfocus>SetProperty(HomeFocusedItem,mainmenu,Home)</onfocus>
 				<onfocus>SetProperty(BlurIsActive,false,Home)</onfocus>
@@ -197,6 +195,10 @@
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
 				<include>transition_HomeAlt</include>
+
+				<!-- Hide submenu until focused -->
+				<animation effect="slide" end="0,64" time="150" condition="Skin.HasSetting(homemenu.hidesub)">Conditional</animation>
+				<animation effect="slide" end="0,-64" time="150" condition="Skin.HasSetting(homemenu.hidesub) + Control.HasFocus(9050)">Conditional</animation>
 
 				<!-- Move up on widgets focus -->
 				<include>toggle_WidgetFocus</include>
@@ -359,6 +361,11 @@
 			<control type="group">
 				<bottom>0</bottom>
 				<height>64</height>
+
+				<!-- Hide submenu until focused -->
+				<animation effect="slide" end="0,64" time="150" condition="Skin.HasSetting(homemenu.hidesub)">Conditional</animation>
+				<animation effect="slide" end="0,-64" time="150" condition="Skin.HasSetting(homemenu.hidesub) + Control.HasFocus(9050)">Conditional</animation>
+
 				<include>toggle_WidgetFocus</include>
 				<control type="image">
 					<height>64</height>
@@ -377,7 +384,7 @@
 			</control>
 
 			<!-- Submenu -->
-			<control type="list" id="9050">		
+			<control type="list" id="9050">
 				<left>0</left>
 				<bottom>0</bottom>
 				<height>64</height>
@@ -394,6 +401,10 @@
 				<include>global_ListScroll</include>
 				<orientation>horizontal</orientation>
 				<include>transition_HomeAlt</include>
+
+				<!-- Hide submenu until focused -->
+				<animation effect="slide" end="0,64" time="150" condition="Skin.HasSetting(homemenu.hidesub)">Conditional</animation>
+				<animation effect="slide" end="0,-64" time="150" condition="Skin.HasSetting(homemenu.hidesub) + Control.HasFocus(9050)">Conditional</animation>
 
 				<!-- Move up on widgets focus -->
 				<include>toggle_WidgetFocus</include>
