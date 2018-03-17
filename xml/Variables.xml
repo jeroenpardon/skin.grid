@@ -1403,6 +1403,11 @@
 		<value>$INFO[ListItem.Genre]</value>
 	</variable>
 
+	<variable name="pvr:TimeBlock">
+		<value condition="!Skin.HasSetting(genrecolours.disable)">$INFO[ListItem.Property(GenreType),pvr/genres/,.png]</value>
+		<value></value>
+	</variable>
+
 
 <!-- Setup -->
 	<variable name="setup:Accept">

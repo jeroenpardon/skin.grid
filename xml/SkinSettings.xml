@@ -740,7 +740,7 @@
 							<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">RunScript(script.skin.helper.colorpicker,action=colorpicker,skinstring=setcolor.main)</onclick>
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
-							<onup>9696</onup>
+							<onup>9697</onup>
 							<ondown>9660</ondown>
 						</control>
 						<control type="image">
@@ -828,7 +828,7 @@
 							<include>install_ColorPicker</include>
 							<include>radio_Settings</include>
 							<onup>9680</onup>
-							<ondown>9696</ondown>
+							<ondown>9693</ondown>
 						</control>
 						<control type="image">
 							<right>0</right>
@@ -837,6 +837,20 @@
 							<texture colordiffuse="$VAR[color:Disabled]">colorize/100.png</texture>
 							<bordersize>8</bordersize>
 							<aspectratio>stretch</aspectratio>
+						</control>
+					</control>
+
+					<!-- PVR Genre colours-->
+					<control type="group" id="9693">
+						<height>90</height>
+						<control type="radiobutton" id="9694">
+							<label>$LOCALIZE[31392]</label>
+							<onleft>9001</onleft>
+							<onclick>Skin.ToggleSetting(genrecolours.disable)</onclick>
+							<selected>Skin.HasSetting(genrecolours.disable)</selected>
+							<include>radio_Settings</include>
+							<onup>9691</onup>
+							<ondown>9696</ondown>
 						</control>
 					</control>
 
@@ -856,7 +870,7 @@
 							<onclick condition="System.HasAddon(script.skin.helper.service)">RunScript(script.skin.helper.service,action=colorthemes)</onclick>
 							<include>install_HelperService</include>
 							<include>radio_Settings</include>
-							<onup>9690</onup>
+							<onup>9693</onup>
 							<ondown>9697</ondown>
 						</control>
 					</control>
@@ -875,7 +889,7 @@
 							<onup>9696</onup>
 							<ondown>9650</ondown>
 						</control>
-					</control>		
+					</control>
 				</control>
 
 			

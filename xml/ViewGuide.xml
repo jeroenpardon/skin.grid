@@ -146,7 +146,7 @@
 							<left>10</left>
 							<width>$PARAM[ItemTextureWidth]</width>
 							<height>$PARAM[ItemTextureHeight]</height>
-							<texture fallback="pvr/genres/0.png" border="5">$INFO[ListItem.Property(GenreType),pvr/genres/,.png]</texture>
+							<texture fallback="pvr/genres/0.png" border="5">$VAR[pvr:TimeBlock]</texture>
 						</control>
 						<control type="label" id="1">
 							<left>32</left>
@@ -180,7 +180,7 @@
 							<left>10</left>
 							<width>$PARAM[ItemTextureWidth]</width>
 							<height>$PARAM[ItemTextureHeight]</height>
-							<texture fallback="pvr/genres/0.png" border="5">$INFO[ListItem.Property(GenreType),pvr/genres/,.png]</texture>
+							<texture fallback="pvr/genres/0.png" border="5">$VAR[pvr:TimeBlock]</texture>
 							<bordertexture>colorize/100.png</bordertexture>
 							<bordersize>6</bordersize>
 						</control>

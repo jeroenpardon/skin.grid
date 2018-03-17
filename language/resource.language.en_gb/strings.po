@@ -862,6 +862,10 @@ msgctxt "#31391"
 msgid "Library shortcuts position"
 msgstr ""
 
+msgctxt "#31392"
+msgid "Disable genre colours in TV / Radio Guide"
+msgstr ""
+
 
 
 #: osd / player
