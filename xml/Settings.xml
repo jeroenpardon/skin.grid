@@ -30,14 +30,13 @@
 					<itemlayout width="screen_Width" height="108">
 						<control type="group">
 							<include content="view_List-Data">
+								<param name="Top">14</param>
 								<param name="Height">54</param>
 								<param name="Label2" value="$INFO[ListItem.Label2]"/>
 								<param name="Symbol" value="$INFO[ListItem.Property(Icon)]"/>
+								<param name="TextColor2">$VAR[color:Text.2]</param>
 								<param name="SymbolColor" value="$VAR[color:Text.3]"/>
 								<param name="SymbolSize" value="128"/>
-								<param name="TextColor2">$VAR[color:Text.2]</param>
-								<param name="TextWidth" default="1664"/>
-								<param name="Top">14</param>
 							</include>
 						</control>
 					</itemlayout>
@@ -48,15 +47,14 @@
 						</include>
 						<control type="group">
 							<include content="view_List-Data">
+								<param name="Top">14</param>
 								<param name="Height">54</param>
 								<param name="Label2" value="$INFO[ListItem.Label2]"/>
+								<param name="TextColor">$VAR[color:Main]</param>
+								<param name="TextColor2">$VAR[color:Main]</param>
 								<param name="Symbol" value="$INFO[ListItem.Property(Icon)]"/>
 								<param name="SymbolColor" value="$VAR[color:Main]"/>
 								<param name="SymbolSize" value="128"/>
-								<param name="TextColor">$VAR[color:Main]</param>
-								<param name="TextColor2">$VAR[color:Main]</param>
-								<param name="TextWidth" default="1664"/>
-								<param name="Top">14</param>
 							</include>
 						</control>
 					</focusedlayout>
@@ -89,40 +87,40 @@
 							<property name="Icon">&#59053;</property>
 							<onclick>ActivateWindow(PlayerSettings)</onclick>
 						</item>
-						<!--tv-->
+						<!--profile-->
 						<item id="5">
-							<label>$LOCALIZE[14204]</label>
-							<label2>$LOCALIZE[19019] &#8226; $LOCALIZE[19181] &#8226; $LOCALIZE[19222] &#8226; $LOCALIZE[14086] &#8226; $LOCALIZE[19043] &#8226; $LOCALIZE[14095] &#8226; $LOCALIZE[19259]</label2>
-							<property name="Icon">&#58944;</property>
-							<onclick>ActivateWindow(PVRSettings)</onclick>
-						</item>
-						<!-- Games -->
-						<item id="6">
-							<label>$LOCALIZE[15016]</label>
-							<label2>$LOCALIZE[35201] &#8226; $LOCALIZE[35150] &#8226; $LOCALIZE[35151]</label2>
-							<property name="Icon">&#57371;</property>
-							<onclick>ActivateWindow(GameSettings)</onclick>
+							<label>$LOCALIZE[13200]</label>
+							<label2>$LOCALIZE[20067] &#8226; $LOCALIZE[20096]</label2>
+							<property name="Icon">&#57345;</property>
+							<onclick>ActivateWindow(Profiles)</onclick>
 						</item>
 						<!--services-->
-						<item id="7">
+						<item id="6">
 							<label>$LOCALIZE[14036]</label>
 							<label2>$LOCALIZE[1271] &#8226; $LOCALIZE[1259] &#8226; $LOCALIZE[790] &#8226; $LOCALIZE[20187] &#8226; $LOCALIZE[1273] &#8226; $LOCALIZE[1200] &#8226; $LOCALIZE[12600]</label2>
 							<property name="Icon">&#58981;</property>
 							<onclick>ActivateWindow(ServiceSettings)</onclick>
 						</item>
 				 		<!--system-->
-						<item id="8">
+						<item id="7">
 							<label>$LOCALIZE[13000]</label>
 							<label2>$LOCALIZE[131] &#8226; $LOCALIZE[14221] &#8226; $LOCALIZE[14125] &#8226; $LOCALIZE[798] &#8226; $LOCALIZE[14095] &#8226; $LOCALIZE[24001] &#8226; $LOCALIZE[14092]</label2>
 							<property name="Icon">&#59039;</property>
 							<onclick>ActivateWindow(SystemSettings)</onclick>
 						</item>
-						<!--profile-->
+						<!--tv-->
+						<item id="8">
+							<label>$LOCALIZE[14204]</label>
+							<label2>$LOCALIZE[19019] &#8226; $LOCALIZE[19181] &#8226; $LOCALIZE[19222] &#8226; $LOCALIZE[14086] &#8226; $LOCALIZE[19043] &#8226; $LOCALIZE[14095] &#8226; $LOCALIZE[19259]</label2>
+							<property name="Icon">&#58944;</property>
+							<onclick>ActivateWindow(PVRSettings)</onclick>
+						</item>
+						<!--systeminfo-->
 						<item id="9">
-							<label>$LOCALIZE[13200]</label>
-							<label2>$LOCALIZE[20067] &#8226; $LOCALIZE[20096]</label2>
-							<property name="Icon">&#57345;</property>
-							<onclick>ActivateWindow(Profiles)</onclick>
+							<label>$LOCALIZE[130]</label>
+							<label2>$LOCALIZE[154] &#8226; $LOCALIZE[705] &#8226; $LOCALIZE[13280] &#8226; $LOCALIZE[13281] &#8226; $LOCALIZE[19191] &#8226; Kodi &#8226; $LOCALIZE[12389]</label2>
+							<property name="Icon">&#59159;</property>
+							<onclick>ActivateWindow(systeminfo)</onclick>
 						</item>
 					</content>
 				</control>
