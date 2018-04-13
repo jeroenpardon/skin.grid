@@ -1355,6 +1355,10 @@ msgid "If you enjoy my work and feel like contributing towards development, it i
 msgstr ""
 
 
+msgctxt "#31996"
+msgid "Special Features"
+msgstr ""
+
 
 #: addon.xml
 #. Shown when browsing through the available skins in the add-on browser, not in the skin itself. Will be manually added to the skin's addon.xml.
