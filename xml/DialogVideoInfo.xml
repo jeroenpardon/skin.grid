@@ -236,6 +236,18 @@
 						<texturenofocus></texturenofocus>
 						<visible>!Window.IsVisible(Home) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,episode)]</visible>
 					</control>
+					<!--special features-->
+					<control type="button" id="9146">
+						<width min="256">auto</width>
+						<font>Black-20</font>
+						<align>center</align>
+						<label>$LOCALIZE[31996]</label>
+						<onclick>Action(close)</onclick>
+						<onclick>RunScript(plugin.video.specialfeatures,listitem)</onclick>
+						<texturenofocus></texturenofocus>
+						<visible>System.HasAddon(plugin.video.specialfeatures)</visible>
+						<visible>String.IsEqual(Window(home).Property(SpecialFeatures.Visible),true)</visible>
+					</control>
 					<!--more-->
 					<control type="button" id="33">
 						<width min="256">auto</width>
